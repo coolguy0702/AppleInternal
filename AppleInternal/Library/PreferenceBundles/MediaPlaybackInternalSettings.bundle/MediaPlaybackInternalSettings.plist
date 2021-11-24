@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>title</key>
+    <string>Media Playback</string>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Kill Music</string>
+            <key>buttonAction</key>
+            <string>killProcesses:</string>
+            <key>id</key>
+            <string>com.apple.MediaPlayback:KillMusic</string>
+            <key>processes</key>
+            <array>
+                <string>Music</string>
+                <string>AirMusic</string>
+            </array>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Kill mediaserverd</string>
+            <key>buttonAction</key>
+            <string>killProcesses:</string>
+            <key>id</key>
+            <string>com.apple.MediaPlayback:KillMediaServer</string>
+            <key>processes</key>
+            <array>
+                <string>mediaserverd</string>
+            </array>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Kill mediaremoted</string>
+            <key>buttonAction</key>
+            <string>killProcesses:</string>
+            <key>id</key>
+            <string>com.apple.MediaPlayback:KillMediaRemote</string>
+            <key>processes</key>
+            <array>
+                <string>mediaremoted</string>
+            </array>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Kill All</string>
+            <key>buttonAction</key>
+            <string>killProcesses:</string>
+            <key>id</key>
+            <string>com.apple.MediaPlayback:KillAll</string>
+            <key>processes</key>
+            <array>
+                <string>mediaserverd</string>
+                <string>itunesstored</string>
+                <string>itunescloudd</string>
+                <string>iapd</string>
+                <string>iap2d</string>
+                <string>carkitd</string>
+                <string>iaptransportd</string>
+                <string>mediaremoted</string>
+                <string>SpringBoard</string>
+                <string>backboardd</string>
+            </array>
+        </dict>
+        
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>Assets</string>
+        </dict>
+        <dict>
+            <key>label</key>
+            <string>Force Streaming 64kbps</string>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>defaults</key>
+            <string>com.apple.mobileipod</string>
+            <key>key</key>
+            <string>AlwaysUse64kbpsQuality</string>
+            <key>default</key>
+            <false/>
+        </dict>
+        <dict>
+            <key>label</key>
+            <string>Force Streaming 256kbps</string>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>defaults</key>
+            <string>com.apple.mobileipod</string>
+            <key>key</key>
+            <string>AlwaysUse256kbpsQuality</string>
+            <key>default</key>
+            <false/>
+        </dict>
+        
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>Features</string>
+        </dict>
+        <dict>
+            <key>label</key>
+            <string>Disable Audio Analysis</string>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>defaults</key>
+            <string>com.apple.mobileipod</string>
+            <key>key</key>
+            <string>DisableAudioAnalysis</string>
+            <key>default</key>
+            <false/>
+        </dict>
+        <dict>
+            <key>label</key>
+            <string>Force Library Supplemental Context</string>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>defaults</key>
+            <string>com.apple.mobileipod</string>
+            <key>key</key>
+            <string>ForceLibrarySupplemental</string>
+            <key>default</key>
+            <false/>
+        </dict>
+        <dict>
+            <key>label</key>
+            <string>Enable Proto CL</string>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>defaults</key>
+            <string>com.apple.mobileipod</string>
+            <key>key</key>
+            <string>_ProtoCL_</string>
+            <key>default</key>
+            <false/>
+        </dict>
+        
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>Queue Handoff</string>
+        </dict>
+        <dict>
+            <key>label</key>
+            <string>Disable Queue Handoff</string>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>defaults</key>
+            <string>com.apple.mobileipod</string>
+            <key>key</key>
+            <string>DisableQHO</string>
+            <key>default</key>
+            <false/>
+        </dict>
+        <dict>
+            <key>label</key>
+            <string>Maximum Size</string>
+            <key>cell</key>
+            <string>PSTitleValueCell</string>
+            <key>get</key>
+            <string>maximumQHOSize:</string>
+            <key>id</key>
+            <string>com.apple.MediaPlayback:QHOMaximumSizeLabel</string>
+        </dict>
+        <dict>
+            <key>label</key>
+            <string>Maximum Size</string>
+            <key>cell</key>
+            <string>PSSliderCell</string>
+            <key>defaults</key>
+            <string>com.apple.mobileipod</string>
+            <key>key</key>
+            <string>QHOMaximumSize</string>
+            <key>default</key>
+            <integer>2000</integer>
+            <key>min</key>
+            <integer>0</integer>
+            <key>max</key>
+            <integer>100000</integer>
+            <key>isSegmented</key>
+            <true/>
+            <key>segmentCount</key>
+            <integer>500</integer>
+            <key>snapsToSegment</key>
+            <true/>
+            <key>isContinuous</key>
+            <true/>
+            <key>set</key>
+            <string>setMaximumQHOSize:specifier:</string>
+            <key>id</key>
+            <string>com.apple.MediaPlayback:QHOMaximumSizeSlider</string>
+        </dict>
+        
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>iAP 1 Support</string>
+        </dict>
+        <dict>
+            <key>label</key>
+            <string>Disable Up Next (iAP1)</string>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>get</key>
+            <string>upNextQueueModificationDisabled:</string>
+            <key>set</key>
+            <string>setUpNextQueueModificationDisabled:specifier:</string>
+        </dict>
+        <dict>
+            <key>label</key>
+            <string>Ignore Disable Up Next (iAP1)</string>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>defaults</key>
+            <string>com.apple.Music</string>
+            <key>key</key>
+            <string>ignoreUpNextDisabled</string>
+            <key>default</key>
+            <false/>
+        </dict>
+
+    </array>
+</dict>
+</plist>
