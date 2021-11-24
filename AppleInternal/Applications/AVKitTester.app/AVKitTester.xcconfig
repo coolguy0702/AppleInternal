@@ -1,0 +1,12 @@
+//
+//  AVKitTester.xcconfig
+//  AVKit
+//
+//  Created by Jed Lewison on 1/2/19.
+//  Copyright © 2019 Apple Inc. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "<DEVELOPER_DIR>/AppleInternal/XcodeConfig/PlatformSupport.xcconfig"

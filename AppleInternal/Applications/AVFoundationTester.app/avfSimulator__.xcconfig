@@ -1,0 +1,45 @@
+//	File: avfSimulator__.xcconfig
+// 
+//	$Log$
+//	17oct 2018 bford
+//	Fix the Simulator build. Yukon now produces separate simulator SDKs for public and internal.
+//
+//	17mar2016 jalliot
+//	<rdar://problem/25159174> Add AVFoundation sub-framework folder in the search path. <dwyatt, sonnanst>
+//
+//	18jun2015 jalliot
+//	<rdar://problem/21448624> Add more supported platforms to our embedded xcconfigs. <elee>
+//
+//	17mar2015 jalliot
+//	<rdar://problem/20178161> Have simulator builds fat by default. <kcalhoun>
+// 
+//	13mar2015 jalliot
+//	<rdar://problem/20062193> Fix xcodebuild build. <jinho>
+// 
+//	22jan2015 jalliot
+//	<rdar://problem/19316622> Remove usage of deprecated configs and build settings. <elee>
+//
+//	07apr2011 elee
+//	Define SUPPORTED_PLATFORMS. <gew>
+//	
+//	27apr2010 ABB
+//	<rdar://problem/7913679> AVF_SIMULATOR_CFLAGS with FIG_SUPPORT_PERSISTENT_URL_TRANSLATION=1
+//
+//	24apr2010 jim
+//	clean up xcconfig files <jeremyj, nikhil>
+//
+//	18apr2010 jim
+//	first time. <abb>
+// 
+
+XCCONFIG_AVF_SIMULATOR___ = INCLUDED
+
+SDKROOT = iphonesimulator.internal
+
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks" "$(SYSTEM_LIBRARY_DIR)/Frameworks/AVFoundation.framework/Frameworks"
+
+ARCHS = $(ARCHS_STANDARD_32_64_BIT)
+
+AVF_SIMULATOR_CFLAGS = -DFIG_SUPPORT_PERSISTENT_URL_TRANSLATION=1
+
+SUPPORTED_PLATFORMS = iphonesimulator appletvsimulator watchsimulator

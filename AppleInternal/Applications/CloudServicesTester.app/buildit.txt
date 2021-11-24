@@ -1,0 +1,3 @@
+This is the command that buildit will use to build CloudServicesTester.
+
+~rc/bin/buildit -platform ios -supportedPlatforms ios -arch arm64 -arch armv4t -arch armv5 -arch armv6 -arch armv6m -arch armv7 -arch xscale -project CloudServicesTester -release Okemo -target CloudServicesTester -configuration Release -nocortex -noverify .

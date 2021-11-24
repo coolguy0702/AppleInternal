@@ -1,0 +1,28 @@
+//	File: avfEmbeddedDebug.xcconfig
+// 
+//	$Log$ 
+//	08mar2018 jdecoodt
+//	<rdar://problem/38279281> Build thin binaries on Debug builds. <sonnanst, shalini_sahoo>
+//
+//	27apr2010 ABB
+//	7913679 Define OTHER_CFLAGS <jim>
+//
+//	24apr2010 jim
+//	clean up xcconfig files <jeremyj, nikhil>
+//
+//	18apr2010 jim
+//	first time. <abb>
+// 
+
+XCCONFIG_AVF_EMBEDDED_DEBUG = INCLUDED
+
+#include "avfEmbedded__.xcconfig"
+#include "../../xcconfigs/avf__Debug.xcconfig"
+
+OTHER_CFLAGS = $(value) $(AVF_EMBEDDED_CFLAGS) $(AVF_DEBUG_CFLAGS)
+
+// Debug builds now build thin by default.  Comment the following lines to force Xcode to build FAT for Debug builds.
+ONLY_ACTIVE_ARCH_ = YES // regular build from xcodebuild or Xcode. Build only the active arch.
+ONLY_ACTIVE_ARCH_YES = NO // buildit can build Debug. Make sure it builds FAT.
+ONLY_ACTIVE_ARCH = $(ONLY_ACTIVE_ARCH_$(RC_XBS))
+

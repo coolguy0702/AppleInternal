@@ -1,0 +1,19 @@
+//	File: avfSimulatorRelease.xcconfig
+// 
+//	$Log$ 
+//	27apr2010 ABB
+//	7913679 Define OTHER_CFLAGS <jim>
+//
+//	24apr2010 jim
+//	clean up xcconfig files <jeremyj, nikhil>
+//
+//	18apr2010 jim
+//	first time. <abb>
+// 
+
+XCCONFIG_AVF_SIMULATOR_RELEASE = INCLUDED
+
+#include "avfSimulator__.xcconfig"
+#include "../../xcconfigs/avf__Release.xcconfig"
+
+OTHER_CFLAGS = $(value) $(AVF_SIMULATOR_CFLAGS) $(AVF_RELEASE_CFLAGS)

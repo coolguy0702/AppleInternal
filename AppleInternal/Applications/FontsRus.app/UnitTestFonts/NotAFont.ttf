@@ -1,0 +1,65 @@
+Type-Group:~ root# cat /tmp/
+BackupRunning                   FontTest_188.2Hcf3Z.sample.txt  com.apple.OTASyncAgent/         payloads/
+DAAccountsLoading.lock          OTASyncRunning.lock             com.apple.iqagent.server        psctl.out
+FontTest_102.JO1DVV.sample.txt  com.apple.Bookmarks.lock        launchd/                        
+Type-Group:~ root# cat /tmp/FontTest_188.2Hcf3Z.sample.txt 
+Analysis of sampling FontTest (pid 188) every 0.010000 milliseconds
+OS version: iPhone OS 3.2 (7B259)
+Call graph:
+    863 Thread_3103
+      863 start
+        863 main
+          863 UIApplicationMain
+            863 -[UIApplication _run]
+              863 GSEventRun
+                863 GSEventRunModal
+                  863 CFRunLoopRunInMode
+                    863 CFRunLoopRunSpecific
+                      863 PurpleEventCallback
+                        863 _UIApplicationHandleEvent
+                          863 -[UIApplication sendEvent:]
+                            863 -[UIApplication handleEvent:withNewEvent:]
+                              863 -[UIApplication handleKeyEvent:]
+                                863 -[UIKeyboardImpl handleKeyEvent:]
+                                  863 -[UIKeyboardImpl handleStringInput:fromVariantKey:]
+                                    863 -[UIKeyboardImpl addInputString:fromVariantKey:]
+                                      863 -[UIKeyboardImpl generateCandidates]
+                                        863 -[UIKeyboardImpl generateCandidatesWithCompletions:]
+                                          863 -[TIKeyboardInputManagerZephyr autocorrection]
+                                            863 TIInputManager::autocorrection()
+                                              863 TIInputManager::lookup()
+                                                863 TIInputManagerZephyr::lookup_static_dynamic_candidates(KB::String const&, KB::String const&, KB::Vector<KB::FPoint> const&, bool)
+                                                  863 TIInputManagerZephyr::filter_raw_candidates(KB::Vector<KB::Word> const&, KB::String const&, KB::String const&, KB::String const&)
+                                                    863 TIInputManagerZephyr::lookup_spellcheck_candidates(KB::String const&)
+                                                      863 -[UITextChecker checkSpellingOfString:startingAt:language:wrap:correction:]
+                                                        863 -[UITextChecker _chunkAndFindMisspelledWordInString:language:learnedDictionaries:wordCount:correction:usingChecker:]
+                                                          863 -[AppleSpell spellServer:findMisspelledWordInString:language:wordCount:countOnly:correction:]
+                                                            863 -[AppleSpell spellServer:findMisspelledWordInString:range:languages:orthography:checkOrthography:mutableResults:offset:autocorrect:wordCount:countOnly:correction:]
+                                                              863 -[AppleSpell validateWordBuffer:length:language:connection:sender:checkBase:checkDict:checkNames:checkHyphens:checkIntercaps:checkOptions:depth:]
+                                                                863 -[UITextChecker isWordInUserDictionaries:caseSensitive:]
+                                                                  863 +[UITextChecker _isWord:inDictionary:]
+                                                                    863 +[UITextChecker dictionaryInfo:]
+                                                                      863 -[NSLock lock]
+                                                                        863 pthread_mutex_lock
+                                                                          863 semaphore_wait_signal
+                                                                            863 semaphore_wait_signal_trap
+                                                                              863 semaphore_wait_signal_trap
+    863 Thread_3203
+      863 thread_start
+        863 _pthread_start
+          863 __ZL12RunWebThreadPv
+            863 CFRunLoopRunInMode
+              863 CFRunLoopRunSpecific
+                863 __CFRunLoopDoObservers
+                  863 __ZL14WebRunLoopLockP19__CFRunLoopObservermPv
+                    863 __ZL17_WebTryThreadLockb
+                      863 pthread_mutex_lock
+                        863 semaphore_wait_signal
+                          863 semaphore_wait_signal_trap
+                            863 semaphore_wait_signal_trap
+
+Total number in stack (recursive counted multiple, when >=5):
+
+Sort by top of stack, same collapsed (when >= 5):
+        semaphore_wait_signal_trap        1726
+Type-Group:~ root# 

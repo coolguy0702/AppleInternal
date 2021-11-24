@@ -1,0 +1,63 @@
+body {
+	margin: .25in;
+	font-family: "Myriad Set", Myriad, HelveticaNeue-Thin;
+    color: red;
+}
+
+body * {
+    font-size: 5pt;
+}
+
+hr {
+	color: black;
+	background-color: black;
+	border-style: none;
+	height: 1pt;
+}
+
+/* centering */
+#company_name, #contact_info, #address, #date {
+	text-align: center;
+}
+
+table {
+	width: 100%;
+}
+
+#logo  {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: .5in;
+	height: .5in;
+	margin-bottom: .25in;
+}
+
+#company_name {
+	font-size: 20;
+}
+
+#date {
+	padding-top: .2in;
+	padding-bottom: .2in;
+}
+
+#total tr td {
+	font-size: 15;
+}
+
+
+.fillWidth {
+	width: 100%;
+}
+
+.rightAlign {
+	text-align: right;
+}
+
+.tax {
+	font-size: 3pt;
+	float: right;
+	padding-right: .1in;
+}
+

@@ -1,0 +1,69 @@
+//	File: avfEmbedded__.xcconfig
+// 
+//	$Log$ 
+//	14mar2018 jdecoodt
+//	<rdar://problem/38448574> arm64, not armv64. <mpoulsen>
+//
+//	13mar2018 jdecoodt
+//	<rdar://problem/38448574> Workaround <rdar://problem/38396367> (by hardcoding the architectures, sigh). <mpoulsen>
+//
+//	08mar2018 jdecoodt
+//	<rdar://problem/38279281> Stop hardcoding the list of architectures to build and rely on the default value. <sonnanst, shalini_sahoo>
+//
+//	10apr2017 jalliot
+//	<rdar://problem/31542018> Make iOS builds arm64 only. <shalini_sahoo>
+//
+//	06feb2017 astrid
+//	<rdar://problem/30386476> Make tvOS builds arm64 only. <jalliot>
+//
+//	17mar2016 jalliot
+//	<rdar://problem/25159174> Add AVFoundation sub-framework folder in the search path. <dwyatt, sonnanst>
+//
+//	28jan2016 jalliot
+//	<rdar://problem/24402797> Keep default watchos arch in sync with Fig. <kcalhoun>
+//
+//	18jun2015 jalliot
+//	<rdar://problem/21448624> Add more supported platforms to our embedded xcconfigs. <elee>
+//
+//	13mar2015 jalliot
+//	<rdar://problem/20062193> Fix xcodebuild build. <jinho>
+// 
+//	22jan2015 jalliot
+//	<rdar://problem/19316622> Remove usage of deprecated configs and build settings. <elee>
+//
+//	06nov2012 bcorey
+//	[12540765] Add arm64 build. <jalliot>
+//
+//	17feb2012 pracht
+//	Use <DEVELOPER_DIR> to include AspenSDK.xcconfig from the currently active Developer tools installation <elee>
+//
+//	07apr2011 elee
+//	Define SUPPORTED_PLATFORMS. <gew>
+//	
+//	06apr2011 elee
+//	No need to build armv6 anymore. <jim>
+//
+//	27apr2010 ABB
+//	<rdar://problem/7913679> Define AVF_EMBEDDED_CFLAGS with FIG_SUPPORT_PERSISTENT_URL_TRANSLATION=1 <jim>
+//
+//	24apr2010 jim
+//	clean up xcconfig files <jeremyj, nikhil>
+//
+//	18apr2010 jim
+//	first time. <abb>
+// 
+
+XCCONFIG_AVF_EMBEDDED___ = INCLUDED
+
+SDKROOT = iphoneos.internal
+
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks" "$(SYSTEM_LIBRARY_DIR)/Frameworks" "$(SYSTEM_LIBRARY_DIR)/Frameworks/AVFoundation.framework/Frameworks"
+
+AVF_EMBEDDED_CFLAGS = -DFIG_SUPPORT_PERSISTENT_URL_TRANSLATION=1
+
+SUPPORTED_PLATFORMS = iphoneos appletvos watchos
+
+ARCHS[sdk=appletvos*] = arm64
+ARCHS[sdk=watchos*] = armv7k
+ARCHS[sdk=iphoneos*] = arm64 arm64e
+

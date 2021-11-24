@@ -1,0 +1,4 @@
+method:-[UIImagePickerController didDisplayPhotoPickerSourceType:]
+method:-[UIImagePickerController didSelectMediaWithInfoDictionary:]
+method:-[UIImagePickerController didDisplayPhotoPickerPreview]
+method:-[UIImagePickerController cancelPhotoPicker]

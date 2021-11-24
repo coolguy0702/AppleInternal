@@ -1,0 +1,76 @@
+[
+    {"Title":
+    [
+        {
+            "identifier": "title",
+            "title":"",
+            "type":"string",
+            "default_value":""
+        }
+    ]},
+    {"Location":
+    [
+        {
+            "identifier": "type",
+            "title": "Where were you?",
+            "type": "string",
+            "enum": [
+                "Indoors",
+                "Outdoors"
+            ],
+            "default_value":"Indoors"
+        },
+        {
+            "identifier": "sun",
+            "title": "Where you in the direct sun?",
+            "type": "string",
+            "enum": [
+                "No",
+                "Yes"
+            ],
+            "default_value":"No"
+        },
+        {
+            "identifier": "shadow",
+            "title": "Where you in shadow?",
+            "type": "string",
+            "enum": [
+                "No",
+                "Yes"
+            ],
+            "default_value":"No"
+        },
+    ]},
+    {"Other":
+    [
+        {
+            "identifier": "unlock",
+            "title": "Were you unlocking your device?",
+            "type": "string",
+            "enum": [
+                "No",
+                "Yes"
+            ],
+            "default_value":"No"
+        },
+        {
+            "identifier": "enroll",
+            "title": "Were you trying to enroll?",
+            "type": "string",
+            "enum": [
+                "No",
+                "Yes"
+            ],
+            "default_value":"No"
+        }
+    ]},
+    {"Anything Else?":
+    [
+        {
+            "identifier": "misc",
+            "title":"",
+            "type":"string",
+            "default_value":""
+        }
+    ]}
+]
