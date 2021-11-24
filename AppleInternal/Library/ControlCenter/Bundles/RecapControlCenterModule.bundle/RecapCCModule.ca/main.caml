@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<caml xmlns="http://www.apple.com/CoreAnimation/1.0">
+  <CALayer id="#4" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 48 48" contentsFormat="RGBA8" name="Root Layer" position="24 24" speed="1" transform="">
+    <sublayers>
+      <CALayer id="#7" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 48 48" contentsFormat="RGBA8" name="Stage" position="24 23" transform="rotate(45deg)">
+	<sublayers>
+	  <CALayer id="#8" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 48 48" contentsFormat="RGBA8" name="Rotate Blob" opacity="0" position="24 24" transform="">
+	    <sublayers>
+	      <CATransformLayer id="#13" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 21 33" contentsFormat="RGBA8" name="Rotate Right" opacity="1" position="36.5 17.5">
+		<sublayers>
+		  <CAShapeLayer id="#6" fillColor="0.8863 0.1608 0.5961" path="12.000000953674 31.127974510193 m 7.582000732422 31.127974510193 4 27.531783103943 4 23.095154762268 c 4 18.659027099609 11.766598701477 11.81566619873 1 1.004893302917 c 1 1.004893302917 19.999999046326 7.897355079651 19.999999046326 23.095154762268 c 19.999999046326 27.531783103943 16.418001174927 31.127974510193 12.000000953674 31.127974510193 c 7.582000732422 31.127974510193 12.000000953674 31.127974510193 12.000000953674 31.127974510193 c h" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 21 33" contentsFormat="RGBA8" opacity="1" position="10.5 16.5">
+		    <animations/>
+		  </CAShapeLayer>
+		</sublayers>
+	      </CATransformLayer>
+	      <CATransformLayer id="#12" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 21 33" contentsFormat="RGBA8" name="Rotate Left" position="11.5 30.5" transform="rotate(180deg)">
+		<sublayers>
+		  <CAShapeLayer id="#5" fillColor="0.8863 0.1608 0.5961" path="12.000000953674 31.127974510193 m 7.582000732422 31.127974510193 4 27.531783103943 4 23.095154762268 c 4 18.659027099609 11.766598701477 11.81566619873 1 1.004893302917 c 1 1.004893302917 19.999999046326 7.897355079651 19.999999046326 23.095154762268 c 19.999999046326 27.531783103943 16.418001174927 31.127974510193 12.000000953674 31.127974510193 c 7.582000732422 31.127974510193 12.000000953674 31.127974510193 12.000000953674 31.127974510193 c h" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 21 33" contentsFormat="RGBA8" opacity="1" position="10.5 16.5"/>
+		</sublayers>
+	      </CATransformLayer>
+	    </sublayers>
+	  </CALayer>
+	  <CATransformLayer id="#9" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 46 18" contentsFormat="RGBA8" name="Blob" opacity="1" position="24 24" transform="">
+	    <sublayers>
+	      <CAShapeLayer id="#3" fillColor="1 1 1" path="37.000000953674 17.000000953674 m 37.000000953674 17.000000953674 34.000000953674 17.000000953674 31.998998641968 15.247999191284 c 29.254899978638 12.8109998703 26 11.465300559998 23 11.465300559998 c 20 11.465300559998 16.745600700378 12.8109998703 14.001499176025 15.247999191284 c 11.999999046326 17.000000953674 8.999999046326 17.000000953674 8.999999046326 17.000000953674 c 4.581541061401 17.000000953674 1.000000953674 13.418500900269 1.000000953674 9 c 1.000000953674 4.581999778748 4.581541061401 0.9999990463257 8.999999046326 0.9999990463257 c 8.999999046326 0.9999990463257 11.999999046326 0.9999990463257 14.001499176025 2.752000808716 c 16.745600700378 5.188499450684 20 6.534198760986 23 6.534198760986 c 26 6.534198760986 29.254899978638 5.188499450684 31.998998641968 2.752000808716 c 34.000000953674 0.9999990463257 37.000000953674 0.9999990463257 37.000000953674 0.9999990463257 c 41.418001174927 0.9999990463257 44.999999046326 4.581999778748 44.999999046326 9 c 44.999999046326 13.418500900269 41.418001174927 17.000000953674 37.000000953674 17.000000953674 c 32.582000732422 17.000000953674 37.000000953674 17.000000953674 37.000000953674 17.000000953674 c h" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 46 18" contentsFormat="RGBA8" opacity="0.2000000029802" position="23 9"/>
+	    </sublayers>
+	  </CATransformLayer>
+	  <CATransformLayer id="#10" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 12 12" contentsFormat="RGBA8" name="Right" position="38 24">
+	    <sublayers>
+	      <CAShapeLayer id="#2" fillColor="1 1 1" path="10.999999046326 6 m 10.999999046326 3.238600730896 8.761400222778 0.9999990463257 6.000000953674 0.9999990463257 c 3.238598823547 0.9999990463257 1 3.238600730896 1 6 c 1 8.761399269104 3.238598823547 11.000000953674 6.000000953674 11.000000953674 c 8.761400222778 11.000000953674 10.999999046326 8.761399269104 10.999999046326 6 c h" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 12 12" contentsFormat="RGBA8" position="6 6">
+		<strokeColor opacity="0" value="0.8863 0.1608 0.5961"/>
+	      </CAShapeLayer>
+	    </sublayers>
+	  </CATransformLayer>
+	  <CATransformLayer id="#11" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 12 12" contentsFormat="RGBA8" name="Left" position="10 24">
+	    <sublayers>
+	      <CAShapeLayer id="#1" fillColor="1 1 1" path="11 6 m 11 3.238600730896 8.761401176453 0.9999990463257 5.999999046326 0.9999990463257 c 3.238599777222 0.9999990463257 1.000000953674 3.238600730896 1.000000953674 6 c 1.000000953674 8.761399269104 3.238599777222 11.000000953674 5.999999046326 11.000000953674 c 8.761401176453 11.000000953674 11 8.761399269104 11 6 c h" allowsEdgeAntialiasing="1" allowsGroupOpacity="1" bounds="0 0 12 12" contentsFormat="RGBA8" position="6 6"/>
+	    </sublayers>
+	  </CATransformLayer>
+	</sublayers>
+      </CALayer>
+    </sublayers>
+    <states>
+      <LKState name="Null State" basedOn="Base State" locked="true"/>
+      <LKState name="Pinch" basedOn="">
+	<elements>
+	  <LKStateSetValue targetId="#1" keyPath="fillColor">
+	    <value type="CGColor" value="0.8863 0.1608 0.5961"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#2" keyPath="fillColor">
+	    <value type="CGColor" value="0.8863 0.1608 0.5961"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#3" keyPath="fillColor">
+	    <value type="CGColor" value="0.8863 0.1608 0.5961"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#3" keyPath="opacity">
+	    <value type="real" value="0.3000000119209"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#4" keyPath="speed">
+	    <value type="integer" value="1"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#5" keyPath="path">
+	    <value type="CGPath" value="12.000000953674 31.127974510193 m 7.582000732422 31.127974510193 4 27.531783103943 4 23.095154762268 c 4 18.659027099609 7.082797440208 14.849173051462 11.952422142029 15.047577857971 c 11.952422142029 15.047577857971 19.760669096276 14.997476931149 19.999999046326 23.095154762268 c 20.131068052185 27.529846629564 16.418001174927 31.127974510193 12.000000953674 31.127974510193 c 7.582000732422 31.127974510193 12.000000953674 31.127974510193 12.000000953674 31.127974510193 c h"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#6" keyPath="path">
+	    <value type="CGPath" value="12.000000953674 31.127974510193 m 7.582000732422 31.127974510193 4 27.531783103943 4 23.095154762268 c 4 18.659027099609 7.003020790191 16.364929401782 11.473762241928 15.526237758072 c 11.473762241928 15.526237758072 19.042679246124 14.279487080997 19.999999046326 23.095154762268 c 20.478969986803 27.505852879384 16.418001174927 31.127974510193 12.000000953674 31.127974510193 c 7.582000732422 31.127974510193 12.000000953674 31.127974510193 12.000000953674 31.127974510193 c h"/>
+	  </LKStateSetValue>
+	</elements>
+      </LKState>
+      <LKState name="Rotate" basedOn="">
+	<elements>
+	  <LKStateSetValue targetId="#7" keyPath="transform">
+	    <value type="CATransform3D" value="rotate(-127.613deg)"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#8" keyPath="transform">
+	    <value type="CATransform3D" value="rotate(0.825688deg)"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#5" keyPath="opacity">
+	    <value type="real" value="0.2000000029802"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#6" keyPath="opacity">
+	    <value type="real" value="0.2000000029802"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#7" keyPath="transform.rotation.z">
+	    <value type="real" value="0.7853981852531"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#8" keyPath="opacity">
+	    <value type="integer" value="0"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#9" keyPath="shadowOpacity">
+	    <value type="integer" value="0"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#9" keyPath="opacity">
+	    <value type="integer" value="1"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#8" keyPath="transform.rotation.z">
+	    <value type="integer" value="0"/>
+	  </LKStateSetValue>
+	  <LKStateAddAnimation targetId="#7" key="animation-1">
+	    <animation type="CABasicAnimation" keyPath="transform.rotation.z" beginTime="1e-100" beginTimeMode="absolute" duration="2" removedOnCompletion="0" repeatCount="Inf">
+	      <byValue type="real" value="3.141592741013"/>
+	      <toValue type="real" value="0.7853981852531"/>
+	    </animation>
+	  </LKStateAddAnimation>
+	  <LKStateSetValue targetId="#1" keyPath="fillColor">
+	    <value type="CGColor" value="0.8863 0.1608 0.5961"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#2" keyPath="fillColor">
+	    <value type="CGColor" value="0.8878 0.1632 0.596"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#3" keyPath="fillColor">
+	    <value type="CGColor" value="0.8878 0.1632 0.596"/>
+	  </LKStateSetValue>
+	  <LKStateRemoveAnimation targetId="#7" key="animation-1"/>
+	  <LKStateSetValue targetId="#8" keyPath="opacity">
+	    <value type="integer" value="1"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#7" keyPath="transform">
+	    <value type="CATransform3D" value="rotate(-123.786deg)"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#9" keyPath="opacity">
+	    <value type="integer" value="0"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#7" keyPath="transform.rotation.z">
+	    <value type="real" value="0.7853981852531"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#5" keyPath="opacity">
+	    <value type="real" value="0.3000000119209"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#6" keyPath="opacity">
+	    <value type="real" value="0.3000000119209"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#3" keyPath="opacity">
+	    <value type="real" value="0.3000000119209"/>
+	  </LKStateSetValue>
+	</elements>
+      </LKState>
+      <LKState name="Tap" basedOn="">
+	<elements>
+	  <LKStateSetValue targetId="#10" keyPath="position.x">
+	    <value type="integer" value="24"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#11" keyPath="position.x">
+	    <value type="integer" value="24"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#1" keyPath="position.x">
+	    <value type="integer" value="6"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#1" keyPath="position.y">
+	    <value type="integer" value="6"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#3" keyPath="path">
+	    <value type="CGPath" value="8.999999046326 17.000000953674 m 8.999999046326 17.000000953674 8.859097204024 16.978079252977 8.999999046326 17.000000953674 c 9.132672830738 17.020642521909 9.062499046326 17.062500953674 8.999999046326 17.000000953674 c 8.937499046326 16.937500953674 9.022830359924 16.893471458923 8.999999046326 17.000000953674 c 8.986478377878 17.063087554988 8.999999046326 17.000000953674 8.999999046326 17.000000953674 c 4.581541061401 17.000000953674 1.000000953674 13.418500900269 1.000000953674 9 c 1.000000953674 4.581999778748 4.581541061401 0.9999990463257 8.999999046326 0.9999990463257 c 8.999999046326 0.9999990463257 8.942624484528 0.9715704812405 8.999999046326 0.9999990463257 c 9.105394567566 1.05222155298 8.937499046326 0.9999990463257 8.999999046326 0.9999990463257 c 9.062499046326 0.9999990463257 9.128145542652 1.060272436369 8.999999046326 0.9999990463257 c 8.965370724944 0.9837117003501 8.999999046326 0.9999990463257 8.999999046326 0.9999990463257 c 13.417999267578 0.9999990463257 16.999997138977 4.581999778748 16.999997138977 9 c 16.999997138977 13.418500900269 13.417999267578 17.000000953674 8.999999046326 17.000000953674 c 4.581998825073 17.000000953674 8.999999046326 17.000000953674 8.999999046326 17.000000953674 c h"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#3" keyPath="position">
+	    <value type="CGPoint" value="37 9"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#9" keyPath="transform.scale.x">
+	    <value type="real" value="1.100000023842"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#9" keyPath="transform.scale.y">
+	    <value type="real" value="1.100000023842"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#9" keyPath="transform.scale.xy">
+	    <value type="real" value="1.100000023842"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#1" keyPath="fillColor">
+	    <value type="CGColor" value="0.8863 0.1608 0.5961"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#2" keyPath="fillColor">
+	    <value type="CGColor" value="0.8863 0.1608 0.5961"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#3" keyPath="fillColor">
+	    <value type="CGColor" value="0.8863 0.1608 0.5961"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#3" keyPath="opacity">
+	    <value type="real" value="0.3000000119209"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#12" keyPath="position">
+	    <value type="CGPoint" value="25.5 29.5"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#13" keyPath="position">
+	    <value type="CGPoint" value="22.5 17.5"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#5" keyPath="opacity">
+	    <value type="real" value="0.3000000119209"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#6" keyPath="opacity">
+	    <value type="real" value="0.3000000119209"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#7" keyPath="transform.rotation.z">
+	    <value type="real" value="0.7679448723793"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#8" keyPath="opacity">
+	    <value type="integer" value="1"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#7" keyPath="transform">
+	    <value type="CATransform3D" value="rotate(17.332deg)"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#7" keyPath="transform">
+	    <value type="CATransform3D" value="rotate(42.0669deg)"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#8" keyPath="opacity">
+	    <value type="integer" value="0"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#7" keyPath="transform">
+	    <value type="CATransform3D" value="rotate(90.6488deg)"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#7" keyPath="transform.rotation.z">
+	    <value type="integer" value="0"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#5" keyPath="path">
+	    <value type="CGPath" value="12.000000953674 31.127974510193 m 7.582000732422 31.127974510193 4 27.531783103943 4 23.095154762268 c 4 18.659027099609 6.27803312611 14.725468719472 12.000000953674 14.681433425525 c 12.000000953674 14.681433425525 20.225641487155 14.779449524935 19.999999046326 23.095154762268 c 19.879657682524 27.530150703451 16.418001174927 31.127974510193 12.000000953674 31.127974510193 c 7.582000732422 31.127974510193 12.000000953674 31.127974510193 12.000000953674 31.127974510193 c h"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#6" keyPath="path">
+	    <value type="CGPath" value="12.000000953674 31.127974510193 m 7.582000732422 31.127974510193 4 27.531783103943 4 23.095154762268 c 4 18.659027099609 6.858807576708 14.974660370336 12.000000953674 14.881903413899 c 12.000000953674 14.881903413899 20.195781903041 15.793978707311 19.999999046326 23.095154762268 c 19.862934563393 28.20659269695 16.418001174927 31.127974510193 12.000000953674 31.127974510193 c 7.582000732422 31.127974510193 12.000000953674 31.127974510193 12.000000953674 31.127974510193 c h"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#7" keyPath="transform.rotation.z">
+	    <value type="real" value="0.7853981852531"/>
+	  </LKStateSetValue>
+	</elements>
+      </LKState>
+      <LKState name="Orb" basedOn="Tap">
+	<elements>
+	  <LKStateSetValue targetId="#7" keyPath="transform.scale.xy">
+	    <value type="real" value="1.700000047684"/>
+	  </LKStateSetValue>
+	  <LKStateSetValue targetId="#7" keyPath="transform.rotation.z">
+	    <value type="real" value="0.7853981852531"/>
+	  </LKStateSetValue>
+	</elements>
+      </LKState>
+    </states>
+    <stateTransitions>
+      <LKStateTransition fromState="*" toState="Pinch">
+	<elements>
+	  <LKStateTransitionElement final="false" key="fillColor" targetId="#1">
+	    <animation type="CABasicAnimation" keyPath="fillColor" duration="0.25" fillMode="backwards"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="fillColor" targetId="#2">
+	    <animation type="CABasicAnimation" keyPath="fillColor" beginTime="1e-100" duration="0.25" fillMode="backwards"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="fillColor" targetId="#3">
+	    <animation type="CABasicAnimation" keyPath="fillColor" beginTime="1e-100" duration="0.25" fillMode="backwards"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="path" targetId="#3">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="path" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="position" targetId="#3">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="position.x" targetId="#11">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position.x" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="position.x" targetId="#10">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position.x" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="transform.scale.xy" targetId="#7">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="transform.scale.xy" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	</elements>
+      </LKStateTransition>
+      <LKStateTransition fromState="*" toState="Rotate">
+	<elements>
+	  <LKStateTransitionElement key="fillColor" targetId="#1">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="fillColor" duration="2" fillMode="backwards" speed="1.5">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="fillColor" targetId="#2">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="fillColor" duration="2" fillMode="backwards" speed="1.5">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="fillColor" targetId="#3">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="fillColor" duration="2" fillMode="backwards" speed="1.5">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="opacity" targetId="#8">
+	    <animation type="CABasicAnimation" keyPath="opacity" duration="0.3000000119209" fillMode="backwards" speed="1" timingFunction="easeInEaseOut">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="transform.rotation.z" targetId="#7">
+	    <animation type="CASpringAnimation" damping="1000" additive="0" cumulative="0" keyPath="transform.rotation.z" duration="2" fillMode="backwards" repeatCount="0" speed="1">
+	      <byValue type="real" value="6.282999992371"/>
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="opacity" targetId="#9">
+	    <animation type="CABasicAnimation" keyPath="opacity" duration="0.3000000119209" fillMode="backwards" timingFunction="easeIn">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="opacity" targetId="#3">
+	    <animation type="CABasicAnimation" keyPath="opacity" duration="0.25" fillMode="backwards" timingFunction="default"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="path" targetId="#5">
+	    <animation type="CABasicAnimation" keyPath="path" duration="0.419999986887" fillMode="backwards" timingFunction="easeInEaseOut">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="path" targetId="#6">
+	    <animation type="CABasicAnimation" keyPath="path" duration="0.419999986887" fillMode="backwards" timingFunction="easeInEaseOut">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	</elements>
+      </LKStateTransition>
+      <LKStateTransition fromState="*" toState="Tap">
+	<elements>
+	  <LKStateTransitionElement key="position.x" targetId="#11">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position.x" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="position.x" targetId="#10">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position.x" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="path" targetId="#3">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="path" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="position" targetId="#3">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="transform.rotation.z" targetId="#7">
+	    <animation type="CASpringAnimation" damping="1000" additive="1" keyPath="transform.rotation.z" duration="2" fillMode="backwards">
+	      <byValue type="real" value="6.283185482025"/>
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="opacity" targetId="#3">
+	    <animation type="CABasicAnimation" keyPath="opacity" beginTime="1e-100" duration="1" fillMode="backwards"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="opacity" targetId="#8">
+	    <animation type="CABasicAnimation" duration="0.5" fillMode="backwards" timingFunction="easeIn"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="position" targetId="#12">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position" duration="2" fillMode="backwards" speed="1">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="position" targetId="#13">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position" duration="2" fillMode="backwards" speed="1">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement enabled="false" key="path" targetId="#5">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="path" duration="2" fillMode="backwards">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="path" targetId="#6">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="path" duration="2" fillMode="backwards">
+	      <delegate/>
+	    </animation>
+	  </LKStateTransitionElement>
+	</elements>
+      </LKStateTransition>
+      <LKStateTransition fromState="*" toState="Orb">
+	<elements>
+	  <LKStateTransitionElement key="transform.scale.xy" targetId="#7">
+	    <animation type="CASpringAnimation" damping="10" keyPath="transform.scale.xy" duration="2" fillMode="backwards" speed="1.299999952316"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement key="transform.rotation.z" targetId="#7">
+	    <animation type="CABasicAnimation" keyPath="transform.rotation.z" duration="0.25" fillMode="backwards" timingFunction="default"/>
+	  </LKStateTransitionElement>
+	</elements>
+      </LKStateTransition>
+      <LKStateTransition fromState="*" toState="Null State">
+	<elements>
+	  <LKStateTransitionElement final="false" key="fillColor" targetId="#1">
+	    <animation type="CABasicAnimation" keyPath="fillColor" duration="0.25" fillMode="backwards"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="fillColor" targetId="#2">
+	    <animation type="CABasicAnimation" keyPath="fillColor" beginTime="1e-100" duration="0.25" fillMode="backwards"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="fillColor" targetId="#3">
+	    <animation type="CABasicAnimation" keyPath="fillColor" beginTime="1e-100" duration="0.25" fillMode="backwards"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="path" targetId="#3">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="path" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="position" targetId="#3">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="position.x" targetId="#11">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position.x" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="position.x" targetId="#10">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="position.x" beginTime="1e-100" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	  <LKStateTransitionElement final="false" key="transform.scale.z" targetId="#7">
+	    <animation type="CASpringAnimation" damping="1000" keyPath="transform.scale.xy" duration="2" fillMode="backwards" speed="1"/>
+	  </LKStateTransitionElement>
+	</elements>
+      </LKStateTransition>
+    </stateTransitions>
+  </CALayer>
+</caml>
