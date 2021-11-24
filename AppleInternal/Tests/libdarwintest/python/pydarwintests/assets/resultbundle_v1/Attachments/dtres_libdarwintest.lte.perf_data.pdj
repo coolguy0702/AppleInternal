@@ -1,0 +1,42 @@
+{
+  "$schema": "https://perfdata.apple.com/schema/draft-02.json",
+  "name": "libdarwintest.lte.perf_data",
+  "version": 0,
+  "start_date": "2019-10-07T21:10:15Z",
+  "generator": "perfdata.framework:perfdata-51",
+  "data": [
+    [
+      {
+        "metric": "time", "unit": "#us", "value": 1,
+        "variables": {
+          "description": "cpu time test"
+        }
+      }
+    ]
+  ],
+  "end_date": "2019-10-07T21:10:15Z",
+  "description": "This test is used by the lte_test_runner_tests to validate that perf data files are collected correctly",
+  "configuration": {
+    "device_type": "j132",
+    "product_type": "MacBookPro15,2",
+    "cpu_type": 7,
+    "cpu_subtype": 8,
+    "cpu_family": 260141638,
+    "logical_cpus": 8,
+    "physical_cpus": 4,
+    "memory_size": 8589934592,
+    "hw_pagesize": 4096,
+    "vm_pagesize": 4096,
+    "vm_pages": 1959760,
+    "max_vnodes": 132096,
+    "kernel_version": "Darwin Kernel Version 19.0.0: Wed Sep 25 20:18:50 PDT 2019; root:xnu-6153.11.26~2/DEVELOPMENT_X86_64",
+    "build": "19A582",
+    "thread_groups_supported": false,
+    "boot_args": "cs_enforcement_disable=1 amfi_allow_any_signature=1 amfi_unrestrict_task_for_pid=1 amfi_get_out_of_my_way=1 debug=0x4c44 kdp_match_name=serial",
+    "rootvol_size": 797019734016,
+    "rootvol_ssd": true,
+    "rootvol_fusion": false,
+    "dsc_overriding_images_present": false,
+    "dsc_optimized": false
+  }
+}

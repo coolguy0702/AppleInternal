@@ -1,0 +1,1819 @@
+#!/bin/sh
+
+#  test_easyperf
+#
+#  Copyright © 2016 Apple Inc. All rights reserved.
+
+# include utilities, set TOOL path and name
+scriptdir=${0%/*} # 'dirname' w/o spawning 'dirname'
+source "$scriptdir/testutils.sh"
+TOOL="$EASYPERF"
+TOOLNAME=easyperf
+
+usage()
+{
+    echo "Usage: test_easyperf [opts] [<testname>]"     >&2
+    echo "       -h         print this help"            >&2
+    echo "       -l         list all tests"             >&2
+    echo "       -strict    exit on first failure"      >&2
+    exit $1
+}
+
+[ "$1" = "-h" ] && usage
+
+listTests()
+{
+    cat "$0" | sed -n '/^\(test[^()]*\)()/s//\1/p'
+}
+
+if [ "$1" = "-l" ]; then
+    listTests
+    exit
+fi
+
+unset EXITONFAIL
+if [ "$1" = "-strict" ]; then
+    EXITONFAIL=1
+    shift
+fi
+
+# assume remaining arguments are specific tests to run
+if [ "$#" -gt 0 ]; then
+    for test; do
+        listTests | grep -w "$test" || die "${test}: unknown test name, see -l"
+    done
+    testsToRun="$@"
+else
+    testsToRun=$(listTests)
+fi
+
+
+FAIL()
+{
+    echo "[FAIL]: $@"
+    totalFailed=$(($totalFailed + 1))
+    if [ "$EXITONFAIL" ]; then
+        echo "-strict => immediate exit on FAIL"
+        exit $EX_SOFTWARE
+    else
+        return 1
+    fi
+}
+
+PASS()
+{
+    echo "[PASS]"
+    totalPassed=$((totalPassed + 1))
+    return 0
+}
+
+
+getInterruptCount()
+{
+    interrupt_count=$(iordump -G "Interrupt Statistics (by index)" | grep "First Level Interrupt Handler Count" | awk '{ total += $10; nvalues++ } END { print total }')
+
+    echo "$interrupt_count"
+}
+
+# defined in testutils.sh
+trap 'cleanup' EXIT
+
+# all flags, in alphabetical order
+ALLFLAGS="--command --compare --failtracer --help --interact --perfdata --process --project-baseline --record --sleep --test-name --threshold -P -T -b -c -h -i -p -s -t"
+# flags taking arguments and not (for now, requires trailing space)
+ARGFLAGS="p c b -record t P s -perfdata "   # misses --<opt> versions; -T below
+SIMPLEFLAGS="h i "
+
+# look for man pages, if any
+unset manpagef manarg
+MANPAGE_SRC=util/easyperf.1
+MANPAGE_DST=/usr/local/share/man/man1/easyperf.1
+if [ -x /usr/bin/man ]; then
+    if [ -r "$MANPAGE_SRC" ]; then
+        manpagef="$MANPAGE_SRC"
+        manarg="$manpagef"
+    elif [ -r "$MANPAGE_DST" ]; then
+        manpageF="$MANPAGE_DST"
+        manarg=easyperf
+    fi
+fi
+
+### test!
+
+totalFailed=0
+totalPassed=0
+failedTests=""
+
+
+## Test Expected Functionality
+
+GET_XCRUNCMD_SED="/xcrun/s/^('\([^']*\)'.*$/\1/p"
+testHelp()
+{
+    # -h/--help should print usage to stdout, exit(0)
+    for flag in -h --help; do
+        "$EASYPERF" $flag | grep "^Usage: easyperf"
+        if [ "${PIPESTATUS[0]}" -eq 0 -a $? -eq 0 ]; then
+            PASS
+        else
+            FAIL "-h didn't helpfully emit usage"
+        fi
+    done
+
+    if [ "$manarg" ] && xcodebuild -showsdks | grep macos.*internal; then
+        sdkmancmd=$(xcrun "$EASYPERF" -h |sed -n "$GET_XCRUNCMD_SED")
+        $sdkmancmd | col -b | grep "easyperf -- measure"
+        if [ "${PIPESTATUS[0]}" -eq 0 -a $? -eq 0 ]; then
+            PASS
+        else
+            FAIL "xcrun command couldn't find man page"
+        fi
+    fi
+}
+
+## exercise supported modes and sanity check the metrics
+
+# helper to evaluate output
+checkLineMatches()
+{
+    pattern="$1"
+    match="$2"
+    [ "$#" -gt 0 ] || return $EX_USAGE
+    awk "
+        /$pattern/ && $match { print; success = 1 }
+        /$pattern/ && success != 1 { print \"unexpected:\", \$0 }
+    END {
+        if (success) {
+            exit(0)
+        } else {
+            exit($EX_NOINPUT)
+        }
+    }"
+}
+
+checkFieldMatches()
+{
+    epfield="$1"
+    matches="$2"
+
+    [ "$#" -gt 0 ] || return $EX_USAGE
+    awk "
+        \$3 == \"$epfield\" && \$1 $match { print; success = 1 }
+    END {
+        if (success) {
+            exit(0)
+        } else {
+            exit($EX_NOINPUT)
+        }
+    }"
+}
+
+# encapsulate repeated pattern
+runCheckMatches()
+{
+    testname="$1" && shift
+    pattern="$1" && shift
+    match="$1" && shift
+
+    # the 'tee' causes the measured storage_dirited to be zero?! :P
+    # runErr2out "$@" | tee "$outf" | checkFieldMatches "$pattern" "$match"
+    runErr2out "$@" | checkFieldMatches "$pattern" "$match"
+    if [ ${PIPESTATUS[0]} -eq 0 -a $? -eq 0 ]; then
+        PASS
+    else
+        # cat "$outf"
+        FAIL "'${testname}': $pattern !=> $match"
+        # this message assumes that testname ~ args
+        # FAIL "'${testname}' did not produce $pattern $match"
+    fi
+}
+
+testProcess()
+{
+    # specify process by PID
+    args="--process $$"
+    runCheckMatches "--process => non-zero CPU time" cpu_time '> 0' $args
+    runCheckStderr "sh\[$$\] Lifetime Usage" $args
+    awk "$CH_METUNITS_AWK" "$outf" && PASS || FAIL "bad units"
+
+    # specify process by name
+    cp -p /bin/sleep "$scratchf1"; cmdname="${scratchf1##*/}"
+    "$scratchf1" 5 &
+    cmdpid=$!
+    runCheckStderr "${cmdname}\[$cmdpid\]" --process $cmdname
+    rm "$scratchf1"         # work around 11052978
+
+    # current_mem, no peak_delta for one snapshot of a running process
+    runCheckMatches "show current_mem" current_mem '> 0' --process $$
+    runErr2out --process $$ | grep -q peak_delta
+    toolCode=${PIPESTATUS[0]} grepCode=${PIPESTATUS[1]}
+    [ "$toolCode" -eq 0 ] && PASS || FAIL "easyperf failed"
+    if [ "$grepCode" -eq "$EXIT_FAILURE" ]; then
+        PASS
+    else
+        FAIL "peak_delta incorrectly shown for launched process"
+    fi
+
+    # mem_delta + peak_delta for two snapshots of a running process
+    runCheckStderr "0 kB mem_delta" --process $$ -s 1
+    grep "0 kB peak_delta" "$outf" && PASS || FAIL "no peak_delta w/time period"
+}
+
+testCommand()
+{
+    rm -f "$scratchf1"; sync  # touching a file still in cache doesn't do I/O
+    args="--command touch $scratchf1"
+    runCheckMatches "--command touch" storage_dirtied '> 0' $args
+    runCheckStderr "touch\[[0-9]*\] Lifetime Usage" $args
+    head -1 "$outf" | grep Usage && PASS || FAIL "header not first line"
+    awk "$CH_METUNITS_AWK" "$outf" && PASS || FAIL "bad units"
+
+    # the only memory metric should be lifetime_peak
+    runCheckStderr "lifetime_peak" -c true
+    sed -n '/MEMORY/,/^$/p' "$outf"
+    memlines=$(sed -n '/MEMORY/,/^$/p' "$outf" | wc -l)
+    if [ "$memlines" -eq 3 ]; then
+        PASS
+    else
+        FAIL "exited process should only display lifetime_peak"
+    fi
+}
+
+CPUHOG=/AppleInternal/CoreOS/tests/xnu/unit_tests/cpu_monitor_tests_11646922/cpu_hog
+testCommandWithProc()
+{
+    # burn 10% CPU on a 1/10th second cycle for 5s (then exit)
+    $CPUHOG -p 10 -i .1 -e 5 > /dev/null 2>&1 &
+    hogpid=$!
+    args="-p $hogpid --command sleep 1"
+    runCheckMatches "-p <hog> -c sleep" cpu_time '$1 > 0' $args
+    kill $hogpid       # best effort (-strict might have exited)
+
+    # make sure we're measuring $$ and not true
+    runCheckStderr "sh\[$$\] Usage" --process $$ --command true
+    head -1 "$outf" | grep Usage && PASS || FAIL "header not first line"
+    awk "$CH_METUNITS_AWK" "$outf" && PASS || FAIL "bad units"
+
+    # -p <notYetRunning> --command <willRunIt>
+    # - launch w/stdout closed so 'grep' can exit
+    # - 'eval' necessary to expand embedded arg for sh -c
+    # - look for this script's PID as part of the command name
+    cp -p /bin/sleep "$scratchf1"; cmdname="${scratchf1##*/}"
+    # 40036781: this can fail on n74 - unexpected pre-emption?
+    args="--process $cmdname --command sh -c '$scratchf1 5 2>&- & sleep 1'"
+    eval runErr2out $args | tee "$scratchf2" | grep "$cmdname"
+    if [ ${PIPESTATUS[0]} -eq 0 -a ${PIPESTATUS[1]} -eq 0 ]; then
+        PASS
+    else
+        FAIL "-p notRunning didn't find launched process"
+    fi
+    killall $cmdname || true        # ensure successful return
+
+    # make sure mem_delta is emitted for measured process
+    if ! grep "mem_delta" "$scratchf2"; then
+        FAIL "-p <proc> -c <cmd> didn't emit mem_delta"
+    fi
+
+    # until 35141324 is fixed
+    rm "$scratchf1"
+}
+
+COMPAREPAT="( [+-][0-9][0-9]*.* )"
+FRACTPAT="[0-9]\.[0-9]"
+testCompare()
+{
+    rm -f "$baselinef"
+    # TODO: use CPU hog for a deterministic amount of CPU
+    for args in "-c $TRIVIAL_CPU_CMD" "-p $$" "-p $$ -c true" "-p $$ -s 1"; do
+        recordBaseline $args
+        compareBaseline $args
+        if grep "$COMPAREPAT" "$outf"; then
+            PASS
+        else
+            cat "$outf"
+            FAIL "--compare <baseline> $args didn't compare"
+        fi
+    done
+
+    # values should be scaled appropriately (using last output from above)
+    if grep "${FRACTPAT}.*cpu_time" "$outf"; then
+        PASS
+    else
+        # ignore 0 CPU time for $TRIVIAL_CPU_CMD
+        if ! grep "0 ms" "$outf"; then
+            cat "$outf"
+            FAIL "cpu_time not fractional?"
+        fi
+    fi
+    if grep '${FRACTPAT}.*lifetime_peak' "$outf"; then
+        cat "$outf"
+        FAIL "lifetime_peak not rounded?"
+    else
+        PASS
+    fi
+
+    # units should match in the comparison
+    if awk 'NF > 3 && $2 != $6                      \
+            { print "unit mismatch:", $0 }' "$outf" | grep mismatch; then
+        FAIL "mismatched units"
+    else
+        PASS
+    fi
+
+    # specify --compare via environment variable
+    args="-c $TRIVIAL_CPU_CMD"
+    PERFCHECK_COMPARE_PATH="$baselinef" runCheckStderr "$COMPAREPAT" $args
+
+    # make sure the default 10% thresholds work in both directions
+    recordBaseline -c dd $DDARGS count=20
+
+    args="-compare $baselinef -c dd $DDARGS count=23"
+    runCheckStderr "storage_dirtied.*out of spec" $args
+    args="-compare $baselinef -c dd $DDARGS count=21"
+    runCheckStderr "storage_dirtied.*)$" $args
+
+    args="-compare $baselinef -c dd $DDARGS count=19"
+    runCheckStderr "storage_dirtied.*)$" $args
+    args="-compare $baselinef -c dd $DDARGS count=17"
+    runCheckStderr "storage_dirtied.*out of spec" $args
+
+    # but only for cpu_time if cpu_instrs is not available
+    recordBaseline -c $TRIVIAL_CPU_CMD
+    args="-compare $baselinef -c $NONTRIVIAL_CPU_CMD"
+    if [ "$HAVE_MONOTONIC" ]; then
+        runCheckStderr "cpu_instrs.*out of spec" $args
+        runCheckStderr "cpu_time.*)$" $args
+    else
+        runCheckStderr "cpu_time.*out of spec" $args
+    fi
+
+}
+
+testThreshold()
+{
+    # make sure the variable is written to perfdata
+    # but only where specified
+    args="-p $$ -perfdata $pdv2file --threshold cpu_time=+10%"
+    runCheckStderr "lifetime_peak" $args
+    if grepMeasurement cpu_time failure_threshold_pct "$pdv2file"; then
+        PASS
+    else
+        FAIL "cpu_time didn't record a threshold"
+    fi
+    if ! grepMeasurement lifetime_peak failure_threshold_pct "$pdv2file"; then
+        PASS
+    else
+        FAIL "lifetime_peak is recording an unspecified threshold"
+    fi
+
+    # make sure custom thresholds are respected
+    recordBaseline -c dd $DDARGS count=20
+
+    args="-b $baselinef --threshold storage_dirtied=+25% -c dd $DDARGS count=23"
+    runCheckStderr "storage_dirtied.*)$" $args
+    args="-b $baselinef --threshold storage_dirtied=+25% -c dd $DDARGS count=27"
+    runCheckStderr "storage_dirtied.*out of spec" $args
+
+    # --threshold=storage_dirtied=[-]10% (negative, no +)
+    # compareBaseline --threshold storage_dirtied=
+}
+
+## Detect that there was no regression
+DETECT_SIMILAR_IO_AWK='
+    /^easyperf:/    { print }       # pass along any errors
+    /storage_dirtied/ {
+        found = 1; print
+        deltaRatio = $5 / $1
+        deltaRatio = sqrt(deltaRatio*deltaRatio)   # abs()
+        if (deltaRatio < .08) {
+            exit 0
+        } else {
+            print "delta ratio too high:", deltaRatio
+            exit ENVIRON["EX_DATAERR"]
+        }
+    }
+    END {
+        if (!found) {
+            print "Error: storage_dirtied not found"
+            exit ENVIRON["EX_NOINPUT"]
+        }
+    }'
+
+
+## Detect that there was a regression
+DETECT_CHANGED_IO_AWK='
+    /^easyperf:/    { print }       # pass along any errors
+    /storage_dirtied/ {
+        found = 1; print
+        deltaRatio = $5 / $1
+        deltaRatio = sqrt(deltaRatio*deltaRatio)   # abs()
+        if (deltaRatio > .08) {
+            exit 0
+        } else {
+            print "delta ratio too low:", deltaRatio
+            print $0
+            exit ENVIRON["EX_DATAERR"]
+        }
+    }
+    END {
+        if (!found) {
+            print "Error: storage_dirtied not found"
+            exit ENVIRON["EX_NOINPUT"]
+        }
+    }'
+
+# TODO: review test logic in face of --record semantics
+testRecord()
+{
+    # measure dd writing some zeros into a file
+    rm -f "$baselinef"
+    runErr2out --record "$baselinef" -c dd $DDARGS count=$MBCOUNT |
+                    checkLineMatches lifetime_peak '$1 > 0'
+    toolCode=${PIPESTATUS[0]} checkCode=${PIPESTATUS[1]}
+    if [ "$toolCode" -ne $EX_OK ]; then
+        FAIL "--record failed"
+    elif [ "$checkCode" -ne $EX_OK ]; then
+        FAIL "--record didn't emit the measurement"
+    elif [ ! -s "$baselinef" ]; then
+        FAIL "$baselinef empty?"
+    else
+        PASS
+    fi
+
+    # Compare to baseline.  Validate that an increased amount is a regression.
+    # Then repeat with the baseline amount: it shouldn't be a regression.
+    runErr2out -b "$baselinef" -c dd $DDARGS count=$MBCplus | \
+            awk "$DETECT_CHANGED_IO_AWK"
+    if [ ${PIPESTATUS[0]} -eq 0 -a ${PIPESTATUS[1]} -eq 0 ]; then
+        # since that was a regression, the baseline amount shouldn't be
+        runErr2out -b "$baselinef" -c dd $DDARGS count=$MBCOUNT | \
+                awk "$DETECT_SIMILAR_IO_AWK"
+        if [ ${PIPESTATUS[0]} -eq 0 -a ${PIPESTATUS[1]} -eq 0 ]; then
+            PASS
+        else
+            FAIL "I/O not similar after comparing to baseline"
+        fi
+    else
+        FAIL "comparison failed: initial logical writes regression undetected!"
+    fi
+
+    # Update the baseline file.  Validate by testing with the higher
+    # amount of I/O.  The new run should match the new baseline.
+    if recordBaseline -c dd $DDARGS count=$MBCplus; then
+        runErr2out -b "$baselinef" -c dd $DDARGS count=$MBCplus | \
+                awk "$DETECT_SIMILAR_IO_AWK"
+        if [ ${PIPESTATUS[0]} -eq 0 -a ${PIPESTATUS[1]} -eq 0 ]; then
+            PASS
+        else
+            FAIL "Still see a regression. Baseline not updated."
+        fi
+    else
+        FAIL "error writing baseline"
+    fi
+}
+
+## test that --test-name tests against the specified test
+TRIVIAL_NAME=test_trivial_cmd
+NONTRIVIAL_NAME=test_nontrivial_cmd
+testTestName()
+{
+    # create baseline for a workload consuming minimal resources
+    rm -f "$baselinef"
+    recordBaseline --test-name "$TRIVIAL_NAME" -c $TRIVIAL_CPU_CMD
+    if ! plutil -p "$baselinef" | grep -q "$TRIVIAL_NAME"; then
+         FAIL "--record --test-name '$TRIVIAL_NAME': name not stored"
+    else
+        PASS
+    fi
+
+    # and then for a significant workload
+    recordBaseline --test-name "$NONTRIVIAL_NAME" -c $NONTRIVIAL_CPU_CMD
+    if ! plutil -p "$baselinef" | grep -q "$NONTRIVIAL_NAME"; then
+        FAIL "--record --test-name '$NONTRIVIAL_NAME': name not stored"
+    else
+        PASS
+    fi
+
+    # compare $TRIVIAL_CPU_CMD to test with high baseline, look for '( -'
+    args="-T cpu_time=+10% --test-name "$TRIVIAL_NAME" -c $NONTRIVIAL_CPU_CMD"
+    compareBaseline $args
+    if grep 'cpu_time.*( +.*out of spec' $outf; then
+        PASS
+    else
+        FAIL "--compare -t <trivial> -c <nontrivial> didn't detect increase"
+    fi
+
+    # compare a non-trivial command to test w/low baseline, look for '( +'
+    args="-T cpu_time=+10% --test-name "$NONTRIVIAL_NAME" -c $TRIVIAL_CPU_CMD"
+    compareBaseline $args
+    if grep 'cpu_time.*( -' "$outf"; then
+        PASS
+    else
+        FAIL "--compare -t <nontrivial> -c <trivial> didn't detectd decrease"
+    fi
+    if grep 'cpu_time.*out of spec' "$outf"; then
+        FAIL "-T cpu_time=+10% flagged a decrease"
+    fi
+
+    # make sure a test name and version both make it into perfdata
+    vers=$(($RANDOM % 100))
+    args="--test-name mytest,$vers --perfdata - -p $$ -c true"
+    runCheckStdout mem_delta $args
+    if ! grep mytest "$outf"; then
+        FAIL "test name not in perfdata output"
+    elif ! grep version.*${vers} "$outf"; then
+        FAIL "test version not in perfdata output"
+    else
+        PASS
+    fi
+}
+
+
+testProjectBaseline()
+{
+    # TODO: an --any-device flag?
+    if [ "$EASYPERF_BASELINE" ]; then
+        args="--project-baseline perfcheck -t test_easyperf_perf -c $TRIVIAL_CPU_CMD"
+        runCheckStderr '( [+-]' $args
+    fi
+
+    # now a project without an installed baseline
+    args="--project-baseline no_project_base -c $TRIVIAL_CPU_CMD"
+    runCheckStderr storage_dirtied $args
+
+    # nonexistent project -> ignore -t
+    args="-t sometest --project-baseline no_project_base -c $TRIVIAL_CPU_CMD"
+    runCheckStderr cpu_time $args
+
+    # Missing test names are okay with --project[-baseline]
+    args="--project-baseline perfcheck -t no_such_test -p $$"
+    runCheckMatches "missing test name ok" cpu_time '> 0' $args
+}
+
+testSleep()
+{
+    time_begin=$SECONDS
+    runErr2out --sleep 2 -p $$ | checkLineMatches mem_delta '$1 == 0'
+    elapsed_secs=`expr $SECONDS - $time_begin`
+    if [ ${PIPESTATUS[0]} -eq 0 -a $? -eq 0 ]; then
+        if [ $time_end -gt $time_start -a  $elapsed_secs -ge 2 ]; then
+            PASS
+        else
+            FAIL "easyperf did not sleep for the specified time"
+        fi
+    else
+        FAIL "Could not run for duration"
+    fi
+
+    # process disappears while running
+    cp -p /bin/sleep "$scratchf1"; cmdname="${scratchf1##*/}"
+    "$scratchf1" 1 &
+    cmdpid=$!
+    args="-p $cmdname --sleep 2"
+    runCheckErr "-p disappeared" "${cmdpid}: No such process" EX_OSERR $args
+
+    # until 35141324 is fixed
+    rm "$scratchf1"
+}
+
+testInteract()
+{
+    # emulate runTool so we can get easyperf's PID
+    echo
+    set -x
+    "$EASYPERF" --interact -p $$ 2> "$scratchf2" &
+    pid=$!
+    set +x
+
+    sleep 1
+    kill -INT $pid
+    wait $pid            # shell does give exit status
+    if [ "$?" -eq 0 ]; then
+        PASS
+    else
+        FAIL "Could not measure pid with --interact"
+    fi
+    if grep "$$" "$scratchf2"; then
+        PASS
+    else
+        FAIL "--interact didn't find the specified PID"
+    fi
+
+    # start easyperf, then launch command to measure
+    cp -p /bin/sleep "$scratchf1"; cmdname="${scratchf1##*/}"
+    set -x
+    "$EASYPERF" --interact -p $cmdname 2> "$scratchf2" &
+    epid=$!
+    set +x
+    sleep 1
+    "$scratchf1" 2 &
+    sleep 1
+    cmdpid=$!
+    kill -INT $epid
+    wait $epid
+    if grep "${sleepcmd}[$cmdpid]" "$scratchf2"; then
+        PASS
+    else
+        FAIL "--interact -p <startedLater> couldn't find the process"
+    fi
+
+    # until 35141324 is fixed
+    rm "$scratchf1"
+}
+
+
+COMPARE_PD_OUT_AWK='
+# get values from command-line output
+$3 ~ /^[a-z]*_[a-z]*$/ {
+    # print "easyperf line:", $0
+    ovalues[$3] = $1
+}
+
+# get values from perfdata v2
+$2 ~ /"[a-z]*_[a-z]*"/ {
+    # print "PDv2 line:", $0
+    split($2, frags, "\"")
+    key = frags[2]
+    pvalues[key] = $NF
+}
+
+# and perfdata v1
+/^ *"names" : / {
+    count = split($0, frags, "\"")
+    midx = 0
+    for (i = 1; i <= count; i++) {
+        if (frags[i] ~ /_/) {
+            v1keys[midx] = frags[i]
+            # printf("v1keys[%d]: %s\n", midx, v1keys[midx])
+            midx++
+        }
+    }
+}
+/^ * "data" : / {
+    # count = split($0, frags, /\[|,|\]/)
+    count = split($0, frags, /\[|,/)
+    for (i = 2; i <= count - 1; i++) {
+        key = v1keys[i-2]
+        pvalues[key] = frags[i]
+        # printf("v1 pvalues[%s] = %s\n", key, pvalues[key])
+    }
+}
+
+END {
+    # cross-check the keys
+    for (key in ovalues) {
+        if (!(key in pvalues)) {
+            printf("ovalues key '"'"'%s'"'"' missing from pvalues\n", key)
+            exit(ENVIRON["EX_DATAERR"])
+        }
+        # else { printf("ovalues key '"'"'%s'"'"' present in pvalues\n", key) }
+    }
+    for (key in pvalues) {
+        if (key == v1keys[1] || key == v1keys[4]) {
+            continue        # cannot omit metrics in PDv1
+        }
+        if (key == "current_mem")       continue        # 38442090
+        if (!(key in ovalues)) {
+            printf("pvalues key '"'"'%s'"'"' missing from ovalues\n", key)
+            exit(ENVIRON["EX_DATAERR"])
+        }
+        # else { printf("pvalues key '"'"'%s'"'"' present in ovalues\n", key) }
+    }
+
+    # cross-check values
+    for (m in pvalues) {
+        if (m == "cpu_time") {
+            # manual rounding
+            pval = int(pvalues[m] / (1000 * 1000) + 0.5)
+            oval = int(ovalues[m] + 0.5)
+        } else {
+            pval = int(pvalues[m])
+            oval = int(ovalues[m])
+        }
+        if (pval != oval) {
+            printf("pvalues[%s] = %f != ovalues[%s] = %f\n", m, pval, m, oval)
+            print "pval - oval =", pval - oval
+            exit(ENVIRON["EX_DATAERR"])
+        }
+        # else { print m, ":", pval, "=", oval }
+    }
+}'
+
+
+JSON_PP="/usr/bin/json_pp"
+testPerfdata()
+{
+    # compare the perfdata for various cases to the command line
+    for args in "-c mkfile 10k $scratchf1" "-p $$" "-p $$ -c true"; do
+        runCheckStderr cpu_time --perfdata "$pdv1file" $args
+        if ! awk "$COMPARE_PD_OUT_AWK" "$pdv1file" "$outf"; then
+            cat "$outf" "$pdv1file"
+            FAIL "pdv1 for $args didn't match command line"
+        elif ! awk "$COMPARE_PD_OUT_AWK" "$pdv2file" "$outf"; then
+            cat "$outf" "$pdv2file"
+            FAIL "pdv2 for $args didn't match command line"
+        else
+            PASS
+        fi
+    done
+
+    # general sanity checks of the (dual) output files
+    runCheckStderr cpu_time --perfdata "$pdv1file" -p $$
+    if [ $? -ne 0 ]; then
+        cat "$outf"
+        FAIL "--perfdata failed"
+    elif ! grep easyperf_metrics "$pdv1file"; then
+        FAIL "perfdata v1 missing 'easyperf_metrics' measurement"
+    elif ! plutil -convert json -r -o /dev/null "$pdv1file"; then
+        FAIL "plutil didn't like v1 JSON formatting"
+    elif [ -x $JSON_PP ] &&  ! $JSON_PP < "$pdv1file" > /dev/null; then
+        FAIL "json_pp didn't like v1 JSON formatting"
+    elif ! [ -s "$pdv2file" ]; then
+        FAIL "companion $pdv2file file not written"
+    elif ! plutil -convert json -r -o /dev/null "$pdv2file"; then
+        FAIL "plutil didn't like v2 JSON formatting"
+    elif [ -x $JSON_PP ] &&  ! $JSON_PP < "$pdv2file" > /dev/null; then
+        FAIL "json_pp didn't like v2 JSON formatting"
+    else
+        PASS
+    fi
+
+    # compare the perfdata for various cases to the command line
+    for args in "-p $$" "-c true" "-p $$ -c true"; do
+        runCheckStderr cpu_time --perfdata "$pdv1file" $args
+        if ! awk "$COMPARE_PDv1_OUT_AWK" "$pdv1file" "$outf"; then
+            FAIL "pdv1 for -p $$ didn't match command line"
+        elif ! awk "$COMPARE_PD_OUT_AWK" "$pdv2file" "$outf"; then
+            FAIL "pdv2 for -p $$ didn't match command line"
+        fi
+    done
+
+    # write perfdata to stdout
+    if runTool --perfdata - > "$scratchf1" -c true 2> "$outf"; then
+        if awk "$COMPARE_PD_OUT_AWK" "$scratchf1" "$outf"; then
+            PASS
+        else
+            FAIL "perfdata v2 doesn't match command-line output"
+        fi
+    else
+        FAIL "'--perfdata -' failed"
+    fi
+
+    # TODO: confirm perfdata (after scaling) matches regular easyperf output
+    #       for -command, -process, and -command + -process
+}
+
+testFailTracer()
+{
+    # until we start bucketing (28990368), ensure normal output
+    args="--failtracer -p $$"
+    runCheckMatches --failtracer cpu_time '> 0' $args
+
+    # --failtracer should mask internal errors
+    # ('T'/--threshold hidden from $ARGFLAGS checker so hardcoded here for now)
+    for flag in $ARGFLAGS T; do
+        runTool --failtracer -${flag} -blah
+        if [ $? -eq 0 ]; then
+            PASS
+        else
+            FAIL "--failtracer didn't suppress usage error for -${flag}"
+        fi
+    done
+
+    # Internal error messages should still be printed
+    rm -f "$baselinef"
+    recordBaseline -p $$ > /dev/null
+    args="--failtracer --compare $baselinef -t no_such_test -p $$"
+    runCheckErr "compare to <no_such_test>" "no baseline" EX_OK $args
+
+    # Command failures should propagate
+    # (testing with or without a specified process)
+    for procargs in "" "-p $$"; do
+        excode=$((($RANDOM % 127) + 1))
+        rm -f "$scratchf2"
+        noncmdargs="--failtracer --perfdata $scratchf2 $procargs"
+        runErr2out $noncmdargs -c sh -c "exit $excode" > "$scratchf1"
+        if [ $? -eq $excode ]; then
+            PASS
+        else
+            FAIL "didn't exit with $excode"
+        fi
+        if grep "failed with exit code $excode" "$scratchf1"; then
+            PASS
+        else
+            FAIL "error output didn't include correct exit code"
+        fi
+        if [ "$(wc -l < $scratchf1)" -eq 2 ]; then
+            PASS
+        else
+            FAIL "--failtracer printed unexpected output for a failing tool"
+        fi
+        if [ ! -s "$scratchf2" ]; then
+            PASS
+        else
+            FAIL "unexpectedly wrote perfdata"
+        fi
+    done
+
+
+    # comparison w/--failtracer should emit line graphs instead of numbers
+    recordBaseline --failtracer -c cat /etc/hosts
+    compareBaseline --failtracer -c cat /etc/services
+    # (the graph must have at least 13 _s prior to the '*')
+    if ! egrep "^ *lifetime_peak.* _{13,}\*" "$outf"; then
+        cat "$outf"
+        FAIL "graph-only lifetime_peak should have been higher"
+    elif ! grep -A1 "^ *lifetime_peak" "$outf" | grep "\[__*B__*\]"; then
+        cat "$outf"
+        FAIL "graph-only lifetime_peak baseline should have been moderate"
+    else
+        PASS
+    fi
+
+    # --failtracer <file> should write error message to file, values to stderr
+    # (using default thresholds)
+    recordBaseline -c cksum /etc/hosts
+    compareBaseline --failtracer "$scratchf1" -c cksum /etc/services
+    grep "^ *[0-9]" "$outf" && PASS || FAIL "no measurement values"
+    grep "$COMPAREPAT" "$outf" && PASS || FAIL "--ft <f> didn't compare w/vals"
+    grep "out of spec" "$outf" && PASS || FAIL "no 'out of spec'"
+    [ -s "$scratchf1" ] && PASS || FAIL "-ft <f> didn't write anything"
+    grep "CPU" "$scratchf1" && PASS || FAIL "-ft <file> missing metric group"
+    grep "cpu.* ([a-zA-Z]*)   <-- out of spec; exceeded thresh" "$scratchf1"
+    if [ $? -eq 0 ]; then
+        PASS
+    else
+        FAIL "didn't see failure message in --failtracer <file>"
+    fi
+
+    # TODO? make sure --record doesn't do anything on command failure
+    #       make sure --compare doesn't do anything on command failure
+}
+
+DENY_SYSCTL_SB="(version 1) (allow default) (deny sysctl-read)"
+testMetricAvailability()
+{
+    if [ "$HAVE_MONOTONIC" ]; then
+        runCheckMatches "non-zero cpu_instrs" cpu_instrs '> 0' -p $$
+
+        # make sure it works even inside a "no sysctls" sandbox
+        echo "$DENY_SYSCTL_SB" > "$scratchf1"
+        sandbox-exec -f "$scratchf1" "$TOOL" -p $$ 2>&1 | grep cpu_instrs
+        toolCode=${PIPESTATUS[0]} grepCode=${PIPESTATUS[1]}
+        if [ "$toolCode" -ne 0 ]; then
+            FAIL "'sandbox-exec $TOOL ...' failed"
+        elif [ "$grepCode" -ne 0 ]; then
+            FAIL "cpu_instrs missing in sandbox"
+        else
+            PASS
+        fi
+    else
+        runErr2out -p $$ | grep cpu_instrs
+        toolCode=${PIPESTATUS[0]} grepCode=${PIPESTATUS[1]}
+        if [ "$toolCode" -ne 0 ]; then
+            FAIL '-p $$' failed
+        elif [ "$grepCode" -ne 1 ]; then
+            FAIL "cpu_instrs should not be present"
+        else
+            PASS
+        fi
+    fi
+}
+
+
+testUnitTestRunner()
+{
+    # TODO (28947445): detect regression if EASYPERF_BASELINE
+    runTool -P perfcheck --test-name "ls_tmp" --perfdata "$scratchf1" --failtracer -c ls /tmp/ > /dev/null
+    if [ $? -eq 0 ]; then
+        PASS
+    else
+        FAIL "--failtracer should have masked any errors"
+    fi
+}
+
+# testResourceDeltas looks for increases and decreases within certain
+# thresholds.  bzip2's lifetime_peak is highly input-dependent.
+
+# testResourceDeltas has never passed reliably (eek) -- hence DPS. :]
+
+# On Intel, here are some typical stats for these compressions:
+# metric            /etc/hosts      libdtrace.dylib     ratio
+# cpu_time          2.86 ms         140.49 ms           50x
+# lifetime_peak     416 kB          6856 kB             16x
+# storage_dirtied   4 kB            528 kB              130x
+#
+# cpu_time is so unpredictable that if the tests don't differ by 50x,
+# the following will eventually fail on devices with highly-dynamic CPUs.
+CHECK_METRICS_AWK='
+    BEGIN {
+        # Current thresholds for success (see also 28523630).
+        cpu_factor = 10
+        instrs_variance = .10
+        peakmem_variance = .05
+        if (fstype == "apfs") {
+            # Even +/-50% will eventually fail on APFS (30842737)
+            writes_variance = 0.5
+        } else {
+            writes_variance = .05
+        }
+
+        # calculate acceptable delta ranges based on expectations
+        if (expected_cpu_d > 0) {
+            low_cpu_d = expected_cpu_d / cpu_factor
+            high_cpu_d = expected_cpu_d * cpu_factor
+            low_instrs_d = expected_instrs_d * (1 - instrs_variance)
+            high_instrs_d = expected_instrs_d * (1 + instrs_variance)
+            low_peakmem_d = expected_peakmem_d * (1 - peakmem_variance)
+            high_peakmem_d = expected_peakmem_d * (1 + peakmem_variance)
+            low_writes_d = expected_writes_d * (1 - writes_variance)
+            high_writes_d = expected_writes_d * (1 + writes_variance)
+        } else {
+            low_cpu_d = expected_cpu_d * cpu_factor
+            high_cpu_d = expected_cpu_d / cpu_factor
+            low_instrs_d = expected_instrs_d * (1 + instrs_variance)
+            high_instrs_d = expected_instrs_d * (1 - instrs_variance)
+            low_peakmem_d = expected_peakmem_d * (1 + peakmem_variance)
+            high_peakmem_d = expected_peakmem_d * (1 - peakmem_variance)
+            low_writes_d = expected_writes_d * (1 + writes_variance)
+            high_writes_d = expected_writes_d * (1 - writes_variance)
+        }
+    }
+
+    /cpu_time/ {
+        actual_cpu_d = $5
+        seen += 1; print
+        if (actual_cpu_d < low_cpu_d) {
+            print "actual cpu_time delta <", low_cpu_d
+            bad = 1
+        } else if (actual_cpu_d > high_cpu_d) {
+            print "actual cpu_time delta >", high_cpu_d
+            bad = 1
+        }
+    }
+
+    /cpu_instrs/ {
+        actual_instrs_d = $5
+        seen += 2; print
+        if (actual_instrs_d < low_instrs_d) {
+            print "actual cpu_instrs delta <", low_instrs_d
+            bad = 1
+        } else if (actual_instrs_d > high_instrs_d) {
+            print "actual cpu_instrs delta >", high_instrs_d
+            bad = 1
+        }
+    }
+
+    /lifetime_peak/ {
+        actual_peakmem_d = $5
+        seen += 4; print
+        if (actual_peakmem_d < low_peakmem_d) {
+            print "actual lifetime_peak delta <", low_peakmem_d
+            bad = 1
+        } else if (actual_peakmem_d > high_peakmem_d) {
+            print "actual lifetime_peak delta >", high_peakmem_d
+            bad = 1
+        }
+    }
+
+    /storage_dirtied/ {
+        actual_writes_d = $5
+        seen += 8; print
+        if (actual_writes_d < low_writes_d) {
+            print "actual storage_dirtied delta <", low_writes_d
+            bad = 1
+        } else if (actual_writes_d > high_writes_d) {
+            print "actual storage_dirtied delta >", high_writes_d
+            bad = 1
+        }
+    }
+
+    END {
+        if (haveMonotonic) {
+            expectedSeen = 15
+        } else {
+            expectedSeen = 13
+        }
+        if (bad || seen != expectedSeen) {
+            exit ENVIRON["EX_DATAERR"]
+        }
+    }
+'
+
+noTestResourceDeltas()
+{
+    # Because /etc/hosts is so small, the expected CPU and writes deltas
+    # are just the estimated impacts of compressing the big file.
+    expected_cpu_d=140
+    expected_instrs_d=470584
+    eval $(stat -s "$BIGFILE")
+    bigsize_kb=$((st_size / 1024))
+    expected_writes_d=$(($bigsize_kb * 42 / 100))  # 0.42 by experiment
+
+    # and the observed memory delta is fairly constant(!)
+    expected_peakmem_d=6425
+
+    # Figure out whether logical writes are reliable (30842737)
+    devnode=$(df "$tmpdir" | awk '/disk/ { print $1 }')
+    fstype=$(mount | awk -v devnode=$devnode '
+        $1 == devnode {
+            sub(/\(/, "", $4)
+            sub(/,/, "", $4)
+            print $4
+        }'
+    )
+
+    base_interrupt_count=$( getInterruptCount )
+    # do something small, then big -> all deltas should go up
+    rm -f "$baselinef"
+    if recordBaseline -c bzip2 -c "$SMFILE" > "$scratchf2"; then
+        runErr2out -b "$baselinef" -c bzip2 -c "$BIGFILE" > "$scratchf2" |
+            awk -v fstype=$fstype -v haveMonotonic=$HAVE_MONOTONIC  \
+                -v expected_cpu_d=$expected_cpu_d                   \
+                -v expected_instrs_d=${expected_instrs_d}           \
+                -v expected_peakmem_d=$expected_peakmem_d           \
+                -v expected_writes_d=$expected_writes_d             \
+                "$CHECK_METRICS_AWK"
+        if [ ${PIPESTATUS[0]} -eq 0 -a ${PIPESTATUS[1]} -eq 0 ]; then
+            PASS
+        else
+            FAIL "metrics didn't go up as expected for bzip2 BIGFILE"
+        fi
+    else
+        FAIL "couldn't create $baselinef"
+    fi
+    cur_interrupt_count=$( getInterruptCount )
+    echo Interrupt count:  $(($cur_interrupt_count - $base_interrupt_count))
+
+    base_interrupt_count=$cur_interrupt_count
+    # do something big, then small -> all deltas should be smaller
+    rm -f "$baselinef"
+    if recordBaseline "$baselinef" -c bzip2 -c "$BIGFILE" > "$scratchf2"; then
+        # negate the expected deltas
+        runErr2out -b "$baselinef" -c bzip2 -c "$SMFILE" >"$scratchf2" |
+            awk -v fstype=$fstype -v haveMonotonic=$HAVE_MONOTONIC  \
+                -v expected_cpu_d=-${expected_cpu_d}                \
+                -v expected_instrs_d=-${expected_instrs_d}          \
+                -v expected_peakmem_d=-${expected_peakmem_d}        \
+                -v expected_writes_d=-${expected_writes_d}          \
+                "$CHECK_METRICS_AWK"
+        if [ ${PIPESTATUS[0]} -eq 0 -a ${PIPESTATUS[1]} -eq 0 ]; then
+            PASS
+        else
+            FAIL "metrics didn't go down as expected for bzip2 BIGFILE"
+        fi
+    else
+        FAIL "unable to create baseline"
+    fi
+    cur_interrupt_count=$( getInterruptCount )
+    echo Interrupt count:  $(($cur_interrupt_count - $base_interrupt_count))
+}
+
+## attempt to detect a regression
+testDetectIORegression()
+{
+    rm -f "$baselinef"
+    recordBaseline -c dd $DDARGS count=$MBCOUNT
+    exval=$?
+    if [ $exval -ne 0 ]; then
+        FAIL "ABORT: couldn't create $baselinef for comparison purposes"
+        # without a baseline, there isn't much we can do in this test
+        return $exval
+    fi
+
+    ## Test to ensure that easyperf doesn't detect any change
+    ## when re-running the same command and comparing with baseline
+    runErr2out --compare "$baselinef" -c dd $DDARGS count=$MBCOUNT | \
+            awk "$DETECT_SIMILAR_IO_AWK"
+    if [ ${PIPESTATUS[0]} -eq 0 -a ${PIPESTATUS[1]} -eq 0 ]; then
+        PASS
+    else
+        FAIL "(see awk error)"
+    fi
+
+    ## Test to ensure that easyperf detects a regression in storage_dirtied
+    ## when running mkfile with a file size that's 10% more than the original.
+    runErr2out --compare "$baselinef" -c dd $DDARGS count=$MBCplus | \
+            awk "$DETECT_CHANGED_IO_AWK"
+    if [ $? -eq 0 ]; then
+        PASS
+    else
+        FAIL "110% logical writes not detected!"
+    fi
+}
+
+# TODO: test regressions in all metrics
+
+## Test Garbage Input Detection
+# Everything should exit with the correct error plus a message to stderr
+
+## TODO: move more tests to runCheckErr()
+
+# no arguments should exit with an error, write Usage: to stderr
+testNoArgs()
+{
+    echo "testing no args -> error, Usage"
+    runErr2out | grep ^Usage:
+    if [ ${PIPESTATUS[0]} -eq $EX_USAGE -a ${PIPESTATUS[1]} -eq 0 ]; then
+        PASS
+    else
+        FAIL "no args did not fail w/EX_USAGE + Usage"
+    fi
+}
+
+testUnknownArgs()
+{
+    randOpt=-opt${RANDOM}
+    randArg=arg${RANDOM}
+
+    args="$randOpt $randArg"
+    runCheckErr "<random>" "unexpected argument.*${randOpt}" EX_USAGE $args
+
+    runCheckErr "<randArg>" "unexpected argument.*${randArg}" EX_USAGE $randArg
+    runCheckErr "extra arg" "unexpected.*${randArg}" EX_USAGE -p $$ $randArg
+
+    args="-p $$ $randOpt"
+    runCheckErr "-p $$ <extraOpt>" "unexpected arg.*${randOpt}" EX_USAGE $args
+}
+
+# pass all argument-taking flags with no/bogus argument
+testMissingArgs()
+{
+    if [ -r "$manpagef" ]; then
+        echo "Comparing hard-coded ARGFLAGS to $manpagef"
+        # look for lines like: .It Fl p [...] Ar pid [...]
+        # and extract the 'p'
+        optargs=$(awk \
+            '$1 == ".It" && $2 == "Fl" && / Ar / {
+                optargidx = index($0, " Op Ar ")
+                firstargidx = index ($0, " Ar ")
+                if (!optargidx || optargidx > firstargidx) {
+                    printf("%s ", $3)
+                }
+            }' "$manpagef")
+        if [ "$ARGFLAGS" = "$optargs" ]; then
+            PASS
+        else
+            echo "ARGFLAGS: $ARGFLAGS"
+            echo "man page: $optargs"
+            FAIL "ARGFLAGS out of date with man page"
+        fi
+
+        echo "Comparing hard-coded SIMPLEFLAGS to $manpagef"
+        # look for lines like: .It Fl p *wihtout* Ar (or Xo)
+        # and extract the 'p'
+        simpleflags=$(awk \
+            '$1 == ".It" && $2 == "Fl" && ! / Ar / && ! / Xo/ {
+                printf("%s ", $3)
+            }' "$manpagef")
+        if [ "$SIMPLEFLAGS" = "$simpleflags" ]; then
+            PASS
+        else
+            echo "SIMPLEFLAGS: $SIMPLEFLAGS"
+            echo "man page: $simpleflags"
+            FAIL "SIMPLEFLAGS out of date with man page"
+        fi
+    fi
+
+    # no argument at all
+    unset brokenflag
+    for flag in $ARGFLAGS; do
+        runErr2out -${flag} | grep -- "-${flag}.*requires an argument"
+        if [ ${PIPESTATUS[0]} -ne $EX_USAGE -o ${PIPESTATUS[1]} -ne 0 ]; then
+            brokenflag=$flag
+            break
+        fi
+    done
+    if [ -z "$brokenflag" ]; then
+        PASS
+    else
+        FAIL "-${brokenflag} (no arg) didn't fail w/requires + EX_USAGE"
+    fi
+
+    # empty argument
+    unset brokenflag
+    for flag in $ARGFLAGS; do
+        runErr2out -${flag} '' | grep -- "empty.*-${flag}"
+        if [ ${PIPESTATUS[0]} -ne $EX_USAGE -o ${PIPESTATUS[1]} -ne 0 ]; then
+            brokenflag=$flag
+            break
+        fi
+    done
+    if [ -z "$brokenflag" ]; then
+        PASS
+    else
+        FAIL "-${brokenflag} (no arg) didn't fail w/empty error + EX_USAGE"
+    fi
+
+    # valid argument in the place of the required argument
+    unset brokenflag
+    for flag in $ARGFLAGS; do
+        runErr2out -${flag} --record | grep -- "-${flag}.*looks like.*flag"
+        if [ ${PIPESTATUS[0]} -ne $EX_USAGE -o ${PIPESTATUS[1]} -ne 0 ]; then
+            brokenflag=$flag
+            break
+        fi
+    done
+    if [ -z "$brokenflag" ]; then
+        PASS
+    else
+        FAIL "-${brokenflag} --record didn't fail w/flag error + EX_USAGE"
+    fi
+}
+
+testDuplicateFlags()
+{
+    for flag in $SIMPLEFLAGS; do
+        [ "$flag" = "h" ] && continue           # handled in HelpBadArgs()
+        [ "$flag" = "-failtracer" ] && continue # handled in FTBadArgs()
+        dupargs="-${flag} -p $$ -${flag}"
+        runErr2out $dupargs | grep -- "-${flag}.*already"
+        if [ ${PIPESTATUS[0]} -ne $EX_USAGE -o ${PIPESTATUS[1]} -ne 0 ]; then
+            brokenflag=$flag
+            break
+        fi
+    done
+    if [ -z "$brokenflag" ]; then
+        PASS
+    else
+        FAIL "duplicate -${brokenflag} didn't fail w/'already' + EX_USAGE"
+    fi
+
+    for flag in $ARGFLAGS; do
+        [ "$flag" = "c" ] && continue   # -c foo -c sends second -c to foo
+        # we now accept multiple baselines
+        [ "$flag" = "b" -o "$flag" = "-compare" ] && continue
+        dupargs="-p $$ -${flag} 123 -${flag} 123"
+        runErr2out $dupargs | grep -- "-${flag}.*already"
+        if [ ${PIPESTATUS[0]} -ne $EX_USAGE -o ${PIPESTATUS[1]} -ne 0 ]; then
+            brokenflag=-${flag}
+            break
+        fi
+    done
+    if [ -z "$brokenflag" ]; then
+        PASS
+    else
+        FAIL "duplicate ${brokenflag} didn't fail w/'already' + EX_USAGE"
+    fi
+}
+
+testHelpBadArgs()
+{
+    runCheckErr "--help <validArg>" "ignoring" EX_USAGE -help -p $$
+    runCheckErr "<validArg> --help" "ignoring" EX_USAGE -p $$ -help
+    runCheckErr "-h <unknown>" "ignoring" EX_USAGE -h aoeu
+}
+
+INVALID_PID=12345678
+testProcessBadArgs()
+{
+    args="--process sillyString"
+    runCheckErr "$args" "silly.*No such process" EX_OSERR $args
+
+    runCheckErr "-p tooBig" "No such process" EX_OSERR --process $INVALID_PID
+
+    if [ $EUID -ne 0 ]; then
+        args="--process 1"
+        runCheckErr "non-root=>launchd[1]" "not permitted" EX_NOPERM $args
+    fi
+
+    # multiple processes with the same name
+    cp -p /bin/sleep "$scratchf1"; cmdname="${scratchf1##*/}"
+    "$scratchf1" 3 & "$scratchf1" 3 & "$scratchf1" 3 &
+    nprocslaunched=3
+
+    args="--process $cmdname"
+    runCheckErr "-p matchesMultiple" "multiple matching" EX_USAGE $args
+
+    runErr2out --process $cmdname | grep -c "${cmdname}$"
+    nmatchingprocs=$(runErr2out --process $cmdname | grep -c "${cmdname}$")
+    if [ "$nmatchingprocs" -eq $nprocslaunched ]; then
+        PASS
+    else
+        FAIL "got $nmatchingprocs matching processes, wanted $nprocslaunched"
+    fi
+    killall $cmdname    # clean up so next test can do the same
+
+    # until 35141324 is fixed
+    rm "$scratchf1"
+}
+
+# (--command has to come last lest other flags get fed to the command)
+testCommandBadArgs()
+{
+    args="--command /aoeu/asdf"
+    runCheckErr "--command <noent>" "No such file" EX_NOINPUT $args
+
+    rm -rf "$scratchf1"
+    args="-p $INVALID_PID --command touch $scratchf1"
+    runCheckErr "--command + -p no_such_pid" "No such process" EX_OSERR $args
+    if [ -f "$scratchf1" ] ; then
+        FAIL "Command was spawned even though pid was bad";
+    else
+        PASS
+    fi
+
+    rm -rf "$scratchf1"
+    args="-p noProc${$} --command touch $scratchf1"
+    runCheckErr "--command + -p no_such_proc" "No such process" EX_OSERR $args
+    if [ -f "$scratchf1" ] ; then
+        PASS
+    else
+        FAIL "Command wasn't spawned for non-existant process name"
+    fi
+}
+
+testCompareBadArgs()
+{
+    args="--compare /etc/hosts -p $$"
+    runCheckErr "--compare <badFormat>" "file type" EX_DATAERR $args
+
+    rm -f "$baselinef"
+    args="--compare $baselinef -p $$"
+    runCheckErr "--compare <missing>" "No such file" EX_NOINPUT $args
+
+    args="--project-baseline perfcheck --compare asdf"
+    runCheckErr "$args" "overrides" EX_USAGE $args
+
+    args="--compare asdf -T lifetime_peak=+10% --project-baseline perfcheck"
+    runCheckErr "$args" "overrides" EX_USAGE $args
+
+    if recordBaseline -p $$; then
+        args="--project-baseline perfcheck --compare $baselinef -b asdf -p $$"
+        runCheckStderr "overrides" $args
+        runCheckStderr "ignoring" $args
+
+        # compare in a different mode
+        args="--compare $baselinef -p $$ -c sleep 0"
+        runCheckErr "delta vs. snapshot" "mem_delta" EX_CONFIG $args
+
+        args="--record $baselinef --compare $baselinef -p $$"
+        runCheckErr "--record with --compare" "incompatible" EX_USAGE $args
+    else
+        FAIL "couldn't create $baselinef"
+    fi
+
+    if recordBaseline -p $$ -c true; then
+        args="--compare $baselinef -p $$"
+        runCheckErr "snapshot vs. delta" "current_mem" EX_CONFIG $args
+    fi
+
+    # break the baseline
+    plutil -convert xml1 "$baselinef"
+    ed "$baselinef" <<EOF
+/model
++
+s/>/>foo-/p
+w
+EOF
+    args="--compare $baselinef -p $$"
+    runCheckErr "no data for model" "model" EX_CONFIG $args
+
+    # TODO: check errors when using older-version ebp files.
+}
+
+testRecordBadArgs()
+{
+    mkdir "$scratchdir"
+    if chflags uchg "$scratchdir"; then
+        args="--record $scratchdir/baseline -p $$"
+        runCheckErr "--record <unwritable>" "not permitted" EX_NOPERM $args
+        chflags nouchg "$scratchdir"
+    else
+        FAIL "couldn't create $scratchdir"
+    fi
+
+    args="--record /etc/hosts -p $$"
+    runCheckErr "--record <incompatible>" "file type" EX_DATAERR $args
+
+    args="-P no_such_project --record $baselinef -p $$"
+    runCheckErr "$args" "incompatible" EX_USAGE $args
+
+    rm -f "$baselinef"
+    if recordBaseline -p $$; then
+        args="--compare $baselinef --record $baselinef -p $$"
+        runCheckErr "--compare before --record" "incompatible" EX_USAGE $args
+    else
+        FAIL "couldn't create $baselinef"
+    fi
+
+    # TODO: need to test comparing delta to snapshot and vice versa
+}
+
+testTestNameBadArgs()
+{
+    rm -f "$baselinef"
+    "$EASYPERF" --test-name thisTest --record "$baselinef" -p $$
+    if [ $? -ne 0 ]; then
+        FAIL "couldn't record baseline"
+    else
+        args="--test-name otherTest --compare $baselinef -p $$"
+        runCheckErr "-t otherTest" "no baseline" EX_CONFIG $args
+    fi
+}
+
+testProjectBaselineBadArgs()
+{
+    rm -f "$baselinef"
+    if recordBaseline -p $$; then
+        args="--compare $baselinef --project-baseline no_such_project -p $$"
+        runCheckStderr "overrides" $args
+
+        args="--compare $baselinef -p $$ --project-baseline perfcheck"
+        runCheckStderr "overrides" $args
+    else
+        FAIL "couldn't create $baselinef"
+    fi
+
+    # It's possible --record will use --project[-baseline] in the future
+    rm -f "$baselinef"
+    args="--record $baselinef --project-baseline perfcheck -p $$"
+    runCheckErr "$args" "incompatible" EX_USAGE $args
+}
+
+testSleepBadArgs()
+{
+    for interval in 0 0.1; do
+        args="--sleep $interval"
+        runCheckErr "$args" "invalid sleep interval" EX_USAGE $args
+    done
+
+    args="-i -p $$ --sleep 1"
+    runCheckErr "-interact before -sleep" "one of" EX_USAGE $args
+
+    args="--sleep 1 -p $$ -c true"
+    runCheckErr "-sleep with -command" "one of" EX_USAGE $args
+
+    runCheckErr "-sleep w/o -p" "requires --process" EX_USAGE --sleep 1
+}
+
+testInteractBadArgs()
+{
+    args="-s 1 -p $$ --interact"
+    runCheckErr "-sleep before --interact" "one of" EX_USAGE $args
+
+    args="--interact -p $$ -c true"
+    runCheckErr "-interact w/-command" "one of" EX_USAGE $args
+
+    runCheckErr "-interact w/o -p" "requires --process" EX_USAGE --interact
+}
+
+testPerfdataBadArgs()
+{
+    if [ $EUID -ne 0 ]; then
+        args="--perfdata /var/root/allowed? -p $$"
+        runCheckErr "--perfdata <unwritable>" "denied" EX_NOPERM $args
+    else
+        echo "Warning: skipping 'Permission denied' test b/c running as root"
+    fi
+
+    args="--perfdata $scratchf1"
+    runCheckErr "--perfdata w/o anything to measure" "nothing" EX_USAGE $args
+}
+
+# testing error suppression behavior added for 23212318 (unittest interface)
+# --failtracer exits 0 even if misused
+testFailTracerBadArgs()
+{
+    # --failtracer masks errors, including incorrect usage of itself
+    args="--failtracer"
+    runCheckStderr "nothing to measure" $args
+
+    # special duplicate handling w/EX_OK
+    args="--failtracer"; args="$args $args"
+    runCheckErr "$args" "already" EX_OK $args
+
+    # failure to spawn a command should still error out
+    randcmd=cmd${RANDOM}
+    args="--failtracer -c $randcmd"
+    runCheckErr "$args" "No such file" EX_NOINPUT $args
+    args="--failtracer -p $$ -c $randcmd"
+    runCheckErr "$args" "No such file" EX_NOINPUT $args
+
+    args="--failtracer -c /etc"
+    runCheckErr "$args" "Permission denied" EX_NOPERM $args
+}
+
+testThresholdBadArgs()
+{
+    args="--threshold ametric -p $$"
+    runCheckErr "bad threshold form" "<metric>=.*<thresh>" EX_USAGE $args
+
+    args="--threshold cpu_=+10% -p $$"
+    runCheckErr "bad metric" "unknown.*cpu_" EX_USAGE $args
+
+    args="--threshold cpu_time=%10% -p $$"
+    runCheckErr "bad percent" "%" EX_USAGE $args
+
+    # not supported yet
+    args="--threshold cpu_time=-10% -p $$"
+    runCheckErr "negative percent" "+" EX_USAGE $args
+    args="--threshold cpu_time=10% -p $$"
+    runCheckErr "+/- threshold" "+" EX_USAGE $args
+
+    # TODO: check warning on cpu_instrs when monotonic isn't enabled
+}
+
+## Test Miscellaneous Correctness
+
+# If a command fails, pass through the exit code
+testErrorExit()
+{
+    # without --failtracer, we should still get output
+    for procargs in "" "-p $$"; do
+        runErr2out $procargs --command false | grep cpu_time
+        if [ ${PIPESTATUS[0]} -ne $EXIT_FAILURE -o ${PIPESTATUS[1]} -ne 0 ];
+        then
+            FAIL "--command 'false' didn't measure & fail"
+        else
+            PASS
+        fi
+
+        excode=$((($RANDOM % 127) + 1))
+        runTool $procargs --command sh -c "exit $excode"
+        if [ $? -eq $excode ]; then
+            PASS
+        else
+            FAIL "--command did not pass through failing exit code $excode"
+        fi
+
+        runErr2out $procargs --command false | grep "' failed with exit code"
+        if [ $? -eq 0 ]; then
+            PASS
+        else
+            FAIL "non-zero command exit didn't warn"
+        fi
+
+        runErr2out $procargs -c true | grep "' failed with exit code"
+        if [ $? -eq 0 ]; then
+            FAIL "successful tool warned (incorrectly)"
+        else
+            PASS
+        fi
+    done
+}
+
+# extract all the options from the man page and source
+GET_MAN_OPTS_AWK='
+/^     --?[a-zA-Z]/ {
+    sub(/,/, "", $1)            # remove trailing comma if second arg
+    sub(/\./, "", $1)           # remove trailing period
+    # print options
+    if ($1 ~ /^-/)  print $1
+    if ($2 ~ /^-/)  print $2
+}
+'
+
+GET_PARSE_OPTS_AWK='
+# get the kEPArg constants from perfcheck_keys.h
+BEGIN {
+    while (getline < "common/perfcheck_keys.h" > 0) {
+        if ($1 == "#define" && $2 ~ /kEPArg/) {
+            argnames[$2] = $3
+        }
+    }
+}
+/str.*cmp\(arg,/ {
+    i = 0
+    while (i++ <= NF) {
+        if ($i ~ /str.*cmp\(arg/) {
+            argfield = i + 1
+            sub(/\)/, "", $argfield)        # remove trailing paren
+            if (argname = argnames[$argfield]) {
+                sub($argfield, argname, $argfield)
+            }
+            gsub("\"", "", $argfield)       # remove "s
+            if (length($argfield) > 2) {
+                # reconstitute double-dash for long options
+                sub(/-/, "--", $argfield)
+            }
+            print $argfield
+        }
+    }
+}'
+
+ARGPARSE_SRCFILE=lib/easyperf.c
+testManPage()
+{
+    # make sure no errors or warnings
+    if [ -z "$manarg" ]; then
+        echo "test_easyperf: no easyperf.1 -> skipping man page tests" >&2
+        return $EX_OK   # else this shows up in the list of failed tests
+    fi
+
+    man "$manarg" 2>&1 > /dev/null | egrep -i "error|warning"
+    if [ ${PIPESTATUS[0]} -eq 0 -a ${PIPESTATUS[1]} -ne 0 ]; then
+        PASS
+    else
+        FAIL "man page has errors or warnings"
+    fi
+
+    # If $ARGPARSE_SRCFILE is available, make sure it and the man page
+    # agree on flags.  For now, the flags must also be in the same order.
+    if [ -r "$ARGPARSE_SRCFILE" ]; then
+        man "$manarg" | col -b | awk "$GET_MAN_OPTS_AWK" | sort -u >"$scratchf1"
+        # echo; echo "GET_MAN_OPTS:" cat "$scratchf1"
+        awk "$GET_PARSE_OPTS_AWK" "$ARGPARSE_SRCFILE" | sort -u >"$scratchf2"
+        # echo; echo "GET_PARSE_OPTS_AWK:" cat "$scratchf2"
+        # read k
+        diff -u --label man-opts --label src-opts "$scratchf1" "$scratchf2"
+        if [ "$?" -eq 0 ]; then
+            PASS
+        else
+            FAIL "man page and $ARGPARSE_SRCFILE disagree about options"
+        fi
+
+        # TODO: check to make sure the man page fits in 80 columns
+
+    else
+        # SKIP
+        echo "Warning: no $ARGPARSE_SRCFILE -> can't compare options to man page"
+    fi
+
+    # TODO: make sure man page documents all metrics (per _keys.h?)
+}
+
+# Make sure this script's main sections tests all the flags.
+# We have a style where the long options are used for primary testing.
+# That style, combined with this test looking for all forms makes
+# it likely that we've used all the functionality in both ways.
+testFlagCoverage()
+{
+    if [ "$manarg" ]; then
+        echo "Comparing hard-coded ALLFLAGS to man $manarg"
+        manflags=$(man "$manarg" | col -b | awk "$GET_MAN_OPTS_AWK" | sort -u)
+        manflags=$(echo $manflags)        # no quotes: newlines -> spaces
+        if [ "$ALLFLAGS" = "$manflags" ]; then
+            PASS
+        else
+            echo "ALLFLAGS: $ALLFLAGS"
+            echo "man page: $manflags"
+            FAIL "ALLFLAGS out of date with man page"
+        fi
+    fi
+
+    for section in "Expected Functionality" "Garbage Input Detection"; do
+        echo "Checking to make sure '$section' tests all flags"
+        sed -n "/^## Test ${section}/,/^## Test [A-Z]/p" "$0" > "$scratchf1"
+        unset untestedflags
+        for flag in $ALLFLAGS; do
+            # echo "testing '$section' for '$flag'"
+            if ! grep -w -q -- "$flag" "$scratchf1"; then
+                # merge w/o space
+                untestedflags=$(echo $untestedflags $flag)
+            fi
+        done
+        if [ -z "$untestedflags" ]; then
+            PASS
+        else
+            FAIL "$section doesn't appear to test: $untestedflags"
+        fi
+    done
+}
+
+# ensure that all unit tests are running manually & in automation
+testUnitTestCoverage()
+{
+    # TODO: set up a SRCDIR in testutils.sh
+    if [ "$(basename $PWD)" = "perfcheck" -a -d "tests" ]; then
+        initialFailCount=$totalFailed
+
+        # grab the body of testUnitTests() and all the files in tests/
+        sed -n '/^testUnitTests()$/,/^}$/p' "$0" > "$outf"
+        if [ $? -ne "$EX_OK" -o ! -s "$outf" ]; then
+            FAIL "couldn't get testUnitTests() body"
+            return "$EX_CONFIG"
+        fi
+        testfiles=$(ls tests)
+        if [ "$?" -ne "$EX_OK" ]; then
+            FAIL "couldn't get test list"
+            return "$EX_CONFIG"
+        fi
+
+        for testname in $testfiles; do
+            [[ "$testname" == test_* ]] || continue
+            echo looking for something running $testname
+
+            # C-based unit tests should be run by testUnitTests()
+            if [[ "$testname" == *.c ]]; then
+                testname=${testname%.c}
+                grep -q "$testname" "$outf" ||  \
+                        FAIL "testUnitTests() doesn't run $testname"
+            fi
+
+            # and all tests should be in the plist
+            grep -q "$testname" tests/perfcheck.plist ||  \
+                    FAIL "perfcheck.plist doesn't include $testname"
+        done
+
+        [ "$testfiles" -a "$totalFailed" -eq "$initialFailCount" ] && PASS
+    fi
+}
+
+# TODO: testMetricsCoverage - can it fail if there's a metric for
+#       which the test doesn't do a regression detection?
+#       cpu_instrs was introduced without a basic '> 0' test
+
+
+## Test libperfcheck (during development)
+# In automation, test_libperfcheck is a separate test (see perfcheck.plist).
+runCheckTestTool()
+{
+    testTool="$1"
+    echo "searching for $testTool ..."
+    if [ "$EASYPERFDIR" = /usr/local/bin ]; then
+        toolPath=/AppleInternal/Tests/perfcheck/$testTool
+        if ! [ -x "$toolPath" ]; then
+            echo "SKIP: $testTool not installed"
+            return $EX_CONFIG
+        fi
+    else
+        toolPath="$EASYPERFDIR/$testTool"
+        [ -x "$toolPath" ] || toolPath="tests/$testTool"
+    fi
+    if ! [ -x "$toolPath" ]; then
+        FAIL "$testTool not found"
+        return $EX_NOINPUT
+    fi
+    set -x
+    "$toolPath" >"$outf" 2>&1
+    excode=$?
+    set +x
+    if [ "$excode" -eq "$EX_OK" ]; then
+        PASS
+    else
+        egrep "FAIL|BEGIN|END" "$outf"
+        FAIL "$testTool failed"
+    fi
+    return $retval
+}
+
+testUnitTests()
+{
+    # use presence of tty to decide whether to run unit tests
+    # TODO: confirm this doesn't run in BATS
+    if [ -t $STDIN_FILENO ]; then
+        runCheckTestTool test_libperfcheck
+        if ! egrep "test_libperfcheck\[" "$outf"; then
+            cat "$outf"
+            FAIL "test_libperfcheck didn't report on itself"
+        # when 35165556 is fixed
+        # elif ! egrep "Finder|mediaserverd" "$scratchf1"; then
+        #     cat "$scratchf1"
+        #     FAIL "test_libperfcheck didn't report on a system binary"
+        else
+            PASS
+        fi
+
+        for tool in test_easyperf_perf test_epcompat test_pc_graph; do
+            runCheckTestTool "$tool"
+        done
+    fi
+}
+
+
+for testfunc in $testsToRun; do
+    echo; echo running ${testfunc}:
+    initialFailCount=$totalFailed
+    $testfunc
+    testreturn=$?
+
+    # handle various errors
+    if [ $testreturn -ne 0 ]; then
+        # first check for a bogus testname from the command line
+        if ! typeset -f "$testfunc" > /dev/null; then
+            # the shell already printed '<testfunc>: command not found'
+            exit $EX_USAGE
+        fi
+
+        # accumulate the failed test
+        failedTests="$failedTests $testfunc"
+
+        # If $EXITONFAIL, FAIL() will exit, but if the function failed
+        # without calling FAIL(), catch that here.
+        if [ "$EXITONFAIL" ]; then
+            FAIL "test_easyperf: '$testfunc' failed w/-strict, stopping now"
+            break       # though FAIL should exit
+        fi
+    elif [ $totalFailed -gt $initialFailCount ]; then
+        # test registered one or more failures
+        failedTests="$failedTests $testfunc"
+    fi
+done
+
+if [ $totalFailed -gt 0 ]; then
+    echo
+    echo "failed tests:$failedTests"
+
+    exval=$(( ($(echo $failedTests | cksum | awk '{print $1}') % 127) + 1))
+else
+    exval=0
+fi
+
+unset s
+[ "$SECONDS" -ne 1 ] && s=s
+echo
+echo "   --- DONE (in $SECONDS second${s}) ---"
+echo "Summary: $totalPassed passed, $totalFailed failed"
+
+exit $exval

@@ -1,0 +1,291 @@
+Chiama Fabrizio
+Telefono
+Chiama Elisa con FaceTime
+FaceTime
+Apri Fotocamera
+Apertura di app
+Scrivi a Carla che sto arrivando
+Messaggi
+Fissa una riunione per le 9:00
+Calendario
+I Giants hanno vinto?
+Sport
+Indicazioni per Roma
+Mappe
+Twitta che sono felice
+Twitter
+Scrivi su Weibo…
+Weibo
+Pubblica su Facebook…
+Facebook
+Consigliami un ristorante cinese
+Ristoranti
+Quale commedia mi consigli?
+Film
+Ascoltiamo Norah Jones
+Musica
+Ricordami di chiamare mamma
+Promemoria
+Manda un'e-mail a Simonetta
+E-mail
+Che tempo fa oggi?
+Meteo
+Come ha chiuso Apple?
+Borsa
+Domani svegliami alle 7:00
+Orologio
+Qual è l'indirizzo di Simonetta?
+Contatti
+Dov'è Fabrizio?
+Trova i miei amici
+Annota che sono contento
+Note
+Attiva la modalità 'Uso in aereo'
+Impostazioni
+Cerca 'orsi polari' su Internet
+Ricerca su Internet
+Quanti abitanti ha Torino?
+Q&A
+CHIEDERE INFORMAZIONI SUI CONTATTI
+Qual è l'indirizzo di Simonetta?
+Qual è il numero di telefono di Carla Molari?
+Quand'è il compleanno di mia moglie?
+Mostrami l'indirizzo e-mail personale di Francesca
+Qual è l'indirizzo dell'ufficio di mio fratello?
+TROVARE CONTATTI
+Mostra Fabrizio Ciani
+Trova i contatti con il cognome Molari
+RELAZIONI
+Mia mamma è Carla Molari
+Giovanni Ferraris è mio fratello
+Chiama mio fratello in ufficio
+Chiama mio fratello in ufficio con FaceTime
+Invia una chiamata FaceTime a Carla Molari
+PRONUNCIA
+Impara a pronunciare il mio nome
+Impara a pronunciare il nome di mia madre
+Impara a pronunciare il nome di Giovanni Molari
+Apri Fotocamera
+Fammi giocare a Infinity Blade II
+Apri Facebook
+AGGIUNGERE EVENTI
+Fissa una riunione per le 9:00
+Fissa una riunione con Giovanni per le 9:00
+Appuntamento con Simonetta a mezzogiorno
+Fissa la riunione per l'approvazione del bilancio domani alle 9:00
+Nuovo appuntamento con Carla Molari venerdì alle 15:00
+Programma una riunione per oggi alle 8:30 a Parigi
+MODIFICARE EVENTI
+Sposta la riunione delle 15:00 alle 16:30
+Sposta l'appuntamento con il Sig. Bartolini a lunedì prossimo alle 9:00
+Invita Simonetta alla riunione con Fabrizio
+Annulla la riunione sulla revisione del preventivo
+CHIEDERE INFORMAZIONI SUGLI EVENTI
+Cosa c'è in programma per il resto della giornata?
+Cosa c'è sul calendario per venerdì?
+Quand'è il prossimo appuntamento?
+Quand'è la riunione con Giovanni?
+Dove si tiene la prossima riunione?
+SVEGLIA
+Domani svegliami alle 7:00
+Imposta la sveglia per le 6:30
+Svegliami tra 8 ore
+Sposta la sveglia delle 6:30 alle 6:45
+Disattiva la sveglia delle 6:30
+Elimina la sveglia delle 7:30
+Disattiva tutte le sveglie
+OROLOGIO
+Che ore sono a Parigi?
+Quando è Natale?
+Quanti ne abbiamo questo sabato?
+TIMER
+Imposta il timer a dieci minuti
+Mostra il timer
+Metti in pausa il timer
+Riavvia il timer
+Reimposta il timer
+Fermalo
+Pubblica su Facebook che ho visto il nuovo film della Pixar
+Scrivi sulla mia bacheca che ho fatto un'escursione bellissima al Parco Nazionale del Gargano
+Scrivi sulla mia bacheca che sono appena atterrato a Genova
+Chiama Elisa con FaceTime
+Chiama Carla Molari con FaceTime
+Chiamata audio con FaceTime
+Dov'è Fabrizio?
+Dov'è mia sorella?
+Dove sono tutti i miei amici?
+Chi è qui vicino?
+Chi è nelle vicinanze?
+Avvisami quando mio figlio arriva a casa
+Informa mio marito quando vado via dal lavoro
+NAVIGAZIONE
+Indicazioni per Roma
+Dammi indicazioni per arrivare a casa
+Dammi indicazioni per arrivare in Piazza Navona
+Indicazioni per l'ufficio di mio padre
+Dimmi come arrivare da Firenze a Roma
+Dimmi come arrivare a piedi da Carla
+Qual è la prossima svolta?
+Quando arriviamo?
+Qual è l’ora di arrivo prevista?
+Trova un distributore di benzina
+MAPPE
+Mostrami il Colosseo
+Mostrami una mappa di Via Aurelia 10 a Roma
+ATTIVITÀ COMMERCIALI LOCALI
+Cerca un bar qui vicino
+Trova il miglior parrucchiere di Torino
+Dove si trova l'Apple Store più vicino?
+INVIARE MESSAGGI
+Scrivi a Carla che sto arrivando
+Invia un messaggio a Fabrizio Ciani
+Invia un messaggio a Simonetta e chiedile qual è il programma per domani
+Dì a Francesca che lo spettacolo è stato fantastico
+Invia un messaggio al cellulare di Carla e dille che sono in ritardo
+Invia un messaggio al 330 555 12 12
+Scrivi a Fabrizio e Simonetta e chiedi loro dove sono
+LEGGERE I MESSAGGI
+Leggi i nuovi messaggi
+Rileggilo
+RISPONDERE AI MESSAGGI
+Rispondi: è una bella notizia
+Digli che arriverò tra 10 minuti
+Chiamala
+Chiamala con FaceTime
+CERCARE MESSAGGI
+Leggi l'ultimo messaggio di Carla
+CERCARE INFORMAZIONI SUI FILM
+Quale commedia mi consigli?
+Chi è il protagonista di 'Il sapore della vittoria'?
+Cerca film Disney
+CERCARE GLI ORARI DEI CINEMA
+Vorrei vedere il nuovo film della Pixar
+Quali film posso vedere al cinema domani?
+Quali film proiettano nelle sale?
+CERCARE CINEMA
+Trova cinema vicini al mio ufficio
+LIBRERIA MUSICALE
+Ascoltiamo Norah Jones
+Riproduci 'Little Broken Hearts' in ordine casuale
+Riproduci 'Walk' dei Foo Fighters
+Fammi sentire un po' di jazz
+Riproduci la playlist Festa
+Riproduci in ordine casuale la mia playlist di viaggio
+Riproduci tutti i brani
+Metti in pausa
+Passa al brano successivo
+Annota che sono contento
+Nota per me: ascoltare il nuovo album di Norah Jones
+Cerca le note sulla riunione
+Aggiungi alle mie note 'Visita il Colosseo'
+Mostrami le note del 25 giugno
+Leggi le note sulle idee relative alla storia
+CHIAMATE
+Chiama Fabrizio
+Chiama Simonetta al cellulare
+Chiama Carla in ufficio
+Chiama il numero 011 555 12 12
+Chiama a casa
+Chiama il 112
+Chiama i vigili del fuoco
+Ottieni la cronologia delle chiamate
+Ci sono chiamate perse?
+Richiama l'ultimo numero
+Chiamata FaceTime con Fabrizio
+SEGRETERIA
+Ci sono nuovi messaggi in segreteria?
+Voglio ascoltare il messaggio di Carla
+Ricordami di chiamare mamma
+Aggiungi il paracadutismo alla lista di cose da fare prima di morire
+Aggiungi i carciofi alla lista della spesa
+Ricordami di prendere l'ombrello
+Ricordami di prendere le medicine domani alle 6:00
+Ricordami di finire la relazione entro le 18:00
+Leggimi l’elenco delle cose da fare al lavoro
+Ricordami di chiamare mamma quando arrivo a casa
+Ricordami di chiamare Fabrizio con FaceTime quando vado via da qui
+Ricordami di chiamare mamma con FaceTime quando arrivo a casa
+Ricordami di comprare dei fiori quando vado via da qui
+CERCARE RISTORANTI
+Consigliami un ristorante cinese
+Trova un locale dove mangiare una buona pizza a Torino
+Attiva la modalità 'Uso in aereo'
+Il Bluetooth è attivo?
+Aumenta la luminosità dello schermo
+Attiva il Bluetooth
+Vai alle impostazioni di Twitter
+Mostrami le impostazioni sulla privacy
+Configura il Wi-Fi
+Apri le impostazioni di iCloud
+Attiva 'Non disturbare'
+PUNTEGGI
+I Giants hanno vinto?
+Qual è stato il punteggio dell'ultima partita tra i Tigers e i Red Sox?
+Dammi i risultati delle ultime partite di calcio
+Che cosa ha fatto l'Italia ieri sera?
+Chi ha vinto il derby della Mole?
+CALENDARI PARTITE
+Quando giocano i Giants?
+Quand'è il primo incontro della stagione dei Red Sox?
+Quali partite di basket ci sono oggi?
+STATISTICHE
+Qual è la migliore squadra di hockey sul ghiaccio?
+Chi è il capocannoniere della scorsa stagione?
+Quali sono le squadre più forti del campionato?
+INFORMAZIONI SUI GIOCATORI
+Chi è il giocatore più alto della nazionale italiana?
+INFORMAZIONI SULLE SQUADRE
+Chi gioca in porta per la Francia?
+Quali squadre partecipano alla Champions League?
+Chi sono gli attaccanti dell'Italia?
+Come ha chiuso Apple?
+Qual è il rapporto prezzo-utili delle azioni Apple?
+Come ha chiuso Yahoo oggi?
+Qual è la situazione del Nikkei?
+Come va la borsa oggi?
+Qual è il valore del NASDAQ oggi?
+TWITTARE
+Twitta che sono felice
+Pubblica su Twitter che a Roma c'è una giornata bellissima
+Pubblica la mia posizione su Twitter
+Invia un tweet dicendo che adoro il concerto di Norah Jones hashtag Little Broken Hearts
+CERCARE SU TWITTER
+Cerca i tweet sui Giants
+Mostrami i miei tweet
+Twitta hashtag Milano
+Trova tweet con hashtag Colosseo
+Quali sono gli argomenti più twittati?
+Che si dice dei Foo Fighters su Twitter?
+Che tempo fa oggi?
+Che tempo farà domani?
+Pioverà a Roma dopodomani?
+Controlla le previsioni a Milano per questa sera
+C'è la luna nuova?
+Che tempo fa a Bari oggi?
+C'è vento sul Lago di Como?
+Qual è la minima a Palermo oggi?
+Qual è la temperatura esterna?
+C'è molto vento?
+A che ora sorge il sole a Parigi?
+Mi serve un ombrello oggi?
+Cerca 'orsi polari' su Internet
+Cerca ricette di pasta al forno
+Cerca su Internet i migliori piani tariffari di TV via cavo
+Cerca la guerra del 1812 su Google
+Cerca 'Norah Jones' su Bing
+Cerca foto di orche assassine
+Mostrami video sull'aurora boreale
+Cerca notizie su Modena
+Scrivi su Weibo 'Sono felice'
+Aggiorna il mio Weibo 'Bellissimo il concerto la notte scorsa'
+Scrivi su Weibo che sto visitando la Grande Muraglia e includi la mia posizione
+Quanti abitanti ha Torino?
+Qual è la città più grande della California?
+Che cos'è un triangolo isoscele?
+Che cos'è Marte?
+Mostrami la costellazione di Orione
+Qual è la capitale della Giamaica?
+Quanto è alto l'Everest?
+Dove nacque Alessandro Manzoni?
+Qual è la popolazione di Roma?
+Cosa sai sulla Pixar?

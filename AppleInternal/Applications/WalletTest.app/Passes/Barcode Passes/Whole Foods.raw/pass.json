@@ -1,0 +1,40 @@
+{
+    "formatVersion": 1,
+    "associatedStoreIdentifiers": [
+                                   320029256
+                                   ],
+    "passTypeIdentifier": "pass.com.apple.test1",
+    "groupingIdentifier" : "wholefoods",
+    "serialNumber": "WNATM1234",
+    "teamIdentifier": "K9942Z534D",
+    "organizationName": "Whole Foods",
+	"description": "Whole Foods",
+    "longDescription" : "Whole Foods",
+    "backgroundColor": "rgb(222,221,209)",
+    "foregroundColor": "rgb(0, 38, 0)",
+    "labelColor": "rgb(73, 141, 64)",
+    "storeCard": {
+        "headerFields": [
+            {
+                "key": "header-field-1",
+                "label": "Points",
+                "value": "326"
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key": "secondary-field-1",
+                "label": "Today's Offer",
+                "value": "Double points on produce"
+            }
+        ]
+    },
+    "barcode" : {
+        "message" : "81781610017",
+        "format" : "PKBarcodeFormatPDF417",
+        "messageEncoding" : "iso-8859-1"
+    },
+    "nfc" : {
+        "message" : "987654321"
+    }
+}

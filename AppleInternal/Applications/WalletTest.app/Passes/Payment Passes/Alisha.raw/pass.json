@@ -1,0 +1,94 @@
+{
+    "formatVersion": 1,
+    "passTypeIdentifier": "paymentpass.com.apple.dev1",
+    "teamIdentifier": "58Y959KPTE",
+    "primaryAccountIdentifier": "FAPLOAMK4EAA2A7AF219D60BB6672277580EEF4EA680BA4C",
+    "primaryAccountSuffix": "BA4C",
+    "associatedStoreIdentifiers": [],
+    "serialNumber": "nc.qa.qa3nc_8d2f0c934d2b45ddad57d8b313b3977e",
+    "backgroundColor": "rgb(255,255,255)",
+    "foregroundColor": "rgb(0,0,0)",
+    "labelColor": "rgb(126,106,136)",
+    "organizationName": "BMW",
+    "description": "BMW i8",
+    "longDescription": "BMW i8",
+    "supportsDefaultCardSelection": false,
+    "isPaymentOptionSelectable": true,
+    "transactionServiceURL": "https://notifications.alisha.com/notifications",
+    "transactionPushTopic": "com.alisha.TokenPush",
+    "supportsSerialNumberBasedProvisioning": false,
+    "requiresTransferSerialNumberBasedProvisioning": false,
+    "supportsDPANNotifications": 0,
+    "supportsFPANNotifications": 0,
+    "paymentCard": {
+        "secondaryFields": [],
+        "auxiliaryFields": [],
+        "backFields": []
+    },
+    "paymentApplications": [
+        {
+            "secureElementIdentifier": "045137F3DD49800181010042579463570CC55AB6CA260FD4",
+            "applicationIdentifier": "A000000809434343444B417631",
+            "DPANIdentifier": "4EAA2A7AF219D60BB6672277580EEF4EA680BA4C",
+            "DPANSuffix": "BA4C",
+            "state": 1,
+            "supportsContactlessPayment": 1,
+            "supportsInAppPayment": 0,
+            "paymentNetworkIdentifier": 301,
+            "paymentType": "Access",
+            "applicationDescription": "BMW",
+            "defaultPaymentApplication": false,
+            "supportsOptionalAuthentication": 1,
+            "automaticSelectionCriteria": [
+                {
+                    "type": "ecp.2.tci",
+                    "tcis": [
+                        "010001",
+                        "010002",
+                        "010003"
+                    ],
+                    "supportsExpress": true
+                }
+            ],
+            "supportedTransitNetworkIdentifiers": [],
+            "subcredential": {
+                "identifier": "4EAA2A7AF219D60BB6672277580EEF4EA680BA4C",
+                "state": 1,
+                "entitlement": {
+                    "value": 0,
+                    "description": "value0Description",
+                    "longDescription": "value0LongDescription"
+                },
+                "sharing": {
+                    "maxNumberOfSharedCredentials": 5,
+                    "entitlements": [
+                        {
+                            "value": 0,
+                            "description": "value0Description",
+                            "longDescription": "value0LongDescription"
+                        },
+                        {
+                            "value": 1,
+                            "description": "value1Description",
+                            "longDescription": "value1LongDescription"
+                        },
+                        {
+                            "value": 2,
+                            "description": "value2Description",
+                            "longDescription": "value2LongDescription"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "sequenceCounter": 6,
+    "auxiliaryPaymentApplications": [],
+    "isCobranded": false,
+    "contactName": "ALISHA",
+    "hasAssociatedPeerPaymentAccount": false,
+    "liveRenderedBackground": false,
+    "supportsCategoryVisualization": false,
+    "secondaryBackgroundColor": "rgb(255,255,255)",
+    "cardType": "Access"
+}

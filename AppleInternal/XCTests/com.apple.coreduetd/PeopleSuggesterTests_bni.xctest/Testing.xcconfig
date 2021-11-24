@@ -1,0 +1,11 @@
+//
+//  Testing.xcconfig
+//  PeopleSuggesterTests_bni
+//
+//  Created by Matthew Dias on 3/6/19.
+//  Copyright © 2019 Apple Inc. All rights reserved.
+//
+
+#include "../../XCConfigs/Global.xcconfig"
+
+OTHER_LDFLAGS[sdk=iphoneos13.0.internal] = -framework PeopleSuggester

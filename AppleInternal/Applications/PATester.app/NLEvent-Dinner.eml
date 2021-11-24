@@ -1,0 +1,59 @@
+Return-path: <toudji@apple.com>
+Received: from ma1-postinop-sz02.apple.com ([17.171.128.212])
+ by mail8.rno.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.20170413 64bit (built Apr 13
+ 2017)) with ESMTPS id <0ORX009FC7EIQC70@mail8.rno.apple.com> for
+ toudji@apple.com; Wed, 21 Jun 2017 16:18:22 -0700 (PDT)
+Original-recipient: rfc822;toudji@apple.com
+Received: from nwk-postinop-sz10.apple.com ([17.128.115.143])
+ by postino.apple.com
+ (Oracle Communications Messaging Server 7.0.5.35.0 64bit (built Mar 31 2015))
+ with ESMTPS id <0ORX00HNY7EA6MC0@postino.apple.com> for toudji@apple.com
+ (ORCPT toudji@apple.com); Wed, 21 Jun 2017 16:18:19 -0700 (PDT)
+Received: from relay5.apple.com ([17.128.113.88])
+ by postino.apple.com (Oracle Communications Messaging Server 8.0.1.2.20170210
+ 64bit (built Feb 10 2017)) with ESMTPS id <0ORX00L167DG3TB1@postino.apple.com>
+ for toudji@apple.com (ORCPT toudji@apple.com); Wed,
+ 21 Jun 2017 16:18:15 -0700 (PDT)
+X-Va-A:
+X-Va-T-CD: 622b508e7a24f21f8172d7e4c06012e4
+X-Va-E-CD: 81362fd2bbb3fb2c054f86009d8bedb7
+X-Va-R-CD: ea3d5586dd43b9d0725ccf7932f25a5f
+X-Va-CD: 0
+X-Va-ID: c9cdbc94-b8b8-4cf8-9984-c3f1978c5a77
+X-V-A:
+X-V-T-CD: 622b508e7a24f21f8172d7e4c06012e4
+X-V-E-CD: 81362fd2bbb3fb2c054f86009d8bedb7
+X-V-R-CD: ea3d5586dd43b9d0725ccf7932f25a5f
+X-V-CD: 0
+X-V-ID: 417da166-5ba4-4953-8a87-499880685a48
+X-AuditID: 11807158-f666d70000002480-8e-594afeb6ed88
+Received: from [17.149.220.112] (Unknown_Domain [17.149.220.112])
+	(using TLS with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client did not present a certificate)	by relay5.apple.com (Apple SCV relay)
+ with SMTP id FB.06.09344.7BEFA495; Wed, 21 Jun 2017 16:18:15 -0700 (PDT)
+From: Sofiane Toudji <toudji@apple.com>
+Content-type: text/plain; charset=us-ascii
+Content-transfer-encoding: 7bit
+MIME-version: 1.0 (Mac OS X Mail 11.0 \(3436\))
+Subject: Hello
+Message-id: <7D5E4AA7-7780-4069-9F95-A12C046F9B16@apple.com>
+Date: $now_full_text$
+To: Sofiane Toudji <toudji@apple.com>
+X-Mailer: Apple Mail (2.3436)
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFnrEJMWRmVeSWpSXmKPExsUiOPVOge72f16RBo92cllcafjF6MDosfXk
+	D7YAxigum5TUnMyy1CJ9uwSujPsvDzMWOFfMPMXZwGjQxcjJISFgIjHp3WKWLkYuDiGBBUwS
+	VxoPM4Ek2ATUJZ7vmQyU4OBgFtCRmLyQESTMLCAvsf3tHGYQm1dAX2LT+nNgJcICfBJbvsdD
+	hG0k7s9/xgoSZhFQlVj/EGygCJB56PgjJoitshJTF99gnMDIPQth/iwk82chmb+AkXkVo0BR
+	ak5ipaleYkFBTqpecn7uJkaQzxsKI3Yw/l9mdYhRgINRiYd3QoNXpBBrYllxZe4hRgkOZiUR
+	XusXQCHelMTKqtSi/Pii0pzU4kOM0hwsSuK8fdM9I4UE0hNLUrNTUwtSi2CyTBycUg2Mkpp/
+	2Cf5XexUZ76oevJ+UB2rneYm51eHAwXsLFd/FspjZGp6/qTto+37yhSFq34RRfKHrQr/pCj7
+	f3wfdizDcZ9w6ZTsrQdmcs5uzmK039aslMrafMm3cu7XXqbEUx4v7bep7dLpuHbHfdF3hvh9
+	myOkHzUs/jYv9s+Z6t2TUt6Kf+g6XmanxFKckWioxVxUnAgANMuctvUBAAA=
+
+Hey,
+
+Do you want to go for dinner next saturday at 8pm?
+
+Sofiane

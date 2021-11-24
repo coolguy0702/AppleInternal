@@ -1,0 +1,158 @@
+{
+  "actions": [
+    {
+      "identifier": "la-renew-30-day-plan",
+      "associatedPlanIdentifier": "la-30-day",
+      "type": "selectedItem",
+      "hasRemoteContent": false,
+      "title": "Renew 30 day plan",
+      "description": "Renews your 30 day commute plan",
+      "confirmationTitle": "Renew",
+      "headerText" : "Commute Plan: 30 Day LA Metro Area",
+      "footerText" : "The selected plan will be added to your existing Commute Plan.",
+      "serviceProviderIdentifier": "transit.apple.cubic.tap",
+      "serviceProviderCountryCode": "US",
+      "serviceProviderSupportedNetworks": [
+        "AmEx",
+        "Discover",
+        "MasterCard",
+        "Visa"
+      ],
+      "serviceProviderCapabilities": [
+        "EMV",
+        "credit",
+        "debit"
+      ],
+      "items": [
+        {
+          "identifier" : "renewal_30_day_item",
+          "title" : "Renew 30 Day Plan",
+          "currency" : "USD",
+          "amount" : 79.95,
+          "newExpirationDate" : "2020-11-05T08:15:30-05:00",
+          "serviceProviderData" : {
+            "key1": "value1",
+            "key2": "value2"
+          }
+        }
+      ]
+    },
+    {
+     "identifier": "la-renew-10-ride-plan",
+     "associatedPlanIdentifier": "LA_METRO_10_RIDE",
+     "type": "selectedItem",
+     "hasRemoteContent": false,
+     "title": "Renew 10 ride plan",
+     "description": "Purchases another 10 ride plan",
+     "confirmationTitle": "Renew",
+     "headerText" : "Commute Plan: 10 ride plan",
+     "footerText" : "The selected plan will be added to your existing Commute Plan.",
+     "serviceProviderIdentifier": "transit.apple.cubic.tap",
+     "serviceProviderCountryCode": "US",
+     "serviceProviderSupportedNetworks": [
+       "AmEx",
+       "Discover",
+       "MasterCard",
+       "Visa"
+     ],
+     "serviceProviderCapabilities": [
+       "EMV",
+       "credit",
+       "debit"
+     ],
+     "items": [
+       {
+         "identifier" : "renewal_10_ride_day_item",
+         "title" : "Purchase another 10 Ride Plan",
+         "currency" : "USD",
+         "amount" : 23.95,
+         "serviceProviderData" : {
+           "key1": "value1",
+           "key2": "value2"
+         }
+       }
+     ]
+    },
+    {
+      "identifier": "la-renew-7-day-plan",
+      "associatedPlanIdentifier": "la-7-day",
+      "type": "selectedItem",
+      "hasRemoteContent": false,
+      "title": "Renew 7 day plan",
+      "description": "Renews your 7 day commute plan",
+      "confirmationTitle": "Renew",
+      "headerText" : "Commute Plan: 7 Day LA Metro Area",
+      "footerText" : "The selected plan will be added to your existing Commute Plan.",
+      "serviceProviderIdentifier": "transit.apple.cubic.tap",
+      "serviceProviderCountryCode": "US",
+      "serviceProviderSupportedNetworks": [
+        "AmEx",
+        "Discover",
+        "MasterCard",
+        "Visa"
+      ],
+      "serviceProviderCapabilities": [
+        "EMV",
+        "credit",
+        "debit"
+      ],
+      "items": [
+        {
+          "identifier" : "renewal_7_day_item",
+          "title" : "Renew 7 Day Plan",
+          "currency" : "USD",
+          "amount" : 19.95,
+          "newExpirationDate" : "2020-11-05T08:15:30-05:00",
+          "serviceProviderData" : {
+            "key1": "value1",
+            "key2": "value2"
+          }
+        }
+      ]
+    },
+    {
+        "identifier": "top-up-stored-value",
+        "associatedEnteredValueIdentifier": "$id_storedvalue",
+        "type": "enteredValue",
+        "hasRemoteContent": false,
+        "title": "Add Money",
+        "description": "Add value to your stored value balance.",
+        "confirmationTitle": "Add Money",
+        "featured": true,
+        "serviceProviderIdentifier": "transit.apple.cubic.tap",
+        "serviceProviderCountryCode": "US",
+        "serviceProviderSupportedNetworks": [
+          "AmEx",
+          "Discover",
+          "MasterCard",
+          "Visa"
+        ],
+        "serviceProviderCapabilities": [
+          "EMV",
+          "credit",
+          "debit"
+        ],
+        "item": {
+            "currency": "USD",
+            "minAmount": 1,
+            "maxAmount": 100,
+            "defaultSuggestions": [
+                5,
+                20,
+                50
+            ],
+            "lowBalanceReminderOptions": [
+                3.0,
+                10.0,
+                15.0
+            ],
+            "maxAmountIncludesLocalBalance": true,
+            "serviceProviderData": {
+                "actionIdentifier": "top_up",
+                "issuerIdentifier": "tap",
+                "dpanIdentifier": "DAPLSLSP9000049438D406638043A9ABBC3A7663A1E0380139822E0A3830E6"
+            }
+        }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<xmlui action="showModal" style="setupAssistant">
+    <page>
+        <navigationBar title="Dismiss to see refreshed data"/>
+        <tableView>
+            <section>
+                <linkRow label="Dismiss" url="refreshed_page.xml" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

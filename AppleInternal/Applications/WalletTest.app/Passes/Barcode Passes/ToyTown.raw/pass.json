@@ -1,0 +1,100 @@
+{
+  "description" : "Toytown Pass",
+  "formatVersion" : 1,
+  "teamIdentifier" : "K9942Z534D",
+  "foregroundColor" : "rgb(255, 255, 255)",
+  "locations" : [
+    {
+      "longitude" : -122.3748889,
+      "latitude" : 37.6189722
+    },
+    {
+      "longitude" : -122.03118,
+      "latitude" : 37.33182
+    }
+  ],
+  "userInfo": {"foo":"bar","one":"six"},
+  "serialNumber" : "sadpuppy",
+  "backgroundColor" : "rgb(197, 31, 31)",
+  "barcode" : {
+    "message" : "123456789",
+    "format" : "PKBarcodeFormatPDF417",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "passTypeIdentifier" : "pass.com.apple.test1",
+  "groupingIdentifier" : "toytown",
+  "generic" : {
+    "primaryFields" : [
+      {
+        "key" : "header",
+        "value" : "Membership"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "level",
+        "label" : "LEVEL",
+        "value" : "Gold"
+      },
+      {
+        "key" : "since",
+        "label" : "SINCE",
+        "value" : "2002"
+      }
+    ],
+    "backFields" : [
+      {
+        "numberStyle" : "WLNumberStyleSpellOut",
+        "label" : "spelled out",
+        "key" : "numberStyle",
+        "value" : 200
+      },
+      {
+        "key" : "loc",
+        "label" : "localized to french",
+        "value" : "Oh my stars."
+      },
+      {
+        "label" : "in reals",
+        "key" : "currency",
+        "value" : 200,
+        "currencyCode" : "BRL"
+      },
+      {
+        "dateStyle" : "WLDateStyleFull",
+        "label" : "date full",
+        "key" : "dateFull",
+        "value" : "1980-05-07T10:00-05:00"
+      },
+      {
+        "label" : "time full",
+        "key" : "timeFull",
+        "value" : "1980-05-07T10:00-05:00",
+        "timeStyle" : "WLDateStyleFull"
+      },
+      {
+        "dateStyle" : "WLDateStyleShort",
+        "label" : "dateTime",
+        "key" : "dateTime",
+        "value" : "1980-05-07T10:00-05:00",
+        "timeStyle" : "WLDateStyleShort"
+      },
+      {
+        "dateStyle" : "WLDateStyleShort",
+        "label" : "rel style",
+        "key" : "relStyle",
+        "value" : "2012-04-24T10:00-05:00",
+        "isRelative" : true
+      }
+    ],
+    "secondaryFields" : [
+      {
+        "key" : "subtitle",
+        "value" : "2012"
+      }
+    ]
+  },
+  "logoText" : "Toy Town",
+  "organizationName" : "Toy Town",
+  "relevantDate" : "2011-12-08T13:00-08:00"
+}

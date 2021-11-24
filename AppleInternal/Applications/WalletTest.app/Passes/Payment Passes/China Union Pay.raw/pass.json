@@ -1,0 +1,97 @@
+{
+    "associatedApplicationIdentifiers": [
+        "DK9N2M2GK6.com.apple.syndrome",
+        "5AM47K89XY.com.apple.PassAche"
+    ],
+    "associatedStoreIdentifiers": [
+        640199958
+    ],
+    "backgroundColor": "rgb(255,255,255)",
+    "longDescription" : "The Bank Card Platinum Rewards",
+	"description": "The Bank Card",
+    "expiryDate" : "07/2016",
+    "foregroundColor": "rgb(0, 0, 0)",
+    "formatVersion": 1,
+    "labelColor": "rgb(126, 106, 136)",
+    "logoText": "MasterCard",
+    "organizationName": "The Bank",
+    "passTypeIdentifier": "paymentpass.com.apple.wallet.dev",
+    "primaryAccountIdentifier": "FAPLABCWX7ed1876fc31ff492ba132d072cb7acd1b",
+    "primaryAccountSuffix": "4444",
+    "issuerCountryCode": "CN",
+    "paymentApplications": [
+        {
+            "DPANIdentifier": "DAPLABCWX7824bb0419714df99bc5095dda5f921a",
+            "DPANSuffix": "8888",
+            "applicationIdentifier": "A00000000410100100000001",
+		 	"paymentNetworkIdentifier": 11,
+            "secureElementIdentifier": "1002033040032022011110",
+            "supportsContactlessPayment": 1,
+            "supportsInAppPayment": 1,
+		 	"state" : 1,
+		 	"inAppPINRequiredAmount" : "100.00",
+			"inAppPINRequiredCurrency" : "CNY",
+            "paymentType": "Debit"
+        }
+    ],
+    "paymentCard": {
+        "auxiliaryFields": [
+            {
+                "key": "cardholder",
+                "label": "CARDHOLDER",
+                "value": "John Q. Public"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "notice",
+                "label": "INFORMATION",
+                "value": "The Bank"
+            },
+			{
+				"key": "contactWebsite",
+				"label": "WEBSITE",
+				"value": "https://www.thebank.com"
+			},
+			{
+				"key": "contactEmail",
+				"label": "EMAIL",
+				"value": "service@thebank.com"
+			},
+			{
+				"key": "contactNumber",
+				"label": "PHONE",
+				"value": "1-800-843-2265"
+			},
+			{
+				"key": "contactName",
+				"label": "NAME",
+				"value": "The Bank"
+			},
+			{
+				"key": "privacyPolicyURL",
+				"label": "POLICY URL",
+				"value": "https://www.thebank.com/privacy.html"
+			},
+			{
+				"key": "termsAndConditionsURL",
+				"label": "TERMS URL",
+				"value": "https://www.thebank.com/terms.html"
+			}
+        ],
+        "secondaryFields": [
+            {
+                "key": "card",
+                "label": "CARD",
+                "value": "\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 1001"
+            }
+        ]
+    },
+    "serialNumber": "00001111122223333444332211113344321",
+    "teamIdentifier": "58Y959KPTE",
+    "transactionServiceURL" : "https://transactions.thebank.com",
+    "transactionPushTopic" : "com.thebank.mobileapp.pro.pushtopic",
+    "messageServiceURL" : "https://messages.thebank.com",
+    "messagePushTopic" : "com.thebank.mobileapp.pro.pushtopic",
+    "appLaunchURLScheme" : "thebank"
+}

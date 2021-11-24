@@ -1,0 +1,1287 @@
+Return-path: <groupmailer@group.apple.com>
+Received: from ma1-postinop-sz05.apple.com ([17.171.128.19])
+ by mail5.euro.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.0 64bit (built Oct 28 2016))
+ with ESMTPS id <0OMH009VEO5NX1F0@mail5.euro.apple.com>; Wed,
+ 08 Mar 2017 09:10:36 +0000 (GMT)
+Received: from relay22.apple.com ([17.171.128.103])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OMH00EGSO5JWN70@postino.apple.com>; Wed,
+ 08 Mar 2017 01:10:35 -0800 (PST)
+Received: from ma1-postinop-sz03
+ (st1-02-mail-lb2-v365-snip.apple.com [17.171.128.5])
+	(using TLS with cipher DHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(Client did not present a certificate)	by relay22.apple.com (Apple SCV relay)
+ with SMTP id 72.F7.23309.A8ACFB85; Wed,  8 Mar 2017 04:10:35 -0500 (EST)
+Received: from group.apple.com ([17.171.128.233])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OMH0011QO5M1H90@postino.apple.com>; Wed,
+ 08 Mar 2017 01:10:34 -0800 (PST)
+Received: from ma1-postinop-sz07.apple.com ([17.171.128.92])
+ by postino.apple.com
+ (Oracle Communications Messaging Server 7.0.5.35.0 64bit (built Mar 31 2015))
+ with ESMTPS id <0OMH0010LO5J1H90@postino.apple.com> for
+ bv-gt25@group.apple.com; Wed, 08 Mar 2017 01:10:31 -0800 (PST)
+Received: from relay27.apple.com ([17.171.128.108])
+ by postino.apple.com (Oracle Communications Messaging Server 8.0.1.2.20170210
+ 64bit (built Feb 10 2017)) with ESMTP id <0OMH001EYO580BO0@postino.apple.com>
+ for bv-gt25@group.apple.com; Wed, 08 Mar 2017 01:10:31 -0800 (PST)
+X-Va-A:
+X-Va-T-CD: 4c9c5d77224eb1376864f0e561916898
+X-Va-E-CD: d1497fffeed59b1255bcf3cebfe280e4
+X-Va-R-CD: d1497fffeed59b1255bcf3cebfe280e4
+X-Va-CD: 0
+X-Va-ID: a2400548-c620-4ee4-8999-f4ab0baf5f3a
+X-V-A:
+X-V-T-CD: 3eeb5bb128ce3ba5ed999b3c659e5cb8
+X-V-E-CD: d1497fffeed59b1255bcf3cebfe280e4
+X-V-R-CD: fd8b166b4307792e3ca984f216afac26
+X-V-CD: 0
+X-V-ID: f1e0fe04-4d30-41bd-a99d-0c30f6a477a2
+Received: from ma1-postinop-sz11.apple.com
+ (st1-02-mail-lb2-v365-snip.apple.com [17.171.128.5])
+	(using TLS with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)	by relay27.apple.com (Apple SCV relay)
+ with SMTP id BA.D6.01638.58ACFB85; Wed,  8 Mar 2017 04:10:31 -0500 (EST)
+MIME-version: 1.0
+Content-type: multipart/alternative;
+ boundary="Boundary_(ID_Cr2UybFk55AxN9Ds/cTi2w)"
+Received: from localhost.localdomain ([127.0.0.1])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OMH00LV6O5G72G0@postino.apple.com> for
+ bv-gt25@group.apple.com; Wed, 08 Mar 2017 01:10:29 -0800 (PST)
+X-Va-ID: 4e0fbc19-8cba-4d75-8801-263bb296cede
+X-Va-CD: 0
+X-Va-R-CD: d1497fffeed59b1255bcf3cebfe280e4
+X-Va-E-CD: d1497fffeed59b1255bcf3cebfe280e4
+X-Va-T-CD: 4c9c5d77224eb1376864f0e561916898
+X-Va-A:
+X-V-ID: 7cf63a46-280f-4082-b394-5496cb9327f4
+X-V-CD: 0
+X-V-R-CD: fd8b166b4307792e3ca984f216afac26
+X-V-E-CD: d1497fffeed59b1255bcf3cebfe280e4
+X-V-T-CD: 3eeb5bb128ce3ba5ed999b3c659e5cb8
+X-V-A:
+Received: from mail-in6.apple.com ([17.151.62.21])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTPS id <0OMH00LV3O5E72G0@postino.apple.com> for
+ bv-gt25@group.apple.com; Wed, 08 Mar 2017 01:10:28 -0800 (PST)
+X-Va-ID: b429fa27-d751-4c00-aaa6-bb26676ad1e5
+X-Va-CD: 0
+X-Va-R-CD: d1497fffeed59b1255bcf3cebfe280e4
+X-Va-E-CD: d1497fffeed59b1255bcf3cebfe280e4
+X-Va-T-CD: 4c9c5d77224eb1376864f0e561916898
+X-Va-A:
+X-V-ID: 5005daec-4956-449e-8699-606ff90789a7
+X-V-CD: 0
+X-V-R-CD: fd8b166b4307792e3ca984f216afac26
+X-V-E-CD: d1497fffeed59b1255bcf3cebfe280e4
+X-V-T-CD: 3eeb5bb128ce3ba5ed999b3c659e5cb8
+X-V-A:
+X-AuditID: 11ab8067-af1ff70000005b0d-46-58bfca8a512e
+Received: from ma1-aaemail-dr-lapp01.apple.com
+ (ma1-aaemail-dr-lapp01.apple.com [17.171.2.60])
+	(using TLS with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client did not present a certificate)
+	by mail-in6.apple.com (Apple Secure Mail Relay)
+ with SMTP id E6.A0.18379.F7ACFB85; Wed,  8 Mar 2017 01:10:26 -0800 (PST)
+Received: from pps.filterd (ma1-aaemail-dr-lapp01.apple.com [127.0.0.1])
+	by ma1-aaemail-dr-lapp01.apple.com (8.16.0.17/8.16.0.17)
+ with SMTP id v2897hLQ036027	for <bv-gt25@group.apple.com>; Wed,
+ 8 Mar 2017 01:10:22 -0800
+Received: from smtp.ticketmaster.co.uk
+ (smtp.ticketmaster.co.uk [77.75.136.240])	by ma1-aaemail-dr-lapp01.apple.com
+ with ESMTP id 28yw44k2mt-1	for <bv-gt25@group.apple.com>; Wed,
+ 08 Mar 2017 01:10:22 -0800
+From: no_reply@ticketmaster.nl
+To: bv-gt25@group.apple.com
+Subject: Bevestiging Ticketmaster voor ordernummer 13906171
+User-Agent: TCT/5.13.4.0
+Date: $now_full_text$
+Message-id: <20170308091021.86EDD10D333@ticketmaster>
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,,
+ definitions=2017-03-08_07:,, signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ suspectscore=4 malwarescore=0 phishscore=0 adultscore=0 bulkscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1702020001
+ definitions=main-1703080075
+Authentication-results: symauth.service.identifier
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFjrGJsWRmVeSWpSXmKPExsUiuLqBVbf71P4Ig/kHJC123VvJaPH+3DZm
+	i5vbVzJbbLqzmNVi+ytVi6/zzrNY/J3Wz2ZxbuM3FouzXV4W/55tYrb41PCF0WLzmWYmi2X9
+	txgtpnb/Z3bg89h68gdbAGOUik1RfmlJqkJGfnGJrVIBkMzMy9dLLCjISdVLzs+1MjJV0rdL
+	UMlY2j6HraC7mali6rG/bA2Mp18wdjFyckgImEi0/L/H1sXIxSEksJlJYunmX4wQzhdGif8f
+	JrFCOPOYJJ5dW8YE4cxgkrj5Yx8zRD+7xJ9fO1i6GDmAbG2JK/vtIcLaEp1n3zDC2Nu6ZkDZ
+	XBILtp5mhbB1Jdqu3GWCsNkk1p9YAmVrSUyYs48Nxp6//QorjL34/Aoom1Pi/JeJ7BC2jsTG
+	wxfA6oUEdjBJrP9cB2LzCghK/Jh8jwXEZhYIk/h35Rc7RM1EJomJm11gbpi9pp8d023Ibob5
+	Bc2LMJ9DnXDmHCOm05CdjOoVkBcnMDrOQnLpLCSXQtjqEpPmLWKGsLUlnry7wAphS0s8+jsD
+	qkZN4v+ej6y41Cxg5FjFKFiUmpNYaWSESBabGCGpMn0H45GbZocYBTgYlXh4Pc7uixBiTSwr
+	rsw9xCjBwawkwiuxcH+EEG9KYmVValF+fFFpTmrxIcZkDhaBicxSosn5wDSeVxJvaGJiZGpi
+	ZGxuaGBqQZqwkjivwoq9EUIC6YklqdmpqQWpRTBbmDg4pRoYzbjUG59LeluLTMi1+KafzN2u
+	W7rQeE3ROk1NC903m5y5k+6+8Zjfz9Rw+cXU1buX+/bbrw71anrEbK3eM+0U17Rry6O5TB22
+	3xLvmn4xfok5j/krd6k5ex7ln8qK2J3J+TWnL+9cisZ1hSNt37/J1U38WuK6o/OZlZDGFMnZ
+	0duf/DfnFU1XYinOSDTUYi4qTgQAdKaeONkDAAA=
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFlrMKsWRmVeSWpSXmKPExsUiuLqBVbf91P4Ig6s7OS367n1lcWD0+DP/
+	KEsAYxSXTUpqTmZZapG+XQJXxtL2OWwF3c1MFVOP/WVrYDz9grGLkZNDQsBEYv+fV0A2F4eQ
+	wDYmiV1fZrGCJHgFBCV+TL7HAmIzC4RJ/Lvyix3EFhKYyCQxcbMLRLOuxOw1/ewQNpfEgq2n
+	WSFsbYltXTMYYezOs2+AbA4w+8p+e4gwu8SfXztYIGwdiY1nzkGVc0qc/zIRaqSWxOLzK1hh
+	7Pnbr8DZE+bsY4Ow2STWn1jCBHH/JCaJ1VcnMsPcNu/mWRaK3MYBdtvJFSqUOQ0SzG07Olkh
+	zjzNJPHzXT/7BEbdWUghPQsppCFsdYlJ8xYxQ9jaEk/eXWCFsKUlHv2dAVWjJvF/z0dWXGoW
+	MHKsYhQsSs1JrDQy10ssKMhJ1UvOz93ECEk6OTsY79w0O8QowMGoxMPrcXZfhBBrYllxZe4h
+	RgkOZiURXomF+yOEeFMSK6tSi/Lji0pzUosPMUpzsCiJ8yqu2BshJJCeWJKanZpakFoEk2Xi
+	4JRqYBRp2PFmuYr6v/z83zd19i+PKN/93/GQ99F/ptWzOtj3+jLMss3smXnlye6Yo+s9zeXD
+	Q1Jnb4jcrtgcq5j8Ulz4pror21V1rd8q5zjKdVc+Cbk1r0e3PC/aKdDpG4dCdczMT0711uwa
+	cmZfz+ZvXrE889es6N16ov8D38v1BP17wBKxzifJW4mlOCPRUIu5qDgRAK6JM+42AwAA
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA3VUf1AUZRjmuzvO9bgPl+WWeznA6KYRgqAyc0gZprFhwjGnpj/i6o9okQU2
+	7le3nAGlQ6CFzCQyEBcYKkpAWANkKQiCc8VwkNqUkyISjAwRA0zgkIGh0u79gIWZ/tl593m+
+	73mf99n3jpBTx9U6gs3LZW1mxqhXqhRBZ2WJcUUDPYZnlucUCUdH7ileRCkPTvYqXkNvqRIz
+	WCO3n7U9nfSOKntg9g6yVhTL8obPzmwoRD9PolK0kQByG3zcfsS/FKkIiuyTQdH8DPK8jCJY
+	WvjI+/ILgsXaJrl4RUluhgsOh0AQhIYMg8uHokU4mNwJjrH7MrGmSYDKtgb3cUwGQX/1uEKs
+	5eQb0Nd1y40ryFhYqp7wnnkeKsZcSo+jHDg/seB2BOQigq77l/xFApFbofPalP8xtKlGolsj
+	0fXUsTC3fEbpqxvqpgWcEOowaHxEeOAYOFyyqPifI6cQ0YwoE8MZ4zjz9njGajWy8fsspm+R
+	GLgjiW5HV5p3OBFJIL0ap1ztNlD+zH4+3+REnyBCptfhE72dBio43ZKRn83w2Wm8Pd3E8Txn
+	MetpPNraY6ACVzib3cjyeg2OrhFk8AqcbjfmCEKm/h6pkJl9nzeyucLn12/G25IvGSitpAlv
+	5fZxFjufZrcZnQgIuSALdYIAzmDyC1ibxdPMicIIhV6LbxsFisxictkclrWyNh8rIzY40Wkh
+	DvJGZfv3Mp3CbDGz+giM/Pz8qBAbm8XmZXJGwYN0LsBa0WqQlPaMpsXLfWIjKeOeLgKnlwvE
+	GkXJgI/jNHFA3dqGa2eUERvFh8qJihCh1od6PFK8lTHxXJbUnwafE/1hH+XxFoxrTQKq9qFu
+	X6F4i3h0RUXiKQJ3i55CVhtI/QygFkS4qjpmZET39YVhRLmT8zx14dgmXqXFq9l289r4dFr8
+	itiTlLBuh7oQnJkqXNskIUSTglxa6jq5VZ+6SHzo1S4DFbqmmdSq+Nexd0/J3K8oQhfsSU0t
+	rICJy/Um4+WnUL1M2HLA9EXx63Lm3HW5BuNI0bjay3guU1jpEsAAL+hOFXB0v0RCEmo4drmT
+	WRGXGt1aj4Qf/hEM310Ng3POwzKoefiNHH68foOAisYpFTw65giA4dqOAJj/oysApspcahg8
+	3hoI8447gbDgKqNguPwCBUOjtynoHyzWQP2VaxpoavmUBlfVLRpGZodouNgyqYXFxvlw+Pze
+	l4+Bq78wEkpPtuthcun3J6CzyBkF862/RUHbQF0MtE3cjIHqygcx0PNn2VNQ01ccNyUuoGx1
+	AXOZ9UFpcKw4JfZRvgX8SkTVPtS7gGdEcEVlzQI2eRZwpYE0LF0hqo3jd01bL58eTyrrmL65
+	+4WX7ctKqyXl7YPvJqh3//NTfkHCXi7xyQ/fNHw9cOBAwZYcbraktCGZpumlu7N/Mf4/vL6j
+	aqyimBk5kXy+vtm0x5w1+PfMcy+ljs8e/Dekfhe6e4rKDP+innzvs+07c3o/OJqfRUcNPVSV
+	Z8RXDNHLcc5avYLPZp6Nkdt45j+rPlworgYAAA==
+X-Member-Count: 14
+Precedence: List
+Sender: bv-gt25@group.apple.com
+List-Id: <bv-gt25@group.apple.com>
+
+
+--Boundary_(ID_Cr2UybFk55AxN9Ds/cTi2w)
+Content-type: text/plain; charset=UTF-8
+Content-transfer-encoding: quoted-printable
+Content-disposition: inline
+
+
+Hallo Rocio,
+=C2=A0
+Bedankt voor het bestellen van tickets.
+=C2=A0
+Deze e-mail is een bevestiging van je aankoop, maar het is =
+g=C3=A9=C3=A9n
+toegangsbewijs.
+=C2=A0
+Log in op Mijn Account [https://www.ticketmaster.nl/myAccount/login.php] =
+om je transacties te bekijken en toegang te krijgen tot je tickets
+op je telefoon of om ze te printen. Heb je een iPhone, en wil je jouw =
+tickets op de telefoon bewaren? Vanaf nu kun je onze iPhone App =
+[https://itunes.apple.com/nl/app/ticketmaster-nederland-ontdek/id10025736=
+41?mt=3D8] downloaden.
+=C2=A0
+We sturen je tickets ook nog binnen 24 uur als PDF naar dit
+e-mailadres.
+Heb je ook lidmaatschappen of andere tickets geboekt? Dan worden
+deze als een apart PDF bestand bijgevoegd.
+=C2=A0
+Onderaan dit bericht staan de details van je bestelling. Heb je nog
+vragen? Neem dan contact [https://klantenservice.ticketmaster.nl] op met =
+ons Contact Center of bel met 0900-300 1255 (=E2=82=AC 1,- per
+gesprek). Zij helpen je graag verder.
+=C2=A0
+Bedankt voor je aankoop bij ons en we wensen je alvast heel veel
+plezier!
+=C2=A0
+Hartelijke groet,
+Team Ticketmaster
+Let op! Ga voorzichtig om met je (persoonlijke) gegevens.
+Ticketmaster zal nooit naar je wachtwoorden, Burgerservicenummer,
+pincode of DigiD vragen. Deel je betalingsgegevens alleen met
+Ticketmaster (indien verzocht). Deel je betalingsgegevens niet met
+anderen!
+
+
+=20
+
+=20
+
+=20
+
+
+=C2=A0
+Ordernummer: 13906171
+Klantnummer: 5399097
+
+Aantal: 1
+Leonardo da Vinci - Artist - Inventor - Genius
+Beurs van Berlage
+woensdag=C2=A0 8 maart $year$
+
+
+
+BETAALMETHODE: M.Card
+
+
+
+=C2=A0
+Meer details kunt u vinden in Mijn Account =
+[https://www.ticketmaster.nl/myAccount/login.php?tm_link=3Dtm_ql_1&langua=
+ge=3Dnl-nl]
+=C2=A0
+Totaalbedrag: =E2=82=AC 11,78
+Bezorgwijze: Digital Ticket
+=C2=A0
+Rocio Navarro
+Suite 1 building 6900
+T12TE8P
+Cork
+Ireland
+=C2=A0
+=C2=A0
+=C2=A0
+
+=C2=A92017 Ticketmaster. Alle Rechten Voorbehouden
+=C2=A0
+We kunnen niet verantwoordelijk worden gehouden voor veranderingen.
+
+
+
+--Boundary_(ID_Cr2UybFk55AxN9Ds/cTi2w)
+Content-type: text/html; charset=UTF-8
+Content-transfer-encoding: quoted-printable
+Content-disposition: inline
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title></title>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8">
+<meta name=3D"viewport" content=3D"width=3D601">
+<style type=3D"text/css">
+.ExternalClass * {line-height: 100%}
+</style>
+</head>
+<body bgcolor=3D"#f8f7f7" =
+style=3D"padding:0;outline:0;vertical-align:baseline;border:0;font-size:1=
+00%;line-height:1;background-color:#f8f7f7;-webkit-text-size-adjust:none;=
+">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" =
+bgcolor=3D"#f8f7f7">
+<tr>
+<td width=3D"100%" height=3D"100%" align=3D"center" valign=3D"top" =
+style=3D"background-color:#f8f7f7;padding:1%;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+bgcolor=3D"#ffffff" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;background-repeat:no-repeat;background-col=
+or:#ffffff;border-style:none;">
+<tr>
+<td width=3D"601" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+bgcolor=3D"#f8f7f7" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;background-repeat:no-repeat;background-col=
+or:#f8f7f7;border-style:none;">
+<tr>
+<td width=3D"601" height=3D"732" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"601" height=3D"106" valign=3D"middle" align=3D"center">
+<a href=3D"www.ticketmaster.nl"><img =
+src=3D"http://media.ticketmaster.eu/netherlands/feature/tct5/tm-header.pn=
+g" alt=3D"" width=3D"601" height=3D"106" =
+style=3D"border:0;display:block;margin:0px 0px;"></a>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"16">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+bgcolor=3D"#ffffff" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;background-repeat:no-repeat;background-col=
+or:#ffffff;border-style:none;">
+<tr>
+<td width=3D"601" height=3D"252" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"4">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td style=3D"width:0;padding-left:15px;">
+&#65279;
+</td>
+<td width=3D"571" height=3D"247" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"571" height=3D"247" align=3D"left" valign=3D"top" =
+style=3D"color:#000000;font-family:Helvetica,Arial,sans-serif;font-size:1=
+0px;font-weight:normal;font-style:normal;text-decoration:none;text-align:=
+left;vertical-align:top;max-width:571px;word-wrap:break-word;-ms-word-wra=
+p:break-word;">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Hallo Rocio,
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Bedankt voor het bestellen van tickets.
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Deze e-mail is een bevestiging van je aankoop, maar het is =
+g=C3=A9=C3=A9n toegangsbewijs.
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Log in op <a href=3D"https://www.ticketmaster.nl/myAccount/login.php" =
+target=3D"_blank" style=3D"color:#414141;text-decoration:none;"><span =
+style=3D"color:#009CDE;"><u>Mijn Account</u></span></a> om je =
+transacties te bekijken en toegang te krijgen tot je tickets op je =
+telefoon of om ze te printen. <b>Heb je een iPhone, en wil je jouw =
+tickets op de telefoon bewaren?</b> Vanaf nu kun je onze <a =
+href=3D"https://itunes.apple.com/nl/app/ticketmaster-nederland-ontdek/id1=
+002573641?mt=3D8" target=3D"_blank" =
+style=3D"color:#414141;text-decoration:none;"><span =
+style=3D"color:#009CDE;"><u>iPhone App</u></span></a> downloaden.
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+We sturen je tickets ook nog binnen 24 uur als PDF naar dit =
+e-mailadres.
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Heb je ook lidmaatschappen of andere tickets geboekt? Dan worden deze =
+als een apart PDF bestand bijgevoegd.
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Onderaan dit bericht staan de details van je bestelling. Heb je nog =
+vragen? Neem dan <a href=3D"https://klantenservice.ticketmaster.nl" =
+target=3D"_blank" style=3D"color:#414141;text-decoration:none;"><span =
+style=3D"color:#009CDE;"><u>contact</u></span></a> op met ons Contact =
+Center of bel met 0900-300 1255 (=E2=82=AC 1,- per gesprek). Zij helpen =
+je graag verder.
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Bedankt voor je aankoop bij ons en we wensen je alvast heel veel =
+plezier!
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Hartelijke groet,
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Team Ticketmaster
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:11px;">
+<i>Let op! Ga voorzichtig om met je (persoonlijke) gegevens. =
+Ticketmaster zal nooit naar je wachtwoorden, Burgerservicenummer, =
+pincode of DigiD vragen. Deel je betalingsgegevens alleen met =
+Ticketmaster (indien verzocht). Deel je betalingsgegevens niet met =
+anderen!</i>
+</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"1">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"16">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"299" height=3D"251" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"299" height=3D"251" valign=3D"middle" align=3D"center">
+<a =
+href=3D"https://itunes.apple.com/nl/app/ticketmaster-nederland-ontdek/id1=
+002573641?mt=3D8"><img =
+src=3D"http://media.ticketmaster.eu/netherlands/feature/tct5/mpu-300x250.=
+png" alt=3D"" width=3D"299" height=3D"251" =
+style=3D"border:0;display:block;margin:0px 0px;"></a>
+</td>
+</tr>
+</table>
+</td>
+<td style=3D"width:0;padding-left:38px;">
+&#65279;
+</td>
+<td width=3D"113" height=3D"251" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"113" height=3D"112" valign=3D"middle" align=3D"center">
+<a href=3D"http://www.facebook.com/ticketmasterNL"><img =
+src=3D"http://media.ticketmaster.eu/netherlands/feature/Tct/images/icon-f=
+b.jpg" alt=3D"" width=3D"113" height=3D"112" =
+style=3D"border:0;display:block;margin:0px 0px;"></a>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"113" height=3D"27">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"113" height=3D"112" valign=3D"middle" align=3D"center">
+<a href=3D"http://www.instagram.com/ticketmasternl"><img =
+src=3D"http://media.ticketmaster.eu/netherlands/feature/Tct/images/icon-i=
+nsta.jpg" alt=3D"" width=3D"113" height=3D"112" =
+style=3D"border:0;display:block;margin:0px 0px;"></a>
+</td>
+</tr>
+</table>
+</td>
+<td style=3D"width:0;padding-left:38px;">
+&#65279;
+</td>
+<td width=3D"113" height=3D"251" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"113" height=3D"112" valign=3D"middle" align=3D"center">
+<a href=3D"https://twitter.com/Ticketmaster_NL"><img =
+src=3D"http://media.ticketmaster.eu/netherlands/feature/Tct/images/icon-t=
+w.jpg" alt=3D"" width=3D"113" height=3D"112" =
+style=3D"border:0;display:block;margin:0px 0px;"></a>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"113" height=3D"27">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"113" height=3D"112" valign=3D"middle" align=3D"center">
+<a href=3D"http://www.ticketmaster.nl"><img =
+src=3D"http://media.ticketmaster.eu/netherlands/feature/Tct/images/icon-w=
+ebsite.jpg" alt=3D"" width=3D"113" height=3D"112" =
+style=3D"border:0;display:block;margin:0px 0px;"></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"31">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"601" height=3D"20" valign=3D"middle" align=3D"center">
+<img =
+src=3D"http://media.ticketmaster.eu/netherlands/feature/tct5/tm-jouworder=
+.png" alt=3D"" width=3D"601" height=3D"20" =
+style=3D"border:0;display:block;margin:0px 0px;">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"40">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"2">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td style=3D"width:0;padding-left:15px;">
+&#65279;
+</td>
+<td width=3D"570" height=3D"46" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"570" height=3D"46" align=3D"left" valign=3D"top" =
+style=3D"color:#000000;font-family:Helvetica,Arial,sans-serif;font-size:1=
+0px;font-weight:normal;font-style:normal;text-decoration:none;text-align:=
+left;vertical-align:top;max-width:570px;word-wrap:break-word;-ms-word-wra=
+p:break-word;">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:10px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+<b>Ordernummer:</b> 13906171
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+<b>Klantnummer:</b> 5399097
+</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"20">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;background-repeat:no-repeat;border-style:n=
+one;">
+<tr>
+<td width=3D"599" height=3D"114" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;background-repeat:no-repeat;border-style:n=
+one;">
+<tr>
+<td width=3D"599" height=3D"114" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"599" height=3D"3">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td style=3D"width:0;padding-left:15px;">
+&#65279;
+</td>
+<td width=3D"570" height=3D"110" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"570" height=3D"110" align=3D"left" valign=3D"top" =
+style=3D"color:#000000;font-family:Helvetica,Arial,sans-serif;font-size:1=
+0px;font-weight:normal;font-style:normal;text-decoration:none;text-align:=
+left;vertical-align:top;max-width:570px;word-wrap:break-word;-ms-word-wra=
+p:break-word;">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Aantal: 1
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Leonardo da Vinci - Artist - Inventor - Genius
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Beurs van Berlage
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+woensdag&nbsp; 8 maart $year$
+</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"599" height=3D"1">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"14">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;background-repeat:no-repeat;border-style:n=
+one;">
+<tr>
+<td width=3D"600" height=3D"122" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;background-repeat:no-repeat;border-style:n=
+one;">
+<tr>
+<td width=3D"600" height=3D"122" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"600" height=3D"4">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td style=3D"width:0;padding-left:15px;">
+&#65279;
+</td>
+<td width=3D"570" height=3D"111" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"570" height=3D"111" align=3D"left" valign=3D"top" =
+style=3D"color:#000000;font-family:Helvetica,Arial,sans-serif;font-size:1=
+0px;font-weight:normal;font-style:normal;text-decoration:none;text-align:=
+left;vertical-align:top;max-width:570px;word-wrap:break-word;-ms-word-wra=
+p:break-word;">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+<b>BETAALMETHODE</b>: M.Card
+</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"600" height=3D"7">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td style=3D"width:0;padding-left:15px;">
+&#65279;
+</td>
+<td width=3D"570" height=3D"196" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"570" height=3D"196" align=3D"left" valign=3D"top" =
+style=3D"color:#000000;font-family:Helvetica,Arial,sans-serif;font-size:1=
+0px;font-weight:normal;font-style:normal;text-decoration:none;text-align:=
+left;vertical-align:top;max-width:570px;word-wrap:break-word;-ms-word-wra=
+p:break-word;">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#000000;font-family:Helvetica,Arial,sans-ser=
+if;font-size:10px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Meer details kunt u vinden in <a =
+href=3D"https://www.ticketmaster.nl/myAccount/login.php?tm_link=3Dtm_ql_1=
+&language=3Dnl-nl" target=3D"_blank" =
+style=3D"color:#414141;text-decoration:none;"><span =
+style=3D"color:#009CDE;"><u>Mijn Account</u></span></a>
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Totaalbedrag: =E2=82=AC 11,78
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Bezorgwijze: Digital Ticket
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Rocio Navarro
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Suite 1 building 6900
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+T12TE8P
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Cork
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+Ireland
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span style=3D"line-height:1;color:#414141;font-family:'Arial Unicode =
+MS',Arial,sans-serif;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"left">
+<span style=3D"line-height:1;color:#000000;font-family:'Arial Unicode =
+MS',Arial,sans-serif;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"1">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+bgcolor=3D"#f8f7f7" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;background-repeat:no-repeat;background-col=
+or:#f8f7f7;border-style:none;">
+<tr>
+<td width=3D"601" height=3D"53" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"4">
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td style=3D"width:0;padding-left:45px;">
+&#65279;
+</td>
+<td width=3D"523" height=3D"47" valign=3D"top" align=3D"left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;border-style:none;">
+<tr>
+<td width=3D"523" height=3D"47" align=3D"left" valign=3D"top" =
+style=3D"color:#000000;font-family:Helvetica,Arial,sans-serif;font-size:1=
+0px;font-weight:normal;font-style:normal;text-decoration:none;text-align:=
+left;vertical-align:top;max-width:523px;word-wrap:break-word;-ms-word-wra=
+p:break-word;">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"center">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+<b>=C2=A92017 Ticketmaster. Alle Rechten Voorbehouden</b>
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"center">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+&nbsp;
+</span>
+</td>
+</tr>
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"table-layout:fixed">
+<tr>
+<td align=3D"center">
+<span =
+style=3D"line-height:1;color:#414141;font-family:Helvetica,Arial,sans-ser=
+if;font-size:12px;">
+We kunnen niet verantwoordelijk worden gehouden voor veranderingen.
+</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin:0;padding:0;outline:0;vertical-align:baseline;border-coll=
+apse:collapse;border-spacing:0;">
+<tr>
+<td width=3D"601" height=3D"2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+--Boundary_(ID_Cr2UybFk55AxN9Ds/cTi2w)--

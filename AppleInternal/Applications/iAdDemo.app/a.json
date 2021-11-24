@@ -1,0 +1,31 @@
+news-context:{
+    "header": {
+        "version": 1,
+        "placement": "batchedfeed"
+    },
+    "body" :{
+        "numArticles": 20,
+        "numArticlesSinceLastAd": 0,
+        "previousFeedVisibilityData": {
+            "percentageOfFeedSeenByUser": 80.0,
+            "previousAdOpId": "30f66c1a-db53-42bc-b5e1-f6db7a26e63a",
+            "timeSpent": 2.0
+        },
+        "batchStartIndex": 0,
+        "adOpId": "30f66c1a-db53-42bc-b5e1-f6db7a26e63a",
+        "feedMetaData": {
+            "feedIdentifier": 16,
+            "deviceAllowsExplicitContent": false,
+            "contentProviderId": 211,
+            "category": 1,
+            "pubMetaData":  { "key1" : [ "random publisher specified data" ] },
+            "additionalFeedMetaData": "random feldspar specified data"
+        },
+        "isSubscribedToThisFeed": false,
+        "isCorrespondingBundlePurchased": false,
+        "isMedusaMode": false,
+        "timedOutAdOpportunity": {
+            "adOpId": "125797e2-173a-43cc-a962-2a11019adf68"
+        }
+    }
+}

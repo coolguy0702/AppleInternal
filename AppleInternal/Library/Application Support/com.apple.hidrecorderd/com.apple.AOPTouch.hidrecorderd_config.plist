@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Devices</key>
+	<dict>
+		<key>AOPTouch</key>
+		<dict>
+			<key>Matching Criteria</key>
+			<dict>
+				<key>PrimaryUsage</key>
+				<integer>1</integer>
+				<key>PrimaryUsagePage</key>
+				<integer>13</integer>
+				<key>Transport</key>
+				<string>SPU</string>
+			</dict>
+			<key>enable</key>
+			<true/>
+			<key>name</key>
+			<string>aoptouch</string>
+			<key>recordingDuration</key>
+			<integer>10000</integer>
+			<key>type</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xs3p.xsl"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="xmlui">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "xmlui" is the top-level tag for defining remote ui.
+                It can contain one or more "page" elements which each represent a screen's worth of UI.
+                action:
+                The "action" attribute specifies how the new markup should be presented - push a new "xmlui" on the navigation stack,
+                replace the markup for the current "xmlui" (which reloads the visible UI), or pop the current "xmlui" from the stack and 
+                return to the previous one. Markup can be specified along with a pop, in which case the previous "xmlui" on the navigation stack
+                will be replaced with the markup specified.
+                The "showModal" action will start a new modal flow in a fresh navigation controller stack. When in a modal flow, further "push" and "pop"
+                actions will operate on the modal stack. The "dismiss" action will end the modal flow and return to the flow as it was before the "showModal" action.
+                When not in a modal flow, the "dismiss" action can also be used to indicate to the client that no further markup should
+                be expected by the client and that the the current BuddyML session should be terminated.
+                The "refresh" attribute allows for automatically reloading the page after a specified timeout with a given URL.
+                Use the format "SECONDS;URL", for example, "3;myPage.xml".
+                The "style" attribute specifies the UI style that should be displayed
+                The "id" attribute specifies a unique identifier for the object model.
+                The "idOfOldestObjectModelToRemoveAfterPush" attribute combined with a "push" action creates a "push+replace" action, where the supplied page is pushed and, following the
+                push animation, the pages from each object model on the stack will be removed starting from the top until an object mode with the given ID is found, including the given ID.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="clientInfo">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            The "clientInfo" element can be used to send application-specific information to the client. Any number of key/values can be
+                            specified in the attributes of the element. It is up to the author of the BuddyML file and the client receiving it to define
+                            the meaning of these key/values.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="serverInfo">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            "serverInfo" can be used to round-trip arbitrary key/values from the client back to the server. The dictionary in any
+                            http POST back to the server will include a dictionary under the key "serverInfo" with the contents of the attributes
+                            specified in the "serverInfo" element.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" ref="script">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            One "script" element can be included per BuddyML document to include javascript. See the definition of the "script" element below.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" ref="alert">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            One "alert" element can be used to display an alert to the user. The alert will be presented before the "action" attribute
+                            is executed. See the definition of the "alert" element below.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="page"/>
+            </xs:sequence>
+            <xs:attribute name="action" default="push">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="push"/>
+                        <xs:enumeration value="pop"/>
+                        <xs:enumeration value="replace"/>
+                        <xs:enumeration value="dismiss"/>
+                        <xs:enumeration value="showModal"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="refresh" type="xs:string"/>
+            <xs:attribute name="style" default="default">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="default"/>
+                        <xs:enumeration value="setupAssistant"/>
+                        <xs:enumeration value="setupAssistantModal"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="id" type="xs:NCName"/>
+            <xs:attribute name="idOfOldestObjectModelToRemoveAfterPush" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="script" type="xs:string">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                If present, the "script" element should have a child CDATA block containing javascript. The function name defined in the "xmlui"
+                "validationFunction" attribute should be defined and will be called by system to validate the form contents. Field identifiers
+                are specified using the "id" attribute on the element.
+                
+                The following script API is provided at the global context level:
+                
+                xmlui.alert(message, [title], [button])
+                    - displays an alert with the message specified.
+                xmlui.alert(alertDict)
+                    - displays an alert specified by a dictionary:
+                        "title": bolded alert title (optional)
+                        "message": alert message (optional)
+                        "style": "sheet" if the alert should be drawn as a sheet (optional, iPhone and iPod touch only)
+                        "buttons": array of at least one dictionary with specification:
+                            "title": button title (required)
+                            "style": "default", "destructive", or "cancel" (optional)
+                            "handler": function that will be called when the button is tapped (optional)
+                xmlui.getFieldValue(fieldID)
+                    - returns the value for the form element with id fieldID
+                xmlui.setFieldValue(fieldID, value)
+                    - sets the value of the field with id fieldID to the given value
+                xmlui.setFieldInvalid(fieldID, isInvalid)
+                    - Sets the form element with id fieldID as invalid or not. invalid is a boolean: pass true to mark a field as invalid, and false to
+                    mark it as valid. It can be omitted, in which case the default value of true is used.
+                xmlui.setPostbackValueForKey(value, key)
+                    - Sets a key in the postback dictionary with the given value and key. Value may be of type boolean, number, or string. The postback data is included in POST requests.
+                xmlui.loadURL(url, [httpMethod], [handler])
+                    - Loads BuddyML at the given URL as if a link were just tapped.
+                    - httpMethod defaults to GET if not specified (optional)s
+                    - handler(success, error) will be called at load completion (optional)
+                xmlui.showWebView(url, [doneHandler])
+                    - Opens and modally displays a WebView at the given URL. The modal window will have a Done button in a toolbar
+                    - handler() will be called when the Done button is pressed (optional)
+                xmlui.getElementById(identifier)
+                    - Retrieve the xml element with the given id. If an element with this id is not found (or not supported), returns undefined.
+                    
+                    All elements:
+                        - identifier: get the string "id" attribute of the object
+                        - getAttribute(attributeName): retrieve the xml attribute on the element with the given name. Value is always returned as a string.
+                        
+                    Some elements:
+                        - activate(): perform element actions as if the element was tapped in the UI
+                        - enabled: get or set the enabled state of an element
+                        - page: get the page ancestor element of an element
+                        
+                    section elements:
+                        - rowCount: get the number of rows in this section
+                        - sectionIndex: get the index representing this section's position in the tableView
+                        - insertRow(insertionIndex, elementName, attributes): insert a row into the table at the given index with the given row type and xml attributes
+                            e.g. section.insertRow(section.rowCount, "linkRow", {"label": "New Row", "accessory": "disclosure"});
+                        - removeRow(index): remove the row at the given index from the section
+                        
+                    tableView elements:
+                        - sectionCount: get the number of sections in the tableView
+                        - editing: get or set the tableView editing state
+                        
+                    page elements:
+                        - title: get or set the page title
+                        - loading: get or set loading status, which will disable interaction for the page's content and display a spinner in the nav bar.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:attributeGroup name="urlAttributes">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "url", if present, will cause interaction with the element to load the given URL. URLs must have an https scheme.
+                "httpMethod" allows for control over the type of request that is desired. "GET" will issue an HTTP GET, and
+                "POST" will issue an HTTP POST. In the case of POST, the body of the request will contain the form data from the current
+                BuddyML model.
+                "titleLoadingMessage", if present, will cause a spinner and loading message to be displayed in the current navigation item and user interaction to be disabled until the url load is complete.
+                "startSMSAutoFill" if true, will casue Buddy to begin listening for incoming text messages containing verification codes. A received code will be filled into the next pinView with SMSAutoFill="true"
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="url" type="xs:anyURI"/>
+        <xs:attribute name="httpMethod" default="GET">
+            <xs:simpleType>
+                <xs:restriction base="xs:NCName">
+                    <xs:enumeration value="POST"/>
+                    <xs:enumeration value="GET"/>
+                    <xs:enumeration value="DELETE"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="titleLoadingMessage" type="xs:string"/>
+        <xs:attribute name="openInSafari" type="xs:boolean"/>
+        <xs:attributeGroup ref="authAttributes"/>
+    </xs:attributeGroup>
+    <xs:attributeGroup name="authAttributes">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "authRequired" if true, will cause BuddyML to require successful Apple ID authentication on an Apple ID before fetching the URL. BuddyML will prompt for the username and password if they are not specified by the following attributes. If the authentication fails or is canceled by the user, the url will not be loaded.
+                "authAccountIsPrimary" if true, specifies that BuddyML should attempt to authenticate the primary signed in Apple ID. Has no effect if no account is signed in.
+                "authReason" is an optional string describing the reason for authentication that will be shown in any presented auth UI.
+                "authUsername" specifies a pre-filled uneditable Apple ID username to use for authentication.
+                "authUsernameFieldID" specifies the id of an editableTextField to read the Apple ID username from.
+                "authPasswordFieldID" specifies the id of an editableTextField to read the Apple ID password from.
+                "authIsEphemeral" when true, ensures that no state is persisted as a side-effect of the auth (on either the device or the server). Defaults to false.
+                "authIsTwoFactor" when false, allows single factor auth. Defaults to true.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="authRequired" type="xs:boolean"/>
+        <xs:attribute name="authReason" type="xs:string"/>
+        <xs:attribute name="authAccountIsPrimary" type="xs:boolean"/>
+        <xs:attribute name="authUsername" type="xs:string"/>
+        <xs:attribute name="authUsernameFieldID" type="xs:string"/>
+        <xs:attribute name="authPasswordFieldID" type="xs:string"/>
+        <xs:attribute name="authIsEphemeral" type="xs:boolean"/>
+        <xs:attribute name="authIsTwoFactor" type="xs:boolean"/>
+    </xs:attributeGroup>
+    <xs:attributeGroup name="barItemAttributes">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                These attributes are valid on any navigationBar bar item.
+                "position": whether the bar item will be on the left or right of the navigation bar.
+                "label": String to display on the bar item.
+                "enabledFunction": defines the javascript method that will be called each time the contents of the form changes.
+                This function should take no arguments and return a boolean indicating whether the element should be enabled or not.
+                "validationFunction" defines the javascript method that will be called to validate the contents of the form.
+                "activationFunction" defines a javascript method that will be called when this element is tapped or activated
+                This function should take no arguments and return a boolean indicating whether the element should fire its action or not.
+                In the case in which the validation fails, the validationFunction should also provide feedback to the user about the failure
+                using the script API provided (see "script" element).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="position">
+            <xs:simpleType>
+                <xs:restriction base="xs:NCName">
+                    <xs:enumeration value="left"/>
+                    <xs:enumeration value="right"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="label" type="xs:string"/>
+        <xs:attribute name="enabledFunction" type="xs:NCName"/>
+        <xs:attribute name="validationFunction" type="xs:NCName"/>
+        <xs:attribute name="style" default="plain">
+            <xs:simpleType>
+                <xs:restriction base="xs:NCName">
+                    <xs:enumeration value="done"/>
+                    <xs:enumeration value="plain"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+
+    </xs:attributeGroup>
+    
+    <!-- Base class for toolbar and navigationBar -->
+    <xs:complexType name="bar" abstract="true">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="linkBarItem">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Provides for a link bar item. Link at specified url will be loaded upon press.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attributeGroup ref="barItemAttributes"/>
+                    <xs:attributeGroup ref="urlAttributes"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buttonBarItem">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Provides for a plain bar button. Action is client specific and keyed off of "name" attribute.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attributeGroup ref="barItemAttributes"/>
+                    <xs:attribute name="name" type="xs:NCName"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="nextBarItem">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Provides for a "Next" bar button. Goes to next page. Use in conjuction with validationFunction. Do not use on last page of multi-page document.
+                        If omitted, in a multi-page document, the "Next" button is generated automatically.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attributeGroup ref="barItemAttributes"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="editBarItem">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Provides for an "Edit" bar button. Toggles editing mode on the "tableView".
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attributeGroup ref="barItemAttributes"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:element name="toolbar">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The "toolbar" element controls the display of the UINavigationBar at the top of the screen.
+                The "title" attribute specifies the string to be displayed in the navigationBar.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="bar">
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="navigationBar">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The "navigationBar" element controls the display of the UINavigationBar at the top of the screen.
+                The "title" attribute specifies the string to be displayed in the navigationBar.
+                If "hidesBackButton" is set to "true", a "back" button will not be displayed on the navigation bar.
+                "backButtonTitle" specifies a label to use for the back button when this page is second from the top on the navigation stack.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="bar">
+                    <xs:attribute name="title" type="xs:string"/>
+                    <xs:attribute name="hidesBackButton" type="xs:boolean"/>
+                    <xs:attribute name="backButtonTitle" type="xs:string"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="page">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The "page" element can be used to deliver multiple pages worth of content to the device in one round-trip.
+                Having multiple pages implies a 'Next' button in the navigation bar to go to the next page.
+                "id" if present will allow other pages to link to this page using a #pageId url. Using an "id" will prevent this page from being the "default" page that is pushed explicitly on load.
+                "default" if true, will allow this page to be a default page even if an "id" is given. Defaults to false.
+                "tokenReceivedFunction" can be the name of a javascript function to invoke when a token arrives on the device, such as an sms token sent following a load with "startSMSAutoFill"
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" ref="navigationBar"/>
+                <xs:element ref="tableView"/>
+                <xs:element minOccurs="0" ref="toolbar"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:NCName"/>
+            <xs:attribute name="backgroundColor" type="xs:string"/>
+            <xs:attribute name="tokenReceivedFunction" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="tableView">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "tableView" is a container to define UITableView views in BuddyML. Sections and Rows can be defined that will
+                populate the UITableView. The "label" attribute can be used to specify a title for the top navigation bar.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="scrollEnabled" type="xs:boolean" default="false"/>
+            <xs:attribute name="editing" type="xs:boolean" default="false"/>
+            <xs:attribute name="splitPosition" default="full">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        "splitPosition": When set to "leftHalf" or "rightHalf", causes the tableView to fill the left or right half of the screen. Apple TV only.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="full"/>
+                        <xs:enumeration value="leftHalf"/>
+                        <xs:enumeration value="rightHalf"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="backgroundColor" type="xs:string"/>
+            <xs:attribute name="separatorStyle" default="singleLine">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="none"/>
+                        <xs:enumeration value="singleLine"/>
+                        <xs:enumeration value="etchedLine"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:sequence>
+                <xs:element maxOccurs="1" name="header"/>
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        "header" specifies a table header that will be positioned at the top of the table view. In Buddy style, the nav title overrides this element.
+                        "subHeader" specifies a smaller label positioned under the "header"
+                        Both "header" and "subheader" can take "sectionDecoration" attributes.
+                        "align" specifies an alignment for the header. Possible values are "left", "right", and "center".
+                    </xs:documentation>
+                </xs:annotation>
+                    <xs:complexType>
+                        <xs:attribute name="image" type="xs:string"/>
+                        <xs:attribute name="image2x" type="xs:string"/>
+                        <xs:attribute name="image3x" type="xs:string"/>
+                        <xs:attribute name="imageWidth" type="xs:string"/>
+                        <xs:attribute name="imageHeight" type="xs:string"/>
+                        <xs:attribute name="imageAlign" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="header" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="subHeader" minOccurs="0" maxOccurs="1"/>
+                <xs:element maxOccurs="unbounded" name="section">
+                    <xs:complexType>
+                        <xs:choice minOccurs="0" maxOccurs="unbounded">
+                            <xs:element ref="labelRow"/>
+                            <xs:element ref="buttonRow"/>
+                            <xs:element ref="editableTextRow"/>
+                            <xs:element ref="selectRow"/>
+                            <xs:element ref="switchRow"/>
+                            <xs:element ref="datePickerRow"/>
+                            <xs:element ref="linkRow"/>
+                            <xs:element ref="htmlLabelRow"/>
+                        </xs:choice>
+                        <xs:element ref="header" minOccurs="0" maxOccurs="1"/>
+                        <xs:element ref="subHeader" minOccurs="0" maxOccurs="1"/>
+                        <xs:element ref="detailHeader" minOccurs="0" maxOccurs="1"/>
+                        <xs:element ref="footer" minOccurs="0" maxOccurs="1"/>
+                        <xs:element ref="htmlHeader" minOccurs="0" maxOccurs="1"/>
+                        <xs:element ref="htmlFooter" minOccurs="0" maxOccurs="1"/>
+                        <xs:attribute name="hideTopSeparator" type="xs:boolean" default="false"/>
+                        <xs:attribute name="disclosureLimit" type="xs:int" default="0"/>
+                        <xs:attribute name="image" type="xs:anyURI"/>
+                        <xs:attribute name="image2x" type="xs:anyURI"/>
+                        <xs:attribute name="image3x" type="xs:anyURI"/>
+                        <xs:attribute name="imageWidth" type="xs:string"/>
+                        <xs:attribute name="imageHeight" type="xs:string"/>
+                        <xs:attribute name="imageAlign" default="left">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:NCName">
+                                    <xs:enumeration value="left"/>
+                                    <xs:enumeration value="center"/>
+                                    <xs:enumeration value="right"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="pinView">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "pinView" is a PIN-code style view, similar to the passcode panes in Preferences.
+                A URL can be set on the pin view, which will be hit after the user types all four digits
+                Partial PINs are not supported.
+                "secure": If true (default), form field is in secured entry mode - characters entered are replaced with a bullet glyph as you type.
+                "numberOfFields": Specifies the number of spaces that the passcode field allows and requires. Defaults to 4 for compatibility.
+                "SMSAutoFill" if true, will cause Buddy to autopopulate a received SMS validation code into the pinView. To avoid racing with the SMS, the link load that returns this pinView should have startSMSAutoFill="true"
+                "fieldSpacer" if equal to "center", will cause an 16pt spacer to be added in between the center two fields. Only applies to even-numbered field counts.
+                "requireLocalPasscode": if set to "true", the pinView will only invoke its url when the user types their local device passcode. When in this mode, the pinView will customize its appearance automatically based on the characteristics of the device passcode and will therefore ignore any values set for the following attributes: "numberOfFields", "fieldSpacer", and "secure".
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="id" type="xs:NCName"/>
+        <xs:attribute name="secure" type="xs:boolean" default="true"/>
+        <xs:attribute name="numberOfFields" type="xs:string" default="4"/>
+        <xs:attribute name="requireLocalPasscode" type="xs:boolean" default="false"/>
+        <xs:element ref="header" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="footer" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="htmlHeader" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="htmlFooter" minOccurs="0" maxOccurs="1"/>
+    </xs:element>
+    <xs:element name="choiceView">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "choiceView" is a special-purpose pane designed to match the iOS Buddy-style panes that display an icon, some descriptive text, an optional help link, and up to two choices for a feature. The Location Services and iCloud Keychain Buddy panes are examples of this layout.
+                The only supported style for this element is "setupAssistant"
+                "header" will render header text below the image and above the helpLink
+                "subHeader" will render sub header text slightly below the header text. Requires header text to also be present.
+                "helpLink" is an optional link to provide more information about the feature. Typically this information is displayed modally using the "showModal" action.
+                One to two "choice" elements are required. The first will be rendered large as the primary choice, and the optional second will be rendered smaller, toward the bottom of the screen.
+                "color": the color of the choice. If it's a big choice then it will set the background color, and if it's a small choice it will set the text color of the button. Use a string like "rgb(250,0,0)"
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="id" type="xs:NCName"/>
+        <xs:attribute name="image" type="xs:string"/>
+        <xs:attribute name="image2x" type="xs:string"/>
+        <xs:attribute name="image3x" type="xs:string"/>
+        <xs:attribute name="imageWidth" type="xs:string"/>
+        <xs:attribute name="imageHeight" type="xs:string"/>
+        <xs:element ref="header" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="subHeader" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="helpLink" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+                <xs:attributeGroup ref="urlAttributes"/>
+            </xs:complexType>
+        </xs:element>
+        <xs:element ref="choice" minOccurs="1" maxOccurs="2">
+            <xs:complexType>
+                <xs:attributeGroup ref="urlAttributes"/>
+            </xs:complexType>
+            <xs:attribute name="color" type="xs:string"/>
+        </xs:element>
+    </xs:element>
+
+    <xs:element name="multiChoiceView">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                This element is currenly available only for iOS.
+                This element can be placed in any |page| with a table view or a web view.
+                This will be added at the bottom of the page and can have multiple choice buttons.
+                If the page has a toolbar, passcode, spinner view; this element will not be displayed.
+                Each choice button can be configured with following attributes:
+                    title - title of the choice button.
+                    tintColor - backgroundColor for the big choice button and titleColor for the small choice button.
+                    type - small or big. Any other type will be ignored.
+                    urlAttributes - supports urlAttributes for "url", "httpMethod", "activationFunction", and others.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:element ref="multiChoice" minOccurs="1" maxOccurs="4">
+            <xs:attribute name="title" type="xs:string"/>
+            <xs:attribute name="titleColor" type="xs:string"/>
+            <xs:attribute name="tintColor" type="xs:string"/>
+            <xs:attribute name="type" type="xs:string"/>
+            <xs:complexType>
+                <xs:attributeGroup ref="urlAttributes"/>
+            </xs:complexType>
+        </xs:element>
+    </xs:element>
+
+    <xs:element name="spinnerView">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "spinnerView" is a view that contains just a spinning wait indicator, with a label below it.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="id" type="xs:NCName"/>
+        <xs:attribute name="label" type="xs:string"/>
+    </xs:element>
+    <xs:element name="html">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "html" is a view that renders full-screen HTML content.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="id" type="xs:NCName"/>
+    </xs:element>
+    
+    <!-- Generic Row Attributes ... Apply to all rows. -->
+    <xs:attributeGroup name="rowAttributes">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The "label" attribute specifies the main text for the cell, usually left aligned.
+                "labelBold": "true" to make the "label" attribute appear bold.
+                "detailLabel": Secondary text that appears right aligned in the cell
+                "detailLinkURL": If present, will turn the detailLabel text into a link pointing to this URL. The URL should return an xmlui action.
+                "subLabel": Explanatory text that appears below the main label.
+                Colors: color attributes can specify the text color for given labels. Acceptable formats are UIKit color names (ex: "red"),
+                iOS system color names (ex: "systemRed"), rgb values (ex: "rgb(255,0,0)"), or rgba values (ex: "rgba(255,0,0,0.5)")
+                "align": Alignment for main label. Behavior if "detailLabel" is also provided is undefined.
+                "image", "image2x", and "image3x": URL to an image that will be displayed left-aligned in the table view row, specifying a 1x, 2x, and 3x image respectively.
+                The client will load the appropriate image based on the capability of the device.
+                If an image is given, "imageWidth" and "imageHeight" should be specified (in points, not pixels) to avoid layout jumps after the image is loaded
+                "labelNumberOfLines" and "subLabelNumberOfLines" specify the maximum number of lines for the respective text label. A value of 0 means unlimited.
+                "accessory": Specify an accessoryType for table cell
+                "accessoryImage", "accessoryImage2x", and "accessoryImage3x": URL to an image that will be displayed in an accessoryView on the right side of the cell.
+                The client will load the appropriate image for the device just like the "image" attribute.
+                "forceFullSizeDetailLabel": Prioritize the display of the detailLabel over that of the label. Will cause the label to get 
+                truncated if there is not enough room for both strings to be displayed in the row.
+                "leftAlignDetailLabel": Causes the alignment of the detail label to match the alignment of an editable text row editable text.
+                "invalid": Mark the row as being in error to the user. Used to highlight a row that must be corrected by the user. Will cause
+                an icon to be displayed to this effect on the right hand side of the row.
+                "validationFunction", "enabledFunction", and "activationFunction", same as for bar button items
+                "deletionFunction" indicates that this row is deletable when the table view is in editing mode and specifies the name of the javascript function to call when deletion is confirmed.
+                "disabled": Shows row controls in a disabled state and prevents user interaction with the row.
+                "indentWhileEditing": Indents the row content while the table view is in editing mode. Defaults to false
+                "isCopyable": Allows the cell text to be copied to the paste board. Defaults to false
+                "selectPageRowColor": Allows the selectPageRow detail text label to be a specific color. Defaults to system blue.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="label"/>
+        <xs:attribute name="labelColor" type="xs:string"/>
+        <xs:attribute name="labelBold" type="xs:boolean"/>
+        <xs:attribute name="labelNumberOfLines" type="xs:string"/>
+        <xs:attribute name="subLabel"/>
+        <xs:attribute name="subLabelColor" type="xs:string"/>
+        <xs:attribute name="subLabelNumberOfLines" type="xs:string"/>
+        <xs:attribute name="detailLabel"/>
+        <xs:attribute name="detailLabelColor" type="xs:string"/>
+        <xs:attribute name="detailLinkURL"/>
+        <xs:attribute name="id" type="xs:NCName"/>
+        <xs:attribute name="image" type="xs:anyURI"/>
+        <xs:attribute name="image2x" type="xs:anyURI"/>
+        <xs:attribute name="image3x" type="xs:anyURI"/>
+        <xs:attribute name="imageWidth" type="xs:string"/>
+        <xs:attribute name="imageHeight" type="xs:string"/>
+        <xs:attribute name="accessory" default="none">
+            <xs:simpleType>
+                <xs:restriction base="xs:NCName">
+                    <xs:enumeration value="none"/>
+                    <xs:enumeration value="disclosure"/>
+                    <xs:enumeration value="detailDisclosure"/>
+                    <xs:enumeration value="checkmark"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="accessoryImage" type="xs:anyURI"/>
+        <xs:attribute name="accessoryImage2x" type="xs:anyURI"/>
+        <xs:attribute name="accessoryImage3x" type="xs:anyURI"/>
+        <xs:attribute name="align" default="left">
+            <xs:simpleType>
+                <xs:restriction base="xs:NCName">
+                    <xs:enumeration value="left"/>
+                    <xs:enumeration value="center"/>
+                    <xs:enumeration value="right"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="forceFullSizeDetailLabel" type="xs:boolean"/>
+        <xs:attribute name="leftAlignDetailLabel" type="xs:boolean"/>
+        <xs:attribute name="invalid" type="xs:boolean"/>
+        <xs:attribute name="enabledFunction" type="xs:NCName"/>
+        <xs:attribute name="validationFunction" type="xs:NCName"/>
+        <xs:attribute name="disabled" type="xs:boolean"/>
+        <xs:attribute name="indentWhileEditing" type="xs:boolean" default="false"/>
+        <xs:attribute name="isCopyable" type="xs:boolean" default="false"/>
+        <xs:attribute name="selectPageRowColor" type="xs:string"/>
+    </xs:attributeGroup>
+
+    <xs:group name="rowDecorations">
+        <xs:sequence>
+            <xs:element name="detailButton" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        "detailButton" defines a an info "i" button that will appear in the accessory area of the table row that contains it. It supports urlAttributes for "url", "httpMethod", "activationFunction", and others.
+                        "visibility" specifies when the detail button will be shown. "editing" will only show the button when the containing tableView is in editing mode. "notEditing" will only show it when not editing.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attribute name="visibility" type="xs:string">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:NCName">
+                                <xs:enumeration value="always"/>
+                                <xs:enumeration value="editing"/>
+                                <xs:enumeration value="notEditing"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute:
+                    <xs:attributeGroup ref="urlAttributes"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+
+    <!-- BEGIN row types -->
+
+    <xs:element name="labelRow">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "labelRow" cells are the most basic cell type that display text and/or images.
+                "radioGroup:" Labels can be made into a radio group item by providing a "radioGroup" name. In that case the form will
+                have a key/value equal to the "radioGroup" and "value" of the selected radio cell, respectively.
+                "image": URL to an image that should be rendered in the cell, to the left of the main label.
+                "imageDescription": A textual description of the image. Only used in accessibility.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice minOccurs="0">
+                <xs:element name="linkDeleteAction">
+                    <xs:complexType>
+                        <xs:attributeGroup ref="urlAttributes"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="clientDeleteAction">
+                    <xs:complexType>
+                        <xs:attribute name="name" type="xs:NCName"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+            <xs:attributeGroup ref="rowAttributes"/>
+            <xs:group ref="rowDecorations"/>
+            <xs:attribute name="radioGroup" type="xs:NCName"/>
+            <xs:attribute name="checked" type="xs:boolean" default="false"/>
+            <xs:attribute name="value" type="xs:string"/>
+            <xs:attribute name="imageDescription" type="xs:string"/>
+            <xs:attribute name="height" type="xs:float"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="buttonRow">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "buttonRow" cells can be used to trigger client-side behaviors specific to a particular screen. The BuddyML delegate will be
+                delivered notifications of button presses by "name", so the client and server side teams must mutually agree on the meaning
+                of a particular button name.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attributeGroup ref="rowAttributes"/>
+            <xs:attribute name="name" use="required" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="editableTextRow">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "editableTextRow" cells provide the means for text input from the user.
+                "label": Identifies the field to the user. Text field will grow to fill the cell if it is omitted.
+                "value": Default value that should pre-populate the field when the page is first presented.
+                "clientValue": If no "value" is given, causes the field to be pre-filled with special content by the client. The only valid value for this attribue is "phoneNumber", which will only work on iPhone, and the app hosting this flow must be entitled.
+                "keyboardType": Type of keyboard to display to the user for text entry.
+                "autocapitalizationType": Type of autocapitalization to apply to the text input.
+                "placeholder": Explanatory grey text inside the text field when the field is empty.
+                "id": Key for form value. Identifies the form field in both the script API and the POST back to the server.
+                "secure": If true, form field is in secured entry mode - characters entered are replaced with a bullet glyph as you type.
+                "firstResponder": If true, row will have focus when page is first displayed and keyboard will be visible. There should only be
+                one row per screen with this attribute set, otherwise the behavior is undefined.
+                "disableAutocorrection": Disables autocorrection and text shortcuts on the text field.
+                "disableAutocapitalization": Disables autocapitalization on the text field. (Deprecated in iOS 7 and later, use autocapitalizationType instead.)
+                "suffix": Ability to set a non-editable suffix on the text row.
+                "nextKeyField": Customize next responder behavior of return key. By default, the return key moves focus to the next editable row. Specifying "false" indicates that the return key should resign first responder and not move focus to the next field. Otherwise, specifying the "id" of another row will cause focus to jump to that row.
+                "changeCharactersFunction": defines the javascript method that will be called each time the user attempts to edit the
+                contents of the textfield.
+                - Input Arguments: This function is passed four arguments. 1. The text in the textfield before the edit. 2. The selection range location. 3. The selection range length (0 if an insertion point I bar). 4. The new text for the edit (the character being typed, for instance, or empty string when deleting text).
+                - Return Value(s): This function should return one of three different things: 1. nil if the system should proceed with allowing the user to make the edit - the system will update the textfield text and selection automatically (equivalent to not implementing this callback). 2. New text for the textfield. In this case, the system will NOT allow the edit to proceed, but instead the textfield text will be set to the string returned. 3. An array consisting of i) New text for the textfield, ii) the new selection range location, and iii) the new selection range length. Returning this array allows for both setting the new contents of the textfield AND the selection range, which is useful when the user is making edits to the middle of the text contents. Without returning the selection range (option 2 above), the selection range would jump to the end of the textfield.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="keyboardType" default="default">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="default"/>
+                        <xs:enumeration value="email"/>
+                        <xs:enumeration value="url"/>
+                        <xs:enumeration value="asciiCapable"/>
+                        <xs:enumeration value="numbersAndPunctuation"/>
+                        <xs:enumeration value="numberPad"/>
+                        <xs:enumeration value="phonePad"/>
+                        <xs:enumeration value="namePhonePad"/>
+                        <xs:enumeration value="decimalPad"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="autocapitalizationType" default="default">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="default"/>
+                        <xs:enumeration value="none"/>
+                        <xs:enumeration value="words"/>
+                        <xs:enumeration value="sentences"/>
+                        <xs:enumeration value="allCharacters"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attributeGroup ref="rowAttributes"/>
+            <xs:attribute name="value" type="xs:string"/>
+            <xs:attribute name="clientValue" type="xs:string"/>
+            <xs:attribute name="placeholder"/>
+            <xs:attribute name="secure" type="xs:boolean" default="false"/>
+            <xs:attribute name="firstResponder" type="xs:boolean" default="false"/> 
+            <xs:attribute name="disableAutocorrection" type="xs:boolean" default="false"/>
+            <xs:attribute name="disableAutocapitalization" type="xs:boolean" default="false"/>
+            <xs:attribute name="textColor" type="xs:string"/>
+            <xs:attribute name="suffix" type="xs:string"/>
+            <xs:attribute name="suffixColor" type="xs:string"/>
+            <xs:attribute name="nextKeyField" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="selectRow">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "selectRow" provides a UIPickerView for presenting choices from a list to the user.
+                The "value" attribute specifies the default selection.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="option" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="label" use="required"/>
+                        <xs:attribute name="value" use="required" type="xs:NCName"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attributeGroup ref="rowAttributes"/>
+            <xs:attribute name="value" type="xs:string"/>
+            <xs:attribute name="placeholder" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="selectPageRow">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "selectPageRow" provides a "child" UITableView for presenting choices from a list to the user.
+                "linkedTitle": Specifies the title of the child page
+                "placeholder": Explanatory text before the user has selected one of the choices
+                "autoGoBack" : If true, selecting a choice automatically dismisses the child UITableView. Default value: false.
+                "selectPageRowColor": Allows the selectPageRow detail text label to be a specific color. Defaults to system blue.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="linkedOption" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="label" use="required"/>
+                        <xs:attribute name="value" use="required" type="xs:NCName"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attributeGroup ref="rowAttributes"/>
+            <xs:attribute name="linkedTitle" type="xs:string"/>
+            <xs:attribute name="placeholder" use="required"/>
+            <xs:attribute name="autoGoBack" type="xs:boolean"/>
+        </xs:complexType>
+        <xs:attribute name="selectPageRowColor" type="xs:string"/>
+    </xs:element>
+    <xs:element name="switchRow">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "switchRow" provides a UISwitch for presenting an on/off switch to the user.
+                Use the "value" attribute to control whether the switch is on or off when the page is first presented to the user.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attributeGroup ref="rowAttributes"/>
+            <xs:attribute name="value" type="xs:boolean"/>
+            <xs:attribute name="url" type="xs:string"/>
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    "url" is an optional attribute that, if present, will trigger a POST request to the given URL with the new switch value whenever the switch is flipped by the user.
+                </xs:documentation xml:lang="en">
+            </xs:annotation>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="datePickerRow">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "datePickerRow" provides a UIDatePicker for displaying a date picker to the user. Date values in the attributes should be in the format yyyy-MM-dd. The
+                string value "today" is also supported and resolves to the current date on the device.
+                "value" controls the default value of the row.
+                "minValue" is the minimum date to be enabled in the date picker.
+                "maxValue" is the maximum date to be enabled in the date picker.
+                "value", "minValue", and "maxValue" should be specified in the form "yyyy-mm-dd", e.g. 2014-03-24 for March 24th.
+                "placeholder" is explanatory text before the user has selected a date
+                "mode" controls what fields should be available in the date picker. Options are "monthAndDay", "yearAndMonth", and "default", which shows year, month, and day.
+                "url", if present, puts the date picker into an immediate commit mode where dismissing the date picker submits the form to the given url.
+                "calendar" sets the calendar used to select a date. The only supported values are "default" and "gregorian". "default" implies the calendar set by the user's locale.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attributeGroup ref="rowAttributes"/>
+            <xs:attribute name="value" type="xs:date"/>
+            <xs:attribute name="maxValue" type="xs:string"/>
+            <xs:attribute name="minValue" type="xs:string"/>
+            <xs:attribute name="placeholder"/>
+            <xs:attribute name="mode" default="default">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="default"/>
+                        <xs:enumeration value="monthAndDay"/> <!-- BuddyML 2.0 and newer -->
+                        <xs:enumeration value="yearAndMonth"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="url" type="xs:string"/>
+            <xs:attribute name="calendar" default="default">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="default"/>
+                        <xs:enumeration value="gregorian"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="linkRow">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "linkRow" provides a row that when selected issues an http request to the "url" specified.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attributeGroup ref="rowAttributes"/>
+            <xs:attributeGroup ref="urlAttributes"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="htmlLabelRow" type="xs:string">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "htmlLabelRow" provides a row that can render HTML content.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <!-- END row types -->
+    
+    <!-- BEGIN Section Decorations -->
+    
+    <xs:complexType name="sectionDecoration" abstract="true">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "align" specifies an alignment for the section decoration. Possible values are "left", "right", and "center".
+                "color" specifies a color for the section decoration text. See the documentation for "rowAttributes" color for possible values.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+                <xs:attribute name="align" type="xs:string"/>
+                <xs:attribute name="color" type="xs:string"/>
+            </xs:complexType>
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:element name="header">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "header" defines a table header or section header with text content.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="sectionDecoration"/>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="subHeader">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "subHeader" defines a table subHeader or section subHeader with text content to be drawn underneath the "header" content.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="sectionDecoration"/>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="detailHeader">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "detailHeader" defines a header text content to be drawn on the right side of the header view.
+                "textStyle": Name of the text style to use for the detailHeader label. See https://developer.apple.com/reference/uikit/uifonttextstyle?language=objc
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attributeGroup ref="urlAttributes"/>
+            <xs:attribute name="textStyle" type="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="title1"/>
+                        <xs:enumeration value="title2"/>
+                        <xs:enumeration value="title3"/>
+                        <xs:enumeration value="headline"/>
+                        <xs:enumeration value="subheadline"/>
+                        <xs:enumeration value="body"/>
+                        <xs:enumeration value="callout"/>
+                        <xs:enumeration value="footnote"/>
+                        <xs:enumeration value="caption1"/>
+                        <xs:enumeration value="caption2"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="footer">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "footer" defines a table section or pinView footer with text or link content.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attributeGroup ref="urlAttributes"/>
+            <xs:complexContent>
+                <xs:extension base="sectionDecoration"/>
+            </xs:complexContent>
+        </xs:complexType>
+        <xs:attribute name="privacyBundleIdentifier" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    If "privacyBundleIdentifier" specifies the identifier of an OnBoardingKit privacy bundle, the footer will contain a special link to the privacy splash page for the given bundle. The link text is generated automatically.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="hidePrivacyIcon" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    If "hidePrivacyIcon" is true, hide the icon added to the privacy link by "privacyBundleIdentifier", if applicable.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:element>
+    
+    <xs:element name="htmlHeader">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "htmlHeader" defines a table section header view that contains html content.
+                This element takes precedence over the "header" element.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="htmlFooter">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "htmlFooter" defines a table section footer view that contains html content.
+                This element takes precedence over the "footer" element.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- END Section Decorations -->
+    
+    <!-- Alerts -->
+    
+    <xs:element name="alert">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "alert" displays a UIKit alert to the user.
+                If "id" is given, then any link elements can reference this alert with url="#id"
+                "title" and "message" specify the title and body text of the alert respectively.
+                Zero or more "button" objects and zero or one "cancelButton" subelements will be displayed as the choices of the alert. The alert must have at least one button or cancelButton.
+                "preferredButton" specifies the id of a button to set as the UIKit preferredAction, which has the effect of bolding the button text. This attributed is ignored when style="sheet"
+                "style" specifies whether the alert element is displayed as a centered alert box, or a sheet from the bottom of the screen. "sheet" is supported on iPhone-sized devices only. The default is "alert".
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="id" type="xs:NCName"/>
+            <xs:attribute name="title" type="xs:string"/>
+            <xs:attribute name="message" type="xs:string"/>
+            <xs:attribute name="preferredButton" type="xs:string"/>
+            <xs:attribute name="style" type="xs:string" default="alert">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NCName">
+                        <xs:enumeration value="alert"/>
+                        <xs:enumeration value="sheet"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:sequence>
+                <xs:element name="cancelButton" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                <xs:element name="button" minOccurs="0" maxOccurs="2" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            "button" adds a button to the alert with the given title. "url", if specified, will load BuddyML at the specified address when chosen.
+                            "destructive" indicates that the button makes irreversible changes and will color the button text red.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:attribute name="url" type="xs:string"/>
+                        <xs:attribute name="destructive" type="xs:boolean"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,14 @@
+{
+  "name": "Lyft",
+  "category": "travel",
+  "rewardsType": "applePay",
+  "source": "inApp",
+  "brand": {
+    "category": "travel",
+    "detailedCategory": "hotelstravel.transport.taxis",
+    "identifier": 6242763626543211080,
+    "logoURL": "http://is4.mzstatic.com/image/thumb/vR42MvtsgaRrutnIqSh4CA/258x258.png",
+    "name": "Lyft",
+    "url": "http://www.lyft.com"
+  }
+}

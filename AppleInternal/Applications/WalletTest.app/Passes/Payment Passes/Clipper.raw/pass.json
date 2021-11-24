@@ -1,0 +1,232 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "paymentpass.com.apple.dev1",
+  "teamIdentifier": "58Y959KPTE",
+  "primaryAccountIdentifier": "FAPL8BALL_0001fb563483ca0f4c87a55a46c0b0999998",
+  "associatedStoreIdentifiers": [
+    1114430602
+  ],
+  "associatedApplicationIdentifiers": [
+    "GSP3TRFDJD.com.apple.syndrome",
+    "5AM47K89XY.com.apple.PassAche",
+  ],
+  "messagePushTopic": "com.gemalto.mfs.cardnotificationservice.lab",
+  "messageServiceURL": "https://appletransit.qa1.cbp-qa.gemalto.com/cns",
+  "transactionServiceURL": "https://domoarigato.usspk05.app.apple.com/v2/clipper/",
+  "transactionServiceRegistrationURL": "https://domoarigato.usspk05.app.apple.com/v2/clipper/",
+  "transactionPushTopic": "com.apple.wallet.test.cardnotification",
+  "appLaunchURL": "octopus://",
+  "serialNumber": "nc.qa.qa2nc_a9c80b7d91814049973ec55d5daabaab",
+  "backgroundColor": "rgb(0,0,0)",
+  "foregroundColor": "rgb(1,1,1)",
+  "labelColor": "rgb(2,2,2)",
+  "organizationName": "Clipper Cards Limited",
+  "description": "Clipper",
+  "supportsDefaultCardSelection": true,
+  "isPaymentOptionSelectable": true,
+  "supportsSerialNumberBasedProvisioning": true,
+  "requiresTransferSerialNumberBasedProvisioning": true,
+  "issuerCountryCode": "US",
+  "supportsDPANNotifications": 1,
+  "supportsFPANNotifications": 1,
+  "paymentCard": {
+    "secondaryFields": [
+      {
+        "key": "card",
+        "label": "CARD",
+        "value": "4216"
+      }
+    ],
+    "auxiliaryFields": [],
+    "backFields": [
+      {
+        "key": "notice",
+        "label": "INFORMATION",
+        "value": "Clipper Cards Limited"
+      },
+      {
+        "key": "contactWebsite",
+        "label": "WEBSITE",
+        "value": "https://www.octopus.com.hk/en/consumer/mobile-payment/smart-octopus/about/index.html"
+      },
+      {
+        "key": "contactNumber",
+        "label": "PHONE",
+        "value": "(213) 555-1212"
+      },
+      {
+        "key": "contactName",
+        "label": "NAME",
+        "value": "Tap Cards Limited"
+      },
+      {
+        "key": "privacyPolicyURL",
+        "label": "POLICY URL",
+        "value": "https://www.octopus.com.hk/en/document/privacy_policy_octopus.pdf"
+      },
+      {
+        "key": "termsAndConditionsURL",
+        "label": "TERMS URL",
+        "value": "https://www.octopus.com.hk/en/document/conditions_of_issue.pdf"
+      }
+    ],
+    "commutePlans": [
+        {
+            "identifier": "BART_HVD",
+            "autoloaded": true,
+            "deviceAccountIdentifiers": [
+                "DAPL8BALL_0001533eee70d1144a3a8a0851680c777777"
+            ],
+            "title": {
+                "cellStyle": "PKTableViewCellStyleValue2",
+                "key": "genericCountPlan",
+                "label": "BART",
+                "value": "Bart HVD 45/48"
+            },
+            "details": [
+                {
+                    "cellStyle": "PKTableViewCellStyleValue2",
+                    "key": "amountRemaining",
+                    "label": "Balance",
+                    "foreignReferenceType": "Balance",
+                    "foreignReferenceIdentifier": "$id_balanceRemaining",
+                    "formatString": "$ ## remaiing"
+                },
+                {
+                    "cellStyle": "PKTableViewCellStyleValue2",
+                    "key": "usage",
+                    "label": "Limitations",
+                    "value": "Not valid for Blue Line to Airport."
+                },
+                {
+                    "cellStyle": "PKTableViewCellStyleValue2",
+                    "key": "x:com.cubic.clipper.customfield:special_message",
+                    "label": "Special Message",
+                    "value": "Special message from Clipper."
+                }
+            ]
+        },
+      {
+         "identifier": "MUNI_7_DAY",
+         "title": {
+             "cellStyle": "PKTableViewCellStyleValue2",
+             "key": "genericTimedPlan",
+             "label": "Muni 7 Day Pass",
+             "value": "7 Day Pass"
+         },
+         "details": [
+             {
+                 "cellStyle": "PKTableViewCellStyleValue2",
+                 "dateStyle": "PKDateStyleLong",
+                 "ignoresTimeZone": false,
+                 "isRelative": false,
+                 "key": "expiryDate",
+                 "label": "Expiry Date",
+                 "timeStyle": "PKDateStyleNone",
+                 "value": "2021-07-10T12:00:00+08:00"
+             },
+             {
+                 "cellStyle": "PKTableViewCellStyleValue2",
+                 "dateStyle": "PKDateStyleLong",
+                 "ignoresTimeZone": false,
+                 "isRelative": false,
+                 "key": "startDate",
+                 "label": "Start Date",
+                 "timeStyle": "PKDateStyleShort",
+                 "value": "2021-07-10T12:00:00+08:00"
+             },
+             {
+                 "cellStyle": "PKTableViewCellStyleValue2",
+                 "key": "usage",
+                 "label": "Limitations",
+                 "value": "Valid on Muni Only."
+             },
+             {
+                 "cellStyle": "PKTableViewCellStyleValue2",
+                 "key": "x:com.cubic.clipper.customfield:special_message",
+                 "label": "Special Message",
+                 "value": "Special message from Clipper."
+             }
+         ]
+     },
+     {
+        "identifier": "CALTRAIN_ADULT_1_MONTHLY",
+        "deviceAccountIdentifiers": [
+            "DAPL8BALL_0001533eee70d1144a3a8a0851680c999999",
+            "DAPL8BALL_0001533eee70d1144a3a8a0851680c888888",
+        ],
+        "title": {
+            "cellStyle": "PKTableViewCellStyleValue2",
+            "key": "genericTimedPlan",
+            "label": "Caltrain Adult 1 Zone",
+            "value": "Monthly Pass"
+        },
+        "details": [
+            {
+                "cellStyle": "PKTableViewCellStyleValue2",
+                "dateStyle": "PKDateStyleLong",
+                "ignoresTimeZone": false,
+                "isRelative": false,
+                "key": "expiryDate",
+                "label": "Expiry Date",
+                "timeStyle": "PKDateStyleNone",
+                "value": "2021-03-10T12:00:00+08:00"
+            },
+            {
+                "cellStyle": "PKTableViewCellStyleValue2",
+                "dateStyle": "PKDateStyleLong",
+                "ignoresTimeZone": false,
+                "isRelative": false,
+                "key": "startDate",
+                "label": "Start Date",
+                "timeStyle": "PKDateStyleShort",
+                "value": "2021-07-10T12:00:00+08:00"
+
+            },
+            {
+                "cellStyle": "PKTableViewCellStyleValue2",
+                "key": "usage",
+                "label": "Zone",
+                "value": "1"
+            },
+            {
+                "cellStyle": "PKTableViewCellStyleValue2",
+                "key": "x:com.cubic.clipper.customfield:special_message",
+                "label": "Special Message",
+                "value": "Special message from Clipper."
+            }
+        ]
+     }
+   ]
+  },
+  "paymentApplications": [
+      {
+        "secureElementIdentifier": "040C37A36A4180017138014408941612C9092E6A5308F0EB",
+        "applicationIdentifier": "A00000000000000000000001",
+        "DPANIdentifier": "DAPL8BALL_0001533eee70d1144a3a8a0851680c888887",
+        "DPANSuffix": "8887",
+        "state": 1,
+        "supportsContactlessPayment": 1,
+        "supportsInAppPayment": 0,
+        "paymentNetworkIdentifier": 117,
+        "sanitizedDPAN": "99124578887",
+        "paymentType": "Transit",
+        "applicationDescription": "Clipper",
+        "defaultPaymentApplication": true,
+        "supportsOptionalAuthentication": 1,
+        "appletDataFormat": "transit.apple.cubic.tap",
+        "appletCurrencyCode": "USD",
+        "supportedTransitNetworkIdentifiers": [
+          "com.apple.transit.cubic.clipper"
+        ]
+      }
+  ],
+  "sequenceCounter": 7,
+  "auxiliaryPaymentApplications": [],
+  "isCobranded": false,
+  "contactName": "Clipper Cards Limited",
+  "hasAssociatedPeerPaymentAccount": false,
+  "liveRenderedBackground": false,
+  "supportsCategoryVisualization": false,
+  "cardType": "Transit"
+}

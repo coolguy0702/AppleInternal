@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>TypeAndVerify-GestureKeys-en_US</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Hello world. I↓'m Typist, and my number is ↓+↓1↓(↓4↓0↓8↓)↓1↓2↓3↓4↓-↓5↓6↓7↓8.</string>
+                        <key>expectedText</key>
+                        <string>Hello world. I'm Typist, and my number is +1(408)1234-5678.</string>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Hello world. I#GD_'m Typist, and my number is #GD_+#GD_1#GD_(#GD_4#GD_0#GD_8#GD_)#GD_1#GD_2#GD_3#GD_4#GD_-#GD_5#GD_6#GD_7#GD_8.</string>
+                        <key>expectedText</key>
+                        <string>Hello world. I'm Typist, and my number is +1(408)1234-5678.</string>
+                        <key>gestureDownCommandString</key>
+                        <string>#GD_</string>
+                        <key>testCaseID</key>
+                        <string>10000002</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with user-defined gesture indicator</string>
+                </dict>
+                
+            </array>
+        </dict>
+    </array>
+</plist>

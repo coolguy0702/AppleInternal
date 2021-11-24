@@ -1,0 +1,34 @@
+{
+    "account" : {
+        "identifier": "75698eae-e65d-4d84-a588-599776739d64",
+        "remainingMinimumPayment" : "51.00",
+        "currentBalance" : "4965.39",
+        "remainingStatementBalance" : "4956.64",
+        "statementBalance" : "4956.64",
+        "featureMinimumAmount" : "0.01",
+        "statementIdentifier": "d0202bb6-cd15-467f-95aa-52608510cdc3",
+        "apr": "0.16",
+        "creditLimit":"5000",
+        "inGrace": true,
+    },
+    "currentStatementSelectedSuggestedAmountEvents" : [
+    ],
+    "currentStatementPurchasesTransactions" : [
+    ],
+    "previousStatementPurchasesTransactions" : [
+        {
+            "amount" : "193.24",
+            "transactionDate" : "2018-07-09T00:00:00+00:00",
+            "merchantCategory" : "other"
+        },
+        {
+            "amount" : "258.59",
+            "transactionDate" : "2018-07-07T00:00:00+00:00",
+            "merchantCategory" : "transport"
+        },
+    ],
+    "currentStatementBillPaymentTransactions" : [
+    ],
+    "previousStatementBillPaymentTransactions" : [
+    ]
+}

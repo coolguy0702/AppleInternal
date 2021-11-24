@@ -1,0 +1,186 @@
+{
+  "actions": [
+    {
+      "identifier": "RENEW_MUNI_7_DAY",
+      "associatedPlanIdentifier": "MUNI_7_DAY",
+      "type": "selectedItem",
+      "hasRemoteContent": false,
+      "title": "Renew 7 Day Muni Plan",
+      "description": "Renews your Muni Commute Plan",
+      "confirmationTitle": "Renew",
+      "headerText" : "MUNI Commnute Plan renewal",
+      "footerText" : "The selected plan will be added to your existing Commute Plan.",
+      "serviceProviderIdentifier": "transit.apple.cubic.tap",
+      "serviceProviderCountryCode": "US",
+      "serviceProviderSupportedNetworks": [
+        "AmEx",
+        "Discover",
+        "MasterCard",
+        "Visa"
+      ],
+      "serviceProviderCapabilities": [
+        "EMV",
+        "credit",
+        "debit"
+      ],
+      "items": [
+        {
+          "identifier" : "ITEM_MUNI_RENEW_7_DAY",
+          "title" : "Renew with 7 Day Muni Pass",
+          "currency" : "USD",
+          "amount" : 39.00,
+          "newExpirationDate" : "2020-11-05T08:15:30-05:00",
+          "serviceProviderData" : {
+            "key1": "value1",
+            "key2": "value2"
+          }
+        },
+        {
+          "identifier" : "ITEM_MUNI_RENEW_3_DAY",
+          "title" : "Renew with 3 Day Muni Pass",
+          "currency" : "USD",
+          "amount" : 29.00,
+          "newExpirationDate" : "2020-11-05T08:15:30-05:00",
+          "serviceProviderData" : {
+            "key1": "value1",
+            "key2": "value2"
+          }
+        },
+        {
+          "identifier" : "ITEM_MUNI_RENEW_1_DAY",
+          "title" : "Renew with 1 Day Muni Pass",
+          "currency" : "USD",
+          "amount" : 12.00,
+          "newExpirationDate" : "2020-11-05T08:15:30-05:00",
+          "serviceProviderData" : {
+            "key1": "value1",
+            "key2": "value2"
+          }
+        }
+      ]
+    },
+    {
+     "identifier": "RENEW_CLIPPER_BART_HVD",
+     "associatedPlanIdentifier": "BART_HVD",
+     "type": "selectedItem",
+     "hasRemoteContent": false,
+     "title": "Renew Bart HVD",
+     "description": "Purchases another Bart HVD ride plan",
+     "confirmationTitle": "Purchase",
+     "headerText" : "Clipper Bart HVD Plan renewal",
+     "footerText" : "The selected plan will be added to your existing Commute Plans.",
+     "serviceProviderIdentifier": "transit.apple.cubic.clipper",
+     "serviceProviderCountryCode": "US",
+     "serviceProviderSupportedNetworks": [
+       "AmEx",
+       "Discover",
+       "MasterCard",
+       "Visa"
+     ],
+     "serviceProviderCapabilities": [
+       "EMV",
+       "credit",
+       "debit"
+     ],
+     "items": [
+       {
+         "identifier" : "ITEM_CLIPPER_RENEW_BART_HVD_45_48",
+         "title" : "Purchase $48 for the prie of $45",
+         "currency" : "USD",
+         "amount" : 45.00,
+         "serviceProviderData" : {
+           "key1": "value1",
+           "key2": "value2"
+         }
+       },
+       {
+         "identifier" : "ITEM_CLIPPER_RENEW_BART_HVD_60_64",
+         "title" : "Purchase $64 for the prie of $60",
+         "currency" : "USD",
+         "amount" : 60.00,
+         "serviceProviderData" : {
+           "key1": "value1",
+           "key2": "value2"
+         }
+       }
+     ]
+    },
+    {
+      "identifier": "RENEW_CALTRAIN_ADULT_1_MONTHLY",
+      "associatedPlanIdentifier": "CALTRAIN_ADULT_1_MONTHLY",
+      "type": "selectedItem",
+      "hasRemoteContent": false,
+      "title": "Renew Montly Pass",
+      "description": "Renews your Caltrain Monthly Pass",
+      "confirmationTitle": "Renew",
+      "headerText" : "Caltrain Monthly Pass Renewal",
+      "footerText" : "The selected plan will be added to your existing Commute Plans.",
+      "serviceProviderIdentifier": "transit.apple.cubic.tap",
+      "serviceProviderCountryCode": "US",
+      "serviceProviderSupportedNetworks": [
+        "AmEx",
+        "Discover",
+        "MasterCard",
+        "Visa"
+      ],
+      "serviceProviderCapabilities": [
+        "EMV",
+        "credit",
+        "debit"
+      ],
+      "items": [
+        {
+          "identifier" : "ITEM_CALTRAIN_RENEWAL_30_DAY_ZONE_1",
+          "title" : "Renew Zone 1 for 30 days",
+          "currency" : "USD",
+          "amount" : 96.00,
+          "newExpirationDate" : "2020-11-05T08:15:30-05:00",
+          "serviceProviderData" : {
+            "key1": "value1",
+            "key2": "value2"
+          }
+        }
+      ]
+    },
+    {
+        "identifier": "topUpPass",
+        "type": "enteredValue",
+        "hasRemoteContent": false,
+        "title": "Add Money",
+        "description": "Add value to card.",
+        "confirmationTitle": "Add",
+        "featured": true,
+        "relevantPropertyIdentifier": "$id_storedvalue",
+        "merchantId": "TRANSIT_SL",
+        "serviceProviderIdentifier": "TRANSIT_SL",
+        "serviceProviderCountryCode": "US",
+        "serviceProviderSupportedNetworks": [
+            "AmEx",
+            "Visa",
+            "MasterCard",
+            "Discover"
+        ],
+        "serviceProviderCapabilities": [
+            "EMV",
+            "credit",
+            "debit"
+        ],
+        "item": {
+            "currency": "USD",
+            "minAmount": 1,
+            "maxAmount": 100,
+            "defaultSuggestions": [
+                10.0,
+                20.0,
+                50.0
+            ],
+            "maxAmountIncludesLocalBalance": true,
+            "serviceProviderData": {
+                "actionIdentifier": "top_up",
+                "issuerIdentifier": "HalfpipeA",
+                "dpanIdentifier": "DAPL8BALL_0001533eee70d1144a3a8a0851680c777777"
+            }
+        }
+    },
+  ]
+}

@@ -1,0 +1,487 @@
+[
+  {"calendar": "Int_zh_HK 香港節日","title":"悉尼家庭旅行", "homePhone":"2519 9601", "language":"zh-HK","address": "香港\n\n\n灣仔\n\n駱克道212號","notes":"香港灣仔駱克道212號"},
+ {"calendar": "Int_zh_HK 香港節日","title":"家庭晚餐", "homePhone":"2789 2226", "language":"zh-HK","address": "香港\n\n\n旺角\n\n旺角道8F號","notes":"香港旺角旺角道8F號"},
+ {"calendar": "Int_zh_HK 香港節日","title":"團隊會議", "homePhone":"2726 5068", "language":"zh-HK","address": "香港\n\n\n九龍城\n\n橫頭磡南道","notes":"香港九龍城橫頭磡南道樂富市集 D52鋪"},
+ {"calendar": "Int_zh_HK 香港節日","title":"團隊晚餐", "homePhone":"9057 0984", "language":"zh-HK","address": "香港\n\n\nMong Kok\n\n","notes":"61A Shantung St, Mong Kok, 香港"},
+ {"calendar": "Int_zh_HK 香港節日","title":"與李先敏共進午餐", "homePhone":"2699 9001", "language":"zh-HK","address": "香港\n\n\n新蒲崗\n\n","notes":"香港新蒲崗九龍黃大仙大有街2號旺景工業大廈7樓H室"},
+ {"calendar": "Int_zh_HK 香港節日","title":"羅家英的生日", "homePhone":"2365 8561", "language":"zh-HK","address": "香港\n\n\n九龍城\n\n德民街","notes":"香港九龍城德民街黃埔新邨德民大廈黃埔 新 邨 號 德 民 大廈 地下 C1 鋪"},
+ {"calendar": "Int_zh_HK 香港節日","title":"瑜伽課", "homePhone":"2398 8038", "language":"zh-HK","address": "香港\n\n\n荔枝角\n\n","notes":"香港荔枝角荔枝角道75-79號B鋪"},
+ {"calendar": "Int_zh_HK 香港節日","title":"假期", "homePhone":"", "language":"zh-HK","address": "香港\n\n\n北角\n\n英皇道293-299號旋宮大厦","notes":"香港北角英皇道293-299號旋宮大厦熙和街7號鋪"},
+ {"calendar": "Int_zh_HK 香港節日","title":"度蜜月", "homePhone":"6888 4030", "language":"zh-HK","address": "香港\n\n\n長沙灣\n\n荔枝角道781號","notes":"香港長沙灣荔枝角道781號宏昌工廠大廈911 A-C室"},
+ {"calendar": "Int_zh_HK 香港節日","title":"汪明荃的婚禮", "homePhone":"5222 7111", "language":"zh-HK","address": "香港\n\n\n鰂魚涌\n\n海澤街28號","notes":"香港鰂魚涌海澤街28號東港中心"},
+ {"calendar": "Int_zh_HK 香港節日","title":"週年紀念日", "homePhone":"6888 0000", "language":"zh-HK","address": "香港\n\n\n觀塘\n\n","notes":"香港觀塘A13, 6/F, 33 Hung To Road"},
+
+
+  {
+    "startDate": "20140701",
+    "title": "香港特別行政區成立紀念日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "德輔道中257號\n\n中環\n,\n香港",
+    "notes": "百尺竿头更进一步"
+  },
+  {
+    "startDate": "20141225",
+    "title": "聖誕節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "232, Des Voeux Road Central\n\nSheung Wan\n,\n香港",
+    "notes": "百尺竿頭更進一步"
+  },
+  {
+    "startDate": "20140308",
+    "title": "國際婦女節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\n中環\n,\n香港",
+    "notes": "百聞不如一見"
+  },
+  {
+    "startDate": "20140404",
+    "title": "兒童節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "彌敦道636號\n\n旺角\n,\n香港",
+    "notes": "百闻不如一见"
+  },
+  {
+    "startDate": "20141224",
+    "title": "平安夜",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "康樂廣場1號\n\n中環\n,\n香港",
+    "notes": "飽漢不知餓漢飢"
+  },
+  {
+    "startDate": "20141226",
+    "title": "聖誕節翌日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "遮打道10號\n\n中環\n,\n香港",
+    "notes": "飽漢不知餓漢饑"
+  },
+  {
+    "startDate": "20141001",
+    "title": "國慶日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "50 Stanley Street\n\nCentral\n,\n香港",
+    "notes": "饱汉不知饿汉饥"
+  },
+  {
+    "startDate": "20140101",
+    "title": "元旦",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "彌敦道639號\n\n旺角\n,\n香港",
+    "notes": "飽暖思淫慾"
+  },
+  {
+    "startDate": "20140214",
+    "title": "情人節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "廣東道30號\n\n尖沙咀\n,\n香港",
+    "notes": "饱暖思淫欲"
+  },
+  {
+    "startDate": "20140504",
+    "title": "青年節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "皇后大道中11-19A號\n\n中環\n,\n香港",
+    "notes": "不打不成器"
+  },
+  {
+    "startDate": "20140617",
+    "title": "父親節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\nQuarry Bay\n,\n香港",
+    "notes": "不打不相識"
+  },
+  {
+    "startDate": "20140513",
+    "title": "母親節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "彌敦道555號\n\n旺角\n,\n香港",
+    "notes": "不打不相识"
+  },
+  {
+    "startDate": "20140522",
+    "title": "佛誕",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "8 Hart Ave\n\nTsim Sha Tsui\n,\n香港",
+    "notes": "不見棺材不掉淚"
+  },
+  {
+    "startDate": "20140402",
+    "title": "復活節星期一",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "雪廠街2號\n\n中環\n,\n香港",
+    "notes": "不见棺材不掉泪"
+  },
+  {
+    "startDate": "20140302",
+    "title": "元宵",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "金鐘道89號\n\n中環\n,\n香港",
+    "notes": "不經一事，不長一智"
+  },
+  {
+    "startDate": "20141017",
+    "title": "重陽節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "太古坊\n\nQuarry Bay\n,\n香港",
+    "notes": "不经一事，不长一智"
+  },
+  {
+    "startDate": "20140925",
+    "title": "中秋節翌日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\nWan Chai\n,\n香港",
+    "notes": "不入虎穴，焉得虎子"
+  },
+  {
+    "startDate": "20140331",
+    "title": "耶穌受難節翌日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\n中環\n,\n香港",
+    "notes": "不以成敗論英雄"
+  },
+  {
+    "startDate": "20140702",
+    "title": "香港特別行政區成立紀念日翌日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "干諾道西8號\n\n上環\n,\n香港",
+    "notes": "不以成败论英雄"
+  },
+  {
+    "startDate": "20140924",
+    "title": "中秋節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "雲咸街60號\n\n中環\n,\n香港",
+    "notes": "不怕慢，只怕站"
+  },
+  {
+    "startDate": "20140618",
+    "title": "端午節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "上海街287號\n\n油麻地\n,\n香港",
+    "notes": "不塞不流，不止不行"
+  },
+  {
+    "startDate": "20140330",
+    "title": "耶穌受難節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "Suite10-11, 7/F, Shun Fat Industrial Building\n\n九龍灣\n,\n香港",
+    "notes": "不是一家人，不进一家门"
+  },
+  {
+    "startDate": "20140216",
+    "title": "農曆年初一",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "成運路1-7號\n\n大圍\n,\n香港",
+    "notes": "不是一家人，不進一家門"
+  },
+  {
+    "startDate": "20140218",
+    "title": "農曆年初三",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "彌敦道566號\n\n旺角\n,\n香港",
+    "notes": "不是冤家不聚头"
+  },
+  {
+    "startDate": "20140405",
+    "title": "清明節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\nMong Kok\n,\n香港",
+    "notes": "不是冤家不聚頭"
+  },
+  {
+    "startDate": "20140512",
+    "title": "佛誕",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\n石塘咀\n,\n香港",
+    "notes": "不听老人言，吃亏在眼前"
+  },
+  {
+    "startDate": "20140914",
+    "title": "中秋節翌日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "葵昌路18-24號\n\n葵涌\n,\n香港",
+    "notes": "不聽老人言，吃虧在眼前"
+  },
+  {
+    "startDate": "20140607",
+    "title": "端午節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "沙咀道26-38號\n\n荃灣\n,\n香港",
+    "notes": "不患寡而患不均"
+  },
+  {
+    "startDate": "20140422",
+    "title": "復活節星期一",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "六合街23號\n\n新蒲崗\n,\n香港",
+    "notes": "不知者不罪"
+  },
+  {
+    "startDate": "20140419",
+    "title": "耶穌受難節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "長沙灣道242號\n\n元洲\n,\n香港",
+    "notes": "不知者无罪"
+  },
+  {
+    "startDate": "20140205",
+    "title": "農曆年初一",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\nMong Kok\n,\n香港",
+    "notes": "不知者無罪"
+  },
+  {
+    "startDate": "20140207",
+    "title": "農曆年初三",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\n九龍灣\n,\n香港",
+    "notes": "不自由毋宁死"
+  },
+  {
+    "startDate": "20140405",
+    "title": "清明節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "成運路21號\n\n大圍\n,\n香港",
+    "notes": "不自由毋寧死"
+  },
+  {
+    "startDate": "20131002",
+    "title": "中秋節翌日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\n北角\n,\n香港",
+    "notes": "不在其位，不謀其政"
+  },
+  {
+    "startDate": "20131026",
+    "title": "重陽節翌日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "Wing Hing St\n\nNorth Point\n,\n香港",
+    "notes": "不在其位，不谋其政"
+  },
+  {
+    "startDate": "20130625",
+    "title": "端午節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\n葵涌\n,\n香港",
+    "notes": "病从口入，祸从口出"
+  },
+  {
+    "startDate": "20130410",
+    "title": "耶穌受難節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "梨木道32-50號金運工業大廈\n\n葵涌\n,\n香港",
+    "notes": "病從口入，禍從口出"
+  },
+  {
+    "startDate": "20130208",
+    "title": "元宵",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\n沙田火炭\n,\n香港",
+    "notes": "病急乱投医"
+  },
+  {
+    "startDate": "20130125",
+    "title": "農曆年初一",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "中間道5-6號\n\n尖沙咀\n,\n香港",
+    "notes": "病急亂投醫"
+  },
+  {
+    "startDate": "20130126",
+    "title": "農曆年初二",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "59 Des Vouex Road, Central, Central\n\n,\n香港",
+    "notes": "病來如山倒，病去如抽絲"
+  },
+  {
+    "startDate": "20130404",
+    "title": "清明節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\n牛頭角\n,\n香港",
+    "notes": "病来如山倒，病去如抽丝"
+  },
+  {
+    "startDate": "20130127",
+    "title": "農曆年初三",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "青山道170號\n\n李鄭屋\n,\n香港",
+    "notes": "冰冻三尺，非一日之寒"
+  },
+  {
+    "startDate": "20140217",
+    "title": "農曆年初二",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "廣東道30號\n\n尖沙咀\n,\n香港",
+    "notes": "冰凍三尺，非一日之寒"
+  },
+  {
+    "startDate": "20141007",
+    "title": "重陽節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "告士打道80號\n\n灣仔\n,\n香港",
+    "notes": "兵來將擋，水來土掩"
+  },
+  {
+    "startDate": "20131025",
+    "title": "重陽節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "耀華街4號\n\n銅鑼灣\n,\n香港",
+    "notes": "兵来将挡，水来土掩"
+  },
+  {
+    "startDate": "20140913",
+    "title": "中秋節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "漆咸道南79號\n\n尖沙咀\n,\n香港",
+    "notes": "伴君如伴虎"
+  },
+  {
+    "startDate": "20140219",
+    "title": "農曆年初四",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "彌敦道625號\n\n旺角\n,\n香港",
+    "notes": "沉默是金"
+  },
+  {
+    "startDate": "20140420",
+    "title": "耶穌受難節翌日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "長沙灣道932號\n\n長沙灣\n,\n香港",
+    "notes": "春江水暖鴨先知"
+  },
+  {
+    "startDate": "20140219",
+    "title": "元宵",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "屈臣道4-6號\n\n北角\n,\n香港",
+    "notes": "春江水暖鸭先知"
+  },
+  {
+    "startDate": "20140206",
+    "title": "農曆年初二",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "海濱花園怡樂徑\n\n海濱花園\n,\n香港",
+    "notes": "青出于蓝"
+  },
+  {
+    "startDate": "20130430",
+    "title": "佛誕",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "華星街16號\n\n葵涌\n,\n香港",
+    "notes": "青出於藍"
+  },
+  {
+    "startDate": "20130413",
+    "title": "復活節星期一",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "干諾道西3號\n\n上環\n,\n香港",
+    "notes": "青出于蓝，而胜于蓝"
+  },
+  {
+    "startDate": "20130411",
+    "title": "耶穌受難節翌日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "老龍坑街2號\n\n紅磡\n,\n香港",
+    "notes": "青出於藍，而勝於藍"
+  },
+  {
+    "startDate": "20131001",
+    "title": "中秋節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "巧明街95號\n\n觀塘\n,\n香港",
+    "notes": "情人眼裏出西施"
+  },
+  {
+    "startDate": "20130128",
+    "title": "農曆年初四",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "英皇道663號\n\n七姊妹\n,\n香港",
+    "notes": "情人眼裡出西施"
+  },
+  {
+    "startDate": "20140401",
+    "title": "復活節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\n上環\n,\n香港",
+    "notes": "情人眼里出西施"
+  },
+  {
+    "startDate": "20140513",
+    "title": "佛誕翌日",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "\n\nAdmiralty\n,\n香港",
+    "notes": "初生之犊不畏虎"
+  },
+  {
+    "startDate": "20140421",
+    "title": "復活節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "畢街5號\n\n上環\n,\n香港",
+    "notes": "初生之犢不畏虎"
+  },
+  {
+    "startDate": "20130412",
+    "title": "復活節",
+    "calendar": "Int_zh_HK 香港節日",
+    "allDay": false,
+    "address": "駱克道212號\n\n灣仔\n,\n香港",
+    "notes": "長痛不如短痛"
+  }
+]

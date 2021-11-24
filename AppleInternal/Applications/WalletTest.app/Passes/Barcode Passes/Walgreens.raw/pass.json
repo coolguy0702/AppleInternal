@@ -1,0 +1,34 @@
+{
+    "description" : "Walgreens Pass",
+    "formatVersion" : 1,
+    "associatedStoreIdentifiers": [
+                                   335364882
+                                   ],
+    "teamIdentifier" : "K9942Z534D",
+    "foregroundColor" : "rgb(255, 255, 255)",
+    "labelColor" : "rgb(183, 215, 237)",
+    "serialNumber" : "BT89F02P4GGY12",
+    "backgroundColor" : "rgb(76, 157, 210)",
+    "storeCard" : {
+        "headerFields": [
+                         {
+                "key": "header-field-1",
+                "label": "Total Points",
+                "value": "2,600"
+            }
+        ]
+    },
+    "barcode" : {
+        "message" : "123456789",
+        "format" : "PKBarcodeFormatPDF417",
+        "messageEncoding" : "iso-8859-1"
+    },
+    "nfc" : {
+        "message" : "4D3D3D3",
+        "encryptionPublicKey" : "MDkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDIgACigjq+QYC17m3i9uO8uKc8mLpaS1UJOEaCFvMedkXsuA=",
+        "requiresAuthentication": true
+    },
+    "passTypeIdentifier" : "pass.com.apple.test1",
+    "groupingIdentifier" : "walgreens",
+    "organizationName" : "Walgreens"
+}

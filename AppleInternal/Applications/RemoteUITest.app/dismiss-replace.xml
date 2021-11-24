@@ -1,0 +1,9 @@
+<xmlui action="dismiss">
+    <page>
+        <navigationBar title="Sample XML UI"/>
+        <tableView>
+            <section footer="Response with action='dismiss' + replacement page.">
+            </section>
+        </tableView>
+    </page>
+</xmlui>

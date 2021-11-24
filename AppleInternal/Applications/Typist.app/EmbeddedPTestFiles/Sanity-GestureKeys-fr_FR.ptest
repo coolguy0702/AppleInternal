@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>Sanity-GestureKeys-fr_FR</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>fr_FR@sw=AZERTY-French;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Bonjour ↓7↓8↓9↓:↓!↓;↓"↓#↓=↓$↓?↓@↓'↓(↓)↓*↓+↓-↓/↓0↓1↓2↓3↓4↓5↓6↓£↓\↓º↓^↓ª↓°</string>
+                        <key>expectedText</key>
+                        <string>Bonjour 789:!;"#=$?@'()*+-/0123456£\º^ª°</string>
+                        <key>testCaseID</key>
+                        <string>10000002</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>

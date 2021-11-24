@@ -1,0 +1,10 @@
+<xmlui action="push">
+    <page>
+        <navigationBar title="Simple Push"/>
+        <tableView>
+            <section>
+                <footer>This page uses a "push" action to add itself to the navigation stack in response to a link load.</footer>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "430cedde-d83b-40e0-bef2-3e9b742d6975",
+      "type": "Feature",
+      "feature_type": "address",
+      "geometry": null,
+      "properties": {
+        "address": "505, N Mathilda Avenue ",
+        "unit": null,
+        "locality": "Sunnyvale",
+        "province": "US-CA",
+        "country": "US",
+        "postal_code": "94085",
+        "postal_code_ext": null,
+        "postal_code_vanity": null
+      }
+    }
+  ]
+}

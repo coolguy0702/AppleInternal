@@ -1,0 +1,6 @@
+<xmlui>
+    <alert title="Title" message="Message: Tapping 'Load URL' will load and push a new xmlui document onto the stack.">
+        <cancelButton>Cancel</cancelButton>
+        <button url="simplepush.xml">Load URL</button>
+    </alert>
+</xmlui>

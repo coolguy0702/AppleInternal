@@ -1,0 +1,11 @@
+<xmlui action="push">
+    <page>
+        <navigationBar title="Pop samples"/>
+        <tableView>
+            <section>
+                <linkRow label="Pop - Simple" url="pop-simple.xml"/>
+                <linkRow label="Pop + Replace Previous" url="pop-replacement.xml"/>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

@@ -1,0 +1,28 @@
+{
+  "name": "Chevron",
+  "category": "transport",
+  "rewardsType": "applePay",
+  "source": "contactless",
+  "city": "Cupertino",
+  "state": "CA",
+  "merchant": {
+    "category": "transport",
+    "detailedCategory": "auto.servicestations.gasstations",
+    "heroImageURL": "https://s3-media3.fl.yelpcdn.com/bphoto/ocrS3xTiwLw0K9rBxgINmw/o.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 5052521753504112381,
+    "locationLatitude": 37.3381118800592,
+    "locationLongitude": -122.0318305492401,
+    "name": "Chevron",
+    "phoneNumber": "+1 (408) 773-9135",
+    "url": "https://www.chevronwithtechron.com"
+  },
+  "brand": {
+    "category": "transport",
+    "detailedCategory": "auto.servicestations.gasstations",
+    "identifier": 8388699129838932645,
+    "logoURL": "http://is5.mzstatic.com/image/thumb/mkwRWC6j4lvL-OtJ2SficQ/258x258.png",
+    "name": "Chevron",
+    "url": "https://www.chevronwithtechron.com"
+  }
+}

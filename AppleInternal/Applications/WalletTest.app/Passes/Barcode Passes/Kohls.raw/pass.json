@@ -1,0 +1,41 @@
+{
+    "formatVersion": 1,
+    "associatedStoreIdentifiers": [
+                                   472014516
+                                   ],
+    "passTypeIdentifier": "pass.com.apple.test1",
+    "groupingIdentifier" : "kohls",
+    "serialNumber": "WNATM1234",
+    "teamIdentifier": "K9942Z534D",
+    "organizationName": "Kohls",
+	"description": "Kohls",
+    "longDescription" : "Kohls",
+    "backgroundColor": "rgb(255,255,255)",
+    "foregroundColor": "rgb(0, 0, 0)",
+    "labelColor": "rgb(85, 85, 85)",
+    "storeCard": {
+        "headerFields": [
+            {
+                "key": "header-field-1",
+                "label": "Points",
+                "value": "1527"
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key": "secondary-field-1",
+                "label": "Name",
+                "value": "John Appleseed"
+            }
+        ]
+    },
+    "barcode" : {
+        "message" : "78694578456",
+        "format" : "PKBarcodeFormatPDF417",
+        "messageEncoding" : "iso-8859-1"
+    },
+    "nfc" : {
+        "message" : "78694578456",
+        "encryptionPublicKey" : "MDkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDIgACigjq+QYC17m3i9uO8uKc8mLpaS1UJOEaCFvMedkXsuA="
+    }
+}

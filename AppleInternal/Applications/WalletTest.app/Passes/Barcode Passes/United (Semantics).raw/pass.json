@@ -1,0 +1,180 @@
+{
+  "boardingPass": {
+    "transitType": "PKTransitTypeAir",
+    "auxiliaryFields": [
+      {
+        "label": "BOARDS",
+        "key": "boardingTime",
+        "value": "5:25 AM",
+        "semantics": {
+          "originalBoardingDate": "2017-11-07T05:25:00-05:00"
+        }
+      },
+      {
+        "label": "FLIGHT",
+        "key": "flight",
+        "value": "UA 1698",
+        "semantics": {
+          "flightCode": "UA1698",
+          "flightNumber": 1698,
+          "airlineCode": "UA"
+        }
+      },
+      {
+        "label": "SEAT",
+        "key": "seat",
+        "value": "23A"
+      },
+      {
+        "label": "SEQ",
+        "key": "seq",
+        "value": "36",
+        "semantics": {
+          "boardingSequenceNumber": "36"
+        }
+      },
+      {
+        "label": "GROUP",
+        "key": "group",
+        "value": "3",
+        "semantics": {
+          "boardingGroup": "3"
+        }
+      }
+    ],
+    "secondaryFields": [
+      {
+        "label": "PASSENGER",
+        "key": "passenger",
+        "value": "CRAWFORD/JAREDANDREW",
+        "semantics": {
+          "passengerName": {
+            "givenName": "Jared",
+            "middleName": "Andrew",
+            "familyName": "Crawford"
+          }
+        }
+      }
+    ],
+    "backFields": [
+      {
+        "label": "CONFIRMATION",
+        "key": "confirmation",
+        "value": "OXF4LN",
+        "semantics": {
+          "confirmationNumber": "OXF4LN"
+        }
+      },
+      {
+        "label": "CABIN",
+        "key": "cabin",
+        "value": "UNITED ECONOMY (W)"
+      },
+      {
+        "label": "FLIGHT DATE",
+        "key": "flightDate",
+        "value": "MON., JUL 10, 2017"
+      },
+      {
+        "label": "DEPARTS",
+        "key": "departTime",
+        "value": "6:00 AM",
+        "semantics": {
+          "originalDepartureDate": "2017-11-07T06:00:00-05:00"
+        }
+      },
+      {
+        "label": "ARRIVES",
+        "key": "arriveTime",
+        "value": "8:39 AM",
+        "semantics": {
+          "originalArrivalDate": "2017-11-07T08:39:00-08:00"
+        }
+      },
+      {
+        "label": "ADDRESS",
+        "key": "address",
+        "value": "United Airlines, Inc.\nPO Box 66100\nChicago, IL 60666"
+      },
+      {
+        "label": "TERMS",
+        "key": "terms",
+        "value": "Refer to United's Contract of Carriage at united.com for more information on United's terms and conditions."
+      }
+    ],
+    "headerFields": [
+      {
+        "label": "GATE",
+        "key": "gate",
+        "value": "D20",
+        "semantics": {
+          "departureGate": "D20",
+          "departureTerminal": "D"
+        }
+      }
+    ],
+    "primaryFields": [
+      {
+        "label": "RALEIGH/DURHAM",
+        "key": "origin",
+        "value": "RDU",
+        "semantics": {
+          "departureAirportCode": "RDU",
+          "departureAirportName": "Raleigh–Durham International Airport",
+          "departureLocation": {
+            "latitude": 35.877778,
+            "longitude": -78.7875
+          },
+          "departureLocationDescription": "Releigh-Durham"
+        }
+      },
+      {
+        "label": "SAN FRANCISCO",
+        "key": "destination",
+        "value": "SFO",
+        "semantics": {
+          "destinationAirportCode": "SFO",
+          "destinationAirportName": "San Francisco International Airport",
+          "destinationLocation": {
+            "latitude": 37.618889,
+            "longitude": -122.375
+          },
+          "destinationLocationDescription": "San Francisco"
+        }
+      }
+    ]
+  },
+  "authenticationToken": "12345678901234567890123456789012",
+  "webServiceURL": "https://webservices.continental.com/passbookservice/passbookservice.svc/",
+  "passTypeIdentifier": "pass.united.UnitedMobileBoardingPass",
+  "formatVersion": 1,
+  "serialNumber": "OXF4LN-RDU07/10/17-CRAWFORD/JAREDANDREW-UA1698",
+  "description": "United Airlines Boarding Pass",
+  "teamIdentifier": "K69MGG379R",
+  "organizationName": "United Airlines",
+  "foregroundColor": "rgb(255, 255, 255)",
+  "backgroundColor": "rgb(0, 49, 159)",
+  "labelColor": "rgb(255, 255, 153)",
+  "relevantDate": "2017-11-07T12:00:00-08:00",
+  "associatedStoreIdentifiers": [
+    449945214
+  ],
+  "barcode": {
+    "format": "PKBarcodeFormatAztec",
+    "message": "THIS IS NOT A REAL BARCODE",
+    "messageEncoding": "iso-8859-1"
+  },
+  "isTSAPreCheck": true,
+  "modID": "0",
+  "semantics": {
+    "securityScreening": "TSA PreCheck",
+    "seats": [
+      {
+        "seatType": "United Economy",
+        "seatRow": "23",
+        "seatNumber": "A",
+        "seatIdentifier": "23A"
+      }
+    ]
+  }
+}

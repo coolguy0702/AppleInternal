@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>tool_iOS</key>
+	<string>/usr/local/bin/StreamPerf</string>
+	<key>tool_macOS</key>
+	<string>/AppleInternal/CoreServices/CFNetwork/StreamPerf</string>
+	<key>tool_arguments</key> <!-- arguments to pass to tool, order matters -->
+	<array>
+		<string>--suite</string>
+		<string>NSURLSession</string>
+		<string>--interface</string>
+		<string>en0</string>
+		<string>--doSomething</string>
+		<string>--wide</string>
+		<string>1</string>
+	</array>
+	<key>server</key>
+	<string>http://192.168.2.1/bytes-requested</string>
+	<key>continuous</key>
+	<true/>
+	<key>flavor</key>
+	<string>vanilla</string>
+	<key>data_series</key>
+	<array>
+		<string>0,1000</string> <!-- time to spawn at (in seconds), payload (in MB), sorted by time -->
+		<string>0,1000</string>
+		<string>0,1000</string>
+		<string>15,1000</string>
+		<string>15,1000</string>
+		<string>15,1000</string>
+		<string>30,1000</string>
+		<string>30,1000</string>
+		<string>30,1000</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,31 @@
+<xmlui>
+    <page>
+        <navigationBar title="RemoteUI tester" loadingTitle="Loading...">
+            <buttonBarItem position="right" label="Go" name="go"/>
+        </navigationBar>
+        <tableView>
+            <section footer="Enter a URL to load">
+                <editableTextRow placeholder="URL" id="url" keyboardType="url"/>
+                <editableTextRow placeholder="User-Agent" id="user-agent"/>
+            </section>
+            <section footer="Or view the built-in samples">
+                <linkRow label="Samples" url="/BuddyMLSample.xml" accessory="disclosure"/>
+            </section>
+            <section footer="Additional options">
+                <switchRow id="modal" label="Modal" value="false"/>
+                <switchRow id="sheetPresentation" label="Card/Sheet" value="false"/>
+            </section>
+            <section>
+                <linkRow label="Test Cases" url="/TestCases.xml" accessory="disclosure"/>
+            </section>
+            <section>
+                <header>Style</header>
+                <!-- Test purposes, handled by Test App client code -->
+                <buttonRow label="Default" name="setDefaultStyle"/>
+                <buttonRow label="Buddy" name="setBuddyStyle"/>
+                <buttonRow label="Apple TV" name="setFrontRowStyle"/>
+                <footer>Applies to samples and loaded BuddyML</footer>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

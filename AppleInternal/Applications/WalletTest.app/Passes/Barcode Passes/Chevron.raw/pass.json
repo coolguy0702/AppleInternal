@@ -1,0 +1,41 @@
+{
+    "formatVersion": 1,
+    "passTypeIdentifier": "pass.com.apple.test1",
+    "serialNumber": "875798978346",
+    "teamIdentifier": "K9942Z534D",
+    "groupingIdentifier" : "chevron",
+    "organizationName": "Chevron",
+	"description": "Chevron",
+    "longDescription" : "Chevron Gas Card",
+    "backgroundColor": "rgb(255, 255, 255)",
+    "foregroundColor": "rgb(0, 86, 162)",
+    "storeCard": {
+        "secondaryFields": [
+            {
+                "key": "secondary-field-1",
+                "label": "Driver",
+                "value": "John Appleseed"
+            },
+            {
+                "key": "secondary-field-2",
+                "label": "Discount",
+                "value": "¢20/gallon"
+            }
+        ],
+    },
+    "nfc" : {
+        "message" : "QWE839210",
+        "encryptionPublicKey" : "MDkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDIgACigjq+QYC17m3i9uO8uKc8mLpaS1UJOEaCFvMedkXsuA=",
+        "requiresAuthentication" : true
+    },
+  "locations" : [
+    {
+      "longitude" : -122.3748889,
+      "latitude" : 37.6189722
+    },
+    {
+      "longitude" : -122.03118,
+      "latitude" : 37.33182
+    }
+  ]
+}

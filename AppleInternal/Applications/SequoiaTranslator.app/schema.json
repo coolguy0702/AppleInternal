@@ -1,0 +1,47 @@
+[{
+  "url": "https://www.kiwi.com/en/content/manage/32336062/902f7a08-3ae0-447f-9df3-fb84ffeae524?utm_campaign=gmail_schema&utm_medium=email&utm_content=en",
+  "@type": "http://schema.org/FlightReservation",
+  "@context": "http://schema.org",
+  "underName": {
+    "name": "Agni PiaseckaBester",
+    "@type": "http://schema.org/Person",
+    "email": "doug.cutting22@icloud.com"
+  },
+  "bookingTime": "2019-02-05T00:00:00",
+  "bookingAgent": {
+    "url": "https://www.kiwi.com",
+    "name": "Kiwi.com",
+    "@type": "http://schema.org/Organization"
+  },
+  "reservationId": "FUHUNS",
+  "reservationFor": {
+    "@type": "http://schema.org/Flight",
+    "airline": {
+      "name": "Ryanair",
+      "@type": "http://schema.org/Airline",
+      "iataCode": "FR"
+    },
+    "arrivalTime": "2019-04-16T19:40:00",
+    "flightNumber": "FR843",
+    "departureTime": "2019-04-16T18:10:00",
+    "arrivalAirport": {
+      "name": "Berlin",
+      "@type": "http://schema.org/Airport",
+      "iataCode": "TXL"
+    },
+    "departureAirport": {
+      "name": "County Kerry",
+      "@type": "http://schema.org/Airport",
+      "iataCode": "KIR"
+    }
+  },
+  "reservedTicket": {
+    "@type": "http://schema.org/Ticket",
+    "ticketNumber": "FR843"
+  },
+  "potentialAction": {
+    "name": "Download Boarding passes",
+    "@type": "http://schema.org/ViewAction"
+  },
+  "reservationStatus": "http://schema.org/ReservationConfirmed"
+}]

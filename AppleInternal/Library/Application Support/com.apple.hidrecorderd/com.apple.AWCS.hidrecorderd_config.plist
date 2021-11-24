@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Devices</key>
+	<dict>
+		<key>AWCS</key>
+		<dict>
+			<key>Device State</key>
+			<array>
+				<integer>187</integer>
+				<integer>115</integer>
+				<integer>224</integer>
+				<integer>10</integer>
+				<integer>178</integer>
+				<integer>146</integer>
+			</array>
+			<key>Matching Criteria</key>
+			<dict>
+				<key>DeviceUsagePairs</key>
+				<array>
+					<dict>
+						<key>DeviceUsagePage</key>
+						<integer>132</integer>
+						<key>DeviceUsage</key>
+						<integer>20</integer>
+					</dict>
+					<dict>
+						<key>DeviceUsagePage</key>
+						<integer>65280</integer>
+						<key>DeviceUsage</key>
+						<integer>54</integer>
+					</dict>
+				</array>
+				<key>Transport</key>
+				<string>SPU</string>
+			</dict>
+			<key>enable</key>
+			<true/>
+			<key>name</key>
+			<string>awcs</string>
+			<key>recordingDuration</key>
+			<integer>10000</integer>
+			<key>type</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

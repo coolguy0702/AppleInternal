@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>TypeAndVerify-GestureKeys-en_US</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Kana@sw=Kana;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <true/>
+                        <key>flickTyping</key>
+                        <true/>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                        <key>typeInterval</key>
+                        <real>0.12</real>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんがぎぐげごさじずぜぞだぢづでどばびぶべぼぱぴぷぺぽぁぃぅぇぉっ1234567890、。？！()「」#%$＊=-+/abcdefghijklmnopqrstuvwxyz.,</string>
+                        <key>expectedText</key>
+                        <string>あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんがぎぐげごさじずぜぞだぢづでどばびぶべぼぱぴぷぺぽぁぃぅぇぉっ1234567890、。？！()「」#%$＊=-+/abcdefghijklmnopqrstuvwxyz.,</string>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin10-Simplified;hw=Automatic</string>
+                        <key>keystrokesText</key>
+                        <string>womenxihuanzidonghua，taihaole。18601916096，xiexie。</string>
+                        <key>expectedText</key>
+                        <string>我们喜欢自动化，太好了。18601916096，谢谢。</string>
+                        <key>testCaseID</key>
+                        <string>10000002</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keyboardID</key>
+                        <string>zh_Hant-Pinyin@sw=Pinyin10-Traditional;hw=Automatic</string>
+                        <key>keystrokesText</key>
+                        <string>womenxihuanzidonghua，taihaole。18601916096，xiexie。</string>
+                        <key>expectedText</key>
+                        <string>我們喜歡自動化，太好了。18601916096，謝謝。</string>
+                        <key>testCaseID</key>
+                        <string>10000003</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Wubihua@sw=Wubihua-Simplified;hw=Automatic</string>
+                        <key>keystrokesText</key>
+                        <string>⼁乛⼀⼁。</string>
+                        <key>expectedText</key>
+                        <string>中。</string>
+                        <key>testCaseID</key>
+                        <string>10000004</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keyboardID</key>
+                        <string>zh_Hant-Wubihua@sw=Wubihua-Traditional;hw=Automatic</string>
+                        <key>keystrokesText</key>
+                        <string>⼁乛⼀⼀⼃乛⼀⼀。</string>
+                        <key>expectedText</key>
+                        <string>明。</string>
+                        <key>testCaseID</key>
+                        <string>10000005</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keyboardID</key>
+                        <string>ko_KR@sw=Korean;hw=Automatic</string>
+                        <key>keystrokesText</key>
+                        <string>연리 6천600%에 달하는 고리로 돈을 빌려주고 제때 빚을 갚지 못하는 채무자를 끈질기게 괴롭힌 조직폭력배 등 16명이 경찰에 붙잡혔다.</string>
+                        <key>expectedText</key>
+                        <string>연리 6천600%에 달하는 고리로 돈을 빌려주고 제때 빚을 갚지 못하는 채무자를 끈질기게 괴롭힌 조직폭력배 등 16명이 경찰에 붙잡혔다.</string>
+                        <key>testCaseID</key>
+                        <string>10000006</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+
+            </array>
+        </dict>
+    </array>
+</plist>

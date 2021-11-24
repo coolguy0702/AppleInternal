@@ -1,0 +1,908 @@
+Return-path: <groupmailer@group.apple.com>
+Received: from ma1-postinop-sz02.apple.com ([17.171.128.212])
+ by mail5.euro.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.0 64bit (built Oct 28 2016))
+ with ESMTPS id <0OJX00PPHFUHA8A0@mail5.euro.apple.com>; Tue,
+ 17 Jan 2017 13:51:58 +0000 (GMT)
+Received: from relay24.apple.com ([17.171.128.105])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTPS id <0OJX00ANFFTRJA30@postino.apple.com>; Tue,
+ 17 Jan 2017 05:51:53 -0800 (PST)
+Received: from ma1-postinop-sz05.apple.com
+ (ma1-postinop-sz05.apple.com [17.171.128.19])
+	(using TLS with cipher DHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(Client did not present a certificate)	by relay24.apple.com (Apple SCV relay)
+ with SMTP id F5.FD.02808.2612E785; Tue, 17 Jan 2017 08:51:38 -0500 (EST)
+Received: from group.apple.com ([17.171.128.19])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OJX0048KFTSKJ60@postino.apple.com>; Tue,
+ 17 Jan 2017 05:51:28 -0800 (PST)
+Received: from ma1-postinop-sz08.apple.com ([17.171.128.177])
+ by postino.apple.com
+ (Oracle Communications Messaging Server 7.0.5.35.0 64bit (built Mar 31 2015))
+ with ESMTPS id <0OJX0045PFTHKJ60@postino.apple.com> for
+ bv-gt13@group.apple.com; Tue, 17 Jan 2017 05:51:17 -0800 (PST)
+Received: from relay23.apple.com ([17.171.128.104])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OJX006WGFT8GJ41@postino.apple.com> for
+ bv-gt13@group.apple.com; Tue, 17 Jan 2017 05:51:17 -0800 (PST)
+X-Va-ID: 9a0f801a-506a-484d-91f3-46ce926fadf3
+X-Va-CD: 0
+X-Va-R-CD: 7e98c052793b89f8ca1304bfef748a8a
+X-Va-E-CD: 7e98c052793b89f8ca1304bfef748a8a
+X-Va-T-CD: d65b0db0dfb0b8ade3248d0e4d28f628
+X-Va-A: -2.0
+X-V-ID: cbb517d4-9af0-4c7c-9c03-0fad00fab38a
+X-V-CD: 0
+X-V-R-CD: b997c2f4b0743aa74675dc58f6d5c503
+X-V-E-CD: 7e98c052793b89f8ca1304bfef748a8a
+X-V-T-CD: 83247fdca1dcb888b7ee22ba162826ef
+X-V-A:
+Received: from ma1-postinop-sz09.apple.com
+ (ma1-postinop-sz09.apple.com [17.171.128.178])
+	(using TLS with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)	by relay23.apple.com (Apple SCV relay)
+ with SMTP id BD.3B.16598.B412E785; Tue, 17 Jan 2017 08:51:08 -0500 (EST)
+MIME-version: 1.0
+Content-type: multipart/mixed; boundary="Boundary_(ID_1dXwQ7stT0FJKnLel2UqaA)"
+Received: from localhost.localdomain ([127.0.0.1])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OJX001XZFSWXOO0@postino.apple.com> for
+ bv-gt13@group.apple.com; Tue, 17 Jan 2017 05:51:07 -0800 (PST)
+X-V-ID: d4015bb8-76dd-47cb-b613-af3a3f5ae28b
+X-V-CD: 0
+X-V-R-CD: b997c2f4b0743aa74675dc58f6d5c503
+X-V-E-CD: 7e98c052793b89f8ca1304bfef748a8a
+X-V-T-CD: 83247fdca1dcb888b7ee22ba162826ef
+X-V-A:
+Received: from mail-in7.apple.com ([17.151.62.22])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTPS id <0OJX0040UFSMQB70@postino.apple.com> for
+ bv-gt13@group.apple.com; Tue, 17 Jan 2017 05:50:56 -0800 (PST)
+X-Va-ID: 0c22a44a-4a38-4f1b-bbb8-87128c8eb305
+X-Va-CD: 0
+X-Va-R-CD: e550e13ed7d1e571dd9f528e6c1151f6
+X-Va-E-CD: 7e98c052793b89f8ca1304bfef748a8a
+X-Va-T-CD: d65b0db0dfb0b8ade3248d0e4d28f628
+X-Va-A: -2.0
+X-V-ID: 6f559841-42e7-4bc1-a5ae-2a9fb8993471
+X-V-CD: 0
+X-V-R-CD: b997c2f4b0743aa74675dc58f6d5c503
+X-V-E-CD: 7e98c052793b89f8ca1304bfef748a8a
+X-V-T-CD: 83247fdca1dcb888b7ee22ba162826ef
+X-V-A:
+X-AuditID: 11ab8069-f57ff70000000af8-5c-587e2162f07d
+Received: from nwk-aaemail-lapp03.apple.com
+ (nwk-aaemail-lapp03.apple.com [17.151.62.68])
+	(using TLS with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client did not present a certificate)
+	by mail-in7.apple.com (Apple Secure Mail Relay)
+ with SMTP id 3E.21.05063.4312E785; Tue, 17 Jan 2017 05:50:44 -0800 (PST)
+Received: from pps.filterd (nwk-aaemail-lapp03.apple.com [127.0.0.1])
+	by nwk-aaemail-lapp03.apple.com (8.16.0.17/8.16.0.17)
+ with SMTP id v0HDl7ug035102	for <bv-gt13@group.apple.com>; Tue,
+ 17 Jan 2017 05:50:44 -0800
+Received: from relay.bestwestern.com (relay.bestwestern.com [206.201.173.94])
+	by nwk-aaemail-lapp03.apple.com with ESMTP id 27yhd7eqws-1
+	(version=TLSv1 cipher=AES128-SHA bits=128 verify=NOT)
+	for <bv-gt13@group.apple.com>; Tue, 17 Jan 2017 05:50:44 -0800
+Received: from hqgwsa411.bestwestern.com (172.28.53.209)
+ by BOCXCHA402.bwi.bestwestern.com (172.21.14.177) with Microsoft SMTP Server
+ id 14.3.224.2; Tue, 17 Jan 2017 06:50:25 -0700
+Date: $now_full_text$
+From: reserv@cs.bestwestern.com
+To: bv-gt13@group.apple.com
+Message-id:
+ <1221609693.40773.1484661025305.JavaMail.jboss@hqgwsa411.bestwestern.com>
+Subject: Reservation Confirmation - Best Western Hotels & Resorts
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,,
+ definitions=2017-01-17_08:,, signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ suspectscore=24 malwarescore=0 phishscore=0 adultscore=0 bulkscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1612050000
+ definitions=main-1701170189
+Authentication-results: symauth.service.identifier
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFtrCJsWRmVeSWpSXmKPExsUiuLpBWDdLsS7C4P8SPotd91YyWrw/t43Z
+	YtntfewWN7evZLbYdGcxq8X2V6oW66/tZbX4Ou88i8Xfaf1sFuc2fmOxONvlZfHv2SZmi21X
+	LzFa3H8CFPrU8IXRYvOZZiaLZf23GC2mdv9ntli9K9NB2GPryR9sAYxRajZF+aUlqQoZ+cUl
+	tkopRQVAOjMvXy+xoCAnVS85P9fKyFRJ3y5BLeNz63rGguNbmCr2T5/P1sB4uYuxi5GTQ0LA
+	RGLd+aXsXYxcHEIC25gkpt3/zAzhfGaU2HtzL1RmPpPEg+UrWCGcSUwSNz5NZYLo15W4uXsG
+	C4TNJbFg62lWCFtb4mLrOnYYe9Oce0ww9pYpl9i6GDmAbB6Jc/+1IMI6EnMXnGSDsDklzn+Z
+	CNWqJXFjKsxILYk9k6bB2fsX3YGqYZNYf2IJE8Rtm5gkdvxYDlbEKyAo8WPyPbDbmAX8JI5/
+	PsMCUTSRSWJPz1IWmM3nlvWwUm4zMFQeLHvJBguVx4v6sIZK65kdKKEygdF6FpJjZyE5FsJW
+	k1j4exEThK0t8eTdBdYFjCyrGAWLUnMSK41MEFG9iRGSBjN3MN66aXaIUYCDUYmHN0C0LkKI
+	NbGsuDL3EKMEB7OSCO9+OaAQb0piZVVqUX58UWlOavEhxmQOFoGJzFKiyfnAFJ1XEm9oYmJk
+	amJkbG5oYGpBmrCSOO8cyZwIIYH0xJLU7NTUgtQimC1MHJxSDYzyMzXvb081W7eAw0BsDlvj
+	Qgcri5pjl+7d+nAnmseYS9tbVLLj9n23W8Jcu/mtg5yn8ucazdi3MULv9oR/d7s4PTTOPP3t
+	v71D+PvNm917jrJ6bzPuXvNEulXvWqO4X8rF+FM2re4u/RxzLitMEl0rvqlC6X0X3w9Rg8Oh
+	ZQr/FgWtyvQWf6LEUpyRaKjFXFScCACA9U3QxwMAAA==
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFvrOIsWRmVeSWpSXmKPExsUiuLphk66PYl2EwZ47whanWq6xOjB6/Jl/
+	lCWAMYrLJiU1J7MstUjfLoEr43PresaC41uYKvZPn8/WwHi5i7GLkZNDQsBEYvrLRWxdjFwc
+	QgIbmCQOLWxhBUnwCghK/Jh8jwXEZhbwkzj++QwLRNFEJok9PUtZILp1JM4t62GFsDklzn+Z
+	yA5ha0ncmHqaFcbeM2kanL1/0R2oGjaJ9SeWMEEMncQk8WDZSzaIhK7E40V9UAu4JBZshRmk
+	LdF6Zgc7jL1pzj0mGHvLlEtAvRxANo/Euf9aEKaOxMMD/JQ5DRJAD27eYAaxhQSOMUls2WMK
+	cfIdRol17Zug7m9mklh54CQzhLODUWLu1Xng8GURUJW4+PEV2Ao2AXmJrpM3wcaKCEhLHL2y
+	nnUCo/ospNCehRTaELaaxMLfi5ggbG2JJ+8usC5gZFnFKFiUmpNYaWSsl1hQkJOql5yfu4kR
+	khwydjBev2l2iFGAg1GJh3eFeF2EEGtiWXFl7iFGCQ5mJRHe/XJAId6UxMqq1KL8+KLSnNTi
+	Q4zSHCxK4rxzJXMihATSE0tSs1NTC1KLYLJMHJxSDYzGeb/4ba63TFeIjOZ0vplbYPP/r8vK
+	5cnXrmdbOS82XeyYezBggl9VWeGbRovybwzrHno/PSBwTchtWXdf9Ofkc3eFL9wxWdwbr9j+
+	RqH+g0bi7W2n9imIH+TzqVrq9+5DGrP5FY8tBj/ZNxU/vbf9+O2nhTGpIT05MhYv12Vef7RA
+	8Bf/711KLMUZiYZazEXFiQBRx/yrCgMAAA==
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA11TfUwTdxjmdy3ttfSHx/H10gmOLhrjBw5iMlwWNzcW/Wu6jC3ELUCRG3T0
+	K71W+VBkKChlGzrGdHwpDpwYtxCVBEYYo7BZIILVzaEDVD6c6dRkcTAY7OOu15ar/1zee5/f
+	73me97n3SAk9GqImmXwrYzFq9RqZUhp2YmvKxs3xxWnP3ziWmDx4+GbwK2jH0qkfpLvQbuVL
+	2Yxet5exbNqaqcw9/VkLYR6+TOS3VzllJWjMjuxIQQK1Ge7eGpXYkZKkKQcBdfPtSHi5jaBk
+	+mfvyyECWr8f8B7rQPBhzZycvy+lVoPrD3cwX8uoeCiba/LUEVQs9D566NHA1Nsw+KCP4Otw
+	ahs0dx+XC/0wGPhiWsrXEioV/vmojhA85cHI8W+kvBhQCwiqGks8RIhKgq5hd/AxtKJWdL9W
+	dF+o10JZfYNcqNfD2abfJaeR9DyiDVqdfqPO+EKC1mzWMwl7TIaLSAgxqgPdO/+iA1Ek0qjw
+	uejiNDpYu5ctMDjQEUQSGjVetaEojQ7PMmUX5GrZ3AzWlmXQsazOZNRE4qNTB9LoUD9msekZ
+	VhOBq2mOBvvbWTZ9Hkc0u6pYTGRk9rF6xsp9Uk0c7rrGEUWLRFizbo/OZGMzbBa9AwEp4Wh7
+	4njabG1BIWMxCWIO9Awp1URjNM7dp3K0ViaPYcyMxYcSpNyBPkckqYnFKCgoiI6yMDlM/vs6
+	PacrngVwK28vTAwL40TjGT4VSox4JorFhnRONYBRNFQ8TrzOwepAwcC5CFLBP5QOVIpIlSZG
+	8EizZq2B1eWI/UXgKt4f9kGCt3CsjuK6Kl/X4ysGG/mjfhaRp1g8yQcdtSwg9jOIvkRk642/
+	xhAtNZqMjHolPuDijkfyx3NtxsDI1NG4kdehRKjHlToKl87sT6NXiADeGEd3JbMwkG7Zm/pZ
+	fKmC27SYADGxPf63Hx74Ov06ilWHC0mpuE9t0Fm9aXhxN2ohuG0GHMdvbpjOaH0qy3DcxxtX
+	eRHhMo0P8s0Qb9OTJAhJ+ihEQa7E03yQkX5ysdGkFsT9ss3rwOkcR7BQN4mg8X4NAbM/nSVg
+	4dQFCTSe7JPA6N1bEvjufpkUnB1HpDBbfi0Ymj9ukMG5hhEZLD52y+Do5DE5dD4ZksOZ7k8V
+	UP1fvQL+bG9TQP34FQWMLc4q4PalvhDoqXaHQOXhUhU4RytVMF9+UQUPJqZU0LP4SAVLd05g
+	mGhzYSj91h4KNa4fQ2H+sSvUzW8dsbx1Vu3TSUXgX/gMsQ/ybZ2BXwuVr+vdOh3f9LMEbN0H
+	Ls/W+QXEaalLkPL151K7Upq/Gum+edJ0UHKooG8oqC2hV736XuUF52Dru0n9a+e2yF6Ln7i8
+	featjvXvDBe12FOL8qBisrOmyb5rza9Nv41k9ixlNyy6X61o6eksPvMk6+9tysI33kxe4+5N
+	z5jaubPik6HdG/Yn70jZ7uq/U6BMfflh7b6rmzLL+9/b8u9VjZTN1Sauk1hY7f/vls8mawYA	AA==
+X-Member-Count: 19
+Precedence: List
+Sender: bv-gt13@group.apple.com
+List-Id: <bv-gt13@group.apple.com>
+
+
+--Boundary_(ID_1dXwQ7stT0FJKnLel2UqaA)
+Content-type: text/html; charset=utf-8
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+
+<html>
+<head>
+=09<title>Best Western Reservation </title>
+=09<link rel=3D"shortcut icon" href=3D"../images/favicon.ico">
+=09<META HTTP-EQUIV=3D"pragma" CONTENT=3D"no-cache">
+=09<style type=3D"text/css">
+=09=09/* Reset Styles */
+
+=09=09html, body, div, span, object, iframe, hr,
+=09=09h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+=09=09abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+=09=09small, strong, sub, sup, var, i, dl, dt, dd, ol, ul, li,
+=09=09fieldset, form, label, legend,
+=09=09table, caption, tbody, tfoot, thead, tr, th, td,
+=09=09article, aside, canvas, details, figcaption, figure,
+=09=09footer, header, hgroup, menu, nav, section, summary,
+=09=09time, mark, audio, video {
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09=09border:0;
+=09=09=09font-size:100%;
+=09=09=09font:inherit;
+=09=09=09vertical-align:baseline;
+=09=09}
+
+=09=09article, aside, details, figcaption, figure,
+=09=09footer, header, hgroup, menu, nav, section {
+=09=09=09display:block;
+=09=09}
+
+=09=09table { border-collapse:collapse; border-spacing:0; }
+
+=09=09blockquote, q { quotes:none; }
+=09=09blockquote:before, blockquote:after, q:before, q:after { content:""; =
+content:none; }
+
+=09=09input, select { vertical-align:middle; }
+
+
+=09=09/**
+=09=09 * Font normalization inspired by YUI Library's fonts.css:developer.y=
+ahoo.com/yui/
+=09=09 */
+
+=09=09body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retain=
+ed to preserve specificity */
+=09=09select, input, textarea, button { font:99% sans-serif; }
+
+=09=09/* Normalize monospace sizing:
+=09=09   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletyp=
+e_style_fix_for_Chrome */
+=09=09pre, code, kbd, samp { font-family:monospace, sans-serif; }
+
+
+=09=09/* General base styles. */
+
+=09=09html { overflow-y:scroll; }
+=09=09a:hover, a:active { outline:none; }
+=09=09ol, ul { padding-left:1em; }
+=09=09ol.nav, ul.nav { padding-left:0; }
+=09=09nav ul, nav li { margin:0; list-style:none; list-style-image:none; }
+=09=09strong, th { font-weight:bold; }
+=09=09em { font-style:italic; }
+=09=09td { vertical-align:top; }
+=09=09sub, sup { font-size:75%; line-height:0; position:relative; }
+=09=09sup { top:-0.5em; }
+=09=09sub { bottom:-0.25em; }
+=09=09pre { white-space:pre; white-space:pre-wrap; word-wrap:break-word; pa=
+dding:15px; }
+=09=09textarea { overflow:auto; }
+=09=09q { font-style:italic; }
+
+=09=09input[type=3D"checkbox"] { vertical-align:bottom; }
+=09=09input[type=3D"radio"] { vertical-align:baseline; }
+
+=09=09a, label, input[type=3D"button"], input[type=3D"submit"], input[type=
+=3D"image"], button { cursor:pointer; }
+=09=09button, input, select, textarea { margin:0; }
+=09=09button {  width:auto; overflow:visible; }=09
+
+=09=09/* Global styles */
+
+=09=09@font-face {
+=09=09=09font-family:'AdelleBold';
+=09=09=09src:url('font/adelle_bold-webfont.eot');
+=09=09=09src:url('font/adelle_bold-webfont.eot?#iefix') format('embedded-op=
+entype'),
+=09=09=09=09url('font/adelle_bold-webfont.woff') format('woff'),
+=09=09=09=09url('font/adelle_bold-webfont.ttf') format('truetype'),
+=09=09=09=09url('font/adelle_bold-webfont.svg#AdelleBold') format('svg');
+=09=09=09font-weight:normal;
+=09=09=09font-style:normal;
+=09=09}
+
+=09=09body, select, input, textarea { color:#333; font-family:sans-serif; }
+=09=09body { background:#F0F3F6 url(/bestwestern/images/bg-body.jpg) repeat=
+-x 0 0 !important; }
+=09=09h1, h2, h3, h4, h5, h6 { color:#013E88; }
+=09=09a, a:active, a:visited { text-decoration:none; color:#1F6ECF; }
+=09=09a:hover { text-decoration:underline; }
+=09=09ul.nav li, ol.nav li { padding-left:0; list-style-type:none; }
+=09=09h2 strong, h3, #mainNav, .accountPage h2 { font-family:AdelleBold, se=
+rif; text-transform:uppercase; font-weight:normal; }
+=09=09a.button { display:inline-block; padding:0.5em 1.5em; border:solid 1p=
+x #FFF; text-transform:uppercase; font-size:0.85em; font-weight:bold; color=
+:#FFF; background:url(/bestwestern/images/bg-button-gradient.gif) repeat-x =
+0 center; text-align:center; }
+=09=09a.button:active, a.button:visited { color:#FFF; }
+=09=09a.button:hover { text-decoration:none; }
+=09=09
+=09=09.ir {
+=09=09=09background-repeat: no-repeat;
+=09=09=09direction: ltr;
+=09=09=09display: block;
+=09=09=09overflow: hidden;
+=09=09=09text-align: left;
+=09=09=09text-indent: -999em;
+=09=09}
+
+=09=09/* disabledButton styles srarts here*/=20
+=09=09.disabledButton{display:block; padding:0.5em 1.5em; border:1px solid =
+#DCE5EF; text-transform:uppercase; font-size:0.85em; font-weight:bold; colo=
+r:#FFF; background:#DCE5EF; text-align:center;}
+=09=09.disabledButton:active, .disabledButton:visited { color:#FFF; }
+=09=09.disabledButton:hover{cursor: default;text-decoration: none;}
+
+
+=09=09a.bigButton { padding:0.5em 2em; font-size:1em; }
+=09=09.dateField img { vertical-align:middle; margin-left:3px; cursor:point=
+er; }
+=09=09a.backLink:before { content:'\2039\00A0'; }
+=09=09a.forwardLink:after { content:'\00A0\203A'; }
+=09=09input.bwFieldDefaultValue { color:#999; }
+=09=09.tierPremier { background-color:#96885C; color:#FFF; }
+=09=09.tierPlus { background-color:#999795; color:#FFF; }
+=09=09.tierCore { background-color:#1C5394; color:#FFF; }
+=09=09.legal { font-size:0.85em; color:#999; font-style:italic; }
+=09=09a.closeButton, a.removeButton { display:inline-block; padding-right:1=
+5px; text-transform:uppercase; color:#666; font-size:0.9em; background:url(=
+/bestwestern/images/icon-close.gif) no-repeat right center; }
+=09=09a.factSheet, a.brochure, a.shareButton, a.bookmarkButton, a.printButt=
+on, a.mailButton, a.mapButton { display:inline-block; padding-left:25px; ma=
+rgin-bottom:0.5em; line-height:18px; background-repeat:no-repeat; backgroun=
+d-position:0 0; color:#002878; text-transform:uppercase; font-weight:bold; =
+font-size:0.85em; }
+=09=09a.closeButton:hover, a.removeButton:hover, a.printButton:hover, a.fac=
+tSheet:hover, a.brochure:hover, a.shareButton:hover, a.bookmarkButton:hover=
+, a.printButton:hover, a.mailButton:hover, a.mapButton:hover { text-decorat=
+ion:none; }
+=09=09
+=09=09#container{width:980px;margin:0 auto;margin-top:15px;background-color=
+:#fff;}=09=09
+=09=09#header{height:140px;width:980px;background-color:#fff;}=09=09
+=09=09#header span{background-color:#013E88;color:#fff;height:20px;display:=
+block;font-weight: normal;padding-left:200px;padding-top:5px;text-transform=
+: uppercase;margin-top:80px;}
+=09=09
+=09=09#main{height:200px;background-color:#fff;width:900px;margin:0 auto;}
+=09=09
+=09=09.reservation{width:900px;}
+=09=09.reservation h2, .reservation h3, .reservation h4 { font-family:sans-=
+serif; color:#333; text-transform:none; font-weight:bold; }
+=09=09.reservation h2 { font-size:1.5em; margin:0.5em 0;}
+=09=09.reservation h2 strong { display:block; color:#013E88; font-size:0.9e=
+m; line-height:2.5em; }
+=09=09.reservation h3 { font-size:1.25em; margin-bottom:1em; }
+=09=09.reservation p { line-height:1.25; }
+=09=09.hotelInfo h2{ font-size:1.5em; margin:0.5em 0;font-family:sans-serif=
+; color:#333; text-transform:none; font-weight:bold; }
+=09=09hr{margin:0;padding:0;border:1px solid #DCE5EF;}
+=09=09.pTop{padding-top:25px}
+=09=09table.bluebox td{padding:3px;}
+=09=09.resources{width:280px;}
+=09=09.resources a{font-weight:normal;float:right;}=20
+=09=09.resources img{margin-right:5px;}=20
+=09=09.rooms{padding:0px 0px 40px;}
+        #specialRequests{border:4px solid #DCE5EF;}
+=09=09#specialRequests h3{color: #333333; font-family: sans-serif; font-wei=
+ght: bold; text-transform: none; font-size: 1.25em; margin-bottom: 1em; mar=
+gin-left: 1em;margin-top: 1em;}
+        #specialRequests table{margin-bottom: 0.3em; margin-left: 1em;}
+        #specialRequests p{margin-bottom: 1em; margin-left: 1em;margin-top:=
+ 1em;}
+=09=09.roomDetailsinner{margin:10px;}
+=09=09.roomDetailsinner{margin:10px;}
+=09=09.roomDetailsinner h3{color: #333333; font-family: sans-serif; font-we=
+ight: bold; text-transform: none; font-size: 1.25em; margin-bottom: 1em;}
+=09=09.roomDetailsinner h4{padding:5px 10px; font-size:1em; background:#DCE=
+5EF; font-family:sans-serif; font-weight:bold; color:#333; text-transform:u=
+ppercase; }
+=09=09.roomDetail{padding:5px 5px; font-size:1em; background:#DCE5EF; font-=
+family:sans-serif; color:#333; }
+=09=09.roomDetailOther{padding:15px 5px; font-size:1em; background:#DCE5EF;=
+ font-family:sans-serif; color:#333; }
+=09=09.price{float:right;font-weight:normal; text-transform:none; }
+=09=09.roomDetailsinnerDescleft{padding:10px 0px 5px 10px;}
+=09=09.roomDetailsinnerDescright{width:330px;padding:10px 12px 5px 10px;tex=
+t-align:right;}
+=09=09.roomDetailsinnerDescleft p, .roomDetailsinnerDescright p{margin-bott=
+om: 1.25em; line-height: 1.25;font-size:12px;}
+=09=09.additionalItem{padding:5px 10px; font-size:1em; background:#DCE5EF; =
+font-family:sans-serif; color:#333; }
+=09=09.roomInfo ul{padding-left: 3em;}
+=09=09.offer { color:#1F6ECF; }
+=09=09.additionalitemscol{padding-right:8px;padding-left:20px;}
+=09=09.additionalitemscolleft{padding-right:8px;padding-left:0px;}
+=09=09.helpText {font-style:italic;}=09=09
+=09=09.textboxlook{padding-right:5px;color: #333333;font-family: sans-serif=
+;background-color:#efebe7;width:40px;border:1px solid #7b9ebd;display:inlin=
+e-block;text-align:left;padding:2px;font-weight:normal;}
+=09=09.included{border-bottom:1px dotted #013E88;padding-right:90px;text-al=
+ign:bottom;}
+=09=09.bluebottomborder { border-top:2px solid #DCE5EF;}
+=09=09.error {padding:0.5em 1em; border:solid 1px #DE2828; }
+=09=09.mlos {color:#990000; }
+=09=09.uppercase {text-transform:uppercase;}
+=09</style>
+</head>
+<body>
+       =20
+       =20
+   =20
+   =20
+   =20
+   =20
+           =20
+   =20
+        <table align=3D"center" width=3D"980" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" style=3D"width:735.0pt;background:white;border-collapse=
+:collapse">
+        <tr>
+            <td>
+                <table style=3D"width:100%; margin-bottom:10px">
+                    <tr>
+                        <td><img src=3D"http://images.bestwestern.com/email=
+/bestwesternemailconfirmation.JPG" alt=3D"" border=3D"0"></td>
+                    </tr>
+                </table>
+                <table align=3D"center" width=3D"900" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" style=3D"width:675.0pt;background:white;border-=
+collapse:collapse;height:200px;margin:0 auto;">
+                    <tr>
+                        <td>
+                            <table class=3D"reservation" style=3D"width:100=
+%;">
+                                <tr>
+                                    <td>
+                                                                           =
+     <h2>Reservation Confirmation Number:    858994845 </h2>
+                                        <strong>Your reservation is confirm=
+ed. You may also print this page for future reference.</strong>
+                                        <p>
+                                            If you need to change or cancel=
+ your reservation you can do so within=20
+                                            <a href=3D"https://www.bestwest=
+ern.com/content/best-western/en_US.html">My Account, </a>
+                                            <br />
+                                            or call 1-800-780-7234 (United =
+States and Canada) | View Our <a href=3D"https://www.bestwestern.com/conten=
+t/best-western/en_US/customer-service/worldwide-reservation-numbers.html">W=
+orldwide Reservation Numbers</a>.
+                                        </p>
+                                       =20
+                                                                           =
+ </td>
+                                    <td class=3D"resources" style=3D"text-a=
+lign:right;">
+                                                                           =
+                                                                           =
+          <a href=3D"https://book.bestwestern.com/bestwestern/outlookCalend=
+arAction.do?firstName=3DMark&lastName=3DGreene&confNum=3D858994845&propCode=
+=3D93522&language=3Den_US" class=3D"shareButton"><img src=3D"http://images.=
+bestwestern.com/email/icon-share.gif" />&nbsp;&nbsp;Add Reservation to Outl=
+ook Calendar</a>
+                                                                           =
+ </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=3D"2">
+                                        <br />
+                                                                           =
+                                                                           =
+                                                                           =
+                           </td>
+                                </tr>
+
+                                                                           =
+                                                                           =
+      </table>
+                                                                           =
+        =20
+                                                               =20
+                               =20
+                                                       =20
+                           =20
+                                                       =20
+                                                                           =
+                                    =20
+                                                                           =
+                                                                           =
+                                             =20
+                                                       =20
+                           =20
+                           =20
+                                                                           =
+                                                                           =
+                 =20
+                           =20
+                            <table class=3D"hotelInfo" border=3D"0" cellpad=
+ding=3D"3">
+                                <tr>
+                                    <td colspan=3D"4">
+                                        <h2>Reservation Summary  - Mark Gre=
+ene</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                                                        <table cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" style=3D"border-collapse:collapse">
+
+                                <tr>
+                                    <td width=3D"6%" valign=3D"top" style=
+=3D"width:6.0%;border:none;border-top:solid #dce5ef 1.5pt;padding:.75pt .75=
+pt .75pt .75pt">
+                                        <table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" style=3D"border-collapse:collapse">
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt">
+                                                    <img src=3D"http://imag=
+es.bestwestern.com/93522/93522_b1.jpg" width=3D"150" height=3D"100" alt=3D"=
+Best Western Paris Louvre Opera" border=3D"0">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width=3D"14%" valign=3D"top" style=
+=3D"width:14.0%;border:none;border-top:solid #dce5ef 1.5pt;padding:.75pt .7=
+5pt .75pt .75pt">
+                                        <table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" style=3D"border-collapse:collapse">
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt">
+                                                    <p>
+                                                        <strong>Best Wester=
+n Paris Louvre Opera</strong><br />
+
+                                                                           =
+                                     4 Rue Des Moulins<br />
+                                                       =20
+                                                                           =
+                                     Paris
+                                                       =20
+                                                         <br />
+                                                                           =
+                                     75001, France<br />
+                                                        Phone: +33 1 402001=
+10
+                                                                           =
+                                                                           =
+              </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width=3D"21%" valign=3D"top" style=
+=3D"width:21.0%;border:none;border-top:solid #dce5ef 1.5pt;padding:.75pt .7=
+5pt .75pt .75pt">
+                                        <table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" style=3D"border-collapse:collapse">
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt">&nbsp;</td>
+                                            </tr>
+                                                                           =
+             <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt">
+                                                    <b>Check-in:</b>&nbsp;&=
+nbsp;04/06/$year$ - 2:00 P.M.  (14:00)<br />
+
+                                                    <b>Check-out:</b>&nbsp;=
+&nbsp;04/07/$year$ - 12:00 P.M.  (12:00)
+                                                </td>
+                                            </tr>
+                                                                           =
+             <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt">
+                                                    <br /><strong>Total Roo=
+ms:</strong> 1 <br />
+                                                    <strong>Total Occupants=
+:</strong> 1
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                    <td width=3D"23%" valign=3D"top" style=
+=3D"width:23.0%;border:none;border-top:solid #dce5ef 1.5pt;padding:.75pt .7=
+5pt .75pt .75pt" rowspan=3D"3">
+                                        <table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" style=3D"width:100.0%;background:#dce5ef;border-collap=
+se:collapse">
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt" colspan=3D"2">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt" align=3D"right"><b>Reservation Amount=
+:</b></td>
+                                                                           =
+                     <td valign=3D"top" style=3D"padding:2.25pt 2.25pt 2.25=
+pt 2.25pt">EUR&nbsp;219.00 </td>
+                                                                           =
+                 </tr>
+
+                                           =20
+                                           =20
+
+                                                                           =
+                                                         <tr>
+                                                                           =
+                     <td align=3D"right" valign=3D"top" style=3D"padding:2.=
+25pt 2.25pt 2.25pt 2.25pt"><b>Vat 10% :</b></td>
+                                                <td style=3D"padding:2.25pt=
+ 2.25pt 2.25pt 2.25pt;vertical-align: bottom">included*</td>
+                                            </tr>
+                                                                           =
+            =20
+                                                                           =
+            =20
+                                                                           =
+                                                                           =
+                                                                           =
+                                                              =20
+                                                                           =
+             <tr>
+                                                <td align=3D"right" valign=
+=3D"top" style=3D"padding:2.25pt 2.25pt 2.25pt 2.25pt"><b>Other Taxes & Fee=
+s:</b></td>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt">
+                                                                           =
+                             EUR&nbsp;1.65* &nbsp;
+                                                </td>
+                                            </tr>
+                                                                           =
+                                                         <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt" colspan=3D"2">&nbsp;</td>
+                                            </tr>
+                                            <tr class=3D"total">
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt" align=3D"right">
+                                                    <b>
+                                                        Total Stay:
+                                                    </b>
+                                                </td>
+                                                                           =
+                                                                     <td va=
+lign=3D"top" style=3D"padding:2.25pt 2.25pt 2.25pt 2.25pt">
+                                                    <strong>EUR&nbsp;220.65=
+&nbsp; </strong>
+                                                </td>
+                                                                           =
+                                                                 </tr>
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt" colspan=3D"2">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:2.25pt 2.25pt 2.25pt 2.25pt" colspan=3D"2">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign=3D"top" style=3D"padding:2.2=
+5pt 2.25pt 2.25pt 2.25pt" colspan=3D"3">
+                                        <p class=3D"legal">
+                                            <br />
+                                            *Taxes and fees shown on this p=
+age are estimates based on information provided by the hotel. Additional ch=
+arges may apply. For more details regarding the taxes and fees, please  <a =
+style=3D"color:inherit; text-decoration:underline;" href=3D"https://www.bes=
+twestern.com/content/best-western/en_US/legal/taxes-fees.html">Click here</=
+a>.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign=3D"top" style=3D"padding:2.2=
+5pt 2.25pt 2.25pt 2.25pt" colspan=3D"3">&nbsp;</td>
+                                </tr>
+                            </table>
+                                                       =20
+                           =20
+                            <table cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" style=3D"border-collapse:collapse;border:4px solid #DCE5EF; width:=
+100%">
+                                <tr>
+                                    <td valign=3D"top" style=3D"border:soli=
+d #dce5ef 3.0pt;padding:.75pt .75pt .75pt .75pt">
+                                        <h3 style=3D"color: #333333; font-f=
+amily: sans-serif; font-weight: bold; text-transform: none; font-size: 1.25=
+em; margin-bottom: 1em; margin-left: 1em;margin-top: 1em;">Room Details</h3=
+>
+                                       =20
+                                                                           =
+                                                                           =
+         =20
+
+                                        <table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" style=3D"border-collapse:collapse;width:100%">
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding:0in 0in 5.0pt 0in">
+                                                    <table border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" style=3D"margin-left:7.5pt;border-collapse=
+:collapse;margin:10px;width:98%">
+                                                        <tr>
+                                                            <td valign=3D"t=
+op" style=3D"padding:.75pt .75pt .75pt .75pt" colspan=3D"2">
+                                                                <table cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"width:100.0%;backgrou=
+nd:#dce5ef;border-collapse:collapse;">
+                                                                    <tr>
+                                                                        <td=
+ valign=3D"top" style=3D"padding:3.75pt 3.75pt 3.75pt 3.75pt">
+                                                                           =
+ <strong>
+                                                                           =
+                                                                           =
+          Room 1 - 1 King Bed
+                                                                           =
+                                                                           =
+      </strong>
+                                                                        </t=
+d>
+                                                                        <td=
+ valign=3D"top" style=3D"padding:3.75pt 3.75pt 3.75pt 3.75pt;text-align:rig=
+ht;">
+                                                                           =
+ Room Subtotal:
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+        <strong>EUR&nbsp;220.65</strong>
+                                                                           =
+                                                                         </=
+td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"ro=
+omDetailsinnerDescleft">
+                                                               =20
+                                                                           =
+                                                    =20
+                                                                <p>
+                                                                    <strong=
+>Room Details:</strong>
+                                                                           =
+                                                             1 King Bed, Su=
+perior Room, Spacious Room, Twin On Request, Connecting Room On Request
+                                                                           =
+                                                         </p>
+                                                                <p>
+                                                                           =
+                                                         </p>
+                                                                <p>
+                                                                    <strong=
+>Total Occupants:</strong> 1<br />
+                                                                    <strong=
+>Rate: </strong>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09Flexible Rate (Reserve our best and least res=
+trictive publicly available rate.  Changes and Cancellations are generally =
+acceptable, but always check during the booking process for any cancellatio=
+n fees or policies applicable to your stay dates)<br />
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09                        =
+                                        </p>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                       <p>
+                                                                           =
+                                            =20
+                                                                           =
+                                                                           =
+                                              <strong>Vat 10% :</strong>
+                                                                    Include=
+d in rate
+                                                                    <br />
+                                                                           =
+                                                =20
+
+                                                                           =
+                                                =20
+                                                                    <strong=
+>Other Taxes & Fees Breakdown (additional charges may apply):  </strong>
+                                                                           =
+                                                              City Tax Per =
+Person Per Night EUR 1.65
+                                                                    <br />
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                       =20
+                                                                    <strong=
+>Deposit Policy:</strong>
+                                                                           =
+                                                                           =
+                                                                           =
+                                               Guaranteed to your credit ca=
+rd for late arrival. A valid credit card must be presented at check-in.
+                                                                           =
+                                                                           =
+                                                      <br />
+
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                        <strong>Cancellation Policy:</stron=
+g> Cancel before 4PM hotel time on  April 5, $year$
+                                                                    to avoi=
+d a charge
+                                                                           =
+                                                                           =
+                                                      <br />
+                                                                           =
+                                                                           =
+                                                     =20
+                                                                           =
+                                                         </p>
+                                                                           =
+                                                                           =
+                                                                           =
+                               </td>
+                                                            <td class=3D"ro=
+omDetailsinnerDescright" valign=3D"top">
+                                                                <table styl=
+e=3D"float:right;">
+                                                                    <tr>
+                                                                        <td=
+ align=3D"right" nowrap=3D"nowrap">Room Rate:&nbsp;</td>
+                                                                        <td=
+ nowrap=3D"nowrap">
+                                                                           =
+ <strong>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                    EUR&nbsp;219.00
+                                                                           =
+                                                                           =
+      </strong>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                                                                           =
+                             </table>
+                                                                <div style=
+=3D"clear:right"></div>
+                                                            </td>
+                                                        </tr>
+                                                                           =
+                                 </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                                                           =
+ </td>
+                                </tr>
+                            </table>
+                           =20
+                        </td>
+                    </tr>
+                                                                           =
+                                             <tr>
+                        <td>
+                            <table><tr><td>&nbsp;&nbsp;</td></tr></table>
+                            <table style=3D"width:100%">
+                                <tr>
+                                    <td>Please do not attempt to respond to=
+ this message.  If you need to change or cancel your reservation, please co=
+ntact one of our <a href=3D"https://www.bestwestern.com/content/best-wester=
+n/en_US/customer-service/worldwide-reservation-numbers.html"> worldwide res=
+ervations offices</a>.  Cancellation or change requests sent to this email =
+address will not be honored.</td>
+                                </tr>
+                                <tr>
+                                    <td colspan=3D"3" style=3D"background-c=
+olor:#FFFFFF">
+                                        <table cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" id=3D"copywritemail" align=3D"center" style=3D"width:1=
+00%;">
+                                            <tr>
+                                                <td><br/>Each Best Western=
+=C2=AE branded hotel is independently owned and operated. &copy; 2002-2017 =
+Best Western International, Inc. All rights reserved.</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                            </td>
+        </tr>
+    </table>
+</body>
+</html>=
+
+--Boundary_(ID_1dXwQ7stT0FJKnLel2UqaA)--

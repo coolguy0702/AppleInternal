@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamDeepDive-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>es_ES@sw=QWERTY-Spanish;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.2</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false />
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0.5</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Espero verte entrarle a tias buenorras que estas hecho un yogurin Eso si No tomare muchas birras porque no quiero echar la pota Nos vemos nano</string>
+                                <key>expectedText</key>
+                                <string>Espero verte entrarle a tías buenorras que estas hecho un yogurín Eso sí No tomaré muchas birras porque no quiero echar la pota Nos vemos nano</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359111</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Informal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Segun los datos ofrecidos por el Banco de Espana la deuda de las administraciones publicas se incremento en millones en el segundo mes del ano en comparacion con el primero</string>
+                                <key>expectedText</key>
+                                <string>Según los datos ofrecidos por el Banco de España la deuda de las administraciones públicas se incrementó en millones en el segundo mes del año en comparación con el primero</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359110</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>formal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>La doctora Margarita TeranGarcia especialista de extension de programas de salud para hispanos y profesora en la Universidad de IllinoisUrbana Champaign define el estigma relacionado con el peso como un valor oculto en nuestra subconsciencia ahi consideramos que una persona por su sobrepeso es diferente a nosotros y por ende no la aceptamos</string>
+                                <key>expectedText</key>
+                                <string>La doctora Margarita Terán-García especialista de extensión de programas de salud para hispanos y profesora en la Universidad de Illinois-Urbana Champaign define el estigma relacionado con el peso como un valor oculto en nuestra subconsciencia ahí consideramos que una persona por su sobrepeso es diferente a nosotros y por ende no la aceptamos</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359114</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Paragraph</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359112</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>a juan le gusta contornearse cuando estrena un traje nuevo</string>
+                                <key>expectedText</key>
+                                <string>A Juan le gusta contornearse cuando estrena un traje nuevo</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>esto es un ejemplo de como se hace un caleidoscopio con rollos de papel higienico</string>
+                                <key>expectedText</key>
+                                <string>Esto es un ejemplo de cómo se hace un caleidoscopio con rollos de papel higiénico</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>un trastorno alimentario tipico suele ser la bulimia</string>
+                                <key>expectedText</key>
+                                <string>Un trastorno alimentario típico suele ser la bulimia</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>se me olvido espulgar a mi perro el ultimo mes</string>
+                                <key>expectedText</key>
+                                <string>Se me olvido espulgar a mi perro el último mes</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>el master de enologia tiene como objetivo proporcionar al alumno una formación tecnica sobre viticultura y economia </string>
+                                <key>expectedText</key>
+                                <string>El Máster de Enología tiene como objetivo proporcionar al alumno una formación técnica sobre viticultura y economía </string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words10</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359114</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>hoy estoy saturado tengo el electroencefalograma plano</string>
+                                <key>expectedText</key>
+                                <string>Hoy estoy saturado tengo el Electroencefalograma plano</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words15</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359122</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>sevilla es un municipio y una ciudad de espana capital de la provincia homonima y de la comunidad autonoma de andalucia</string>
+                                <key>expectedText</key>
+                                <string>Sevilla es un municipio y una ciudad de España capital de la provincia homónima y de la comunidad autónoma de Andalucía</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>de cadiz el mar su gente su bahia su historia y sus ganas de vivir</string>
+                                <key>expectedText</key>
+                                <string>De Cádiz el mar su gente su bahía su historia y sus ganas de vivir</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>ayer viaje a vitoriagasteiz en tren aunque fue largo el trayecto se hizo agradable</string>
+                                <key>expectedText</key>
+                                <string>Ayer viajé a Vitoria-Gasteiz en tren aunque fue largo el trayecto se hizo agradable</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>el aviles club de futbol ascendio recientemente a primera tras ganar al sporting de gijon</string>
+                                <key>expectedText</key>
+                                <string>El Avilés Club de Fútbol ascendió recientemente a primera tras ganar al Sporting de Gijón</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Autocaplitalization</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359126</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>mariano rajoy brey fue sustituido en la presidencia del gobierno por el socialista pedro sanchez perez castejon</string>
+                                <key>expectedText</key>
+                                <string>Mariano Rajoy Brey fue sustituido en la presidencia del gobierno por el socialista Pedro Sánchez Pérez-Castejón</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>el maligno ha estado presente desde la creacion del mundo.</string>
+                                <key>expectedText</key>
+                                <string>El Maligno ha estado presente desde la creación del mundo</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>La reina Isabel la catolica  ha sido la figura real mas importante en la historia de nuestro pais Sus decisiones cambiaron espana y el mundo</string>
+                                <key>expectedText</key>
+                                <string>La reina Isabel la Católica ha sido la figura real más importante en la Historia de nuestro país Sus decisiones cambiaron España y el mundo</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>jose ortega  y gasset ocupo un lugar de privilegio en la historia del pensamiento espanol de las decadas centrales del siglo xx</string>
+                                <key>expectedText</key>
+                                <string>José Ortega  y Gasset ocupó un lugar de privilegio en la historia del pensamiento español de las décadas centrales del siglo XX</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Names</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359123</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>el amigo de juan alaba con frecuencia los callos madrilenos que prepara la madre de juan</string>
+                                <key>expectedText</key>
+                                <string>El amigo de Juan alaba con frecuencia los callos madrileños que prepara la madre de Juan</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>establecer un negocio en alava es sumamente facil gracias a las ayudas fiscales del gobierno autonomico</string>
+                                <key>expectedText</key>
+                                <string>Establecer un negocio en Álava es sumamente fácil gracias a las ayudas fiscales del gobierno autonómico</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>el comite de competicion decidio infligir el maximo castigo al atletico de madrid por las pancartas colgadas en tribuna</string>
+                                <key>expectedText</key>
+                                <string>El comité de competición decidió infligir el máximo castigo al Atlético de Madrid por las pancartas colgadas en tribuna</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>a partir de hoy infringir el codigo de circulacion acarreara multas de mayor cuantia</string>
+                                <key>expectedText</key>
+                                <string>A partir de hoy infringir el código de circulación acarreará multas de mayor cuantía</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>la savia del arbol es rica en nutrientes necesarios para el desarrollo de la planta</string>
+                                <key>expectedText</key>
+                                <string>La savia del  árbol es rica en nutrientes necesarios para el desarrollo de la planta</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>alfredo es una persona sabia debido a las vicisitudes de su vida</string>
+                                <key>expectedText</key>
+                                <string>Alfredo es una persona sabia debido a las vicisitudes de su vida</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>es normal en los municipios dilapidar su presupuesto en fiestas vecinales</string>
+                                <key>expectedText</key>
+                                <string>Es normal en los municipios dilapidar su presupuesto en fiestas vecinales</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>en la politica espanola se suele lapidar al partido de la oposicion cuando no se esta de acuerdo en algun tema general</string>
+                                <key>expectedText</key>
+                                <string>En la política española se suele lapidar al partido de la oposición cuando no se está de acuerdo en algún tema general</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Words</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359121</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>el partido fue muy estatico las defensas vencieron a los ataques</string>
+                                <key>expectedText</key>
+                                <string>El partido fue muy estático las defensas vencieron a los ataques</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>hoy en dia  tener una camara no es esencial dada la potencia fotografica ofrecida  por los móviles </string>
+                                <key>expectedText</key>
+                                <string>Hoy en día tener una cámara no es esencial dada la potencia fotográfica ofrecida por los moviles</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>la catedral de leon se encuentra entre las primeras basilicas de estilo gotico construidas en españa</string>
+                                <key>expectedText</key>
+                                <string>La catedral de León se encuentra entre las primeras basilicas deestupefactp estilo gótico construidas en España</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>fernando si no te gusta el coche vendelo y deja de quejarte todo el dia </string>
+                                <key>expectedText</key>
+                                <string>Fernando si no te gusta el coche véndelo y deja de quejarte todo el día </string>
+                                <!-- Removed “Logroño”: Logroño does not have accent-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Accents</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>

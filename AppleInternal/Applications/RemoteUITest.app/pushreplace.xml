@@ -1,0 +1,10 @@
+<xmlui action="push" idOfOldestObjectModelToRemoveAfterPush="push-replace-description">
+    <page>
+        <navigationBar title="Push + Replace"/>
+        <tableView>
+            <section>
+                <footer>The page that loaded this page is no longer in the navigation stack.</footer>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

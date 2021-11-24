@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>TypeAndVerify-OneHanded-EFIGS</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <!-- Portrait -->
+                        <!-- LandscapeRight -->
+                        <key>appendKeyboard</key>
+                        <string>NO</string>
+                        <key>autoCorrection</key>
+                        <string>NO</string>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>NO</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>NO</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>NO</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>RIGHT</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Hello world. My name is Typist! Thanks.</string>
+                        <key>expectedText</key>
+                        <string>Hello world. My name is Typist! Thanks.</string>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>bye.</string>
+                        <key>expectedText</key>
+                        <string>bye.</string>
+                        <key>testCaseID</key>
+                        <string>10000002</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>fr_FR@sw=AZERTY-French;hw=Automatic</string>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeRight</string>
+                        <key>appendKeyboard</key>
+                        <string>NO</string>
+                        <key>autoCapitalization</key>
+                        <string>NO</string>
+                        <key>typeInterval</key>
+                        <real>0.1</real>
+                        <key>oneHandedLayout</key>
+                        <string>LEFT</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>                        
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi.</string>
+                        <key>expectedText</key>
+                        <string>Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi.</string>
+                        <key>testCaseID</key>
+                        <string>10000003</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>es_ES@sw=QWERTY-Spanish;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>NO</string>
+                        <key>autoCapitalization</key>
+                        <string>NO</string>
+                        <key>oneHandedLayout</key>
+                        <string>RIGHT</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>                        
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Hola, como esta? Mi nombre es Typist! Gracias.</string>
+                        <key>expectedText</key>
+                        <string>Hola, como esta? Mi nombre es Typist! Gracias.</string>
+                        <key>testCaseID</key>
+                        <string>10000004</string>
+                    </dict>
+                    <key>Category</key>
+                    <string>Typist_InternationalKeyboard</string>
+                    <key>Description</key>
+                    <string>Regular typing - with a gesture key</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>it_IT@sw=QWERTY;hw=Automatic</string>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeRight</string>
+                        <key>appendKeyboard</key>
+                        <string>NO</string>
+                        <key>autoCapitalization</key>
+                        <string>NO</string>
+                        <key>oneHandedLayout</key>
+                        <string>LEFT</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>                        
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Ciao. Mi chiamo Typist! Grazie.</string>
+                        <key>expectedText</key>
+                        <string>Ciao. Mi chiamo Typist! Grazie.</string>
+                        <key>testCaseID</key>
+                        <string>10000005</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>de_DE@sw=QWERTZ-German;hw=Automatic</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>NO</string>
+                        <key>autoCapitalization</key>
+                        <string>NO</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>                        
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Guten Tag. Mein Name ist Typist! Danke.</string>
+                        <key>expectedText</key>
+                        <string>Guten Tag. Mein Name ist Typist! Danke.</string>
+                        <key>testCaseID</key>
+                        <string>10000006</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+
+
+            </array>
+        </dict>
+    </array>
+</plist>

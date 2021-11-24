@@ -1,0 +1,1075 @@
+Return-path: <groupmailer@group.apple.com>
+Received: from nwk-postinop-sz03.apple.com ([17.128.113.126])
+ by mail5.euro.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.0 64bit (built Oct 28 2016))
+ with ESMTPS id <0OL500P8CX6N04K0@mail5.euro.apple.com>; Fri,
+ 10 Feb 2017 14:20:48 +0000 (GMT)
+Received: from relay8.apple.com ([17.128.113.102])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTPS id <0OL500MWIX6LLWB0@postino.apple.com>; Fri,
+ 10 Feb 2017 06:20:47 -0800 (PST)
+Received: from nwk-postinop-sz03.apple.com
+ (nwk-postinop-sz03.apple.com [17.128.113.126])
+	(using TLS with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)	by relay8.apple.com (Apple SCV relay)
+ with SMTP id 77.01.12381.F3CCD985; Fri, 10 Feb 2017 06:20:47 -0800 (PST)
+Received: from group.apple.com ([17.128.113.126])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OL500MX4X6MLWB0@postino.apple.com>; Fri,
+ 10 Feb 2017 06:20:46 -0800 (PST)
+Received: from nwk-postinop-sz07.apple.com ([17.128.115.241])
+ by postino.apple.com
+ (Oracle Communications Messaging Server 7.0.5.35.0 64bit (built Mar 31 2015))
+ with ESMTP id <0OL500MV9X6ILWB0@postino.apple.com> for
+ bv-gt19@group.apple.com; Fri, 10 Feb 2017 06:20:42 -0800 (PST)
+Received: from relay6.apple.com ([17.128.113.90])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OL5004HBW810P55@postino.apple.com> for
+ bv-gt19@group.apple.com; Fri, 10 Feb 2017 06:20:42 -0800 (PST)
+X-Va-ID: 4cdccb93-013f-4f66-b447-d3ee9ce137f3
+X-Va-CD: 0
+X-Va-R-CD: 5e11de7e14cecce6ecd571cb82674934
+X-Va-E-CD: 5e11de7e14cecce6ecd571cb82674934
+X-Va-T-CD: b9bfed1942b6d7a15206ae384dbbd7a0
+X-Va-A:
+X-V-ID: 8b3046d4-ee07-4deb-bc36-d7a1910e046f
+X-V-CD: 0
+X-V-R-CD: 202c54b900d4fcf6af6e1682d7b2cb64
+X-V-E-CD: 5e11de7e14cecce6ecd571cb82674934
+X-V-T-CD: f10a34b51cab48a02761828e175429b0
+X-V-A:
+Received: from ma1-postinop-sz09.apple.com
+ (ma1-postinop-sz09.apple.com [17.171.128.178])
+	(using TLS with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)	by relay6.apple.com (Apple SCV relay)
+ with SMTP id AF.B3.04914.93CCD985; Fri, 10 Feb 2017 06:20:41 -0800 (PST)
+MIME-version: 1.0
+Content-type: text/html; charset=utf-8
+Received: from localhost.localdomain ([127.0.0.1])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OL500ACWX6FFTX0@postino.apple.com> for
+ bv-gt19@group.apple.com; Fri, 10 Feb 2017 06:20:40 -0800 (PST)
+X-Va-ID: cdd9316b-8ea9-4945-bb11-dcd025f99e71
+X-Va-CD: 0
+X-Va-R-CD: 5e11de7e14cecce6ecd571cb82674934
+X-Va-E-CD: 5e11de7e14cecce6ecd571cb82674934
+X-Va-T-CD: b9bfed1942b6d7a15206ae384dbbd7a0
+X-Va-A:
+X-V-ID: 4ca14da8-60b0-4339-b019-6ea9e1015c06
+X-V-CD: 0
+X-V-R-CD: 202c54b900d4fcf6af6e1682d7b2cb64
+X-V-E-CD: 5e11de7e14cecce6ecd571cb82674934
+X-V-T-CD: f10a34b51cab48a02761828e175429b0
+X-V-A:
+Received: from mail-in2.apple.com ([17.151.62.17])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTPS id <0OL500HSOX6CAK90@postino.apple.com> for
+ bv-gt19@group.apple.com; Fri, 10 Feb 2017 06:20:38 -0800 (PST)
+X-Va-ID: 892f3a4f-23f4-4beb-91cd-fc239af46067
+X-Va-CD: 0
+X-Va-R-CD: c2ee9b7b4b564845ceed2ab333fae212
+X-Va-E-CD: 5e11de7e14cecce6ecd571cb82674934
+X-Va-T-CD: b9bfed1942b6d7a15206ae384dbbd7a0
+X-Va-A:
+X-V-ID: 16facc1f-c839-4e58-8ccf-6706613e56aa
+X-V-CD: 0
+X-V-R-CD: 202c54b900d4fcf6af6e1682d7b2cb64
+X-V-E-CD: 5e11de7e14cecce6ecd571cb82674934
+X-V-T-CD: f10a34b51cab48a02761828e175429b0
+X-V-A:
+X-AuditID: 11807166-f79536d00000305d-f7-589dcc3e2de1
+Received: from ma1-aaemail-dr-lapp01.apple.com
+ (ma1-aaemail-dr-lapp01.apple.com [17.171.2.60])
+	(using TLS with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client did not present a certificate)
+	by mail-in2.apple.com (Apple Secure Mail Relay)
+ with SMTP id 81.C4.19279.23CCD985; Fri, 10 Feb 2017 06:20:35 -0800 (PST)
+Received: from pps.filterd (ma1-aaemail-dr-lapp01.apple.com [127.0.0.1])
+	by ma1-aaemail-dr-lapp01.apple.com (8.16.0.17/8.16.0.17)
+ with SMTP id v1AEGpYI062174	for <bv-gt19@group.apple.com>; Fri,
+ 10 Feb 2017 06:20:34 -0800
+Received: from smtp2.melia.com (smtp2.melia.com [194.224.193.235])
+	by ma1-aaemail-dr-lapp01.apple.com with ESMTP id 28deg7jfpv-1
+	(version=TLSv1 cipher=AES128-SHA bits=128 verify=NOT)
+	for <bv-gt19@group.apple.com>; Fri, 10 Feb 2017 06:20:33 -0800
+Received: from ES1DS87MELIAPRD (10.28.56.16) by relay105.local.solmelia
+ (10.30.103.16) with Microsoft SMTP Server id 14.3.319.2; Fri,
+ 10 Feb 2017 15:20:30 +0100
+Date: $now_full_text$
+From: melia-no.reply@melia.com
+To: bv-gt19@group.apple.com
+Message-id: <231934835.2601.1486736430986.JavaMail.tradyso@ES1DS87MELIAPRD>
+Subject: Confirmazione della prenotazione - LOC:1700456363 - OLGA PARKER
+Content-transfer-encoding: quoted-printable
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,,
+ definitions=2017-02-10_06:,, signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ suspectscore=24 malwarescore=0 phishscore=0 adultscore=0 bulkscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1612050000
+ definitions=main-1702100143
+Authentication-results: symauth.service.identifier
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFnrCJsWRmVeSWpSXmKPExsUi2FBYp2t/Zm6Ewa2/rBa77q1ktHh/bhuz
+	xc3tK5ktNt1ZzGqx/ZWqxfpre1ktvs47z2Lxd1o/m8W5jd9YLM52eVn8e7aJ2WLb1UuMFp8a
+	vjBabD7TzGSxrP8Wo8XU7v/MDgIeW0/+YAtgjNKzSUnNySxLLdK3synKLy1JVcjILy6xVSoA
+	kpl5+XqJBQU5qXrJ+blWRqZK+nYJehlL709lKri2hKli1oL7bA2M/9qYuhg5OSQETCQOLFvM
+	DmGLSVy4t56ti5GLQ0hgPZPE/6tHwYqEBL4wSnz7HwVhz2OSaNzJA1E0gUniT8tkNohuXYml
+	c06zQNhcEgu2nmaFsLUlbv9ayQhjX5q+kBnGvrpwIVQNu8SfXzugenUkZs7cDXUdp8T5LxOh
+	rtOSuND0ggnGvnv5M1AvB5h97aMQRJhNYv2JJUwQt21kkti55zjYbbwCghI/Jt8Dm88soCax
+	8PciqKKJTBJ/D75kgnng7IttzNTwwNeve1mI8cAERudZSO6bheQ+CFtb4sm7C6wLGJlXMQoU
+	peYkVlogonYTIyS1pe1gbFpudYhRgINRiYeX4+jcCCHWxLLiytxDjBIczEoivBMOAYV4UxIr
+	q1KL8uOLSnNSiw8xrmDkYBGYyCwlmpwPTLx5JfGGJiYGJsbGZsbG5ibmFAgbmRpbAsXNDE1J
+	E1YS5/XcPyNCSCA9sSQ1OzW1ILUI5lYmDk6pBsZWndX3RZ4d+j/xy3n5r8E2S71mZXWyOdq5
+	qy59ftJWmamgssim7QDTxhT952c/hfNeEPcxEQqc67NppmCR4e+bG9ruXW5l4thUFOlWE2XO
+	GrhVz3hJO4+NmuLtWOtnH0N26Sk9bzZ9rO6ooXvjZa/f/ENSPcuu1rz75bQuUflo9lLPf4IG
+	c5RYijMSDbWYi4oTAT/E7cH3AwAA
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFlrPKsWRmVeSWpSXmKPExsUiuLphk67lmbkRBrdaVCxWTuhldmD0+DP/
+	KEsAYxSXTUpqTmZZapG+XQJXxtL7U5kKri1hqpi14D5bA+O/NqYuRk4OCQETib3NnawQtpjE
+	hXvr2boYuTiEBNYzSbTs7gQr4hUQlPgx+R4LiM0soCax8PciJoiiiUwSfw++hJqkK3H2xTZm
+	CJtLYsHW01BTtSVu/1rJCGNfmr6QGca+unAhVA27xJ9fO1ggbB2Jr1/3QtmcEue/TGSHsLUk
+	LjS9YIKx717+DNTLAWZf+ygEEWaTWH9iCdRtk5gkrp07yw5z28zHa1mxuW3RisMkue3qowVs
+	FLkNEujntjawTGDUn4UUvLOQghfC1pZ48u4C6wJG5lWMAkWpOYmVZnqJBQU5qXrJ+bmbGEHR
+	31AYtYOxYbnVIUYBDkYlHt6E43MjhFgTy4orcw8xSnAwK4nwTjgEFOJNSaysSi3Kjy8qzUkt
+	PsSYzMEiMJFZSjQ5H5iY8kriDU1MDEyMjc2Mjc1NzEkTVhLn9dw/I0JIID2xJDU7NbUgtQhm
+	CxMHp1QDo3PRsVU79LqTFpkYZxxdcX3WPuZY58X3njJu8qnsy9kgzbrlM/+amt6n5pe7otfI
+	5ajuS1Ng8Iy0M8kRfrP+/FGH81XvXAXlNzxfF+j2QaPJx2tt579lWQs+pvhMev7ghCWbZo2K
+	jPy/E9lMq06Grmm/yfyRpcpamlnibYLYOt9X5xa2z+wxVGIpzkg01GIuKk4EAF4l9npCAwAA
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA11Ta0wcVRjt3R2W2WWvzs4O7MfSbeoaH62CCiYSg/WRqI1VgzEaJK1lgCls
+	2Fd2dpdHYsNDIWBtQSyVsfQhqLyMFjGltIqOCC2lSLChVivUBolsbfsD2mpQdGZ2gdn+mdz7
+	nTvnO9+555JaejLOSnIlfs7nZp12nYEwdWkyktNGW7IerJ67J72j/h3tE2jzPwe/JzJRtiEj
+	n3M6gpzvgU05hsKPpvdqvJNtmhLh0LSuHC1Va+qQngTqYRj7spyoQwaSpoY1MDX4Z2RzEUHN
+	+crIZhFBVdc+FN60ITjZW0HI/xPUXVDVvztGXuuo9fB51aKyZigb/CZ+ovTA1BZoFvp0dYgk
+	zdRm+OZaWbhsglPNMwqNlroX3trfEhte3wcfH76sDcsrgqaOCkUEUH8jGJj7VCcDiEqF42Oh
+	mHpECSouQcUlqLgOIW0nol2sw5nscKemsF6vk0vJ87h6kOzhvk2mPjTc+aiIKBLZjThnuCWL
+	jmGDfKlLRDWI1NitWEh/L4s253rySwtZvnA7H8h1OXje4XHb4zF1Wjp/2wrmCzg53s7gmEqp
+	jFfKuQFnkUQ0NdKiJnJzxbyT80s3al+H24MSZlE14b2OPIcnwG8P+JwiAlIr0daLMm0+W1rG
+	+TzhZiJKIgm7BR9MlCCqgPVzRRzn5XzLqIaMFVGTZL/dhtGaNWvoBB9XwJXscDilvupZAD8n
+	z2JSw+FxLLhkSCZXI8pENvz0NgmIYlQNdQdOKZNga3TD6Lk0pF7+GERUiUijPTGskea9rIt3
+	FKj1Mdgk68PLUFibGSd1S1XjclXRlYj3yk6vsKg02fALxbLk1QZqPSOoFZENP968gGjC7XFz
+	1rV4ST4eLx8vDLijLbNa8A5ZEqVCFVXWBGzZJWTRt6sAWZhEl+duiqZb1WZdj1kZTYxqppYn
+	v3rx4reXJ5DNag47ZZSu2uXwR9yI4CHUppHSDNg8LqkwOdz+W7w04xbZIGMECf9MY98pqRgX
+	KSpOAm6UDy5TqIxcizMVZ1bI1UJT25D0TCcTYLC/DEbbPkTQM/+7Bho/qyXg66t1BFzqbiDg
+	SGiEgNmfzhPwZmuPDgYrf9HBFweOkjAhDJAwvzhMwoVfq/XQMdqshyPirB4WroT0MHZlQQ/H
+	LjUY4N2K63EwM3fGCKPXlzAcv7qHgpMVExS0dzSaQOwNmWD+2gANu0d2MTBZsYeBmaMfMHDi
+	314GDnQfY0Jy6DSrofOztxrF4HOnBTl0EWg5dGeDSugi1UjozgSV0EWKUaH7IaiEbqWB2ixr
+	OSIe6XzblPZaTm173mhs7nfPxK0zPnujYYNQE/vYRrMlk/G2JqcP7c8WGrc+Xmwz3nxfiK0x
+	DGiXsgeTtvFfPR9/uLx/6u77T/QuwCs//zfeUP/6nU8Nuc/+dePF2p15O7vM/ow35onJ8dk/
+	KjdUvTRMevqqx86JW+edW54MpTHxxdMvv2on+EL2oY1aH8/+D+rBbjNpBgAA
+X-Member-Count: 16
+Precedence: List
+Sender: bv-gt19@group.apple.com
+List-Id: <bv-gt19@group.apple.com>
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<title>Confirmazione della prenotazione</title>
+</head>
+<body style=3D"background-color: #f5fafe">
+<div itemscopeitemtype=3D"http://schema.org/LodgingReservation">
+<meta itemprop=3D"reservationNumber" content=3D"1700456363">
+<meta itemprop=3D"reservationStatus" content=3D"http://schema.org/Confirmed=
+">
+<meta itemprop=3D"url" content=3D"http://www.melia.com/cercare/ricerca-avan=
+zata.htm">
+<div itemprop=3D"underName" itemscopeitemtype=3D"http://schema.org/Person">
+<meta itemprop=3D"name" content=3D"OLGA PARKER">
+<meta itemprop=3D"email" content=3D"bv-gt19@group.apple.com">
+</div>
+<meta itemprop=3D"bookingTime" content=3D"$year$-02-10T15:20:30&#43;01:00">
+<meta itemprop=3D"cancelReservationUrl" content=3D"http://www.melia.com/cer=
+care/ricerca-avanzata.htm">
+<meta itemprop=3D"checkinDate" content=3D"$year$-09-01T00:00:00&#43;01:00">
+<meta itemprop=3D"checkoutDate" content=3D"$year$-09-02T00:00:00&#43;01:00">
+<div itemprop=3D"reservationFor" itemscopeitemtype=3D"http://schema.org/Lod=
+gingBusiness">
+<meta itemprop=3D"name" content=3D"Meli=C3=A1 Milano ">
+<div itemprop=3D"address" itemscopeitemtype=3D"http://schema.org/PostalAddr=
+ess">
+<meta itemprop=3D"streetAddress" content=3D"Via Masaccio 19 ">
+<meta itemprop=3D"addressLocality" content=3D"Milano">
+<meta itemprop=3D"addressRegion" content=3D"">
+<meta itemprop=3D"postalCode" content=3D"20149">
+<meta itemprop=3D"addressCountry" content=3D"ITALIA">
+</div>
+<meta itemprop=3D"telephone" content=3D"3902444061">
+<meta itemprop=3D"url" content=3D"http://www.melia.com/hotels/italia/milano=
+/melia-milano/home.htm">
+<meta itemprop=3D"image" content=3D"http://www.melia.com/img/hoteles/6401/t=
+130x90_26ameliamilano-thelevel-lounge.jpg">
+</div>
+</div>
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center">
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"600">
+<tbody>
+<tr>
+<td style=3D"display: block;" height=3D"66" width=3D"600"><img alt=3D"melia=
+.com" src=3D"http://media.melia.com/nImg/melia.png" height=3D"66" width=3D"=
+600"></td>
+</tr>
+<tr>
+<td style=3D"border-width:1px;border-style: solid;border-color:#d0d0d0;back=
+ground-color: #FFFFFF;">
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"598">
+<tbody>
+<tr>
+<td colspan=3D"3" height=3D"30"><img alt=3D"" src=3D"http://media.melia.com=
+/nImg/px.gif" width=3D"1" height=3D"30"></td>
+</tr>
+<tr>
+<td width=3D"7"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" wi=
+dth=3D"7" height=3D"1"></td>
+<td width=3D"584">
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"584">
+<tbody>
+<tr>
+<td style=3D"font-family: arial;font-size: 14px;color: #333333;" align=3D"c=
+enter">Grazie OLGA, la tua prenotazione =C3=A8 confermata</td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 16px;color: #333333;" align=3D"c=
+enter"><strong>Localizzatore della prenotazione: 1700456363</strong></td>
+</tr>
+<tr>
+<td height=3D"30"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" =
+width=3D"1" height=3D"30"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"584">
+<tbody>
+<tr>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+<td align=3D"left" width=3D"178"><img width=3D"178" height=3D"145" alt=3D"1=
+5 euros" src=3D"http://www.melia.com/img/banners/1063/it/bono_default.jpg">=
+</td>
+<td width=3D"32"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"32" height=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;\">Presentar=
+e il voucher presso l'albergo e godere di tutti i giorni 15 =E2=82=AC di cr=
+edito a camera da spendere presso l'hotel.(NO =C3=88 APPLICABILE ai servizi=
+o della prima colazione, minibar o ristoranti esterni
+ all'hotel come il YHI-SPA, il Parcheggio auto).* Non rimborsabile se non c=
+onsumato. * Vedere le condizioni nella reception dell'hotel o sul www.melia=
+.com.</td>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+</tr>
+<tr>
+<td colspan=3D"5" height=3D"30"><img alt=3D"" src=3D"http://media.melia.com=
+/nImg/px.gif" width=3D"1" height=3D"30"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"584">
+<tbody>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"584" height=3D"1" colspan=
+=3D"3"><img alt=3D"" src=3D"http://media.melia.com/nImg/sepNewsletter.gif" =
+width=3D"584" height=3D"1"></td>
+</tr>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"584" height=3D"5" colspan=
+=3D"3"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" width=3D"58=
+4" height=3D"5"></td>
+</tr>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"14"><img alt=3D"" src=3D"=
+http://media.melia.com/nImg/px.gif" width=3D"14" height=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 16px;color: #333333;background-c=
+olor: #f2f2f2;font-weight: bold;" align=3D"left">
+Dettagli della tua prenotazione</td>
+<td style=3D"background-color: #f2f2f2;" width=3D"14"><img alt=3D"" src=3D"=
+http://media.melia.com/nImg/px.gif" width=3D"14" height=3D"1"></td>
+</tr>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"584" height=3D"7" colspan=
+=3D"3"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" width=3D"58=
+4" height=3D"7"></td>
+</tr>
+<tr>
+<td width=3D"584" height=3D"14" colspan=3D"3"><img alt=3D"" src=3D"http://m=
+edia.melia.com/nImg/px.gif" width=3D"584" height=3D"14"></td>
+</tr>
+<tr>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" align=3D"l=
+eft">
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"556">
+<tbody>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;padding-bottom: 3px;" valign=3D"top" align=3D"left" width=3D"215">
+Titolare della prenotazione:</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;padding-bott=
+om: 3px;" valign=3D"top" align=3D"left">
+OLGA&nbsp;PARKER</td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"3" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"3"></td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+Hotel prenotato :</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+Meli=C3=A1 Milano - <a href=3D"http://www.melia.com/nHoteles/jsp/C_Hotel_De=
+scription.jsp?codigoHotel=3D6401" style=3D"color: #0180FF;">
+vedere hotel su melia.com </a><br>
+Via Masaccio 19, Milano<br>
+Italia&nbsp;20149 - <a href=3D" https://maps.google.com/maps?q=3Dloc:45.478=
+98&#43;9.145465" style=3D"color: #0180FF;">
+vedere in Google Maps</a><br>
+Tel. (39) 02 444061 - Fax. (39) 02 444066</td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"5" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"5"></td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"1" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/sepNewsletter2.gif" width=3D"556" height=3D"1"></td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"5" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"5"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"556">
+<tbody>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+Data di arrivo:</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+Venerd=C3=AC, 1 Settembre $year$. Check-in dopo 14:00<br>
+</td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+Potrai realizzare il check in a partire dal&nbsp;Luned=C3=AC, 28 Agosto 201=
+7</td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+<table cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"border: 1px solid #D9D9D9;background-color:#F4F4F4;padding: 9p=
+x 12px 8px 8px;">
+<img alt=3D"" src=3D"http://media.melia.com/nImg/ics_calendar.gif">&nbsp; <=
+a href=3D"http://melia.com/calgen/jsp/calGen.jsp?partner=3DMELIA&amp;lang=
+=3Dit&amp;localizer=3D1700456363&amp;checkindate=3D$year$-09-01-14.00.00&amp;=
+checkoutdate=3D$year$-09-02-12.00.00&amp;checkinalarm=3D$year$-08-28-15.00.00&a=
+mp;cab=3DSoggiorno nell'hotel Meli%C3%A1 Milano&amp;text=3D&amp;alarm_cab=
+=3Dfai adesso il check in online e risparmia tempo quando arrivi  in hotel&=
+amp;alarm_desc=3D&amp;mobile=3Dno" style=3D"text-decoration: none;color: #3=
+33333;font-weight: bold">
+Inserire l'appuntamento nel mio calendario </a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"3" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"3"></td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+Data di partenza:</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+Sabato, 2 Settembre $year$. Check-out entro le 12:00</td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"3" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"3"></td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+Durata soggiorno:</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+1&nbsp; notte </td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"5" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"5"></td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"1" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/sepNewsletter2.gif" width=3D"556" height=3D"1"></td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"5" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"5"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"556">
+<tbody>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+N=C2=BA delle camere:</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+1</td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"3" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"3"></td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+Categoria:</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+Premium twin</td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"3" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"3"></td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+Camera 1: </td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+1&nbsp; adulti </td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"3" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"3"></td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+Regime:</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+Solo pernottamento</td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"3" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"3"></td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" valign=3D"top" align=3D"left" width=3D"215">
+Tessera Meli=C3=A1Rewards:</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" align=3D"left" width=3D"341">
+6347081J</td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"5" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"5"></td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"1" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/sepNewsletter2.gif" width=3D"556" height=3D"1"></td>
+</tr>
+<tr>
+<td width=3D"556" height=3D"5" colspan=3D"2"><img alt=3D"" src=3D"http://me=
+dia.melia.com/nImg/px.gif" width=3D"1x" height=3D"5"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+</tr>
+<tr>
+<td height=3D"30" colspan=3D"3"><img alt=3D"" src=3D"http://media.melia.com=
+/nImg/px.gif" width=3D"1" height=3D"30"></td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"584">
+<tbody>
+<tr>
+<td colspan=3D"3" style=3D"background-color: #f2f2f2;" height=3D"1" width=
+=3D"584"><img src=3D"http://media.melia.com/nImg/sepNewsletter.gif" alt=3D"=
+" height=3D"1" width=3D"584"></td>
+</tr>
+<tr>
+<td colspan=3D"3" style=3D"background-color: #f2f2f2;" height=3D"5" width=
+=3D"584"><img src=3D"http://media.melia.com/nImg/px.gif" alt=3D"" height=3D=
+"5" width=3D"584"></td>
+</tr>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"14"><img src=3D"http://me=
+dia.melia.com/nImg/px.gif" alt=3D"" height=3D"14" width=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 16px;color: #333333;background-c=
+olor: #f2f2f2;font-weight: bold;" align=3D"left">
+Dettagli del prezzo </td>
+<td style=3D"background-color: #f2f2f2;" width=3D"14"><img src=3D"http://me=
+dia.melia.com/nImg/px.gif" alt=3D"" height=3D"14" width=3D"1"></td>
+</tr>
+<tr>
+<td colspan=3D"3" style=3D"background-color: #f2f2f2;" height=3D"7" width=
+=3D"584"><img src=3D"http://media.melia.com/nImg/px.gif" alt=3D"" height=3D=
+"7" width=3D"584"></td>
+</tr>
+<tr>
+<td colspan=3D"3" height=3D"14" width=3D"584"><img src=3D"http://media.meli=
+a.com/nImg/px.gif" alt=3D"" height=3D"14" width=3D"584"></td>
+</tr>
+<tr>
+<td width=3D"14"><img src=3D"http://media.melia.com/nImg/px.gif" alt=3D"" h=
+eight=3D"1" width=3D"14"></td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" align=3D"l=
+eft">
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"556">
+<tbody>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" align=3D"left" valign=3D"top" width=3D"215">
+Costo soggiorno<br>
+(1 notte)</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" align=3D"l=
+eft" valign=3D"top" width=3D"341">
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"341">
+<tbody>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;font-style: italic;color:#6=
+66666;">
+Camera &nbsp;1</td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12" align=3D"left">Premium twin<=
+/td>
+<td style=3D"font-family: arial;font-size: 12px;color: #024486;" align=3D"r=
+ight">189,05 =E2=82=AC</td>
+</tr>
+<tr>
+<td colspan=3D"2" height=3D"5"><img src=3D"http://media.melia.com/nImg/px.g=
+if" alt=3D"" height=3D"5" width=3D"1"></td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"341">
+<tbody>
+<tr>
+<td height=3D"1"><img src=3D"http://media.melia.com/nImg/sepNewsletter3.gif=
+" alt=3D"" height=3D"1" width=3D"341"></td>
+</tr>
+<tr>
+<td height=3D"5"><img src=3D"http://media.melia.com/nImg/px.gif" alt=3D"" h=
+eight=3D"5" width=3D"1"></td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 14px;color: #024486;" align=3D"r=
+ight"><strong>189,05&nbsp;EUR</strong></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan=3D"2" height=3D"5"><img src=3D"http://media.melia.com/nImg/px.g=
+if" alt=3D"" height=3D"5" width=3D"1"></td>
+</tr>
+<tr>
+<td colspan=3D"2" height=3D"1"><img src=3D"http://media.melia.com/nImg/sepN=
+ewsletter2.gif" alt=3D"" height=3D"1" width=3D"556"></td>
+</tr>
+<tr>
+<td colspan=3D"2" height=3D"5"><img src=3D"http://media.melia.com/nImg/px.g=
+if" alt=3D"" height=3D"5" width=3D"1"></td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"556">
+<tbody>
+<tr>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" align=3D"left" valign=3D"top" width=3D"215">
+Tasse</td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" valign=3D"=
+top" width=3D"341">
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"341">
+<tbody>
+<tr>
+<td style=3D"font-family: arial;font-size: 12" align=3D"left">Tasse naziona=
+li </td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style=3D"font-family: arial;font-size: 12" align=3D"left">(10,00%) </td=
+>
+<td style=3D"font-family: arial;font-size: 12px;color: #024486;" align=3D"r=
+ight">Gi=C3=A0 incluso
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan=3D"2" height=3D"5"><img src=3D"http://media.melia.com/nImg/px.g=
+if" alt=3D"" height=3D"5" width=3D"1"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"14"><img src=3D"http://media.melia.com/nImg/px.gif" alt=3D"" h=
+eight=3D"1" width=3D"14"></td>
+</tr>
+<tr>
+<td colspan=3D"3" height=3D"10"><img src=3D"http://media.melia.com/nImg/px.=
+gif" alt=3D"" height=3D"10" width=3D"1"></td>
+</tr>
+</tbody>
+</table>
+<table style=3D"background-color: #f5fafe;border-color: #c8e3fd;border-styl=
+e: solid; border-width: 1" cellspacing=3D"0" cellpadding=3D"0" width=3D"582=
+">
+<tbody>
+<tr>
+<td height=3D"7" colspan=3D"4"><img alt=3D"" src=3D"http://media.melia.com/=
+nImg/px.gif" width=3D"1" height=3D"7"></td>
+</tr>
+<tr>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;font-weight:=
+ bold;" align=3D"left">
+Costo totale tasse incluse (1 notte) </td>
+<td style=3D"font-family: arial;font-size: 18px;color: #024486;" align=3D"r=
+ight">189,05&nbsp;EUR</td>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+</tr>
+<tr>
+<td height=3D"7" colspan=3D"4"><img alt=3D"" src=3D"http://media.melia.com/=
+nImg/px.gif" width=3D"1" height=3D"7"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"584">
+<tbody>
+<tr>
+<td height=3D"30"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" =
+width=3D"1" height=3D"30"></td>
+</tr>
+</tbody>
+</table>
+<table style=3D"background-color: #deeefc;border-color: #c8e3fd;border-styl=
+e: solid; border-width: 1" cellspacing=3D"0" cellpadding=3D"0" width=3D"582=
+">
+<tbody>
+<tr>
+<td height=3D"7" colspan=3D"3"><img alt=3D"" src=3D"http://media.melia.com/=
+nImg/px.gif" width=3D"1" height=3D"7"></td>
+</tr>
+<tr>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 12px;font-weight: bold;">Dettagl=
+i aggiuntivi
+</td>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+</tr>
+<tr>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 12px;">Tasse locali non incluse.=
+ Un tassa di =E2=82=AC 5 per persona al giorno, non inclusa nel totale dell=
+a prenotazione, dovr=C3=A0 essere saldata al momento del check out.</td>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+</tr>
+<tr>
+<td height=3D"7" colspan=3D"3"><img alt=3D"" src=3D"http://media.melia.com/=
+nImg/px.gif" width=3D"1" height=3D"7"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"584">
+<tbody>
+<tr>
+<td height=3D"30"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" =
+width=3D"1" height=3D"30"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"584">
+<tbody>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"584" height=3D"1" colspan=
+=3D"3"><img alt=3D"" src=3D"http://media.melia.com/nImg/sepNewsletter.gif" =
+width=3D"584" height=3D"1"></td>
+</tr>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"584" height=3D"5" colspan=
+=3D"3"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" width=3D"58=
+4" height=3D"5"></td>
+</tr>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"14"><img alt=3D"" src=3D"=
+http://media.melia.com/nImg/px.gif" width=3D"14" height=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 16px;color: #333333;background-c=
+olor: #f2f2f2;font-weight: bold;" align=3D"left" width=3D"556">
+Informazioni sulla tariffa</td>
+<td style=3D"background-color: #f2f2f2;" width=3D"14"><img alt=3D"" src=3D"=
+http://media.melia.com/nImg/px.gif" width=3D"14" height=3D"1"></td>
+</tr>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"584" height=3D"7" colspan=
+=3D"3"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" width=3D"58=
+4" height=3D"7"></td>
+</tr>
+<tr>
+<td width=3D"584" height=3D"14" colspan=3D"3"><img alt=3D"" src=3D"http://m=
+edia.melia.com/nImg/px.gif" width=3D"584" height=3D"14"></td>
+</tr>
+<tr>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" align=3D"l=
+eft" height=3D"16">
+<strong>Flessibile senza Restrizioni </strong><br>
+Permette modificazioni e cancellazioni. Se si modifica, controllare il nuov=
+o prezzo e le condizioni prima di confermare il cambio perch=C3=A9 potrebbe=
+ro variare.<br>
+<br>
+E=E2=80=99 necessaria una carta di credito al momento di effettuare il chec=
+k in. Questa prenotazione =C3=A8 garantita con una carta di credito le cui =
+ultime 4 cifre sono 8056<br>
+<br>
+L'importo di questa prenotazione verr=C3=A0 addebitato sulla carta di credi=
+to in qualisiasi momento una volta terminata la prenotazione e fino a che n=
+on venga effettuato il check-in in hotel, eccetto in casi di no show (non p=
+resentazione), in tal caso verr=C3=A0 effettuato
+ un addebito secondo la politica di cancellazione della tariffa. Per prenot=
+azioni con 100% di spese, verr=C3=A0 effettuato addebito sulla carta di cre=
+dito indicata (vedere condizioni della tariffa). La card sar=C3=A0 richiest=
+o al momento del check-in.<br>
+</td>
+</tr>
+<tr>
+<td height=3D"30" colspan=3D"3"><img alt=3D"" src=3D"http://media.melia.com=
+/nImg/px.gif" width=3D"1" height=3D"30"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"584">
+<tbody>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"584" height=3D"1" colspan=
+=3D"3"><img alt=3D"" src=3D"http://media.melia.com/nImg/sepNewsletter.gif" =
+width=3D"584" height=3D"1"></td>
+</tr>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"584" height=3D"5" colspan=
+=3D"3"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" width=3D"58=
+4" height=3D"5"></td>
+</tr>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"14"><img alt=3D"" src=3D"=
+http://media.melia.com/nImg/px.gif" width=3D"14" height=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 16px;color: #333333;background-c=
+olor: #f2f2f2;font-weight: bold;" align=3D"left">
+Cancellazione della prenotazione</td>
+<td style=3D"background-color: #f2f2f2;" width=3D"14"><img alt=3D"" src=3D"=
+http://media.melia.com/nImg/px.gif" width=3D"14" height=3D"1"></td>
+</tr>
+<tr>
+<td style=3D"background-color: #f2f2f2;" width=3D"584" height=3D"7" colspan=
+=3D"3"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" width=3D"58=
+4" height=3D"7"></td>
+</tr>
+<tr>
+<td width=3D"584" height=3D"14" colspan=3D"3"><img alt=3D"" src=3D"http://m=
+edia.melia.com/nImg/px.gif" width=3D"584" height=3D"14"></td>
+</tr>
+<tr>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+<td style=3D"font-family: arial;font-size: 12px;color: #333333;" align=3D"l=
+eft" height=3D"16">
+<p style=3D"margin: 0px;">Se cancella dopo 6 PM del giorno dell'arrivo o no=
+n si presenta 1 Notte(i) verr=C3=A0 addebitato in concetto di penale</p>
+<p style=3D"margin: 0px;">Se hai bisogno di cancellare o modificare la tua =
+prenotazione online, clicca
+<a class=3D"v_333333_11u" href=3D"http://www.melia.com/nReservations/jsp/C_=
+Advan_Search.jsp">
+qui</a>.</p>
+<p style=3D"margin: 0px;">Per cambiarla, cancellarla per telefono o in caso=
+ di aver bisogno di aiuto, puoi
+<a style=3D"color: #0180ff;text-decoration: none;" href=3D"http://www.melia=
+.com/nMenus/jsp/CDB_telefonosOtrosPaises.jsp">
+chiamare il nostro Servizio Clienti</a></p>
+</td>
+<td width=3D"14"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" w=
+idth=3D"14" height=3D"1"></td>
+</tr>
+<tr>
+<td height=3D"30" colspan=3D"3"><img alt=3D"" src=3D"http://media.melia.com=
+/nImg/px.gif" width=3D"1" height=3D"30"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing=3D"0" cellpadding=3D"0" width=3D"584">
+<tbody>
+<tr>
+<td width=3D"50%"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" =
+width=3D"14" height=3D"1"></td>
+<td align=3D"left" valign=3D"top" width=3D"556">
+<table summary=3D"Prezzi imbattibili e una qualit=C3=A1 superiore!" id=3D"d=
+sitwidget_transfers" style=3D"
+	font-size: 12px;
+	color: rgb(102,102,102);
+	font-family: arial;
+	margin: 12px 0;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	line-height: 0;">
+<tbody>
+<tr>
+<td class=3D"widget_title" style=3D"
+		padding: 0 0 1em 0;
+		display: block;
+		text-align: left;
+		font-size: 1.1em;">
+<h2 style=3D"
+			font-family: @title_fontStyle;
+			font-weight: bold;
+			font-weight: 700;
+			font-size: 1.25em;
+			line-height: 1.25em;
+			color: rgb(0,0,0);
+			margin: 0;">
+Hai bisogno di un transfer?</h2>
+<p style=3D"
+		=09
+			font-size: 0.9em;
+			line-height: 1.3em;
+			margin: 0;">Non- plus- ultra dei trasferimenti!</p>
+</td>
+</tr>
+<tr>
+<td style=3D"
+            border-color: rgb(200,200,200);
+            border-style: solid;=20
+            border-width: 0px;
+        ">
+<table class=3D"widget_container" style=3D"
+	  	width: 556;
+		border-collapse: collapse;
+		border-spacing: 0px;">
+<tbody>
+<tr>
+<td class=3D"results" style=3D"
+			background-color: rgba(255,255,255,1);
+                        width: 181;
+                        max-width: 181;
+			padding: 6px;">
+<a target=3D"_blank" title=3D"premium desde 1,236.8" href=3D"http://www.let=
+shuttle.com/content/solmelia/it_IT/redirectToTransfer.html?userId=3Dsolmeli=
+a&amp;saleMethodOrigin=3DWDG_TRF_EMAIL&amp;currency=3DEUR&amp;fromType=3DAI=
+RPORT&amp;fromCode=3DFLR&amp;toType=3DHOTEL&amp;toCode=3D5775&amp;dateOutwa=
+rd=3D20170901&amp;dateReturn=3D20170902&amp;timeOutward=3D1200&amp;timeRetu=
+rn=3D1200&amp;adults=3D1&amp;children=3D&amp;roundtrip=3Dtrue&amp;customerN=
+ame=3DOLGA&amp;customerSurname=3DPARKER&amp;customerEmail=3Dbv-gt19@group.a=
+pple.com&amp;customerPhone=3D&amp;serviceType=3D&amp;productType=3D&amp;ask=
+Destination=3Dfalse&amp;gpsODescription=3DFirenze%2C&#43;aeroporto&#43;di&#=
+43;Firenze-Peretola&amp;gpsOLatitude=3D&amp;gpsOLongitude=3D&amp;gpsOAddres=
+s=3D&amp;gpsOCity=3D&amp;gpsOZipCode=3D&amp;gpsOCountry=3D&amp;gpsDDescript=
+ion=3DMelia&#43;Milano&amp;gpsDLatitude=3D&amp;gpsDLongitude=3D&amp;gpsDAdd=
+ress=3D&amp;gpsDCity=3D&amp;gpsDZipCode=3D&amp;gpsDCountry=3D&amp;travelNum=
+berGoArrival=3D&amp;travelNumberGoDeparture=3D&amp;travelNumberReturnArriva=
+l=3D&amp;travelNumberReturnDeparture=3D&amp;companyNameGoArrival=3D&amp;com=
+panyNameGoDeparture=3D&amp;companyNameReturnArrival=3D&amp;companyNameRetur=
+nDeparture=3D&amp;dateGoArrival=3D&amp;dateGoDeparture=3D&amp;dateReturnArr=
+ival=3D&amp;dateReturnDeparture=3D&amp;timeGoArrival=3D&amp;timeGoDeparture=
+=3D&amp;timeReturnArrival=3D&amp;timeReturnDeparture=3D&amp;agency=3D0KGoBy=
+eiyfVqMU22cB2A5w&amp;utm_source=3D&amp;utm_medium=3D&amp;utm_campaign=3D&am=
+p;affiliateNet=3D&amp;affiliateId=3D"><img width=3D"181" height=3D"335" alt=
+=3D"premium desde 1,236.8" src=3D"http://wdgfront-live.s3.amazonaws.com/Sol=
+Melia_1486736430115_sa1dmp01_1.png"></a><a target=3D"_blank" title=3D"premi=
+um desde 134.92" href=3D"http://www.letshuttle.com/content/solmelia/it_IT/r=
+edirectToTransfer.html?userId=3Dsolmelia&amp;saleMethodOrigin=3DWDG_TRF_EMA=
+IL&amp;currency=3DEUR&amp;fromType=3DAIRPORT&amp;fromCode=3DLIN&amp;toType=
+=3DHOTEL&amp;toCode=3D5775&amp;dateOutward=3D20170901&amp;dateReturn=3D2017=
+0902&amp;timeOutward=3D1200&amp;timeReturn=3D1200&amp;adults=3D1&amp;childr=
+en=3D&amp;roundtrip=3Dtrue&amp;customerName=3DOLGA&amp;customerSurname=3DPA=
+RKER&amp;customerEmail=3Dbv-gt19@group.apple.com&amp;customerPhone=3D&amp;s=
+erviceType=3D&amp;productType=3D&amp;askDestination=3Dfalse&amp;gpsODescrip=
+tion=3DMilano%2C&#43;aeroporto&#43;internazionale&#43;di&#43;Linate&amp;gps=
+OLatitude=3D&amp;gpsOLongitude=3D&amp;gpsOAddress=3D&amp;gpsOCity=3D&amp;gp=
+sOZipCode=3D&amp;gpsOCountry=3D&amp;gpsDDescription=3DMelia&#43;Milano&amp;=
+gpsDLatitude=3D&amp;gpsDLongitude=3D&amp;gpsDAddress=3D&amp;gpsDCity=3D&amp=
+;gpsDZipCode=3D&amp;gpsDCountry=3D&amp;travelNumberGoArrival=3D&amp;travelN=
+umberGoDeparture=3D&amp;travelNumberReturnArrival=3D&amp;travelNumberReturn=
+Departure=3D&amp;companyNameGoArrival=3D&amp;companyNameGoDeparture=3D&amp;=
+companyNameReturnArrival=3D&amp;companyNameReturnDeparture=3D&amp;dateGoArr=
+ival=3D&amp;dateGoDeparture=3D&amp;dateReturnArrival=3D&amp;dateReturnDepar=
+ture=3D&amp;timeGoArrival=3D&amp;timeGoDeparture=3D&amp;timeReturnArrival=
+=3D&amp;timeReturnDeparture=3D&amp;agency=3D0KGoByeiyfVqMU22cB2A5w&amp;utm_=
+source=3D&amp;utm_medium=3D&amp;utm_campaign=3D&amp;affiliateNet=3D&amp;aff=
+iliateId=3D"><img width=3D"181" height=3D"335" alt=3D"premium desde 134.92"=
+ src=3D"http://wdgfront-live.s3.amazonaws.com/SolMelia_1486736430112_sa1dmp=
+01_2.png"></a><a target=3D"_blank" title=3D"Standard desde 228.5" href=3D"h=
+ttp://www.letshuttle.com/content/solmelia/it_IT/redirectToTransfer.html?use=
+rId=3Dsolmelia&amp;saleMethodOrigin=3DWDG_TRF_EMAIL&amp;currency=3DEUR&amp;=
+fromType=3DAIRPORT&amp;fromCode=3DMXP&amp;toType=3DHOTEL&amp;toCode=3D5775&=
+amp;dateOutward=3D20170901&amp;dateReturn=3D20170902&amp;timeOutward=3D1200=
+&amp;timeReturn=3D1200&amp;adults=3D1&amp;children=3D&amp;roundtrip=3Dtrue&=
+amp;customerName=3DOLGA&amp;customerSurname=3DPARKER&amp;customerEmail=3Dbv=
+-gt19@group.apple.com&amp;customerPhone=3D&amp;serviceType=3D&amp;productTy=
+pe=3D&amp;askDestination=3Dfalse&amp;gpsODescription=3DMilano%2C&#43;aeropo=
+rto&#43;di&#43;Malpensa&amp;gpsOLatitude=3D&amp;gpsOLongitude=3D&amp;gpsOAd=
+dress=3D&amp;gpsOCity=3D&amp;gpsOZipCode=3D&amp;gpsOCountry=3D&amp;gpsDDesc=
+ription=3DMelia&#43;Milano&amp;gpsDLatitude=3D&amp;gpsDLongitude=3D&amp;gps=
+DAddress=3D&amp;gpsDCity=3D&amp;gpsDZipCode=3D&amp;gpsDCountry=3D&amp;trave=
+lNumberGoArrival=3D&amp;travelNumberGoDeparture=3D&amp;travelNumberReturnAr=
+rival=3D&amp;travelNumberReturnDeparture=3D&amp;companyNameGoArrival=3D&amp=
+;companyNameGoDeparture=3D&amp;companyNameReturnArrival=3D&amp;companyNameR=
+eturnDeparture=3D&amp;dateGoArrival=3D&amp;dateGoDeparture=3D&amp;dateRetur=
+nArrival=3D&amp;dateReturnDeparture=3D&amp;timeGoArrival=3D&amp;timeGoDepar=
+ture=3D&amp;timeReturnArrival=3D&amp;timeReturnDeparture=3D&amp;agency=3D0K=
+GoByeiyfVqMU22cB2A5w&amp;utm_source=3D&amp;utm_medium=3D&amp;utm_campaign=
+=3D&amp;affiliateNet=3D&amp;affiliateId=3D"><img width=3D"181" height=3D"33=
+5" alt=3D"Standard desde 228.5" src=3D"http://wdgfront-live.s3.amazonaws.co=
+m/SolMelia_1486736430153_sa1dmp01_3.png"></a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"price_info" style=3D"
+             padding: 0.25em 0;
+         display: block;
+         font-size: 0.95em;">
+<p style=3D"
+             color: rgb(121,121,106);
+             text-align: right;">
+*I prezzi si riferiscono ad andata e ritorno</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"50%"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" =
+width=3D"14" height=3D"1"></td>
+</tr>
+<tr>
+<td height=3D"30"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" =
+width=3D"1" height=3D"30"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"7"><img alt=3D"" src=3D"http://media.melia.com/nImg/px.gif" wi=
+dth=3D"7" height=3D"1"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3D"border-style: solid;border-color: #d0d0d0;border-width: 0px 1p=
+x 1px 1px;">
+<img alt=3D"Meli=C3=A1 Hotels International" src=3D"http://media.melia.com/=
+nImg/logos.png"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<title>ESTE CORREO ELECTR=C3=93NICO CONTIENE INFORMACI=C3=93N ESTRICTAMENTE=
+ CONFIDENCIAL</title>
+<eXclaimer:ORIGINAL_HEAD Field=3D"body:head"></eXclaimer:ORIGINAL_HEAD>
+<div><Disclaimer:ORIGINAL_BODY Field=3D"body:all"></Disclaimer:ORIGINAL_BOD=
+Y></div>
+<meta content=3D"Word.Document" name=3D"ProgId">
+<meta content=3D"Microsoft Word 11" name=3D"Generator">
+<meta content=3D"Microsoft Word 11" name=3D"Originator">
+<div class=3D"Section1"><br>
+<p class=3D"section1"><span style=3D"FONT-SIZE: 8pt; COLOR: silver; FONT-FA=
+MILY: Verdana">ESTE CORREO ELECTR=C3=93NICO CONTIENE INFORMACI=C3=93N ESTRI=
+CTAMENTE CONFIDENCIAL.<br>
+Si usted no es el destinatario del presente mensaje, no est=C3=A1 autorizad=
+o a leerlo, retenerlo o difundirlo. Para acceder a la cl=C3=A1usula de priv=
+acidad completa
+</span><span style=3D"FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: Verdana"=
+></span><span style=3D"FONT-SIZE: 8pt; COLOR: #00ccff; FONT-FAMILY: Verdana=
+"><a title=3D"http://es.melia.com/html/es/politicaPrivacidadMeliaEmail.html=
+" href=3D"http://es.melia.com/html/es/politicaPrivacidadMeliaEmail.html" ta=
+rget=3D"_blank" MOZ-DO-NOT-SEND=3D"true"><span style=3D"COLOR: #00ccff"><sp=
+an title=3D"http://es.melia.com/html/es/politicaPrivacidadMeliaEmail.html">=
+pulse
+ aqu=C3=AD</span></span></a>.</span></p>
+<p class=3D"section1"><span style=3D"FONT-SIZE: 8pt; COLOR: #00ccff; FONT-F=
+AMILY: Verdana"></span></p>
+<p class=3D"section1"><span lang=3D"EN-GB" style=3D"FONT-SIZE: 8pt; COLOR: =
+silver; FONT-FAMILY: Verdana; mso-ansi-language: EN-GB">THIS E-MAIL IS PRIV=
+ILEGED AND CONTAINS CONFIDENTIAL INFORMATION.<br>
+<span class=3D"GramE">Any reading, retention, distribution or copying of th=
+is communication by any person other that its intended recipient is prohibi=
+ted.
+</span>In order to read its privacy policy</span><span lang=3D"EN-GB" style=
+=3D"FONT-SIZE: 7.5pt; COLOR: #666666; FONT-FAMILY: Arial; mso-ansi-language=
+: EN-GB">
+</span><span style=3D"FONT-SIZE: 8pt; COLOR: #00ccff; FONT-FAMILY: Verdana;=
+ mso-bidi-font-family: Arial"><a title=3D"http://es.melia.com/html/es/polit=
+icaPrivacidadMeliaEmail.html" href=3D"http://es.melia.com/html/es/politicaP=
+rivacidadMeliaEmail.html" target=3D"_blank" MOZ-DO-NOT-SEND=3D"true"><span =
+lang=3D"EN-GB" style=3D"COLOR: #00ccff; mso-ansi-language: EN-GB"><span tit=
+le=3D"http://es.melia.com/html/es/politicaPrivacidadMeliaEmail.html">clickh=
+ere</span></span></a></span><span lang=3D"EN-GB" style=3D"FONT-SIZE: 8pt; C=
+OLOR: #00ccff; FONT-FAMILY: Verdana; mso-ansi-language: EN-GB; mso-bidi-fon=
+t-family: Arial">.</span></p>
+<p class=3D"section1"><span lang=3D"EN-GB" style=3D"FONT-SIZE: 8pt; COLOR: =
+#00ccff; FONT-FAMILY: Verdana; mso-ansi-language: EN-GB; mso-bidi-font-fami=
+ly: Arial"></span></p>
+<p class=3D"section1"><span lang=3D"EN-GB" style=3D"FONT-SIZE: 8pt; COLOR: =
+#99cc00; FONT-FAMILY: Verdana; mso-ansi-language: EN-GB">Antes de
+<span class=3D"SpellE">imprimir </span><span class=3D"SpellE"><span class=
+=3D"GramE">este</span></span>
+<span class=3D"SpellE">documento</span>, <span class=3D"SpellE">aseg=C3=BAr=
+ese</span> <span class=3D"SpellE">
+que</span> <span class=3D"SpellE">es</span> <span class=3D"SpellE">realment=
+e</span> <span class=3D"SpellE">
+necesario</span>/</span><span lang=3D"EN-GB" style=3D"FONT-SIZE: 8pt; COLOR=
+: blue; FONT-FAMILY: Verdana; mso-ansi-language: EN-GB">
+</span><span lang=3D"EN-GB" style=3D"FONT-SIZE: 8pt; COLOR: #99cc00; FONT-F=
+AMILY: Verdana; mso-ansi-language: EN-GB">Before printing this document, as=
+sure that it is truly necessary</span><font color=3D"white"></font>
+</p>
+<p class=3D"MsoNormal"></p>
+</div>
+</body>
+</html>

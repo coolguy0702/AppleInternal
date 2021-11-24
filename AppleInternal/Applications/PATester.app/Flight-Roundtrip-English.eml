@@ -1,0 +1,422 @@
+Return-path: <groupmailer@group.apple.com>
+Received: from nwk-postinop-sz05.apple.com ([17.128.113.69])
+ by mail5.euro.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.20170413 64bit (built Apr 13
+ 2017)) with ESMTPS id <0ORH00FK0LAFDWA0@mail5.euro.apple.com>; Tue,
+ 13 Jun 2017 13:56:44 +0100 (IST)
+Received: from relay6.apple.com ([17.128.113.90])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTPS id <0ORH005MGLAF6860@postino.apple.com>; Tue,
+ 13 Jun 2017 05:56:39 -0700 (PDT)
+Received: from nwk-postinop-sz03.apple.com
+ (nwk-postinop-sz03.apple.com [17.128.113.126])
+	(using TLS with cipher DHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(Client did not present a certificate)	by relay6.apple.com (Apple SCV relay)
+ with SMTP id 2F.FF.09762.701EF395; Tue, 13 Jun 2017 05:56:39 -0700 (PDT)
+Received: from group.apple.com ([17.128.113.126])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0ORH00DA8LAFJ9B0@postino.apple.com>; Tue,
+ 13 Jun 2017 05:56:39 -0700 (PDT)
+Received: from ma1-postinop-sz09.apple.com ([17.171.128.178])
+ by postino.apple.com
+ (Oracle Communications Messaging Server 7.0.5.35.0 64bit (built Mar 31 2015))
+ with ESMTPS id <0ORH00D9XLAEJ9B0@postino.apple.com> for
+ bv-gt1@group.apple.com; Tue, 13 Jun 2017 05:56:38 -0700 (PDT)
+MIME-version: 1.0
+Content-type: multipart/alternative;
+ boundary="Boundary_(ID_X9LtAWvp0QdEUQBMvp0paw)"
+Received: from group.apple.com ([127.0.0.1]) by ma1-postinop-sz09.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.20170222 64bit (built Feb 22
+ 2017)) with ESMTP id <0ORH00H2ZLADAS60@ma1-postinop-sz09.apple.com> for
+ bv-gt1@group.apple.com; Tue, 13 Jun 2017 05:56:38 -0700 (PDT)
+X-Va-A:
+X-Va-T-CD: 0bae5a696622c5de5289d625a576be3d
+X-Va-E-CD: c13d6635795f7e5327899ec31f0b2b45
+X-Va-R-CD: a8acc42901ed1e3f6af6318b9f9854d2
+X-Va-CD: 0
+X-Va-ID: e836ae39-eb33-413f-94e8-42f669f1ef9e
+X-V-A:
+X-V-T-CD: 0bae5a696622c5de5289d625a576be3d
+X-V-E-CD: c13d6635795f7e5327899ec31f0b2b45
+X-V-R-CD: a8acc42901ed1e3f6af6318b9f9854d2
+X-V-CD: 0
+X-V-ID: 72608826-e291-4037-ac58-99e38a915544
+Received: from mail-in24.apple.com (mail-in24.apple.com [17.171.2.24])
+ by ma1-postinop-sz09.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.20170222 64bit (built Feb 22
+ 2017)) with ESMTPS id <0ORH007F1LAAHN61@ma1-postinop-sz09.apple.com> for
+ bv-gt1@group.apple.com; Tue, 13 Jun 2017 05:56:37 -0700 (PDT)
+X-Va-A:
+X-Va-T-CD: 0bae5a696622c5de5289d625a576be3d
+X-Va-E-CD: c13d6635795f7e5327899ec31f0b2b45
+X-Va-R-CD: a8acc42901ed1e3f6af6318b9f9854d2
+X-Va-CD: 0
+X-Va-ID: 0c854cbc-fdc9-444f-8d21-4ed566a13309
+X-V-A:
+X-V-T-CD: 0bae5a696622c5de5289d625a576be3d
+X-V-E-CD: c13d6635795f7e5327899ec31f0b2b45
+X-V-R-CD: a8acc42901ed1e3f6af6318b9f9854d2
+X-V-CD: 0
+X-V-ID: 6cb9d1da-aba5-490e-8330-6c7c119de449
+X-AuditID: 1180715a-b1fff70000002622-b2-593fe107db29
+Received: from nwk-aaemail-lapp03.apple.com
+ (nwk-aaemail-lapp03.apple.com [17.151.62.68])
+	(using TLS with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client did not present a certificate)
+	by mail-in24.apple.com (Apple Secure Mail Relay)
+ with SMTP id 47.A3.17842.301EF395; Tue, 13 Jun 2017 05:56:36 -0700 (PDT)
+Received: from pps.filterd (nwk-aaemail-lapp03.apple.com [127.0.0.1])
+	by nwk-aaemail-lapp03.apple.com (8.16.0.20/8.16.0.20)
+ with SMTP id v5DCpo9g053830	for <bv-gt1@group.apple.com>; Tue,
+ 13 Jun 2017 05:56:34 -0700
+Received: from mr11p00im-asmtp001.me.com
+ (mr11p00im-asmtp001.me.com [17.110.69.252])	by nwk-aaemail-lapp03.apple.com
+ with ESMTP id 2b0da42uhv-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT)
+	for <bv-gt1@group.apple.com>; Tue, 13 Jun 2017 05:56:34 -0700
+Received: from process-dkim-sign-daemon.mr11p00im-asmtp001.me.com by
+ mr11p00im-asmtp001.me.com
+ (Oracle Communications Messaging Server 7.0.5.38.0 64bit (built Feb 26 2016))
+ id <0ORH00A00KY3ES00@mr11p00im-asmtp001.me.com> for bv-gt1@group.apple.com
+ (ORCPT gtbv1+2B9223@icloud.com); Tue, 13 Jun 2017 12:56:16 +0000 (GMT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=icloud.com;	s=04042017;
+ t=1497358576;	bh=HEkKNZ8+fE4pujuljKGlsvJh2f7iSxctnsChGDEZy4M=;
+	h=From:To:Message-id:Subject:Date:Content-type:MIME-version;
+	b=tARpzAgelxOtgd60cyVNq7yWtI4lu1MmvxtMZtUxFW1LpS7txs/LdFUeh/k4Jv0tx
+ 03Z9jhhMLZXKzjK/GHYxf4xD70HZ5bDjj65Q7Xig1Pc9paKQt2hYr4Png4Q1+fNhrE
+ agRgOVYwJWhTN14sDtOor0eZgGKmW3sCfHtiTzHy2gef1qtLp55lwf9xqBlRZB5q90
+ aNpdRHT3uMy6o7hY0uDjhnD4LpX06+jpDqZm4hlxbibd1MxAh+TeUulBLvvfn1z/gD
+ zuHhM6JOMJDE0co3asbTv2pYt5oplm00S7scp36XYDETbt5b+uBzGEifI9JrLNWFZj
+ jQJzG8Lf5niuA==
+Received: from pv37p45im-mail45541a.me.com ([17.133.142.82])
+ by mr11p00im-asmtp001.me.com
+ (Oracle Communications Messaging Server 7.0.5.38.0 64bit (built Feb 26 2016))
+ with ESMTP id <0ORH00HKWL9Q2H20@mr11p00im-asmtp001.me.com> for
+ bv-gt1@group.apple.com (ORCPT gtbv1+2B9223@icloud.com); Tue,
+ 13 Jun 2017 12:56:15 +0000 (GMT)
+Received: from st11p00im-smtpin032.me.com ([17.172.80.178])
+ by ms45541.mac.com (Oracle Communications Messaging Server 7.0.5.38.0 64bit
+ (built Aug  1 2016)) with ESMTP id <0ORH00HB2L9Q8S80@ms45541.mac.com> for
+ bv-gt1@group.apple.com (ORCPT gtbv1+2B9223@icloud.com); Tue,
+ 13 Jun 2017 12:56:14 +0000 (GMT)
+Received: from mail3.amadeus.net (mail1.amadeus.net [82.150.225.79])
+ by st11p00im-smtpin032.me.com
+ (Oracle Communications Messaging Server 7.0.5.38.0 64bit (built Feb 26 2016))
+ with ESMTP id <0ORH01AMBL9OQ090@st11p00im-smtpin032.me.com> for
+ gtbv1+9223@icloud.com (ORCPT gtbv1+2B9223@icloud.com); Tue,
+ 13 Jun 2017 12:56:14 +0000 (GMT)
+Received-SPF: pass (st11p00mm-spfmilter009.mac.com: domain of
+ tdsfndprd@amadeus.com designates 82.150.225.79 as permitted sender)
+ receiver=st11p00mm-spfmilter009.mac.com; client-ip=82.150.225.79;
+ helo=mail3.amadeus.net; envelope-from=tdsfndprd@amadeus.com;
+Received: from obeap268 (nat-dns-mnp.amadeus.net [82.150.225.129])
+	by mail3.amadeus.net (Postfix) with ESMTP id 7729C448007	for
+ <gtbv1+9223@icloud.com>; Tue, 13 Jun 2017 12:56:12 +0000 (GMT)
+From: "Aircorsica.Com" <eticket@amadeus.com>
+To: gtbv1+9223@icloud.com
+Message-id: <CTS/XK/C50B081E5825/1@tds.amadeus.com>
+FND-Request-ID: <CTS/XK/C50B081E5825/1@tds.amadeus.com>
+Job-ID: 1
+Subject: SIMON/ERIC 03OCT FSC ORY
+Date: $now_full_text$
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,,
+ definitions=2017-06-13_07:,, signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ clxscore=1030 suspectscore=16 malwarescore=0 phishscore=0 adultscore=0
+ bulkscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.0.1-1701120000 definitions=main-1706130227
+x-icloud-spam-score: 3131331
+ f=amadeus.com;e=amadeus.com;is=yes;ir=no;spf=pass;dkim=none;dmarc=pass/none;gdwl=absent;pps=ham;clxs=ham;clxw=neutral
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ clxscore=142 suspectscore=16 malwarescore=0 phishscore=0 adultscore=0
+ bulkscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.0.1-1701120000 definitions=main-1706130227
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,,
+ definitions=2017-06-13_07:,, signatures=0
+x-dmarc-info: pass=pass; dmarc-policy=none; s=r1; d=r0
+x-dmarc-policy: v=DMARC1; p=none; fo=1;
+ rua=mailto:dmarc_agg@auth.returnpath.net;
+ ruf=mailto:dmarc_afrf@auth.returnpath.net
+X-Proofpoint-SPF-Result: softfail
+X-Proofpoint-SPF-Record: v=spf1 mx include:spf.messagelabs.com
+ include:cmail1.com ip4:82.150.225.79 ip4:85.236.96.23 ip4:208.85.53.163
+ ip4:82.150.225.80 ip4:171.17.133.24 ip4:82.150.225.36
+ include:spf.jump-send.com ~all
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,,
+ definitions=2017-06-13_07:,, signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ suspectscore=16 malwarescore=0 phishscore=0 adultscore=0 bulkscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1703280000
+ definitions=main-1706130226
+Authentication-results: symauth.service.identifier; dkim=pass
+ header.d=icloud.com header.s=04042017 header.v=1 header.a=rsa-sha256
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFtrKJsWRmVeSWpSXmKPExsUi2FBYp8v+0D7S4HSflMWueysZLd6f28Zs
+	cXP7SmaLTb0rgMSdxawW21+pWtyauIPV4uu88ywWf6f1s1mc2/iNxeJsl5fFv2ebmC0+NXxh
+	tFjWf4vR4krDL0aLqd3/mR0EPLae/MEWwBilYlOUX1qSqpCRX1xiq1QAJDPz8vUSCwpyUvWS
+	83OtjEyV9O0SVDK+ntzJXvDEuWJe+z7mBsbdhl2MnBwSAiYS5/bMY+li5OIQEtjGJLFpxwtG
+	COcLo8Su0zugMvOYJL7f2cUG0sIrICjxY/I9FhCbWSBM4tv6O1BFS5gkfk2ZzQoxl13iz68d
+	LBC2tkTD7ctANgeY3bnPCSb8d/dTdgibS2LB1tNQrboSK89cZISw2STWn1jCBGFrSXw9f5YZ
+	xp76/zU7jP3r/zeoek6J818mskOs0pG48IwT4rSDTBINDQfZqOC0XduXUeg0TrDTOromsE5g
+	dJ6FFKKzkEIUwlaXmDRvETOErS3x5N0FVghbTeL/no+syOILGNlWMQoUpeYkVpoh4n4TIyQR
+	Ru1gbFhudYhRgINRiYd3xSS7SCHWxLLiytxDjBIczEoivJ8mAIV4UxIrq1KL8uOLSnNSiw8x
+	JnOwCExklhJNzgcm6bySeEMTEyNTY0tjM2MzQ1PShJXEeZO8LCKFBNITS1KzU1MLUotgtjBx
+	cEo1MPrUFF+Kv72j8L0ky9FTF78enfrh9Nqg/0fWJd8+NKElfn+XbOjuyIXh8jcPqb46uyz9
+	fNzjST+mFd2/emFChUh++rrFUzM9mH8LnJn0YFO+aM6+h6/WR528KCq2rsP8j1N7wrTzP3a3
+	XilR+Lqi8KRSd0e94mSlDZMrFh7Jk9c7Ge/afiVacuI9JZbijERDLeai4kQAmmO3kMgDAAA=
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA1VTb0wbZRzmvbu2R8PBtbTuR63ALlOnbjhwThMnmAlxiR/mB6Pp/LdTTlpX
+	Su2VBUyMZTGMIQ4qsmKdHQU0DhwIc5QwQS1hQ5wbA7YJcxRiZUtpQAYS1pHNux5M9uXyPO/z
+	PO/ved+7I3G1i9SRXJGds1lYMyNXEipXZvZmYjLLsGWoL/np30pc2HNo5/LRPuIltFu5PZcz
+	m/Zxtscz9yiNjV1lyDr/fNFPF6sUDnQ2vRzFkkBvhU8GKohypCTVdC8GB6smFBIZRdDgdGMS
+	OYKBo3ZqhZzG4ESFD4mEoE8RUNmwtJI5h0FtRWDF5sOgqfXIinIZg67e6RVSisHQwDW5RPwI
+	6s8fxcU2cnoTuOZ/JUSsoZPg0pkQJmKKfgIWGrqR5HkKapoORD1KOhZavd0yESfS68EzMxn1
+	EPSDcKjdFcU4/ToMTw3g0j4qWKoeF7KkcPK9UPdPvNgB6AMYzDpKCYl8jmDsQkQmEaGqu2kO
+	3ZMQr20bXLg0Skj4I5it68YlLJS4fR6XsgEEi797FavZjrod0vpNBGF/SXQaovcjcAQPyqtQ
+	qntNW/eatm4hj9MPQ6tHLVkeg2+807iEH4IrHRcVa9frkLwJJeazJvNmkyVjaxprtZq5tHcK
+	8tuR+Lk0Y9CJFqbT/YgmERNHfftZpkEtY/fxxfl+lERijJb6YWS7QR3/dkFusZHljW/ZCs0c
+	L7wlEmc0lDeQZVBTuWzxB5ytYFW6nySYdRT/7DMGNZ3H2rm9HGflbKsqRir8SE+SDFDviWmV
+	jcvjit41me1rPbHiQymOiRPGaMbEMbyVzedNeZJpAK3XraMaxwWBFgVjoeXuBtEfwZKzPIQe
+	0CVSKCYmRh0nNMg32e/VQ6gbCadOpHLFInEmi/3u9hkNgkJP0VDtSgFPZBcsne5BcPaPGxgM
+	er6XQft8jwxuOntlMPpdKA6WHL54GLk2nACBtmAChK+WqaCn84YKPLeuJ8LM4WoNOKe+0EK4
+	elwLdzxhLSyfWdTCTOTcfVDrPAYwV+lKgp/LfUngm3Xo4FBPUAcLn/6rg/4Wrx5aQmE9VPyy
+	qAen52oK1Lf1psKfQ81MSLgfTLify+Irong7+/8BdA60+8XsQfqKZv/G8Bvcy++n/lgzopvb
+	pb3zVUZOJMeV0Il9mPbIrb6ur+s2sYEJRUtWyu1X+FBjqWVPWTLT3Fxj/XvyZHYby1iNOzY8
+	Gbwenxz560v8xMnjG1/duaGkf9h1rHBwqb96sUM/8Zp9y9BxhaG+MfiCvtI9NvXmtlMakzPn
+	Y4bgjWz6o7iNZ/8Dpe72BaoEAAA=
+X-Member-Count: 16
+Precedence: List
+Sender: bv-gt1@group.apple.com
+List-Id: <bv-gt1@group.apple.com>
+
+
+--Boundary_(ID_X9LtAWvp0QdEUQBMvp0paw)
+Content-type: text/plain; charset=UTF-8
+Content-transfer-encoding: quoted-printable
+
+
+---------------------------------------------------------------------------=
+---
+
+This document is automatically generated.
+Please do not respond to this mail.
+
+                           BILLET ELECTRONIQUE
+                      RE=C3=87U D'ITIN=C3=89RAIRE DU PASSAGER
+
+ AIRCORSICA.COM                     DATE: 13 JUN $year$
+ CCM AIRLINES                      AGENT: 9999
+ AEROPORT NAPOLEON BONAPART          NOM: SIMON/ERIC
+ AJACCIO
+ IATA       : 204 92183
+ T=C3=89L=C3=89PHONE  :  0825 35 35 35 (0.15 EUR/MIN)
+
+ COMPAGNIE EMETTRICE                    : AIR CORSICA
+ NUM=C3=89RO DE BILLET                       : ETKT 146 2402409794
+ REFERENCE DU DOSSIER : AMADEUS: WS3COO, AIRLINE: XK/WS3COO
+
+ DE /=C3=80           VOL     CL DATE   DEP      BASE TARIF    NVAV  NVAP  =
+BAG  ST
+
+ FIGARI SUD      XK 1401 W  03OCT  1500     WFFFR                     2PC  =
+OK
+ CORSE
+                    VOL ASSUR=C3=89 PAR: AIR FRANCE
+ PARIS ORLY                       HEURE D'ARRIV=C3=89E:     DATE D'ARRIV=C3=
+=89E: 03OCT
+                                  1640
+ TERMINAL:W         HEURE LIMITE ENREGISTREMENT:1430
+
+ PARIS ORLY      XK 1400 W  09OCT  1125     WFFFR                     2PC  =
+OK
+ TERMINAL:W         VOL ASSUR=C3=89 PAR: AIR FRANCE
+ FIGARI SUD                       HEURE D'ARRIV=C3=89E:     DATE D'ARRIV=C3=
+=89E: 09OCT
+ CORSE                            1305
+                    HEURE LIMITE ENREGISTREMENT:1055
+
+
+ A L'ENREGISTREMENT, VOUS DEVREZ PRESENTER UNE PIECE D'IDENTITE AVEC
+ PHOTOGRAPHIE, ET LE DOCUMENT DONT VOUS AVEZ DONNE LA REFERENCE A LA
+ RESERVATION
+
+
+
+ CALCUL DU TARIF    :FSC XK PAR248.00XK FSC248.00EUR496.00ENDXT
+                     8.96FR27.70FR9.14FR3.59UI
+
+ TARIF A=C3=89RIEN       : EUR     496.00
+ TAXES              : EUR     2.26IZ    EUR     16.25QW   EUR     8.96FR
+                      EUR     27.70FR   EUR     9.14FR    EUR     3.59UI
+ TOTAL              : EUR     563.90
+
+
+CONFORM=C3=89MENT =C3=80 LA LOI GRENELLE VOUS AVEZ LA POSSIBILIT=C3=89 DE P=
+RENDRE
+CONNAISSANCE DE LA QUANTIT=C3=89 DE DIOXYDE DE CARBONE CONSOMM=C3=89E EN CL=
+IQUANT SUR LE
+LIEN SUIVANT :
+HTTP://WWW.ICAO.INT/ENVIRONMENTAL-PROTECTION/CARBONOFFSET/PAGES/DEFAULT.ASP=
+X
+
+AVIS
+LE TRANSPORT ET LES AUTRES SERVICES FOURNIS PAR LE TRANSPORTEUR SONT SOUMIS
+AUX CONDITIONS G=C3=89N=C3=89RALES DE TRANSPORT QUI SONT INCLUSES ICI, EN R=
+=C3=89F=C3=89RENCE. CES
+CONDITIONS PEUVENT =C3=8ATRE OBTENUES AUPR=C3=88S DE LA COMPAGNIE =C3=89MET=
+TRICE DU BILLET.
+
+LE MOT ''BILLET ELECTRONIQUE'' D=C3=89SIGNE L''ITIN=C3=89RAIRE/RE=C3=87U =
+=C3=89MIS PAR LE
+TRANSPORTEUR OU POUR SON COMPTE, TOUT DOCUMENT =C3=89LECTRONIQUE S''Y RAPPO=
+RTANT
+ET, LE CAS =C3=89CH=C3=89ANT, UN DOCUMENT D''EMBARQUEMENT.
+
+LES PASSAGERS EFFECTUANT UN VOYAGE VERS UNE DESTINATION FINALE OU INCLUANT =
+UN
+ARR=C3=8AT DANS UN AUTRE PAYS QUE CELUI DE D=C3=89PART SONT INFORM=C3=89S Q=
+UE LES CONVENTIONS
+CONNUES SOUS LE NOM DE CONVENTION DE MONTR=C3=89AL,  OU CONVENTION DE VARSO=
+VIE QUI
+L=E2=80=99A PR=C3=89C=C3=89D=C3=89E, INCLUANT SES AMENDEMENTS (LE SYST=C3=
+=88ME CONVENTION DE VARSOVIE),
+PEUVENT S=E2=80=99APPLIQUER =C3=80 L=E2=80=99ENSEMBLE DU VOYAGE, Y COMPRIS =
+TOUTE PARTIE DE CELUI-CI
+EFFECTU=C3=89E DANS UN M=C3=8AME PAYS. POUR CES PASSAGERS, LA CONVENTION AP=
+PLICABLE,
+ INCLUANT LES CONTRATS SP=C3=89CIFIQUES DE TRANSPORT LI=C3=89S =C3=80 TOUT =
+TARIF APPLICABLE,
+R=C3=89GIT ET PEUT LIMITER LA RESPONSABILIT=C3=89 DE LA COMPAGNIE. CES CONV=
+ENTIONS
+R=C3=89GISSENT ET PEUVENT LIMITER LA RESPONSABILIT=C3=89 DES TRANSPORTEURS =
+A=C3=89RIENS EN
+CAS DE D=C3=89C=C3=88S OU DE PR=C3=89JUDICE CORPOREL, DE PERTE OU DE DOMMAG=
+ES CAUS=C3=89S AUX
+BAGAGES, OU DE RETARD.
+
+CERTAINES MATI=C3=88RES OU OBJETS, DITS =C2=AB MARCHANDISES DANGEREUSES =C2=
+=BB, TELS QUE LES
+A=C3=89ROSOLS, LES FEUX D'ARTIFICES ET LES LIQUIDES INFLAMMABLES SONT STRIC=
+TEMENT
+INTERDITS =C3=80 BORD. SI VOUS NE COMPRENEZ PAS CES RESTRICTIONS, VEUILLEZ-=
+VOUS
+ADRESSER =C3=80 VOTRE COMPAGNIE A=C3=89RIENNE POUR PLUS D=E2=80=99INFORMATI=
+ONS.
+
+--Boundary_(ID_X9LtAWvp0QdEUQBMvp0paw)
+Content-type: text/html; charset=UTF-8
+Content-transfer-encoding: quoted-printable
+
+<body><B><FONT FACE=3D"Arial" SIZE=3D5 COLOR=3D"#0000ff"><P ALIGN=3D"CENTER=
+">SIMON/ERIC 03OCT FSC ORY</P></FONT></B><FONT FACE=3D"Courier New" SIZE=3D=
+"3" ><PRE>
+---------------------------------------------------------------------------=
+---
+
+This document is automatically generated.
+Please do not respond to this mail.
+
+                           BILLET ELECTRONIQUE
+                      RE=C3=87U D'ITIN=C3=89RAIRE DU PASSAGER
+
+ AIRCORSICA.COM                     DATE: 13 JUN $year$
+ CCM AIRLINES                      AGENT: 9999
+ AEROPORT NAPOLEON BONAPART          NOM: SIMON/ERIC
+ AJACCIO
+ IATA       : 204 92183
+ T=C3=89L=C3=89PHONE  :  0825 35 35 35 (0.15 EUR/MIN)
+
+ COMPAGNIE EMETTRICE                    : AIR CORSICA
+ NUM=C3=89RO DE BILLET                       : ETKT 146 2402409794
+ REFERENCE DU DOSSIER : AMADEUS: WS3COO, AIRLINE: XK/WS3COO
+
+ DE /=C3=80           VOL     CL DATE   DEP      BASE TARIF    NVAV  NVAP  =
+BAG  ST
+
+ FIGARI SUD      XK 1401 W  03OCT  1500     WFFFR                     2PC  =
+OK
+ CORSE
+                    VOL ASSUR=C3=89 PAR: AIR FRANCE
+ PARIS ORLY                       HEURE D'ARRIV=C3=89E:     DATE D'ARRIV=C3=
+=89E: 03OCT
+                                  1640
+ TERMINAL:W         HEURE LIMITE ENREGISTREMENT:1430
+
+ PARIS ORLY      XK 1400 W  09OCT  1125     WFFFR                     2PC  =
+OK
+ TERMINAL:W         VOL ASSUR=C3=89 PAR: AIR FRANCE
+ FIGARI SUD                       HEURE D'ARRIV=C3=89E:     DATE D'ARRIV=C3=
+=89E: 09OCT
+ CORSE                            1305
+                    HEURE LIMITE ENREGISTREMENT:1055
+
+
+ A L'ENREGISTREMENT, VOUS DEVREZ PRESENTER UNE PIECE D'IDENTITE AVEC
+ PHOTOGRAPHIE, ET LE DOCUMENT DONT VOUS AVEZ DONNE LA REFERENCE A LA
+ RESERVATION
+
+
+
+ CALCUL DU TARIF    :FSC XK PAR248.00XK FSC248.00EUR496.00ENDXT
+                     8.96FR27.70FR9.14FR3.59UI
+
+ TARIF A=C3=89RIEN       : EUR     496.00
+ TAXES              : EUR     2.26IZ    EUR     16.25QW   EUR     8.96FR
+                      EUR     27.70FR   EUR     9.14FR    EUR     3.59UI
+ TOTAL              : EUR     563.90
+
+
+CONFORM=C3=89MENT =C3=80 LA LOI GRENELLE VOUS AVEZ LA POSSIBILIT=C3=89 DE P=
+RENDRE
+CONNAISSANCE DE LA QUANTIT=C3=89 DE DIOXYDE DE CARBONE CONSOMM=C3=89E EN CL=
+IQUANT SUR LE
+LIEN SUIVANT :
+HTTP://WWW.ICAO.INT/ENVIRONMENTAL-PROTECTION/CARBONOFFSET/PAGES/DEFAULT.ASP=
+X
+
+AVIS
+LE TRANSPORT ET LES AUTRES SERVICES FOURNIS PAR LE TRANSPORTEUR SONT SOUMIS
+AUX CONDITIONS G=C3=89N=C3=89RALES DE TRANSPORT QUI SONT INCLUSES ICI, EN R=
+=C3=89F=C3=89RENCE. CES
+CONDITIONS PEUVENT =C3=8ATRE OBTENUES AUPR=C3=88S DE LA COMPAGNIE =C3=89MET=
+TRICE DU BILLET.
+
+LE MOT ''BILLET ELECTRONIQUE'' D=C3=89SIGNE L''ITIN=C3=89RAIRE/RE=C3=87U =
+=C3=89MIS PAR LE
+TRANSPORTEUR OU POUR SON COMPTE, TOUT DOCUMENT =C3=89LECTRONIQUE S''Y RAPPO=
+RTANT
+ET, LE CAS =C3=89CH=C3=89ANT, UN DOCUMENT D''EMBARQUEMENT.
+
+LES PASSAGERS EFFECTUANT UN VOYAGE VERS UNE DESTINATION FINALE OU INCLUANT =
+UN
+ARR=C3=8AT DANS UN AUTRE PAYS QUE CELUI DE D=C3=89PART SONT INFORM=C3=89S Q=
+UE LES CONVENTIONS
+CONNUES SOUS LE NOM DE CONVENTION DE MONTR=C3=89AL,  OU CONVENTION DE VARSO=
+VIE QUI
+L=E2=80=99A PR=C3=89C=C3=89D=C3=89E, INCLUANT SES AMENDEMENTS (LE SYST=C3=
+=88ME CONVENTION DE VARSOVIE),
+PEUVENT S=E2=80=99APPLIQUER =C3=80 L=E2=80=99ENSEMBLE DU VOYAGE, Y COMPRIS =
+TOUTE PARTIE DE CELUI-CI
+EFFECTU=C3=89E DANS UN M=C3=8AME PAYS. POUR CES PASSAGERS, LA CONVENTION AP=
+PLICABLE,
+ INCLUANT LES CONTRATS SP=C3=89CIFIQUES DE TRANSPORT LI=C3=89S =C3=80 TOUT =
+TARIF APPLICABLE,
+R=C3=89GIT ET PEUT LIMITER LA RESPONSABILIT=C3=89 DE LA COMPAGNIE. CES CONV=
+ENTIONS
+R=C3=89GISSENT ET PEUVENT LIMITER LA RESPONSABILIT=C3=89 DES TRANSPORTEURS =
+A=C3=89RIENS EN
+CAS DE D=C3=89C=C3=88S OU DE PR=C3=89JUDICE CORPOREL, DE PERTE OU DE DOMMAG=
+ES CAUS=C3=89S AUX
+BAGAGES, OU DE RETARD.
+
+CERTAINES MATI=C3=88RES OU OBJETS, DITS =C2=AB MARCHANDISES DANGEREUSES =C2=
+=BB, TELS QUE LES
+A=C3=89ROSOLS, LES FEUX D'ARTIFICES ET LES LIQUIDES INFLAMMABLES SONT STRIC=
+TEMENT
+INTERDITS =C3=80 BORD. SI VOUS NE COMPRENEZ PAS CES RESTRICTIONS, VEUILLEZ-=
+VOUS
+ADRESSER =C3=80 VOTRE COMPAGNIE A=C3=89RIENNE POUR PLUS D=E2=80=99INFORMATI=
+ONS.
+</PRE></FONT></body>=
+
+--Boundary_(ID_X9LtAWvp0QdEUQBMvp0paw)--

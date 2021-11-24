@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.usbdevicectl.app</string>
+	<key>StandardOutPath</key>
+	<string>/var/log/usbdevicectl.log</string>
+	<key>StandardErrorPath</key>
+	<string>/var/log/usbdevicectl.log</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/bin/usbdevicectl</string>
+		<string>--port</string>
+		<string>0x80800000</string>
+		<string>--connect=AppleUSBTestInterface</string>
+	</array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>KeepAlive</key>
+	<false/>
+</dict>
+</plist>

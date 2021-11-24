@@ -1,0 +1,28 @@
+{
+  "name": "CVS Pharmacy",
+  "category": "health",
+  "rewardsType": "applePay",
+  "source": "contactless",
+  "city": "San Francisco",
+  "state": "CA",
+  "merchant": {
+    "category": "health",
+    "detailedCategory": "health.pharmacy",
+    "heroImageURL": "https://s3-media2.fl.yelpcdn.com/bphoto/HXFx5z8RjgX7U_rLdkP2wA/ls.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 1580462163505354756,
+    "locationLatitude": 37.78951428933633,
+    "locationLongitude": -122.400666475296,
+    "name": "CVS Pharmacy",
+    "phoneNumber": "+1 (415) 777-1654",
+    "url": "https://www.cvs.com/store-locator/cvs-pharmacy-address/map/581+Market+Street-San+Francisco-CA-94105/storeid=10035"
+  },
+  "brand": {
+    "category": "health",
+    "detailedCategory": "health.pharmacy",
+    "identifier": 4281817736107171455,
+    "logoURL": "http://is3.mzstatic.com/image/thumb/jn4Z3GeMK1r3fMOJW0ef0Q/258x258.png",
+    "name": "CVS Pharmacy",
+    "url": "https://www.cvs.com"
+  }
+}

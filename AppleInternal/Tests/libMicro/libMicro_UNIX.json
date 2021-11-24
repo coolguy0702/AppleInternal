@@ -1,0 +1,935 @@
+{
+  "$schema": "https://stash.sd.apple.com/coreos/libmicro/libmicro-schema.json",
+  "name": "libMicro_UNIX",
+  "version": 1,
+  "description": "libMicro UNIX tests",
+  "comments": "Baseline is n69",
+  "defaults": {
+    "batch-size": 2000,
+    "duration": 1000,
+    "samples": 100
+  },
+  "tests": [
+    {
+      "name": "getppid",
+      "weight": 2,
+      "cases": [
+        {
+          "baseline": 0.29002
+        }
+      ]
+    },
+    {
+      "name": "chdir",
+      "cases": [
+        {
+          "baseline": 0.88689
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "cases": [
+        {
+          "baseline": 2.34996,
+          "batch-size": 100
+        }
+      ]
+    },
+    {
+      "name": "stat",
+      "cases": [
+        {
+          "baseline": 5.23767,
+          "batch-size": 500,
+          "tmpdir": 1
+        }
+      ]
+    },
+    {
+      "name": "fcntl",
+      "cases": [
+        {
+          "baseline": 0.35058
+        }
+      ]
+    },
+    {
+      "name": "fcntl_ndelay",
+      "cases": [
+        {
+          "baseline": 0.47827
+        }
+      ]
+    },
+    {
+      "name": "lseek",
+      "defaults": {
+        "batch-size": 200
+      },
+      "cases": [
+        {
+          "baseline": 0.60038,
+          "buffer-size": "8k"
+        }
+      ]
+    },
+    {
+      "name": "pwrite",
+      "defaults": {
+        "batch-size": 50,
+        "temp-file": 1
+      },
+      "cases": [
+        {
+          "baseline": 1.86834,
+          "size": "1k"
+        },
+        {
+          "baseline": 2.30166,
+          "size": "10k"
+        },
+        {
+          "baseline": 10.32668,
+          "size": "100k",
+          "batch-size": 5
+        }
+      ]
+    },
+    {
+      "name": "pread",
+      "defaults": {
+        "batch-size": 50,
+        "temp-file": 1
+      },
+      "cases": [
+        {
+          "baseline": 1.30168,
+          "buffer-size": "1k"
+        },
+        {
+          "baseline": 1.72584,
+          "buffer-size": "10k"
+        },
+        {
+          "baseline": 9.79168,
+          "buffer-size": "100k",
+          "batch-size": 5
+        }
+      ]
+    },
+    {
+      "name": "writev",
+      "defaults": {
+        "batch-size": 50,
+        "temp-file": 1
+      },
+      "cases": [
+        {
+          "baseline": 3.02418,
+          "buffer-size": "1k"
+        },
+        {
+          "baseline": 14.92668,
+          "buffer-size": "10k"
+        },
+        {
+          "baseline": 111.4502,
+          "buffer-size": "100k",
+          "batch-size": 5
+        }
+      ]
+    },
+    {
+      "name": "write",
+      "defaults": {
+        "batch-size": 50,
+        "temp-file": 1
+      },
+      "cases": [
+        {
+          "baseline": 1.8125,
+          "size": "1k"
+        },
+        {
+          "baseline": 2.58584,
+          "size": "10k"
+        },
+        {
+          "baseline": 10.5086,
+          "size": "100k",
+          "batch-size": 5
+        }
+      ]
+    },
+    {
+      "name": "read",
+      "defaults": {
+        "batch-size": 50,
+        "temp-file": 1
+      },
+      "cases": [
+        {
+          "baseline": 1.33502,
+          "buffer-size": "1k"
+        },
+        {
+          "baseline": 2.13084,
+          "buffer-size": "10k"
+        },
+        {
+          "baseline": 10.2876,
+          "buffer-size": "100k",
+          "batch-size": 10
+        }
+      ]
+    },
+    {
+      "name": "munmap",
+      "binary": "munmap",
+      "cases": [
+        {
+          "baseline": 0.81933,
+          "mapping-length": "8k",
+          "temp-file": 1
+        },
+        {
+          "baseline": 0.79329,
+          "mapping-length": "128k",
+          "temp-file": 1
+        },
+        {
+          "baseline": 0.64029,
+          "mapping-length": "8k",
+          "file": "MAP_ANON"
+        },
+        {
+          "baseline": 0.64052,
+          "mapping-length": "128k",
+          "file": "MAP_ANON"
+        }
+      ]
+    },
+    {
+      "name": "munmap_read",
+      "binary": "munmap",
+      "defaults": {
+        "read-byte": 1,
+        "batch-size": 1000
+      },
+      "cases": [
+        {
+          "baseline": 4.684,
+          "mapping-length": "8k",
+          "temp-file": 1
+        },
+        {
+          "baseline": 4.83417,
+          "mapping-length": "128k",
+          "temp-file": 1,
+          "batch-size": 100
+        },
+        {
+          "baseline": 1.70521,
+          "mapping-length": "8k",
+          "file": "MAP_ANON"
+        },
+        {
+          "baseline": 3.82417,
+          "mapping-length": "128k",
+          "file": "MAP_ANON",
+          "batch-size": 100
+        }
+      ]
+    },
+    {
+      "name": "munmap_write",
+      "binary": "munmap",
+      "defaults": {
+        "write-byte": 1,
+        "batch-size": 1000
+      },
+      "cases": [
+        {
+          "baseline": 1.83704,
+          "mapping-length": "8k",
+          "temp-file": 1
+        },
+        {
+          "baseline": 4.03501,
+          "mapping-length": "128k",
+          "temp-file": 1,
+          "batch-size": 100
+        },
+        {
+          "baseline": 1.70683,
+          "mapping-length": "8k",
+          "file": "MAP_ANON"
+        },
+        {
+          "baseline": 3.89959,
+          "mapping-length": "128k",
+          "file": "MAP_ANON",
+          "batch-size": 100
+        }
+      ]
+    },
+    {
+      "name": "mmap",
+      "cases": [
+        {
+          "baseline": 1.75267,
+          "mapping-length": "8k",
+          "temp-file": 1
+        },
+        {
+          "baseline": 1.77625,
+          "mapping-length": "128k",
+          "temp-file": 1
+        },
+        {
+          "baseline": 0.83648,
+          "mapping-length": "8k",
+          "file": "MAP_ANON"
+        },
+        {
+          "baseline": 0.85267,
+          "mapping-length": "128k",
+          "file": "MAP_ANON"
+        }
+      ]
+    },
+    {
+      "name": "mmap_read",
+      "binary": "mmap",
+      "defaults": {
+        "read-byte": 1,
+        "batch-size": 1000
+      },
+      "cases": [
+        {
+          "baseline": 3.12379,
+          "mapping-length": "8k",
+          "temp-file": 1
+        },
+        {
+          "baseline": 10.46328,
+          "mapping-length": "128k",
+          "temp-file": 1,
+          "batch-size": 100
+        },
+        {
+          "baseline": 4.65029,
+          "mapping-length": "8k",
+          "file": "MAP_ANON"
+        },
+        {
+          "baseline": 24.0487,
+          "mapping-length": "128k",
+          "file": "MAP_ANON",
+          "batch-size": 100
+        }
+      ]
+    },
+    {
+      "name": "mmap_write",
+      "binary": "mmap",
+      "defaults": {
+        "write-byte": 1,
+        "batch-size": 1000
+      },
+      "cases": [
+        {
+          "baseline": 5.91879,
+          "mapping-length": "8k",
+          "temp-file": 1
+        },
+        {
+          "baseline": 27.53125,
+          "mapping-length": "128k",
+          "temp-file": 1,
+          "batch-size": 100
+        },
+        {
+          "baseline": 4.48488,
+          "mapping-length": "8k",
+          "file": "MAP_ANON"
+        },
+        {
+          "baseline": 23.585,
+          "mapping-length": "128k",
+          "file": "MAP_ANON",
+          "batch-size": 100
+        }
+      ]
+    },
+    {
+      "name": "pipe",
+      "defaults": {
+        "batch-size": 10
+      },
+      "cases": [
+        {
+          "baseline": 1.1619,
+          "buffer-size": 1,
+          "transport": "pipe",
+          "mode": "st"
+        },
+        {
+          "baseline": 14.3959,
+          "buffer-size": 1,
+          "transport": "pipe",
+          "mode": "mt"
+        },
+        {
+          "baseline": 14.9959,
+          "buffer-size": 1,
+          "transport": "pipe",
+          "mode": "mp"
+        }
+      ]
+    },
+    {
+      "name": "gettimeofday",
+      "cases": [
+        {
+          "baseline": 0.03628
+        }
+      ]
+    },
+    {
+      "name": "recurse",
+      "cases": [
+        {
+          "baseline": 0.38238
+        }
+      ]
+    },
+    {
+      "name": "fork",
+      "comments": "bi-modal distribution ?",
+      "cases": [
+        {
+          "baseline": 445.5745,
+          "batch-size": 10
+        }
+      ]
+    },
+    {
+      "name": "exit",
+      "cases": [
+        {
+          "baseline": 191.2121,
+          "batch-size": 10
+        }
+      ]
+    },
+    {
+      "name": "posix_spawn",
+      "cases": [
+        {
+          "baseline": 1756.9084,
+          "batch-size": 10
+        }
+      ]
+    },
+    {
+      "name": "pthread_create",
+      "cases": [
+        {
+          "baseline": 24.89588,
+          "batch-size": 32
+        },
+        {
+          "baseline": 27.21973,
+          "batch-size": 128
+        }
+      ]
+    },
+    {
+      "name": "sigaction",
+      "cases": [
+        {
+          "baseline": 0.33379
+        }
+      ]
+    },
+    {
+      "name": "signal",
+      "cases": [
+        {
+          "baseline": 2.92227
+        }
+      ]
+    },
+    {
+      "name": "sigprocmask",
+      "cases": [
+        {
+          "baseline": 0.73796
+        }
+      ]
+    },
+    {
+      "name": "dup",
+      "cases": [
+        {
+          "baseline": 0.59064
+        }
+      ]
+    },
+    {
+      "name": "file_lock",
+      "cases": [
+        {
+          "baseline": 1.8084,
+          "batch-size": 10
+        }
+      ]
+    },
+    {
+      "name": "cascade_mutex",
+      "cases": [
+        {
+          "baseline": 0.1041,
+          "batch-size": 1000
+        },
+        {
+          "baseline": 111.34733,
+          "batch-size": 5,
+          "threads": 10
+        },
+        {
+          "baseline": 4238.993,
+          "batch-size": 5,
+          "threads": 200
+        }
+      ]
+    },
+    {
+      "name": "cascade_cond",
+      "cases": [
+        {
+          "baseline": 0.27792,
+          "batch-size": 100
+        },
+        {
+          "baseline": 97.7345,
+          "batch-size": 5,
+          "threads": 10
+        },
+        {
+          "baseline": 1249.74317,
+          "batch-size": 5,
+          "threads": 100
+        }
+      ]
+    },
+    {
+      "name": "cascade_lockf",
+      "cases": [
+        {
+          "baseline": 3.69292
+        },
+        {
+          "baseline": 128.0876,
+          "batch-size": 10,
+          "processes": 10
+        }
+      ]
+    },
+    {
+      "name": "cascade_flock",
+      "cases": [
+        {
+          "baseline": 3.8611
+        },
+        {
+          "baseline": 23.53206,
+          "processes": 10
+        }
+      ]
+    },
+    {
+      "name": "cascade_fcntl",
+      "defaults": {
+        "batch-size": 10
+      },
+      "cases": [
+        {
+          "baseline": 4.0084
+        },
+        {
+          "baseline": 134.7402,
+          "processes": 10
+        }
+      ]
+    },
+    {
+      "name": "times",
+      "cases": [
+        {
+          "baseline": 0.97364,
+          "batch-size": 500
+        }
+      ]
+    },
+    {
+      "name": "time",
+      "cases": [
+        {
+          "baseline": 0.05791,
+          "batch-size": 500
+        }
+      ]
+    },
+    {
+      "name": "localtime_r",
+      "cases": [
+        {
+          "baseline": 0.33245
+        }
+      ]
+    },
+    {
+      "name": "getrusage",
+      "cases": [
+        {
+          "baseline": 0.55979,
+          "batch-size": 1000
+        }
+      ]
+    },
+    {
+      "name": "strftime",
+      "cases": [
+        {
+          "baseline": 0.91625,
+          "batch-size": 100
+        }
+      ]
+    },
+    {
+      "name": "mktime",
+      "defaults": {
+        "batch-size": 100
+      },
+      "cases": [
+        {
+          "baseline": 6.92417
+        },
+        {
+          "baseline": 7.95305,
+          "threads": 2
+        }
+      ]
+    },
+    {
+      "name": "longjmp",
+      "cases": [
+        {
+          "baseline": 0.75133
+        }
+      ]
+    },
+    {
+      "name": "mutex",
+      "defaults": {
+        "batch-size": 1000
+      },
+      "cases": [
+        {
+          "baseline": 0.04525
+        },
+        {
+          "baseline": 0.09642,
+          "threads": 2
+        }
+      ]
+    },
+    {
+      "name": "strcmp",
+      "cases": [
+        {
+          "baseline": 0.00423,
+          "size": 10
+        },
+        {
+          "baseline": 0.09431,
+          "size": "1k"
+        }
+      ]
+    },
+    {
+      "name": "strcasecmp",
+      "cases": [
+        {
+          "baseline": 0.02831,
+          "size": 10
+        },
+        {
+          "baseline": 2.3631,
+          "size": "1k"
+        }
+      ]
+    },
+    {
+      "name": "strcpy",
+      "cases": [
+        {
+          "baseline": 0.01006,
+          "size": 10
+        },
+        {
+          "baseline": 0.13371,
+          "size": "1k",
+          "batch-size": 100
+        }
+      ]
+    },
+    {
+      "name": "strlen",
+      "cases": [
+        {
+          "baseline": 0.00548,
+          "size": 10
+        },
+        {
+          "baseline": 0.05833,
+          "size": "1k"
+        }
+      ]
+    },
+    {
+      "name": "strchr",
+      "cases": [
+        {
+          "baseline": 0.0041,
+          "size": 10
+        },
+        {
+          "baseline": 0.07235,
+          "size": "1k"
+        }
+      ]
+    },
+    {
+      "name": "strtol",
+      "cases": [
+        {
+          "baseline": 0.03071
+        }
+      ]
+    },
+    {
+      "name": "memcpy",
+      "cases": [
+        {
+          "baseline": 0.00556,
+          "buffer-size": 10
+        },
+        {
+          "baseline": 0.03779,
+          "buffer-size": "1k"
+        },
+        {
+          "baseline": 0.15223,
+          "buffer-size": "4k"
+        },
+        {
+          "batch-size": 50,
+          "baseline": 0.95991,
+          "buffer-size": "16k"
+        },
+        {
+          "batch-size": 10,
+          "baseline": 7.6662,
+          "buffer-size": "128k"
+        },
+        {
+          "batch-size": 5,
+          "baseline": 557.099,
+          "buffer-size": "4m"
+        },
+        {
+          "batch-size": 5,
+          "baseline": 1396.3658,
+          "buffer-size": "10m"
+        },
+        {
+          "batch-size": 5,
+          "baseline": 1100.6908,
+          "buffer-size": "4m",
+          "threads": 2
+        },
+        {
+          "batch-size": 5,
+          "baseline": 1582.4158,
+          "buffer-size": "4m",
+          "threads": 3
+        },
+        {
+          "batch-size": 5,
+          "baseline": 2190.9824,
+          "buffer-size": "4m",
+          "threads": 4
+        }
+      ]
+    },
+    {
+      "name": "malloc",
+      "defaults": {
+        "batch-size": 200,
+        "mallocs": 10
+      },
+      "cases": [
+        {
+          "baseline": 0.16768,
+          "size": 10
+        },
+        {
+          "baseline": 0.16816,
+          "size": 100
+        },
+        {
+          "baseline": 0.18071,
+          "size": "1k"
+        },
+        {
+          "baseline": 1.45346,
+          "size": "10k"
+        },
+        {
+          "baseline": 2.85658,
+          "batch-size": 5,
+          "size": "100k"
+        }
+      ]
+    },
+    {
+      "name": "malloc_t2",
+      "binary": "malloc",
+      "defaults": {
+        "batch-size": 200,
+        "mallocs": 10,
+        "threads": 2
+      },
+      "cases": [
+        {
+          "baseline": 0.19693,
+          "size": 10
+        },
+        {
+          "baseline": 0.22119,
+          "size": 100
+        },
+        {
+          "baseline": 0.20727,
+          "size": "1k"
+        },
+        {
+          "baseline": 2.08006,
+          "size": "10k"
+        },
+        {
+          "baseline": 5.65658,
+          "batch-size": 5,
+          "size": "100k"
+        }
+      ]
+    },
+    {
+      "name": "memrand",
+      "cases": [
+        {
+          "batch-size": 10000,
+          "baseline": 0.1437,
+          "size": "40m"
+        }
+      ]
+    },
+    {
+      "name": "memset",
+      "defaults": {
+        "batch-size": 1000
+      },
+      "cases": [
+        {
+          "baseline": 0.00508,
+          "buffer-size": 256
+        },
+        {
+          "alignment": 1,
+          "baseline": 0.01099,
+          "batch-size": 1000,
+          "buffer-size": 256
+        },
+        {
+          "baseline": 0.07325,
+          "buffer-size": "4k"
+        },
+        {
+          "baseline": 0.24045,
+          "buffer-size": "4k",
+          "uncached": 1
+        },
+        {
+          "baseline": 610.3126,
+          "batch-size": 10,
+          "buffer-size": "10m"
+        },
+        {
+          "baseline": 1233.2245,
+          "batch-size": 5,
+          "buffer-size": "10m",
+          "processes": 2
+        },
+        {
+          "baseline": 1232.3163,
+          "batch-size": 5,
+          "buffer-size": "10m",
+          "threads": 2
+        },
+        {
+          "baseline": 2469.2834,
+          "batch-size": 5,
+          "buffer-size": "10m",
+          "processes": 4
+        },
+        {
+          "baseline": 2470.4459,
+          "batch-size": 5,
+          "buffer-size": "10m",
+          "threads": 4
+        }
+      ]
+    },
+    {
+      "name": "lrand48",
+      "cases": [
+        {
+          "baseline": 0.005,
+          "batch-size": 1000
+        }
+      ]
+    },
+    {
+      "name": "log",
+      "cases": [
+        {
+          "baseline": 0.00892,
+          "batch-size": 300000
+        }
+      ]
+    },
+    {
+      "name": "exp",
+      "cases": [
+        {
+          "baseline": 0.00872,
+          "batch-size": 100000
+        }
+      ]
+    }
+  ]
+}

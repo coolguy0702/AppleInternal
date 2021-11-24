@@ -1,0 +1,970 @@
+#!/bin/sh
+
+# FILE: test_perfcheck
+# AUTH: Soren Spies (sspies)
+# DATE: 31 Oct 2017 (c) Apple Inc.
+# DESC: test perfcheck(1) with shunit2 -- whee
+
+
+# include utilities, set tool path and name
+scriptdir=${0%/*} # 'dirname' w/o spawning 'dirname'
+source "$scriptdir/testutils.sh"
+TOOL="$PERFCHECK"
+TOOLNAME=perfcheck
+
+COMPAREPAT="_[[_]*B[]_]*_"
+
+# called by shunit2 on exit
+tearDown()
+{
+    cleanup
+}
+
+# plumb helper's PASS/FAIL through to shunit2
+PASS()
+{
+    assertTrue ${SHUNIT_TRUE}
+}
+
+FAIL()
+{
+    fail "$@"
+    echo        # shunit2_coreos has no vertical space
+}
+
+testHelp()
+{
+    for verb in "" score daemon; do
+        for flag in -h --help; do
+            runCheckStdout "^Usage: perfcheck" $verb $flag
+            assertEquals "-${flag} exit status" $EX_OK $?
+        done
+    done
+}
+
+# test the basics; more in following tests
+testScore()
+{
+    runCheckStderr 'sh\[' score -p $$
+
+    if [ "$HAVE_MONOTONIC" ]; then
+        recordBaseline -c $TRIVIAL_CPU_CMD
+        runCheckStderr "$COMPAREPAT" score -b "$baselinef" -c $TRIVIAL_CPU_CMD
+    else
+        # warm up the CPU :P
+        $NONTRIVIAL_CPU_CMD
+    fi
+    recordBaseline -c $NONTRIVIAL_CPU_CMD
+    compareBaseline -c $NONTRIVIAL_CPU_CMD
+    assertTrue "missing comparison output" 'grep "$COMPAREPAT" "$outf"'
+
+    runErr2out score -c sh -c 'exit 12' | grep "exit code"
+    toolCode=${PIPESTATUS[0]} grepCode=${PIPESTATUS[1]}
+    assertEquals "exit code preserved" 12 $toolCode
+    assertEquals "non-zero exit warning" $EX_OK $grepCode
+
+    # TODO (43294994): merge with testThresholds()
+}
+
+GETGRAPH_AWK='
+$3 == metric {
+    # skip to requested graph as needed
+    for (i = 1; i < whichgraph; i++) {
+        getline
+    }
+    print substr($0, 31)
+}'
+
+# checkGraphs <file> <metric> <g1Expected> <g2Expected>
+checkGraphs()
+{
+    file="$1" metric="$2" g1Expected="$3" g2Expected="$4"
+    graph1=$(awk -v metric=$metric -v whichgraph=1 "$GETGRAPH_AWK" "$file")
+    assertEquals "$metric graph 1" "$g1Expected" "$graph1"
+    if [ $? -ne 0 ]; then
+        echo "$metric graph 1: ${graph1}"
+        echo "${file}:"
+        cat "$file"
+    fi
+    graph2=$(awk -v metric=$metric -v whichgraph=2 "$GETGRAPH_AWK" "$file")
+    assertEquals "$metric graph 2" "$g2Expected" "$graph2"
+    if [ $? -ne 0 ]; then
+        echo "$metric graph 2: ${graph2}"
+        echo "${file}:"
+        cat "$file"
+    fi
+}
+
+PDTESTCMD="/AppleInternal/Tests/xnu/darwintests/gettimeofday_29192647 __gettimeofday_tl"
+export bumpPct=$((RANDOM % 7 + 3))
+export failthresh=$((15 * $bumpPct / 10))
+GETPDFILE_AWK='/PERFDATA: path = .*pdj/ { print $NF }'
+BUMPMEAN_AWK='
+/mean/ {
+    # bump value, re-append comma, re-indent
+    $2 *= 1 + (ENVIRON["bumpPct"]/100)
+    $2 = $2 ","
+    printf("        ")
+}
+{ print }
+'
+ADDTHRESH_AWK='
+/mean/ {
+    failthresh = ENVIRON["failthresh"]
+    printf("        ")
+    print "\"variables\": { \"failure_threshold_pct\":", failthresh, "},"
+}
+{ print }
+'
+
+checkJSON()
+{
+    unset foundIssue
+
+    for file in "$@"; do
+        assertTrue "${file}: empty JSON" '[ -s "$file" ]'
+        [ $? -eq 0 ] || foundIssue=1
+        assertTrue "${file}: bad JSON" \
+                'plutil -convert json -r -o /dev/null "$file"'
+        [ $? -eq 0 ] || foundIssue=2
+    done
+
+    return $foundIssue
+}
+
+# constructPDArray [files...]
+createPDArray()
+{
+    echo "["
+    while [ "$1" ]; do
+        cat "$1"
+        assertTrue "couldn't access $1" $?
+        [ "$2" ] && echo ","
+        shift
+    done
+    echo "]"
+}
+
+testScorePerfdata()
+{
+    pdfile=$($PDTESTCMD | awk "$GETPDFILE_AWK")
+    if checkJSON "$pdfile"; then
+        runErr2out score -b "$pdfile" "$pdfile" > "$outf"
+        if assertTrue "compare failed" $?; then
+            checkGraphs "$outf" "__gettimeofday_"           \
+                        "-10% __________*__________ +10%"   \
+                        "     __________B__________     "
+        fi
+
+        PERFCHECK_COMPARE_PATH="$pdfile" runErr2out score "$pdfile" > "$outf"
+        if assertTrue "compare failed" $?; then
+            checkGraphs "$outf" "__gettimeofday_"           \
+                        "-10% __________*__________ +10%"   \
+                        "     __________B__________     "
+        fi
+    fi
+
+    # compare easyperf metrics via pdv2
+    args="-p $$ -c true"
+    runCheckStderr "storage_dirtied" score --perfdata "$baselinef" $args
+    if assertTrue "measurement failed" $?; then
+        runCheckStderr "storage_dirtied" score -b "$baselinef" "$baselinef"
+        if assertTrue "comparison failed" $?; then
+            checkGraphs "$outf" "lifetime_peak"             \
+                        "-10% __________*__________ +10%"   \
+                        "     __________B__________     "
+            checkGraphs "$outf" "storage_dirtied"           \
+                        " 0 : *____________________ n/a "   \
+                        "     B____________________     "
+            checkGraphs "$outf" "peak_delta"           \
+                        " 0 : *____________________ n/a "   \
+                        "     B____________________     "
+        assertTrue "no group separators" 'grep -A1 "^$" "$outf"|grep MEMORY'
+        fi
+    fi
+
+    # no threshold = no failures
+    cp "$pdfile" "$baselinef"
+    awk "$BUMPMEAN_AWK" "$pdfile" > "$scratchf1"
+    awk "$BUMPMEAN_AWK" "$scratchf1" > "$scratchf2"
+    if checkJSON "$scratchf1" "$scratchf2"; then
+        compareBaseline "$scratchf1"
+        compareBaseline "$scratchf2"
+    fi
+
+    # regression + threshold = failure
+    awk "$BUMPMEAN_AWK" "$pdfile" | awk "$ADDTHRESH_AWK" > "$scratchf1"
+    awk "$BUMPMEAN_AWK" "$scratchf1" | awk "$ADDTHRESH_AWK" > "$scratchf2"
+    if checkJSON "$scratchf1" "$scratchf2"; then
+        compareBaseline "$scratchf1"
+        detectRegression "$scratchf2"
+    fi
+
+    # bats-lib/bats/test/darwin_perf.py:PerformanceTest
+    mv $scratchf1 $pdv2file
+    args="score --failtracer $scratchf1 -t t -P p --compare $pdfile -b extra"
+    runCheckStderr gettimeofday $args $pdv2file
+    assertTrue 'non-empty --ft file' '! [ -s "$scratchf1" ]'
+
+    # compare an array of perfdatas to itself
+    createPDArray "$pdfile" "$pdfile" > "$baselinef"
+    runCheckStderr __gettimeofday_tl score -b "$baselinef" "$baselinef"
+
+    # compare out-of-order arrays of perfdata
+    rm -f "$scratchf1" "$scratchf2"
+    runCheckStderr "cpu_time" score -t snapshell -perfdata "$scratchf1" -p $$
+    runCheckStderr "cpu_time" score -t spawn_true -perfdata "$scratchf2" -c true
+    if [ $? -eq 0 -a -s "$scratchf1" -a -s "$scratchf2" ]; then
+        createPDArray "$scratchf1" "$scratchf2" > "$baselinef"
+        createPDArray "$scratchf2" "$scratchf1" > "$pdv2file"
+        runCheckStderr "lifetime_peak" score -b "$baselinef" "$pdv2file"
+    fi
+
+    # score easyperf perfdata (generated via 'perfcheck score')
+    args="score -t ddtest -perfdata $baselinef -c dd $DDARGS count=10"
+    runCheckStderr storage_dirtied $args
+    args="score -t ddtest -perfdata $pdv2file -c dd $DDARGS count=12"
+    runCheckStderr storage_dirtied $args
+    assertTrue "missing metric group" "grep 'MEMORY' $outf"
+    if [ "$HAVE_MONOTONIC" ]; then
+        thresholds="-T storage_dirtied=+1% -T cpu_instrs=+1%"
+    else
+        thresholds="-T storage_dirtied=+1% -T cpu_time=+1%"
+    fi
+    detectRegression $thresholds --failtracer "$scratchf1" "$pdv2file"
+    grep -q "storage_dirtied.*out of spec" $outf
+    assertTrue "storage_dirtied not 'out of spec'" $?
+    assertTrue "no measurement values" "grep '^ *[0-9]' $outf"
+
+    # check failtracer file
+    assertTrue "no test name" "grep -w 'ddtest' $scratchf1"
+    assertTrue "no separator" "grep '^----' $scratchf1"
+    assertTrue "no first group name" "grep '^CPU' $scratchf1"
+    assertTrue "no cpu_ failure" "grep 'cpu_.*exceeded' $scratchf1"
+    assertTrue "no group separator" "grep -B1 '^STO' $scratchf1|grep '^$'"
+    assertTrue "no second group name" "grep '^STORAGE' $scratchf1"
+    assertTrue "no failure message" "grep 'storage.*exceeded' $scratchf1"
+}
+
+testThresholds()
+{
+    # set baseline w/o threshold
+    args="score -perfdata $baselinef -c dd $DDARGS count=10"
+    runCheckStderr storage_dirtied $args
+
+    # confirm only --threshold prints the expected bracket
+    runCheckStderr "____ " score -b $baselinef $baselinef
+    grep "____\]" "$outf"
+    assertEquals "no default threshold" $? $EXIT_FAILURE
+
+    args="score --threshold lifetime_peak=+5% -b $baselinef $baselinef"
+    runCheckStderr "____\]" $args
+
+    # make sure command-line -threshold causes failures only when it should
+    args="score -perfdata $scratchf1 -T storage_dirtied=+25% -c dd $DDARGS count=12"
+    runCheckStderr storage_dirtied $args
+    runCheckStderr "storage_dirtied.*%" score -b "$baselinef" "$scratchf1"
+
+    # encode a tight threshold in the perfdata
+    args="score -perfdata $scratchf1 -T storage_dirtied=+5% -c dd $DDARGS count=11"
+    runCheckStderr "storage_dirtied$" $args
+    args="score -b $baselinef $scratchf1"
+    tname="5% regression" pat="storage.*out of spec"
+    runCheckErr -noprefix "$tname" "$pat" kPCExitPerfRegression $args
+
+    # override the tight threshold
+    args="score --threshold storage_dirtied=+15% -b $baselinef $scratchf1"
+    tname="15% trumps 5%" pat="storage.*%$"
+    runCheckStderr "$pat" $args
+
+
+    # mutliple thresholds, first on the command line
+    thresholds="--threshold storage_dirtied=+100%"
+    thresholds="$thresholds --threshold lifetime_peak=+50%"
+    # (lifetime_peak starts out at ~600 kB on many-core devices)
+
+    # copy a tiny (~200 byte) file
+    assertTrue "'rm -f baseline' failed" 'rm -f "$scratchf2" "$baselinef"'
+    recordBaseline -c cp /etc/hosts $scratchf2
+    assertTrue "'rm -f scratchf2' failed" 'rm -f "$scratchf2"'
+    args="$thresholds -c cp /etc/hosts $scratchf2"
+    compareBaseline $args
+
+    # now copy a bigger (240 kB) file and expect multiple failures
+    args="score -b $baselinef $thresholds -c cp /etc/services $scratchf2"
+    pat="storage_dirtied.*out of spec"
+    runCheckErr -noprefix "two thresh" "$pat" kPCExitPerfRegression $args
+    # assert* suppresses output of tested commands
+    grep "lifetime_peak.*out of spec" "$outf"
+    assertTrue "measured: lifetime_peak should be 'out of spec'" $?
+
+    # little vs. little via perfdata
+    assertTrue 'rm failed' 'rm -f "$scratchf2"'
+    args="score -perfdata $baselinef -c cp /etc/hosts $scratchf2"
+    runCheckStderr "storage_dirtied$" $args
+    assertTrue 'rm failed' 'rm -f "$scratchf2"'
+    args="score $thresholds -perfdata $scratchf1 -c cp /etc/hosts $scratchf2"
+    runCheckStderr "storage_dirtied$" $args
+    args="score -b $baselinef $scratchf1"
+    runCheckStderr "storage_dirtied.*%" $args
+
+    # little vs. bigger via perfdata
+    assertTrue 'rm failed' 'rm -f "$scratchf2"'
+    args="score $thresholds -perfdata $scratchf1 -c cp /etc/services $scratchf2"
+    runCheckStderr "storage_dirtied$" $args
+    args="score -b $baselinef $scratchf1"
+    pat="storage_dirtied.*out of spec"
+    runCheckErr -noprefix "two thresh" "$pat" kPCExitPerfRegression $args
+    grep "lifetime_peak.*out of spec" "$outf"
+    assertTrue "files: lifetime_peak should be 'out of spec'" $?
+}
+
+# the default failure threshold is now +/-10%
+MBCOUNT=10
+MBCplus=$((MBCOUNT * 12/10))
+MBCtripled=$((MBCOUNT * 3))
+DDIOARGS="if=/dev/zero bs=1m of=$scratchf2"
+testRegressionExit()
+{
+    # create baseline
+    recordBaseline -c dd $DDIOARGS count=$MBCOUNT
+
+    args="score -b $baselinef --threshold storage_dirtied=+10%"
+    args="$args -c dd $DDIOARGS count=$MBCplus"
+    tname="detect +20%" pat="storage.*out of spec"
+    runCheckErr -noprefix "$tname" "$pat" kPCExitPerfRegression $args
+
+    # back to normal should compare but not error
+    args="score -b $baselinef --threshold storage_dirtied=+10%"
+    args="$args -c dd $DDIOARGS count=$MBCOUNT"
+    runCheckStderr "_.*B.*_" $args
+
+    args="score --failtracer -b $baselinef -T storage_dirtied=+10%"
+    args="$args -c dd $DDIOARGS count=$MBCtripled"
+    tname="detect -ft +200%" pat="storage.*out of spec"
+    runCheckErr -noprefix "$tname" "$pat" kPCExitPerfRegression $args
+    echo $?
+}
+
+ensureTextEdit()
+{
+    if sysctl hw.model | grep Mac; then
+        # make sure TextEdit is running
+        if killall -0 TextEdit; then
+            unset launchedTextEdit
+        else
+            open -jg /Applications/TextEdit.app
+            sleep 1
+            launchedTextEdit=1
+        fi
+        if assertTrue "couldn't launch TextEdit" 'killall -0 TextEdit'; then
+            return "$EX_OK"
+        else
+            return "$EX_OSERR"
+        fi
+    else
+        return "$EX_CONFIG"
+    fi
+}
+
+# TODO (36596221): update expected patterns
+NEW_WINDOW_AS='
+tell application "TextEdit"
+    make new document
+    delay 1
+end tell'
+CLOSE_WINDOW_AS='
+tell application "TextEdit"
+    close window 1
+    delay 1
+end tell'
+QUIT_TEXTEDIT_AS='
+tell application "TextEdit"
+    quit
+end tell'
+# TODO: figure out why failures here don't emit asserts on watchOS
+testZeroBaseline()
+{
+    # create baseline with storage_writes = 0
+    recordBaseline -c $NONTRIVIAL_CPU_CMD
+    [ $? -ne $EX_OK ] && fail "aborting test" && return 1
+
+    # compare 0 = 0
+    compareBaseline -T storage_dirtied=+10% -c $NONTRIVIAL_CPU_CMD
+    checkGraphs "$outf" storage_dirtied                             \
+                " 0 : *____________________ n/a "                   \
+                "     B____________________     "
+
+
+    # compare >0 to 0
+    rm -rf "$scratchdir"
+    sync        # make sure this mkdir generates new writes
+    detectRegression -T storage_dirtied=+10% -c mkdir "$scratchdir"
+    checkGraphs "$outf" storage_dirtied                                \
+                " 0 : ____________________*  >0   <-- out of spec"     \
+                "     B____________________     "
+
+if ensureTextEdit; then
+    # compare <0 to 0
+    # create some memory, record an idle baseline
+    osascript -e "$NEW_WINDOW_AS"
+    recordBaseline -p TextEdit -c sleep 1
+    until plutil -p "$baselinef" | grep -q ".Phys_footprint. => 0$"; do
+        echo "Trying again to catch TextEdit idle..."
+        sleep 1
+        recordBaseline -p TextEdit -c true
+    done
+
+    # detectRegression
+    # TODO (39952934): fail better, support mem_delta thresholds
+    #             " <0  *____________________ : 0   <-- out of spec"      \
+    args="-p TextEdit"
+    compareBaseline $args -c osascript -e "$CLOSE_WINDOW_AS"
+    checkGraphs "$outf" mem_delta                                       \
+                " <0  *____________________ : 0 "                       \
+                "     ____________________B     "
+            # note that the <0 is improperly aligned in the workaround
+
+    [ "$launchedTextEdit" ] && osascript -e "$QUIT_TEXTEDIT_AS"
+else
+    # ensureTextEdit() has registered any needed failures
+    true
+fi
+}
+
+testNegativeBaseline()
+{
+if ensureTextEdit; then
+
+    # create a baseline with mem_delta = reduction of closing a window
+    osascript -e "$NEW_WINDOW_AS"
+    recordBaseline -p TextEdit -c osascript -e "$CLOSE_WINDOW_AS"
+
+if false; then
+    # compare negative to similar (but could go either way)
+    osascript -e "$NEW_WINDOW_AS"
+    compareBaseline -p TextEdit -c osascript -e "$CLOSE_WINDOW_AS"
+
+    # compare zero to negative (not reliable either)
+    detectRegression -p TextEdit -c true
+    checkGraphs "$outf" mem_delta                                   \
+                " <0  ____________________* : 0   <-- out of spec"   \
+                "     B____________________     "
+fi
+
+    # compare more negative to negative by closing two windows
+    osascript -e "$NEW_WINDOW_AS"
+    osascript -e "$NEW_WINDOW_AS"
+    # TODO (39952934): detectRegression
+    #             " <0  *____________________  <0   <-- out of spec"   \
+    compareBaseline -p TextEdit -c  \
+            osascript -e "$CLOSE_WINDOW_AS" -e "$CLOSE_WINDOW_AS"
+    checkGraphs "$outf" mem_delta                                   \
+                " <0  *____________________  <0 "   \
+                "     ____________________B     "
+
+    # compare positive to negative by opening two new windows instead
+    # (opening just one isn't reliable enough when following the previous)
+    # TODO (39952934): detectRegression
+    #             " <0  *____________________  <0   <-- out of spec"   \
+    compareBaseline -p TextEdit -c  \
+            osascript -e "$NEW_WINDOW_AS" -e "$NEW_WINDOW_AS"
+    checkGraphs "$outf" mem_delta                                   \
+                " <0  ____________________*  >0 "   \
+                "     B____________________     "
+    osascript -e "$CLOSE_WINDOW_AS" -e "$CLOSE_WINDOW_AS"       # clean up
+
+    # quit TextEdit if we started it
+    if [ "$launchedTextEdit" ]; then
+        echo quitting TextEdit?
+        osascript -e "$QUIT_TEXTEDIT_AS"
+    fi
+
+else
+    # ensureTextEdit() has registered any needed failures
+    true
+fi
+}
+
+noTestProjectFlag()
+{
+    if [ "$EASYPERF_BASELINE" ]; then
+        args="score --project perfcheck -c $TRIVIAL_CPU_CMD"
+        runCheckErr -noprefix "--project -c" "spec" kPCExitPerfRegression $args
+
+        # TODO: cover -P as a bystander in another test
+        args="score -P perfcheck -c $TRIVIAL_CPU_CMD"
+        runCheckErr -noprefix "-P -c" "out of spec" kPCExitPerfRegression $args
+    fi
+}
+
+TODO_testTwoBaselineCompare()
+{
+    # create baseline
+    recordBaseline -t trivial -c true
+
+    runCheckStderr "(.* )" score -P perfcheck -b "$baselinef" -t trivial -p $$
+}
+
+# test_libperfcheck and other libdarwintest tests are run by test_easyperf
+
+
+## bogus inputs
+testNoArgs()
+{
+    echo "testing no args -> error, Usage"
+    runErr2out | grep ^Usage:
+    toolCode=${PIPESTATUS[0]} grepCode=${PIPESTATUS[1]}
+    assertEquals "expect EX_USAGE" $EX_USAGE $toolCode
+    assertEquals "expect Usage statement" $EX_OK $grepCode
+}
+
+# General argument parsing is shared (at least for now), so test_easyperf
+# handles testing random inputs in ets testUnknownArgs().
+
+# -h is handled in each tool, so make sure perfcheck gets it right
+testHelpBadArgs()
+{
+    for verb in "" score daemon; do
+        runCheckErr "--help <validArg>" "ignoring" EX_USAGE $verb -help -p $$
+        runCheckErr "<validArg> --help" "ignoring" EX_USAGE -p $$ $verb -help
+        runCheckErr "-h <unknown>" "ignoring" EX_USAGE $verb -h aoeu
+    done
+}
+
+testScorePerfdataBadArgs()
+{
+    pdfile=$($PDTESTCMD | awk "$GETPDFILE_AWK")
+    awk "$BUMPMEAN_AWK" "$pdfile" > "$baselinef"
+    checkJSON "$pdfile" "$baselinef" || return $EX_SOFTWARE
+
+    args="score --project-baseline no_such_project --compare $baselinef $pdfile"
+    runCheckStderr "overrides" $args
+
+    args="score --compare $baselinef -P no_such_project $pdfile"
+    runCheckStderr "overrides" $args
+
+    # no matching baseline, no warning w/--failtracer
+    cat "$pdfile" | sed 's/gettimeofday/otherTest/' >> "$scratchf1"
+    runCheckStderr "otherTest.*no baseline" score -b "$pdfile" "$scratchf1"
+    runCheckStderr "otherTest" score --failtracer -b "$pdfile" "$scratchf1"
+    grep "no baseline" "$outf"
+    assertEquals "--failtracer didn't suppress 'no baseline' warning" $? 1
+
+    args="score -b /etc/hosts $pdfile"
+    runCheckErr "bad baseline format" "format" EX_DATAERR $args
+
+    args="score -b $pdfile no_such_file"
+    runCheckErr "missing file" "No such file" EX_NOINPUT $args
+
+    # multiple identical tests aren't yet averaged
+    rm -f "$baselinef" $pdfile && unset pdfiles
+    assertTrue 'mkdir failed' "mkdir -p $scratchdir"
+    for count in $(jot 2); do
+        pdfile="$scratchdir/${count}MB.pdj"
+        recordBaseline --perfdata "$pdfile" -c dd $DDARGS count=$count
+        pdfiles="$pdfiles $pdfile"
+    done
+    createPDArray $pdfiles > "$baselinef"
+    # runCheckMatches < > ...
+    runCheckStderr "duplicate" score -b "$baselinef" "$baselinef"
+    # nlines=$(wc -l < "$outf")
+    # assertTrue "averaging produced $nlines" "[ $nlines -lt 20 ]"
+    # checkGraphs "$outf" storage_dirtied                             \
+                # "-10% __________*__________ +10%"                   \
+                # "     __________B__________     "
+    rm -f $pdfiles
+
+    rm $pdfile
+}
+
+# -P, -project added for perfcheck, so testing here for now
+noTestProjectBadArgs()
+{
+    args="score --project no_project --record "$baselinef" -p $$"
+    runCheckErr "--record w/--project" "incompatible" EX_USAGE $args
+}
+
+testFailTracerBadArgs()
+{
+    args="score --failtracer -aoeu"
+    runCheckErr -noprefix "--failtracer <bogus>" "^Usage: perfcheck" EX_OK $args
+
+    args="score --failtracer -c noCmd${$}"
+    runCheckErr "$args" "No such file" EX_NOINPUT $args
+
+    # TODO: test --failtracer suppressing warnings in argument parsing
+}
+
+DAEMONLABEL="system/com.apple.perf.hello_nsxpc"
+DAEMONPROGRAM="hello_nsxpcd"
+
+checkDaemonTestRunAsRoot()
+{
+    if [ $EUID -ne 0 ]; then
+        echo "Warning: skipping daemon test because it needs to run as root"
+        startSkipping
+        fail "testing 'perfcheck daemon' requires root"
+        endSkipping
+        return 1
+    fi
+
+    return 0
+}
+
+
+launchTestDaemon()
+{
+    # Bootstrap Test Daemon - as it's disabled by default
+    echo "Loading test daemon hello_nsxpc plist."
+    launchctl "$1" /AppleInternal/Library/LaunchDaemons/com.apple.internal.hello_nsxpc.plist
+
+    # Need to make sure this is running as root
+    checkDaemonTestRunAsRoot || return 1
+
+    # The next set of tests depend on the existence of the test daemon
+    launchctl blame "$DAEMONLABEL"
+    if [ $? -ne 0 ]; then
+        echo "Warning: skipping daemon test because $DAEMONPROGRAM does not exist"
+        startSkipping
+        fail "can't test 'daemon' because $DAEMONPROGRAM is missing"
+        endSkipping
+        return 1
+    fi
+
+    return 0
+}
+
+testDaemon()
+{
+    # Test 1: -h/--help should print usage to stdout that mentions "daemon"
+    for flag in -h --help; do
+        runCheckStdout "daemon" $flag
+    done
+
+    launchTestDaemon "load" || return $EX_OK
+
+    # Test 2: test on daemon that's already running. Should take two snapshots.
+    pid=$(pgrep -x "$DAEMONPROGRAM")
+    if [ -z "$pid" ]; then
+        launchctl kickstart "$DAEMONLABEL"
+        pid=$(pgrep -x "$DAEMONPROGRAM")
+    fi
+    assertTrue "cannot get $DAEMONPROGRAM to run" '[ "$pid" ]'
+
+    # while we do expect the test daemon to pass, the unit test shouldn't
+    # depend on that.
+    args="daemon -p $DAEMONPROGRAM -s 5"
+    runCheckOutAllowingPerfRegression "] Usage" $args
+
+    # Test 3: test a command that spawns a new instance of the daemon.
+    # Should take lifetime measurements.
+    pid=$(pgrep -x "$DAEMONPROGRAM")
+
+    args="daemon -p $DAEMONPROGRAM -s 5 -c launchctl kickstart -kp $DAEMONLABEL"
+    runCheckOutAllowingPerfRegression "] Lifetime Usage" $args
+    # make sure the pid has changed
+    [ "$pid" != "$(pgrep -x $DAEMONPROGRAM)" ]
+    assertTrue "daemon PID didn't change" $?
+
+    # Test 4: write to perfdata and check for daemon specific metrics
+    args="daemon --perfdata $pdv2file -p $DAEMONPROGRAM"
+    runCheckOutAllowingPerfRegression "$DAEMONPROGRAM" $args
+    # look for missed_checkins metric with abs threshold set
+    grepCmd="grepMeasurement missed_checkins failure_threshold_abs $pdv2file"
+    assertTrue "valid missed_checkins entry not found" "$grepCmd"
+    # look for the proc_dirty metric
+    grepCmd="grepMeasurement proc_dirty proc_dirty $pdv2file"
+    assertTrue "valid proc_dirty entry not found" "$grepCmd"
+    # since we did not specify -xpc-trace, there should be no xpc metrics
+    grepCmd="grepMeasurement msg_recv msg_recv $pdv2file"
+    assertFalse "unexpected msg_recv metric found" "$grepCmd"
+    grepCmd="grepMeasurement msg_send msg_send $pdv2file"
+    assertFalse "unexpected msg_send metric found" "$grepCmd"
+    grepCmd="grepMeasurement msg_daemons msg_daemons $pdv2file"
+    assertFalse "unexpected msg_daemons metric found" "$grepCmd"
+    # since we did not specify -false-idle, there should be no false-idle metrics
+    grepCmd="grepMeasurement false_idle false_idle $pdv2file"
+    assertFalse "unexpected false_idle metric found" "$grepCmd"
+    # make sure the default test name does not get printed
+    grep "perfcheck.daemon.$DAEMONPROGRAM" "$outf"
+    assertFalse 'default test name should not be printed' $?
+    # look for the default test name in perfdata
+    grep "perfcheck.daemon.$DAEMONPROGRAM" $pdv2file
+    assertTrue 'cannot find expected test name' $?
+    # Feed the perfdata file back to perfcheck score and verifies metrics.
+    runCheckOutAllowingPerfRegression "missed_checkins" score "$pdv2file"
+    runCheckOutAllowingPerfRegression "proc_dirty" score "$pdv2file"
+
+    # Test 5: specify custom test name and make sure it appears in the
+    # output and perfdata
+    customTestName="hello.world"
+    args="daemon --perfdata $pdv2file -p $DAEMONPROGRAM -t $customTestName,3"
+    runCheckOutAllowingPerfRegression "$customTestName" $args
+    grep '"name": "'"$customTestName"'"' "$pdv2file"
+    assertTrue 'cannot find expected test name' $?
+    grep '"version": 3' "$pdv2file"
+    assertTrue 'cannot find expected version number' $?
+
+    # Test 6: test interactive mode
+    # emulate runTool so we can get perfcheck's PID
+    echo
+    set -x
+    "$TOOL" daemon --interact -p "$DAEMONPROGRAM" 2> "$scratchf2" &
+    pid=$!
+    set +x
+
+    # Test 7: test specifying absolute thresholds
+    args="daemon --perfdata $pdv2file -p $DAEMONPROGRAM -T missed_checkins=5 -T proc_dirty=1"
+    runCheckOutAllowingPerfRegression "$DAEMONPROGRAM" $args
+    grepMeasurement missed_checkins '"_pc_failure_threshold_abs": 5' $pdv2file
+    assertTrue 'did not override default absolute threshold' $?
+    grepMeasurement proc_dirty '"_pc_failure_threshold_abs": 1' $pdv2file
+    assertTrue 'did not set absolute threshold' $?
+
+    sleep 1
+    kill -INT $pid
+    wait $pid            # shell does give exit status
+    if [ "$?" -eq $EX_OK -o "$?" -eq $kPCExitPerfRegression ]; then
+        PASS
+    else
+        FAIL "Could not measure daemon with --interact"
+    fi
+    grep "$DAEMONPROGRAM" "$scratchf2"
+    assertTrue "--interact didn't find the specified daemon" $?
+
+    # Test 8: test getting xpc metrics
+    traceFile="$tmpdir/test_perfcheck.ktrace"
+    rm -f "$traceFile"
+    args="daemon --perfdata $pdv2file -p $DAEMONPROGRAM -s 3 --xpc-trace $traceFile"
+    runCheckOutAllowingPerfRegression "XPC" $args
+    assertTrue "ktrace file was not written to $traceFile" '[ -e $traceFile ]'
+    # look for XPC metrics
+    grepCmd="grepMeasurement msg_recv msg_recv $pdv2file"
+    assertTrue "msg_recv metric not found" "$grepCmd"
+    grepCmd="grepMeasurement msg_send msg_send $pdv2file"
+    assertTrue "msg_send metric not found" "$grepCmd"
+    grepCmd="grepMeasurement msg_daemons msg_daemons $pdv2file"
+    assertTrue "msg_daemons metric not found" "$grepCmd"
+
+    # try again without specifying ktrace file location, so temporary
+    # file will be used
+    args="daemon --perfdata $pdv2file -p $DAEMONPROGRAM -s 3 --xpc-trace"
+    runCheckOutAllowingPerfRegression "XPC" $args
+    # look for XPC metrics
+    grepCmd="grepMeasurement msg_recv msg_recv $pdv2file"
+    assertTrue "msg_recv metric not found" "$grepCmd"
+    grepCmd="grepMeasurement msg_send msg_send $pdv2file"
+    assertTrue "msg_send metric not found" "$grepCmd"
+    grepCmd="grepMeasurement msg_daemons msg_daemons $pdv2file"
+    assertTrue "msg_daemons metric not found" "$grepCmd"
+
+    # Test 9: Test False Idle Flag
+    # Here we test for a 0 PID - which means the process died without respawn.
+    args="daemon -p $DAEMONPROGRAM --perfdata $pdv2file --false-idle"
+    runCheckOutAllowingPerfRegression "FALSE IDLE" $args
+    grepMeasurement false_idle '"value": 0' $pdv2file
+    pid=$(pgrep -x "$DAEMONPROGRAM")
+    assertTrue "daemon PID changed" '[ -z "$pid" ]'
+    # Look For False Idle metrics
+    grepCmd="grepMeasurement false_idle false_idle $pdv2file"
+    assertTrue "false_idle metric not found" "$grepCmd"
+
+    # Make sure --false-idle works with a command that kickstarts the daemon
+    args="daemon -p $DAEMONPROGRAM --false-idle -s 5 -c launchctl kickstart -kp $DAEMONLABEL"
+    runCheckOutAllowingPerfRegression "FALSE IDLE" $args
+
+    # The next set of tests depend on the existence of notifyd
+    # Per discussion with the Darwin folks, notifyd should be on all platforms
+    # This is a scenario where a daemon will display false-idle attributes
+    falseIdleDaemonLabel="system/com.apple.notifyd"
+    falseIdleDaemonProgram="notifyd"
+    launchctl blame "$falseIdleDaemonLabel"
+    if [ $? -ne 0 ]; then
+        startSkipping
+        fail "Warning: skipping false-idle, $falseIdleDaemonProgram doesn't exist"
+        endSkipping
+        return 0
+    fi
+
+    # Test known False Idle scenario for sanity - notifyd should come back in 10s
+    args="daemon -p $falseIdleDaemonProgram --perfdata $pdv2file --false-idle 10"
+    args="$args -s 5 -c launchctl kickstart -kp $falseIdleDaemonLabel"
+    runCheckOutAllowingPerfRegression "$falseIdleDaemonProgram" $args
+    assertTrue 'JETSAM "out of spec"' 'grep "false_idle.*out of spec" $outf'
+}
+
+testDaemonBadArgs()
+{
+    # Test 10: Test bad arguments against daemon verb
+    # We expect an error 71 here because the programs don't exist
+    bogusProc="totallyBogusProc"
+    args="daemon -p $bogusProc --perfdata $pdv2file"
+    runCheckErr "bogus proc" "No such process" EX_OSERR $args
+
+    args="daemon -p 123456789 --false-idle --perfdata $pdv2file"
+    runCheckErr "bogus PID" "No such process" EX_OSERR $args
+
+    args="daemon -false-idle -p nodaemon --perfdata $pdv2file -s 1"
+    runCheckErr "nodaemon sleep" "is not running" EX_OSERR $args
+
+    launchTestDaemon "load" || return $EX_OK
+
+    pid=$(pgrep -x "$DAEMONPROGRAM")
+    if [ -z "$pid" ]; then
+        launchctl kickstart "$DAEMONLABEL"
+        pid=$(pgrep -x "$DAEMONPROGRAM")
+    fi
+    assertTrue "cannot get $DAEMONPROGRAM to run" '[ "$pid" ]'
+
+    args="daemon -p $DAEMONPROGRAM --xpc-trace"
+    runCheckErr "xpc-trace no time period" "without time period" EX_USAGE $args
+}
+
+DAEMON_ENDPOINTS_TEST_PLIST=/AppleInternal/Tests/perfcheck/resources/com.apple.perfcheck.endpoints-test.plist
+DAEMON_ENDPOINTS_TEST_DAEMON_LABEL=system/com.apple.perfcheck.endpoints-test
+DAEMON_ENDPOINTS_TEST_DAEMON=hello_xpcd
+DAEMON_ENDPOINTS_TEST_DAEMON_PATH=/usr/local/libexec/hello_xpcd
+
+testDaemonEndpoints()
+{
+    checkDaemonTestRunAsRoot || return 1
+
+    if [ ! -f "$DAEMON_ENDPOINTS_TEST_DAEMON_PATH" ] ; then
+        echo "Warning: skipping testDaemonEndpoints since missing $DAEMON_ENDPOINTS_TEST_DAEMON_PATH"
+        startSkipping
+        fail "can't test 'daemonEndpoints' without $DAEMON_ENDPOINTS_TEST_DAEMON_PATH"
+        endSkipping
+        return 0
+    fi
+
+    launchctl load -w "$DAEMON_ENDPOINTS_TEST_PLIST"
+    if [ $? -ne 0 ]; then
+        echo "Warning: skipping testDaemonEndpoints due to error in loading test daemon plist"
+        startSkipping
+        fail "can't test 'daemonEndpoints' due to error in loading daemon"
+        endSkipping
+        return 0
+    fi
+
+    launchCmd="launchctl kickstart -kp $DAEMON_ENDPOINTS_TEST_DAEMON_LABEL"
+    args="daemon --perfdata $pdv2file -p $DAEMON_ENDPOINTS_TEST_DAEMON -s 5 -c $launchCmd"
+    runCheckOutAllowingPerfRegression "$DAEMON_ENDPOINTS_TEST_DAEMON" $args
+
+    # Make sure the endpoints_warn/fail contain the expected endpoints
+    # (in any order).
+    if ! grepMeasurement missed_checkins \
+            '"endpoints_fail": "com.apple.perfcheck.test_machservice,com.apple.xpc.activity"' \
+            "$pdv2file"; then
+        grepMeasurement missed_checkins \
+            '"endpoints_fail": "com.apple.xpc.activity,com.apple.perfcheck.test_machservice"' \
+            "$pdv2file"
+        assertTrue "unexpected endpoints_fail output variable" $?
+    fi
+    if ! grepMeasurement missed_checkins \
+            '"endpoints_warn": "com.apple.fsevents.matching,com.apple.reachability"' \
+            "$pdv2file"; then
+        grepMeasurement missed_checkins \
+            '"endpoints_warn": "com.apple.reachability,com.apple.fsevents.matching"' \
+            "$pdv2file"
+        assertTrue "unexpected endpoints_warn output variable" $?
+    fi
+
+    launchctl unload "$DAEMON_ENDPOINTS_TEST_PLIST"
+
+    # Tear Down Test Daemon
+    launchTestDaemon "unload" || return $EX_OK
+
+}
+
+
+OUTPUT_VARS_TEST_FILE1=/AppleInternal/Tests/perfcheck/resources/output_vars1.pdj
+OUTPUT_VARS_TEST_FILE2=/AppleInternal/Tests/perfcheck/resources/output_vars2.pdj
+COMPARE_RESULT_1_1=/AppleInternal/Tests/perfcheck/resources/compare_output_vars_1_1.txt
+COMPARE_RESULT_1_2=/AppleInternal/Tests/perfcheck/resources/compare_output_vars_1_2.txt
+COMPARE_RESULT_2_1=/AppleInternal/Tests/perfcheck/resources/compare_output_vars_2_1.txt
+COMPARE_RESULT_2_2=/AppleInternal/Tests/perfcheck/resources/compare_output_vars_2_2.txt
+
+compareOutputVariables()
+{
+    for f; do
+        if ! [ -r "$f" ]; then
+            echo "$f missing; skipping test"
+            startSkipping
+            fail "$f missing; skipping test"
+            endSkipping
+            return 0
+        fi
+    done
+
+    args="score -b $1 $2"
+    runCheckOutAllowingPerfRegression "VARIABLES (output)" $args
+    diff "$outf" "$3"
+    assertTrue "perfcheck score did not print expected output" $?
+}
+
+testVariableComparison()
+{
+    compareOutputVariables "$OUTPUT_VARS_TEST_FILE1" "$OUTPUT_VARS_TEST_FILE1" \
+        "$COMPARE_RESULT_1_1"
+    compareOutputVariables "$OUTPUT_VARS_TEST_FILE1" "$OUTPUT_VARS_TEST_FILE2" \
+        "$COMPARE_RESULT_1_2"
+    compareOutputVariables "$OUTPUT_VARS_TEST_FILE2" "$OUTPUT_VARS_TEST_FILE1" \
+        "$COMPARE_RESULT_2_1"
+    compareOutputVariables "$OUTPUT_VARS_TEST_FILE2" "$OUTPUT_VARS_TEST_FILE2" \
+        "$COMPARE_RESULT_2_2"
+}
+
+MANPAGE_SRC=util/perfcheck-daemon.1
+MANPAGE_DST=/usr/local/share/man/man1/perfcheck-daemon.1
+testManPage()
+{
+    if [ -x /usr/bin/man ]; then
+        if [ -r "$MANPAGE_SRC" ]; then
+            manarg="$MANPAGE_SRC"
+        elif [ -r "$MANPAGE_DST" ]; then
+            manarg="perfcheck-daemon"
+        else
+            FAIL "Cannot find perfcheck-daemon.1"
+            return 1
+        fi
+    else
+        echo "test_perfcheck: no man pages on system -> skipping test"
+        startSkipping
+        fail "no man pages -> skipping test"
+        endSkipping
+        return 0
+    fi
+
+    man "$manarg" 2>&1 > /dev/null | egrep -i "error|warning"
+    if [ ${PIPESTATUS[0]} -eq 0 -a ${PIPESTATUS[1]} -ne 0 ]; then
+        PASS
+    else
+        FAIL "man page has errors or warnings"
+    fi
+}
+
+testLibCompat()
+{
+if sysctl hw.model | grep -q Mac; then
+    dylib=${DYLD_LIBRARY_PATH:-/usr/lib}/libperfcheck.dylib
+    if assertTrue "otool failed" 'otool -lv "$dylib" > "$outf"'; then
+        assertTrue "no macOS platform" 'grep platform.*macos "$outf"'
+        assertTrue "no zippered platform" 'grep platform.*macCatalyst "$outf"'
+    fi
+fi
+}
+
+start=$SECONDS
+
+# the test framework will run the above tests
+if [ "$BATS_TMP_DIR" ]; then
+    . /usr/local/bin/shunit2_coreos
+    excode=$?
+else
+    . /usr/local/bin/shunit2_coreos | grep -v RESULT_
+    excode=${PIPESTATUS[0]}
+fi
+
+echo "($(($SECONDS - $start)) seconds elapsed)"
+exit $excode

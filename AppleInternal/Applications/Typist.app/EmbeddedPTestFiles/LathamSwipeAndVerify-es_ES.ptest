@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+   <array>
+      <dict>
+         <key>Category</key>
+         <string>Typist_InternationalKeyboard</string>
+         <key>ID</key>
+         <string>LathamSwipeAndVerify-MultiLanguages</string>
+         <key>Type</key>
+         <string>Suite</string>
+         <key>SuiteActions</key>
+         <array>
+             <dict>
+               <key>Arguments</key>
+               <dict>
+                  <key>testCaseID</key>
+                  <string>Setup</string>
+                  <key>keyboardID</key>
+                  <string>es_ES@sw=QWERTY-Spanish;hw=Automatic</string>
+                  <key>keyboardType</key>
+                  <string>Default</string>
+                  <key>deviceOrientation</key>
+                  <string>Portrait</string>
+                  <key>appendKeyboard</key>
+                  <string>YES</string>
+                  <key>autoCorrection</key>
+                  <string>YES</string>
+                  <key>typeInterval</key>
+                  <real>0.2</real>
+                  <key>autoCapitalization</key>
+                  <string>YES</string>
+                  <key>checkSpelling</key>
+                  <string>YES</string>
+                  <key>periodShortcut</key>
+                  <string>YES</string>
+                  <key>capsLock</key>
+                  <string>YES</string>
+                  <key>predictive</key>
+                  <string>YES</string>
+                  <key>smartPunctuation</key>
+                  <string>NO</string>
+                  <key>keyPaddle</key>
+                  <string>YES</string>
+                  <key>smallDisplay</key>
+                  <string>YES</string>
+                  <key>oneHandedLayout</key>
+                  <string>NORMAL</string>
+                  <key>SwipeForceSpace</key>
+                  <false/>
+                  <key>SwipeSigma</key>
+                  <real>5.0</real>
+                  <key>SwipeAlpha</key>
+                  <real>0.5</real>
+                  <key>SwipePPivot</key>
+                  <real>0.5</real>
+                  <key>testClass</key>
+                  <string>IntlQAKeyboardTestLatham</string>
+                  <key>testFunction</key>
+                  <string>cancelSwipe</string>
+                  <!--key>thirdPartyKeyboardsToConfigure</key>
+                  <array>
+                      <string>Gboard</string>
+                  </array-->
+               </dict>
+               <key>Description</key>
+               <string>Setup</string>
+            </dict>
+             <dict>
+                 <key>Arguments</key>
+                 <dict>
+                     <key>testCaseID</key>
+                     <string>22268420</string>
+                     <key>SwipeText</key>
+                     <string>proporcionamos</string>
+                 </dict>
+             </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>testFunction</key>
+                   <string>lathamSwipeAndVerify</string>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>Esta semana tengo un cacao que flipas en el curro y no puedo salir estoy de bajon Si no me rayo mucho con el examen de certificacion espero sacarmelo con la gorra</string>
+                          <key>expectedText</key>
+                          <string>Esta semana tengo un cacao que flipas en el curro y no puedo salir estoy de bajón Si no me rayo mucho con el examen de certificación espero sacármelo con la gorra</string>
+                        </dict>
+                    </array>
+                   <key>testCaseID</key>
+                   <string>10000001</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>Ven a prepararte con nosotros tenemos los mejores profesores y nos cenimos al temario oficial de Correos y se lo proporcionamos de forma totalmente gratuita a nuestros alumnos</string>
+                          <key>expectedText</key>
+                          <string>Ven a prepararte con nosotros tenemos los mejores profesores y nos ceñimos al temario oficial de Correos y se lo proporcionamos de forma totalmente gratuita a nuestros alumnos</string>
+                       </dict>
+                   </array>
+                   <key>testCaseID</key>
+                   <string>10000002</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                           <key>keystrokesText</key>
+                           <string>el musculo esternocleidooccipitomastoideo es un musculo que cruza el cuello desde el centro hacia la parte posterior de la cabeza a ambos lados</string>
+                           <key>expectedText</key>
+                           <string>El músculo esternocleidooccipitomastoideo es un músculo que cruza el cuello desde el centro hacia la parte posterior de la cabeza a ambos lados</string>
+                        </dict>
+                   </array>
+                   <key>testCaseID</key>
+                   <string>10000003</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>es normal en los municipios dilapidar su presupuesto en fiestas vecinales</string>
+                          <key>expectedText</key>
+                          <string>Es normal en los municipios dilapidar su presupuesto en fiestas vecinales</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000004</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>establecer un negocio en alava es sumamente facil gracias a las ayudas fiscales del gobierno autonomico</string>
+                          <key>expectedText</key>
+                          <string>Establecer un negocio en Álava es sumamente fácil gracias a las ayudas fiscales del gobierno autonómico</string>
+                      </dict>
+                   </array>
+                  <key>testCaseID</key>
+                  <string>10000005</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>el paciente ha tenido en las ultimas horas una evidente mejoria</string>
+                          <key>expectedText</key>
+                          <string>El paciente ha tenido en las últimas horas una evidente mejoría</string>
+                      </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000006</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>el apostrofe es una figura literaria de dialogo que consiste en dirigirse, durante un discurso o narracion, con emocion o vehemencia, a un interlocutor</string>
+                          <key>expectedText</key>
+                          <string>El apóstrofe es una figura literaria de diálogo que consiste en dirigirse, durante un discurso o narración, con emoción o vehemencia, a un interlocutor </string>
+                        </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000007</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>cometi una sucesion de errores terrible que me llevo a la sitaucion en la que me encuentro y no puedo evitar</string>
+                          <key>expectedText</key>
+                          <string>Cometí una sucesión de errores terrible que me llevo a la situación en la que me encuentro y no puedo evitar</string>
+                        </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000008</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            
+            <!-- This is accent test cases -->
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Veras</string>
+                            <key>expectedText</key>
+                            <string>Verás</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000011</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>alejandro trata a su hijo como un marques creo que lo esta maleducando</string>
+                            <key>expectedText</key>
+                            <string>Alejandro trata a su hijo como un marqués creo que lo esta maleducando</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000012</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>toda la vida me ha gustado ser el bufon de clase siempre hacia bromas y hacia reir a los demas independientemente de si me caian bien o no</string>
+                            <key>expectedText</key>
+                            <string>Toda la vida me ha gustado ser el bufón de clase Siempre  hacia bromas y hacia reír a los demás independientemente de si me caían bien o no</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000013</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>desde que era pequeno quise ser bailarin me gusta eso de saltar y jugar alrededor</string>
+                            <key>expectedText</key>
+                            <string>Desde que era pequeño quise ser bailarín me gusta eso de saltar y jugar alrededor</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000014</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>tu argumento es debil porque hablas de un tema que desconoces</string>
+                            <key>expectedText</key>
+                            <string>Tu argumento es débil porque hablas de un tema que desconoces</string>
+                        </dict>
+                        </array>
+                    <key>testCaseID</key>
+                    <string>10000015</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+         </array>
+      </dict>
+   </array>
+</plist>

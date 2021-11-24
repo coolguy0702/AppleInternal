@@ -1,0 +1,68 @@
+{
+	"formatVersion": 1,
+	"passTypeIdentifier": "pass.com.apple.test1",
+	"groupingIdentifier" : "florence",
+	"serialNumber": "9a738433-80de-3e60-9478-1dec771157d4",
+	"description": "Event Ticket",
+	"teamIdentifier": "K9942Z534D",
+	"authenticationToken": "5ad1f39815e7e55fb712b81e12b03fc6",
+	"relevantDate": "2012-10-05T20:00-08:00",
+	"expirationDate": "2012-10-05T23:00-08:00",
+	"associatedStoreIdentifiers": [474589279],
+	"calendarEvent": {
+		"title":"Florence and the Machine",
+		"location":"Shoreline Ampitheatre",
+		"startDate":"2012-10-05T20:00-08:00",
+		"endDate":"2012-10-05T23:00-08:00",
+		"url":"http://florenceandthemachine.net",
+		"notes":"This lady is wonderfully talented and you should come to her concert or something"
+	},
+	"locations": [{
+		"altitude": 0.0,
+		"longitude": -122.0781,
+		"latitude": 37.4233
+	}],
+	"barcode": {
+		"messageEncoding": "iso-8859-1",
+		"format": "PKBarcodeFormatQR",
+		"message": "8534576916472224",
+		"altText": "8534576916472224"
+	},
+	"eventTicket": {
+		"headerFields": [{
+			"key": "8:00PM",
+			"value": "Oct 5",
+			"label": "8:00PM"
+		}],
+		"secondaryFields": [{
+			"key": "Shoreline Amphitheatre",
+			"value": "Florence and the Machine",
+			"label": "Shoreline Amphitheatre"
+		}],
+		"auxiliaryFields": [{
+			"key": "Section",
+			"value": "102",
+			"label": "Section"
+		}, {
+			"key": "Row",
+			"value": "P",
+			"label": "Row"
+		}, {
+			"key": "Seat",
+			"value": "23",
+			"label": "Seat"
+		}],
+		"backFields": [{
+			"key": "Order Number",
+			"value": "56-32234/SJC",
+			"label": "Order Number"
+		}, {
+			"key": "Terms & Conditions",
+			"value": "This ticket is a revocable license to attend the event listed on the front of the ticket and is subject to the full terms found at www.ticketmaster.com. Such license may be revoked without refund for noncompliance with terms. Unlawful sale or attempted sale prohibited. Tickets obtained from unauthorized sources may be invalid, lost, stolen, or counterfeit and if so are void. This ticket may not be resold for an amount in excess of the face value of the ticket without the written consent of issuer. Maximum resale restrictions may apply, e.g.: PA: greater of $5 or 25% of ticket price plus tax; NY: if venue seats more than 5,000 persons, ticket may not be resold within 1,500 feet from the physical structure of this place of entertainment under penalty of law. In the event a legal baseball game is not played, ticket may be exchanged for same price seat for either: (a) rescheduled game, if any; or, if applicable, (b) any baseball home game within 12 months of original game, if available. Complimentary tickets not exchangeable or redeemable for any benefit offered to tickets with a dollar value. TIME, OPPONENT, ROSTERS AND DATE SUBJECT TO CHANGE. This ticket may not be used for advertising, promotion or other trade purposes without the written consent of issuer. Applicable taxes are included. Holder assumes all risks occurring before, during or after event, including injury by any cause, and releases management, facility, league, participants, clubs, Ticketmaster, and their respective affiliates and representatives from any related claims.",
+			"label": "Terms & Conditions"
+		}]
+	},
+	"foregroundColor": "rgb(255,255,255)",
+	"backgroundColor": "rgb(0,0,0)",
+	"organizationName": "Ticketmaster LLC."
+}

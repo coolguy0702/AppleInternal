@@ -1,0 +1,27 @@
+{
+  "name": "Century Theaters",
+  "category": "fun",
+  "rewardsType": "other",
+  "source": "physicalCard",
+  "city": "Mountain View",
+  "state": "CA",
+  "merchant": {
+    "category": "fun",
+    "detailedCategory": "arts.movietheaters",
+    "heroImageURL": "https://s3-media2.fl.yelpcdn.com/bphoto/kBRUvU83ge7wJ9h58j8heg/o.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 1698195371786223970,
+    "locationLatitude": 37.41461841733987,
+    "locationLongitude": -122.0808613300323,
+    "name": "Century Cinema 16",
+    "phoneNumber": "+1 (650) 961-3828",
+    "url": "https://www.cinemark.com/california-bay-area/century-cinema-16#theatreInfo"
+  },
+  "brand": {
+    "category": "fun",
+    "detailedCategory": "arts.movietheaters",
+    "identifier": 2148123788736123850,
+    "name": "Cinemark",
+    "url": "http://www.cinemark.com"
+  }
+}

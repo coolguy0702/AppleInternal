@@ -1,0 +1,124 @@
+{
+	"formatVersion": 1,
+	"passTypeIdentifier": "paymentpass.com.apple.dev",
+	"teamIdentifier": "58Y959KPTE",
+	"primaryAccountIdentifier": "FAPLSLSP900004956F3D2EAED5465C895B5651F6DF66830139822E0A3830E6",
+	"associatedApplicationIdentifiers": [
+		"GSP3TRFDJD.com.apple.syndrome",
+		"5AM47K89XY.com.apple.PassAche",
+		"PH299P4ESD.com.mobilesuica.app"
+	],
+	"messagePushTopic": "jp.fnopf.gpqa.SP900004.SV900004",
+	"messageServiceURL": "https://gpqa.fnopf.jp:3444/pnmd/SP900004/SV900004/",
+	"serialNumber": "nc.qa.qa4_7a60706d6ce24b0398c6ecbc8f42c875",
+	"backgroundColor": "rgb(150,0,0)",
+	"foregroundColor": "rgb(255,200,200)",
+	"labelColor": "rgb(255,230,230)",
+	"organizationName": "East Japan Railway Company",
+	"description": "モバイルSuicaサービス",
+	"supportsDefaultCardSelection": true,
+	"isUserSelectionAllowed": true,
+	"supportsSerialNumberBasedProvisioning": true,
+	"requiresTransferSerialNumberBasedProvisioning": true,
+	"supportsDPANNotifications": 0,
+	"supportsFPANNotifications": 0,
+	"issuerCountryCode": "JP",
+	"paymentCard": {
+		"secondaryFields": [
+			{
+				"key": "card",
+				"label": "CARD",
+				"value": "0001"
+			}
+		],
+		"auxiliaryFields": [
+			{
+				"key": "cardholder",
+				"label": "CARDHOLDER",
+				"value": "トウノ モミジ"
+			}
+		],
+		"backFields": [
+			{
+				"key": "notice",
+				"label": "INFORMATION",
+				"value": "East Japan Railway Company"
+			},
+			{
+				"key": "contactWebsite",
+				"label": "WEBSITE",
+				"value": "https://www.jreast.co.jp/mobilesuica/index.html"
+			},
+			{
+				"key": "contactNumber",
+				"label": "PHONE",
+				"value": "048-645-7007"
+			},
+			{
+				"key": "contactName",
+				"label": "NAME",
+				"value": "East Japan Railway Company"
+			},
+			{
+				"key": "privacyPolicyURL",
+				"label": "POLICY URL",
+				"value": "https://www.jreast.co.jp/site/privacy.html"
+			},
+			{
+				"key": "termsAndConditionsURL",
+				"label": "TERMS URL",
+				"value": "https://www.jreast.co.jp/mobilesuica/kiyaku/index.html"
+			},
+            {
+                "key": "commuter_route",
+                "label": "矢代田 ↔ 見附",
+                "value": "(信越線)",
+                "cellStyle": "PKTableViewCellStyleSubtitle"
+            },
+            {
+                "key": "commuter_route_sector_2",
+                "label": "\u6c60\u888b \u2194 \u6e0b\u8c37",
+                "value": "(\u5c71\u624b\u7dda\u65b0\u5bbf\u30fb\u6e0b\u8c37\u65b9\u9762)",
+                "cellStyle": "PKTableViewCellStyleSubtitle"
+            },
+            {
+                "key": "commuter_route_validity_period",
+                "label": "PLAN",
+                "value": "1箇月"
+            },
+            {
+                "key": "commuter_route_expiration",
+                "label": "EXPIRING",
+                "value": "2019-06-10T23:59:59+09:00",
+                "dateStyle": "PKDateStyleLong",
+                "ignoresTimeZone": 0
+            }
+		]
+	},
+	"paymentApplications": [
+		{
+			"secureElementIdentifier": "2E013410011C08300900000000008CBE6C8CBA4F37CF7A30",
+			"applicationIdentifier": "A00000068001000100000005",
+			"DPANIdentifier": "DAPLSLSP9000049438D406638043A9ABBC3A7663A1E0380139822E0A3830E6",
+			"DPANSuffix": "0001",
+			"state": 1,
+			"supportsContactlessPayment": 1,
+			"supportsInAppPayment": 0,
+			"paymentNetworkIdentifier": 103,
+			"paymentType": "Transit",
+			"applicationDescription": "Felica",
+			"defaultPaymentApplication": true,
+			"supportsOptionalAuthentication": 1,
+			"appletDataFormat": "transit.felica.suica",
+			"supportedExpressModes": [
+				"transit.felica.suica"
+			],
+			"appletCurrencyCode": "JPY"
+		}
+	],
+	"sequenceCounter": 4,
+	"auxiliaryPaymentApplications": [
+
+	],
+	"isCobranded": false
+}

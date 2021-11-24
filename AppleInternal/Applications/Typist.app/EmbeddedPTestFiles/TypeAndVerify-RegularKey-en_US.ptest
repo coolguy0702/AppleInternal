@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>TypeAndVerify-GestureKeys-en_US</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Hello world!</string>
+                        <key>expectedText</key>
+                        <string>Hello world!</string>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+                
+<!--
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeRight</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>2 days world.</string>
+                        <key>expectedText</key>
+                        <string>Hello world.</string>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>I'm Typist.</string>
+                        <key>expectedText</key>
+                        <string>I'm Typist.</string>
+                        <key>testCaseID</key>
+                        <string>10000002</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing - Failure Case</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>My number is +1(408)1234-5678.</string>
+                        <key>expectedText</key>
+                        <string>My number is +1(408)1234-5678.</string>
+                        <key>testCaseID</key>
+                        <string>10000003</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+-->
+            </array>
+        </dict>
+    </array>
+</plist>

@@ -1,0 +1,40 @@
+{
+	"account" : {
+		"identifier": "75698eae-e65d-4d84-a588-599776739d64",
+		"remainingMinimumPayment" : "25.00",
+		"currentBalance" : "971.32",
+		"remainingStatementBalance" : "780.27",
+        "statementBalance" : "780.27",
+		"featureMinimumAmount" : "0.01",
+		"statementIdentifier": "d0202bb6-cd15-467f-95aa-52608510cdc3",
+		"apr": "0.16",
+		"creditLimit":"5000",
+		"currentStatementPurchases" : "399.89",
+		"paymentsAndCredits": "795.71",
+	},
+	"currentStatementSelectedSuggestedAmountEvents" : [
+		{
+			"transactionAmount" : "795.71",
+			"transactionDate" : "2018-07-09T00:00:00+00:00",
+			"suggestedAmountCategory" : "PayInTwoMonths",
+			"accountIdentifier": "75698eae-e65d-4d84-a588-599776739d64",
+			"statementIdentifier": "d0202bb6-cd15-467f-95aa-52608510cdc3",
+		},
+	],
+	"currentStatementPurchasesTransactions" : [
+    ],
+    "previousStatementPurchasesTransactions" : [
+        {
+            "amount" : "3.50",
+            "transactionDate" : "2018-07-09T00:00:00+00:00",
+            "merchantCategory" : "fooddrinks"
+        }
+    ],
+    "currentStatementBillPaymentTransactions" : [
+    ],
+    "previousStatementBillPaymentTransactions" : [
+        {
+            "amount" : "918.67"
+        }
+    ]
+}

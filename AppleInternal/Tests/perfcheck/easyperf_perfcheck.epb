@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<key>test_easyperf_perf</key>
+	<array>
+		<dict>
+			<key>device_config</key>
+			<dict>
+				<key>model</key>
+				<string>N61AP</string>
+			</dict>
+			<key>ep_metrics</key>
+			<dict>
+				<key>Logical_writes</key>
+				<integer>12288</integer>
+				<key>Peak_phys_footprint</key>
+				<integer>460416</integer>
+				<key>Phys_footprint</key>
+				<integer>0</integer>
+				<key>Run_mode</key>
+				<integer>1</integer>
+				<key>cpu_time</key>
+				<integer>446156</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>device_config</key>
+			<dict>
+				<key>model</key>
+				<string>MacBookPro10,1</string>
+			</dict>
+			<key>ep_metrics</key>
+			<dict>
+				<key>Cpu_instructions</key>
+				<integer>0</integer>
+				<key>Logical_writes</key>
+				<integer>0</integer>
+				<key>Peak_phys_footprint</key>
+				<integer>1388544</integer>
+				<key>Phys_footprint</key>
+				<integer>0</integer>
+				<key>Run_mode</key>
+				<integer>1</integer>
+				<key>cpu_time</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+	</array>
+
+	<key>trivial</key>
+	<array>
+		<dict>
+			<key>device_config</key>
+			<dict>
+				<key>model</key>
+				<string>MacBookPro10,1</string>
+			</dict>
+			<key>ep_metrics</key>
+			<dict>
+				<key>Cpu_instructions</key>
+				<integer>0</integer>
+				<key>Logical_writes</key>
+				<integer>0</integer>
+				<key>Peak_phys_footprint</key>
+				<integer>1388544</integer>
+				<key>Phys_footprint</key>
+				<integer>0</integer>
+				<key>Run_mode</key>
+				<integer>2</integer>
+				<key>cpu_time</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>device_config</key>
+			<dict>
+				<key>model</key>
+				<string>N61AP</string>
+			</dict>
+			<key>ep_metrics</key>
+			<dict>
+				<key>Logical_writes</key>
+				<integer>12288</integer>
+				<key>Peak_phys_footprint</key>
+				<integer>460416</integer>
+				<key>Phys_footprint</key>
+				<integer>0</integer>
+				<key>Run_mode</key>
+				<integer>2</integer>
+				<key>cpu_time</key>
+				<integer>446156</integer>
+			</dict>
+		</dict>
+	</array>
+
+	<key>version</key>
+	<real>0.625</real>
+
+</dict>
+</plist>

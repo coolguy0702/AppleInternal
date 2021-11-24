@@ -1,0 +1,2444 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "amenity",
+	"features" : [
+		{
+			"type" : "Feature",
+			"id" : "5e35d18e-877f-40d9-abf1-b546a149e41b",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4313442, 48.6404267 ]
+			},
+			"properties" : {
+				"category" : "taxi",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Yellow Cab Taxi Information"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "76b966ec-9864-45ce-89b6-5a96fabab374" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "941e6356-5a74-4945-93ff-5b71287eb1ac",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4312868, 48.6407692 ]
+			},
+			"properties" : {
+				"category" : "baggagecarts",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Baggage Carts"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "d20a84f3-43f0-44d1-8f95-5004c9143b03" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "91a5098e-03d0-4d0b-a32f-36e52fbd733a",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4304376, 48.6410325 ]
+			},
+			"properties" : {
+				"category" : "boardinggate.aircraft",
+				"accessibility" : null,
+				"name" : {
+					"en" : "7"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "81e3701a-c33e-44ce-b35b-b878d7b0d84a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "d75d1939-fc20-4bab-a33c-0f3b5f5b2f26",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4305849, 48.6409306 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.departures",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Departures Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "81e3701a-c33e-44ce-b35b-b878d7b0d84a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "d2bde4d2-3bac-4f70-b36a-f6059e720244",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.431339, 48.6404488 ]
+			},
+			"properties" : {
+				"category" : "ticketing.shuttle",
+				"accessibility" : null,
+				"name" : {
+					"en" : "YYJ Airport Shuttle"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "76b966ec-9864-45ce-89b6-5a96fabab374" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "a3b239f1-0e40-4d24-aed6-0e4877dfb6a4",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4309034, 48.6405573 ]
+			},
+			"properties" : {
+				"category" : "vendingmachine",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Vending Machines"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "65c4b25b-0811-470c-8ced-84feaf45491c" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "bebf35d5-9eaa-40ee-be65-6ce32099c300",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4296001, 48.6403628 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "fdbdbc04-d668-4a6a-911f-dcedc4dc0e6c",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4295968, 48.6403762 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "dfef9fa5-f297-4393-8ede-6a12614d7486",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4295525, 48.6403715 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "8dae07ac-c27c-46d5-b0ef-c6182f4ac76d",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4295557, 48.6403582 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "af5b4445-9f4d-4b22-85c9-5be0cca10d98",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4295589, 48.6403448 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "71993125-7455-4326-950a-92709a13e590",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4295621, 48.6403315 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "fc6823e2-2b2c-46e5-bb15-2d72fb2f4e2d",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4291295, 48.6403268 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "2337a312-fed8-4021-be7e-cf26e7425dfe",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4291327, 48.6403135 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "90b022d0-beef-43ce-91ce-f59814e651f5",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4301655, 48.6403043 ]
+			},
+			"properties" : {
+				"category" : "information.mufid",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Arrivals & Departures"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "6499afd9-6027-4425-8603-2cf24a292e68" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "24386d4a-4cdc-4e67-a4ad-dcea6640c16c",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4305098, 48.6409227 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.departures",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Departures Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "81e3701a-c33e-44ce-b35b-b878d7b0d84a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "800ac452-0724-4ceb-8723-f30968190a43",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4306159, 48.6408246 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.departures",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Departures Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "d476b8f4-51d9-4313-9c7a-8c08966037ed" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "16e272de-60c4-4691-ae20-2fc27dbc4925",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4312804, 48.6405328 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.arrivals",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Arrivals Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "65c4b25b-0811-470c-8ced-84feaf45491c" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "d66fa6f3-a404-4e68-bf85-3de7d254bc9b",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4306792, 48.6405486 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.arrivals",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Arrivals Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "e020790d-9ef7-47a7-9f85-520d173edbd6" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "bd69eda9-4be6-418d-b037-ce424f6282e1",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4306005, 48.6405401 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.arrivals",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Arrivals Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "e020790d-9ef7-47a7-9f85-520d173edbd6" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "f9a451ed-7408-4d40-80ad-6a9e9aef32a6",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4302311, 48.6405991 ]
+			},
+			"properties" : {
+				"category" : "information.mufid",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Arrivals & Departures"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b4338876-3d72-4a66-8d13-dbd94e5c3482" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "253d88c5-059d-4f1d-9c76-f6d244265e24",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4302253, 48.6405862 ]
+			},
+			"properties" : {
+				"category" : "information.mufid",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Arrivals & Departures"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b4338876-3d72-4a66-8d13-dbd94e5c3482" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "4fe23040-7f74-4961-8765-389d0447af26",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4303166, 48.6404131 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.arrivals",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Arrivals Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b4338876-3d72-4a66-8d13-dbd94e5c3482" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "299331f3-98b7-4cfc-a104-be9fada9f628",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4303075, 48.6404124 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.departures",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Departures Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b4338876-3d72-4a66-8d13-dbd94e5c3482" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "4dda86f4-ae9e-4fb5-89a6-821d8153ddf5",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4297083, 48.640342 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.departures",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Departures Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "eee2e7a1-1b8d-477d-8ad7-d28111853875",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.429562, 48.6403242 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.departures",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Departures Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "85f9390c-acc9-4d60-b72e-96b7e62fd9ee",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4293137, 48.6403005 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.departures",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Departures Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "6a6e2763-5123-4149-9ec0-f995e73c51f3",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4291933, 48.6402847 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.departures",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Departures Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "f1426ef5-0e7e-45a8-b5c4-6b206904f78e",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4311451, 48.6406747 ]
+			},
+			"properties" : {
+				"category" : "immigration",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Immigration"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "73951395-6ddd-4c2b-bf61-35eed7e59cd7" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "1a0dd1f4-8073-4c15-a676-8aa68d5eae22",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4304693, 48.6405046 ]
+			},
+			"properties" : {
+				"category" : "security.checkpoint",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Preboard Screening Entrance"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "da338821-9554-4d97-8272-66220c5f1e46" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "910b4b0f-ecc1-42ae-bf60-f94f5c65032f",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4307241, 48.6407145 ]
+			},
+			"properties" : {
+				"category" : "restroom.female",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Female Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "445b6efe-c5e6-44d4-b6ee-553e91be91a6" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "8424b71e-915c-47ad-bdce-f2ef4a85d44f",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4306913, 48.6406992 ]
+			},
+			"properties" : {
+				"category" : "restroom.male",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Male Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "ee0d463f-089f-4882-95c3-3050d4e8c127" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "26838a7b-cfb3-47e1-8c1a-972679f2d0a4",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4311351, 48.6407505 ]
+			},
+			"properties" : {
+				"category" : "restroom.male",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Male Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "c5aa053c-6344-4158-8b7a-fb9ff9af5b5d" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "b518c4af-16ef-40ae-b4ed-4a59373f3226",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4308532, 48.6405484 ]
+			},
+			"properties" : {
+				"category" : "restroom.male",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Male Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "188c56dd-eb1b-46c1-9a5e-b021dfcedbee" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "9c222782-4db8-4fa8-bbc2-4c0e096b1e2d",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4304573, 48.6404242 ]
+			},
+			"properties" : {
+				"category" : "restroom.male",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Male Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "80c72989-37ee-4594-be60-451f3872b182" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "3c381d2f-75f8-40d4-aa2c-1039e52b07ac",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4289918, 48.6402413 ]
+			},
+			"properties" : {
+				"category" : "restroom.male",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Male Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "00b37e36-9d6f-498a-b465-36f42d4b1d14" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "e84808c1-fe6f-4b3f-8399-cc7c858adc5e",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4289789, 48.640296 ]
+			},
+			"properties" : {
+				"category" : "restroom.female",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Female Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "81877704-594c-40a1-961c-5ba9e883d6bb" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "c275db46-0294-4c5e-ab78-98f579d7f237",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4304213, 48.6404204 ]
+			},
+			"properties" : {
+				"category" : "restroom.female",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Female Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "c71b81df-25e1-42b8-898f-94f6615145d7" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "6484adf0-1dd3-434f-8ce5-d79b0afe723f",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4309549, 48.6405584 ]
+			},
+			"properties" : {
+				"category" : "restroom.female",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Female Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "1ffe97f7-f37b-44ad-897c-7014e42d9054" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "3a361cd7-6a20-4601-a4b2-daf523c0bc5a",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4311532, 48.6407524 ]
+			},
+			"properties" : {
+				"category" : "restroom.female",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Female Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "557e7f31-c7bc-4d9d-9800-b2f419629b01" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "784601a7-523c-4985-8540-c4f8ef974c29",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4306621, 48.6406955 ]
+			},
+			"properties" : {
+				"category" : "restroom.family",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Family Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "64c19cb9-b329-4d93-9b22-e693a1a1cf05" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "4d40f95b-b4b4-4c7b-a0aa-bd9c32d1a37f",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4289871, 48.6402614 ]
+			},
+			"properties" : {
+				"category" : "restroom.family",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Family Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "26722a0b-2866-4a76-b70d-43e5944edcd4" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "daed776d-8770-4e74-9948-351baebffc79",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4303283, 48.6403952 ]
+			},
+			"properties" : {
+				"category" : "restroom.family",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Family Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "4f35ff59-8d00-4b68-8601-ef9ef7c963bb" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "60e51b8b-9e5d-4cb8-85e4-5bd6bb730fdf",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4309378, 48.640561 ]
+			},
+			"properties" : {
+				"category" : "payphone",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Pay Phone"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "65c4b25b-0811-470c-8ced-84feaf45491c" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "31abdce3-d15b-4dc2-ace9-198dfa8cc685",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.429822, 48.6403197 ]
+			},
+			"properties" : {
+				"category" : "payphone",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Pay Phone"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "6abd6843-26c1-4964-8555-efc0fcf8a8f5",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4291359, 48.6403001 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "b33c8cb5-9e27-4291-945a-e0a5d21c37d3",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4291391, 48.6402868 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "0eb44264-a80c-4f8e-899c-cfc803db13fb",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4292407, 48.6402976 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "efe155d6-7532-4a79-8737-18496dd5d89e",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4292598, 48.6402996 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "02224f7d-c0b5-4466-9f9c-c4590368e81f",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4293653, 48.6403106 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "182660ba-04c4-42aa-8be0-a701f906d4cb",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4293843, 48.6403126 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "9ab4085d-f6d6-49c4-a560-6711d4e11e5a",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4293223, 48.6403061 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "d54998f0-4b51-4a8e-b70c-77d02d7f78fd",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4293033, 48.6403041 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "d1390f16-f2a5-4d54-a25b-0d28e9803cec",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4296065, 48.6403362 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "7cf71848-1db2-470a-9960-063893b33548",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4296033, 48.6403495 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "325af770-7d9d-4b39-91a4-4b385bec8709",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4296671, 48.6403426 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "5fe91869-d45f-491b-acd1-af7ef5c944f0",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4296861, 48.6403446 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "04095496-6fe1-499d-ab65-8d5707fe2d09",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4297273, 48.640349 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "3e2a3772-7df9-4e79-9ed6-c8c9aa74942c",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4297464, 48.640351 ]
+			},
+			"properties" : {
+				"category" : "checkin.selfservice",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Check In Kiosk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "6fd98c5f-744a-49ca-88db-882d44e2844f",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4303313, 48.6403843 ]
+			},
+			"properties" : {
+				"category" : "mothersroom",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Mother's Room"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "1a880037-2d23-4e0b-a9de-8850a46d710a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "237dde07-7971-4a21-825e-d5872be4e5af",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4311149, 48.6405015 ]
+			},
+			"properties" : {
+				"category" : "information",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Red Coat Information Desk"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "65c4b25b-0811-470c-8ced-84feaf45491c" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "02fbfacf-2711-40b4-8487-92f3ee4ccc90",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4306462, 48.640695 ]
+			},
+			"properties" : {
+				"category" : "drinkingfountain",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Drinking Fountain"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "894d39a9-7796-4d62-afc4-eea3171dfd96" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "706ba934-a529-42d7-9136-8cc5370856ea",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4302881, 48.6404076 ]
+			},
+			"properties" : {
+				"category" : "drinkingfountain",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Drinking Fountain"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b4338876-3d72-4a66-8d13-dbd94e5c3482" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "e5114100-c0b5-4743-b29b-00fe31fcc663",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4302961, 48.6406419 ]
+			},
+			"properties" : {
+				"category" : "defibrillator",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Automated External Defibrillator"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "da338821-9554-4d97-8272-66220c5f1e46" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "17d83df4-274b-4b89-8b15-dd756d59131a",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4310537, 48.6407051 ]
+			},
+			"properties" : {
+				"category" : "defibrillator",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Automated External Defibrillator"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "62c33b0a-c345-4d91-852b-5dddad209b25" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "1d0f7dae-eef9-4977-880c-87db5c473981",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4303734, 48.6408478 ]
+			},
+			"properties" : {
+				"category" : "defibrillator",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Automated External Defibrillator"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "a7348398-486c-437e-bf8d-9cd2e47e09b4" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "d16a83c2-4beb-4316-9fef-d1452ace2af6",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4303503, 48.6404169 ]
+			},
+			"properties" : {
+				"category" : "defibrillator",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Automated External Defibrillator"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b4338876-3d72-4a66-8d13-dbd94e5c3482" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "f052fe47-a396-4e5f-9d3c-5e3eacf58243",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.429796, 48.6402994 ]
+			},
+			"properties" : {
+				"category" : "ticketing.airline",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Island Express Air Check In/Ticketing"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "18e29c50-f140-4641-8f41-537eb7426a8d",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4291594, 48.6403569 ]
+			},
+			"properties" : {
+				"category" : "ticketing.airline",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Delta Air Lines Check In/Ticketing"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "5b272887-7729-4d95-92eb-3ab1e62b0cc7",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4292125, 48.6403626 ]
+			},
+			"properties" : {
+				"category" : "ticketing.airline",
+				"accessibility" : null,
+				"name" : {
+					"en" : "United Airlines Check In/Ticketing"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "45e7673f-d9da-419f-89b3-e08633e164de",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.429308, 48.6403726 ]
+			},
+			"properties" : {
+				"category" : "ticketing.airline",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Air Canada Jazz Check In/Ticketing"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "ea53dad3-3292-4c57-923f-54d5f6ec9f0c",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4295559, 48.6403988 ]
+			},
+			"properties" : {
+				"category" : "ticketing.airline",
+				"accessibility" : null,
+				"name" : {
+					"en" : "WestJet Check In/Ticketing"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "4608d0b6-2cf9-465a-8bf5-c759c2f784cd",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4296832, 48.6404123 ]
+			},
+			"properties" : {
+				"category" : "ticketing.airline",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Alaska Airlines Check In/Ticketing"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "c62a775e-a509-41a9-bda6-d17ad661553d",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4297573, 48.6404201 ]
+			},
+			"properties" : {
+				"category" : "ticketing.airline",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Pacific Coastal Airlines Check In/Ticketing"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "40706c8a-954c-427d-8c68-80951609ee13",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4298209, 48.6404268 ]
+			},
+			"properties" : {
+				"category" : "ticketing.airline",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Air North / Flair Air Check In/Ticketing"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "379a7fdf-c052-4db7-84ea-00876031ec7b" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "e98a9e2d-9f26-4cc7-9363-8af6b47e58c7",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4304377, 48.6408635 ]
+			},
+			"properties" : {
+				"category" : "businesscenter",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Business Center"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "81e3701a-c33e-44ce-b35b-b878d7b0d84a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "383f284f-2465-46e9-a46c-ed34923b2e00",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4304888, 48.6410384 ]
+			},
+			"properties" : {
+				"category" : "boardinggate.aircraft",
+				"accessibility" : null,
+				"name" : {
+					"en" : "6"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "81e3701a-c33e-44ce-b35b-b878d7b0d84a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "cb838b1d-1f0a-419a-916f-2c96d5fe3a5a",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4305914, 48.6410456 ]
+			},
+			"properties" : {
+				"category" : "boardinggate.aircraft",
+				"accessibility" : null,
+				"name" : {
+					"en" : "5"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "81e3701a-c33e-44ce-b35b-b878d7b0d84a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "9edd997f-4f86-4342-a51c-abb77af4c68e",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4306409, 48.641047 ]
+			},
+			"properties" : {
+				"category" : "boardinggate.aircraft",
+				"accessibility" : null,
+				"name" : {
+					"en" : "4"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "81e3701a-c33e-44ce-b35b-b878d7b0d84a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "1280c582-3821-4bf9-a73d-a3f8a8bb2bb0",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4303962, 48.6410199 ]
+			},
+			"properties" : {
+				"category" : "boardinggate.aircraft",
+				"accessibility" : null,
+				"name" : {
+					"en" : "8"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "81e3701a-c33e-44ce-b35b-b878d7b0d84a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "fd6f6fcf-9c34-477a-ae7b-ba6f081c9d7c",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4316302, 48.6404701 ]
+			},
+			"properties" : {
+				"category" : "baggageclaim.oversize",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Oversize Baggage Claim Area"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "76b966ec-9864-45ce-89b6-5a96fabab374" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "7224c77b-e609-44c3-8f42-6c1cb1456b14",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4315955, 48.6405656 ]
+			},
+			"properties" : {
+				"category" : "baggageclaim.oversize",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Oversize Baggage Claim Area"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "76b966ec-9864-45ce-89b6-5a96fabab374" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "11c850e6-8780-4feb-a881-ff774d34c6fe",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.431281, 48.6406208 ]
+			},
+			"properties" : {
+				"category" : "baggagecarts",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Baggage Carts"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "5f2353ce-2429-4dcf-b24b-1c7d367c9392" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "42fc8bf1-06d0-4e65-85d5-d51a72f69707",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4303488, 48.6403636 ]
+			},
+			"properties" : {
+				"category" : "babychanging",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Baby Changin Area"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "1a880037-2d23-4e0b-a9de-8850a46d710a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "79998d50-143e-42cb-a6b0-ac570aca6ee6",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4308732, 48.6405541 ]
+			},
+			"properties" : {
+				"category" : "atm",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Automated Teller Machine"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "65c4b25b-0811-470c-8ced-84feaf45491c" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "84f848f9-5d5b-4348-a92a-1b91a4e41eed",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4302711, 48.640408 ]
+			},
+			"properties" : {
+				"category" : "atm",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Automated Teller Machine"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b4338876-3d72-4a66-8d13-dbd94e5c3482" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "d2f16f1d-558c-44e9-821e-7b8f2eb98ec2",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4306396, 48.6405441 ]
+			},
+			"properties" : {
+				"category" : "arrivalgate",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Arrival Doors"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "e5b11977-5219-4736-b887-7262e1661d57" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "fbd36c1b-1e30-4912-94d6-bc6589b36107",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4305253, 48.6406464 ]
+			},
+			"properties" : {
+				"category" : "drinkingfountain",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Drinking Fountain"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "622f2e98-ecc4-4fbb-945a-ebe09b63f82e" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "33c2635f-11ef-4d45-a09d-aa9af5aa2aa9",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4304216, 48.6405855 ]
+			},
+			"properties" : {
+				"category" : "restroom.family",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Family Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "053f7a6b-839a-4a3f-9661-ddcca6bce178" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "6a8c4f63-e90b-4973-a757-88cecb2ef779",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4300873, 48.6406582 ]
+			},
+			"properties" : {
+				"category" : "wheelchairassist",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Evac-U-Trac"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "ff27e97e-b5a7-425c-a4a8-8a60cd7f035f" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "2cb4df7d-4135-4666-a41e-b3300b026f2e",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4309406, 48.6407481 ]
+			},
+			"properties" : {
+				"category" : "wheelchairassist",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Evac-U-Trac"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "dc88bf5f-1bc0-4e37-9fcf-276710f6cdb6" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "4d64e25d-b6ee-4ca2-8c12-52b1f1cbb10b",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4308543, 48.6406057 ]
+			},
+			"properties" : {
+				"category" : "vendingmachine",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Vending Machines"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "6f651f85-3cb5-45c2-9c13-fcecff5ad33a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "21dd62b2-0aac-4327-9f6a-cda6f92cb7b7",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4303276, 48.6406249 ]
+			},
+			"properties" : {
+				"category" : "drinkingfountain",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Drinking Fountain"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b71f7a7e-061c-4b73-b6aa-78ef767af0af" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "eaee8d1d-e0ef-40bb-8938-1a679befaab8",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.430367, 48.6406356 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.departures",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Departures Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b71f7a7e-061c-4b73-b6aa-78ef767af0af" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "065bd0ec-ceba-470a-a5b9-9638241fe65b",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4305165, 48.6405943 ]
+			},
+			"properties" : {
+				"category" : "information.mufid.departures",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Flight Information Display - Departures Only"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "622f2e98-ecc4-4fbb-945a-ebe09b63f82e" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "c89e24ed-c6f7-47d2-af9d-af2ef79749d6",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4305365, 48.6406002 ]
+			},
+			"properties" : {
+				"category" : "defibrillator",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Automated External Defibrillator"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "622f2e98-ecc4-4fbb-945a-ebe09b63f82e" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "b033a37e-67ec-405a-8a5e-6442d4ecd361",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4301574, 48.6404964 ]
+			},
+			"properties" : {
+				"category" : "wheelchairassist",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Evac-U-Trac"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "111c442a-88c4-4b3e-b2b9-14fad9d74d37" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "647eb484-f972-4aec-a620-bf6950d6d1af",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4303908, 48.6405823 ]
+			},
+			"properties" : {
+				"category" : "restroom.male",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Male Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "45c264c1-d6df-4c02-9191-874575c48c3f" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "a781a1de-c985-411b-97c1-42da31c80a23",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4304845, 48.6405923 ]
+			},
+			"properties" : {
+				"category" : "restroom.female",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Female Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "5821dceb-4aad-4d80-978a-02ff8ec8e2cd" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "1076c8bc-cc93-44df-bac5-719f1ebe195c",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4307803, 48.6405793 ]
+			},
+			"properties" : {
+				"category" : "childplayarea",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Child Play Area"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "622f2e98-ecc4-4fbb-945a-ebe09b63f82e" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "09ff074f-6a55-450f-b45f-15af818b3a72",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4304315, 48.6406278 ]
+			},
+			"properties" : {
+				"category" : "businesscenter",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Buisness Center"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "3a513e08-b103-4306-bbb7-3e3be5f6787f" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "bd4f30af-fa66-4a9a-87b0-002d798f4fa1",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4301206, 48.6405938 ]
+			},
+			"properties" : {
+				"category" : "boardinggate.aircraft",
+				"accessibility" : null,
+				"name" : {
+					"en" : "10"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b71f7a7e-061c-4b73-b6aa-78ef767af0af" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "868c02f7-f048-4bab-8e50-a15ba0e001d3",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4301458, 48.6406514 ]
+			},
+			"properties" : {
+				"category" : "boardinggate.aircraft",
+				"accessibility" : null,
+				"name" : {
+					"en" : "9"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "b71f7a7e-061c-4b73-b6aa-78ef767af0af" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "43711846-7b73-4857-b593-cf586e74e3df",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4308542, 48.640724 ]
+			},
+			"properties" : {
+				"category" : "boardinggate.aircraft",
+				"accessibility" : null,
+				"name" : {
+					"en" : "2"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "6f651f85-3cb5-45c2-9c13-fcecff5ad33a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "b91f9f43-0349-4a77-8964-2262239b3149",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4308834, 48.6406751 ]
+			},
+			"properties" : {
+				"category" : "boardinggate.aircraft",
+				"accessibility" : null,
+				"name" : {
+					"en" : "1"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "6f651f85-3cb5-45c2-9c13-fcecff5ad33a" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "1ddb1ec0-0f53-4586-8468-792f804cd1ef",
+			"feature_type" : "amenity",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -123.4300529, 48.640622 ]
+			},
+			"properties" : {
+				"category" : "restroom.family",
+				"accessibility" : null,
+				"name" : {
+					"en" : "Family Restroom"
+				},
+				"alt_name" : null,
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"unit_ids" : [ "c8f3d608-eb50-4bf1-9908-234a40b56e41" ],
+				"address_id" : null,
+				"correlation_id" : null
+			}
+		}
+	]
+}

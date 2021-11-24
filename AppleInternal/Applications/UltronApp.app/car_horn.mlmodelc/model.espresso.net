@@ -1,0 +1,77 @@
+{
+  "storage" : "model.espresso.weights",
+  "properties" : {
+
+  },
+  "format_version" : 200,
+  "layers" : [
+    {
+      "nB" : 12288,
+      "top" : "dense_1__activation___output",
+      "has_biases" : 1,
+      "weights" : {
+        "W_U8" : 3,
+        "per_ch_qscale" : 7,
+        "per_ch_qbias" : 5
+      },
+      "nC" : 32,
+      "type" : "inner_product",
+      "has_relu" : 1,
+      "bottom" : "input1",
+      "blob_biases" : 1,
+      "has_tanh" : 0,
+      "hint_fallback_from_metal" : 1,
+      "name" : "dense_1",
+      "has_prelu" : 0
+    },
+    {
+      "nB" : 32,
+      "top" : "dense_2__activation___output",
+      "has_biases" : 1,
+      "name" : "dense_2",
+      "nC" : 32,
+      "type" : "inner_product",
+      "has_relu" : 1,
+      "bottom" : "dense_1__activation___output",
+      "blob_biases" : 9,
+      "has_tanh" : 0,
+      "weights" : {
+        "W_U8" : 11,
+        "per_ch_qscale" : 15,
+        "per_ch_qbias" : 13
+      },
+      "has_prelu" : 0
+    },
+    {
+      "nB" : 32,
+      "top" : "dense_3_output",
+      "has_biases" : 1,
+      "name" : "dense_3",
+      "nC" : 1,
+      "type" : "inner_product",
+      "has_relu" : 0,
+      "bottom" : "dense_2__activation___output",
+      "blob_biases" : 17,
+      "has_tanh" : 0,
+      "weights" : {
+        "W_U8" : 19,
+        "per_ch_qscale" : 23,
+        "per_ch_qbias" : 21
+      },
+      "has_prelu" : 0
+    },
+    {
+      "bottom" : "dense_3_output",
+      "weights" : {
+
+      },
+      "mode" : 3,
+      "top" : "output1",
+      "type" : "activation",
+      "name" : "dense_3__activation__",
+      "attributes" : {
+        "is_output" : 1
+      }
+    }
+  ]
+}

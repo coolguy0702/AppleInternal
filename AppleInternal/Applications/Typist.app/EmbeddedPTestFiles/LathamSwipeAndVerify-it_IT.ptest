@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+   <array>
+      <dict>
+         <key>Category</key>
+         <string>Typist_InternationalKeyboard</string>
+         <key>ID</key>
+         <string>LathamSwipeAndVerify-MultiLanguages</string>
+         <key>Type</key>
+         <string>Suite</string>
+         <key>SuiteActions</key>
+         <array>
+             <dict>
+               <key>Arguments</key>
+               <dict>
+                  <key>testCaseID</key>
+                  <string>Setup</string>
+                  <key>keyboardID</key>
+                  <string>it_IT@sw=QWERTY;hw=Automatic</string>
+                  <key>keyboardType</key>
+                  <string>Default</string>
+                  <key>deviceOrientation</key>
+                  <string>Portrait</string>
+                  <key>appendKeyboard</key>
+                  <string>YES</string>
+                  <key>autoCorrection</key>
+                  <string>YES</string>
+                  <key>typeInterval</key>
+                  <real>0.2</real>
+                  <key>autoCapitalization</key>
+                  <string>YES</string>
+                  <key>checkSpelling</key>
+                  <string>YES</string>
+                  <key>periodShortcut</key>
+                  <string>YES</string>
+                  <key>capsLock</key>
+                  <string>YES</string>
+                  <key>predictive</key>
+                  <string>YES</string>
+                  <key>smartPunctuation</key>
+                  <string>NO</string>
+                  <key>keyPaddle</key>
+                  <string>YES</string>
+                  <key>smallDisplay</key>
+                  <string>YES</string>
+                  <key>oneHandedLayout</key>
+                  <string>NORMAL</string>
+                  <key>SwipeForceSpace</key>
+                  <false/>
+                  <key>SwipeSigma</key>
+                  <real>5.0</real>
+                  <key>SwipeAlpha</key>
+                  <real>0.5</real>
+                  <key>SwipePPivot</key>
+                  <real>0.5</real>
+                  <key>testClass</key>
+                  <string>IntlQAKeyboardTestLatham</string>
+                  <key>testFunction</key>
+                  <string>cancelSwipe</string>
+                  <!--key>thirdPartyKeyboardsToConfigure</key>
+                   <array>
+                   <string>Gboard</string>
+                   </array-->
+               </dict>
+               <key>Description</key>
+               <string>Setup</string>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>testCaseID</key>
+                    <string>22268422</string>
+                    <key>SwipeText</key>
+                    <string>nazionalizzerebbe</string>
+                </dict>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>testFunction</key>
+                   <string>lathamSwipeAndVerify</string>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>sono in meeting dove sei chi ce con te e presto xo se per voi e OK c ved tutti dom in uff Cmq ti chiamo dp</string>
+                          <key>expectedText</key>
+                          <string>SSono in meeting dove sei chi c’è con te è presto xò se per voi è OK c ved tutti dom in uff cmq ti chiamo dp</string>
+                      </dict>
+                   </array>
+                  <key>testCaseID</key>
+                  <string>10000001</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>ho fatto presente queste considerazioni ma la risposta che ho ottenuto e una asettica rielaborazione della precedente che non chiarisce in nessun modo la disparita di trattamento come ho ribadito rispondendo alla email del customer center ho avuto la spiacevole sensazione che quella della circostanza eccezionale non sia altro che un escamotage e un classico esempio di tattica dilatoria al quale ricorrono le compagnie aeree low cost e di certo molto meno blasonate della vostra per negare ai passeggeri un adeguato rimborso e risarcimento per i disagi subiti o comunque per disincentivare i viaggiatori dallintentare azioni risarcitorie in questa luce il vostro rifiuto appare non consono ai principi che almeno ufficialmente ispirano la vostra compagnia in relazione allattenzione e al rispetto dei passeggeri</string>
+                          <key>expectedText</key>
+                          <string>Ho fatto presente queste considerazioni ma la risposta che ho ottenuto è una asettica rielaborazione della precedente che non chiarisce in nessun modo la disparità di trattamento come ho ribadito rispondendo alla email del customer center ho avuto la spiacevole sensazione che quella della circostanza eccezionale non sia altro che un escamotage e un classico esempio di tattica dilatoria al quale ricorrono le compagnie aeree low cost e di certo molto meno blasonate della vostra per negare ai passeggeri un adeguato rimborso e risarcimento per i disagi subiti o comunque per disincentivare i viaggiatori dall’intentare azioni risarcitorie in questa luce il vostro rifiuto appare non consono ai principi che almeno ufficialmente ispirano la vostra compagnia in relazione all’attenzione e al rispetto dei passeggeri</string>
+                      </dict>
+                   </array>
+                  <key>testCaseID</key>
+                  <string>10000002</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>se potessero i poliziotti abbrancherebbero i ladri e li bacchetterebbero per bene</string>
+                          <key>expectedText</key>
+                          <string>Se potessero i poliziotti abbrancherebbero i ladri e li bacchetterebbero per bene</string>
+                      </dict>
+                   </array>
+                  <!-- Long words 16 (abbrancherebbero and bacchetterebbero)-->
+                  <key>testCaseID</key>
+                  <string>10000003</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>le controsoffitature non appartengono allinfrastruttura</string>
+                          <key>expectedText</key>
+                          <string>Le controsoffitature non appartengono all’infrastruttura</string>
+                      </dict>
+                   </array>
+                  <!-- Long words 17 and 14 (controsoffitature and infrastruttura)-->
+                  <key>testCaseID</key>
+                  <string>10000004</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>se ricapitalizzassimo la societa il governo la nazionalizzerebbe</string>
+                          <key>expectedText</key>
+                          <string>Se ricapitalizzassimo la società il governo la nazionalizzerebbe</string>
+                          <!-- Long words 17 and 18 (ricapitalizzassimo and nazionalizzerebbe)-->
+                      </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000005</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>decaffeinizzare i nostri prodotti sarebbe controproducente</string>
+                          <key>expectedText</key>
+                          <string>Decaffeinizzare i nostri prodotti sarebbe controproducente</string>
+                        </dict>
+                    </array>
+                  <!-- Long words 15 and 16 (decaffeinizzare and controproducente)-->
+                  <key>testCaseID</key>
+                  <string>10000006</string>
+               </dict>
+               <key>Description</key>
+               <string>Regular typing</string>
+            </dict>
+            <!-- This is accent test cases -->
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>in questa citta non ce un caffe decente</string>
+                            <key>expectedText</key>
+                            <string>In questa città non c’è un caffè decente</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>100000011</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>il mostro si mostro poi si giro e se ne ando in giro</string>
+                            <key>expectedText</key>
+                            <string>Il mostro si mostrò poi si girò e se ne andò in giro</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>100000012</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>pero il para para il rigore sotto il pero</string>
+                            <key>expectedText</key>
+                            <string>Però il parà para il rigore sotto il pero</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>100000013</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>sotto lalbero cera il granduomo con lamica e linvestigatore</string>
+                            <key>expectedText</key>
+                            <string>Sotto l’albero c’era il grand’uomo con l’amica e l’investigatore</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>100000014</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>linserviente va a pésca in décolleté seta color pèsca</string>
+                            <key>expectedText</key>
+                            <string>L’inserviente va a pesca in décolleté seta color pesca</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>100000015</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>il posto da ricercatore non e piu molto ambito nellambito delluniversita</string>
+                            <key>expectedText</key>
+                            <string>Il posto da ricercatore non è più molto ambìto nell’àmbito dell’università</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>100000016</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <!-- This is Apostrophe test cases -->
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>se disseppellissimo lattaccapanni sotto la pista datterraggio gli altri appallottolerebbero la carrozzella vicino al sottopassaggio</string>
+                            <key>expectedText</key>
+                            <string>Se disseppellissimo l'attaccapanni sotto la pista d'atterraggio gli altri appallottolerebbero la carrozzella vicino al sottopassaggio</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000021</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>in una cernita cretina di cantieri carenti centrai lincerta trincea recinta</string>
+                            <key>expectedText</key>
+                            <string>In una cernita cretina di cantieri carenti centrai l'incerta trincea recinta</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000022</string>
+                </dict>
+                <key>Description</key>
+                <string>Regular typing</string>
+            </dict>
+         </array>
+      </dict>
+   </array>
+</plist>

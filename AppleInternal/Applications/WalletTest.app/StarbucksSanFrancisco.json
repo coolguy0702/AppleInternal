@@ -1,0 +1,28 @@
+{
+  "name": "Starbucks",
+  "category": "fooddrinks",
+  "rewardsType": "applePay",
+  "source": "contactless",
+  "city": "San Francisco",
+  "state": "CA",
+  "merchant": {
+    "category": "fooddrinks",
+    "detailedCategory": "food.coffee",
+    "heroImageURL": "https://s3-media3.fl.yelpcdn.com/bphoto/LMAoJbgj2hv-1ZsICr1geg/o.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 1914599672845470212,
+    "locationLatitude": 37.78613547130877,
+    "locationLongitude": -122.405698299408,
+    "name": "Starbucks",
+    "phoneNumber": "+1 (415) 677-4493",
+    "url": "https://www.starbucks.com/store-locator/store/13347/4th-market-s-f-780-market-street-san-francisco-ca-941022514-us"
+  },
+  "brand": {
+    "category": "fooddrinks",
+    "detailedCategory": "food.coffee",
+    "identifier": 3856448028047449189,
+    "logoURL": "http://is2.mzstatic.com/image/thumb/d0QFCu6-S6Ob689quo6-ZQ/258x258.png",
+    "name": "Starbucks",
+    "url": "https://www.starbucks.com"
+  }
+}

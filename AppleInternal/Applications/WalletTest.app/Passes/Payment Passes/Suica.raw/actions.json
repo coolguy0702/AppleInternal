@@ -1,0 +1,107 @@
+{
+	"actions": [
+		{
+			"identifier": "topUpPass",
+			"type": "enteredValue",
+			"hasRemoteContent": false,
+			"title": "Add Money",
+			"description": "Add value to your commuter pass.",
+			"confirmationTitle": "Add",
+			"featured": true,
+			"merchantId": "TRANSIT_SL",
+			"serviceProviderIdentifier": "TRANSIT_SL",
+			"serviceProviderCountryCode": "JP",
+			"serviceProviderSupportedNetworks": [
+				"AmEx",
+				"Visa",
+				"MasterCard",
+				"JCB"
+			],
+			"serviceProviderCapabilities": [
+				"3DS",
+				"Credit"
+			],
+			"item": {
+				"currency": "JPY",
+				"minAmount": 1,
+				"maxAmount": 20000,
+				"defaultSuggestions": [
+					5000.0,
+					10000.0,
+					15000.0
+				],
+				"maxAmountIncludesLocalBalance": true,
+				"serviceProviderData": {
+					"actionIdentifier": "top_up",
+					"issuerIdentifier": "HalfpipeA",
+					"dpanIdentifier": "DAPLSLSP9000049438D406638043A9ABBC3A7663A1E0380139822E0A3830E6"
+				}
+			}
+		},
+		{
+			"confirmationTitle": "Renew",
+			"description": "Renew your monthly commuter pass.",
+			"footerText": "Selected plan will be added to your existing Commute Plan.",
+			"hasRemoteContent": false,
+			"headerText": "HEADER_TEXT",
+			"identifier": "renewCommuterPass",
+			"items": [
+				{
+					"amount": 20460,
+					"currency": "JPY",
+					"identifier": "renewal_1_month",
+					"newExpirationDate": "2016-08-05T00:00:00+09:00",
+					"serviceProviderData": {
+						"actionIdentifier": "renewal_1_month",
+						"amount": 20460,
+						"dpanIdentifier": "DAPLSLSP90000802C102C006874B3DA9CCB1BF1EE44F120139992E630876E6",
+						"issuerIdentifier": "HalfpipeD"
+					},
+					"title": "Add 1 Month"
+				},
+				{
+					"amount": 58320,
+					"currency": "JPY",
+					"identifier": "renewal_3_month",
+					"newExpirationDate": "2016-08-06T00:00:00+09:00",
+					"serviceProviderData": {
+						"actionIdentifier": "renewal_3_month",
+						"amount": 58320,
+						"dpanIdentifier": "DAPLSLSP90000802C102C006874B3DA9CCB1BF1EE44F120139992E630876E6",
+						"issuerIdentifier": "HalfpipeD"
+					},
+					"title": "Add 3 Months"
+				},
+				{
+					"amount": 102360,
+					"currency": "JPY",
+					"identifier": "renewal_6_month",
+					"newExpirationDate": "2016-08-07T00:00:00+09:00",
+					"serviceProviderData": {
+						"actionIdentifier": "renewal_6_month",
+						"amount": 102360,
+						"dpanIdentifier": "DAPLSLSP90000802C102C006874B3DA9CCB1BF1EE44F120139992E630876E6",
+						"issuerIdentifier": "HalfpipeD"
+					},
+					"title": "Add 6 Months"
+				}
+			],
+			"merchantId": "TRANSIT_SL",
+			"relevantPropertyIdentifier": "Commute_Plan",
+			"serviceProviderCapabilities": [
+				"3DS",
+				"Credit"
+			],
+			"serviceProviderCountryCode": "JP",
+			"serviceProviderIdentifier": "TRANSIT_SL",
+			"serviceProviderSupportedNetworks": [
+				"AmEx",
+				"Visa",
+				"MasterCard",
+				"JCB"
+			],
+			"title": "Renew Commute Plan",
+			"type": "selectedItem"
+		}
+	]
+}

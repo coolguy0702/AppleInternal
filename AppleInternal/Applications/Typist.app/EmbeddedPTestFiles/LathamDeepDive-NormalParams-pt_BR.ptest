@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamDeepDive-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>pt_BR@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.2</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false />
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0.5</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Nem e o jeito mais fácil de escrever mas a galera vai gostar com certeza</string>
+                                <key>expectedText</key>
+                                <string>Nem é o jeito mais fácil de escrever mas a galera vai gostar com certeza</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359051</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>informal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Durante a ultima reuniao interdepartamental tivemos a oportunidade de conversar sobre os desafios que devemos enfrentar nos proximos meses e acredito ser este um bom momento para que facamos uma rapida reflexao sobre como podemos diminuir o impacto que tais desafios terao sobre nossa empresa Agradeco quaisquer sugestoes para que possamos sair desta fase desafiadora na qual nos encontramos atualmente</string>
+                                <key>expectedText</key>
+                                <string>Durante a última reunião interdepartamental tivemos a oportunidade de conversar sobre os desafios que devemos enfrentar nos próximos meses e acredito ser este um bom momento para que façamos uma rápida reflexão sobre como podemos diminuir o impacto que tais desafios terão sobre nossa empresa Agradeço quaisquer sugestões para que possamos sair desta fase desafiadora na qual nos encontramos atualmente</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359050</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>formal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Caro amigo nos nos encontramos ha poucos dias e e com tremenda satisfacao que lhe escrevo com noticias vindas diretamente do pais de seus pais Ambos estao bem e mandam lembrancas e prometeram nos escrever brevemente para contarnos as ultimas novidades Aproveito ainda a oportunidade para oferecerlhe meus votos da mais elevada estima e colocarme a sua disposicao caso seja necessario obter quaisquer informacoes adicionais</string>
+                                <key>expectedText</key>
+                                <string>Caro amigo nós nos encontramos há poucos dias e é com tremenda satisfação que lhe escrevo com notícias vindas diretamente do país de seus pais Ambos estão bem e mandam lembranças e prometeram nos escrever brevemente para contar-nos as últimas novidades Aproveito ainda a oportunidade para oferecer-lhe meus votos da mais elevada estima e colocar-me à sua disposição caso seja necessário obter quaisquer informações adicionais</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359054</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Paragraph</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359053</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>A comercializacao de produtos toxicos e proibida por lei</string>
+                                <key>expectedText</key>
+                                <string>A comercialização de produtos tóxicos é proibida por lei</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Nossa tarde foi agradabilissima</string>
+                                <key>expectedText</key>
+                                <string>Nossa tarde foi agradabilíssima</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Fazse necessario um esforco suprapartidario</string>
+                                <key>expectedText</key>
+                                <string>Faz-se necessário um esforço supra-partidário</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Temporariamente fechado para reformas</string>
+                                <key>expectedText</key>
+                                <string>Temporariamente fechado para reformas</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words15</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359052</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>A referencia e clara</string>
+                                <key>expectedText</key>
+                                <string>A referência é clara</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>O excentrico e verossimil caso ocorrido em niteroi</string>
+                                <key>expectedText</key>
+                                <string>O excêntrico e verossímil caso ocorrido em Niterói</string>
+                                <!-- Long words 10 (excentrico, verossimil), autocapitalization (Niterói)-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words10</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359061</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Eu adorei o filme voce ja foi a bahia</string>
+                                <key>expectedText</key>
+                                <string>Eu adorei o filme você já foi à Bahia</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Nasci na cidade de sao paulo</string>
+                                <key>expectedText</key>
+                                <string>Nasci na cidade de São Paulo</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>vitoria e a capital do espirito santo</string>
+                                <key>expectedText</key>
+                                <string>Vitória é a capital do Espírito Santo</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>O rio de janeiro ja foi a capital do brasil</string>
+                                <key>expectedText</key>
+                                <string>O Rio de Janeiro já foi a capital do Brasil</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Autocaplitalization</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359063</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>michel temer foi eleito vicepresidente</string>
+                                <key>expectedText</key>
+                                <string>Michel Temer foi eleito vice-presidente</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>antonio carlos couto de barros foi um advogado brasileiro</string>
+                                <key>expectedText</key>
+                                <string>Antônio Carlos Couto de Barros foi um advogado brasileiro</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>O compositor marcio negrao nasceu em campinas</string>
+                                <key>expectedText</key>
+                                <string>O compositor Márcio Negrão nasceu em Campinas</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>adoro as composicoes de rogerio pinheiro guimaraes</string>
+                                <key>expectedText</key>
+                                <string>Adoro as composições de Rogério Pinheiro Guimarães</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Names</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359062</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>O cara alto deu um salto sobre a alta cerca e caiu de cara</string>
+                                <key>expectedText</key>
+                                <string>O cara alto deu um salto sobre a alta cerca e caiu de cara</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Eu salvo o cara que cata a carta e salva a alta sociedade</string>
+                                <key>expectedText</key>
+                                <string>Eu salvo o cara que cata a carta e salva a alta sociedade</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Longer sentences using multiple similar words</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359060</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Nao entre no mar se vir uma aguaviva</string>
+                                <key>expectedText</key>
+                                <string>Não entre no mar se vir uma água-viva</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Muito algodaodoce pode dar dor de barriga</string>
+                                <key>expectedText</key>
+                                <string>Muito algodão-doce pode dar dor de barriga</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>A bananamaca e a minha favorita</string>
+                                <key>expectedText</key>
+                                <string>A banana-maçã é a minha favorita</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Faco parte do faclube deste artista</string>
+                                <key>expectedText</key>
+                                <string>Faço parte do fã-clube deste artista</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Accents</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>
+

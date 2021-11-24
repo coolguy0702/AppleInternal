@@ -1,0 +1,102 @@
+{
+  "description": "AMC Airplane Pass",
+  "formatVersion": 1,
+  "teamIdentifier": "K9942Z534D",
+  "groupingIdentifier": "amc",
+  "foregroundColor": "rgb(255, 255, 255)",
+  "locations": [
+    {
+      "longitude": -122.3748889,
+      "latitude": 37.6189722
+    },
+    {
+      "longitude": -122.03118,
+      "latitude": 37.33182
+    }
+  ],
+  "serialNumber": "airplane",
+  "backgroundColor": "rgb(60, 65, 76)",
+  "barcode": {
+    "message": "123456789",
+    "format": "PKBarcodeFormatPDF417",
+    "messageEncoding": "iso-8859-1"
+  },
+  "passTypeIdentifier": "pass.com.apple.test1",
+  "organizationName": "AMC",
+  "eventTicket": {
+    "primaryFields": [
+      {
+        "key": "event",
+        "label": "AMC CUPERTINO 16",
+        "value": "Airplane!",
+        "semantics": {
+          "eventName": "Airplane!",
+          "venueName": "AMC CUPERTINO 16",
+          "venueLocation": {
+            "longitude": -122.3748889,
+            "latitude": 37.6189722
+          },
+          "venuePhoneNumber": "+1 (408)888-8888"
+        }
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "theater",
+        "value": "F5",
+        "label": "THEATRE",
+        "semantics": {
+          "venueRoom": "F5"
+        }
+      },
+      {
+        "key": "rated",
+        "label": "RATED",
+        "value": "PG13",
+      }
+    ],
+    "backFields": [
+      {
+        "key": "terms",
+        "label": "TERMS AND CONDITIONS",
+        "value": "Generico offers this card, including all information, software, products and services available from this card or offered as part of or in conjunction with this card (the \"card\"), to you, the user, conditioned upon your acceptance of all of the terms, conditions, policies and notices stated here. Generico reserves the right to make changes to these Terms and Conditions immediately by posting the changed Terms and Conditions in this location.\n\nUse the card at your own risk. This card is provided to you \"as is,\" without warranty of any kind either express or implied. Neither Generico nor its employees, agents, third-party information providers, merchants, licnsors or the like warrant that the card or its operation will be accurate, reliable, uninterrupted or error-free. No agent or representative has the authority to create any warranty regarding the card on behalf of Generico. Generico reserves the right to change or discontinue at any time any aspect or feature of the card."
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "runtime",
+        "label": "RUNTIME",
+        "value": "2:45",
+        "semantics": {
+          "eventStartDate": "2011-12-08T13:00-08:00",
+          "eventEndDate": "2011-12-08T13:00-10:45"
+        }
+      }
+    ]
+  },
+  "relevantDate": "2011-12-08T13:00-08:00",
+  "semantics": {
+    "eventType": "PKEventTypeMovie",
+    "silenceRequested": true,
+    "seats": [
+      {
+        "seatRow": "12",
+        "seatNumber": "22",
+        "seatIdentifier": "12-22",
+        "seatDescription" : "Accessible Seat"
+      },
+      {
+        "seatRow": "12",
+        "seatNumber": "23",
+        "seatIdentifier": "12-23",
+        "seatDescription" : "Accessible Seat"
+      }
+    ],
+    "wifiAccess" : [
+      {
+        "ssid": "amc-guest-wifi",
+        "password": "AMCCupertino16"
+      }
+    ]
+  }
+}

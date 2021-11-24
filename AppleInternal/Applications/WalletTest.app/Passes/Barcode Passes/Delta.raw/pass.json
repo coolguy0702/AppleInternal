@@ -1,0 +1,90 @@
+{
+  "description" : "Delta Pass",
+  "serialNumber" : "CW7G",
+  "teamIdentifier" : "K9942Z534D",
+  "barcode" : {
+    "message" : "AAAAAAaaaaa@@@@11111,: Ã©Ã©Ã©Ã©Ã©:::::11111",
+    "format" : "PKBarcodeFormatAztec",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "foregroundColor" : "rgb(255, 78, 78)",
+  "labelColor" : "rgb(255, 255, 255)",
+  "formatVersion" : 1,
+  "organizationName" : "Delta",
+  "logoText" : "Delta",
+  "passTypeIdentifier" : "pass.com.apple.test1",
+  "groupingIdentifier" : "delta",
+  "boardingPass" : {
+    "transitType" : "WLTransitTypeAir",
+    "headerFields" : [
+      {
+        "key" : "gate",
+        "label" : "GATE",
+        "value" : "41"
+      }
+    ],
+    "primaryFields" : [
+      {
+        "key" : "depart",
+        "label" : "SAN FRANCISCO",
+        "value" : "SFO"
+      },
+      {
+        "key" : "arrive",
+        "label" : "LONDON HEATHROW",
+        "value" : "LHR"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "boardingTime",
+        "label" : "DEPART",
+        "value" : "22:30"
+      },
+      {
+        "key" : "flight",
+        "label" : "FLIGHT",
+        "value" : "LH451"
+      },
+      {
+        "key" : "class",
+        "label" : "DESIG.",
+        "value" : "Coach"
+      },
+      {
+        "key" : "date",
+        "label" : "DATE",
+        "value" : "01\/21"
+      }
+    ],
+    "backFields" : [
+      {
+        "key" : "passport",
+        "label" : "PASSPORT",
+        "value" : "Canadian\/Canadien"
+      },
+      {
+        "key" : "residence",
+        "label" : "RESIDENCE",
+        "value" : "350 E Mission St, San Jose, CA"
+      },
+      {
+        "key" : "terms",
+        "label" : "TERMS",
+        "value" : "Extension of Validity\nIf after having commenced your journey, you are prevented from travelling within the period of validity of the Ticket by reason of illness, we may extend the period of validity of your Ticket until the date when you become fit to travel or until our first flight after such date, from the point where the journey is resumed on which space is available in the class of service for which the fare has been paid. Such illness must be attested to by a medical certificate. When the flight coupons remaining in the Ticket involve one or more Stopovers, the validity of such Ticket may be extended for not more than three months from the date shown on such a certificate. In such circumstances, we will similarly extend the period of validity of Tickets of the other members of your immediate family accompanying you."
+      }
+    ],
+    "secondaryFields" : [
+      {
+        "key" : "passenger",
+        "label" : "PASSENGER",
+        "value" : "John Barnett"
+      },
+      {
+        "key" : "status",
+        "value" : "Premiere Member"
+      }
+    ]
+  },
+  "backgroundColor" : "rgb(15, 49, 90)"
+}

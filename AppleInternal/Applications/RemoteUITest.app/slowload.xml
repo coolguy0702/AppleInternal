@@ -1,0 +1,10 @@
+<xmlui action="push">
+    <page>
+        <navigationBar title="Slow Load"/>
+        <tableView>
+            <section>
+                <footer>This page is accompanied by client code that slows down its load for testing purposes</footer>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

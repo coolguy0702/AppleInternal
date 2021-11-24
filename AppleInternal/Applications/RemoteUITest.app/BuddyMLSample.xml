@@ -1,0 +1,535 @@
+<xmlui id="BuddySampleML">
+    <page> <!-- The default page -->
+        <navigationBar title="BuddyML samples">
+        </navigationBar>
+        <tableView>
+            <section>
+                <linkRow label="Basic Controls" url="#controls" accessory="disclosure"/>
+                <linkRow label="Text Editing" url="#textrows" accessory="disclosure"/>
+                <linkRow label="Labels/Headers/Footers" url="#labels" accessory="disclosure"/>
+                <linkRow label="Navbars &amp; Toolbars" url="#navbar" accessory="disclosure"/>
+                <linkRow label="Fonts &amp; Colors" url="#colors" accessory="disclosure"/>
+                <linkRow label="Actions" url="#actions" accessory="disclosure"/>
+                <linkRow label="Alerts" url="alerts.xml" accessory="disclosure"/>
+                <linkRow label="Images" url="#images" accessory="disclosure"/>
+                <linkRow label="Form Validation" url="form-validation.xml" accessory="disclosure"/>
+                <linkRow label="Scripting" url="scripting.xml" accessory="disclosure"/>
+                <linkRow label="Table Editing" url="tableediting.xml" accessory="disclosure"/>
+                <linkRow label="Full HTML Page" url="#html" accessory="disclosure"/>
+                <linkRow label="Row Disclosure" url="#rowDisclosure" accessory="disclosure"/>
+                <linkRow label="Pin View" url="#pinview" accessory="disclosure"/>
+                <linkRow label="Local PIN View" url="#localpinview" accessory="disclosure"/>
+                <linkRow label="Apple ID Auth" url="#appleidauth" accessory="disclosure"/>
+                <linkRow label="Split Views" url="#splitviews" accessory="disclosure"/>
+                <linkRow label="Choice Views" url="#choiceviews" accessory="disclosure"/>
+                <linkRow label="Multi Choice Views" url="#multiChoiceViews" accessory="disclosure"/>
+                <linkRow label="Styles" url="#styles" accessory="disclosure"/>
+                <linkRow label="Refresh Tests" url="original_page.xml" accessory="disclosure"/>
+                <linkRow label="Open /tmp/test.xml" url="file:///tmp/test.xml" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+    <page id="controls"> <!-- Controls -->
+        <navigationBar title="Basic Controls">
+        </navigationBar>
+        <tableView>
+            <section>
+                <header>Text &amp; Switches</header>
+                <editableTextRow id="editText" label="Editable Text" placeholder="placeholder" value="Some Text"/>
+                <editableTextRow id="editText" label="Editable Text Long Label" placeholder="placeholder" value="Some Text"/>
+                <switchRow id="switchControl" label="Switch" value="true"/>
+                <switchRow label="Switch with url to empty xmlui" url="emptyxmlui.xml" value="false"/>
+            </section>
+            <section>
+                <header>Date Pickers</header>
+                <datePickerRow label="Date Picker" id="dob" value="2007-01-09"/>
+                <datePickerRow label="Year &amp; Month Picker" id="expirationDate" mode="yearAndMonth" value="2015-06-03"/>
+                <datePickerRow label="Month &amp; Day Picker" id="monthAndDay" mode="monthAndDay" value="2014-11-04"/>
+                <datePickerRow label="Inline Date Picker" id="inline_date_picker" value="2014-03-27" inline="true"/>
+                <datePickerRow label="Date Picker with URL" id="date_picker_url" value="2014-03-27" url="simplepush.xml"/>
+            </section>
+            <section>
+                <subHeader>This date picker should be in Gregorian regardless of the system locale</subHeader>
+                <datePickerRow label="Gregorian Date Picker" value="2016/9/14" calendar="gregorian"/>
+            </section>
+            <section>
+                <header>Select Pickers</header>
+                <selectRow id="selectField" label="Select" placeholder="placeholder" value="o">
+                    <option label="Apple" value="a"/>
+                    <option label="Orange" value="o"/>
+                    <option label="Banana" value="b"/>
+                    <option label="Grape" value="g"/>
+                    <option label="Really, really long example text" value="l"/>
+                </selectRow>
+                <selectRow id="selectField" label="LeftAlign" placeholder="placeholder" value="o" leftAlignDetailLabel="true">
+                    <option label="Apple" value="a"/>
+                    <option label="Orange" value="o"/>
+                    <option label="Banana" value="b"/>
+                    <option label="Grape" value="g"/>
+                    <option label="Really, really long example text" value="l"/>
+                    <option label="أول مشهور قابلته؟" value="m"/>
+                </selectRow>
+                <selectRow id="selectField" label="LeftAlignDisclosure" placeholder="placeholder" value="o" leftAlignDetailLabel="true" accessory="disclosure">
+                    <option label="Apple" value="a"/>
+                    <option label="Orange" value="o"/>
+                    <option label="Banana" value="b"/>
+                    <option label="Grape Juice" value="g"/>
+                    <option label="Really, really long example text" value="l"/>
+                    <option label="أول مشهور قابلته؟" value="m"/>
+                </selectRow>
+                <selectRow id="selectField" label="ForceFullDetail" placeholder="placeholder" value="o" forceFullSizeDetailLabel="true">
+                    <option label="Apple" value="a"/>
+                    <option label="Orange" value="o"/>
+                    <option label="Banana" value="b"/>
+                    <option label="Grape Juice" value="g"/>
+                    <option label="Really, really long example text" value="l"/>
+                    <option label="أول مشهور قابلته؟" value="m"/>
+                </selectRow>
+                <selectRow id="selectField" label="FullAndLeft" placeholder="placeholder" value="o" forceFullSizeDetailLabel="true" leftAlignDetailLabel="true">
+                    <option label="Apple" value="a"/>
+                    <option label="Orange" value="o"/>
+                    <option label="Banana" value="b"/>
+                    <option label="Grape Juice" value="g"/>
+                    <option label="Really, really long example text" value="l"/>
+                    <option label="أول مشهور قابلته؟" value="m"/>
+                    <option label="أول مشهور قابلته؟ أول مشهور قابلته؟" value="n"/>
+                </selectRow>
+                <selectPageRow id="selectField" linkedTitle="Select an Item" value="a">
+                    <linkedOption label="This picker has no 'label'" value="a"/>
+                    <linkedOption label="Grape Juice" value="g"/>
+                    <linkedOption label="Really, really long example text" value="l"/>
+                    <linkedOption label="أول مشهور قابلته؟" value="m"/>
+                    <linkedOption label="أول مشهور قابلته؟ أول مشهور قابلته؟" value="n"/>
+                </selectPageRow>
+            </section>
+            <section>
+                <header>Table Selection</header>
+                <selectPageRow id="selectField" label="Table Selection" linkedTitle="Select an Item" value="o">
+                    <linkedOption label="Apple" value="a"/>
+                    <linkedOption label="Orange" value="o"/>
+                    <linkedOption label="Banana" value="b"/>
+                    <linkedOption label="Grape Juice" value="g"/>
+                    <linkedOption label="Really, really long example text" value="l"/>
+                    <linkedOption label="أول مشهور قابلته؟" value="m"/>
+                    <linkedOption label="أول مشهور قابلته؟ أول مشهور قابلته؟" value="n"/>
+                </selectPageRow>
+                <selectPageRow id="selectField" label="Custom Color" linkedTitle="Select an Item" value="o" selectPageRowColor="rgb(250,250,0)">
+                    <linkedOption label="Apple" value="a"/>
+                    <linkedOption label="Orange" value="o"/>
+                    <linkedOption label="Banana" value="b"/>
+                    <linkedOption label="Grape Juice" value="g"/>
+                    <linkedOption label="Really, really long example text" value="l"/>
+                    <linkedOption label="أول مشهور قابلته؟" value="m"/>
+                    <linkedOption label="أول مشهور قابلته؟ أول مشهور قابلته؟" value="n"/>
+                </selectPageRow>
+                <selectPageRow id="selectPage1" label="With Go-Back" placeholder="Choose an option" autoGoBack="true" value="b">
+                    <linkedOption label="Apple" value="a"/>
+                    <linkedOption label="Orange" value="o"/>
+                    <linkedOption label="Banana" value="b"/>
+                    <linkedOption label="Grape Juice" value="g"/>
+                    <linkedOption label="Really, really long example text" value="l"/>
+                    <linkedOption label="أول مشهور قابلته؟" value="m"/>
+                    <linkedOption label="أول مشهور قابلته؟ أول مشهور قابلته؟" value="n"/>
+                </selectPageRow>
+                <selectPageRow id="selectPage2" label="Without Go-Back" placeholder="Choose an option">
+                    <linkedOption label="Apple" value="a"/>
+                    <linkedOption label="Orange" value="o"/>
+                    <linkedOption label="Banana" value="b"/>
+                    <linkedOption label="Grape Juice" value="g"/>
+                    <linkedOption label="Really, really long example text" value="l"/>
+                    <linkedOption label="أول مشهور قابلته؟" value="m"/>
+                    <linkedOption label="أول مشهور قابلته؟ أول مشهور قابلته؟" value="n"/>
+                </selectPageRow>
+            </section>
+            <section>
+                <labelRow label="Yellow" value="ye" radioGroup="radio"/>
+                <labelRow label="Green" value="gr" radioGroup="radio" checked="true"/>
+                <labelRow label="Red" value="re" radioGroup="radio"/>
+                <footer>Radio group</footer>
+            </section>
+            <section>
+                <header>Disabled Controls</header>
+                <labelRow label="labelRow" disabled="true"/>
+                <buttonRow label="buttonRow" disabled="true"/>
+                <editableTextRow label="editableTextRow" value="Not editable" disabled="true"/>
+                <selectRow label="selectRow" value="b" disabled="true">
+                    <option label="Apple" value="a"/>
+                    <option label="Orange" value="o"/>
+                    <option label="Banana" value="b"/>
+                </selectRow>
+                <switchRow label="switchRow" value="false" disabled="true"/>
+                <datePickerRow label="datePickerRow" disabled="true"/>
+                <linkRow label="linkRow" disabled="true" url="#nowhere" accessory="disclosure"/>
+                <labelRow image="http://images.apple.com/home/elements/worldwide_us.png" label="Label Row with Image" disabled="true"/>
+            </section>
+        </tableView>
+    </page>
+    <page id="textrows"> <!-- Text Editing rows -->
+        <navigationBar title="Text Editing">
+        </navigationBar>
+        <tableView>
+            <section>
+                <editableTextRow id="editText" label="Basic Editable Text" placeholder="placeholder" value="Some Text" firstResponder="true"/>
+                <editableTextRow id="editText" label="With Suffix" placeholder="email" suffix="@me.com"/>
+                <editableTextRow id="password" label="Secured" secure="true" placeholder="placeholder" value="Some Password"/>
+            </section>
+            <section>
+                <editableTextRow id="kbascii" label="Ascii Keyboard" placeholder="placeholder" keyboardType="asciiCapable"/>
+                <editableTextRow id="kbemail" label="Email Keyboard" placeholder="placeholder" keyboardType="email"/>
+                <editableTextRow id="kbemail" label="URL Keyboard" placeholder="placeholder" keyboardType="url"/>
+                <editableTextRow id="kbemail" label="Number Pad Keyboard" placeholder="placeholder" keyboardType="numberPad"/>
+                <editableTextRow id="kbemail" label="Phone Pad Keyboard" placeholder="placeholder" keyboardType="phonePad"/>
+            </section>
+            <section>
+                <editableTextRow id="kbascii" label="No Autocaplitalization" placeholder="place holder" autocapitalizationType="none"/>
+                <editableTextRow id="kbascii" label="Word Autocaplitalization" placeholder="Place Holder" autocapitalizationType="words"/>
+                <editableTextRow id="kbascii" label="Sentence Autocaplitalization" placeholder="Place holder" autocapitalizationType="sentences"/>
+                <editableTextRow id="kbascii" label="All Autocaplitalization" placeholder="PLACE HOLDER" autocapitalizationType="allCharacters"/>
+            </section>
+            <section>
+                <editableTextRow id="validation" label="Disable writing aids" placeholder="placeholder" disableAutocorrection="true" autocapitalizationType="none"/>
+            </section>
+        </tableView>
+    </page>
+    <page id="labels"> <!-- Labels -->
+        <navigationBar title="Labels/Headers/Footers">
+        </navigationBar>
+        <tableView image="iCloud.png" image2x="iCloud@2x.png" image3x="iCloud@3x.png" imageAlign="center" imageWidth="40" imageHeight="25">
+            <header align="center">Table Header</header>
+            <subHeader align="center">Table subHeader</subHeader>
+            <section>
+                <header>Section Header</header>
+                <subHeader>Section Sub Header. This text can be really long and will wrap.</subHeader>
+                <labelRow label="Label Row"/>
+                <footer>Section Footer</footer>
+            </section>
+            <section>
+                <header>Simple Table Header</header>
+                <labelRow label="Simple Label Row"/>
+            </section>
+            <section>
+                <detailHeader url="simplepush.xml">detailHeader with url</detailHeader>
+                <labelRow label="Label Row" detailLabel="Detail Label" accessory="spinner"/>
+                <labelRow label="Label Row" detailLabel="Detail Label" accessory="disclosure"/>
+                <labelRow label="Label Row With Link" detailLabel="Link" detailLinkURL="simplepush.xml"/>
+                <labelRow label="Label Row With Detail Button">
+                    <detailButton url="simplepush.xml"/>
+                </labelRow>
+                <labelRow label="forceFullSizeDetailLabel is a long word" detailLabel="detailLabel" forceFullSizeDetailLabel="true"/>
+                <labelRow label="leftAlignDetailLabel" detailLabel="detailLabel" leftAlignDetailLabel="true"/>
+                <labelRow label="Text label that is much too long to fit in the view" detailLabel="Detail label that is similarly much to long to fit"/>
+                <footer url="simplepush.xml">Section footer with link and a lot of text that should wrap to at least a couple lines</footer>
+            </section>
+            <section>
+                <header>Section Header</header>
+                <detailHeader>Detail Header</detailHeader>
+                <labelRow label="Label Row" subLabel="Sub Label" accessory="detailDisclosure"/>
+                <footer url="simplepush.xml" align="right">Right Aligned Footer Link</footer>
+            </section>
+            <section>
+                <header align="right">Right aligned section header</header>
+                <subHeader align="right">Right aligned section subHeader</subHeader>
+                <labelRow label="Bold Label Row" labelBold="true"/>
+                <footer align="center">Centered section footer</footer>
+            </section>
+            <section>
+                <header color="black" align="left">black color section header</header>
+                <subHeader color="systemRed" align="left">systemRed color section subHeader</subHeader>
+                <detailHeader color="systemOrange">systemOrange detailHeader</detailHeader>
+                <labelRow label="Label Row"/>
+                <footer color="rgb(213,41,189)" align="center">rgb colored section footer with enough text to span multiple lines most of the time</footer>
+            </section>
+            <section>
+                <labelRow label="أول مشهور قابلته؟" radioGroup="radio" checked="true"/>
+                <labelRow label="أول مشهور قابلته؟" detailLabel="أول مشهور قابلته؟" radioGroup="radio"/>
+                <labelRow detailLabel="أول مشهور قابلته؟" radioGroup="radio"/>
+                <labelRow label="أول مشهور قابلته؟\nأول مشهور قابلته؟" radioGroup="radio" labelNumberOfLines="0"/>
+            </section>
+            <section>
+                <labelRow label="Multi line\nLabel Row\nWith three lines\nOr even four" labelNumberOfLines="4"/>
+                <linkRow label="Multi line link label with just a lot of text that spans longer than one line" labelNumberOfLines="0" url="simplepush.xml" accessory="disclosure"/>
+                <labelRow label="Multi line label row with a spinner in the accessory attribute" labelNumberOfLines="0" accessory="spinner"/>
+                <linkRow label="Loading indicator link row" url="simplepush.xml" accessory="disclosure" shouldShowLoadingIndicator="true"/>
+                <switchRow label="Switch off to load" value="true" shouldShowLoadingIndicator="true" url="simplepush.xml" httpMethod="GET" />
+            </section>
+            <section>
+                <header>Copyable Text</header>
+                <labelRow label="Title" subLabel="SubLabel copy" isCopyable="true"/>
+                <labelRow label="Title" subLabel="Subtitle" detailLabel="Detail copy" isCopyable="true"/>
+                <labelRow label="Title" detailLabel="Detail copy" isCopyable="true"/>
+                <labelRow label="Title copy" isCopyable="true"/>
+            </section>
+            <section>
+                <htmlHeader><![CDATA[
+                    The footer of this section is an example of a privacy link using OnBoardingKit integration.
+                ]]></htmlHeader>
+                <footer privacyBundleIdentifier="com.apple.onboarding.appleid"/>
+            </section>
+
+            <section>
+                <htmlHeader><![CDATA[
+                    This is <i>full HTML</i> header content enclosed in a CDATA block.<br><ul><li>Can be used to show bullets</ul>
+                ]]></htmlHeader>
+                <htmlFooter><![CDATA[
+                    <span style="color:green;">Full HTML footer with color</span><br><span style="font-family:zapfino">and arbitrary styling</span>
+                ]]></htmlFooter>
+                <labelRow label="Label Row"/>
+                <htmlLabelRow><![CDATA[
+                    <span style="color:purple">HTML Label Row with color</span>
+                ]]></htmlLabelRow>
+                <htmlLabelRow><![CDATA[
+                    <a href="simplepush.xml">HTML Label Row with link</a>
+                ]]></htmlLabelRow>
+                <htmlLabelRow><![CDATA[
+                    <body style="-webkit-text-size-adjust: none;background-color: transparent;color: #4C566C;text-shadow: white 0px 1px 1px;font-family: helvetica;font-size: 13px;">
+                    <div style="font-weight:bold;">This is some very long HTML that will span on multiple lines. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                    </body>
+                    ]]></htmlLabelRow>
+            </section>
+            <section>
+                <htmlHeader><![CDATA[
+                    This is an HTML header view containing a non-modal <a href="simplepush.xml">link</a> to a BuddyML push.
+                ]]></htmlHeader>
+                <labelRow label="Label Row"/>
+                <htmlFooter fetchLinksInModalWebView="true" shouldScaleHTMLPageToFit="true"><![CDATA[
+                    This is a modal <a href="http://apple.com">link</a> in an HTML footer view.
+                ]]></htmlFooter>
+            </section>
+        </tableView>
+    </page>
+    <page id="colors"> <!-- Colors -->
+        <navigationBar title="Fonts &amp; Colors">
+        </navigationBar>
+        <tableView>
+            <section>
+                <labelRow label="labelColor='rgb(200,0,0)'" labelColor="rgb(200,0,0)"/>
+                <labelRow label="labelColor='rgba(200,0,0.5)'" labelColor="rgb(200,0,0,0.5)"/>
+                <labelRow label="Label" subLabel="subLabelColor='rgb(200,0,0)'" subLabelColor="rgb(200,0,0)"/>
+                <labelRow label="Label" detailLabel="detailLabelColor='rgb(200,0,0)'" detailLabelColor="rgb(200,0,0)"/>
+                <labelRow label="Label" subLabel="Green subLabel" subLabelColor="green" detailLabel="cyan detailLabel" detailLabelColor="cyan"/>
+                <labelRow label="Blue Label" labelColor="blue"/>
+                <labelRow label="systemRed Label" labelColor="systemRed"/>
+                <editableTextRow label="systemBlue Editable Row" textColor="systemBlue" value="text"/>
+            </section>
+            <section>
+                <linkRow label="Tint Color" url="tintcolor.xml"/>
+            </section>
+            <section>
+                <header align="left">Dynamic Colors</header>
+                <labelRow label="Dynamic Label" subLabel="Indigo subLabel" subLabelColor="systemIndigo" detailLabel="Dynamic detailLabel" detailLabelColor="secondaryLabelColor"/>
+                <labelRow label="Tertiary Label" labelColor="tertiaryLabelColor" subLabel="Quaternary subLabel" subLabelColor="quaternaryLabelColor"/>
+                <linkRow label="Tint Color" labelColor="linkColor" url="tintcolor.xml"/>
+                <editableTextRow label="Dynamic Editable Row" textColor="placeholderTextColor" value="text"/>
+            </section>
+        </tableView>
+    </page>
+    <page id="actions"> <!-- Actions -->
+        <navigationBar title="Actions">
+        </navigationBar>
+        <tableView>
+            <section>
+                <linkRow label="Replace" url="replace.xml" accessory="disclosure"/>
+                <linkRow label="Pop" url="pop.xml" accessory="disclosure"/>
+                <linkRow label="Push with confirmation" url="simplepush.xml" accessory="disclosure" confirmationTitle="Title" confirmationBody="Are you sure you want to push this page?" confirmationOK="Yes" confirmationCancel="No" secondConfirmationTitle="Title" secondConfirmationBody="Really really sure? This second confirmation uses a destructve OK button." secondConfirmationOK="Yes!" secondConfirmationCancel="No!" secondConfirmationOKIsDestructive="true"/>
+                <linkRow label="Push with confirmation sheet" url="simplepush.xml" accessory="disclosure" confirmationTitle="Title" confirmationBody="Are you sure you want to push this page?" confirmationOK="Yes" confirmationCancel="No" confirmationIsSheet="true" secondConfirmationTitle="Title" secondConfirmationBody="Really really sure? This second confirmation uses a destructve OK button." secondConfirmationOK="Yes!" secondConfirmationCancel="No!" secondConfirmationOKIsDestructive="true" secondConfirmationIsSheet="true"/>
+                <linkRow label="Push + Replace" url="pushreplace-description.xml" accessory="disclosure"/>
+                <linkRow label="Show Modal" url="showModal.xml" accessory="disclosure"/>
+                <linkRow label="Slow-Loading Row" url="slowload.xml" accessory="disclosure" titleLoadingMessage="Loading…"/>
+                <linkRow label="Slow-Load from alert" url="#alertwithslowload" accessory="disclosure"/>
+                <linkRow label="Slow-Load from alert xml" url="alertwithslowload.xml" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+    
+    <alert id="alertwithslowload" title="Alert" message="This named alert will trigger a slow load with a title loading message that should appear in the nav bar">
+        <cancelButton>Cancel</cancelButton>
+        <button url="slowload.xml" titleLoadingMessage="Loading…">Start Slow Load</button>
+    </alert>
+    
+    <page id="images"> <!-- Images -->
+        <navigationBar title="Images"/>
+        <tableView image="iCloud.png" image2x="iCloud@2x.png" image3x="iCloud@3x.png" imageAlign="center" imageWidth="40" imageHeight="25">
+            <header align="center">Table Header Text</header>
+            <section>
+                <labelRow label="Section with no header"/>
+            </section>
+            <section image="iCloud.png" image2x="iCloud@2x.png" image3x="iCloud@3x.png" imageAlign="center" imageWidth="40" imageHeight="25">
+                <header align="center">Header text</header>
+                <subHeader align="center">Sub Header</subHeader>
+                <labelRow label="Header with Centered Image"/>
+            </section>
+            <section image="iCloud.png" image2x="iCloud@2x.png" image3x="iCloud@3x.png" imageAlign="left">
+                <header>Header text</header>
+                <subHeader>Sub Header</subHeader>
+                <labelRow label="Header with Image and text"/>
+            </section>
+            <section image="iCloud.png" image2x="iCloud@2x.png" image3x="iCloud@3x.png" imageAlign="right">
+                <header align="right">Header text</header>
+                <subHeader align="right">Sub Header</subHeader>
+                <labelRow label="Right-aligned image and text"/>
+            </section>
+            <section>
+                <labelRow label="Row with Image" image="http://images.apple.com/home/elements/worldwide_us.png"/>
+                <labelRow label="Row with Accessory Image" accessoryImage="http://images.apple.com/home/elements/worldwide_us.png"/>
+                <labelRow label="Row with Indentation" indentation="32"/>
+                <labelRow label="Row with Sublabel" image="http://images.apple.com/home/elements/worldwide_us.png" subLabel="USA" leftAlignDetailLabel="true"/>
+                <labelRow label="Row with All the Things" image="http://images.apple.com/home/elements/worldwide_us.png" subLabel="subLabel" detailLabel="detailLabel" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+    <page id="navbar"> <!-- Navbar/toolbar -->
+        <navigationBar title="Bars">
+            <buttonBarItem position="right" label="Nav Button"/>
+        </navigationBar>
+        <tableView>
+            <section>
+                <footer align="center">This page illustrates the use of Navbars and Toolbars.</footer>
+            </section>
+            <section>
+                <linkRow label="Hide Back Button" url="hidebackbutton.xml" accessory="disclosure"/>
+            </section>
+        </tableView>
+        <toolbar>
+            <buttonBarItem position="right" label="Right (Blue)" style="done"/>
+            <buttonBarItem position="center" label="Middle"/>
+            <buttonBarItem position="left" label="Left"/>
+        </toolbar>
+    </page>
+    
+    <page id="html"> <!-- HTML -->
+        <navigationBar title="HTML"/>
+        <html><![CDATA[
+            <div style="font-size:500%; position:absolute; top:35%; left:40%;"></div>
+        ]]></html>
+    </page>
+    
+    <page id="rowDisclosure">
+        <navigationBar title="Row Disclosure"/>
+        <tableView>
+            <section disclosureLimit="3">
+                <labelRow label="1"/>
+                <labelRow label="2"/>
+                <labelRow label="3"/>
+                <labelRow label="4"/>
+                <labelRow label="5"/>
+                <footer>Disclosure limit of 3</footer>
+            </section>
+            <section disclosureLimit="3">
+                <labelRow label="1"/>
+                <labelRow label="2"/>
+                <labelRow label="3"/>
+                <labelRow label="4"/>
+                <footer>This section has a disclosureLimit of 3 but shows all rows since the Show All button would only unhide a single row.</footer>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="pinview">
+        <navigationBar title="PIN View"/>
+        <pinView url="alert.xml" numberOfFields="6" titleLoadingMessage="Loading…" fieldSpacer="center">
+            <header align="center">This is a header element. All passcodes will be denied by this prompt.</header>
+            <footer url="simplepush.xml">Footer element with "url"</footer>
+        </pinView>
+    </page>
+    
+    <page id="localpinview">      
+        <navigationBar title="Local PIN View"/>
+        <pinView requireLocalPasscode="true" url="alert.xml" titleLoadingMessage="Loading…">
+            <header align="center">This is a header element. Only the local device passcode will be accepted by this prompt.</header>
+            <footer url="simplepush.xml">Footer element with some "url"</footer>
+        </pinView>
+    </page>
+    
+    <page id="appleidauth">
+        <navigationBar title="Apple ID Auth">
+            <linkBarItem position="right" label="linkBarItem" url="simplepush.xml" authRequired="true" authAccountIsPrimary="true" authIsEphemeral="true" titleLoadingMessage="Authenticating…"/>
+        </navigationBar>
+        <tableView>
+            <section>
+                <subHeader>Auth using inline username/password rows</subHeader>
+                <linkRow url="#appleidauthtwofields" label="Two fields" accessory="disclosure"/>
+                <linkRow url="#appleidauthonefield" label="One field" accessory="disclosure"/>
+            </section>
+            <section>
+                <subHeader>Auth using ID dialog prior to link load</subHeader>
+                <linkRow url="simplepush.xml" authRequired="true" authAccountIsPrimary="true"  authIsEphemeral="true" titleLoadingMessage="Authenticating…" label="linkRow, primary auth" accessory="disclosure"/>
+                <linkRow url="simplepush.xml" authRequired="true" authIsEphemeral="true" label="linkRow, any ID auth" titleLoadingMessage="Authenticating…" accessory="disclosure"/>
+                <switchRow url="simplepush.xml" authRequired="true" authIsEphemeral="true" authAccountIsPrimary="true" titleLoadingMessage="Authenticating…" label="switchRow with url"/>
+                <htmlLabelRow url="simplepush.xml" authRequired="true" authAccountIsPrimary="true" authIsEphemeral="true" titleLoadingMessage="Authenticating…"><![CDATA[
+                    <a href="simplepush.xml">htmlLabelRow with &lt;a&gt; link</a>
+                ]]></htmlLabelRow>
+                <footer url="simplepush.xml" authRequired="true" authAccountIsPrimary="true" titleLoadingMessage="Authenticating…">Footer link with auth</footer>
+            </section>
+            <section>
+                <footer>All auths on this page use a titleLoadingMessage and are ephemeral for testing purposes.</footer>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="appleidauthtwofields">
+        <navigationBar title="Two Field Auth">
+            <linkBarItem position="right" label="Login" url="simplepush.xml" httpMethod="POST" authRequired="true" authReason="Sign in with whatever" authUsernameFieldID="authUsername" authPasswordFieldID="authPassword" authIsEphemeral="true" titleLoadingMessage="Authenticating…"/>
+        </navigationBar>
+        <tableView>
+            <section>
+                <editableTextRow id="authUsername" label="Username: " keyboardType="email" placeholder="example@icloud.com" disableAutocorrection="true" autocapitalizationType="none" firstResponder="true"/>
+                <editableTextRow id="authPassword" label="Password: " secure="true" placeholder="required"/>
+                <footer url="simplepush.xml" authCredentialRecoveryRequired="true" authUsernameFieldID="authUsername" titleLoadingMessage="Recovering…">Forgot Apple ID or Password</footer>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="appleidauthonefield">
+        <navigationBar title="One Field Auth">
+            <linkBarItem position="right" label="Login" url="simplepush.xml" httpMethod="POST" authRequired="true" authUsername="mycleverappleid@icloud.com" authPasswordFieldID="authPassword" authIsEphemeral="true" titleLoadingMessage="Authenticating…"/>
+        </navigationBar>
+        <tableView>
+            <section>
+                <subHeader>Enter the Apple ID password for mycleverappleid@icloud.com</subHeader>
+                <editableTextRow id="authPassword" label="Password: " placeholder="required" secure="true" firstResponder="true"/>
+                <footer url="simplepush.xml" authCredentialRecoveryRequired="true" authUsername="mycleverappleid@icloud.com" titleLoadingMessage="Recovering…">Forgot Apple ID or Password</footer>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="splitviews">
+        <navigationBar title="Split Views"/>
+        <tableView>
+            <header>Splits half the view on iPad</header>
+            <section>
+                <linkRow url="splitviewleft.xml" label="Left Side Split" accessory="disclosure"/>
+                <linkRow url="splitviewright.xml" label="Right Side Split" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="choiceviews">
+        <navigationBar title="Choice Views"/>
+        <tableView>
+            <section>
+                <linkRow label="Shared Style's Tint" url="choiceview.xml" accessory="disclosure"/>
+                <linkRow label="Custom Tint" url="custom-tint-choiceview.xml" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+
+    <page id="multiChoiceViews">
+        <navigationBar backButtonTitle="Back" title="Multi Choice Views"/>
+        <tableView>
+            <section>
+                <linkRow label="With table view" url="multiChoiceWithTableView.xml" accessory="disclosure"/>
+                <linkRow label="With web view" url="multiChoiceWithWebView.xml" accessory="disclosure"/>
+                <linkRow label="With radio buttons and custom tint" url="multiChoiceWithRadioButtons.xml" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="styles">
+        <navigationBar title="Styles in BuddyML"/>
+        <tableView>
+            <section>
+                <linkRow url="xmlui_style_buddy.xml" label="style=&quot;setupAssistant&quot;" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

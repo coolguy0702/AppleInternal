@@ -1,0 +1,32 @@
+<xmlui action="showModal" tintColor="systemGreen">
+    <page>
+        <navigationBar>
+            <linkBarItem position="left" url="dismiss.xml" label="Cancel"/>
+        </navigationBar>
+        <tableView>
+            <section>
+                <linkRow url="#choiceView" label="Choice View"/>
+                <linkRow url="#pinView" label="PIN View"/>
+                <footer>This modal sets the xmlui-wide tintColor</footer>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="choiceView">
+        <navigationBar title="Choice View"/>
+        <choiceView image="iCloud.png" image2x="iCloud@2x.png" image3x="iCloud@3x.png" imageWidth="40" imageHeight="25">
+            <header>Header Text</header>
+            <subHeader>Sub header text</subHeader>
+            <helpLink url="simplepush.xml">Help Link</helpLink>
+            <choice url="simplepush.xml">Big Choice</choice>
+            <choice url="simplepush.xml">Small Choice</choice>
+        </choiceView>
+    </page>
+    <page id="pinView">
+        <navigationBar title="PIN View"/>
+        <pinView numberOfFields="6">
+            <header align="center">Header</header>
+            <footer url="simplepush.xml">Footer element with "url"</footer>
+        </pinView>
+    </page>
+</xmlui>

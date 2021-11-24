@@ -1,0 +1,52 @@
+
+BEGIN
+{
+    printf("Counting time in calls...\n");
+    overallStart=timestamp;
+    this->duration = 0;
+}
+
+
+${PROCESS}:${FRAMEWORK}:${FUNCTION}:entry
+{
+    self->start=${TIMESTAMP};
+}
+
+${PROCESS}:${FRAMEWORK}:${FUNCTION}:return
+/ self->start ${THRESHOLD}/
+{
+
+this->duration = (${TIMESTAMP} - self->start)/1000;
+self->start = 0;
+self->count = 0;
+
+    @["Durations(us)"] = quantize(this->duration);
+
+
+    @sum["sum"] = sum(this->duration);
+    @count["count"] = count();
+    @avg["avg"] = avg(this->duration);
+    @min["min"] = min(this->duration);
+    @max["max"] = max(this->duration);
+
+    printf("%10s %20s %d us\n", probemod, probefunc, this->duration);
+
+    this->duration = 0;
+}
+
+profile:::tick-1sec
+/++elapsed_seconds == ${TIMEOUT}/
+{
+    exit(0);
+}
+
+END
+{
+    printf("\nElapsed(wall)	  %d ms\n", (timestamp - overallStart)/1000000);
+    printa("Sum	%@u us\n", @sum["sum"]);
+    printa("Min	%@u us\n", @min["min"]);
+    printa("Max	%@u us\n", @max["max"]);
+    printa("Num Calls	%@u \n", @count["count"]);
+
+    printa("Mean	%@u us\n", @avg["avg"]);
+}

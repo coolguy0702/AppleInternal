@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Devices</key>
+	<dict>
+		<key>Prox</key>
+		<dict>
+			<key>Device State</key>
+			<array>
+				<integer>240</integer>
+				<integer>241</integer>
+				<integer>242</integer>
+				<integer>224</integer>
+				<integer>225</integer>
+				<integer>192</integer>
+				<integer>193</integer>
+			</array>
+			<key>Matching Criteria</key>
+			<dict>
+				<key>PrimaryUsage</key>
+				<integer>8</integer>
+				<key>PrimaryUsagePage</key>
+				<integer>65280</integer>
+				<key>Transport</key>
+				<string>SPU</string>
+			</dict>
+			<key>Report Configuration</key>
+			<array>
+				<dict>
+					<key>id</key>
+					<integer>81</integer>
+					<key>payload</key>
+					<data>UQc=</data>
+				</dict>
+			</array>
+			<key>enable</key>
+			<true/>
+			<key>name</key>
+			<string>prox</string>
+			<key>recordingDuration</key>
+			<integer>10000</integer>
+			<key>type</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

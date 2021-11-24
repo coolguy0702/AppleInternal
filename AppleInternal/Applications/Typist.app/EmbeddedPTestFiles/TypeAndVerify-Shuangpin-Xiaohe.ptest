@@ -1,0 +1,2820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Category</key>
+		<string>TypeAndVerify</string>
+		<key>ID</key>
+		<string>TypeAndVerify-Shuanpin-Xiaohe</string>
+		<key>Type</key>
+		<string>Suite</string>		
+		<key>SuiteActions</key>
+		<array>
+
+			<!--- [SETUP] --->
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keyboardID</key>
+                    <string>zh_Hans-Shuangpin@sw=Pinyin-Simplified;hw=Automatic</string>
+                    <key>autoCorrection</key>
+                    <string>1</string>
+                    <key>resetLearningDict</key>
+                    <string>1</string>
+                    <key>testCaseID</key>
+                    <string>Setup</string>
+                    <key>keyboardType</key>
+                    <string>Default</string>
+                    <key>shuangpinType</key>
+                    <string>Xiaohe</string>
+                    <key>deviceOrientation</key>
+                    <string>Portrait</string>
+                    <key>testClass</key>
+                    <string>IntlQAKeyboardTestShuangpin</string>
+                    <key>testFunction</key>
+                    <string>typeAndVerifyShuangpin</string>
+                </dict>
+                <key>Description</key>
+                <string>Setup</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>baxmgohdgexmufts</string>
+                    <key>expectedText</key>
+                    <string>八仙过海各显神通</string>
+                    <key>testCaseID</key>
+                    <string>17467089</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_1</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>aimodayuxbsi</string>
+                    <key>expectedText</key>
+                    <string>哀莫大于心死</string>
+                    <key>testCaseID</key>
+                    <string>17467090</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_2</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bdsibudeqijp</string>
+                    <key>expectedText</key>
+                    <string>百思不得其解</string>
+                    <key>testCaseID</key>
+                    <string>17467091</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_3</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bkdssjiifwyirivihj</string>
+                    <key>expectedText</key>
+                    <string>冰冻三尺非一日之寒</string>
+                    <key>testCaseID</key>
+                    <string>17467092</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_4</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ihjlhzlhtvqmlh</string>
+                    <key>expectedText</key>
+                    <string>长江后浪推前浪</string>
+                    <key>testCaseID</key>
+                    <string>17467093</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_5</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>yirfzouiyirfdh</string>
+                    <key>expectedText</key>
+                    <string>一人做事一人当</string>
+                    <key>testCaseID</key>
+                    <string>17467094</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_6</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>xyhxwflq</string>
+                    <key>expectedText</key>
+                    <string>寻花问柳</string>
+                    <key>testCaseID</key>
+                    <string>17467095</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_7</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>zwhjvozw</string>
+                    <key>expectedText</key>
+                    <string>贼喊捉贼</string>
+                    <key>testCaseID</key>
+                    <string>17467096</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_8</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>vfvgdenjzihj</string>
+                    <key>expectedText</key>
+                    <string>真正的男子汉</string>
+                    <key>testCaseID</key>
+                    <string>17467097</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_9</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>vzvr</string>
+                    <key>expectedText</key>
+                    <string>周转</string>
+                    <key>testCaseID</key>
+                    <string>17467098</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_10</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>xuycwomf</string>
+                    <key>expectedText</key>
+                    <string>需要我们</string>
+                    <key>testCaseID</key>
+                    <string>17467099</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_11</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>rucimwmn</string>
+                    <key>expectedText</key>
+                    <string>如此美妙</string>
+                    <key>testCaseID</key>
+                    <string>17467100</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_12</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>jildvizeanvi</string>
+                    <key>expectedText</key>
+                    <string>既来之则安之</string>
+                    <key>testCaseID</key>
+                    <string>17467101</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_13</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>wjbmbuliqizs</string>
+                    <key>expectedText</key>
+                    <string>万变不离其宗</string>
+                    <key>testCaseID</key>
+                    <string>17467102</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_14</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>yyxlyiuhhxxlrs</string>
+                    <key>expectedText</key>
+                    <string>云想衣裳花想容</string>
+                    <key>testCaseID</key>
+                    <string>17467103</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_15</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>zhlrbukj</string>
+                    <key>expectedText</key>
+                    <string>脏乱不堪</string>
+                    <key>testCaseID</key>
+                    <string>17467104</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_16</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>tztg</string>
+                    <key>expectedText</key>
+                    <string>头疼</string>
+                    <key>testCaseID</key>
+                    <string>17467105</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_17</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>isfgxmvf</string>
+                    <key>expectedText</key>
+                    <string>冲锋陷阵</string>
+                    <key>testCaseID</key>
+                    <string>17467106</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_18</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ccmujpbk</string>
+                    <key>expectedText</key>
+                    <string>草木皆兵</string>
+                    <key>testCaseID</key>
+                    <string>17467107</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_19</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ahuzkobu</string>
+                    <key>expectedText</key>
+                    <string>昂首阔步</string>
+                    <key>testCaseID</key>
+                    <string>17467108</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_20</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>qskzmovv</string>
+                    <key>expectedText</key>
+                    <string>穷寇莫追</string>
+                    <key>testCaseID</key>
+                    <string>17467109</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_21</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>dnzrgugk</string>
+                    <key>expectedText</key>
+                    <string>刁钻古怪</string>
+                    <key>testCaseID</key>
+                    <string>17467110</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_22</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>hfvk</string>
+                    <key>expectedText</key>
+                    <string>很拽</string>
+                    <key>testCaseID</key>
+                    <string>17467111</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_23</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>zzwwuhce</string>
+                    <key>expectedText</key>
+                    <string>走为上策</string>
+                    <key>testCaseID</key>
+                    <string>17467112</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_24</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>zyig</string>
+                    <key>expectedText</key>
+                    <string>尊称</string>
+                    <key>testCaseID</key>
+                    <string>17467113</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_25</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>vcqmsylivzwuvgwh</string>
+                    <key>expectedText</key>
+                    <string>赵钱孙李周吴郑王</string>
+                    <key>testCaseID</key>
+                    <string>17467114</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_26</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ybyrjihv</string>
+                    <key>expectedText</key>
+                    <string>因缘际会</string>
+                    <key>testCaseID</key>
+                    <string>17467115</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_27</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>tmbgdilp</string>
+                    <key>expectedText</key>
+                    <string>天崩地裂</string>
+                    <key>testCaseID</key>
+                    <string>17467116</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_28</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>tnliqkxi</string>
+                    <key>expectedText</key>
+                    <string>条理清晰</string>
+                    <key>testCaseID</key>
+                    <string>17467117</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_29</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>srpj</string>
+                    <key>expectedText</key>
+                    <string>算盘</string>
+                    <key>testCaseID</key>
+                    <string>17467118</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_30</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>yjxx</string>
+                    <key>expectedText</key>
+                    <string>眼下</string>
+                    <key>testCaseID</key>
+                    <string>17467119</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_31</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>aabolo</string>
+                    <key>expectedText</key>
+                    <string>阿波罗</string>
+                    <key>testCaseID</key>
+                    <string>17467120</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_32</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>drao</string>
+                    <key>expectedText</key>
+                    <string>短袄</string>
+                    <key>testCaseID</key>
+                    <string>17467121</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_33</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bhbj</string>
+                    <key>expectedText</key>
+                    <string>帮办</string>
+                    <key>testCaseID</key>
+                    <string>17467122</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_34</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bcxn</string>
+                    <key>expectedText</key>
+                    <string>报销</string>
+                    <key>testCaseID</key>
+                    <string>17467123</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_35</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>xbyzlkxiyidmts</string>
+                    <key>expectedText</key>
+                    <string>心有灵犀一点通</string>
+                    <key>testCaseID</key>
+                    <string>17467124</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_36</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>vuvxvlxq</string>
+                    <key>expectedText</key>
+                    <string>主抓装修</string>
+                    <key>testCaseID</key>
+                    <string>17467125</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_37</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>tuyhtusfpo</string>
+                    <key>expectedText</key>
+                    <string>图样图森破</string>
+                    <key>testCaseID</key>
+                    <string>17467126</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_38</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bwcsvsld</string>
+                    <key>expectedText</key>
+                    <string>悲从中来</string>
+                    <key>testCaseID</key>
+                    <string>17467127</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_39</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bfxk</string>
+                    <key>expectedText</key>
+                    <string>本性</string>
+                    <key>testCaseID</key>
+                    <string>17467128</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_40</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bive</string>
+                    <key>expectedText</key>
+                    <string>笔者</string>
+                    <key>testCaseID</key>
+                    <string>17467129</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_41</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>idvl</string>
+                    <key>expectedText</key>
+                    <string>拆装</string>
+                    <key>testCaseID</key>
+                    <string>17467130</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_42</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>dgdk</string>
+                    <key>expectedText</key>
+                    <string>登顶</string>
+                    <key>testCaseID</key>
+                    <string>17467131</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_43</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bnuk</string>
+                    <key>expectedText</key>
+                    <string>表率</string>
+                    <key>testCaseID</key>
+                    <string>17467132</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_44</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bpfhkd</string>
+                    <key>expectedText</key>
+                    <string>别放开</string>
+                    <key>testCaseID</key>
+                    <string>17467133</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_45</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>thzduafauh</string>
+                    <key>expectedText</key>
+                    <string>躺在沙发上</string>
+                    <key>testCaseID</key>
+                    <string>17467134</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_46</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>vjtd</string>
+                    <key>expectedText</key>
+                    <string>站台</string>
+                    <key>testCaseID</key>
+                    <string>17467135</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_47</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>jmkh</string>
+                    <key>expectedText</key>
+                    <string>健康</string>
+                    <key>testCaseID</key>
+                    <string>17467136</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_48</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bblbmpjt</string>
+                    <key>expectedText</key>
+                    <string>濒临灭绝</string>
+                    <key>testCaseID</key>
+                    <string>17467137</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_49</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>udwaklmo</string>
+                    <key>expectedText</key>
+                    <string>晒娃狂魔</string>
+                    <key>testCaseID</key>
+                    <string>17467138</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_50</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>sutc</string>
+                    <key>expectedText</key>
+                    <string>俗套</string>
+                    <key>testCaseID</key>
+                    <string>17467139</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_51</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>caqlzzho</string>
+                    <key>expectedText</key>
+                    <string>擦枪走火</string>
+                    <key>testCaseID</key>
+                    <string>17467140</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_52</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>cdnn</string>
+                    <key>expectedText</key>
+                    <string>菜鸟</string>
+                    <key>testCaseID</key>
+                    <string>17467141</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_53</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>cjmz</string>
+                    <key>expectedText</key>
+                    <string>参谋</string>
+                    <key>testCaseID</key>
+                    <string>17467142</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_54</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>chiu</string>
+                    <key>expectedText</key>
+                    <string>仓储</string>
+                    <key>testCaseID</key>
+                    <string>17467143</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_55</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>cfcicolo</string>
+                    <key>expectedText</key>
+                    <string>参差错落</string>
+                    <key>testCaseID</key>
+                    <string>17467144</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_56</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>cgjkchhd</string>
+                    <key>expectedText</key>
+                    <string>曾经沧海</string>
+                    <key>testCaseID</key>
+                    <string>17467145</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_57</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>cvmkgv</string>
+                    <key>expectedText</key>
+                    <string>催命鬼</string>
+                    <key>testCaseID</key>
+                    <string>17467146</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_58</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>iadc</string>
+                    <key>expectedText</key>
+                    <string>茶道</string>
+                    <key>testCaseID</key>
+                    <string>17467147</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_59</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>fudj</string>
+                    <key>expectedText</key>
+                    <string>负担</string>
+                    <key>testCaseID</key>
+                    <string>17467148</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_60</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ijrc</string>
+                    <key>expectedText</key>
+                    <string>缠绕</string>
+                    <key>testCaseID</key>
+                    <string>17467149</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_61</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>icie</string>
+                    <key>expectedText</key>
+                    <string>超车</string>
+                    <key>testCaseID</key>
+                    <string>17467150</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_62</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ifnmlcjq</string>
+                    <key>expectedText</key>
+                    <string>陈年老酒</string>
+                    <key>testCaseID</key>
+                    <string>17467152</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_63</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>izlz</string>
+                    <key>expectedText</key>
+                    <string>丑陋</string>
+                    <key>testCaseID</key>
+                    <string>17467153</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_64</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ikyijn</string>
+                    <key>expectedText</key>
+                    <string>踹一脚</string>
+                    <key>testCaseID</key>
+                    <string>17467154</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_65</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ertimmmk</string>
+                    <key>expectedText</key>
+                    <string>耳提面命</string>
+                    <key>testCaseID</key>
+                    <string>17467155</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_66</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>mdir</string>
+                    <key>expectedText</key>
+                    <string>买船</string>
+                    <key>testCaseID</key>
+                    <string>17467156</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_67</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ildhjlhu</string>
+                    <key>expectedText</key>
+                    <string>闯荡江湖</string>
+                    <key>testCaseID</key>
+                    <string>17467157</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_68</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>hlhy</string>
+                    <key>expectedText</key>
+                    <string>黄昏</string>
+                    <key>testCaseID</key>
+                    <string>17467158</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_69</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>rffwugxmuungwugo</string>
+                    <key>expectedText</key>
+                    <string>人非圣贤孰能无过</string>
+                    <key>testCaseID</key>
+                    <string>17467159</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_70</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>rffgxiuijkuful</string>
+                    <key>expectedText</key>
+                    <string>人逢喜事精神爽</string>
+                    <key>testCaseID</key>
+                    <string>17467160</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_71</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>haha</string>
+                    <key>expectedText</key>
+                    <string>哈哈</string>
+                    <key>testCaseID</key>
+                    <string>17467161</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_72</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>gycu</string>
+                    <key>expectedText</key>
+                    <string>滚粗</string>
+                    <key>testCaseID</key>
+                    <string>17467162</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_73</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>gsbdivig</string>
+                    <key>expectedText</key>
+                    <string>功败垂成</string>
+                    <key>testCaseID</key>
+                    <string>17467163</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_74</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>tola</string>
+                    <key>expectedText</key>
+                    <string>拖拉</string>
+                    <key>testCaseID</key>
+                    <string>17467164</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_75</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>iyff</string>
+                    <key>expectedText</key>
+                    <string>春分</string>
+                    <key>testCaseID</key>
+                    <string>17467165</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_76</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>crdo</string>
+                    <key>expectedText</key>
+                    <string>篡夺</string>
+                    <key>testCaseID</key>
+                    <string>17467166</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_77</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>trdv</string>
+                    <key>expectedText</key>
+                    <string>团队</string>
+                    <key>testCaseID</key>
+                    <string>17467167</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_78</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>lvuykzqu</string>
+                    <key>expectedText</key>
+                    <string>旅顺口区</string>
+                    <key>testCaseID</key>
+                    <string>17467168</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_79</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>xsyspgpd</string>
+                    <key>expectedText</key>
+                    <string>汹涌澎湃</string>
+                    <key>testCaseID</key>
+                    <string>17467169</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_80</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>zclm</string>
+                    <key>expectedText</key>
+                    <string>早恋</string>
+                    <key>testCaseID</key>
+                    <string>17467170</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_81</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>eeleme</string>
+                    <key>expectedText</key>
+                    <string>饿了么</string>
+                    <key>testCaseID</key>
+                    <string>17467171</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_82</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>glgc</string>
+                    <key>expectedText</key>
+                    <string>广告</string>
+                    <key>testCaseID</key>
+                    <string>17467172</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_83</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>cykr</string>
+                    <key>expectedText</key>
+                    <string>存款</string>
+                    <key>testCaseID</key>
+                    <string>17467173</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_84</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>czqn</string>
+                    <key>expectedText</key>
+                    <string>凑巧</string>
+                    <key>testCaseID</key>
+                    <string>17467174</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_85</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>dwkv</string>
+                    <key>expectedText</key>
+                    <string>得亏</string>
+                    <key>testCaseID</key>
+                    <string>17467175</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_86</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>iovslwdm</string>
+                    <key>expectedText</key>
+                    <string>戳中泪点</string>
+                    <key>testCaseID</key>
+                    <string>17467176</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_87</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ddmg</string>
+                    <key>expectedText</key>
+                    <string>呆萌</string>
+                    <key>testCaseID</key>
+                    <string>17467177</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_88</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>fadx</string>
+                    <key>expectedText</key>
+                    <string>发嗲</string>
+                    <key>testCaseID</key>
+                    <string>17467178</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_89</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>fjfz</string>
+                    <key>expectedText</key>
+                    <string>饭否</string>
+                    <key>testCaseID</key>
+                    <string>17467179</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_90</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>kgdp</string>
+                    <key>expectedText</key>
+                    <string>坑爹</string>
+                    <key>testCaseID</key>
+                    <string>17467180</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_91</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>zjma</string>
+                    <key>expectedText</key>
+                    <string>咱妈</string>
+                    <key>testCaseID</key>
+                    <string>17467181</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_92</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>gdjb</string>
+                    <key>expectedText</key>
+                    <string>改进</string>
+                    <key>testCaseID</key>
+                    <string>17467182</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_93</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>gxke</string>
+                    <key>expectedText</key>
+                    <string>挂科</string>
+                    <key>testCaseID</key>
+                    <string>17467183</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_94</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>jqnqyimc</string>
+                    <key>expectedText</key>
+                    <string>九牛一毛</string>
+                    <key>testCaseID</key>
+                    <string>17467184</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_95</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>uogwnitk</string>
+                    <key>expectedText</key>
+                    <string>说给你听</string>
+                    <key>testCaseID</key>
+                    <string>17467185</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_96</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>gglr</string>
+                    <key>expectedText</key>
+                    <string>更乱</string>
+                    <key>testCaseID</key>
+                    <string>17467186</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_97</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>hslobody</string>
+                    <key>expectedText</key>
+                    <string>红萝卜蹲</string>
+                    <key>testCaseID</key>
+                    <string>17467187</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_98</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>dqbc</string>
+                    <key>expectedText</key>
+                    <string>丢包</string>
+                    <key>testCaseID</key>
+                    <string>17467188</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_99</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ei</string>
+                    <key>expectedText</key>
+                    <string>诶</string>
+                    <key>testCaseID</key>
+                    <string>17467189</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_100</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>enna</string>
+                    <key>expectedText</key>
+                    <string>嗯呐</string>
+                    <key>testCaseID</key>
+                    <string>17467190</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_101</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>tjte</string>
+                    <key>expectedText</key>
+                    <string>忐忑</string>
+                    <key>testCaseID</key>
+                    <string>17467191</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_102</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>szso</string>
+                    <key>expectedText</key>
+                    <string>搜索</string>
+                    <key>testCaseID</key>
+                    <string>17467192</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_103</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>uewoqiuw</string>
+                    <key>expectedText</key>
+                    <string>舍我其谁</string>
+                    <key>testCaseID</key>
+                    <string>17467193</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_104</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ghhc</string>
+                    <key>expectedText</key>
+                    <string>刚好</string>
+                    <key>testCaseID</key>
+                    <string>17467194</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_105</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>kkllle</string>
+                    <key>expectedText</key>
+                    <string>快亮了</string>
+                    <key>testCaseID</key>
+                    <string>17467195</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_106</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ourj</string>
+                    <key>expectedText</key>
+                    <string>偶然</string>
+                    <key>testCaseID</key>
+                    <string>17467196</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_107</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>hwgz</string>
+                    <key>expectedText</key>
+                    <string>黑狗</string>
+                    <key>testCaseID</key>
+                    <string>17467197</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_108</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>scdisg</string>
+                    <key>expectedText</key>
+                    <string>扫地僧</string>
+                    <key>testCaseID</key>
+                    <string>17467198</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_109</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ndnl</string>
+                    <key>expectedText</key>
+                    <string>奶娘</string>
+                    <key>testCaseID</key>
+                    <string>17467199</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_110</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>mhlu</string>
+                    <key>expectedText</key>
+                    <string>忙碌</string>
+                    <key>testCaseID</key>
+                    <string>17467200</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_111</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bmsels</string>
+                    <key>expectedText</key>
+                    <string>变色龙</string>
+                    <key>testCaseID</key>
+                    <string>17467201</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_112</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>hkjxho</string>
+                    <key>expectedText</key>
+                    <string>坏家伙</string>
+                    <key>testCaseID</key>
+                    <string>17467202</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_113</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>tpxtdjxb</string>
+                    <key>expectedText</key>
+                    <string>铁血丹心</string>
+                    <key>testCaseID</key>
+                    <string>17467203</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_114</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>uipw</string>
+                    <key>expectedText</key>
+                    <string>适配</string>
+                    <key>testCaseID</key>
+                    <string>17467204</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_115</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>rzvissrr</string>
+                    <key>expectedText</key>
+                    <string>肉质松软</string>
+                    <key>testCaseID</key>
+                    <string>17467205</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_116</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>paph</string>
+                    <key>expectedText</key>
+                    <string>怕胖</string>
+                    <key>testCaseID</key>
+                    <string>17467206</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_117</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>svyt</string>
+                    <key>expectedText</key>
+                    <string>岁月</string>
+                    <key>testCaseID</key>
+                    <string>17467207</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_118</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>qbqpgj</string>
+                    <key>expectedText</key>
+                    <string>亲切感</string>
+                    <key>testCaseID</key>
+                    <string>17467208</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_119</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>pcpm</string>
+                    <key>expectedText</key>
+                    <string>跑偏</string>
+                    <key>testCaseID</key>
+                    <string>17467209</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_120</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ucnv</string>
+                    <key>expectedText</key>
+                    <string>少女</string>
+                    <key>testCaseID</key>
+                    <string>17467210</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_121</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>lnvd</string>
+                    <key>expectedText</key>
+                    <string>聊斋</string>
+                    <key>testCaseID</key>
+                    <string>17467211</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_122</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>qqqrzebw</string>
+                    <key>expectedText</key>
+                    <string>求全责备</string>
+                    <key>testCaseID</key>
+                    <string>17467212</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_123</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ufggyinz</string>
+                    <key>expectedText</key>
+                    <string>深耕易耨</string>
+                    <key>testCaseID</key>
+                    <string>17467213</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_124</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>tymo</string>
+                    <key>expectedText</key>
+                    <string>吞没</string>
+                    <key>testCaseID</key>
+                    <string>17467214</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_125</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>kcnh</string>
+                    <key>expectedText</key>
+                    <string>烤馕</string>
+                    <key>testCaseID</key>
+                    <string>17467215</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_126</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>hggf</string>
+                    <key>expectedText</key>
+                    <string>横亘</string>
+                    <key>testCaseID</key>
+                    <string>17467216</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_127</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>grhr</string>
+                    <key>expectedText</key>
+                    <string>官宦</string>
+                    <key>testCaseID</key>
+                    <string>17467217</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_128</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>nomijr</string>
+                    <key>expectedText</key>
+                    <string>糯米卷</string>
+                    <key>testCaseID</key>
+                    <string>17467218</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_129</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>julj</string>
+                    <key>expectedText</key>
+                    <string>巨烂</string>
+                    <key>testCaseID</key>
+                    <string>17467219</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_130</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>pkpu</string>
+                    <key>expectedText</key>
+                    <string>平铺</string>
+                    <key>testCaseID</key>
+                    <string>17467220</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_131</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>piykxi</string>
+                    <key>expectedText</key>
+                    <string>皮影戏</string>
+                    <key>testCaseID</key>
+                    <string>17467221</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_132</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>tw</string>
+                    <key>expectedText</key>
+                    <string>忒</string>
+                    <key>testCaseID</key>
+                    <string>17467222</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_133</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>shtana</string>
+                    <key>expectedText</key>
+                    <string>桑塔纳</string>
+                    <key>testCaseID</key>
+                    <string>17467223</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_134</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>js</string>
+                    <key>expectedText</key>
+                    <string>囧</string>
+                    <key>testCaseID</key>
+                    <string>17467224</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_135</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>pnsa</string>
+                    <key>expectedText</key>
+                    <string>飘洒</string>
+                    <key>testCaseID</key>
+                    <string>17467225</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_136</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>uxva</string>
+                    <key>expectedText</key>
+                    <string>耍诈</string>
+                    <key>testCaseID</key>
+                    <string>17467226</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_137</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>xrpb</string>
+                    <key>expectedText</key>
+                    <string>选聘</string>
+                    <key>testCaseID</key>
+                    <string>17467227</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_138</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>mbhh</string>
+                    <key>expectedText</key>
+                    <string>民航</string>
+                    <key>testCaseID</key>
+                    <string>17467228</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_139</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>wdzufu</string>
+                    <key>expectedText</key>
+                    <string>外祖父</string>
+                    <key>testCaseID</key>
+                    <string>17467229</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_140</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>zgujgd</string>
+                    <key>expectedText</key>
+                    <string>增删改</string>
+                    <key>testCaseID</key>
+                    <string>17467230</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_141</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>vyvyjndc</string>
+                    <key>expectedText</key>
+                    <string>谆谆教导</string>
+                    <key>testCaseID</key>
+                    <string>17467231</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_142</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>zamm</string>
+                    <key>expectedText</key>
+                    <string>杂面</string>
+                    <key>testCaseID</key>
+                    <string>17467232</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_143</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ltqu</string>
+                    <key>expectedText</key>
+                    <string>掠取</string>
+                    <key>testCaseID</key>
+                    <string>17467233</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_144</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>dzns</string>
+                    <key>expectedText</key>
+                    <string>逗弄</string>
+                    <key>testCaseID</key>
+                    <string>17467234</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_145</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>duxp</string>
+                    <key>expectedText</key>
+                    <string>读写</string>
+                    <key>testCaseID</key>
+                    <string>17467235</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_146</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>eg</string>
+                    <key>expectedText</key>
+                    <string>鞥</string>
+                    <key>testCaseID</key>
+                    <string>17467236</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_147</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>lyks</string>
+                    <key>expectedText</key>
+                    <string>轮空</string>
+                    <key>testCaseID</key>
+                    <string>17467237</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_148</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>nphe</string>
+                    <key>expectedText</key>
+                    <string>捏合</string>
+                    <key>testCaseID</key>
+                    <string>17467238</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_149</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>nbrh</string>
+                    <key>expectedText</key>
+                    <string>您让</string>
+                    <key>testCaseID</key>
+                    <string>17467239</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_150</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>lgqtye</string>
+                    <key>expectedText</key>
+                    <string>冷却液</string>
+                    <key>testCaseID</key>
+                    <string>17467240</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_151</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ooyo</string>
+                    <key>expectedText</key>
+                    <string>喔唷</string>
+                    <key>testCaseID</key>
+                    <string>17467241</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_152</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>uvjy</string>
+                    <key>expectedText</key>
+                    <string>水军</string>
+                    <key>testCaseID</key>
+                    <string>17467242</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_153</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ntku</string>
+                    <key>expectedText</key>
+                    <string>虐哭</string>
+                    <key>testCaseID</key>
+                    <string>17467243</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_154</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>kxjl</string>
+                    <key>expectedText</key>
+                    <string>夸奖</string>
+                    <key>testCaseID</key>
+                    <string>17467244</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_155</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>fokj</string>
+                    <key>expectedText</key>
+                    <string>佛龛</string>
+                    <key>testCaseID</key>
+                    <string>17467245</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_156</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>qync</string>
+                    <key>expectedText</key>
+                    <string>群闹</string>
+                    <key>testCaseID</key>
+                    <string>17467246</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_157</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>sjya</string>
+                    <key>expectedText</key>
+                    <string>三亚</string>
+                    <key>testCaseID</key>
+                    <string>17467247</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_158</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>annk</string>
+                    <key>expectedText</key>
+                    <string>安宁</string>
+                    <key>testCaseID</key>
+                    <string>17467248</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_159</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ny</string>
+                    <key>expectedText</key>
+                    <string>黁</string>
+                    <key>testCaseID</key>
+                    <string>17467249</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_160</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>mjre</string>
+                    <key>expectedText</key>
+                    <string>慢热</string>
+                    <key>testCaseID</key>
+                    <string>17467250</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_161</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>lvtzbudvmazv</string>
+                    <key>expectedText</key>
+                    <string>驴头不对马嘴</string>
+                    <key>testCaseID</key>
+                    <string>17467251</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_162</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>lo</string>
+                    <key>expectedText</key>
+                    <string>咯</string>
+                    <key>testCaseID</key>
+                    <string>17467252</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_163</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>kavu</string>
+                    <key>expectedText</key>
+                    <string>卡住</string>
+                    <key>testCaseID</key>
+                    <string>17467253</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_164</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>vhga</string>
+                    <key>expectedText</key>
+                    <string>张嘎</string>
+                    <key>testCaseID</key>
+                    <string>17467254</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_165</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>mune</string>
+                    <key>expectedText</key>
+                    <string>木讷</string>
+                    <key>testCaseID</key>
+                    <string>17467255</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_166</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>kfdk</string>
+                    <key>expectedText</key>
+                    <string>肯定</string>
+                    <key>testCaseID</key>
+                    <string>17467256</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_167</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>kydy</string>
+                    <key>expectedText</key>
+                    <string>困顿</string>
+                    <key>testCaseID</key>
+                    <string>17467257</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_168</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>nwjq</string>
+                    <key>expectedText</key>
+                    <string>内疚</string>
+                    <key>testCaseID</key>
+                    <string>17467258</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_169</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>lxrf</string>
+                    <key>expectedText</key>
+                    <string>俩人</string>
+                    <key>testCaseID</key>
+                    <string>17467259</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_170</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>mqwu</string>
+                    <key>expectedText</key>
+                    <string>谬误</string>
+                    <key>testCaseID</key>
+                    <string>17467260</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_171</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>zfmobj</string>
+                    <key>expectedText</key>
+                    <string>怎么办</string>
+                    <key>testCaseID</key>
+                    <string>17467261</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_172</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>nfmo</string>
+                    <key>expectedText</key>
+                    <string>嫩模</string>
+                    <key>testCaseID</key>
+                    <string>17467262</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_173</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>nuli</string>
+                    <key>expectedText</key>
+                    <string>努力</string>
+                    <key>testCaseID</key>
+                    <string>17467263</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_174</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>nrqi</string>
+                    <key>expectedText</key>
+                    <string>暖气</string>
+                    <key>testCaseID</key>
+                    <string>17467264</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_175</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>pfsa</string>
+                    <key>expectedText</key>
+                    <string>喷洒</string>
+                    <key>testCaseID</key>
+                    <string>17467265</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_176</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>ppkd</string>
+                    <key>expectedText</key>
+                    <string>撇开</string>
+                    <key>testCaseID</key>
+                    <string>17467266</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_177</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>jppz</string>
+                    <key>expectedText</key>
+                    <string>解剖</string>
+                    <key>testCaseID</key>
+                    <string>17467267</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_178</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>qxjx</string>
+                    <key>expectedText</key>
+                    <string>掐架</string>
+                    <key>testCaseID</key>
+                    <string>17467268</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_179</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>sdwguima</string>
+                    <key>expectedText</key>
+                    <string>塞翁失马</string>
+                    <key>testCaseID</key>
+                    <string>17467269</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_180</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>rgrj</string>
+                    <key>expectedText</key>
+                    <string>仍然</string>
+                    <key>testCaseID</key>
+                    <string>17467270</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_181</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>rvqi</string>
+                    <key>expectedText</key>
+                    <string>锐气</string>
+                    <key>testCaseID</key>
+                    <string>17467271</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_182</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>hsry</string>
+                    <key>expectedText</key>
+                    <string>红润</string>
+                    <key>testCaseID</key>
+                    <string>17467272</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_183</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>bjrobolomijk</string>
+                    <key>expectedText</key>
+                    <string>般若波罗蜜经</string>
+                    <key>testCaseID</key>
+                    <string>17467273</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_184</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>keystrokesText</key>
+                    <string>uryhrz</string>
+                    <key>expectedText</key>
+                    <string>涮羊肉</string>
+                    <key>testCaseID</key>
+                    <string>17467274</string>
+                </dict>
+
+                <key>ID</key>
+                <string>Xiaohe_185</string>
+
+            </dict>
+		</array>
+	</dict>
+</array>
+</plist>

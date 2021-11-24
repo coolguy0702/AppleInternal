@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadContent</key>
+			<array>
+				<dict>
+					<key>DefaultsData</key>
+					<dict>
+						<key>AlternateModesEnabled</key>
+						<true/>
+					</dict>
+					<key>DefaultsDomainName</key>
+					<string>com.apple.internal.SequoiaTranslator</string>
+				</dict>
+			</array>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.defaults.managed.97128691-B56D-4BDA-BE84-45155DDE759C</string>
+			<key>PayloadType</key>
+			<string>com.apple.defaults.managed</string>
+			<key>PayloadUUID</key>
+			<string>97128691-B56D-4BDA-BE84-45155DDE759C</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures SequoiaTranslator to enable the Pictograms mode</string>
+	<key>PayloadDisplayName</key>
+	<string>Pictograms for SequoiaTranslator</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.internal.SequoiaTranslator.Pictograms</string>
+	<key>PayloadOrganization</key>
+	<string>Apple, Inc</string>
+	<key>PayloadRebootSuggested</key>
+	<false/>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>A9697CB7-26A4-4F1D-8D22-16618296049C</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>RemovalDate</key>
+	<date>2019-10-03T23:07:48Z</date>
+</dict>
+</plist>

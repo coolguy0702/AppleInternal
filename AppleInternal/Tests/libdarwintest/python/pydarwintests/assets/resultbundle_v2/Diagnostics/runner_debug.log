@@ -1,0 +1,18 @@
+10:31:38 ARGUMENTS: /tmp/tests_lte_test_runner_548128064907908/lte_test_runner_helper_tests/.current_test_lte_test_runner_helper_tests.perf_data.606595997989053
+10:31:38 TIME_BASE_FILE: /tmp/tests_lte_test_runner_548128064907908/lte_test_runner_helper_tests/.current_test_lte_test_runner_helper_tests.perf_data.606595997989053/.fs_timemark_file
+10:31:38 DESTINATION: /tmp/tests_lte_test_runner_548128064907908/lte_test_runner_helper_tests/.current_test_lte_test_runner_helper_tests.perf_data.606595997989053/Attachments
+10:31:38 LOCATIONS: /Users/vishal/Library/Logs/DiagnosticReports /Library/Logs/DiagnosticReports
+10:31:38 FILE_TYPE_EXPR: \( -name "*.ips" -or -name "*.ips-synced" -or -name "*.crash" -or -name "*.memgraph" \)
+10:31:38 IGNORE_PATTERN_EXPR: 
+10:31:38 FIND_CMD: find /Users/vishal/Library/Logs/DiagnosticReports /Library/Logs/DiagnosticReports -type f -not -empty -newerBB /tmp/tests_lte_test_runner_548128064907908/lte_test_runner_helper_tests/.current_test_lte_test_runner_helper_tests.perf_data.606595997989053/.fs_timemark_file \( -name "*.ips" -or -name "*.ips-synced" -or -name "*.crash" -or -name "*.memgraph" \)
+10:31:38 GREP_PATTERN: 
+10:31:38 FILES_FOUND: 
+10:31:38 ARGUMENTS: /tmp/tests_lte_test_runner_548128064907908/lte_test_runner_helper_tests/.current_test_lte_test_runner_helper_tests.perf_data.606595997989053 /tmp
+10:31:38 TIME_BASE_FILE: /tmp/tests_lte_test_runner_548128064907908/lte_test_runner_helper_tests/.current_test_lte_test_runner_helper_tests.perf_data.606595997989053/Info.plist
+10:31:38 DESTINATION: /tmp
+10:31:38 LOCATIONS: /Users/vishal/Library/Logs/DiagnosticReports /Library/Logs/DiagnosticReports
+10:31:38 FILE_TYPE_EXPR: \( -name "*.ips" -or -name "*.ips-synced" -or -name "*.crash" -or -name "*.memgraph" \)
+10:31:38 IGNORE_PATTERN_EXPR: 
+10:31:38 FIND_CMD: find /Users/vishal/Library/Logs/DiagnosticReports /Library/Logs/DiagnosticReports -type f -not -empty -newerBB /tmp/tests_lte_test_runner_548128064907908/lte_test_runner_helper_tests/.current_test_lte_test_runner_helper_tests.perf_data.606595997989053/Info.plist \( -name "*.ips" -or -name "*.ips-synced" -or -name "*.crash" -or -name "*.memgraph" \)
+10:31:38 GREP_PATTERN: 
+10:31:38 FILES_FOUND: 

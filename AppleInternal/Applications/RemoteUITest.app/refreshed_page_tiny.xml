@@ -1,0 +1,15 @@
+<xmlui id="page-to-be-refreshed" style="setupAssistant">>
+    <actions>
+    <dismiss />
+    <refresh />
+    </actions>
+    <page> <!-- The default page -->
+        <navigationBar title="Refreshed">
+        </navigationBar>
+        <tableView>
+            <section>
+                <labelRow label="Well... we're not in Kansas anymore..."/>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

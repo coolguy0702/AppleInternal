@@ -1,0 +1,62 @@
+{
+  "description" : "Apple Store Pass",
+  "formatVersion" : 1,
+  "associatedStoreIdentifiers" : [
+	375380948
+  ],
+  "teamIdentifier" : "K9942Z534D",
+  "foregroundColor" : "rgb(255, 255, 255)",
+  "locations" : [
+    {
+      "longitude" : -122.3748889,
+      "latitude" : 37.6189722
+    },
+    {
+      "longitude" : -122.42795,
+      "latitude" : 37.76631
+    },
+    {
+      "longitude" : -122.42151,
+      "latitude" : 37.75903
+    },
+    {
+      "longitude" : -122.02949,
+      "latitude" : 37.33338
+    }
+  ],
+  "serialNumber" : "j89t1",
+  "backgroundColor" : "rgb(60, 65, 76)",
+  "storeCard" : {
+    "primaryFields" : [
+      {
+        "key" : "balance",
+        "label" : "remaining balance",
+        "value" : "$200.00"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "message",
+        "label" : "MESSAGE",
+        "value" : "Congrats graduate!"
+      }
+    ],
+    "backFields" : [
+      {
+        "key" : "terms",
+        "label" : "TERMS AND CONDITIONS",
+        "value" : "Generico offers this card, including all information, software, products and services available from this card or offered as part of or in conjunction with this card (the \"card\"), to you, the user, conditioned upon your acceptance of all of the terms, conditions, policies and notices stated here. Generico reserves the right to make changes to these Terms and Conditions immediately by posting the changed Terms and Conditions in this location.\n\nUse the card at your own risk. This card is provided to you \"as is,\" without warranty of any kind either express or implied. Neither Generico nor its employees, agents, third-party information providers, merchants, licnsors or the like warrant that the card or its operation will be accurate, reliable, uninterrupted or error-free. No agent or representative has the authority to create any warranty regarding the card on behalf of Generico. Generico reserves the right to change or discontinue at any time any aspect or feature of the card."
+      }
+    ]
+  },
+  "barcode" : {
+    "message" : "123456789",
+    "format" : "PKBarcodeFormatPDF417",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "passTypeIdentifier" : "pass.com.apple.test1",
+  "groupingIdentifier" : "applestore",
+  "logoText" : "Apple Store",
+  "organizationName" : "Apple Store",
+  "relevantDate" : "2011-12-08T13:00-08:00"
+}

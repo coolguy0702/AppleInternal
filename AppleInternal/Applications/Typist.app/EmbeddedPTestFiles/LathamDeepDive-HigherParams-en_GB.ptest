@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamDeepDive-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>en_GB@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.1</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false />
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.8</real>
+                        <key>SwipePPivot</key>
+                        <real>0.8</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358739</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>The abridgment of the rights of ownership</string>
+                                <key>expectedText</key>
+                                <string>The abridgment of the rights of ownership</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>A coiffeuses is a female hairdresser</string>
+                                <key>expectedText</key>
+                                <string>A coiffeuses is a female hairdresser</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>The plural of zealotry is zealotries</string>
+                                <key>expectedText</key>
+                                <string>The plural of zealotry is zealotries</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words 10</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358740</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>A gastrointestinal infection is most uncomfortable</string>
+                                <key>expectedText</key>
+                                <string>A gastrointestinal infection is most uncomfortable</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>They are idiologically undifferentiated and indistinguishable</string>
+                                <key>expectedText</key>
+                                <string>They are idiologically undifferentiated and indistinguishable</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>I think hes a bit overenthusiastic with regards to his collection of figurines</string>
+                                <key>expectedText</key>
+                                <string>I think he's a bit overenthusiastic with regards to his collection of figurines</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words 15</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358746</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Ill be at Mrs Changs house</string>
+                                <key>expectedText</key>
+                                <string>I'll be at Mrs. Chang's house</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Have you tried Chris number?</string>
+                                <key>expectedText</key>
+                                <string>Have you tried Chris' number?</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Ross sports teams have all been awful</string>
+                                <key>expectedText</key>
+                                <string>Ross' sports teams have all been awful</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Hastings pen</string>
+                                <key>expectedText</key>
+                                <string>Hastings' pen</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Apostrophe</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358748</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Buying a womans hat in london</string>
+                                <key>expectedText</key>
+                                <string>Buying a woman's hat in London</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>I would like to build a bridge to brooklyn but theyre already served by the brooklyn bridge</string>
+                                <key>expectedText</key>
+                                <string>I would like to build a bridge to Brooklyn but they're already served by the Brooklyn Bridge</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>I have some expensive china passed on to me from my great grandparents</string>
+                                <key>expectedText</key>
+                                <string>I have some expensive china passed on to me from my great grandparents</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Ralph Waldo Emerson said, "the only way to have a friend is to be one."</string>
+                                <key>expectedText</key>
+                                <string>Ralph Waldo Emerson said, "The only way to have a friend is to be one."</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Hello, senator. Have you even been to china?</string>
+                                <key>expectedText</key>
+                                <string>Hello, Senator. Have you even been to China?</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>The senator will be in today for a press conference</string>
+                                <key>expectedText</key>
+                                <string>The senator will be in today for a press conference</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>I like northern italy except for the drive up north</string>
+                                <key>expectedText</key>
+                                <string>I like Northern Italy except for the drive up north</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Autocaplitalization</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358750</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Nic Dakin</string>
+                                <key>expectedText</key>
+                                <string>Nic Dakin</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Colin Clark</string>
+                                <key>expectedText</key>
+                                <string>Colin Clark</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Sir Graham Brady</string>
+                                <key>expectedText</key>
+                                <string>Sir Graham Brady</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Elizabeth Alexandra Mary</string>
+                                <key>expectedText</key>
+                                <string>Elizabeth Alexandra Mary</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Names</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358749</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Put the pit in the pot and put it back on the shelf</string>
+                                <key>expectedText</key>
+                                <string>Put the pit in the pot and put it back on the shelf</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>I once had to take out a liter of cat litter from the sink</string>
+                                <key>expectedText</key>
+                                <string>I once had to take out a liter of cat litter from the sink</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Id like to if I could</string>
+                                <key>expectedText</key>
+                                <string>I'd like to if I could</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>If only i had a hammer, id hit the hot nail as soon as I can get to it</string>
+                                <key>expectedText</key>
+                                <string>If only i had a hammer, id hit the hot nail as soon as I can get to it</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Give it or ill put it in the alkaliser or on a bale of hay</string>
+                                <key>expectedText</key>
+                                <string>Give it or I'll put it in the alkaliser or on a bale of hay</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Is it so?</string>
+                                <key>expectedText</key>
+                                <string>Is it so?</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Ambiguous Paths</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>No worries Im gonna go get that thingy Daves been bangin on about. Alright later dude I gotta go</string>
+                                <key>expectedText</key>
+                                <string>No worries I'm gonna go get that thingy Dave's been bangin on about. Alright later dude I gotta go</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19358738</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Informal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>The latest Millennium draft is with Simon and as he said over the phone he will be writing to you with our feedback. Please give my regards to Mrs OKeeffe. With best wishes, Timothy N Blakey Electronic Publishing Development</string>
+                                <key>expectedText</key>
+                                <string>The latest Millennium draft is with Simon and as he said over the phone he will be writing to you with our feedback. Please give my regards to Mrs. O'Keeffe. With best wishes, Timothy N Blakey Electronic Publishing Development</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>We have it upon us to reelect our coworker to be our representative in the prodemocracy union</string>
+                                <key>expectedText</key>
+                                <string>We have it upon us to re-elect our co-worker to be our representative within the pro-democracy union</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19358737</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Formal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>France is less favoured on the whole as to matters spiritual than her sister of the shield and trident, rolled with exceeding smoothness downhill making paper money and spending it. Under the guidance of her Christian pastors, she entertained herself besides with such humane achievements as sentencing a youth to have his hands cut off, his tongue torn out with pincers and his body burned alive because he had not kneeled down in the rain to do honour to a dirty procession of monks which passed within his view at a distance of some fifty or sixty yards</string>
+                                <key>expectedText</key>
+                                <string>France is less favoured on the whole as to matters spiritual than her sister of the shield and trident, rolled with exceeding smoothness downhill making paper money and spending it. Under the guidance of her Christian pastors, she entertained herself besides with such humane achievements as sentencing a youth to have his hands cut off, his tongue torn out with pincers and his body burned alive because he had not kneeled down in the rain to do honour to a dirty procession of monks which passed within his view at a distance of some fifty or sixty yards</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19358741</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Paragraph</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>

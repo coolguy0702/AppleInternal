@@ -1,0 +1,39 @@
+{
+    "account" : {
+        "identifier": null,
+        "currentBalance" : "1500",
+        "statementBalance" : null,
+        "featureMinimumAmount" : "0.01",
+        "createdDate" :"2019-06-01T00:00:00.000-07:00",
+        "statementIdentifier": null,
+        "apr": "0.16",
+        "creditLimit":"5000",
+        "isFirstMonth": true,
+        "inGrace": true,
+        "currentStatementPurchases" : null,
+    },
+    "currentStatementSelectedSuggestedAmountEvents" : [
+        
+    ],
+    "currentStatementPurchasesTransactions" : [
+        {
+            "amount" : "25.00",
+            "transactionDate" : "2018-07-09T00:00:00+00:00",
+            "merchantCategory" : "fooddrinks"
+        },
+        {
+            "amount" : "100.00",
+            "transactionDate" : "2018-07-07T00:00:00+00:00",
+            "merchantCategory" : "shopping"
+        }
+    ],
+    "previousStatementPurchasesTransactions" : [
+    ],
+    "currentStatementBillPaymentTransactions" : [
+        {
+            "amount" : "10"
+        }
+    ],
+    "previousStatementBillPaymentTransactions" : [
+    ]
+}

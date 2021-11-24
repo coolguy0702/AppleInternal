@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#  test_easyperf_perf
+#
+#  Copyright (c) 2016 Apple Inc. All rights reserved.
+
+# include utilities
+scriptdir=${0%/*} # 'dirname' w/o spawning 'dirname'
+source "$scriptdir/testutils.sh"
+
+# scratch objects
+echo '$TMPDIR:' $TMPDIR
+tmpBaselinef=${TMPDIR:-/tmp}/test_easyperf.tmp.baseline.$$
+tmpPerfdataf=${TMPDIR:-/tmp}/test_easyperf.tmp.perfdata.$$
+
+# Run easyperf on itself to measure the cost of:
+#  - reading rusage info
+#  - writing a baseline file
+#  - writing a perfdata file
+
+# TODO: comparison to baseline, ideally with a many-device baseline file
+
+perfdataf="${TMPDIR:-/tmp}/easyperf_perf.pdj"
+
+cmdToTest="$EASYPERF --record $tmpBaselinef --perfdata $tmpPerfdataf -c /bin/ls /System"
+"$EASYPERF" --threshold lifetime_peak=+20% --perfdata $perfdataf -c $cmdToTest
+
+# clean up prior to exit
+rm -f "$tmpBaselinef" "$tmpPerfdataf"

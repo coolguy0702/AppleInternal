@@ -1,0 +1,48 @@
+{
+    "auxiliaryPaymentApplications": [],
+    "backgroundColor": "rgb(0,0,0)",
+    "description": "Apple Cash",
+    "expiryDate": "0320",
+    "foregroundColor": "rgb(255,255,255)",
+    "formatVersion": 1,
+    "isCobranded": false,
+    "isUserSelectionAllowed": false,
+    "issuerCountryCode": "US",
+    "labelColor": "rgb(255,255,255)",
+    "organizationName": "Apple, Inc.",
+    "passTypeIdentifier": "paymentpass.com.apple.wallet.dev",
+    "paymentCard": {
+        "auxiliaryFields": [],
+        "backFields": [],
+        "secondaryFields": [
+            {
+                "key": "card",
+                "label": "CARD",
+                "value": "5678"
+            }
+        ]
+    },
+	"paymentApplications": [
+        {
+            "DPANIdentifier": "DAPLAB001d9a29eb059d74ce9a387bd877e4b764bcdefg",
+            "DPANSuffix": "4173",
+            "applicationIdentifier": "ABCDEFG2501090100000001",
+            "paymentNetworkIdentifier": 2,
+            "secureElementIdentifier": "051324234293182680014158017326930804E0652ADF7890123",
+            "state": 1,
+            "supportsContactlessPayment": 1,
+            "supportsInAppPayment": 1
+        }
+    ],
+    "requiresTransferSerialNumberBasedProvisioning": false,
+    "sequenceCounter": 12,
+    "serialNumber": "nc.prod.pod1_2345678901234567890123456b7d1195",
+    "supportsDPANNotifications": 1,
+    "supportsDefaultCardSelection": true,
+    "supportsFPANNotifications": 0,
+    "supportsPeerPayment": true,
+    "supportsSerialNumberBasedProvisioning": true,
+    "hasAssociatedPeerPaymentAccount": true,
+	"liveRenderedBackground" : true,
+    "teamIdentifier": "58Y959KPTE"
+}

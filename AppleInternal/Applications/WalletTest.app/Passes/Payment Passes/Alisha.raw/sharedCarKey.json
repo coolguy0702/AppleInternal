@@ -1,0 +1,16 @@
+{
+    "keyID": "ownerKeyID",
+    "version": "1.0"
+    "sharedKeysData": [
+        {
+            "keyID": "friendKeyID",
+            "keyConfiguration": {
+                "friendlyName": "Friend's key",
+                "rights": 1
+            },
+            "groupIdentifier": "614E1857-F632-40F5-80C8-751CDE616CD5"
+            "deviceType": "PHONE"
+            "status": 1
+        }
+    ]
+}

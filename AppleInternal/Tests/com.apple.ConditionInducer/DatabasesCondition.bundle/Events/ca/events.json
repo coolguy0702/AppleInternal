@@ -1,0 +1,122 @@
+[
+  {
+    "startDate": "20141101",
+    "title": "Tots Sants",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Carrer de Llúcia Costa, 6\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "a casa d'un penjat no hi anomenis cordes"
+  },
+  {
+    "startDate": "20140815",
+    "title": "L'Assumpció",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Carrer dels Vilabella, 5\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "a cavall regalat, no li miris el dentat"
+  },
+  {
+    "startDate": "20141225",
+    "title": "Nadal",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Rambla de l'Hospital, 6\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "a la taula i al llit, al primer crit"
+  },
+  {
+    "startDate": "20141206",
+    "title": "Dia de la Constitució",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Carrer del Bisbe Torras i Bages, 18\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "ets el que menges"
+  },
+  {
+    "startDate": "20140106",
+    "title": "Dia de Reis",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Carrer del Virrei Avilés, 13\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "tal faràs, tal trobaràs"
+  },
+  {
+    "startDate": "20141208",
+    "title": "La Immaculada",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Carrer de Sant Just, 9\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": ""
+  },
+  {
+    "startDate": "20140101",
+    "title": "Cap d'Any",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Rambla de l'Hospital, 19\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "a casa d'un penjat no hi anomenis cordes"
+  },
+  {
+    "startDate": "20140501",
+    "title": "Festa del Treball",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Rambla de l'Hospital, 6\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "a cavall regalat, no li miris el dentat"
+  },
+  {
+    "startDate": "20141012",
+    "title": "Festa Nacional d’Espanya",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Passatge de l'Horta de Sant Josep, 2\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "a la taula i al llit, al primer crit"
+  },
+  {
+    "startDate": "20140330",
+    "title": "Divendres Sant",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Ronda de Francesc Camprodon, 28\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "ets el que menges"
+  },
+  {
+    "startDate": "20140419",
+    "title": "Divendres Sant",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Carrer de Miramarges, 7\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "tal faràs, tal trobaràs"
+  },
+  {
+    "startDate": "20130410",
+    "title": "Divendres Sant",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Ronda de Francesc Camprodon, 38\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": ""
+  },
+  {
+    "startDate": "20140401",
+    "title": "Diumenge de Pasqua",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Carrer de l'Arquebisbe Alemany, 18\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "a casa d'un penjat no hi anomenis cordes"
+  },
+  {
+    "startDate": "20140421",
+    "title": "Diumenge de Pasqua",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Carrer dels Morató, 10\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "a cavall regalat, no li miris el dentat"
+  },
+  {
+    "startDate": "20130412",
+    "title": "Diumenge de Pasqua",
+    "calendar": "Int_ca Festius a Espanya",
+    "allDay": false,
+    "address": "Carrer de Jacint Verdaguer, 30\n08500',Vic\nBarcelona, Espanya,08500\nEspanya",
+    "notes": "a la taula i al llit, al primer crit"
+  }
+]

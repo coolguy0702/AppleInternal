@@ -1,0 +1,23 @@
+{
+    "account" : {
+        "identifier": "75698eae-e65d-4d84-a588-599776739d64",
+        "currentBalance" : "50000.00",
+        "statementBalance" : "1000.00",
+        "remainingStatementBalance" : "1000.00",
+        "remainingMinimumPayment" : "10.00",
+        "featureMinimumAmount" : "0.01",
+        "statementIdentifier": "d0202bb6-cd15-467f-95aa-52608510cdc3",
+        "apr": "0.16",
+        "creditLimit":"5000"
+    },
+    "currentStatementSelectedSuggestedAmountEvents" : [
+    ],
+    "currentStatementPurchasesTransactions" : [
+    ],
+    "previousStatementPurchasesTransactions" : [
+    ],
+    "currentStatementBillPaymentTransactions" : [
+    ],
+    "previousStatementBillPaymentTransactions" : [
+    ]
+}

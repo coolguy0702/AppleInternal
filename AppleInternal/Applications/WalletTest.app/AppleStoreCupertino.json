@@ -1,0 +1,17 @@
+{
+  "name": "Apple",
+  "category": "shopping",
+  "rewardsType": "appleProperty",
+  "source": "contactless",
+  "city": "Cupertino",
+  "state": "CA",
+  "brand": {
+    "category": "shopping",
+    "detailedCategory": "shopping.electronics",
+    "identifier": 9300435704289333803,
+    "logoURL": "https://is3-ssl.mzstatic.com/image/thumb/K49ahzkGx-YwYXtz5aTCmg/258x258.png",
+    "name": "Apple",
+    "phoneNumber": "+1 (800) 692-7753",
+    "url": "http://www.apple.com"
+  }
+}

@@ -1,0 +1,16 @@
+<xmlui style="setupAssistant">
+    <page>
+        <navigationBar title="Buddy Style"/>
+        <tableView>
+            <header>Table Header</header>
+            <section>
+                <header>Section Header</header>
+                <labelRow label="Label Row"/>
+                <footer>Section Footer</footer>
+            </section>
+        </tableView>
+        <toolbar>
+            <buttonBarItem position="center" label="center barButtonItem in toolbar"/>
+        </toolbar>
+    </page>
+</xmlui>

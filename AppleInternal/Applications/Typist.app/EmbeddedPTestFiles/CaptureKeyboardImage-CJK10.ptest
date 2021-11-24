@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>CaptureKeyboardImage-CJK10</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+            
+            
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin-Simplified;hw=Automatic</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>NO</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestCaptureKeyboardImage</string>
+                        <key>testFunction</key>
+                        <string>captureKeyboardImage</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>TC_Pinyin_10Key</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Capure screenshot for active keyboard, for each plane.</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Kana@sw=Kana;hw=Automatic</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>NO</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>LEFT</string>
+                        <key>testFunction</key>
+                        <string>captureKeyboardImage</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Kana</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Capure screenshot for active keyboard, for each plane.</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>ko_KR@sw=Korean10Key;hw=Automatic</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>NO</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>RIGHT</string>
+                        <key>testFunction</key>
+                        <string>captureKeyboardImage</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Korean_10Key</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Capure screenshot for active keyboard, for each plane.</string>
+                </dict>
+
+
+            </array>
+        </dict>
+    </array>
+</plist>

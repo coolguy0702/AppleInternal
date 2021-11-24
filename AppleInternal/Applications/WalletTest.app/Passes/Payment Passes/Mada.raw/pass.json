@@ -1,0 +1,112 @@
+{
+  "formatVersion" : 2,
+  "passTypeIdentifier" : "paymentpass.com.apple.wallet.dev",
+  "teamIdentifier" : "58Y959KPTE",
+  "primaryAccountIdentifier" : "FAPLAB0019cefa707f2e748cfbd477062320d56fe",
+  "primaryAccountSuffix" : "4731",
+  "expiryDate" : "02/2019",
+  "associatedStoreIdentifiers" : [
+    362348516,
+    469439008
+  ],
+  "associatedApplicationIdentifiers" : [
+    "GSP3TRFDJD.com.apple.syndrome",
+    "5AM47K89XY.com.apple.PassAche"
+  ],
+  "messagePushTopic" : "com.frameworksqa.tombola",
+  "messageServiceURL" : "https://tombola.apple.com/api/v1/",
+  "appLaunchURLScheme" : "syndrome",
+  "serialNumber" : "ae8c78f1c71346f1ace17cbcc1d1cbe9",
+  "backgroundColor" : "rgb(172,174,174)",
+  "foregroundColor" : "rgb(150,150,150)",
+  "labelColor" : "rgb(255,255,255)",
+  "organizationName" : "BigBank Corporation",
+  "description" : "BigBank Card",
+  "longDescription" : "Big Bank Corporation Incorporated Credit Card",
+  "transactionServiceURL" : "https://tombola.apple.com/api/v1/",
+  "transactionPushTopic" : "com.frameworksqa.tombola",
+  "supportsDPANNotifications" : 1,
+  "supportsFPANNotifications" : 1,
+  "issuerCountryCode": "CA",
+  "paymentCard" : {
+    "secondaryFields" : [
+      {
+        "key" : "card",
+        "label" : "CARD",
+        "value" : "4731"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "cardholder",
+        "label" : "CARDHOLDER",
+        "value" : "Cardow Nerr"
+      }
+    ],
+    "backFields" : [
+      {
+        "key" : "notice",
+        "label" : "INFORMATION",
+        "value" : "American Express"
+      },
+      {
+        "key" : "contactWebsite",
+        "label" : "WEBSITE",
+        "value" : "http://www.rbc.com"
+      },
+      {
+        "key" : "contactNumber",
+        "label" : "PHONE",
+        "value" : "1-800-964-8542"
+      },
+      {
+        "key" : "contactName",
+        "label" : "NAME",
+        "value" : "RBC Royal Bank"
+      },
+      {
+        "key" : "privacyPolicyURL",
+        "label" : "POLICY URL",
+        "value" : "https://www.apple.com"
+      },
+      {
+        "key" : "termsAndConditionsURL",
+        "label" : "TERMS URL",
+        "value" : "https://www.apple.com"
+      }
+    ]
+  },
+  "paymentApplications" : [
+  {
+    "secureElementIdentifier" : "04470C23BE258001415501727493074685B32D347853BD09",
+    "applicationIdentifier" : "A0000000411001090100000008",
+    "DPANIdentifier" : "DAPLCX001f2dc90cb1d2e4d41b4803a3c4e8sd88",
+    "DPANSuffix" : "1234",
+    "state" : 1,
+    "supportsContactlessPayment" : 1,
+    "supportsInAppPayment" : 1,
+    "paymentNetworkIdentifier" : 14,
+    "paymentType" : "Credit",
+    "applicationDescription" : "Mada",
+    "contactlessPriority" : 1,
+    "inAppPriority" : 1
+  }
+
+  ],
+  "auxiliaryPaymentApplications" : [
+  {
+    "secureElementIdentifier" : "04470C23BE258001415501727493074685B32D347853BD00",
+    "applicationIdentifier" : "A00000002501090100000007",
+    "DPANIdentifier" : "DAPLAB001f2dc90cb1d2e4d41b4803a3c4e6d6317",
+    "DPANSuffix" : "7007",
+    "state" : 1,
+    "supportsContactlessPayment" : 1,
+    "supportsInAppPayment" : 1,
+    "paymentNetworkIdentifier" : 3,
+    "paymentType" : "Credit",
+    "applicationDescription" : "Mastercard",
+    "contactlessPriority" : 0,
+    "inAppPriority" : 2
+  }  
+  ]
+}

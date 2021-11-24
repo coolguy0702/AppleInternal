@@ -1,0 +1,70 @@
+<xmlui action="push">
+    <script>
+        <![CDATA[
+            function toggleEditing(element)
+            {
+                var table = xmlui.getElementById("thetable");
+                var section = xmlui.getElementById("thesection");
+                table.editing = !table.editing;
+                element.body = (table.editing ? "Done" : "Edit");
+                if (table.editing) {
+                    section.insertRow(section.rowCount, "buttonRow", {"label": "Add New Row", "activationFunction": "addNewRow", "indentWhileEditing": "true"});
+                } else {
+                    section.removeRow(section.rowCount - 1);
+                }
+            }
+            
+            function addNewRow(element)
+            {
+                var section = xmlui.getElementById("thesection");
+                section.insertRow(section.rowCount - 1, "labelRow", {"label": "Row " + (section.rowCount - 2), "deletionFunction": "deleteRowSilent"});
+            }
+            
+            function dontDeleteRow(element)
+            {
+                return false;
+            }
+            
+            function deleteRowSilent(element)
+            {
+                return true;
+            }
+
+            function deleteRow(element)
+            {
+                // In this case the element is the table row
+                xmlui.log("DeleteRow " + element.identifier);
+                // Use e.g. xmlui.loadURL(url, "DELETE") to delete the row on the server
+                xmlui.loadURL("#deleteconfirmed");
+                return true;
+            }
+        ]]>
+    </script>
+    <page>
+        <navigationBar title="Table Editing"/>
+        <tableView id="thetable">
+            <section id="thesection">
+                <detailHeader activationFunction="toggleEditing" textStyle="body">Edit</detailHeader>
+                <labelRow id="row1" label="Deletable" deletionFunction="deleteRow"/>
+                <labelRow id="row2" label="Deletion denied" deletionFunction="dontDeleteRow"/>
+                <labelRow id="row3" label="Not deletable" indentWhileEditing="true"/>
+                <labelRow id="row4" label="With accessory when editing" indentWhileEditing="true">
+                    <detailButton url="simplepush.xml" visibility="editing" indentWhileEditing="true"/>
+                </labelRow>
+                <labelRow id="row5" label="With accessory when not editing" indentWhileEditing="true">
+                    <detailButton url="simplepush.xml" visibility="notEditing"/>
+                </labelRow>
+                <footer>The editing on this page is driven by javascript</footer>
+            </section>
+            <section>
+                <linkRow label="linkRow with accessory" url="simplepush.xml" accessory="disclosure"/>
+                <linkRow label="linkRow with spinner" url="simplepush.xml" accessory="spinner"/>
+                <footer>This section demonstrates accessory handling during editing</footer>
+            </section>
+        </tableView>
+    </page>
+    
+    <alert id="deleteconfirmed" title="Row Deleted" message="trust the dialog">
+        <button>OK</button>
+    </alert>
+</xmlui>

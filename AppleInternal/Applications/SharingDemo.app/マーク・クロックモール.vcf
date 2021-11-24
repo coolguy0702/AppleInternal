@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.11.2//EN
+N:マーク;クロックモール;;;
+FN:クロックモール マーク
+ORG:Apple;
+EMAIL;type=INTERNET;type=HOME;type=pref:マーク・クロックモール@example.com
+UID:7e4c6d8e-e33d-421a-9e67-a046c54c0075
+X-ABUID:7E4C6D8E-E33D-421A-9E67-A046C54C0075:ABPerson
+END:VCARD

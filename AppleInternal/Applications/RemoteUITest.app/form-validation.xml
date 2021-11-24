@@ -1,0 +1,165 @@
+<xmlui action="push">
+    <script>
+        <![CDATA[
+            function enableButton() {
+                var fieldValue = xmlui.getFieldValue('validation');
+                if (fieldValue && fieldValue.length >= 3)
+                    return true;
+                return false;
+            }
+            
+            function validateForm() {
+                var fieldValue = xmlui.getFieldValue('validation');
+                if (fieldValue == 'test') {
+                    xmlui.setFieldInvalid('validation', false);
+                    xmlui.alert("Test!");
+                } else {
+                    xmlui.setFieldInvalid('validation', true);
+                    xmlui.alert("Value entered is not 'test'.");
+                }
+            }
+            
+            function enforceMaxLength(existingText, selectionLocation, selectionLength, newText)
+            {
+                var fullString = existingText.substring(0, selectionLocation) + newText + existingText.substring(selectionLocation + selectionLength);
+                var maxLength = 5;
+                if (fullString.length > maxLength) {
+                    fullString = fullString.substring(0, maxLength);
+                }
+                return fullString;
+            }
+            
+            function changePhoneNumberFormat(existingText, selectionLocation, selectionLength, newText) {
+            
+                // Quick hack to test setting the country from javascript:
+                var noFormatting = newText.replace(/\D/g, '');
+                if (noFormatting.length == 11 && noFormatting[0] == '1') {
+                    newText = noFormatting.substr(1)
+                    xmlui.setFieldValue('phoneNumberCountryCode', 'US');
+                    selectionLocation = 0;
+                    selectionLength = 0;
+                }
+                
+                return changePhoneNumberFormatWithCountryCode(existingText, selectionLocation, selectionLength, newText, xmlui.getFieldValue('phoneNumberCountryCode'));
+            }
+            
+            function changePhoneNumberFormatWithCountryCode(existingText, selectionLocation, selectionLength, newText, countryCode) {
+                if (countryCode == "US") {
+                    var format = "(ddd) ddd-dddd";
+                    var formatDigitsLength = 10;
+                    var formatDigitRegions = [1, 4, 6, 9, 10, 14];
+            
+                    var backspace = newText == "";
+                    var before = existingText.substr(0, selectionLocation);
+                    var removed = existingText.substr(selectionLocation, selectionLength);
+                    var after = existingText.substr(selectionLocation + selectionLength);
+                    var result = "" + before + newText + after;
+                
+                    var resultDigits = result.replace(/\D/g, '');
+                
+                    if (resultDigits.length > formatDigitsLength) {
+                        return result.replace(/\D/g, ''); //remove all formatting from the number once it becomes longer than the expected format
+                    } else {
+                        if (backspace && result != resultDigits) { //if the new result text ends with a "format region", then remove the format region so the user doesn't have to back out the junk we added during formatting
+                            var previousEndRegion = 0;
+                
+                            for (i = 0; i < formatDigitRegions.length; i += 2) {
+                                var beginDigitRegion = formatDigitRegions[i];
+                                var endDigitRegion = formatDigitRegions[i + 1];
+                
+                                var formatRegion = format.substr(previousEndRegion, beginDigitRegion - previousEndRegion);
+                
+                                if (result.indexOf(formatRegion, result.length - formatRegion.length) != -1) {
+                                    var resultSelectionLocation = selectionLocation;
+                                    if (selectionLocation == result.length) {
+                                        resultSelectionLocation -= formatRegion.length;
+                                    }
+                                    return [result.substring(0, result.length - formatRegion.length), resultSelectionLocation, 0];
+                                }
+                                previousEndRegion = endDigitRegion;
+                            }
+                
+                        } else if (result.length > 0) {
+                            return applyPhoneNumberFormatting(resultDigits, format, formatDigitRegions);
+                        }
+                    }
+                }
+                return; //let the user proceed without any formatting applied
+            }
+            
+            function applyPhoneNumberFormatting(phoneNumber, format, formatDigitRegions) {
+                if (phoneNumber && phoneNumber.length > 0) {
+                    var remainingDigits = phoneNumber.replace(/\D/g, '');
+                    
+                    if (remainingDigits.length > 0) {
+                        var result = "";
+                        var previousEndRegion = 0;
+                    
+                        for (i = 0; i < formatDigitRegions.length; i += 2) {
+                            var beginDigitRegion = formatDigitRegions[i];
+                            var endDigitRegion = formatDigitRegions[i + 1];
+                            
+                            //get the text from the format up until the first index of the digit region
+                            result += format.substr(previousEndRegion, beginDigitRegion - previousEndRegion);
+                    
+                            if (remainingDigits.length < 1) {
+                                break;
+                            }
+                    
+                            var digitRegionLength = endDigitRegion - beginDigitRegion;
+                    
+                            //append digits from supplied phone number up until the formatDigitRegion's bound
+                            if (remainingDigits.length >= digitRegionLength) {
+                                result += remainingDigits.substr(0, digitRegionLength);
+                            
+                                if (remainingDigits.length > digitRegionLength) {
+                                    //remove the digits we've already added to the result from the digits for replacement
+                                    remainingDigits = remainingDigits.substr(digitRegionLength, remainingDigits.length);
+                                } else {
+                                    remainingDigits = "";
+                                }
+                            
+                                previousEndRegion = endDigitRegion;
+                            
+                            } else {
+                                result += remainingDigits;
+                                break;
+                            }
+                        }
+                        return result;
+                    }
+                }
+                return;
+            }
+        ]]>
+    </script>
+    <page> <!-- Javascript -->
+        <navigationBar title="Javascript">
+            <buttonBarItem position="right" label="Validate" validationFunction="validateForm" enabledFunction="enableButton"/>
+        </navigationBar>
+        <tableView>
+            <section>
+                <editableTextRow id="validation" disableAutocorrection="true" autocapitalizationType="none"/>
+                <footer>Sample script enables both buttons when string entered is 3 characters or longer.&#x0A;&#x0A;When pressed, buttons mark field invalid unless the value entered is 'test'.</footer>
+            </section>
+            <section>
+                <header>Max Field Length</header>
+                <editableTextRow id="maxLength" disableAutocorrection="true" autocapitalizationType="none" changeCharactersFunction="enforceMaxLength"/>
+                <footer>Sample script will not allow more than 5 characters to be entered.</footer>
+            </section>
+            <section>
+                <buttonRow label="Validate" validationFunction="validateForm" enabledFunction="enableButton"/>
+            </section>
+            <section>
+                <header>Phone Number Validation</header>
+                <subHeader>This section uses the changeCharacatersFunction to interpret user-entered or programmatically-set text and format the phone number into multiple fields.</subHeader>
+                <selectPageRow id="phoneNumberCountryCode" value="AL" label="Country" linkedTitle="Country" accessory="disclosure" autoGoBack="true">
+                    <linkedOption value="AL" label="+355 (Albania)" />
+                    <linkedOption value="US" label="+1 (United States)" />
+                </selectPageRow>
+                <editableTextRow id="phoneNumberText" label="Number" keyboardType="phonePad" placeholder="required" changeCharactersFunction="changePhoneNumberFormat" clientValue="phoneNumber"/>
+                <footer>In this example, the device phone number is auto populated in the field if applicable. The changeCharactersFunction is called immediately, allowing it to format the phone number and update the country picker as desired</footer>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

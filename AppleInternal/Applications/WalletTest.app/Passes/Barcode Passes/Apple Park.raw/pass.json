@@ -1,0 +1,93 @@
+{
+  "backgroundColor": "rgb(255, 255, 255)",
+  "description": "Meeting Confirmation",
+  "eventTicket": {
+    "auxiliaryFields": [
+      {
+        "key": "Host_key",
+        "label": "EMPLOYEE",
+        "textAlignment": "PKTextAlignmentLeft",
+        "value": "Johnny Appleseed"
+      },
+      {
+        "key": "Time",
+        "label": "Time",
+        "textAlignment": "PKTextAlignmentRight",
+        "value": "Whenever"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "Address-in",
+        "label": "Location",
+        "value": " Apple Park 1 \n 10600 N Tantau Ave \n Cupertino, CA  95014 "
+      },
+      {
+        "key": "pocdetails",
+        "label": "Point of Contact",
+        "value": "Jon Nguy\njonnguy@apple.com\n"
+      },
+      {
+        "key": "emp-Note",
+        "label": "Note",
+        "value": "All Apple employees will have badge access to Apple Park in a few months when the move-in period is over. Until then, to allow time for campus services like Caffè Macs to ramp up, and for the campus to be cleared of construction activity, we are managing access through this pre-registration process. Thank you for your understanding as we finish getting the campus ready for everyone at Apple."
+      },
+      {
+        "key": "planning-ahead",
+        "label": "Planning Ahead",
+        "value": "Please arrive 30 minutes prior to your meeting to allow time for parking, checking in and getting to your destination. If you require mobility assistance, please contact <a href='mailto:APMobilityAssistance@apple.com'>us</a>. Employees taking the intercampus shuttle can find the schedule <a href='https://commute.apple.com/cupertino/aroundcampus/'>here</a>. The nearest CalTrain station to Apple Park is the Sunnyvale station. The car/taxi drop off and pick up point is at the pullouts along Tantau, just north of the Tantau Reception Center at <a href='https://maps.apple.com/?address=Apple%20Inc.,%2010503%20N%20Tantau%20Ave,%20Cupertino,%20CA%2095014,%20United%20States&auid=12780768278350142830&ll=37.332256,-122.006307&lsp=9902&q=Tantau%20Reception%20Building&t=m'>10503 N.Tantau Ave</a>.  Alternatively, cars and taxis can drop off and pick up at the Visitor Center at <a href='https://maps.apple.com/?address=10600%20N%20Tantau%20Ave,%20Cupertino,%20CA%2095014,%20United%20States&auid=7169775161826646827&ll=37.332823,-122.005320&lsp=9902&q=Apple%20Park%20Visitor%20Center&t=m'>10600 N. Tantau Ave</a>."
+      },
+      {
+        "key": "parking-information",
+        "label": "Parking Information",
+        "value": "Parking is provided at the Apple Park Visitor Center at <a href='https://maps.apple.com/?address=10600%20N%20Tantau%20Ave,%20Cupertino,%20CA%2095014,%20United%20States&auid=7169775161826646827&ll=37.332823,-122.005320&lsp=9902&q=Apple%20Park%20Visitor%20Center&t=m'>10600 N. Tantau Ave</a> across the street from the Tantau Reception Center."
+      },
+      {
+        "key": "checking-in",
+        "label": "Check In",
+        "value": "When you arrive you can check in at the Tantau Reception Center at <a href='https://maps.apple.com/?address=Apple%20Inc.,%2010503%20N%20Tantau%20Ave,%20Cupertino,%20CA%2095014,%20United%20States&auid=12780768278350142830&ll=37.332256,-122.006307&lsp=9902&q=Tantau%20Reception%20Building&t=m'>10503 N.Tantau Ave</a> or through the Transit Center. Please have your Apple badge visible and be prepared to present this email or wallet pass. This number is specific to you and cannot be used to check in other employees or guests."
+      },
+      {
+        "key": "SecuritySec",
+        "label": "Security",
+        "value": "Remember taking pictures is strictly prohibited on property"
+      }
+    ],
+    "headerFields": [
+      {
+        "key": "conf-num",
+        "label": " CONFIRMATION",
+        "value": "TEST"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "BUILDINGLBL",
+        "label": "BUILDING",
+        "textAlignment": "PKTextAlignmentLeft",
+        "value": "Apple Park 1"
+      },
+      {
+        "key": "DateKey",
+        "label": "DATE",
+        "textAlignment": "PKTextAlignmentRight",
+        "value": "Forever"
+      }
+    ]
+  },
+  "foregroundColor": "rgb(0, 0, 0)",
+  "formatVersion": 1,
+  "labelColor": "rgb(140, 140, 140)",
+  "locations": [
+    {
+      "latitude": 37.336846,
+      "longitude": -122.009024,
+      "relevantText": "This is a fake Wallet Test pass that's relevant to Apple Park 8"
+    }
+  ],
+  "logoText ": " ",
+  "organizationName": "Apple Inc.",
+  "passTypeIdentifier": "pass.com.apple.test1",
+  "serialNumber": "1067997",
+  "teamIdentifier": "K9942Z534D",
+}

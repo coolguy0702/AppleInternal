@@ -1,0 +1,97 @@
+{
+    "formatVersion": 1,
+    "passTypeIdentifier": "paymentpass.com.apple.dev1",
+    "teamIdentifier": "58Y959KPTE",
+    "primaryAccountIdentifier": "FAPL8BALL_0001b822a187572b4e9bb30af313c9a00bf4",
+    "associatedStoreIdentifiers": [
+        1114430602
+    ],
+    "associatedApplicationIdentifiers": [
+        "GSP3TRFDJD.com.apple.syndrome",
+        "5AM47K89XY.com.apple.PassAche",
+        "R28E7Z5XDS.com.octopuscards.octopus"
+    ],
+    "messagePushTopic": "com.gemalto.mfs.cardnotificationservice.lab",
+    "messageServiceURL": "https://appletransit.qa1.cbp-qa.gemalto.com/cns",
+    "appLaunchURL": "octopus://",
+    "serialNumber": "nc.qa.qa2nc_5a86168177e34135b5ab7eed10087a79",
+    "backgroundColor": "rgb(0,0,0)",
+    "foregroundColor": "rgb(1,1,1)",
+    "labelColor": "rgb(2,2,2)",
+    "organizationName": "Octopus Cards Limited",
+    "description": "Smart Octopus",
+    "supportsDefaultCardSelection": true,
+    "isPaymentOptionSelectable": true,
+    "supportsSerialNumberBasedProvisioning": true,
+    "requiresTransferSerialNumberBasedProvisioning": true,
+    "issuerCountryCode": "HK",
+    "supportsDPANNotifications": 0,
+    "supportsFPANNotifications": 0,
+    "paymentCard": {
+        "secondaryFields": [
+            {
+                "key": "card",
+                "label": "CARD",
+                "value": "5862"
+            }
+        ],
+        "auxiliaryFields": [],
+        "backFields": [
+            {
+                "key": "notice",
+                "label": "INFORMATION",
+                "value": "Octopus Cards Limited"
+            },
+            {
+                "key": "contactWebsite",
+                "label": "WEBSITE",
+                "value": "https://www.octopus.com.hk/en/consumer/mobile-payment/smart-octopus/about/index.html"
+            },
+            {
+                "key": "contactNumber",
+                "label": "PHONE",
+                "value": "+852 2266 2222"
+            },
+            {
+                "key": "contactName",
+                "label": "NAME",
+                "value": "Octopus Cards Limited"
+            }
+        ]
+    },
+    "paymentApplications": [
+        {
+            "secureElementIdentifier": "041E4BDB095180019031032158949683EAA6064EE544BBF8",
+            "applicationIdentifier": "A000000680010001000000010004",
+            "DPANIdentifier": "DAPL8BALL_0001a625ff04b0c84bfc96efb896e639e136",
+            "DPANSuffix": "5996",
+            "state": 1,
+            "supportsContactlessPayment": 1,
+            "supportsInAppPayment": 0,
+            "paymentNetworkIdentifier": 117,
+            "sanitizedDPAN": "99102017(7)",
+            "paymentType": "Transit",
+            "applicationDescription": "Octopus",
+            "defaultPaymentApplication": true,
+            "supportsOptionalAuthentication": 1,
+            "appletDataFormat": "transit.apple.octopus",
+            "appletCurrencyCode": "HKD",
+            "automaticSelectionCriteria": [
+                {
+                    "type": "octopus",
+                    "supportsExpress": true
+                }
+            ],
+            "supportedTransitNetworkIdentifiers": []
+        }
+    ],
+    "sequenceCounter": 10,
+    "auxiliaryPaymentApplications": [],
+    "isCobranded": false,
+    "contactName": "Octopus Cards Limited",
+    "hasAssociatedPeerPaymentAccount": false,
+    "liveRenderedBackground": false,
+    "supportsCategoryVisualization": false,
+    "cardType": "Transit",
+    "legalNotice": "SVF0001"
+}

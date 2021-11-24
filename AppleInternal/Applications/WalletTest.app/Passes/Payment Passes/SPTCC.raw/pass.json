@@ -1,0 +1,100 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "paymentpass.com.apple.cn.dev1",
+  "teamIdentifier": "Apple Inc.",
+  "primaryAccountIdentifier": "FAPLOR1516743037FD0101084C142000B2D0AB95651FD1B7CF",
+  "associatedStoreIdentifiers": [
+    910068158
+  ],
+  "associatedApplicationIdentifiers": [
+    "GSP3TRFDJD.com.apple.syndrome",
+    "5AM47K89XY.com.apple.PassAche",
+    "R6B677B73Y.com.jiuyu.sptcc.phonegap"
+  ],
+  "serialNumber": "nc.qa.qa5nc_e4318e6598c142568a6a83f3a2cafd1d",
+  "backgroundColor": "rgb(195,195,195)",
+  "foregroundColor": "rgb(255,0,0)",
+  "labelColor": "rgb(63,72,204)",
+  "organizationName": "上海公共交通卡股份有限公司",
+  "description": "上海公共交通卡",
+  "supportsDefaultCardSelection": true,
+  "isPaymentOptionSelectable": false,
+  "supportsSerialNumberBasedProvisioning": true,
+  "requiresTransferSerialNumberBasedProvisioning": true,
+  "issuerCountryCode": "CN",
+  "supportsDPANNotifications": 0,
+  "supportsFPANNotifications": 0,
+  "paymentCard": {
+    "secondaryFields": [
+      {
+        "key": "card",
+        "label": "CARD",
+        "value": "0030"
+      }
+    ],
+    "auxiliaryFields": [],
+    "backFields": [
+      {
+        "key": "notice",
+        "label": "INFORMATION",
+        "value": "上海公共交通卡股份有限公司"
+      },
+      {
+        "key": "contactWebsite",
+        "label": "WEBSITE",
+        "value": "http://www.sptcc.com"
+      },
+      {
+        "key": "contactNumber",
+        "label": "PHONE",
+        "value": "12319"
+      },
+      {
+        "key": "contactName",
+        "label": "NAME",
+        "value": "上海公共交通卡股份有限公司"
+      },
+      {
+        "key": "privacyPolicyURL",
+        "label": "POLICY URL",
+        "value": "https://online.sptcc.com:8443/handapp_zx/user_privacy.html"
+      },
+      {
+        "key": "termsAndConditionsURL",
+        "label": "TERMS URL",
+        "value": "https://online.sptcc.com:8443/handapp_zx/user_agreement.html"
+      }
+    ]
+  },
+  "paymentApplications": [
+    {
+      "secureElementIdentifier": "0428310BBB4180017166004496941920A9575A6EEF91E520",
+      "applicationIdentifier": "A0000000038698070100000011",
+      "DPANIdentifier": "DAPLORFD0102083acc73953a0342fe8771977df71d8b7bB2D0AB95651FD1B7",
+      "DPANSuffix": "0030",
+      "state": 1,
+      "supportsContactlessPayment": 1,
+      "supportsInAppPayment": 0,
+      "paymentNetworkIdentifier": 109,
+      "sanitizedDPAN": "*6198010030",
+      "paymentType": "Transit",
+      "applicationDescription": "SPTCC",
+      "defaultPaymentApplication": true,
+      "supportsOptionalAuthentication": 1,
+      "appletDataFormat": "transit.apple.sptcc",
+      "supportedExpressModes": [
+        "type_a.generic"
+      ],
+      "appletCurrencyCode": "CNY",
+      "supportedTransitNetworkIdentifiers": [
+        "transit.apple.sptcc"
+      ]
+    }
+  ],
+  "sequenceCounter": 3,
+  "auxiliaryPaymentApplications": [],
+  "isCobranded": false,
+  "contactName": "上海公共交通卡股份有限公司",
+  "hasAssociatedPeerPaymentAccount": false,
+  "liveRenderedBackground": false
+}

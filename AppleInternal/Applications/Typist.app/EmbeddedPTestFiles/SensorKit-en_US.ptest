@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>TypeAndVerify-GestureKeys-en_US</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestSensorKit</string>
+                        <key>testFunction</key>
+                        <string>typeWordByWordWithSensorKitMetrics</string>
+                        <key>autoCorrection</key>
+                        <false/>
+                        <key>typeInterval</key>
+                        <real>0.12</real>
+                        <key>autoCapitalization</key>
+                        <true/>
+                        <key>checkSpelling</key>
+                        <true/>
+                        <key>periodShortcut</key>
+                        <true/>
+                        <key>capsLock</key>
+                        <true/>
+                        <key>predictive</key>
+                        <true/>
+                        <key>smartPunctuation</key>
+                        <false/>
+                        <key>keyPaddle</key>
+                        <true/>
+                        <key>smallDisplay</key>
+                        <true/>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>inputArgumentsArray</key>
+                        <array>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>You </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>and </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>me </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>are </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>not </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>a </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>dog </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>or </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>a </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>cat </string>
+                        	</dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>nor </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>a </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>bug </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>nor </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>a </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>bag. </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>We </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>are </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>big, </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>not </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>red, </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>and </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>not </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>sad </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>nor </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>on </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>top </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>of </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>the </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>log.</string>
+                            </dict>
+                        </array>
+                        <key>expectedText</key>
+                        <string>You and me are not a dog or a cat nor a bug nor a bag. We are big, not red, and not sad nor on top of the log.</string>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Short Words</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>inputArgumentsArray</key>
+                        <array>
+							<dict>
+								<key>inputText</key>
+								<string>Simultaneously </string>
+							</dict>
+							<dict>
+								<key>inputText</key>
+								<string>relinquishing </string>
+							</dict>
+							<dict>
+								<key>inputText</key>
+								<string>selective </string>
+							</dict>
+							<dict>
+								<key>inputText</key>
+								<string>architectural </string>
+							</dict>
+							<dict>
+								<key>inputText</key>
+								<string>archetypes </string>
+							</dict>
+							<dict>
+								<key>inputText</key>
+								<string>catastrophically </string>
+							</dict>
+							<dict>
+								<key>inputText</key>
+								<string>congested </string>
+							</dict>
+							<dict>
+								<key>inputText</key>
+								<string>countless </string>
+							</dict>
+							<dict>
+								<key>inputText</key>
+								<string>incongruous </string>
+							</dict>
+							<dict>
+								<key>inputText</key>
+								<string>skyscrapers. </string>
+							</dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>Obfuscating </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>unintelligible </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>branches </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>collectively </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>shrivels </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>numerous </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>stratified </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>sedimentary </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>breakages </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>throughout </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>extensively </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>strenuous </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>crevices  </string>
+                            </dict>
+                        </array>
+                        <key>expectedText</key>
+                        <string>Simultaneously relinquishing selective architectural archetypes catastrophically congested countless incongruous skyscrapers. Obfuscating unintelligible branches collectively shrivels numerous stratified sedimentary breakages throughout extensively strenuous crevices. </string>
+                        <key>testCaseID</key>
+                        <string>10000002</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words, Consecutive space</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                    	<key>inputArgumentsArray</key>
+                        <array>
+                        	<dict>
+								<key>inputText</key>
+								<string>Hellooo⌫⌫⌫</string>
+								<key>completionCandidate</key>
+								<string>Hello</string>
+							</dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>there, </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>my </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>namr</string>
+                                <key>completionCandidate</key>
+                                <string>name</string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>is </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>not </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>what </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>you </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>thi⌫⌫⌫said </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>it </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>would </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>be. </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>My </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>name </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>is </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>actually </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>not </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>Bob. </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>My </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>true </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>name </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>is </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>Harry </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>Potter.</string>
+                            </dict>
+						</array>
+                        <key>expectedText</key>
+                        <string>Hello there, my name is not what you said it would be. My name is actually not Bob. My true name is Harry Potter.</string>
+                        <key>testCaseID</key>
+                        <string>10000003</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Total Taps</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>inputArgumentsArray</key>
+                        <array>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>The⌫⌫⌫A quick brown ⌫⌫⌫⌫⌫lue fox jumped over th⌫⌫my fence.⌫! Then, I will be appending several more words⌫⌫⌫⌫onky words in order to fill up the rest of this test case.</string>
+                        	</dict>
+                        </array>
+                        <key>expectedText</key>
+                        <string>A quick blue fox jumped over my fence! Then, I will be appending several more wonky words in order to fill up the rest of this test case.</string>
+                        <key>testCaseID</key>
+                        <string>10000004</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Many Deletes</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>inputArgumentsArray</key>
+                        <array>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Cool</string>
+                        		<key>completionCandidate</key>
+                        		<string>😎</string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>hello </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>cool</string>
+                        		<key>completionCandidate</key>
+                        		<string>😎</string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string> hello </string>
+                        	</dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>cool</string>
+                                <key>completionCandidate</key>
+                                <string>😎</string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string> hello, I am filling up the rest of this test case with more words to reach a lower limit of 20.</string>
+                            </dict>
+                        </array>
+                        <key>expectedText</key>
+                        <string>😎hello 😎 hello 😎 hello, I am filling up the rest of this test case with more words to reach a lower limit of 20.</string>
+                        <key>testCaseID</key>
+                        <string>10000005</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Emojis</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                    	<key>autoCorrection</key>
+                    	<true/>
+                        <key>inputArgumentsArray</key>
+                        <array>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Thr </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>queck </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>browl </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>fux </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>jumpef </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>ovet </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>the </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>fenve </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>in </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>new </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>York </string>
+                        	</dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>I </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>am </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>filling </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>up </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>the </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>rest </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>of </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>this </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>case </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>with </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>more </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>words </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>to </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>reach </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>a </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>lower </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>limit </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>of </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>20. </string>
+                            </dict>
+                        </array>
+                        <key>expectedText</key>
+                        <string>The quick brown fox jumped over the fence in New York I am filling up the rest of this test case with more words to reach a lower limit of 20.</string>
+                        <key>testCaseID</key>
+                        <string>10000006</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Autocorrections, Shift</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                    	<key>autoCorrection</key>
+                    	<false/>
+                        <key>inputArgumentsArray</key>
+                        <array>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>In this sentence, I will type exactly twenty words because that is the least number of words I must type.</string>
+                        	</dict>
+                        </array>
+                        <key>expectedText</key>
+                        <string>In this sentence, I will type exactly twenty words because that is the least number of words I must type.</string>
+                        <key>testCaseID</key>
+                        <string>10000007</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Few words</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>inputArgumentsArray</key>
+                        <array>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Apple </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Inc.</string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string> is </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>an </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>American </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>multinational </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>technology </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>company </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>headquartered </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>in </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Cupertino, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>California, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>that </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>designs, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>develops, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>and </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>sells </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>consumer </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>electronics, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>computer  </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>software, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>and </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>online </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>services. </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>It </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>is </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>considered </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>one </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>of </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>the </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Big </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Four </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>tech </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>companies </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>along </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>with </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Amazon, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Google, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>and </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Facebook. </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>The </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>company's </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>hardware </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>products </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>include </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>the </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>iPhone </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>smartphone, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>the </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>iPad </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>tablet </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>computer, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>the </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Mac </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>personal </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>computer, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>the </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>iPod </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>portable </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>media </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>player, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>the </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Apple </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Watch </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>smartwatch, </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>the </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Apple </string>
+                        	</dict>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>TV </string>
+                        	</dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>digital </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>media </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>player, </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>the </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>AirPods </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>wireless </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>earbuds </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>and </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>the </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>HomePod </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>smart </string>
+                            </dict>
+                            <dict>
+                                <key>inputText</key>
+                                <string>speaker.</string>
+                            </dict>
+                        </array>
+                        <key>expectedText</key>
+                        <string>Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services. It is considered one of the Big Four tech companies along with Amazon, Google, and Facebook. The company's hardware products include the iPhone smartphone, the iPad tablet computer, the Mac personal computer, the iPod portable media player, the Apple Watch smartwatch, the Apple TV digital media player, the AirPods wireless earbuds and the HomePod smart speaker.</string>
+                        <key>testCaseID</key>
+                        <string>10000008</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Many words</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                    	<key>typeInterval</key>
+                    	<real>1.2</real>
+                        <key>inputArgumentsArray</key>
+                        <array>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Simultaneously relinquishing selective architectural archetypes catastrophically congested countless incongruous skyscrapers. Obfuscating unintelligible branches collectively shrivels numerous stratified sedimentary breakages throughout extensively strenuous crevices</string>
+                        	</dict>
+                        </array>
+                        <key>expectedText</key>
+                        <string>Simultaneously relinquishing selective architectural archetypes catastrophically congested countless incongruous skyscrapers. Obfuscating unintelligible branches collectively shrivels numerous stratified sedimentary breakages throughout extensively strenuous crevices</string>
+                        <key>testCaseID</key>
+                        <string>10000009</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Positional Metrics - Slow</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                    	<key>typeInterval</key>
+                    	<real>0.1</real>
+                        <key>inputArgumentsArray</key>
+                        <array>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Simultaneously relinquishing selective architectural archetypes catastrophically congested countless incongruous skyscrapers. Obfuscating unintelligible branches collectively shrivels numerous stratified sedimentary breakages throughout extensively strenuous crevices</string>
+                        	</dict>
+                        </array>
+                        <key>expectedText</key>
+                        <string>Simultaneously relinquishing selective architectural archetypes catastrophically congested countless incongruous skyscrapers. Obfuscating unintelligible branches collectively shrivels numerous stratified sedimentary breakages throughout extensively strenuous crevices</string>
+                        <key>testCaseID</key>
+                        <string>10000010</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Positional Metrics - Quick</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                    	<key>typeInterval</key>
+                    	<real>0.12</real>
+                        <key>inputArgumentsArray</key>
+                        <array>
+                        	<dict>
+                        		<key>inputText</key>
+                        		<string>Hey there @Bob12, how have you been? My email is username@email.com, so let me know when you’re back in town and we can go grab a cup of coffee to catch up.</string>
+                        	</dict>
+                        </array>
+                        <key>expectedText</key>
+                        <string>Hey there @Bob12, how have you been? My email is username@email.com, so let me know when you’re back in town and we can go grab a cup of coffee to catch up.</string>
+                        <key>testCaseID</key>
+                        <string>10000011</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Plane Switch</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>

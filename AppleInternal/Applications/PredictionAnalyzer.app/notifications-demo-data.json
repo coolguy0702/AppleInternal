@@ -1,0 +1,1804 @@
+{
+    "appCategoryDict": {
+        "CesarKuriyama.OneSecondEveryday": "Photo & Video",
+        "com.aa.AmericanAirlines": "Travel",
+        "com.acolorstory.acolorstory": "Photo & Video",
+        "com.adobe.lrmobilephone": "Photo & Video",
+        "com.airbnb.app": "Travel",
+        "com.alltrails.AllTrails": "Health & Fitness",
+        "com.amazon.Amazon": "Shopping",
+        "com.apple.AppStore": "Other",
+        "com.apple.commute.OmniBus": "Other",
+        "com.apple.facetime": "Social Networking",
+        "com.apple.findmy": "System Blockable Applications",
+        "com.apple.Fitness": "System Blockable Applications",
+        "com.apple.internal.AGX-Reporter": "Other",
+        "com.apple.ist.AppleConnect": "Other",
+        "com.apple.ist.OrderingApp": "Other",
+        "com.apple.Maps": "Reading & Reference",
+        "com.apple.MobileAddressBook": "Productivity",
+        "com.apple.mobilecal": "Productivity",
+        "com.apple.mobilenotes": "Productivity",
+        "com.apple.mobilephone": "System Unblockable Applications",
+        "com.apple.mobileslideshow": "Creativity",
+        "com.apple.MobileSMS": "Social Networking",
+        "com.apple.MobileStore": "Other",
+        "com.apple.mobiletimer": "System Blockable Applications",
+        "com.apple.news": "Reading & Reference",
+        "com.apple.Passbook": "System Blockable Applications",
+        "com.apple.podcasts": "Entertainment",
+        "com.apple.Preferences": "System Unblockable Applications",
+        "com.apple.reminders": "Productivity",
+        "com.apple.shortcuts": "Other",
+        "com.apple.siri.SiriDebug": "Other",
+        "com.apple.store.Jolly": "Shopping",
+        "com.apple.TapToRadar": "System Unblockable Applications",
+        "com.apple.tdg.Now": "Other",
+        "com.apple.tips": "Other",
+        "com.apple.vetap.thegobbler": "Other",
+        "com.apple.weather": "Reading & Reference",
+        "com.bankofamerica.BofA": "Finance",
+        "com.burbn.boomerang": "Photo & Video",
+        "com.burbn.instagram": "Photo & Video",
+        "com.cvs.cvspharmacy": "Shopping",
+        "com.duosecurity.DuoMobile": "Business",
+        "com.ebates.EbatesMobile": "Shopping",
+        "com.ebay.iphone": "Shopping",
+        "com.facebook.Facebook": "Social Networking",
+        "com.facebook.Messenger": "Social Networking",
+        "com.fivestars.FiveStars-Consumer": "Shopping",
+        "com.google.Maps": "Navigation",
+        "com.google.photos": "Photo & Video",
+        "com.h8games.falldown": "Games",
+        "com.halfbrick.FruitNinjaLite": "Games",
+        "com.hopper.flights": "Travel",
+        "com.jetblue.jetBlueiPhone": "Travel",
+        "com.limebike": "Travel",
+        "com.meamobile.PhotoPrintsNow": "Photo & Video",
+        "com.mixbook.frost": "Shopping",
+        "com.myfitnesspal.mfp": "Health & Fitness",
+        "com.netflix.Netflix": "Entertainment",
+        "com.postmates.getitnow": "Food & Drink",
+        "com.spotify.client": "Music",
+        "com.tinyspeck.chatlyio": "Business",
+        "com.toyopagroup.picaboo": "Photo & Video",
+        "com.ubercab.UberClient": "Travel",
+        "com.ubercab.UberEats": "Food & Drink",
+        "com.verizon.fios.tv": "Entertainment",
+        "com.waze.iphone": "Navigation",
+        "com.zimride.instant": "Travel",
+        "net.kortina.labs.Venmo": "Finance",
+        "swc": "Health & Fitness"
+    },
+    "appNameDict": {
+        "CesarKuriyama.OneSecondEveryday": "1SE",
+        "com.aa.AmericanAirlines": "American",
+        "com.acolorstory.acolorstory": "ColorStory",
+        "com.adobe.lrmobilephone": "Lightroom",
+        "com.airbnb.app": "Airbnb",
+        "com.alltrails.AllTrails": "AllTrails",
+        "com.amazon.Amazon": "Amazon",
+        "com.apple.AppStore": "App Store",
+        "com.apple.commute.OmniBus": "Commute",
+        "com.apple.facetime": "FaceTime",
+        "com.apple.findmy": "Find My",
+        "com.apple.Fitness": "Activity",
+        "com.apple.internal.AGX-Reporter": "AGX Reporter",
+        "com.apple.ist.AppleConnect": "Connect",
+        "com.apple.ist.OrderingApp": "Caff\u00e8 Macs",
+        "com.apple.Maps": "Maps",
+        "com.apple.MobileAddressBook": "Contacts",
+        "com.apple.mobilecal": "Calendar",
+        "com.apple.mobilenotes": "Notes",
+        "com.apple.mobilephone": "Phone",
+        "com.apple.mobileslideshow": "Photos",
+        "com.apple.MobileSMS": "Messages",
+        "com.apple.MobileStore": "iTunes Store",
+        "com.apple.mobiletimer": "Clock",
+        "com.apple.news": "News",
+        "com.apple.Passbook": "Wallet",
+        "com.apple.podcasts": "Podcasts",
+        "com.apple.Preferences": "Settings",
+        "com.apple.reminders": "Reminders",
+        "com.apple.shortcuts": "Shortcuts",
+        "com.apple.siri.SiriDebug": "Siri Debug",
+        "com.apple.store.Jolly": "Apple Store",
+        "com.apple.TapToRadar": "Tap-to-Radar",
+        "com.apple.tdg.Now": "Now",
+        "com.apple.tips": "Tips",
+        "com.apple.vetap.thegobbler": "Glimmer",
+        "com.apple.weather": "Weather",
+        "com.bankofamerica.BofA": "BofA",
+        "com.burbn.boomerang": "Boomerang",
+        "com.burbn.instagram": "Instagram",
+        "com.cvs.cvspharmacy": "CVS",
+        "com.duosecurity.DuoMobile": "Duo Mobile",
+        "com.ebates.EbatesMobile": "Rakuten Ebates",
+        "com.ebay.iphone": "eBay",
+        "com.facebook.Facebook": "Facebook",
+        "com.facebook.Messenger": "Messenger",
+        "com.fivestars.FiveStars-Consumer": "Fivestars",
+        "com.google.Maps": "Google Maps",
+        "com.google.photos": "Google Photos",
+        "com.h8games.falldown": "Helix Jump",
+        "com.halfbrick.FruitNinjaLite": "Fruit Ninja",
+        "com.hopper.flights": "Hopper",
+        "com.jetblue.jetBlueiPhone": "JetBlue",
+        "com.limebike": "Lime",
+        "com.meamobile.PhotoPrintsNow": "Photo Prints",
+        "com.mixbook.frost": "Mosaic",
+        "com.myfitnesspal.mfp": "MyFitnessPal",
+        "com.netflix.Netflix": "Netflix",
+        "com.postmates.getitnow": "Postmates",
+        "com.spotify.client": "Spotify",
+        "com.tinyspeck.chatlyio": "Slack",
+        "com.toyopagroup.picaboo": "Snapchat",
+        "com.ubercab.UberClient": "Uber",
+        "com.ubercab.UberEats": "Uber Eats",
+        "com.verizon.fios.tv": "Fios TV",
+        "com.waze.iphone": "Waze",
+        "com.zimride.instant": "Lyft",
+        "net.kortina.labs.Venmo": "Venmo",
+        "swc": "Sweat\u0441oin"
+    },
+    "apps": [
+        "com.apple.Passbook",
+        "com.alltrails.AllTrails",
+        "com.facebook.Messenger",
+        "net.kortina.labs.Venmo",
+        "com.acolorstory.acolorstory",
+        "com.apple.MobileStore",
+        "com.toyopagroup.picaboo",
+        "com.apple.tips",
+        "com.apple.vetap.thegobbler",
+        "com.google.Maps",
+        "com.ubercab.UberClient",
+        "com.verizon.fios.tv",
+        "com.waze.iphone",
+        "com.fivestars.FiveStars-Consumer",
+        "com.burbn.instagram",
+        "com.apple.Fitness",
+        "com.adobe.lrmobilephone",
+        "CesarKuriyama.OneSecondEveryday",
+        "com.apple.TapToRadar",
+        "com.halfbrick.FruitNinjaLite",
+        "com.apple.ist.AppleConnect",
+        "com.netflix.Netflix",
+        "com.apple.mobileslideshow",
+        "com.cvs.cvspharmacy",
+        "com.postmates.getitnow",
+        "com.apple.news",
+        "com.apple.siri.SiriDebug",
+        "swc",
+        "com.apple.Maps",
+        "com.jetblue.jetBlueiPhone",
+        "com.apple.ist.OrderingApp",
+        "com.apple.internal.AGX-Reporter",
+        "com.apple.MobileSMS",
+        "com.apple.mobilecal",
+        "com.apple.podcasts",
+        "com.ebates.EbatesMobile",
+        "com.limebike",
+        "com.airbnb.app",
+        "com.apple.AppStore",
+        "com.amazon.Amazon",
+        "com.apple.weather",
+        "com.bankofamerica.BofA",
+        "com.apple.facetime",
+        "com.aa.AmericanAirlines",
+        "com.tinyspeck.chatlyio",
+        "com.mixbook.frost",
+        "com.apple.mobilenotes",
+        "com.apple.commute.OmniBus",
+        "com.apple.shortcuts",
+        "com.ubercab.UberEats",
+        "com.apple.findmy",
+        "com.h8games.falldown",
+        "com.apple.Preferences",
+        "com.apple.mobilephone",
+        "com.apple.reminders",
+        "com.apple.mobiletimer",
+        "com.apple.MobileAddressBook",
+        "com.duosecurity.DuoMobile",
+        "com.google.photos",
+        "com.apple.tdg.Now",
+        "com.myfitnesspal.mfp",
+        "com.zimride.instant",
+        "com.meamobile.PhotoPrintsNow",
+        "com.hopper.flights",
+        "com.burbn.boomerang",
+        "com.ebay.iphone",
+        "com.spotify.client",
+        "com.apple.store.Jolly",
+        "com.facebook.Facebook"
+    ],
+    "firstModeSessionDate": 1570028731,
+    "launchCounts": {
+        "com.alltrails.AllTrails": {
+            "Awaking": 4,
+            "Default": 37,
+            "Driving": 3,
+            "Exercising": 42,
+            "Home": 19,
+            "Working": 18
+        },
+        "com.apple.AppShack": {
+            "Awaking": 1,
+            "Default": 1,
+            "Working": 5
+        },
+        "com.apple.camera": {
+            "Awaking": 12,
+            "Default": 104,
+            "Driving": 28,
+            "Exercising": 18,
+            "Home": 96,
+            "Travel": 1,
+            "Working": 134
+        },
+        "com.apple.Maps": {
+            "Awaking": 2,
+            "Default": 34,
+            "Driving": 102,
+            "Home": 11,
+            "InTransit": 4,
+            "Working": 9
+        },
+        "com.apple.mobilecal": {
+            "Awaking": 9,
+            "Default": 13,
+            "Driving": 3,
+            "Exercising": 1,
+            "Home": 25,
+            "InTransit": 1,
+            "Working": 131
+        },
+        "com.apple.mobilemail": {
+            "Awaking": 50,
+            "Default": 53,
+            "Driving": 28,
+            "Exercising": 11,
+            "Home": 148,
+            "Working": 242
+        },
+        "com.apple.mobilesafari": {
+            "Awaking": 32,
+            "Default": 77,
+            "Driving": 24,
+            "Exercising": 3,
+            "Home": 200,
+            "InTransit": 1,
+            "Working": 254
+        },
+        "com.apple.mobileslideshow": {
+            "Awaking": 5,
+            "Default": 22,
+            "Driving": 28,
+            "Home": 57,
+            "Working": 58
+        },
+        "com.apple.MobileSMS": {
+            "Awaking": 70,
+            "Default": 347,
+            "Driving": 209,
+            "Exercising": 11,
+            "Home": 456,
+            "InTransit": 11,
+            "Travel": 3,
+            "Working": 1014
+        },
+        "com.apple.mobiletimer": {
+            "Awaking": 18,
+            "Default": 6,
+            "Home": 24,
+            "Working": 13
+        },
+        "com.apple.Preferences": {
+            "Awaking": 1,
+            "Default": 5,
+            "Driving": 2,
+            "Home": 16,
+            "Working": 19
+        },
+        "com.apple.reminders": {
+            "Awaking": 5,
+            "Default": 1,
+            "Driving": 4,
+            "Exercising": 2,
+            "Home": 13,
+            "Travel": 2,
+            "Working": 7
+        },
+        "com.apple.weather": {
+            "Awaking": 1,
+            "Default": 1,
+            "InTransit": 1,
+            "Working": 4
+        },
+        "com.audible.iphone": {
+            "Awaking": 15,
+            "Default": 23,
+            "Driving": 287,
+            "Home": 157,
+            "Working": 135
+        },
+        "com.burbn.instagram": {
+            "Awaking": 45,
+            "Default": 93,
+            "Driving": 27,
+            "Home": 211,
+            "InTransit": 4,
+            "Working": 237
+        },
+        "com.facebook.Facebook": {
+            "Awaking": 17,
+            "Default": 32,
+            "Driving": 10,
+            "Home": 67,
+            "InTransit": 4,
+            "Travel": 3,
+            "Working": 55
+        },
+        "com.goodreads.Goodreads": {
+            "Awaking": 3,
+            "Default": 1,
+            "Home": 47,
+            "Working": 8
+        },
+        "com.google.chrome.ios": {
+            "Awaking": 2,
+            "Default": 5,
+            "Driving": 2,
+            "Home": 25,
+            "InTransit": 2,
+            "Working": 29
+        },
+        "com.google.Gmail": {
+            "Awaking": 39,
+            "Default": 157,
+            "Driving": 77,
+            "Exercising": 6,
+            "Home": 252,
+            "InTransit": 8,
+            "Travel": 1,
+            "Working": 549
+        },
+        "com.google.Maps": {
+            "Awaking": 3,
+            "Default": 40,
+            "Driving": 148,
+            "Home": 12,
+            "Travel": 3,
+            "Working": 6
+        },
+        "com.google.photos": {
+            "Awaking": 1,
+            "Default": 1,
+            "Driving": 1,
+            "Home": 2
+        },
+        "com.spotify.client": {
+            "Awaking": 14,
+            "Default": 32,
+            "Driving": 283,
+            "Home": 38,
+            "Working": 77
+        },
+        "com.tinyspeck.chatlyio": {
+            "Awaking": 7,
+            "Default": 4,
+            "Driving": 5,
+            "Home": 26,
+            "Working": 119
+        },
+        "com.amazon.Amazon": {
+            "Default": 8,
+            "Driving": 3,
+            "Home": 25,
+            "Working": 12
+        },
+        "com.aparat.mixtiles": {
+            "Default": 3
+        },
+        "com.apple.AppStore": {
+            "Default": 1,
+            "Driving": 1,
+            "Working": 4
+        },
+        "com.apple.calculator": {
+            "Default": 14,
+            "Home": 3,
+            "Working": 20
+        },
+        "com.apple.DEC.PredictionAnalyzer": {
+            "Default": 8,
+            "Home": 1,
+            "Working": 7
+        },
+        "com.apple.facetime": {
+            "Default": 1
+        },
+        "com.apple.Health": {
+            "Default": 1,
+            "Driving": 1,
+            "Working": 10
+        },
+        "com.apple.ist.AppleDirectory": {
+            "Default": 5,
+            "Home": 1,
+            "Working": 15
+        },
+        "com.apple.mobilenotes": {
+            "Default": 4,
+            "Driving": 1,
+            "Home": 2,
+            "Working": 29
+        },
+        "com.apple.mobilephone": {
+            "Default": 20,
+            "Home": 12,
+            "Working": 35
+        },
+        "com.apple.stocks": {
+            "Default": 3,
+            "Driving": 5,
+            "Home": 1,
+            "Working": 18
+        },
+        "com.bankofamerica.BofA": {
+            "Default": 14,
+            "Driving": 9,
+            "Home": 20,
+            "Working": 27
+        },
+        "com.cbsvideo.app": {
+            "Default": 1,
+            "Home": 36
+        },
+        "com.ebay.iphone": {
+            "Default": 8,
+            "Driving": 10,
+            "Home": 6,
+            "Working": 5
+        },
+        "com.google.ios.youtube": {
+            "Default": 25,
+            "Driving": 3,
+            "Home": 19,
+            "Working": 7
+        },
+        "com.toyopagroup.picaboo": {
+            "Default": 2,
+            "Driving": 2,
+            "Home": 4,
+            "Working": 36
+        },
+        "com.ubercab.UberClient": {
+            "Default": 11,
+            "InTransit": 1,
+            "Working": 2
+        },
+        "com.wealthfront.Wealthfront": {
+            "Default": 1,
+            "Working": 2
+        },
+        "com.yelp.yelpiphone": {
+            "Default": 6,
+            "Driving": 9,
+            "Exercising": 2,
+            "Home": 15,
+            "Working": 11
+        },
+        "com.zimride.instant": {
+            "Default": 24,
+            "InTransit": 12
+        },
+        "net.kortina.labs.Venmo": {
+            "Default": 2,
+            "Driving": 1,
+            "Home": 1,
+            "Working": 7
+        },
+        "org.caltrain.riderapp": {
+            "Default": 5,
+            "Driving": 1,
+            "Working": 1
+        },
+        "com.apple.ist.OrderingApp": {
+            "Driving": 1,
+            "Home": 2,
+            "Working": 179
+        },
+        "com.apple.Music": {
+            "Driving": 1
+        },
+        "com.acolorstory.acolorstory": {
+            "Home": 12
+        },
+        "com.apple.findmy": {
+            "Home": 3,
+            "Working": 5
+        },
+        "com.apple.Home": {
+            "Home": 1
+        },
+        "com.apple.ist.AppleConnect": {
+            "Home": 1
+        },
+        "com.apple.store.Jolly": {
+            "Home": 1,
+            "Working": 5
+        },
+        "com.facebook.Messenger": {
+            "Home": 8,
+            "Working": 3
+        },
+        "com.hopper.flights": {
+            "Home": 1
+        },
+        "com.nbcuni.bravo.bravonow": {
+            "Home": 18
+        },
+        "com.nerdyoctopus.dots": {
+            "Home": 11
+        },
+        "com.teamblind.blind": {
+            "Home": 1
+        },
+        "com.waze.iphone": {
+            "Home": 3
+        },
+        "com.apple.Passbook": {
+            "Travel": 2,
+            "Working": 1
+        },
+        "com.apple.DocumentsApp": {
+            "Working": 2
+        },
+        "com.apple.iBooks": {
+            "Working": 1
+        },
+        "com.apple.MobileAddressBook": {
+            "Working": 5
+        },
+        "com.apple.news": {
+            "Working": 2
+        },
+        "com.apple.podcasts": {
+            "Working": 1
+        },
+        "com.apple.proactive.ProtoToday": {
+            "Working": 29
+        },
+        "com.apple.purplebuddy": {
+            "Working": 1
+        },
+        "com.apple.siri.SiriShortcuts": {
+            "Working": 16
+        },
+        "com.apple.suggestions.Selfportrait": {
+            "Working": 2
+        },
+        "com.apple.TapToRadar": {
+            "Working": 19
+        },
+        "com.apple.tdg.Now": {
+            "Working": 12
+        },
+        "com.apple.tv": {
+            "Working": 2
+        },
+        "com.empower-retirement.ios.Participant-Mobile": {
+            "Working": 4
+        },
+        "com.quip.Quip": {
+            "Working": 6
+        },
+        "com.ubercab.UberEats": {
+            "Working": 1
+        },
+        "swc": {
+            "Working": 2
+        }
+    },
+    "modeCounts": {
+        "Awaking": 23,
+        "Default": 114,
+        "Driving": 111,
+        "Exercising": 1,
+        "Home": 46,
+        "InTransit": 9,
+        "Travel": 2,
+        "Working": 39
+    },
+    "modeTime": {
+        "Awaking": 90232,
+        "Default": 358837,
+        "Driving": 100425,
+        "Exercising": 13090,
+        "Home": 1058337,
+        "InTransit": 5045,
+        "Travel": 7311,
+        "Working": 785611
+    },
+    "screenTime": {
+        "com.alltrails.AllTrails": {
+            "Awaking": 254,
+            "Default": 1154,
+            "Driving": 221,
+            "Exercising": 1117,
+            "Home": 394,
+            "Working": 751
+        },
+        "com.apple.AppShack": {
+            "Awaking": 5,
+            "Default": 6,
+            "Working": 180
+        },
+        "com.apple.camera": {
+            "Awaking": 96,
+            "Default": 1620,
+            "Driving": 216,
+            "Exercising": 440,
+            "Home": 2249,
+            "Travel": 2,
+            "Working": 368
+        },
+        "com.apple.Maps": {
+            "Awaking": 196,
+            "Default": 1017,
+            "Driving": 6472,
+            "Home": 908,
+            "InTransit": 224,
+            "Working": 148
+        },
+        "com.apple.mobilecal": {
+            "Awaking": 32,
+            "Default": 121,
+            "Driving": 7,
+            "Exercising": 3,
+            "Home": 137,
+            "InTransit": 6,
+            "Working": 1418
+        },
+        "com.apple.mobilemail": {
+            "Awaking": 912,
+            "Default": 816,
+            "Driving": 220,
+            "Exercising": 129,
+            "Home": 2180,
+            "Working": 3804
+        },
+        "com.apple.mobilesafari": {
+            "Awaking": 2202,
+            "Default": 4242,
+            "Driving": 691,
+            "Exercising": 30,
+            "Home": 13267,
+            "InTransit": 0,
+            "Working": 9463
+        },
+        "com.apple.mobileslideshow": {
+            "Awaking": 135,
+            "Default": 1584,
+            "Driving": 344,
+            "Home": 3833,
+            "Working": 2104
+        },
+        "com.apple.MobileSMS": {
+            "Awaking": 1261,
+            "Default": 6198,
+            "Driving": 3727,
+            "Exercising": 181,
+            "Home": 12071,
+            "InTransit": 266,
+            "Travel": 56,
+            "Working": 18006
+        },
+        "com.apple.mobiletimer": {
+            "Awaking": 183,
+            "Default": 163,
+            "Home": 220,
+            "Working": 153
+        },
+        "com.apple.Preferences": {
+            "Awaking": 4,
+            "Default": 46,
+            "Driving": 11,
+            "Home": 78,
+            "Working": 474
+        },
+        "com.apple.reminders": {
+            "Awaking": 15,
+            "Default": 4,
+            "Driving": 12,
+            "Exercising": 77,
+            "Home": 26,
+            "Travel": 32,
+            "Working": 19
+        },
+        "com.apple.weather": {
+            "Awaking": 1,
+            "Default": 1,
+            "InTransit": 0,
+            "Working": 7
+        },
+        "com.audible.iphone": {
+            "Awaking": 245,
+            "Default": 306,
+            "Driving": 805,
+            "Home": 3261,
+            "Working": 1473
+        },
+        "com.burbn.instagram": {
+            "Awaking": 10795,
+            "Default": 6710,
+            "Driving": 1048,
+            "Home": 25054,
+            "InTransit": 50,
+            "Working": 10889
+        },
+        "com.facebook.Facebook": {
+            "Awaking": 3773,
+            "Default": 5067,
+            "Driving": 409,
+            "Home": 14357,
+            "InTransit": 450,
+            "Travel": 27,
+            "Working": 1626
+        },
+        "com.goodreads.Goodreads": {
+            "Awaking": 34,
+            "Default": 53,
+            "Home": 2429,
+            "Working": 825
+        },
+        "com.google.chrome.ios": {
+            "Awaking": 166,
+            "Default": 316,
+            "Driving": 106,
+            "Home": 4046,
+            "InTransit": 48,
+            "Working": 933
+        },
+        "com.google.Gmail": {
+            "Awaking": 493,
+            "Default": 960,
+            "Driving": 461,
+            "Exercising": 43,
+            "Home": 2354,
+            "InTransit": 42,
+            "Travel": 14,
+            "Working": 3807
+        },
+        "com.google.Maps": {
+            "Awaking": 48,
+            "Default": 2092,
+            "Driving": 10903,
+            "Home": 988,
+            "Travel": 249,
+            "Working": 414
+        },
+        "com.google.photos": {
+            "Awaking": 13,
+            "Default": 6,
+            "Driving": 65,
+            "Home": 17664
+        },
+        "com.spotify.client": {
+            "Awaking": 382,
+            "Default": 908,
+            "Driving": 2725,
+            "Home": 1088,
+            "Working": 1039
+        },
+        "com.tinyspeck.chatlyio": {
+            "Awaking": 665,
+            "Default": 113,
+            "Driving": 219,
+            "Home": 844,
+            "Working": 2182
+        },
+        "com.amazon.Amazon": {
+            "Default": 854,
+            "Driving": 273,
+            "Home": 2463,
+            "Working": 1012
+        },
+        "com.aparat.mixtiles": {
+            "Default": 94
+        },
+        "com.apple.AppStore": {
+            "Default": 29,
+            "Driving": 5,
+            "Working": 9
+        },
+        "com.apple.calculator": {
+            "Default": 93,
+            "Home": 31,
+            "Working": 103
+        },
+        "com.apple.DEC.PredictionAnalyzer": {
+            "Default": 103,
+            "Home": 22,
+            "Working": 193
+        },
+        "com.apple.facetime": {
+            "Default": 1
+        },
+        "com.apple.Health": {
+            "Default": 0,
+            "Driving": 46,
+            "Working": 127
+        },
+        "com.apple.ist.AppleDirectory": {
+            "Default": 204,
+            "Home": 107,
+            "Working": 1002
+        },
+        "com.apple.mobilenotes": {
+            "Default": 102,
+            "Driving": 2,
+            "Home": 6,
+            "Working": 676
+        },
+        "com.apple.mobilephone": {
+            "Default": 271,
+            "Home": 1661,
+            "Working": 378
+        },
+        "com.apple.stocks": {
+            "Default": 16,
+            "Driving": 162,
+            "Home": 5,
+            "Working": 648
+        },
+        "com.bankofamerica.BofA": {
+            "Default": 413,
+            "Driving": 161,
+            "Home": 641,
+            "Working": 954
+        },
+        "com.cbsvideo.app": {
+            "Default": 20,
+            "Home": 7112
+        },
+        "com.ebay.iphone": {
+            "Default": 326,
+            "Driving": 454,
+            "Home": 482,
+            "Working": 318
+        },
+        "com.google.ios.youtube": {
+            "Default": 15498,
+            "Driving": 508,
+            "Home": 6195,
+            "Working": 1565
+        },
+        "com.toyopagroup.picaboo": {
+            "Default": 83,
+            "Driving": 35,
+            "Home": 881,
+            "Working": 1856
+        },
+        "com.ubercab.UberClient": {
+            "Default": 792,
+            "InTransit": 3,
+            "Working": 91
+        },
+        "com.wealthfront.Wealthfront": {
+            "Default": 1,
+            "Working": 190
+        },
+        "com.yelp.yelpiphone": {
+            "Default": 364,
+            "Driving": 184,
+            "Exercising": 59,
+            "Home": 1341,
+            "Working": 307
+        },
+        "com.zimride.instant": {
+            "Default": 1167,
+            "InTransit": 448
+        },
+        "net.kortina.labs.Venmo": {
+            "Default": 22,
+            "Driving": 90,
+            "Home": 28,
+            "Working": 196
+        },
+        "org.caltrain.riderapp": {
+            "Default": 316,
+            "Driving": 1,
+            "Working": 0
+        },
+        "com.apple.ist.OrderingApp": {
+            "Driving": 0,
+            "Home": 2,
+            "Working": 8683
+        },
+        "com.apple.Music": {
+            "Driving": 2
+        },
+        "com.acolorstory.acolorstory": {
+            "Home": 778
+        },
+        "com.apple.findmy": {
+            "Home": 216,
+            "Working": 40
+        },
+        "com.apple.Home": {
+            "Home": 1
+        },
+        "com.apple.ist.AppleConnect": {
+            "Home": 4
+        },
+        "com.apple.store.Jolly": {
+            "Home": 6,
+            "Working": 45
+        },
+        "com.facebook.Messenger": {
+            "Home": 121,
+            "Working": 38
+        },
+        "com.hopper.flights": {
+            "Home": 1
+        },
+        "com.nbcuni.bravo.bravonow": {
+            "Home": 9085
+        },
+        "com.nerdyoctopus.dots": {
+            "Home": 139
+        },
+        "com.teamblind.blind": {
+            "Home": 650
+        },
+        "com.waze.iphone": {
+            "Home": 60
+        },
+        "com.apple.Passbook": {
+            "Travel": 0,
+            "Working": 8
+        },
+        "com.apple.DocumentsApp": {
+            "Working": 35
+        },
+        "com.apple.iBooks": {
+            "Working": 9
+        },
+        "com.apple.MobileAddressBook": {
+            "Working": 156
+        },
+        "com.apple.news": {
+            "Working": 2
+        },
+        "com.apple.podcasts": {
+            "Working": 1
+        },
+        "com.apple.proactive.ProtoToday": {
+            "Working": 3488
+        },
+        "com.apple.purplebuddy": {
+            "Working": 9
+        },
+        "com.apple.siri.SiriShortcuts": {
+            "Working": 243
+        },
+        "com.apple.suggestions.Selfportrait": {
+            "Working": 57
+        },
+        "com.apple.TapToRadar": {
+            "Working": 1284
+        },
+        "com.apple.tdg.Now": {
+            "Working": 172
+        },
+        "com.apple.tv": {
+            "Working": 5
+        },
+        "com.empower-retirement.ios.Participant-Mobile": {
+            "Working": 76
+        },
+        "com.quip.Quip": {
+            "Working": 78
+        },
+        "com.ubercab.UberEats": {
+            "Working": 1
+        },
+        "swc": {
+            "Working": 139
+        }
+    },
+    "sinceDate": -62135769600,
+    "timespan": 2419228,
+    "updateDate": 1572477069.547665,
+    "notificationUsageByMode": {
+        "com.burbn.instagram": {
+            "Working": {
+                "Receive": 10,
+                "DefaultAction": 4,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 2025.25
+            },
+            "Home": {
+                "Receive": 14,
+                "DefaultAction": 3,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 16.0
+            },
+            "Default": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.reminders": {
+            "Working": {
+                "Receive": 10,
+                "DefaultAction": 21,
+                "Orb": 2,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 3,
+                "AverageSecondsToEngagement": 185338.83333333334,
+                "AverageSecondsToClear": 46359.5
+            },
+            "Home": {
+                "Receive": 14,
+                "DefaultAction": 13,
+                "Orb": 1,
+                "Clear": 1,
+                "Pulldown": 0,
+                "Dismiss": 1,
+                "AverageSecondsToEngagement": 88328.0,
+                "AverageSecondsToClear": 46153.0
+            },
+            "Default": {
+                "Receive": 3,
+                "DefaultAction": 15,
+                "Orb": 1,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 112471.86666666667,
+                "AverageSecondsToClear": 128744.0
+            },
+            "Exercising": {
+                "Receive": 0,
+                "DefaultAction": 2,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 155185.0
+            }
+        },
+        "com.apple.MobileSMS": {
+            "Working": {
+                "Receive": 994,
+                "DefaultAction": 194,
+                "Orb": 29,
+                "Clear": 17,
+                "Pulldown": 27,
+                "Dismiss": 40,
+                "AverageSecondsToEngagement": 225.90384615384616,
+                "AverageSecondsToClear": 4.275862068965517
+            },
+            "Home": {
+                "Receive": 438,
+                "DefaultAction": 92,
+                "Orb": 28,
+                "Clear": 17,
+                "Pulldown": 25,
+                "Dismiss": 20,
+                "AverageSecondsToEngagement": 510.5047619047619,
+                "AverageSecondsToClear": 4.8076923076923075
+            },
+            "Default": {
+                "Receive": 257,
+                "DefaultAction": 67,
+                "Orb": 8,
+                "Clear": 7,
+                "Pulldown": 8,
+                "Dismiss": 14,
+                "AverageSecondsToEngagement": 651.3802816901408,
+                "AverageSecondsToClear": 4.142857142857143
+            },
+            "Exercising": {
+                "Receive": 6,
+                "DefaultAction": 4,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 89.5
+            }
+        },
+        "com.apple.Passbook": {
+            "Working": {
+                "Receive": 66,
+                "DefaultAction": 3,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 5,
+                "AverageSecondsToEngagement": 3858.0
+            },
+            "Default": {
+                "Receive": 8,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Home": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.facebook.Facebook": {
+            "Working": {
+                "Receive": 11,
+                "DefaultAction": 5,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 1125.75
+            },
+            "Default": {
+                "Receive": 7,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 257.0
+            },
+            "Home": {
+                "Receive": 9,
+                "DefaultAction": 3,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 2,
+                "AverageSecondsToEngagement": 5136.0
+            }
+        },
+        "com.ebay.iphone": {
+            "Working": {
+                "Receive": 8,
+                "DefaultAction": 2,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 567.0
+            },
+            "Default": {
+                "Receive": 4,
+                "DefaultAction": 2,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 351.0
+            },
+            "Home": {
+                "Receive": 2,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.mobilecal": {
+            "Working": {
+                "Receive": 16,
+                "DefaultAction": 4,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 3,
+                "AverageSecondsToEngagement": 980.6666666666,
+                "AverageSecondsToClear": 325.128
+            },
+            "Home": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 3898.6666666666,
+                "AverageSecondsToClear": 148.8
+            },
+            "Default": {
+                "Receive": 1,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": -160130.0
+            }
+        },
+        "com.bankofamerica.BofA": {
+            "Home": {
+                "Receive": 6,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Default": {
+                "Receive": 3,
+                "DefaultAction": 2,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 6655.0
+            },
+            "Working": {
+                "Receive": 8,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 49654.0
+            }
+        },
+        "com.apple.ScreenTimeNotifications": {
+            "Home": {
+                "Receive": 1,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 3.0
+            },
+            "Default": {
+                "Receive": 0,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Working": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.mobiletimer": {
+            "Default": {
+                "Receive": 0,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Working": {
+                "Receive": 7,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.donotdisturb": {
+            "Home": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Working": {
+                "Receive": 2,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.tinyspeck.chatlyio": {
+            "Working": {
+                "Receive": 37,
+                "DefaultAction": 7,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 700.4285714285714
+            },
+            "Home": {
+                "Receive": 3,
+                "DefaultAction": 2,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 4021.5
+            },
+            "Default": {
+                "Receive": 0,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 1421.0
+            }
+        },
+        "com.amazon.Amazon": {
+            "Home": {
+                "Receive": 4,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Working": {
+                "Receive": 11,
+                "DefaultAction": 2,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 2064.0
+            },
+            "Default": {
+                "Receive": 2,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "net.kortina.labs.Venmo": {
+            "Working": {
+                "Receive": 8,
+                "DefaultAction": 3,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 1037.0
+            },
+            "Home": {
+                "Receive": 2,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 707.0
+            }
+        },
+        "com.netflix.Netflix": {
+            "Working": {
+                "Receive": 25,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Home": {
+                "Receive": 4,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Exercising": {
+                "Receive": 2,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Default": {
+                "Receive": 9,
+                "DefaultAction": 2,
+                "Orb": 0,
+                "Clear": 1,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 9782.0
+            }
+        },
+        "com.apple.powerui.lowpowermode": {
+            "Default": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Working": {
+                "Receive": 7,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Home": {
+                "Receive": 3,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.zimride.instant": {
+            "Default": {
+                "Receive": 6,
+                "DefaultAction": 2,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 32.0
+            },
+            "Working": {
+                "Receive": 4,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Home": {
+                "Receive": 0,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.mobilephone": {
+            "Default": {
+                "Receive": 7,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 1,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 89772.0
+            },
+            "Working": {
+                "Receive": 10,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Home": {
+                "Receive": 4,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.facetime": {
+            "Home": {
+                "Receive": 2,
+                "DefaultAction": 2,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 26.0
+            },
+            "Default": {
+                "Receive": 3,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 35.0
+            }
+        },
+        "swc": {
+            "Working": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Default": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 1
+            }
+        },
+        "com.apple.Maps": {
+            "Default": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Working": {
+                "Receive": 2,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.ReplayKitNotifications": {
+            "Working": {
+                "Receive": 2,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 2,
+                "AverageSecondsToEngagement": 103.0
+            }
+        },
+        "com.apple.TapToRadar": {
+            "Working": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.proactive.ModePredictionNotifications": {
+            "Home": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 1,
+                "Clear": 0,
+                "Pulldown": 1,
+                "Dismiss": 0,
+                "AverageSecondsToClear": 5.0
+            },
+            "Working": {
+                "Receive": 0,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Default": {
+                "Receive": 0,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 918094.0
+            }
+        },
+        "com.toyopagroup.picaboo": {
+            "Working": {
+                "Receive": 2,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 1,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 4.0
+            },
+            "Default": {
+                "Receive": 1,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 174311.0
+            },
+            "Home": {
+                "Receive": 0,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.ist.OrderingApp": {
+            "Working": {
+                "Receive": 6,
+                "DefaultAction": 2,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 138.0
+            },
+            "Default": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.google.photos": {
+            "Default": {
+                "Receive": 1,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Working": {
+                "Receive": 0,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.alltrails.AllTrails": {
+            "Exercising": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Working": {
+                "Receive": 0,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.facebook.Messenger": {
+            "Home": {
+                "Receive": 4,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 1,
+                "AverageSecondsToEngagement": 11.0
+            },
+            "Working": {
+                "Receive": 4,
+                "DefaultAction": 1,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0,
+                "AverageSecondsToEngagement": 4054.0
+            },
+            "Default": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.fivestars.FiveStars-Consumer": {
+            "Default": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Working": {
+                "Receive": 2,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.tdg.Now": {
+            "Working": {
+                "Receive": 3,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Home": {
+                "Receive": 2,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.ubercab.UberClient": {
+            "Default": {
+                "Receive": 5,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            },
+            "Home": {
+                "Receive": 0,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        },
+        "com.apple.findmy": {
+            "Home": {
+                "Receive": 1,
+                "DefaultAction": 0,
+                "Orb": 0,
+                "Clear": 0,
+                "Pulldown": 0,
+                "Dismiss": 0
+            }
+        }
+    }
+}

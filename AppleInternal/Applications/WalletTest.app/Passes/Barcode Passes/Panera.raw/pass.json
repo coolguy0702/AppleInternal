@@ -1,0 +1,41 @@
+{
+    "formatVersion": 1,
+    "associatedStoreIdentifiers": [
+                                   692365393
+                                   ],
+    "passTypeIdentifier": "pass.com.apple.test1",
+    "groupingIdentifier" : "panera",
+    "serialNumber": "875798978346",
+    "teamIdentifier": "K9942Z534D",
+    "organizationName": "Panera",
+	"description": "Panera",
+    "longDescription" : "My Panera Rewards Card",
+    "backgroundColor": "rgb(103,118,33)",
+    "foregroundColor": "rgb(255, 255, 255)",
+    "labelColor": "rgb(155, 164, 107)",
+    "storeCard": {
+        "headerFields": [
+            {
+                "key": "header-field-1",
+                "label": "Rewards",
+                "value": "2"
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key": "secondary-field-1",
+                "label": "Next Reward",
+                "value": "Free coffee, hot tea, or soda"
+            }
+        ]
+    },
+    "barcode" : {
+        "message" : "81781610017",
+        "format" : "PKBarcodeFormatPDF417",
+        "messageEncoding" : "iso-8859-1"
+    },
+    "nfc" : {
+        "message" : "123456789",
+        "encryptionPublicKey" : "MDkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDIgACigjq+QYC17m3i9uO8uKc8mLpaS1UJOEaCFvMedkXsuA="
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "associatedApplicationIdentifiers": [
+        "GSP3TRFDJD.com.apple.syndrome",
+        "5AM47K89XY.com.apple.PassAche"
+    ],
+    "auxiliaryPaymentApplications": [],
+    "backgroundColor": "rgb(255,255,255)",
+    "cardType": "Transit",
+    "contactName": "MasterCard",
+    "description": "Maverick",
+    "foregroundColor": "rgb(214,214,214)",
+    "formatVersion": 1,
+    "hasAssociatedPeerPaymentAccount": false,
+    "isCobranded": false,
+    "isPaymentOptionSelectable": false,
+    "issuerCountryCode": "US",
+    "labelColor": "rgb(214,214,214)",
+    "liveRenderedBackground": false,
+    "organizationName": "MasterCard",
+    "passTypeIdentifier": "paymentpass.com.apple.dev1",
+    "paymentApplications": [
+        {
+            "DPANIdentifier": "DAPLAPMock0141b16d3712634a5e8959448d02bfe30b",
+            "DPANSuffix": "6483",
+            "applicationDescription": "MasterCard",
+            "applicationIdentifier": "A00000000000000000000001",
+            "automaticSelectionCriteria" : [
+               {
+                  "type" : "ecp.2.tci",
+                  "tcis" : ["ffffff"],
+                  "supportsExpress" : true
+               }
+            ],
+            "defaultPaymentApplication": true,
+            "appletCurrencyCode": "CAD",
+            "paymentNetworkIdentifier": 3,
+            "paymentType": "Transit",
+            "secureElementIdentifier": "040C37A36A4180017138014408941612C9092E6A5308F0EC",
+            "state": 1,
+            "supportsContactlessPayment": 1,
+            "supportsInAppPayment": 0,
+            "supportsOptionalAuthentication": 1,
+            "supportedTransitNetworkIdentifiers": [
+                "com.apple.transit.ventra",
+                "com.apple.transit.hop"
+            ]
+        }
+    ],
+    "paymentCard": {
+        "backFields": [
+            {
+                "label" : "Employer",
+                "key" : "balance_identifier_field_employer",
+                "foreignReferenceType" : "Balance",
+                "foreignReferenceIdentifier": "$id_employer",
+                "cellStyle" : "PKTableViewCellStyleValue1"
+            },
+            {
+                "label": "Points",
+                "key" : "balance_identifier_field_points",
+                "foreignReferenceType" : "Balance",
+                "foreignReferenceIdentifier": "$id_points",
+                "cellStyle" : "PKTableViewCellStyleValue1"
+            },
+            {
+                "key": "commuter_route",
+                "label": "San Dimas ↔ Sunnydale",
+                "value": "(Daily)",
+                "cellStyle": "PKTableViewCellStyleSubtitle"
+            },
+            {
+                "key": "commuter_route_validity_period",
+                "label": "PLAN",
+                "value": "1 Month"
+            },
+            {
+                "key": "commuter_route_expiration",
+                "label": "EXPIRING",
+                "value": "2022-05-25T23:59:59+09:00",
+                "dateStyle": "PKDateStyleLong",
+                "ignoresTimeZone": 0
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key" : "card",
+                "label": "CARD",
+                "value": "5555"
+            }
+        ],
+        "balanceFields": [
+            {
+                "label": "Stored Value",
+                "key": "balance_identifier_field_stored_value",
+                "foreignReferenceType" : "Balance",
+                "foreignReferenceIdentifier" : "$id_storedvalue",
+                "cellStyle" : "PKTableViewCellStyleValue1"
+            },
+            {
+                "label" : "Employer",
+                "key" : "balance_identifier_field_employer",
+                "foreignReferenceType" : "Balance",
+                "foreignReferenceIdentifier": "$id_employer",
+                "cellStyle" : "PKTableViewCellStyleValue1"
+            },
+            {
+                "label": "Points",
+                "key" : "balance_identifier_field_points",
+                "foreignReferenceType" : "Balance",
+                "foreignReferenceIdentifier": "$id_points",
+                "cellStyle" : "PKTableViewCellStyleValue1"
+            }
+        ]
+    },
+    "primaryAccountIdentifier": "FAPLAPMOCK5555555555555555",
+    "requiresTransferSerialNumberBasedProvisioning": false,
+    "sequenceCounter": 7,
+    "serialNumber": "nc.qa.qa2nc_5ffb8c5e6694f9c9e8bb6658a00f2e3",
+    "supportsDPANNotifications": 1,
+    "transactionPushTopic": "com.apple.wallet.test.cardnotification",
+    "transactionServiceURL": "https://mrroberto.usspk02.orchard.apple.com/v2/wallet_test_maverick/",
+    "supportsDefaultCardSelection": true,
+    "supportsFPANNotifications": 0,
+    "supportsSerialNumberBasedProvisioning": true,
+    "teamIdentifier": "58Y959KPTE"
+}

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<array>
+		<dict>
+			<key>Category</key>
+			<string>Typist_InternationalKeyboard</string>
+			<key>ID</key>
+			<string>FloatingKeyboard</string>
+			<key>Type</key>
+			<string>Suite</string>
+			<key>SuiteActions</key>
+			<array>
+				<dict>
+					<key>Arguments</key>
+					<dict>
+						<key>testCaseID</key>
+						<string>Setup</string>
+						<key>keyboardID</key>
+						<string>en_US@sw=QWERTY;hw=Automatic</string>
+						<key>keyboardType</key>
+						<string>Default</string>
+						<key>deviceOrientation</key>
+						<string>Portrait</string>
+						<key>appendKeyboard</key>
+						<string>YES</string>
+						<key>autoCorrection</key>
+						<string>YES</string>
+						<key>typeInterval</key>
+						<real>0.12</real>
+						<key>autoCapitalization</key>
+						<string>YES</string>
+						<key>checkSpelling</key>
+						<string>YES</string>
+						<key>periodShortcut</key>
+						<string>YES</string>
+						<key>capsLock</key>
+						<string>YES</string>
+						<key>predictive</key>
+						<string>YES</string>
+						<key>smartPunctuation</key>
+						<string>NO</string>
+						<key>keyPaddle</key>
+						<string>YES</string>
+						<key>smallDisplay</key>
+						<string>YES</string>
+                        <key>SwipeForceSpace</key>
+                        <false/>
+                        <key>SwipeSigma</key>
+                        <real>0.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0.75</real>
+						<key>testClass</key>
+						<string>IntlQAKeyboardTestFloatingKeyboard</string>
+						<key>testFunction</key>
+						<string>switchToFloatingKeyboard</string>
+					</dict>
+					<key>Description</key>
+					<string>Setup</string>
+				</dict>
+				<dict>
+					<key>Arguments</key>
+					<dict>
+						<key>testCaseID</key>
+						<string>19343680</string>
+                    </dict>
+					<key>Description</key>
+					<string>Switch to floating keyboard</string>
+				</dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19343680</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                        <key>keystrokesText</key>
+                        <string>The quick brown fox jumped over the lazy dog.</string>
+                        <key>expectedText</key>
+                        <string>The quick brown fox jumped over the lazy dog.</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Type in English</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi.</string>
+                        <key>expectedText</key>
+                        <string>Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi.</string>
+                        <key>keyboardID</key>
+                        <string>fr_FR@sw=AZERTY-French;hw=Automatic</string>
+                        <key>testCaseID</key>
+                        <string>20579922</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Type in French</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Ciao. Mi chiamo Typist! Grazie.</string>
+                        <key>expectedText</key>
+                        <string>Ciao. Mi chiamo Typist! Grazie.</string>
+                        <key>keyboardID</key>
+                        <string>it_IT@sw=QWERTY;hw=Automatic</string>
+                        <key>testCaseID</key>
+                        <string>20579923</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Type in Italian</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Guten Tag. Mein Name ist Typist! Danke.</string>
+                        <key>expectedText</key>
+                        <string>Guten Tag. Mein Name ist Typist! Danke.</string>
+                        <key>testCaseID</key>
+                        <string>20579924</string>
+                        <key>keyboardID</key>
+                        <string>de_DE@sw=QWERTZ-German;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Type in German</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Hola, como esta? Mi nombre es Typist! Gracias.</string>
+                        <key>expectedText</key>
+                        <string>Hola, como esta? Mi nombre es Typist! Gracias.</string>
+                        <key>keyboardID</key>
+                        <string>es_ES@sw=QWERTY-Spanish;hw=Automatic</string>
+                        <key>testCaseID</key>
+                        <string>20579925</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Type in Spanish</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>womenxihuanzidonghua，taihaole。18601916096，xiexie。</string>
+                        <key>expectedText</key>
+                        <string>我们喜欢自动化，太好了。18601916096，谢谢。</string>
+                        <key>testCaseID</key>
+                        <string>20579926</string>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin-Simplified;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Typing in Chinese</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>kotobaha、taisetsudesu。</string>
+                        <key>expectedText</key>
+                        <string>ことばは、たいせつです。</string>
+                        <key>testCaseID</key>
+                        <string>20579928</string>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Romaji@sw=QWERTY-Japanese;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Typing in Japanese</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>이 얘기는 내가 태어나기 전부터 시작됩니다. 내 생모는 젊은 미혼의 대학생이었는데, 나를 낳으면 다른 사람에게 입양을 시키기로 결심했습니다. 생모는 내가 대학을 졸업한 부부에게 입양되어야 한다는 생각을 강하게 갖고 있었습니다. </string>
+                        <key>expectedText</key>
+                        <string>이 얘기는 내가 태어나기 전부터 시작됩니다. 내 생모는 젊은 미혼의 대학생이었는데, 나를 낳으면 다른 사람에게 입양을 시키기로 결심했습니다. 생모는 내가 대학을 졸업한 부부에게 입양되어야 한다는 생각을 강하게 갖고 있었습니다. </string>
+                        <key>testCaseID</key>
+                        <string>20579929</string>
+                        <key>keyboardID</key>
+                        <string>ko_KR@sw=Korean;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Typing in Korean</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>わんわん</string>
+                        <key>expectedText</key>
+                        <string>わんわん</string>
+                        <key>testCaseID</key>
+                        <string>19343742</string>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Kana@sw=Kana-Flick;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Flick Typing in Japanese</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Try typing via continuous type on floating keyboard.</string>
+                        <key>expectedText</key>
+                        <string>Try typing via continuous type on floating keyboard.</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerifyIOSOnly</string>
+                        <key>testCaseID</key>
+                        <string>20571819</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Swipe in English</string>
+                </dict>
+                <!--dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>Position</key>
+                        <string>TopLeft</string>
+                        <key>testCaseID</key>
+                        <string>19335779</string>
+                        <key>testFunction</key>
+                        <string>moveFloatingKeyboardAndTypeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Move keyboard to top left</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>Position</key>
+                        <string>BottomLeft</string>
+                        <key>testCaseID</key>
+                        <string>20579931</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Move keyboard to bottom left</string>
+                </dict-->
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20579933</string>
+                        <key>testFunction</key>
+                        <string>moveFloatingKeyboardAndTypeAndVerify</string>
+                        <key>keystrokesText</key>
+                        <string>わんわん</string>
+                        <key>expectedText</key>
+                        <string>わんわん</string>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Kana@sw=Kana-Flick;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Move keyboard and type in English</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20579932</string>
+                        <key>keystrokesText</key>
+                        <string>Puppies</string>
+                        <key>expectedText</key>
+                        <string>Puppies</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Move keyboard and type in Japanese</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19343684</string>
+                        <key>testFunction</key>
+                        <string>switchToDockedKeyboard</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Switch to docked keyboard</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20572009</string>
+                        <key>testFunction</key>
+                        <string>switchToFloatingKeyboard</string>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeRight</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Switch to Floating keyboard</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20572013</string>
+                        <key>keystrokesText</key>
+                        <string>The quick brown fox jumped over the lazy dog.</string>
+                        <key>expectedText</key>
+                        <string>The quick brown fox jumped over the lazy dog.</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Type in English</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi.</string>
+                        <key>expectedText</key>
+                        <string>Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi.</string>
+                        <key>testCaseID</key>
+                        <string>20579982</string>
+                        <key>keyboardID</key>
+                        <string>fr_FR@sw=AZERTY-French;hw=Automatic</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Type in French</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Ciao. Mi chiamo Typist! Grazie.</string>
+                        <key>expectedText</key>
+                        <string>Ciao. Mi chiamo Typist! Grazie.</string>
+                        <key>keyboardID</key>
+                        <string>it_IT@sw=QWERTY;hw=Automatic</string>
+                        <key>testCaseID</key>
+                        <string>20579983</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Type in Italian</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Guten Tag. Mein Name ist Typist! Danke.</string>
+                        <key>expectedText</key>
+                        <string>Guten Tag. Mein Name ist Typist! Danke.</string>
+                        <key>keyboardID</key>
+                        <string>de_DE@sw=QWERTZ-German;hw=Automatic</string>
+                        <key>testCaseID</key>
+                        <string>20579984</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Type in German</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Hola, como esta? Mi nombre es Typist! Gracias.</string>
+                        <key>expectedText</key>
+                        <string>Hola, como esta? Mi nombre es Typist! Gracias.</string>
+                        <key>keyboardID</key>
+                        <string>es_ES@sw=QWERTY-Spanish;hw=Automatic</string>
+                        <key>testCaseID</key>
+                        <string>20580087</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Type in Spanish</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>womenxihuanzidonghua，taihaole。18601916096，xiexie。</string>
+                        <key>expectedText</key>
+                        <string>我们喜欢自动化，太好了。18601916096，谢谢。</string>
+                        <key>testCaseID</key>
+                        <string>20579985</string>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin-Simplified;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Typing in Chinese</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>kotobaha、taisetsudesu。</string>
+                        <key>expectedText</key>
+                        <string>ことばは、たいせつです。</string>
+                        <key>testCaseID</key>
+                        <string>20579986</string>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Romaji@sw=QWERTY-Japanese;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Typing in Japanese</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>이 얘기는 내가 태어나기 전부터 시작됩니다. 내 생모는 젊은 미혼의 대학생이었는데, 나를 낳으면 다른 사람에게 입양을 시키기로 결심했습니다. 생모는 내가 대학을 졸업한 부부에게 입양되어야 한다는 생각을 강하게 갖고 있었습니다. </string>
+                        <key>expectedText</key>
+                        <string>이 얘기는 내가 태어나기 전부터 시작됩니다. 내 생모는 젊은 미혼의 대학생이었는데, 나를 낳으면 다른 사람에게 입양을 시키기로 결심했습니다. 생모는 내가 대학을 졸업한 부부에게 입양되어야 한다는 생각을 강하게 갖고 있었습니다. </string>
+                        <key>testCaseID</key>
+                        <string>20579987</string>
+                        <key>keyboardID</key>
+                        <string>ko_KR@sw=Korean;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Typing in Korean</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>わんわん</string>
+                        <key>expectedText</key>
+                        <string>わんわん</string>
+                        <key>testCaseID</key>
+                        <string>20572016</string>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Kana@sw=Kana-Flick;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating keyboard: Flick Typing in Japanese</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Try typing via continuous type on floating keyboard.</string>
+                        <key>expectedText</key>
+                        <string>Try typing via continuous type on floating keyboard.</string>
+                        <key>testCaseID</key>
+                        <string>20572025</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerifyIOSOnly</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Swipe in English</string>
+                </dict>
+                <!--dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19335779</string>
+                        <key>testFunction</key>
+                        <string>moveFloatingKeyboardAndTypeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Move keyboard to top left</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20579931</string>
+                        <key>testFunction</key>
+                        <string>moveFloatingKeyboardAndTypeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Move keyboard to bottom left</string>
+                </dict-->
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20579932</string>
+                        <key>testFunction</key>
+                        <string>moveFloatingKeyboardAndTypeAndVerify</string>
+                        <key>keystrokesText</key>
+                        <string>Puppies</string>
+                        <key>expectedText</key>
+                        <string>Puppies</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Move keyboard to bottom left</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20579933</string>
+                        <key>testFunction</key>
+                        <string>moveFloatingKeyboardAndTypeAndVerify</string>
+                        <key>keystrokesText</key>
+                        <string>わんわん</string>
+                        <key>expectedText</key>
+                        <string>わんわん</string>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Kana@sw=Kana-Flick;hw=Automatic</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Floating Keyboard: Move keyboard to bottom right</string>
+                </dict>
+			</array>
+		</dict>
+	</array>
+</plist>

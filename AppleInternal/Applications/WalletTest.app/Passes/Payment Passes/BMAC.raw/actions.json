@@ -1,0 +1,41 @@
+{
+  "actions": [
+    {
+      "identifier": "topUpPass",
+      "type": "enteredValue",
+      "hasRemoteContent": false,
+      "title": "Add Money",
+      "description": "Add money to pass",
+      "confirmationTitle": "Add",
+      "featured": true,
+      "merchantId": "TRANSIT_PI",
+      "serviceProviderIdentifier": "TRANSIT_PI",
+      "serviceProviderCountryCode": "CN",
+      "serviceProviderSupportedNetworks": [
+        "ChinaUnionPay"
+      ],
+      "serviceProviderCapabilities": [
+        "EMV",
+        "debit"
+      ],
+      "item": {
+        "currency": "CNY",
+        "minLoadedBalance": 0.01,
+        "maxLoadedBalance": 1000.0,
+        "minLoadAmount": 0.1,
+        "maxLoadAmount": 500.0,
+        "defaultSuggestions": [
+          10.0,
+          20.0,
+          50.0
+        ],
+        "serviceProviderData": {
+          "actionIdentifier": "top_up",
+          "currency": "CNY",
+          "issuerIdentifier": "PI",
+          "dpanIdentifier": "DAPLBMAC10008675100c910299746180434a6409"
+        }
+      }
+    }
+  ]
+}

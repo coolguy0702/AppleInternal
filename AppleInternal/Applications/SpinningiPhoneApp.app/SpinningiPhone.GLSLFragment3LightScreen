@@ -1,0 +1,37 @@
+precision highp float;
+
+uniform vec4 material_color;
+uniform float light_specular_exp;
+uniform float light_specular_scale;
+uniform sampler2D tex;
+uniform samplerCube cubemap;
+
+varying vec3 unit_normal;
+varying vec3 up_vector;
+varying vec3 eye_vector;
+varying vec2 tex_coord;
+
+void main()
+{
+	vec3 norm_eye_vector = normalize(eye_vector);
+	vec3 norm_unit_normal = normalize(unit_normal);
+	vec3 norm_up_vector = normalize(up_vector);
+	
+	vec3 norm_right_vector = -cross(norm_up_vector, norm_unit_normal);
+	vec3 norm_ur_vector = normalize(norm_up_vector - norm_right_vector);
+
+	vec3 reflect_vector = normalize(reflect(norm_eye_vector, norm_unit_normal));
+	float r0 = 0.1;
+	float screen_directness = dot(reflect_vector, norm_unit_normal);
+			
+	float slant_depth = dot(norm_eye_vector, norm_unit_normal);
+	vec3 slant = (norm_eye_vector - slant_depth * norm_unit_normal) / slant_depth;
+	
+	float fade_color_factor = clamp(dot(slant, norm_ur_vector) + 0.5, 0.0, 1.0);
+	vec4 fade_color = mix(vec4(0.01875, 0.01875, 0.15, 1.0), vec4(0.025, 0.025, 0.05, 1.0), fade_color_factor);
+
+	vec4 screen_color = texture2D(tex, tex_coord, -0.5);
+	float screen_offaxis = 1.0 - pow(screen_directness, 6.5);
+	float mix_factor = screen_offaxis * mix(0.7, 0.8, fade_color_factor) + 0.1;
+	gl_FragColor = max(screen_color * (1.0 - mix_factor), fade_color * mix_factor);
+}

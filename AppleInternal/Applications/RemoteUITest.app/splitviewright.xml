@@ -1,0 +1,10 @@
+<xmlui>
+    <page>
+        <navigationBar title="Split View Right"/>
+        <tableView splitPosition="rightHalf">
+            <section>
+                <labelRow label="Label Row"/>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

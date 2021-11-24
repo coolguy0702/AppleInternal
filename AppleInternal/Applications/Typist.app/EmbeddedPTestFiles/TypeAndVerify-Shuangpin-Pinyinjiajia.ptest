@@ -1,0 +1,2820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+        <key>Category</key>
+        <string>TypeAndVerify</string>
+        <key>ID</key>
+        <string>TypeAndVerify-Shuanpin-Pinyinjiajia</string>
+		<key>Type</key>
+		<string>Suite</string>		
+		<key>SuiteActions</key>
+		<array>
+
+			<!--- [SETUP] --->
+			<dict>
+				<key>Arguments</key>
+                <dict>
+                    <key>keyboardID</key>
+                    <string>zh_Hans-Shuangpin@sw=Pinyin-Simplified;hw=Automatic</string>
+                    <key>autoCorrection</key>
+                    <string>1</string>
+                    <key>resetLearningDict</key>
+                    <string>1</string>
+                    <key>testCaseID</key>
+                    <string>Setup</string>
+                    <key>keyboardType</key>
+                    <string>Default</string>
+                    <key>shuangpinType</key>
+                    <string>PinyinJiajia</string>
+                    <key>deviceOrientation</key>
+                    <string>Portrait</string>
+                    <key>testClass</key>
+                    <string>IntlQAKeyboardTestShuangpin</string>
+                    <key>testFunction</key>
+                    <string>typeAndVerifyShuangpin</string>
+                </dict>
+                <key>Description</key>
+                <string>Setup</string>
+			</dict>
+
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>baxjgohsgexjirty</string>
+                    <key>expectedText</key>
+                    <string>八仙过海各显神通</string>
+                    <key>testCaseID</key>
+                    <string>17466904</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_1</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>asmodayuxlsi</string>
+                    <key>expectedText</key>
+                    <string>哀莫大于心死</string>
+                    <key>testCaseID</key>
+                    <string>17466905</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_2</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>bssibudeqijm</string>
+                    <key>expectedText</key>
+                    <string>百思不得其解</string>
+                    <key>testCaseID</key>
+                    <string>17466906</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_3</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>bqdysfuifwyirivihf</string>
+                    <key>expectedText</key>
+                    <string>冰冻三尺非一日之寒</string>
+                    <key>testCaseID</key>
+                    <string>17466907</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_4</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ugjhhplgtvqjlg</string>
+                    <key>expectedText</key>
+                    <string>长江后浪推前浪</string>
+                    <key>testCaseID</key>
+                    <string>17466908</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_5</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>yirrzoiiyirrdg</string>
+                    <key>expectedText</key>
+                    <string>一人做事一人当</string>
+                    <key>testCaseID</key>
+                    <string>17466909</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_6</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>xzhbwrln</string>
+                    <key>expectedText</key>
+                    <string>寻花问柳</string>
+                    <key>testCaseID</key>
+                    <string>17466910</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_7</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>zwhfvozw</string>
+                    <key>expectedText</key>
+                    <string>贼喊捉贼</string>
+                    <key>testCaseID</key>
+                    <string>17466911</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_8</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>vrvtdenfzihf</string>
+                    <key>expectedText</key>
+                    <string>真正的男子汉</string>
+                    <key>testCaseID</key>
+                    <string>17466912</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_9</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>vpvc</string>
+                    <key>expectedText</key>
+                    <string>周转</string>
+                    <key>testCaseID</key>
+                    <string>17466913</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_10</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>xuydwomr</string>
+                    <key>expectedText</key>
+                    <string>需要我们</string>
+                    <key>testCaseID</key>
+                    <string>17466914</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_11</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>rucimwmk</string>
+                    <key>expectedText</key>
+                    <string>如此美妙</string>
+                    <key>testCaseID</key>
+                    <string>17466915</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_12</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>jilsvizeafvi</string>
+                    <key>expectedText</key>
+                    <string>既来之则安之</string>
+                    <key>testCaseID</key>
+                    <string>17466916</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_13</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>wfbjbuliqizy</string>
+                    <key>expectedText</key>
+                    <string>万变不离其宗</string>
+                    <key>testCaseID</key>
+                    <string>17466917</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_14</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>yzxhyiighbxhry</string>
+                    <key>expectedText</key>
+                    <string>云想衣裳花想容</string>
+                    <key>testCaseID</key>
+                    <string>17466918</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_15</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>zglcbukf</string>
+                    <key>expectedText</key>
+                    <string>脏乱不堪</string>
+                    <key>testCaseID</key>
+                    <string>17466919</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_16</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tptt</string>
+                    <key>expectedText</key>
+                    <string>头疼</string>
+                    <key>testCaseID</key>
+                    <string>17466920</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_17</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>uyftxjvr</string>
+                    <key>expectedText</key>
+                    <string>冲锋陷阵</string>
+                    <key>testCaseID</key>
+                    <string>17466921</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_18</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>cdmujmbq</string>
+                    <key>expectedText</key>
+                    <string>草木皆兵</string>
+                    <key>testCaseID</key>
+                    <string>17466922</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_19</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>agipkobu</string>
+                    <key>expectedText</key>
+                    <string>昂首阔步</string>
+                    <key>testCaseID</key>
+                    <string>17466923</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_20</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>qykpmovv</string>
+                    <key>expectedText</key>
+                    <string>穷寇莫追</string>
+                    <key>testCaseID</key>
+                    <string>17466924</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_21</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>dkzcgugx</string>
+                    <key>expectedText</key>
+                    <string>刁钻古怪</string>
+                    <key>testCaseID</key>
+                    <string>17466925</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_22</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>hrvx</string>
+                    <key>expectedText</key>
+                    <string>很拽</string>
+                    <key>testCaseID</key>
+                    <string>17466926</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_23</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>zpwwigce</string>
+                    <key>expectedText</key>
+                    <string>走为上策</string>
+                    <key>testCaseID</key>
+                    <string>17466927</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_24</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>zzut</string>
+                    <key>expectedText</key>
+                    <string>尊称</string>
+                    <key>testCaseID</key>
+                    <string>17466928</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_25</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>vdqjszlivpwuvtwg</string>
+                    <key>expectedText</key>
+                    <string>赵钱孙李周吴郑王</string>
+                    <key>testCaseID</key>
+                    <string>17466929</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_26</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ylycjihv</string>
+                    <key>expectedText</key>
+                    <string>因缘际会</string>
+                    <key>testCaseID</key>
+                    <string>17466930</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_27</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tjbtdilm</string>
+                    <key>expectedText</key>
+                    <string>天崩地裂</string>
+                    <key>testCaseID</key>
+                    <string>17466931</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_28</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tkliqqxi</string>
+                    <key>expectedText</key>
+                    <string>条理清晰</string>
+                    <key>testCaseID</key>
+                    <string>17466932</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_29</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>scpf</string>
+                    <key>expectedText</key>
+                    <string>算盘</string>
+                    <key>testCaseID</key>
+                    <string>17466933</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_30</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>yfxb</string>
+                    <key>expectedText</key>
+                    <string>眼下</string>
+                    <key>testCaseID</key>
+                    <string>17466934</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_31</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>aabolo</string>
+                    <key>expectedText</key>
+                    <string>阿波罗</string>
+                    <key>testCaseID</key>
+                    <string>17466935</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_32</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>dcad</string>
+                    <key>expectedText</key>
+                    <string>短袄</string>
+                    <key>testCaseID</key>
+                    <string>17466936</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_33</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>bgbf</string>
+                    <key>expectedText</key>
+                    <string>帮办</string>
+                    <key>testCaseID</key>
+                    <string>17466937</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_34</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>bdxk</string>
+                    <key>expectedText</key>
+                    <string>报销</string>
+                    <key>testCaseID</key>
+                    <string>17466938</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_35</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>xlyplqxiyidjty</string>
+                    <key>expectedText</key>
+                    <string>心有灵犀一点通</string>
+                    <key>testCaseID</key>
+                    <string>17466939</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_36</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>vuvbvhxn</string>
+                    <key>expectedText</key>
+                    <string>主抓装修</string>
+                    <key>testCaseID</key>
+                    <string>17466940</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_37</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tuygtusrpo</string>
+                    <key>expectedText</key>
+                    <string>图样图森破</string>
+                    <key>testCaseID</key>
+                    <string>17466941</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_38</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>bwcyvyls</string>
+                    <key>expectedText</key>
+                    <string>悲从中来</string>
+                    <key>testCaseID</key>
+                    <string>17466942</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_39</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>brxq</string>
+                    <key>expectedText</key>
+                    <string>本性</string>
+                    <key>testCaseID</key>
+                    <string>17466943</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_40</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>bive</string>
+                    <key>expectedText</key>
+                    <string>笔者</string>
+                    <key>testCaseID</key>
+                    <string>17466944</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_41</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>usvh</string>
+                    <key>expectedText</key>
+                    <string>拆装</string>
+                    <key>testCaseID</key>
+                    <string>17466945</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_42</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>dtdq</string>
+                    <key>expectedText</key>
+                    <string>登顶</string>
+                    <key>testCaseID</key>
+                    <string>17466946</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_43</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>bkix</string>
+                    <key>expectedText</key>
+                    <string>表率</string>
+                    <key>testCaseID</key>
+                    <string>17466947</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_44</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>bmfgks</string>
+                    <key>expectedText</key>
+                    <string>别放开</string>
+                    <key>testCaseID</key>
+                    <string>17466948</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_45</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tgzsiafaig</string>
+                    <key>expectedText</key>
+                    <string>躺在沙发上</string>
+                    <key>testCaseID</key>
+                    <string>17466949</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_46</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>vfts</string>
+                    <key>expectedText</key>
+                    <string>站台</string>
+                    <key>testCaseID</key>
+                    <string>17466950</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_47</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>jjkg</string>
+                    <key>expectedText</key>
+                    <string>健康</string>
+                    <key>testCaseID</key>
+                    <string>17466951</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_48</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>blllmmjx</string>
+                    <key>expectedText</key>
+                    <string>濒临灭绝</string>
+                    <key>testCaseID</key>
+                    <string>17466952</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_49</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>iswakhmo</string>
+                    <key>expectedText</key>
+                    <string>晒娃狂魔</string>
+                    <key>testCaseID</key>
+                    <string>17466953</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_50</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>sutd</string>
+                    <key>expectedText</key>
+                    <string>俗套</string>
+                    <key>testCaseID</key>
+                    <string>17466954</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_51</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>caqhzpho</string>
+                    <key>expectedText</key>
+                    <string>擦枪走火</string>
+                    <key>testCaseID</key>
+                    <string>17466955</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_52</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>csnk</string>
+                    <key>expectedText</key>
+                    <string>菜鸟</string>
+                    <key>testCaseID</key>
+                    <string>17466956</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_53</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>cfmp</string>
+                    <key>expectedText</key>
+                    <string>参谋</string>
+                    <key>testCaseID</key>
+                    <string>17466957</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_54</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>cguu</string>
+                    <key>expectedText</key>
+                    <string>仓储</string>
+                    <key>testCaseID</key>
+                    <string>17466958</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_55</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>crcicolo</string>
+                    <key>expectedText</key>
+                    <string>参差错落</string>
+                    <key>testCaseID</key>
+                    <string>17466959</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_56</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ctjqcghs</string>
+                    <key>expectedText</key>
+                    <string>曾经沧海</string>
+                    <key>testCaseID</key>
+                    <string>17466960</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_57</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>cvmqgv</string>
+                    <key>expectedText</key>
+                    <string>催命鬼</string>
+                    <key>testCaseID</key>
+                    <string>17466961</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_58</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>uadd</string>
+                    <key>expectedText</key>
+                    <string>茶道</string>
+                    <key>testCaseID</key>
+                    <string>17466962</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_59</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>fudf</string>
+                    <key>expectedText</key>
+                    <string>负担</string>
+                    <key>testCaseID</key>
+                    <string>17466963</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_60</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ufrd</string>
+                    <key>expectedText</key>
+                    <string>缠绕</string>
+                    <key>testCaseID</key>
+                    <string>17466964</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_61</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>udue</string>
+                    <key>expectedText</key>
+                    <string>超车</string>
+                    <key>testCaseID</key>
+                    <string>17466965</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_62</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>urnjldjn</string>
+                    <key>expectedText</key>
+                    <string>陈年老酒</string>
+                    <key>testCaseID</key>
+                    <string>17466966</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_63</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>uplp</string>
+                    <key>expectedText</key>
+                    <string>丑陋</string>
+                    <key>testCaseID</key>
+                    <string>17466967</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_64</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>uxyijk</string>
+                    <key>expectedText</key>
+                    <string>踹一脚</string>
+                    <key>testCaseID</key>
+                    <string>17466968</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_65</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>eqtimjmq</string>
+                    <key>expectedText</key>
+                    <string>耳提面命</string>
+                    <key>testCaseID</key>
+                    <string>17466969</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_66</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>msuc</string>
+                    <key>expectedText</key>
+                    <string>买船</string>
+                    <key>testCaseID</key>
+                    <string>17466970</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_67</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>uhdgjhhu</string>
+                    <key>expectedText</key>
+                    <string>闯荡江湖</string>
+                    <key>testCaseID</key>
+                    <string>17466971</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_68</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>hhhz</string>
+                    <key>expectedText</key>
+                    <string>黄昏</string>
+                    <key>testCaseID</key>
+                    <string>17466972</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_69</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>rrfwitxjiuntwugo</string>
+                    <key>expectedText</key>
+                    <string>人非圣贤孰能无过</string>
+                    <key>testCaseID</key>
+                    <string>17466973</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_70</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>rrftxiiijqirih</string>
+                    <key>expectedText</key>
+                    <string>人逢喜事精神爽</string>
+                    <key>testCaseID</key>
+                    <string>17466974</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_71</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>haha</string>
+                    <key>expectedText</key>
+                    <string>哈哈</string>
+                    <key>testCaseID</key>
+                    <string>17466975</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_72</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>gzcu</string>
+                    <key>expectedText</key>
+                    <string>滚粗</string>
+                    <key>testCaseID</key>
+                    <string>17466976</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_73</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>gybsuvut</string>
+                    <key>expectedText</key>
+                    <string>功败垂成</string>
+                    <key>testCaseID</key>
+                    <string>17466977</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_74</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tola</string>
+                    <key>expectedText</key>
+                    <string>拖拉</string>
+                    <key>testCaseID</key>
+                    <string>17466978</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_75</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>uzfr</string>
+                    <key>expectedText</key>
+                    <string>春分</string>
+                    <key>testCaseID</key>
+                    <string>17466979</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_76</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ccdo</string>
+                    <key>expectedText</key>
+                    <string>篡夺</string>
+                    <key>testCaseID</key>
+                    <string>17466980</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_77</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tcdv</string>
+                    <key>expectedText</key>
+                    <string>团队</string>
+                    <key>testCaseID</key>
+                    <string>17466981</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_78</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>lvizkpqu</string>
+                    <key>expectedText</key>
+                    <string>旅顺口区</string>
+                    <key>testCaseID</key>
+                    <string>17466982</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_79</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>xyyyptps</string>
+                    <key>expectedText</key>
+                    <string>汹涌澎湃</string>
+                    <key>testCaseID</key>
+                    <string>17466983</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_80</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>zdlj</string>
+                    <key>expectedText</key>
+                    <string>早恋</string>
+                    <key>testCaseID</key>
+                    <string>17466984</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_81</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>eeleme</string>
+                    <key>expectedText</key>
+                    <string>饿了么</string>
+                    <key>testCaseID</key>
+                    <string>17466985</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_82</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ghgd</string>
+                    <key>expectedText</key>
+                    <string>广告</string>
+                    <key>testCaseID</key>
+                    <string>17466986</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_83</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>czkc</string>
+                    <key>expectedText</key>
+                    <string>存款</string>
+                    <key>testCaseID</key>
+                    <string>17466987</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_84</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>cpqk</string>
+                    <key>expectedText</key>
+                    <string>凑巧</string>
+                    <key>testCaseID</key>
+                    <string>17466988</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_85</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>dwkv</string>
+                    <key>expectedText</key>
+                    <string>得亏</string>
+                    <key>testCaseID</key>
+                    <string>17466989</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_86</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>uovylwdj</string>
+                    <key>expectedText</key>
+                    <string>戳中泪点</string>
+                    <key>testCaseID</key>
+                    <string>17466990</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_87</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>dsmt</string>
+                    <key>expectedText</key>
+                    <string>呆萌</string>
+                    <key>testCaseID</key>
+                    <string>17466991</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_88</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>fadb</string>
+                    <key>expectedText</key>
+                    <string>发嗲</string>
+                    <key>testCaseID</key>
+                    <string>17466992</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_89</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>fffp</string>
+                    <key>expectedText</key>
+                    <string>饭否</string>
+                    <key>testCaseID</key>
+                    <string>17466993</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_90</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ktdm</string>
+                    <key>expectedText</key>
+                    <string>坑爹</string>
+                    <key>testCaseID</key>
+                    <string>17466994</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_91</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>zfma</string>
+                    <key>expectedText</key>
+                    <string>咱妈</string>
+                    <key>testCaseID</key>
+                    <string>17466995</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_92</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>gsjl</string>
+                    <key>expectedText</key>
+                    <string>改进</string>
+                    <key>testCaseID</key>
+                    <string>17466996</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_93</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>gbke</string>
+                    <key>expectedText</key>
+                    <string>挂科</string>
+                    <key>testCaseID</key>
+                    <string>17466997</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_94</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>jnnnyimd</string>
+                    <key>expectedText</key>
+                    <string>九牛一毛</string>
+                    <key>testCaseID</key>
+                    <string>17466998</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_95</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>iogwnitq</string>
+                    <key>expectedText</key>
+                    <string>说给你听</string>
+                    <key>testCaseID</key>
+                    <string>17466999</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_96</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>gtlc</string>
+                    <key>expectedText</key>
+                    <string>更乱</string>
+                    <key>testCaseID</key>
+                    <string>17467000</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_97</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>hylobodz</string>
+                    <key>expectedText</key>
+                    <string>红萝卜蹲</string>
+                    <key>testCaseID</key>
+                    <string>17467001</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_98</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>dnbd</string>
+                    <key>expectedText</key>
+                    <string>丢包</string>
+                    <key>testCaseID</key>
+                    <string>17467002</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_99</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ew</string>
+                    <key>expectedText</key>
+                    <string>诶</string>
+                    <key>testCaseID</key>
+                    <string>17467003</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_100</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>erna</string>
+                    <key>expectedText</key>
+                    <string>嗯呐</string>
+                    <key>testCaseID</key>
+                    <string>17467004</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_101</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tfte</string>
+                    <key>expectedText</key>
+                    <string>忐忑</string>
+                    <key>testCaseID</key>
+                    <string>17467005</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_102</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>spso</string>
+                    <key>expectedText</key>
+                    <string>搜索</string>
+                    <key>testCaseID</key>
+                    <string>17467006</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_103</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>iewoqiiw</string>
+                    <key>expectedText</key>
+                    <string>舍我其谁</string>
+                    <key>testCaseID</key>
+                    <string>17467007</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_104</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>gghd</string>
+                    <key>expectedText</key>
+                    <string>刚好</string>
+                    <key>testCaseID</key>
+                    <string>17467008</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_105</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>kxlhle</string>
+                    <key>expectedText</key>
+                    <string>快亮了</string>
+                    <key>testCaseID</key>
+                    <string>17467009</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_106</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>oprf</string>
+                    <key>expectedText</key>
+                    <string>偶然</string>
+                    <key>testCaseID</key>
+                    <string>17467010</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_107</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>hwgp</string>
+                    <key>expectedText</key>
+                    <string>黑狗</string>
+                    <key>testCaseID</key>
+                    <string>17467011</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_108</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>sddist</string>
+                    <key>expectedText</key>
+                    <string>扫地僧</string>
+                    <key>testCaseID</key>
+                    <string>17467012</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_109</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>nsnh</string>
+                    <key>expectedText</key>
+                    <string>奶娘</string>
+                    <key>testCaseID</key>
+                    <string>17467013</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_110</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>mglu</string>
+                    <key>expectedText</key>
+                    <string>忙碌</string>
+                    <key>testCaseID</key>
+                    <string>17467014</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_111</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>bjsely</string>
+                    <key>expectedText</key>
+                    <string>变色龙</string>
+                    <key>testCaseID</key>
+                    <string>17467015</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_112</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>hxjbho</string>
+                    <key>expectedText</key>
+                    <string>坏家伙</string>
+                    <key>testCaseID</key>
+                    <string>17467016</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_113</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tmxxdfxl</string>
+                    <key>expectedText</key>
+                    <string>铁血丹心</string>
+                    <key>testCaseID</key>
+                    <string>17467017</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_114</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>iipw</string>
+                    <key>expectedText</key>
+                    <string>适配</string>
+                    <key>testCaseID</key>
+                    <string>17467018</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_115</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>rpvisyrc</string>
+                    <key>expectedText</key>
+                    <string>肉质松软</string>
+                    <key>testCaseID</key>
+                    <string>17467019</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_116</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>papg</string>
+                    <key>expectedText</key>
+                    <string>怕胖</string>
+                    <key>testCaseID</key>
+                    <string>17467020</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_117</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>svyx</string>
+                    <key>expectedText</key>
+                    <string>岁月</string>
+                    <key>testCaseID</key>
+                    <string>17467021</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_118</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>qlqmgf</string>
+                    <key>expectedText</key>
+                    <string>亲切感</string>
+                    <key>testCaseID</key>
+                    <string>17467022</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_119</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>pdpj</string>
+                    <key>expectedText</key>
+                    <string>跑偏</string>
+                    <key>testCaseID</key>
+                    <string>17467023</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_120</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>idnv</string>
+                    <key>expectedText</key>
+                    <string>少女</string>
+                    <key>testCaseID</key>
+                    <string>17467024</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_121</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>lkvs</string>
+                    <key>expectedText</key>
+                    <string>聊斋</string>
+                    <key>testCaseID</key>
+                    <string>17467025</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_122</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>qnqczebw</string>
+                    <key>expectedText</key>
+                    <string>求全责备</string>
+                    <key>testCaseID</key>
+                    <string>17467026</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_123</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>irgtyinp</string>
+                    <key>expectedText</key>
+                    <string>深耕易耨</string>
+                    <key>testCaseID</key>
+                    <string>17467027</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_124</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tzmo</string>
+                    <key>expectedText</key>
+                    <string>吞没</string>
+                    <key>testCaseID</key>
+                    <string>17467028</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_125</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>kdng</string>
+                    <key>expectedText</key>
+                    <string>烤馕</string>
+                    <key>testCaseID</key>
+                    <string>17467029</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_126</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>htgr</string>
+                    <key>expectedText</key>
+                    <string>横亘</string>
+                    <key>testCaseID</key>
+                    <string>17467030</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_127</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>gchc</string>
+                    <key>expectedText</key>
+                    <string>官宦</string>
+                    <key>testCaseID</key>
+                    <string>17467031</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_128</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>nomijc</string>
+                    <key>expectedText</key>
+                    <string>糯米卷</string>
+                    <key>testCaseID</key>
+                    <string>17467032</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_129</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>julf</string>
+                    <key>expectedText</key>
+                    <string>巨烂</string>
+                    <key>testCaseID</key>
+                    <string>17467033</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_130</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>pqpu</string>
+                    <key>expectedText</key>
+                    <string>平铺</string>
+                    <key>testCaseID</key>
+                    <string>17467034</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_131</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>piyqxi</string>
+                    <key>expectedText</key>
+                    <string>皮影戏</string>
+                    <key>testCaseID</key>
+                    <string>17467035</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_132</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>tw</string>
+                    <key>expectedText</key>
+                    <string>忒</string>
+                    <key>testCaseID</key>
+                    <string>17467036</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_133</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>sgtana</string>
+                    <key>expectedText</key>
+                    <string>桑塔纳</string>
+                    <key>testCaseID</key>
+                    <string>17467037</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_134</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>jy</string>
+                    <key>expectedText</key>
+                    <string>囧</string>
+                    <key>testCaseID</key>
+                    <string>17467038</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_135</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>pksa</string>
+                    <key>expectedText</key>
+                    <string>飘洒</string>
+                    <key>testCaseID</key>
+                    <string>17467039</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_136</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ibva</string>
+                    <key>expectedText</key>
+                    <string>耍诈</string>
+                    <key>testCaseID</key>
+                    <string>17467040</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_137</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>xcpl</string>
+                    <key>expectedText</key>
+                    <string>选聘</string>
+                    <key>testCaseID</key>
+                    <string>17467041</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_138</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>mlhg</string>
+                    <key>expectedText</key>
+                    <string>民航</string>
+                    <key>testCaseID</key>
+                    <string>17467042</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_139</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>wszufu</string>
+                    <key>expectedText</key>
+                    <string>外祖父</string>
+                    <key>testCaseID</key>
+                    <string>17467043</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_140</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ztifgs</string>
+                    <key>expectedText</key>
+                    <string>增删改</string>
+                    <key>testCaseID</key>
+                    <string>17467044</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_141</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>vzvzjkdd</string>
+                    <key>expectedText</key>
+                    <string>谆谆教导</string>
+                    <key>testCaseID</key>
+                    <string>17467045</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_142</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>zamj</string>
+                    <key>expectedText</key>
+                    <string>杂面</string>
+                    <key>testCaseID</key>
+                    <string>17467046</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_143</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>lxqu</string>
+                    <key>expectedText</key>
+                    <string>掠取</string>
+                    <key>testCaseID</key>
+                    <string>17467047</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_144</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>dpny</string>
+                    <key>expectedText</key>
+                    <string>逗弄</string>
+                    <key>testCaseID</key>
+                    <string>17467048</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_145</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>duxm</string>
+                    <key>expectedText</key>
+                    <string>读写</string>
+                    <key>testCaseID</key>
+                    <string>17467049</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_146</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>et</string>
+                    <key>expectedText</key>
+                    <string>鞥</string>
+                    <key>testCaseID</key>
+                    <string>17467050</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_147</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>lzky</string>
+                    <key>expectedText</key>
+                    <string>轮空</string>
+                    <key>testCaseID</key>
+                    <string>17467051</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_148</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>nmhe</string>
+                    <key>expectedText</key>
+                    <string>捏合</string>
+                    <key>testCaseID</key>
+                    <string>17467052</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_149</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>nlrg</string>
+                    <key>expectedText</key>
+                    <string>您让</string>
+                    <key>testCaseID</key>
+                    <string>17467053</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_150</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ltqxye</string>
+                    <key>expectedText</key>
+                    <string>冷却液</string>
+                    <key>testCaseID</key>
+                    <string>17467054</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_151</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ooyo</string>
+                    <key>expectedText</key>
+                    <string>喔唷</string>
+                    <key>testCaseID</key>
+                    <string>17467055</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_152</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ivjz</string>
+                    <key>expectedText</key>
+                    <string>水军</string>
+                    <key>testCaseID</key>
+                    <string>17467056</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_153</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>nxku</string>
+                    <key>expectedText</key>
+                    <string>虐哭</string>
+                    <key>testCaseID</key>
+                    <string>17467057</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_154</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>kbjh</string>
+                    <key>expectedText</key>
+                    <string>夸奖</string>
+                    <key>testCaseID</key>
+                    <string>17467058</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_155</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>fokf</string>
+                    <key>expectedText</key>
+                    <string>佛龛</string>
+                    <key>testCaseID</key>
+                    <string>17467059</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_156</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>qznd</string>
+                    <key>expectedText</key>
+                    <string>群闹</string>
+                    <key>testCaseID</key>
+                    <string>17467060</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_157</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>sfya</string>
+                    <key>expectedText</key>
+                    <string>三亚</string>
+                    <key>testCaseID</key>
+                    <string>17467061</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_158</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>afnq</string>
+                    <key>expectedText</key>
+                    <string>安宁</string>
+                    <key>testCaseID</key>
+                    <string>17467062</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_159</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>nz</string>
+                    <key>expectedText</key>
+                    <string>黁</string>
+                    <key>testCaseID</key>
+                    <string>17467063</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_160</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>mfre</string>
+                    <key>expectedText</key>
+                    <string>慢热</string>
+                    <key>testCaseID</key>
+                    <string>17467064</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_161</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>lvtpbudvmazv</string>
+                    <key>expectedText</key>
+                    <string>驴头不对马嘴</string>
+                    <key>testCaseID</key>
+                    <string>17467065</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_162</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>lo</string>
+                    <key>expectedText</key>
+                    <string>咯</string>
+                    <key>testCaseID</key>
+                    <string>17467066</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_163</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>kavu</string>
+                    <key>expectedText</key>
+                    <string>卡住</string>
+                    <key>testCaseID</key>
+                    <string>17467067</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_164</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>vgga</string>
+                    <key>expectedText</key>
+                    <string>张嘎</string>
+                    <key>testCaseID</key>
+                    <string>17467068</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_165</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>mune</string>
+                    <key>expectedText</key>
+                    <string>木讷</string>
+                    <key>testCaseID</key>
+                    <string>17467069</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_166</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>krdq</string>
+                    <key>expectedText</key>
+                    <string>肯定</string>
+                    <key>testCaseID</key>
+                    <string>17467070</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_167</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>kzdz</string>
+                    <key>expectedText</key>
+                    <string>困顿</string>
+                    <key>testCaseID</key>
+                    <string>17467071</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_168</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>nwjn</string>
+                    <key>expectedText</key>
+                    <string>内疚</string>
+                    <key>testCaseID</key>
+                    <string>17467072</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_169</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>lbrr</string>
+                    <key>expectedText</key>
+                    <string>俩人</string>
+                    <key>testCaseID</key>
+                    <string>17467073</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_170</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>mnwu</string>
+                    <key>expectedText</key>
+                    <string>谬误</string>
+                    <key>testCaseID</key>
+                    <string>17467074</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_171</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>zrmobf</string>
+                    <key>expectedText</key>
+                    <string>怎么办</string>
+                    <key>testCaseID</key>
+                    <string>17467075</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_172</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>nrmo</string>
+                    <key>expectedText</key>
+                    <string>嫩模</string>
+                    <key>testCaseID</key>
+                    <string>17467076</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_173</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>nuli</string>
+                    <key>expectedText</key>
+                    <string>努力</string>
+                    <key>testCaseID</key>
+                    <string>17467077</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_174</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>ncqi</string>
+                    <key>expectedText</key>
+                    <string>暖气</string>
+                    <key>testCaseID</key>
+                    <string>17467078</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_175</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>prsa</string>
+                    <key>expectedText</key>
+                    <string>喷洒</string>
+                    <key>testCaseID</key>
+                    <string>17467079</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_176</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>pmks</string>
+                    <key>expectedText</key>
+                    <string>撇开</string>
+                    <key>testCaseID</key>
+                    <string>17467080</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_177</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>jmpp</string>
+                    <key>expectedText</key>
+                    <string>解剖</string>
+                    <key>testCaseID</key>
+                    <string>17467081</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_178</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>qbjb</string>
+                    <key>expectedText</key>
+                    <string>掐架</string>
+                    <key>testCaseID</key>
+                    <string>17467082</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_179</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>sswtiima</string>
+                    <key>expectedText</key>
+                    <string>塞翁失马</string>
+                    <key>testCaseID</key>
+                    <string>17467083</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_180</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>rtrf</string>
+                    <key>expectedText</key>
+                    <string>仍然</string>
+                    <key>testCaseID</key>
+                    <string>17467084</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_181</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>rvqi</string>
+                    <key>expectedText</key>
+                    <string>锐气</string>
+                    <key>testCaseID</key>
+                    <string>17467085</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_182</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>hyrz</string>
+                    <key>expectedText</key>
+                    <string>红润</string>
+                    <key>testCaseID</key>
+                    <string>17467086</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_183</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>bfrobolomijq</string>
+                    <key>expectedText</key>
+                    <string>般若波罗蜜经</string>
+                    <key>testCaseID</key>
+                    <string>17467087</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_184</string>
+
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+
+                    <key>keystrokesText</key>
+                    <string>icygrp</string>
+                    <key>expectedText</key>
+                    <string>涮羊肉</string>
+                    <key>testCaseID</key>
+                    <string>17467088</string>
+                </dict>
+                <key>ID</key>
+                <string>Pinyinjiajia_185</string>
+
+            </dict>
+		</array>
+	</dict>
+</array>
+</plist>

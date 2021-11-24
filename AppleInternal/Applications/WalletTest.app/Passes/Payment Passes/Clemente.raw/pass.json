@@ -1,0 +1,123 @@
+{
+   "associatedApplicationIdentifiers" : [],
+   "auxiliaryPaymentApplications" : [],
+   "backgroundColor" : "rgb(17, 50, 89)",
+   "secondaryBackgroundColor" : "rgb(2, 21, 60)",
+   "labelColor" : "rgb(78, 146, 223)",
+   "foregroundColor" : "rgb(255, 255, 255)",
+   "cardType": "Access",
+   "description" : "Clemente Badge",
+   "formatVersion" : 1,
+   "hasAssociatedPeerPaymentAccount" : false,
+   "isCobranded" : false,
+   "isPaymentOptionSelectable" : false,
+   "issuerCountryCode" : "US",
+   "liveRenderedBackground" : false,
+   "organizationName" : "Clemente",
+   "passTypeIdentifier" : "paymentpass.com.apple",
+   "paymentApplications" : [
+      {
+         "DPANIdentifier" : "DAPLHD76f43e8a06b7478ab4ef13266cc1bdeb",
+         "DPANSuffix" : "0000",
+         "applicationDescription" : "HID",
+         "applicationIdentifier" : "FFFFFFF00000FFFF00000001",
+         "automaticSelectionCriteria" : [
+            {
+               "type" : "ecp.2.tci",
+               "tcis" : ["ffffff"],
+               "supportsExpress" : true
+            }
+         ],
+         "defaultPaymentApplication" : false,
+         "paymentNetworkIdentifier" : 107,
+         "paymentType" : "Access",
+         "secureElementIdentifier" : "04763A4B8A4380017234161143943083D800310815904B14",
+         "state" : 1,
+         "supportedExpressModes" : [],
+         "supportsContactlessPayment" : 1,
+         "supportsInAppPayment" : 0,
+         "supportsOptionalAuthentication" : 1
+      }
+   ],
+   "accessCard" : {
+      "primaryFields" : [
+         {
+            "key" : "unused_0",
+            "label" : "Student",
+            "value" : "Jane Appleseed"
+         }
+      ],
+      "secondaryFields" : [
+         {
+            "key" : "unused_1",
+            "label" : "School",
+            "value" : "Information Sciences"
+         }
+      ],
+      "auxiliaryFields" : [
+         {
+            "key" : "unused_2",
+            "foreignReferenceType" : "Balance",
+            "foreignReferenceIdentifier": "$id_meal"
+         },
+         {
+            "key" : "unused_3",
+            "foreignReferenceType" : "Balance",
+            "foreignReferenceIdentifier": "$id_laundry"
+         },
+         {
+            "key" : "unused_4",
+            "foreignReferenceType" : "Balance",
+            "foreignReferenceIdentifier": "$id_parking"
+         }
+      ],
+      "backFields" : [
+         {
+            "key" : "cardholder",
+            "label" : "_",
+            "value" : "Jane Appleseed",
+            "cellStyle" : "PKTableViewCellStyleValue1"
+         },
+         {
+            "key" : "cardholderNumber",
+            "label" : "_",
+            "value" : "1010",
+            "cellStyle" : "PKTableViewCellStyleValue1"
+         },
+         {
+            "key" : "balance_identifier_field_a",
+            "foreignReferenceType" : "Balance",
+            "foreignReferenceIdentifier": "$id_meal",
+            "cellStyle" : "PKTableViewCellStyleValue1"
+         },
+         {
+            "key" : "balance_identifier_field_b",
+            "foreignReferenceType" : "Balance",
+            "foreignReferenceIdentifier": "$id_laundry",
+            "cellStyle" : "PKTableViewCellStyleValue1"
+         },
+         {
+            "key" : "balance_identifier_field_c",
+            "foreignReferenceType" : "Balance",
+            "foreignReferenceIdentifier": "$id_parking",
+            "cellStyle" : "PKTableViewCellStyleValue1"
+         },
+         {"key":"contactWebsite","label":"WEBSITE","value":"https://globalsecurity.apple.com"},
+         {"key":"contactEmail","label":"EMAIL","value":"applesecurity@apple.com"},
+         {"key":"contactNumber","label":"PHONE","value":"1-877-233-8552"},
+         {"key":"privacyPolicyURL","label":"POLICY URL","value":"https://applepaycash.greendot.com/privacy"},
+         {"key":"termsAndConditionsURL","label":"TERMS URL","value":"https://applepaycash.greendot.com/termsconditions"}
+      ]
+   },
+   "primaryAccountIdentifier" : "FAPLHD67833c96673d36ea8828690f2e04f800",
+   "requiresTransferSerialNumberBasedProvisioning" : false,
+   "sequenceCounter" : 5,
+   "serialNumber" : "nc.prod.pod1_0000000000000000000e843a0ab00000",
+   "supportsDPANNotifications" : 1,
+   "transactionPushTopic": "com.apple.wallet.test.cardnotification",
+   "transactionServiceURL": "https://mrroberto.usspk02.orchard.apple.com/v2/wallet_test_clemente/",
+   "supportsDefaultCardSelection" : false,
+   "supportsFPANNotifications" : 0,
+   "supportsSerialNumberBasedProvisioning" : false,
+   "teamIdentifier" : "Clemente Inc."
+}

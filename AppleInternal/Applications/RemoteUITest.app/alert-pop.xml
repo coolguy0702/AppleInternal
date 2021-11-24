@@ -1,0 +1,3 @@
+<xmlui action="pop">
+    <alert title="Alert!" message="Alert with action='pop'" cancelButtonTitle="This will pop."/>
+</xmlui>

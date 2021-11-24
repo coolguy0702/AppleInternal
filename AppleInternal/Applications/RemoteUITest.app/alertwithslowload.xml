@@ -1,0 +1,6 @@
+<xmlui action="push">
+    <alert title="Alert" message="This top level &lt;alert&gt;, loaded from separate BuddyML, will trigger a slow load with a title loading message that should appear in the nav bar">
+        <cancelButton>Cancel</cancelButton>
+        <button url="slowload.xml" titleLoadingMessage="Loading…">Start Slow Load</button>
+    </alert>
+</xmlui>

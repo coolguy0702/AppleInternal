@@ -1,0 +1,614 @@
+getppid		 -N getppid -I 5
+
+getenv		 -N getenv	-s 100 -I 100
+getenv		 -N getenvT2	-s 100 -I 100	-T 2
+
+log		 -N log	-I 20	-B 300000
+exp		 -N exp	-I 20	-B 100000
+lrand48		 -N lrand48
+
+memset		 -N memset_10	-s 10	-I 10
+memset		 -N memset_256	-s 256	-I 20
+memset		 -N memset_256_u	-s 256	 -a 1 -I 20
+memset		 -N memset_1k	-s 1k	 -I 100 -B 2000
+memset		 -N memset_4k    -s 4k    -I 250 -B 500
+memset		 -N memset_4k_uc -s 4k    -u -I 400
+
+memset		 -N memset_10k	-s 10k	-I 600 -B 500
+memset		 -N memset_1m	-s 1m	-I 200000
+memset		 -N memset_10m	-s 10m -I 2000000
+memset		 -N memsetP2_10m	-s 10m -P 2 -I 2000000
+
+memrand		 -N memrand	-s 40m -B 10000
+
+#cachetocache	 -N cachetocache -s 100k -T 2 -I 200
+
+malloc		 -N malloc_10    -s 10    -g 10 -I 50
+malloc		 -N malloc_100   -s 100   -g 10 -I 50
+malloc		 -N malloc_1k    -s 1k    -g 10 -I 50
+malloc		 -N malloc_10k   -s 10k   -g 10 -I 50
+malloc		 -N malloc_100k  -s 100k  -g 10 -I 2000
+
+malloc		 -N mallocT2_10    -s 10   -g 10 -T 2 -I 200
+malloc		 -N mallocT2_100   -s 100  -g 10 -T 2 -I 200
+malloc		 -N mallocT2_1k    -s 1k   -g 10 -T 2 -I 200
+malloc		 -N mallocT2_10k   -s 10k  -g 10 -T 2 -I 200
+malloc		 -N mallocT2_100k  -s 100k -g 10 -T 2 -I 10000
+
+close		 -N close_bad		-B 96		-b
+close		 -N close_tmp		-B 64		-f $TFILE
+#close		 -N close_usr		-B 64		-f $VFILE
+close		 -N close_zero		-B 64		-f /dev/zero
+close_tcp	 -N close_tcp		-B 32
+
+memcpy		 -N memcpy_10	-s 10	-I 10
+memcpy		 -N memcpy_1k	-s 1k	-I 50
+memcpy		 -N memcpy_2k	-s 2k	-I 50
+memcpy		 -N memcpy_4k	-s 4k	-I 50
+memcpy		 -N memcpy_8k	-s 8k	-I 50
+memcpy		 -N memcpy_16k	-s 16k	-I 800
+memcpy		 -N memcpy_32k	-s 32k	-I 800
+memcpy		 -N memcpy_64k	-s 64k	-I 800
+memcpy		 -N memcpy_128k	-s 128k	-I 800
+memcpy		 -N memcpy_256k	-s 256k	-I 800
+memcpy		 -N memcpy_512k	-s 512k	-I 800
+memcpy		 -N memcpy_1m	-s 1m   -I 500000
+memcpy		 -N memcpy_2m	-s 2m   -I 500000
+memcpy		 -N memcpy_4m	-s 4m   -I 500000
+memcpy		 -N memcpy_10m	-s 10m  -I 5000000
+
+# high pressure, range of threading
+memcpy		 -N memcpy_4m	-s 4m   -I 500000
+memcpy		 -N memcpy_2mT2	-s 2m   -I 500000 -T 2
+memcpy		 -N memcpy_1mT3	-s 1m   -I 500000 -T 3
+memcpy		 -N memcpy_512kT4	-s 1m   -I 500000 -T 4
+
+# Same pressure per-thread, scaling threads
+memcpy		 -N memcpy_4m	-s 4m   -I 500000
+memcpy		 -N memcpy_4mT2	-s 4m   -I 500000 -T 2
+memcpy		 -N memcpy_4mT3	-s 4m   -I 500000 -T 3
+memcpy		 -N memcpy_4mT4	-s 4m   -I 500000 -T 4
+
+strcpy		 -N strcpy_10	-s 10   -I 5
+strcpy		 -N strcpy_1k	-s 1k   -I 100
+
+strlen		 -N strlen_10	-s 10   -I 5
+strlen		 -N strlen_1k	-s 1k   -I 100
+
+strchr		 -N strchr_10	-s 10   -I 5
+strchr		 -N strchr_1k	-s 1k   -I 200
+strcmp		 -N strcmp_10	-s 10   -I 10
+strcmp		 -N strcmp_1k	-s 1k   -I 200
+
+strcasecmp	 -N scasecmp_10	-s 10 -I 50 -B 2000
+strcasecmp	 -N scasecmp_1k	-s 1k -I 20000 -B 100
+
+strtol		 -N strtol      -I 20
+
+# getcontext	 -N getcontext  -I 100
+# setcontext	 -N setcontext  -I 100
+
+mutex		 -N mutex_st	-I 10
+mutex		 -N mutex_mt	-t -I 10
+mutex		 -N mutex_T2     -T 2  -I 100
+
+longjmp		 -N longjmp	-I 10
+
+getrusage	 -N getrusage	-I 200
+
+times		 -N times	-I 200
+time		 -N time		-I 50
+localtime_r	 -N localtime_r	-I 200
+strftime	 -N strftime -I 10000 -B 100
+
+mktime		 -N mktime       -I 500
+mktime		 -N mktimeT2 -T 2 -I 1000
+
+cascade_mutex	 -N c_mutex_1	-I 50
+cascade_mutex	 -N c_mutex_10	-T 10 -I 5000
+cascade_mutex	 -N c_mutex_200	-T 200	-I 2000000
+
+cascade_cond	 -N c_cond_1	-I 100
+cascade_cond	 -N c_cond_10	-T 10	-I 3000
+cascade_cond	 -N c_cond_200	-T 200	-I 2000000
+
+cascade_lockf	 -N c_lockf_1	-I 1000
+cascade_lockf	 -N c_lockf_10	-P 10 -I 50000
+
+cascade_flock	 -N c_flock	-I 1000
+cascade_flock	 -N c_flock_10	-P 10   -I 50000
+
+cascade_fcntl	 -N c_fcntl_1	-I 2000
+cascade_fcntl	 -N c_fcntl_10	-P 10 -I 20000
+
+file_lock	 -N file_lock   -I 1000
+
+getsockname	 -N getsockname	-I 100
+getpeername	 -N getpeername	-I 100
+
+chdir		 -N chdir_tmp	-I 2000		$TDIR1 $TDIR2
+#chdir		 -N chdir_usr	-I 2000		$VDIR1 $VDIR2
+
+chdir		 -N chgetwd_tmp	-I 3000	-g $TDIR1 $TDIR2
+#chdir		 -N chgetwd_usr	-I 3000	-g $VDIR1 $VDIR2
+
+realpath	 -N realpath_tmp -I 3000		-f $TDIR1
+#realpath	 -N realpath_usr	-I 3000	-f $VDIR1
+
+stat		 -N stat_tmp -I 1000		-f $TFILE
+#stat		 -N stat_usr -I 1000		-f $VFILE
+
+fcntl		 -N fcntl_tmp	-I 100	-f $TFILE
+#fcntl		 -N fcntl_usr	-I 100	-f $VFILE
+fcntl_ndelay	 -N fcntl_ndelay	-I 100
+
+lseek		 -N lseek_t8k	-s 8k	-I 50	-f $TFILE
+lseek		 -N lseek_u8k	-s 8k	-I 50	-f $VFILE
+
+open		 -N open_tmp		-B 256		-f $TFILE
+open		 -N open_usr		-B 256		-f $VFILE
+open		 -N open_zero		-B 256		-f /dev/zero
+
+dup		 -N dup			-B 512
+
+socket		 -N socket_u		-B 256
+socket		 -N socket_i		-B 256		-f PF_INET
+
+socketpair	 -N socketpair		-B 256
+
+setsockopt	 -N setsockopt		-I 200
+
+bind		 -N bind			-B 100
+
+listen		 -N listen		-B 100
+
+poll		 -N poll_10	-n 10	-I 500
+poll		 -N poll_100	-n 100	-I 1000
+poll		 -N poll_1000	-n 1000	-I 5000
+
+poll		 -N poll_w10	-n 10	-I 500		-w 1
+poll		 -N poll_w100	-n 100	-I 2000		-w 10
+poll		 -N poll_w1000	-n 1000	-I 40000	-w 100
+
+select		 -N select_10	-n 10	-I 500
+select		 -N select_100	-n 100	-I 1000
+select		 -N select_1000	-n 1000	-I 5000
+
+select		 -N select_w10	-n 10	-I 500		-w 1
+select		 -N select_w100	-n 100	-I 2000		-w 10
+select		 -N select_w1000	-n 1000	-I 40000        -w 100
+
+sigaction	 -N sigaction -I 100
+signal		 -N signal -I 1000
+sigprocmask	 -N sigprocmask -I 200
+
+pthread_create   -N pthread_8		-B 8
+pthread_create   -N pthread_32		-B 32
+pthread_create   -N pthread_128		-B 128
+pthread_create   -N pthread_512		-B 512
+
+fork		 -N fork_10		-B 10
+
+#fork		 -N fork_1000		-B 1000 -C 50
+
+exit		 -N exit_10		-B 10
+
+#exit		 -N exit_1000		-B 1000 -C 50
+
+exit		 -N exit_10_nolibc	-e -B 10
+
+posix_spawn	 -N posix_spawn -B 10
+
+system		 -N system -I 1000000
+
+read		 -N read_t1k	-s 1k -B 50			-f $TFILE
+read		 -N read_t10k	-s 10k	-B 16		-f $TFILE
+read		 -N read_t100k	-s 100k	-B 4		-f $TFILE
+
+#read		 -N read_u1k	-s 1k	-B 50		-f $VFILE
+#read		 -N read_u10k	-s 10k	-B 16		-f $VFILE
+#read		 -N read_u100k	-s 100k	-B 4		-f $VFILE
+
+read		 -N read_z1k	-s 1k	-B 100		-f /dev/zero
+read		 -N read_z10k	-s 10k	-B 30		-f /dev/zero
+read		 -N read_z100k	-s 100k	-B 4		-f /dev/zero
+read		 -N read_zw100k	-s 100k	-B 4         -w	-f /dev/zero
+
+write		 -N write_t1k	-s 1k	-B 50		-f $TFILE
+write		 -N write_t10k	-s 10k	-B 25		-f $TFILE
+write		 -N write_t100k	-s 100k	-B 4		-f $TFILE
+
+#write		 -N write_u1k	-s 1k	-B 50		-f $VFILE
+#write		 -N write_u10k	-s 10k	-B 25		-f $VFILE
+#write		 -N write_u100k	-s 100k	-B 4		-f $VFILE
+
+write		 -N write_n1k	-s 1k	-I 100 -B 0	-f /dev/null
+write		 -N write_n10k	-s 10k	-I 100 -B 0	-f /dev/null
+write		 -N write_n100k	-s 100k	-I 100 -B 0	-f /dev/null
+
+writev		 -N writev_t1k	-s 1k	-B 20		-f $TFILE
+writev		 -N writev_t10k	-s 10k	-B 4	        -f $TFILE
+writev		 -N writev_t100k	-s 100k			-f $TFILE
+
+#writev		 -N writev_u1k	-s 1k	-B 20		-f $VFILE
+#writev		 -N writev_u10k	-s 10k	-B 4		-f $VFILE
+#writev		 -N writev_u100k	-s 100k			-f $VFILE
+
+writev		 -N writev_n1k	-s 1k	-I 100 -B 0	-f /dev/null
+writev		 -N writev_n10k	-s 10k	-I 100 -B 0	-f /dev/null
+writev		 -N writev_n100k	-s 100k	-I 100 -B 0	-f /dev/null
+
+pread		 -N pread_t1k	-s 1k	-I 300		-f $TFILE
+pread		 -N pread_t10k	-s 10k	-I 1000		-f $TFILE
+pread		 -N pread_t100k	-s 100k	-I 10000	-f $TFILE
+
+#pread		 -N pread_u1k	-s 1k	-I 300		-f $VFILE
+#pread		 -N pread_u10k	-s 10k	-I 1000		-f $VFILE
+#pread		 -N pread_u100k	-s 100k	-I 10000	-f $VFILE
+
+pread		 -N pread_z1k	-s 1k	-I 300		-f /dev/zero
+pread		 -N pread_z10k	-s 10k	-I 1000		-f /dev/zero
+pread		 -N pread_z100k	-s 100k	-I 2000	-f /dev/zero
+pread		 -N pread_zw100k	-s 100k	-w -I 10000	-f /dev/zero
+
+pwrite		 -N pwrite_t1k	-s 1k	-I 500		-f $TFILE
+pwrite		 -N pwrite_t10k	-s 10k	-I 1000		-f $TFILE
+pwrite		 -N pwrite_t100k	-s 100k	-I 10000	-f $TFILE
+
+#pwrite		 -N pwrite_u1k	-s 1k	-I 500		-f $VFILE
+#pwrite		 -N pwrite_u10k	-s 10k	-I 1000		-f $VFILE
+#pwrite		 -N pwrite_u100k	-s 100k	-I 20000	-f $VFILE
+
+pwrite		 -N pwrite_n1k	-s 1k	-I 100		-f /dev/null
+pwrite		 -N pwrite_n10k	-s 10k	-I 100		-f /dev/null
+pwrite		 -N pwrite_n100k	-s 100k	-I 100		-f /dev/null
+
+mmap		 -N mmap_t8k	-l 8k	-I 1000		-f $TFILE
+mmap		 -N mmap_t128k	-l 128k	-I 1000		-f $TFILE
+#mmap		 -N mmap_u8k	-l 8k	-I 1000		-f $VFILE
+#mmap		 -N mmap_u128k	-l 128k	-I 1000		-f $VFILE
+mmap		 -N mmap_a8k	-l 8k	-I 200		-f MAP_ANON
+mmap		 -N mmap_a128k	-l 128k	-I 200		-f MAP_ANON
+
+mmap		 -N mmap_rt8k	-l 8k	-I 2000 -r	-f $TFILE
+mmap		 -N mmap_rt128k	-l 128k	-I 20000 -r	-f $TFILE
+#mmap		 -N mmap_ru8k	-l 8k	-I 2000 -r	-f $VFILE
+#mmap		 -N mmap_ru128k	-l 128k	-I 20000 -r	-f $VFILE
+mmap		 -N mmap_ra8k	-l 8k	-I 2000 -r	-f MAP_ANON
+mmap		 -N mmap_ra128k	-l 128k	-I 20000 -r	-f MAP_ANON
+
+mmap		 -N mmap_wt8k	-l 8k	-I 5000 -w	-f $TFILE
+mmap		 -N mmap_wt128k	-l 128k	-I 50000 -w	-f $TFILE
+#mmap		 -N mmap_wu8k	-l 8k	-I 5000 -w	-f $VFILE
+#mmap		 -N mmap_wu128k	-l 128k	-I 500000 -w	-f $VFILE
+mmap		 -N mmap_wa8k	-l 8k	-I 3000 -w	-f MAP_ANON
+mmap		 -N mmap_wa128k	-l 128k	-I 50000 -w	-f MAP_ANON
+
+munmap		 -N unmap_t8k	-l 8k	-I 500		-f $TFILE
+munmap		 -N unmap_t128k	-l 128k	-I 500		-f $TFILE
+#munmap		 -N unmap_u8k	-l 8k	-I 500		-f $VFILE
+#munmap		 -N unmap_u128k	-l 128k	-I 500		-f $VFILE
+munmap		 -N unmap_a8k	-l 8k	-I 500		-f MAP_ANON
+munmap		 -N unmap_a128k	-l 128k	-I 500		-f MAP_ANON
+
+munmap		 -N unmap_rt8k	-l 8k	-I 1000	-r	-f $TFILE
+munmap		 -N unmap_rt128k	-l 128k	-I 3000	-r	-f $TFILE
+#munmap		 -N unmap_ru8k	-l 8k	-I 1000	-r	-f $VFILE
+#munmap		 -N unmap_ru128k	-l 128k	-I 3000	-r	-f $VFILE
+munmap		 -N unmap_ra8k	-l 8k	-I 1000	-r	-f MAP_ANON
+munmap		 -N unmap_ra128k	-l 128k	-I 2000	-r	-f MAP_ANON
+
+munmap		 -N unmap_wt8k	-l 8k	-I 1000	-w	-f $TFILE
+munmap		 -N unmap_wt128k	-l 128k	-I 10000	-w	-f $TFILE
+#munmap		 -N unmap_wu8k	-l 8k	-I 1000	-w	-f $VFILE
+#munmap		 -N unmap_wu128k	-l 128k	-I 50000	-w -B 10	-f $VFILE
+munmap		 -N unmap_wa8k	-l 8k	-I 1000	-w	-f MAP_ANON
+munmap		 -N unmap_wa128k	-l 128k	-I 10000	-w	-f MAP_ANON
+
+pipe		 -N pipe_pst1	-s 1	-I 1000	-x pipe -m st
+pipe		 -N pipe_pmt1	-s 1	-I 8000	-x pipe -m mt
+pipe		 -N pipe_pmp1	-s 1	-I 8000	-x pipe -m mp
+pipe		 -N pipe_pst4k	-s 4k	-I 1000	-x pipe -m st
+pipe		 -N pipe_pmt4k	-s 4k	-I 8000	-x pipe -m mt
+pipe		 -N pipe_pmp4k	-s 4k	-I 8000	-x pipe -m mp
+
+pipe		 -N pipe_sst1	-s 1	-I 1000	-x sock -m st
+pipe		 -N pipe_smt1	-s 1	-I 8000	-x sock -m mt
+pipe		 -N pipe_smp1	-s 1	-I 8000	-x sock -m mp
+pipe		 -N pipe_sst4k	-s 4k	-I 1000	-x sock -m st
+pipe		 -N pipe_smt4k	-s 4k	-I 8000	-x sock -m mt
+pipe		 -N pipe_smp4k	-s 4k	-I 8000	-x sock -m mp
+
+pipe		 -N pipe_tst1	-s 1	-I 1000	-x tcp  -m st
+pipe		 -N pipe_tmt1	-s 1	-I 8000	-x tcp  -m mt
+pipe		 -N pipe_tmp1	-s 1	-I 8000	-x tcp  -m mp
+pipe		 -N pipe_tst4k	-s 4k	-I 1000	-x tcp  -m st
+pipe		 -N pipe_tmt4k	-s 4k	-I 8000	-x tcp  -m mt
+pipe		 -N pipe_tmp4k	-s 4k	-I 8000	-x tcp  -m mp
+
+gettimeofday	 -N gettimeofday
+recurse		 -N recurse		-B 512
+
+isatty		 -N isatty_yes
+isatty		 -N isatty_no  -f $IFILE
+
+lmbench_stat		 -N lmbench_stat_tmp -I 1000		-f $TFILE
+lmbench_stat		 -N lmbench_stat_usr -I 10000 -B 100		-f /private/var/tmp/lmbench
+
+#
+# lmbench uses a touched empty file in /private/var/tmp
+# libMicro uses a 1M file in a directory off /private/var/tmp
+# performance difference is ~ 0.2 usecs/call
+#
+# why? - walking the dir tree, empty file vs. non-empty file, non-empty dir
+# in the case of libMicro, etc., etc.
+#
+
+lmbench_stat		 -N lmbench_stat_usr -I 10000 -B 100	-f /private/var/tmp/lmbench
+
+lmbench_fstat		 -N lmbench_fstat_tmp -I 1000		-f $TFILE
+lmbench_fstat		 -N lmbench_fstat_usr -I 10000 -B 100		-f /private/var/tmp/lmbench
+
+# see stat test to understand why we are using /private/var/tmp/lmbench
+
+lmbench_fstat		 -N lmbench_fstat_usr -I 10000 -B 100	-f /private/var/tmp/lmbench
+
+lmbench_openclose	 -N lmbench_openclose -I 10000 -B 100	-f /private/var/tmp/lmbench
+
+lmbench_select_file  -N lmbench_select_file_10  -n 10  -B 100
+lmbench_select_file  -N lmbench_select_file_100 -n 100 -B 100
+lmbench_select_file  -N lmbench_select_file_250 -n 250 -B 100
+
+
+# sigcatch and sigsend need to be evaluated together
+# lmbench framework will allow multiple measurements within the same
+# benchmark test which allow them to factor out the cost of sending
+# a signal from catching one
+#
+# for our purposes sigcatch results - sigsend results yield
+# lmbench sig handler overhead measurements
+lmbench_lat_sig_catch	 -N lmbench_sigcatch
+lmbench_lat_sig_send	 -N lmbench_sigsend
+
+
+
+lmbench_read		 -N read_t1b	-s 1 -B 50			-f $TFILE
+lmbench_read		 -N read_t1k	-s 1k -B 50			-f $TFILE
+lmbench_read		 -N read_t10k	-s 10k	-B 16		-f $TFILE
+lmbench_read		 -N read_t100k	-s 100k	-B 4		-f $TFILE
+
+#lmbench_read		 -N read_u1b	-s 1	-B 50		-f $VFILE
+#lmbench_read		 -N read_u1k	-s 1k	-B 50		-f $VFILE
+#lmbench_read		 -N read_u10k	-s 10k	-B 16		-f $VFILE
+#lmbench_read		 -N read_u100k	-s 100k	-B 4		-f $VFILE
+
+lmbench_read		 -N read_z1b	-s 1	-B 100		-f /dev/zero
+lmbench_read		 -N read_z1k	-s 1k	-B 100		-f /dev/zero
+lmbench_read		 -N read_z10k	-s 10k	-B 30		-f /dev/zero
+lmbench_read		 -N read_z100k	-s 100k	-B 4		-f /dev/zero
+lmbench_read		 -N read_zw100k	-s 100k	-B 4         -w	-f /dev/zero
+
+lmbench_write		 -N lmbench_write_t1b	-s 1	-B 50		-f $TFILE
+lmbench_write		 -N lmbench_write_t1k	-s 1k	-B 50		-f $TFILE
+lmbench_write		 -N lmbench_write_t10k	-s 10k	-B 25		-f $TFILE
+lmbench_write		 -N lmbench_write_t100k	-s 100k	-B 4		-f $TFILE
+
+#lmbench_write		 -N lmbench_write_u1b	-s 1	-B 50		-f $VFILE
+#lmbench_write		 -N lmbench_write_u1k	-s 1k	-B 50		-f $VFILE
+#lmbench_write		 -N lmbench_write_u10k	-s 10k	-B 25		-f $VFILE
+#lmbench_write		 -N lmbench_write_u100k	-s 100k	-B 4		-f $VFILE
+
+lmbench_write		 -N lmbench_write_n1b	-s 1	-I 100 -B 0	-f /dev/null
+lmbench_write		 -N lmbench_write_n1k	-s 1k	-I 100 -B 0	-f /dev/null
+lmbench_write		 -N lmbench_write_n10k	-s 10k	-I 100 -B 0	-f /dev/null
+lmbench_write		 -N lmbench_write_n100k	-s 100k	-I 100 -B 0	-f /dev/null
+
+lmbench_bw_unix -N lmbench_bw_unix -B 11 -L -W
+
+#lmbench_lat_udp  -N udp_latency -B 100
+#lmbench_lat_tcp  -N tcp_latency -B 100
+#lmbench_lat_connect -N lmbench_lat_connect -B 100
+lmbench_lat_usleep  -N lmbench_usleep -u usleep -t 1
+lmbench_bw_pipe -N lmbench_bw_pipe
+lmbench_lat_rand -N lmbench_lat_rand
+
+lmbench_bw_mem    -N lmbench_bcopy_512 -B 10 -s 512 -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_1k -B 10 -s 1k -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_2k -B 10 -s 2k -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_4k -B 10 -s 4k -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_8k -B 10 -s 8k -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_16k -B 10 -s 16k -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_32k -B 10 -s 32k -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_64k -B 10 -s 64k -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_128k -B 10 -s 128k -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_256k -B 10 -s 256k -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_512k -B 10 -s 512k -x bcopy
+lmbench_bw_mem    -N lmbench_bcopy_1m -B 10 -s 1m -x bcopy
+lmbench_bw_mem    -N lmbench_bzero_512 -B 10 -s 512 -x bzero
+lmbench_bw_mem    -N lmbench_bzero_1k -B 10 -s 1k -x bzero
+lmbench_bw_mem    -N lmbench_bzero_2k -B 10 -s 2k -x bzero
+lmbench_bw_mem    -N lmbench_bzero_4k -B 10 -s 4k -x bzero
+lmbench_bw_mem    -N lmbench_bzero_8k -B 10 -s 8k -x bzero
+lmbench_bw_mem    -N lmbench_bzero_16k -B 10 -s 16k -x bzero
+lmbench_bw_mem    -N lmbench_bzero_32k -B 10 -s 32k -x bzero
+lmbench_bw_mem    -N lmbench_bzero_64k -B 10 -s 64k -x bzero
+lmbench_bw_mem    -N lmbench_bzero_128k -B 10 -s 128k -x bzero
+lmbench_bw_mem    -N lmbench_bzero_256k -B 10 -s 256k -x bzero
+lmbench_bw_mem    -N lmbench_bzero_512k -B 10 -s 512k -x bzero
+lmbench_bw_mem    -N lmbench_bzero_1m -B 10 -s 1m -x bzero
+lmbench_bw_mem    -N lmbench_fcp_512 -B 10 -s 512 -x fcp
+lmbench_bw_mem    -N lmbench_fcp_1k -B 10 -s 1k -x fcp
+lmbench_bw_mem    -N lmbench_fcp_2k -B 10 -s 2k -x fcp
+lmbench_bw_mem    -N lmbench_fcp_4k -B 10 -s 4k -x fcp
+lmbench_bw_mem    -N lmbench_fcp_8k -B 10 -s 8k -x fcp
+lmbench_bw_mem    -N lmbench_fcp_16k -B 10 -s 16k -x fcp
+lmbench_bw_mem    -N lmbench_fcp_32k -B 10 -s 32k -x fcp
+lmbench_bw_mem    -N lmbench_fcp_64k -B 10 -s 64k -x fcp
+lmbench_bw_mem    -N lmbench_fcp_128k -B 10 -s 128k -x fcp
+lmbench_bw_mem    -N lmbench_fcp_256k -B 10 -s 256k -x fcp
+lmbench_bw_mem    -N lmbench_fcp_512k -B 10 -s 512k -x fcp
+lmbench_bw_mem    -N lmbench_fcp_1m -B 10 -s 1m -x fcp
+lmbench_bw_mem    -N lmbench_cp_512 -B 10 -s 512 -x cp
+lmbench_bw_mem    -N lmbench_cp_1k -B 10 -s 1k -x cp
+lmbench_bw_mem    -N lmbench_cp_2k -B 10 -s 2k -x cp
+lmbench_bw_mem    -N lmbench_cp_4k -B 10 -s 4k -x cp
+lmbench_bw_mem    -N lmbench_cp_8k -B 10 -s 8k -x cp
+lmbench_bw_mem    -N lmbench_cp_16k -B 10 -s 16k -x cp
+lmbench_bw_mem    -N lmbench_cp_32k -B 10 -s 32k -x cp
+lmbench_bw_mem    -N lmbench_cp_64k -B 10 -s 64k -x cp
+lmbench_bw_mem    -N lmbench_cp_128k -B 10 -s 128k -x cp
+lmbench_bw_mem    -N lmbench_cp_256k -B 10 -s 256k -x cp
+lmbench_bw_mem    -N lmbench_cp_512k -B 10 -s 512k -x cp
+lmbench_bw_mem    -N lmbench_cp_1m -B 10 -s 1m -x cp
+lmbench_bw_mem    -N lmbench_frd_512 -B 10 -s 512 -x frd
+lmbench_bw_mem    -N lmbench_frd_1k -B 10 -s 1k -x frd
+lmbench_bw_mem    -N lmbench_frd_2k -B 10 -s 2k -x frd
+lmbench_bw_mem    -N lmbench_frd_4k -B 10 -s 4k -x frd
+lmbench_bw_mem    -N lmbench_frd_8k -B 10 -s 8k -x frd
+lmbench_bw_mem    -N lmbench_frd_16k -B 10 -s 16k -x frd
+lmbench_bw_mem    -N lmbench_frd_32k -B 10 -s 32k -x frd
+lmbench_bw_mem    -N lmbench_frd_64k -B 10 -s 64k -x frd
+lmbench_bw_mem    -N lmbench_frd_128k -B 10 -s 128k -x frd
+lmbench_bw_mem    -N lmbench_frd_256k -B 10 -s 256k -x frd
+lmbench_bw_mem    -N lmbench_frd_512k -B 10 -s 512k -x frd
+lmbench_bw_mem    -N lmbench_frd_1m -B 10 -s 1m -x frd
+lmbench_bw_mem    -N lmbench_rd_512 -B 10 -s 512 -x rd
+lmbench_bw_mem    -N lmbench_rd_1k -B 10 -s 1k -x rd
+lmbench_bw_mem    -N lmbench_rd_2k -B 10 -s 2k -x rd
+lmbench_bw_mem    -N lmbench_rd_4k -B 10 -s 4k -x rd
+lmbench_bw_mem    -N lmbench_rd_8k -B 10 -s 8k -x rd
+lmbench_bw_mem    -N lmbench_rd_16k -B 10 -s 16k -x rd
+lmbench_bw_mem    -N lmbench_rd_32k -B 10 -s 32k -x rd
+lmbench_bw_mem    -N lmbench_rd_64k -B 10 -s 64k -x rd
+lmbench_bw_mem    -N lmbench_rd_128k -B 10 -s 128k -x rd
+lmbench_bw_mem    -N lmbench_rd_256k -B 10 -s 256k -x rd
+lmbench_bw_mem    -N lmbench_rd_512k -B 10 -s 512k -x rd
+lmbench_bw_mem    -N lmbench_rd_1m -B 10 -s 1m -x rd
+lmbench_bw_mem    -N lmbench_fwr_512 -B 10 -s 512 -x fwr
+lmbench_bw_mem    -N lmbench_fwr_1k -B 10 -s 1k -x fwr
+lmbench_bw_mem    -N lmbench_fwr_2k -B 10 -s 2k -x fwr
+lmbench_bw_mem    -N lmbench_fwr_4k -B 10 -s 4k -x fwr
+lmbench_bw_mem    -N lmbench_fwr_8k -B 10 -s 8k -x fwr
+lmbench_bw_mem    -N lmbench_fwr_16k -B 10 -s 16k -x fwr
+lmbench_bw_mem    -N lmbench_fwr_32k -B 10 -s 32k -x fwr
+lmbench_bw_mem    -N lmbench_fwr_64k -B 10 -s 64k -x fwr
+lmbench_bw_mem    -N lmbench_fwr_128k -B 10 -s 128k -x fwr
+lmbench_bw_mem    -N lmbench_fwr_256k -B 10 -s 256k -x fwr
+lmbench_bw_mem    -N lmbench_fwr_512k -B 10 -s 512k -x fwr
+lmbench_bw_mem    -N lmbench_fwr_1m -B 10 -s 1m -x fwr
+lmbench_bw_mem    -N lmbench_wr_512 -B 10 -s 512 -x wr
+lmbench_bw_mem    -N lmbench_wr_1k -B 10 -s 1k -x wr
+lmbench_bw_mem    -N lmbench_wr_2k -B 10 -s 2k -x wr
+lmbench_bw_mem    -N lmbench_wr_4k -B 10 -s 4k -x wr
+lmbench_bw_mem    -N lmbench_wr_8k -B 10 -s 8k -x wr
+lmbench_bw_mem    -N lmbench_wr_16k -B 10 -s 16k -x wr
+lmbench_bw_mem    -N lmbench_wr_32k -B 10 -s 32k -x wr
+lmbench_bw_mem    -N lmbench_wr_64k -B 10 -s 64k -x wr
+lmbench_bw_mem    -N lmbench_wr_128k -B 10 -s 128k -x wr
+lmbench_bw_mem    -N lmbench_wr_256k -B 10 -s 256k -x wr
+lmbench_bw_mem    -N lmbench_wr_512k -B 10 -s 512k -x wr
+lmbench_bw_mem    -N lmbench_wr_1m -B 10 -s 1m -x wr
+lmbench_bw_mem    -N lmbench_rdwr_512 -B 10 -s 512 -x rdwr
+lmbench_bw_mem    -N lmbench_rdwr_1k -B 10 -s 1k -x rdwr
+lmbench_bw_mem    -N lmbench_rdwr_2k -B 10 -s 2k -x rdwr
+lmbench_bw_mem    -N lmbench_rdwr_4k -B 10 -s 4k -x rdwr
+lmbench_bw_mem    -N lmbench_rdwr_8k -B 10 -s 8k -x rdwr
+lmbench_bw_mem    -N lmbench_rdwr_16k -B 10 -s 16k -x rdwr
+lmbench_bw_mem    -N lmbench_rdwr_32k -B 10 -s 32k -x rdwr
+lmbench_bw_mem    -N lmbench_rdwr_64k -B 10 -s 64k -x rdwr
+lmbench_bw_mem    -N lmbench_rdwr_128k -B 10 -s 128k -x rdwr
+lmbench_bw_mem    -N lmbench_rdwr_256k -B 10 -s 256k -x rdwr
+lmbench_bw_mem    -N lmbench_rdwr_512k -B 10 -s 512k -x rdwr
+#lmbench_bw_mem  -N lmbench_rdwr_1m -B 10 -s 1m -x rdwr
+
+lmbench_bw_mmap_rd  -N bw_mmap_rd_512 -s 512 -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_1k -s 1k -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_2k -s 2k -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_4k -s 4k -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_8k -s 8k -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_16k -s 16k -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_32k -s 32k -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_64k -s 64k -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_128k -s 128k -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_256k -s 256k -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_512k -s 512k -f $TFILE
+lmbench_bw_mmap_rd  -N bw_mmap_rd_1m -s 1m -f $TFILE
+sql_select_regression  -N sql_StandardSuite -E -C 20 -L -S -W
+sql_standard_one  -N sql_standard_one -E -C 20 -L -S -W
+sql_mike  -N sql_mike -E -C 20 -L -S -W
+sql_rtree  -N sql_rtree -E -C 20 -L -S -W
+
+hash_perf   -N hashperf_key_hashes -B 100
+#hash_perf   -N hashperf_fill_set -B 100
+#hash_perf   -N hashperf_fill_dict -B 100
+#hash_perf   -N hashperf_probe_set -B 100
+#hash_perf   -N hashperf_probe_dict -B 100
+#hash_perf   -N hashperf_remove_set -B 100
+#hash_perf   -N hashperf_remove_dict -B 100
+#hash_perf   -N hashperf_add_set -B 100
+#hash_perf   -N hashperf_add_dict -B 100
+#hash_perf   -N hashperf_remove_all_set -B 100
+#hash_perf   -N hashperf_remove_all_dict -B 100
+
+xpc_launch   -N xpc_launch
+#NSXPCLaunch   -N NSXPCLaunch
+#NSXPCLaunch   -N NSXPCLaunch_w_Ser -g
+
+StringDrawing  -N Cold_Multiline_Sanskrit -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/ar_SA_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_German -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/de_DE_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_USEnglish -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/en_US_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_Spanish -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/es_ES_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_French -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/fr_FR_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_Hebrew -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/he_HE_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_Hindi -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/hi_HI_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_Japanese -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/ja_JA_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_Korean -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/ko_KO_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_Russian -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/ru_RU_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_Tamil -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/ta_TA_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_Vietnamese -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/vi_VI_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_ChineseZhCHHANS -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/zh_CH_HANS_unicode_text.txt  -B 10
+StringDrawing  -N Cold_Multiline_ChineseZhCNHANT -m -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/zh_CN_HANT_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_Sanskrit -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/ar_SA_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_German -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/de_DE_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_USEnglish -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/en_US_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_Spanish -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/es_ES_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_French -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/fr_FR_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_Hebrew -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/he_HE_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_Hindi -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/hi_HI_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_Japanese -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/ja_JA_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_Korean -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/ko_KO_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_Russian -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/ru_RU_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_Tamil -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/ta_TA_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_Vietnamese -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/vi_VI_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_ChineseZhCHHANS -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/zh_CH_HANS_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Multiline_ChineseZhCHHANT -m -w -f /AppleInternal/Tests/libMicro/assets/Strings/unicode_text/zh_CN_HANT_unicode_text.txt  -B 10
+StringDrawing  -N Warm_Singleline_German -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/de_DE_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_English_AU -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/en_AU_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_English_CA -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/en_CA_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_English_GB -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/en_GB_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_English_US -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/en_US_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_Spanish_MX -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/es_MX_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_Spanish_US -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/es_US_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_Spanish_ES -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/es_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_French_CA -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/fr_CA_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_French_FR -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/fr_FR_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_Italian -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/it_IT_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_Japanese -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/ja_JA_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_Korean -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/ko_KO_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_Chinese_CN -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/zh_CN_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_Chinese_HK -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/zh_HK_siri_strings.txt  -B 10
+StringDrawing  -N Warm_Singleline_Chinese_TW -w -f /AppleInternal/Tests/libMicro/assets/Strings/siri_strings/zh_TW_siri_strings.txt  -B 10
+
+
+autolayout  -N autolayout
+
+png  -N PNG_Decompress_Large_Fabric_Pattern_Card -f /AppleInternal/Tests/libMicro/assets/images/FacebookCardBack.png -E -C 50 -L -S -W 
+png  -N PNG_Decompress_Large_Paper_Pattern_Card -f /AppleInternal/Tests/libMicro/assets/images/TweetSheetPaperTexture.png -E -C 50 -L -S -W 
+png  -N PNG_Decompress_Artist_Icon -f /AppleInternal/Tests/libMicro/assets/images/radio-action-artist.png -E -C 50 -L -S -W 
+
+CGContextDrawImage  -N DrawImage_Artist_Icon_26x33 -f /AppleInternal/Tests/libMicro/assets/images/radio-action-artist.png -h 26 -w 33 -d /usr/local/results -E -C 1 -L -S -W 
+CGContextDrawImage  -N DrawImage_Artist_Icon_36x45 -f /AppleInternal/Tests/libMicro/assets/images/radio-action-artist.png -h 36 -w 45 -d /usr/local/results -b 1 -E -C 1 -L -S -W 
+CGContextDrawImage  -N DrawImage_Artist_Icon_16x23_2 -f /AppleInternal/Tests/libMicro/assets/images/radio-action-artist.png -h 16 -w 23 -d /usr/local/results -b 2 -E -C 1 -L -S -W 
+CGContextDrawImage  -N DrawImage_Artist_Icon_16x23_3 -f /AppleInternal/Tests/libMicro/assets/images/radio-action-artist.png -h 16 -w 23 -d /usr/local/results -b 3 -E -C 1 -L -S -W 
+CGContextDrawImage  -N DrawImage_Artist_Icon_16x23_4 -f /AppleInternal/Tests/libMicro/assets/images/radio-action-artist.png -h 16 -w 23 -d /usr/local/results -b 4 -E -C 1 -L -S -W 
+CGContextDrawImage  -N DrawImage_Radio_Genre_Icon -f /AppleInternal/Tests/libMicro/assets/images/radio-genre-world-hits.png -h 184 -w 184 -d /usr/local/results -E -C 1 -L -S -W

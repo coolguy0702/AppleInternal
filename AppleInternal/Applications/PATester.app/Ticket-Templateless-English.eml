@@ -1,0 +1,676 @@
+Return-path: <groupmailer@group.apple.com>
+Received: from ma1-postinop-sz05.apple.com ([17.171.128.19])
+ by mail5.euro.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.20170413 64bit (built Apr 13
+ 2017)) with ESMTPS id <0ORF0020NJ4BJVJ0@mail5.euro.apple.com>; Mon,
+ 12 Jun 2017 11:14:36 +0100 (IST)
+Received: from relay27.apple.com ([17.171.128.108])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTPS id <0ORF00AASJ3VUJD0@postino.apple.com>; Mon,
+ 12 Jun 2017 03:14:35 -0700 (PDT)
+Received: from ma1-postinop-sz05.apple.com
+ (ma1-postinop-sz05.apple.com [17.171.128.19])
+	(using TLS with cipher DHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(Client did not present a certificate)	by relay27.apple.com (Apple SCV relay)
+ with SMTP id 99.D6.25958.A896E395; Mon, 12 Jun 2017 03:14:34 -0700 (PDT)
+Received: from group.apple.com ([17.171.128.19])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0ORF00AH8J4AUJD0@postino.apple.com>; Mon,
+ 12 Jun 2017 03:14:34 -0700 (PDT)
+Received: from ma1-postinop-sz09.apple.com ([17.171.128.178])
+ by postino.apple.com
+ (Oracle Communications Messaging Server 7.0.5.35.0 64bit (built Mar 31 2015))
+ with ESMTPS id <0ORF00A3LJ3DUJD0@postino.apple.com> for
+ bv-gt20@group.apple.com; Mon, 12 Jun 2017 03:14:01 -0700 (PDT)
+MIME-version: 1.0
+Content-transfer-encoding: 7BIT
+Content-type: text/html; CHARSET=US-ASCII
+Received: from group.apple.com ([127.0.0.1]) by ma1-postinop-sz09.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.20170222 64bit (built Feb 22
+ 2017)) with ESMTP id <0ORF00BX9J3C8E40@ma1-postinop-sz09.apple.com> for
+ bv-gt20@group.apple.com; Mon, 12 Jun 2017 03:14:01 -0700 (PDT)
+X-Va-A:
+X-Va-T-CD: 3846dd21035b6d6ac96eb4ca05ae5cb9
+X-Va-E-CD: 607546103922389ada527db9d0d9aab2
+X-Va-R-CD: 511667cdc8a953a8d382d39befbdeb5a
+X-Va-CD: 0
+X-Va-ID: 9456a7ee-646a-4596-8306-0aad85f92fd6
+X-V-A:
+X-V-T-CD: 3846dd21035b6d6ac96eb4ca05ae5cb9
+X-V-E-CD: 607546103922389ada527db9d0d9aab2
+X-V-R-CD: 511667cdc8a953a8d382d39befbdeb5a
+X-V-CD: 0
+X-V-ID: 5e2dbe32-682b-46ca-bd40-102db9b557f4
+Received: from mail-in22.apple.com (mail-in22.apple.com [17.171.2.22])
+ by ma1-postinop-sz09.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.20170222 64bit (built Feb 22
+ 2017)) with ESMTPS id <0ORF003ITIX7IFW0@ma1-postinop-sz09.apple.com> for
+ bv-gt20@group.apple.com; Mon, 12 Jun 2017 03:14:00 -0700 (PDT)
+X-Va-A:
+X-Va-T-CD: 3846dd21035b6d6ac96eb4ca05ae5cb9
+X-Va-E-CD: 607546103922389ada527db9d0d9aab2
+X-Va-R-CD: 511667cdc8a953a8d382d39befbdeb5a
+X-Va-CD: 0
+X-Va-ID: 9b2152a1-452b-42a1-b9d7-7c5219834892
+X-V-A:
+X-V-T-CD: 3846dd21035b6d6ac96eb4ca05ae5cb9
+X-V-E-CD: 607546103922389ada527db9d0d9aab2
+X-V-R-CD: 511667cdc8a953a8d382d39befbdeb5a
+X-V-CD: 0
+X-V-ID: d99cdf46-4ec5-49a7-abbd-0f739d126d7d
+X-AuditID: 11ab806c-9bdff70000006566-a0-593e698ace19
+Received: from ma1-aaemail-dr-lapp03.apple.com
+ (ma1-aaemail-dr-lapp03.apple.com [17.171.2.72])
+	(using TLS with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client did not present a certificate)
+	by mail-in22.apple.com (Apple Secure Mail Relay)
+ with SMTP id 0F.D3.02740.4696E395; Mon, 12 Jun 2017 03:13:57 -0700 (PDT)
+Received: from pps.filterd (ma1-aaemail-dr-lapp03.apple.com [127.0.0.1])
+	by ma1-aaemail-dr-lapp03.apple.com (8.16.0.20/8.16.0.20)
+ with SMTP id v5CABrSJ062646	for <bv-gt20@group.apple.com>; Mon,
+ 12 Jun 2017 03:13:56 -0700
+Received: from cmr.ticketnetwork.com
+ (TICKETNETWO.car1.Stamford1.Level3.net [4.26.48.10])
+	by ma1-aaemail-dr-lapp03.apple.com with ESMTP id 2b0frr5xpg-1	for
+ <bv-gt20@group.apple.com>; Mon, 12 Jun 2017 03:13:55 -0700
+DKIM-Signature: v=1; c=relaxed/relaxed;
+ h=mime-version:from:to:date:subject:content-type:content-transfer-encoding:message-id;
+ d=TicketNetwork.com; s=me125; a=rsa-sha256;
+ bh=RxR9E5Wj53GqKCUS8KEyL3NZMd+6NPZWsw0hU+9lcM0=;
+ b=cGgZlTSJS1shS92ikD5U12DCZt17vubpRlFGYSbS2vr+I2HZ2x9AVkkzKdl0Xg/02
+ tv1SR45H+9ePo/V2PKvuys2GgYj8wDMOA9UQ/7C+0XFmhpNilGZ1/56Qb8febj3MfX3
+ a7BaeGsyWQr7ykPeku92IIrpVT3Er0t69jEQ3H8RHyONHdHOqP3HLkdSwMV2wntedpm
+ YCWtgsCKUZ6mYmR0DGNc/qUGK6SLnencbJF1Sxh5sJXj19m7GrxC7g5wWpXjafSCV/M
+ /BrA7vGgNdAq3+L6cZ8ZBK5R6XsyBPJIy7zqA9qQA1XvMs1Ok3jUT/qWl8SLEebGXng
+ wPe3KZ4+A==;
+Received: from APDEXC1B ([10.21.140.12]) by tn.local with MailEnable ESMTP;
+ Mon, 12 Jun 2017 06:13:52 -0400
+Sensitivity: Normal
+Importance: Normal
+From: "TicketNetwork.com" <CustomerService@TicketNetwork.com>
+To: bv-gt20@group.apple.com
+Date: $now_full_text$
+Subject: Remember to download your Tickets for San Francisco Giants vs. Kansas
+ City Royals! (Order #23233073)
+Message-id: <71C05761E20449839CF93A2626EDC751.MAI@tn.local>
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,,
+ definitions=2017-06-12_06:,, signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ suspectscore=99 malwarescore=0 phishscore=0 adultscore=0 bulkscore=3
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1703280000
+ definitions=main-1706120177
+Authentication-results: symauth.service.identifier; dkim=permfail (signature
+ did not verify) header.d=TicketNetwork.com header.s=me125 header.v=1
+ header.a=rsa-sha256
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFprCJsWRmVeSWpSXmKPExsUiuLpBWLcr0y7S4OQlc4td91YyWrw/t43Z
+	4ub2lcwWm3pXAIk7i1kttr9Stbg1cQerxdd551ks/k7rZ7M4t/Ebi8XZLi+Lf882MVt8avjC
+	aLGs/xajxZWGX4wWU7v/MzsIeGw9+YMtgDFKxaYov7QkVSEjv7jEVqkASGbm5eslFhTkpOol
+	5+daGZkq6dslqGQs7ljLUrDkIWPFxEcdzA2MnaVdjJwcEgImEv92fGXqYuTiEBLYxiTx595r
+	dgjnM6PErBNNjBDOfCaJdTMfMoK08AoISvyYfI+li5GDg1lAXuLgeVmQMLOApsSze5+gmpcy
+	SXyaDeKArGCX+PNrBwuErS1x+0QTM4x94NtSuPiE42/ZIGwuiQVbT7NC2LoS/46fhLLZJNaf
+	WMIEYWtJvF86lQXGbmn4yQpjv1naBzWfU+L8l4lQN+hInP5znwXiuENMEjN/3GemhuO+z7nJ
+	SInjJjCazUIK01mIMJ2FFKYLGJlXMQoWpeYkVhqZI6J2EyMkjeXsYLxz0+wQowAHoxIPL8du
+	20gh1sSy4srcQ4wSHMxKIryP0+wihXhTEiurUovy44tKc1KLDzEmc7AITGSWEk3OB6bYvJJ4
+	QxMTI1MTI2NzQwNTC9KElcR5Z2y2jBQSSE8sSc1OTS1ILYLZwsTBKdXA6FcmqX/6eeRzWeke
+	HYM5LQfZLK1anD7XFsuZ/RfetG91loSu7YKjSy74nr2szWq28vuUnydunjX+9/39H0F7Le78
+	OL3FzxcvUZPd4M5e8qKW0zF39aSjVecnRJZJ/VovuHBKyuofCtFJ/o8fbb6xTU9x2zmWFyca
+	HK6snmF4pzWrZ6YQz3HD70osxRmJhlrMRcWJAI6TiJqnAwAA
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA1VSa0wTWRTmzoztpduR2ynFY8G4NoY1RhDRxE0E1jW+fhnjD9eabNxRRtrQ
+	VzpVQRNFjS7iPqoWHyCBDayPorFC45b4SJiwi7shIgS0WoMQa10rgTVKgEjQGeuD/XPznXO+
+	853vnnsxzUVURiyUeAS3g7eZVBpG10itzRKsBeac4adZX5+sj9LL0dqJ2j+Z9WizJq9QsFl3
+	Cu6FBT9oLC3X2lSuviBVcri9nSlDgUtUBUrGQJZAf2RIXYE0mCO3KRht9X4I+hH4Rx7SieAh
+	guGGmFppYUgHA0cbGQVzpBhGngRVCtYTPbx5cAcpOJlwUN57ZJqCWaKDv89E3/NVJB8Oj3fK
+	eYxTSTqcqtYqkCFfwuWXTELFCVJ4glLSNMmEc4dMSpomc8B3dECdEFwGseazdMJ/MRyorH7v
+	Esg4goGhMKUEiPyOoLl1nPEifdUUF1Wfdaum6NYh2o/0dt5qy7I6cnOzeZfLJmRvc9qbUGLL
+	aSHU92KRhAhGJi2Lr+ebuWn8TrHULqGZmDIZ2GBPnpmbvtVZWGrhRcsW9w6bIEoIMG1KZZ9s
+	LzBzbCFfultwOz+W0jFjmsGK+cvMHCniPUKxILgE98cqhdUSysDYBOwCi9ytcwtFQsl2q80z
+	lZOsHBpljFYeE/lOGSO6eLtoLUqQ/kFZuPynwGuKYxxOh2CcwbYVySSikCw7HJ/ElL/EGHM0
+	3WiWUc+ipKQkTiu7sVs9/6/H0S0kb0DP7ldMaa0Oz6dRuQ1yhVQYoPzGRuiJhBlo+LlGBS3h
+	TjVIDXE1XLjzFkNHsFIDk95TX8C14EEWWsoCLNwe6WIhWDvKwtmx09PhQbc3BXyXHqWA9FeN
+	DmoPPNdBd293Kry58jwVBptvGuDViQ4DXA8NGqDvwr9p0OWvBngVfQwQOj8M4O2flMOLx2bC
+	o7GQESZjgXQIndyfAU0jwYy4vCxKXtZ95b1Y0cN/voGxDJ2m6i0rZi1ZvDonZpndunhPLO0X
+	9vjSp11wLk235m77vVtC+brwpg3/je4au7/Of3X9t+drVv3YtGLit8EUX/1WPHdowTyIt8Vv
+	ZvbUOvauqvzqmZR5otGfHbia1/vHvtm/frOh7lmGA0tzrxRGd9fZOrf4mGH3wkj0oG9g5Yvl
+	3x/xmBjRwi+aT7tF/h2X0PqG7gMAAA==
+X-Member-Count: 16
+Precedence: List
+Sender: bv-gt20@group.apple.com
+List-Id: <bv-gt20@group.apple.com>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Remember to download your Tickets for San Francisco Giants vs. Kansas City Royals! (Order #23233073)</title>
+    <style type="text/css">
+        /*CLIENT-SPECIFIC STYLES*/
+        #outlook a {
+            padding: 0;
+        }
+
+        .ExternalClass, .ReadMsgBody {
+            width: 100%;
+        }
+
+            .ExternalClass, .ExternalClass div, .ExternalClass font, .ExternalClass p, .ExternalClass span, .ExternalClass td {
+                line-height: 100%;
+            }
+
+        a, blockquote, body, li, p, table, td {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table, td {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+        /*RESET STYLES  */
+        #bodyCell, #bodyTable, body {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: 0;
+            text-decoration: none;
+        }
+
+        table, table td {
+            border-collapse: collapse !important;
+        }
+
+        span.yshortcuts, span.yshortcuts:active, span.yshortcuts:focus, span.yshortcuts:hover {
+            color: #000;
+            background-color: transparent;
+            border: none;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #666666;
+            line-height: 100%;
+        }
+        /* end Reset Styles */
+
+        /* Page Styles */
+        #bodyTable {
+            background-color: #f5f5f5;
+        }
+
+        #bodyCell {
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        #container {
+            width: 600px;
+            border: 1px solid #e5e5e5;
+        }
+
+        #bodyCell {
+            height: 100% !important;
+            background-color: #f5f5f5;
+        }
+
+        #preheader {
+            background-color: #f5f5f5;
+        }
+
+        .preheaderContent {
+            color: #808080;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+            font-size: 10px;
+            line-height: 125%;
+        }
+
+            .preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */ {
+                color: #006699;
+                font-weight: normal;
+                text-decoration: underline;
+            }
+
+        #container {
+            border: 1px solid #e5e5e5;
+        }
+
+        #emailBody {
+            background-color: #ffffff;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+        }
+
+
+        p {
+            text-align: left;
+            font-size: 13px;
+            line-height: 19px;
+            margin: 0 0 12px;
+            font-weight: 400;
+            color: #333333;
+        }
+
+        /* Link Elements */
+        a, a:link {
+            color: #1F739F;
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+            a:visited {
+                color: #1F739F;
+                text-decoration: none;
+                font-weight: normal;
+            }
+
+            a:focus, a:hover {
+                color: #b40101 !important;
+                font-weight: normal;
+                text-decoration: underline;
+            }
+
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none !important;
+                color: #333333 !important; /*Same as the p elements color */
+                pointer-events: none !important;
+                cursor: default !important;
+                font-weight: normal !important;
+            }
+
+        .btnPrimary .btnContent {
+            -moz-box-shadow: 0 0 0 1px #007599;
+            -webkit-box-shadow: 0 0 0 1px #007599;
+            box-shadow: 0 0 0 1px #007599;
+        }
+
+            .btnPrimary .btnContent a:hover, .btnPrimary .btnContent a:active, .btnPrimary .btnContent a:focus, .btnPrimary .btnContent:hover {
+                color: #ffffff !important;
+                background: #057294 !important;
+            }
+
+        .btnSecondary .btnContent a:hover, .btnSecondary .btnContent a:active, .btnSecondary .btnContent a:focus {
+            color: #222222 !important;
+            background: #e9e9e9 !important;
+        }
+
+        .flexContainer {
+            padding-top: 20px !important;
+        }
+
+        .flexibleImage {
+            height: auto;
+        }
+
+        #footer {
+            background: #eeeeee;
+            border-top: 1px solid #ffffff;
+            padding: 15px;
+        }
+
+        .footerContent {
+            font-size: 10px;
+            line-height: 150%;
+            text-align: center;
+        }
+
+
+            .footerContent a:link, .footerContent a:visited,
+            /* Yahoo! Mail Override */ .footerContent a .yshortcuts, .footerContent a span /* Yahoo! Mail Override */ {
+                color: #1F739F;
+                font-weight: normal;
+                text-decoration: none;
+            }
+
+
+        @media only screen and (max-width:480px) {
+            /* CLIENT-SPECIFIC MOBILE STYLES */
+            body, table, td, p, a, li, blockquote {
+                -webkit-text-size-adjust: none !important;
+            }
+            /* Prevent Webkit platforms from changing default text sizes */
+            body {
+                width: 100% !important;
+                min-width: 100% !important;
+            }
+            /* Prevent iOS Mail from adding padding to the body */
+
+            #bodyCell {
+                padding: 6px 2px !important;
+            }
+
+
+            table[id="emailBody"], table[class="flexContainer"] {
+                width: 100% !important;
+                margin: auto !important;
+            }
+
+           table.btn {
+                width: 100% !important;
+                margin: 8px auto !important;
+                height: auto !important;
+                max-width: 340px;
+            }
+
+            td[class=btnContent] {
+                padding: 0 !important;
+                height: auto !important;
+                width: auto !important;
+            }
+
+                td[class=btnContent] a {
+                    font-size: 15px !important;
+                    line-height: 125% !important;
+                    padding: 10px 0;
+                    min-height: 0 !important;
+                    max-width: 340px;
+                    width: 100%;
+                    height: auto !important;
+                }
+
+            table[class="flexContainer"] {
+                margin: 5px 0 10px;
+            }
+
+                table[class="flexContainer"] td {
+                    display: block !important;
+                }
+
+            td[class="flexFirstCell flexText"] {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                font-size: 13px !important;
+            }
+
+            td[class="flexText"] {
+                font-size: 13px !important;
+            }
+
+            img[class="flexibleImage"] {
+                height: auto !important;
+                width: 100% !important;
+            }
+            /* MOBILE TEMPLATE STYLES  */
+            /* ======== Page Styles ======== */
+            #container {
+                max-width: 470px !important;
+                width: 100% !important;
+            }
+
+            h1 {
+                font-size: 22px !important;
+                line-height: 125% !important;
+            }
+
+            p {
+                font-size: 14px !important;
+                line-height: 20px !important;
+            }
+
+
+            /* ======== Header Styles ======== */
+            #logoImage {
+                min-height: 30px !important;
+                width: 100% !important;
+                max-width: 600px;
+            }
+            /* ======== Body Styles ======== */
+            .bodyContent {
+                font-size: 14px !important;
+                line-height: 125% !important;
+                padding: 11px !important;
+            }
+
+
+            a[href^="tel"], a[href^="sms"], a[href^="tel"]:link {
+                text-decoration: none !important;
+                color: #1F739F !important;
+                pointer-events: auto !important;
+                cursor: pointer !important;
+                font-size: inherit !important;
+                line-height: inherit !important;
+                font-weight: normal !important;
+            }
+
+            a.mobileLink {
+                color: #1F739F !important;
+                font-weight: normal !important;
+                text-decoration: none !important;
+                font-size: inheirt !important;
+                line-height: 28px !important;
+            }
+
+
+            /* ======== Footer Styles ======== */
+            .footerContent {
+                font-size: 14px !important;
+                line-height: 125% !important;
+            }
+
+                .footerContent a {
+                    display: block !important;
+                    font-size: 14px !important;
+                    line-height: 125% !important;
+                }
+
+                .footerContent.footerSocail a {
+                    display: inline-block !important;
+                }
+
+            img[class=display], span[class=display] {
+                display: block !important;
+            }
+
+            img[class=no_display], span[class=no_display], table[class=no_display] {
+                display: none !important;
+                height: 0 !important;
+            }
+        }
+    </style>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+        function logoImage_onclick() {
+
+        }
+
+// ]]>
+    </script>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    <center>
+        <meta name="viewport" content="initial-scale=1">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyTable" bgcolor="#f5f5f5" style="background: #f5f5f5; width: 100%;">
+            <tr>
+                <td align="center" valign="top" id="bodyCell" style="padding: 20px; background: #f5f5f5;">
+                    <table align="center" id="container" border="0" cellpadding="0" cellspacing="0" height="100%" width="600px" bgcolor="#ffffff" style="width: 600px; height: 100%; background: #ffffff; border: 1px solid #e5e5e5">
+                        <tr>
+                            <td align="center" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="header">
+                                    <tr>
+                                        <td valign="top" class="headerContent" style="max-height: 100px; border-bottom:0">
+                                            <a href="http://www.ticketnetwork.com" target="_blank" style="border: 0;"><img src="https://s3.amazonaws.com/content-s3.tickettransaction.com/email_content/3551_logo.jpg" alt="TicketNetwork.com" style="width: 100%; max-width: 600px; max-height: 100px; display: block; font: italic normal 20px Arial; background: #ffffff; min-height: 30px; color: #666666; border: 0;" id="logoImage" onclick="return logoImage_onclick()" /></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailBody" style="background-color: #ffffff; width: 100%; margin: 0 auto;">
+                                    <tr>
+                                        <td valign="top" class="bodyContent" style="padding: 15px;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td align="left" valign="top" style="text-transform: none; font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: bold; text-align: left; font-size: 22px; margin: 8px 0 15px 0;">
+
+                                                        <h1 style="text-transform: none; font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: normal; text-align: left; font-size: 22px; margin: 7px 0 15px 0; font-style: normal; line-height: 125%; letter-spacing: normal; display: block;">
+                                                            Remember to Download and Print your San Francisco Giants vs. Kansas City Royals eTickets!
+                                                        </h1>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top" style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px;">
+                                                        <!-- BEGIN MAIN CONTENT -->
+                                                        <p style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; margin: 5px 0px 8px 0;">
+                                                            Hello Rocio,
+                                                        </p>
+                                                        
+                                                        
+                                                        <p style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; margin: 0 0px 10px 0;">
+                                                            We noticed you have not yet downloaded or printed your eTickets for San Francisco Giants vs. Kansas City Royals. <b>Please note, you must print your eTickets and present them at the event in order to gain entry.</b>
+                                                        </p>
+                                                        <p style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; margin: 0 0px 10px 0;">
+                                                            To access your eTickets please sign into MyTicketTracker with the following information:
+                                                        </p>
+                                                        <p class="mttLoginInfo" style="font-family: Arial, Helvetica, sans-serif; color: #333333!important; text-decoration: none !important; font-weight: 400; text-align: left; font-size: 12px; line-height: 18px; margin: 0 0 5px 0;"><strong>Email:</strong> bv-gt20@group.apple.com&nbsp;&nbsp;&nbsp; <strong>PIN:</strong>&nbsp;51057171</p>  
+ 
+                                                        <table valign="middle" border="0" cellpadding="0" cellspacing="0" class="btn btnPrimary" height="35" style="height: 35px; border-collapse: separate!important; border-spacing: 0;">
+                                                            <tr>
+                                                                <td align="center" valign="middle" class="btnContent" bgcolor="#0688B1" height="35px" style="height: 35px; background: #0688B1;box-shadow: 0 0 0 1px #007599; border-radius: 3px; color: #ffffff; border-collapse: separate!important;">
+                                                                    <a href="https://mtt.tickettransaction.com?rtnUrl=/Account/ETickets/VerifyCard/23233073&lang=en-US" target="_blank" style="background: #0688B1; box-shadow: 0 0 0 1px #007599; border-radius: 3px; display: block; min-height: 35px; height: auto; line-height: 35px; text-decoration: none; cursor: pointer;  font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #ffffff; font-weight: 400; text-align: center; vertical-align: middle;"><span class="no_display">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Download &amp; Print Your eTickets
+                                                        <span class="no_display">&nbsp;&nbsp;&raquo;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <!-- spacer -->
+                                                <tr>
+                                                    <td align="center" width="100%" height="18px" style="width: 100%; height: 18px; line-height: 18px; padding: 0;">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                                <!-- end spacer -->
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <p style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; margin: 0 0 5px 0;">
+                                                            If you are having trouble downloading your eTickets, please email us at <a href="mailto:CustomerService@TicketNetwork.com?subject=Question%20about%20Order%20#23233073" target="_top" style="font-family: Arial, Helvetica, sans-serif; color: #1F739F;text-decoration:~~text-decoration~~; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; "  class="mobileLink">CustomerService@TicketNetwork.com</a> or call 
+<a href="tel:(888) 456-8499" target="_blank" style="font-family: Arial, Helvetica, sans-serif; color: #333333;text-decoration:none; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; "  class="mobileLink">(888) 456-8499</a>.
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <!-- spacer -->
+                                                <tr>
+                                                    <td align="center" width="100%" height="20px" style="width: 100%; height: 20px; line-height: 20px; padding: 0;">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                                <!-- end spacer -->
+                                                <tr>
+                                                    <td align="center" valign="top">
+
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; border: 1px solid #ececec; margin:0 auto;">
+                                                            <tr>
+                                                                <th valign="middle" bgcolor="#f2f2f2" align="left" style="padding: 10px; border-bottom: 1px solid #ececec; font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: bold; text-align: left; font-size: 14px; margin: 5px 10px !important; background: #f2f2f2; min-height: 36px; height: auto;">
+                                                                    Order #23233073
+                                                                </th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding: 10px 10px 8px;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="eventName" style="font-family: Arial, Helvetica, sans-serif; color: #666666; font-weight: bold; text-align: left; font-size: 14px; line-height: 18px; margin: 0 0 8px 0;">
+                                                                                San Francisco Giants vs. Kansas City Royals
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; margin: 0;">
+                                                                                Wednesday, $year$-06-14 at 12:45PM
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; margin: 0;">
+                                                                                AT&T Park, San Francisco, CA, United States of America
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 12px; line-height: 18px; margin: 0;">
+                                                                                <b>Section</b>&nbsp;View Reserved Outfield 304&nbsp; <b>Row</b>&nbsp;14&nbsp; <b>Quantity</b>&nbsp;2
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                              
+                                                            
+                                                            
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- spacer -->
+                                                <tr>
+                                                    <td align="center" width="100%" height="25px" style="width: 100%; height: 25px; line-height: 25px; padding: 0;">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr><!-- end spacer -->
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <p style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; margin: 0 0 12px 0;"><b>Questions about your order?</b> Email us at <a href="mailto:CustomerService@TicketNetwork.com?subject=Question%20about%20Order%20#23233073" target="_top" style="style="font-family: Arial, Helvetica, sans-serif; color: #1F739F;text-decoration:~~text-decoration~~; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; "  class="mobileLink">CustomerService@TicketNetwork.com</a> or call 
+<a href="tel:(888) 456-8499" target="_blank" style="style="font-family: Arial, Helvetica, sans-serif; color: #333333;text-decoration:none; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; "  class="mobileLink">(888) 456-8499</a>.</p>
+                                                        <p style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; margin: 0 0 7px 0;">Enjoy your event!</p>
+                                                        <p style="font-family: Arial, Helvetica, sans-serif; color: #333333; font-weight: 400; text-align: left; font-size: 13px; line-height: 18px; margin: 12px 0 10px 0;">TicketNetwork.com Customer Support<br />
+CustomerService@TicketNetwork.com<br />(888) 456-8499</p>
+                                                        <!-- END MAIN CONTENT -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                                    </td>
+                                    </tr>
+                                </table>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="footer" bgcolor="#eeeeee" style="background: #eeeeee;  margin: 0 auto; ">
+                                    <tr>
+                                        <td valign="top" align="center" class="footerContent footerSocail" bgcolor="#eeeeee" style="background:  #eeeeee; text-align: center; margin: auto; padding: 3% 2% 2%; width: 96%;">
+                                            <a href="https://twitter.com/TicketNetwork"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/tknet/TN_twitter-37x37.png" width="30" height="30" alt="Follow us on Twitter" style="border:none;"></a>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <a href="https://www.facebook.com/TicketNetwork"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/tknet/TN_FB-37x37.png" width="30" height="30" alt="" style="border:none;"></a>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <a href="https://plus.google.com/+TicketNetwork/posts"><img src="https://static.cdn.responsys.net/i2/responsysimages/content/tknet/TN_gplus-37x37.png" width="30" height="30" alt="" style="border:none;"></a>
+
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <!-- // END BODY -->
+
+                </td>
+            </tr>
+            <tr>
+                <td align="center" valign="top">
+
+                    <table>
+                        <tr>
+                            <td align="center" width="100%" style="width: 100%;">
+                                
+
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
+

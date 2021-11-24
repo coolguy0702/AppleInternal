@@ -1,0 +1,9 @@
+{
+    "applinks": {
+        "details": [{
+            "appID": "0000000000.com.apple.SharingDemoApp",
+            "components": [{ "/": "*" }],
+			"alwaysEnabled": true
+        }]
+    }
+}

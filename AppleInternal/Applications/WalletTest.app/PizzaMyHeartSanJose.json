@@ -1,0 +1,26 @@
+{
+  "name": "Pizza My Heart",
+  "category": "fooddrinks",
+  "rewardsType": "other",
+  "source": "physical",
+  "city": "San Jose",
+  "state": "CA",
+  "merchant": {
+    "category": "fooddrinks",
+    "detailedCategory": "restaurants.pizza",
+    "heroImageURL": "https://s3-media1.fl.yelpcdn.com/bphoto/SvLGvBzWQWhoU4kCEcV8SA/o.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 3549532470965725063,
+    "locationLatitude": 37.30010245806086,
+    "locationLongitude": -121.7716026306152,
+    "name": "Pizza My Heart",
+    "phoneNumber": "+1 (408) 238-6000",
+    "url": "http://www.pizzamyheart.com"
+  },
+  "brand": {
+    "category": "fooddrinks",
+    "identifier": 16865611693206952470,
+    "name": "Pizza My Heart",
+    "url": "http://www.pizzamyheart.com"
+  }
+}

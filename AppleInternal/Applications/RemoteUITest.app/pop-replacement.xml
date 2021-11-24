@@ -1,0 +1,9 @@
+<xmlui action="pop">
+    <page>
+        <navigationBar title="Sample XML UI"/>
+        <tableView>
+            <section footer="Response with action='pop' + replacement page.">
+            </section>
+        </tableView>
+    </page>
+</xmlui>

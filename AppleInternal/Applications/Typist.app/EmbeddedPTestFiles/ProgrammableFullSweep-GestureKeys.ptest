@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>ProgrammableFullSweep-GestureKeys</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+
+                <!--
+                            CHINESE
+                -->
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin-Simplified;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyGestureKeyInProgrammable</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>86000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator. keystrokesText and expectedText are generated programatically by looking up KBTree.</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>zh_Hant-Pinyin@sw=Pinyin-Traditional;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyGestureKeyInProgrammable</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>86000002</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator. keystrokesText and expectedText are generated programatically by looking up KBTree.</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>zh_Hant-Cangjie@sw=Cangjie;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyGestureKeyInProgrammable</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>86000003</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator. keystrokesText and expectedText are generated programatically by looking up KBTree.</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>zh_Hant-Cangjie@sw=Cangjie-QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyGestureKeyInProgrammable</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>86000004</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator. keystrokesText and expectedText are generated programatically by looking up KBTree.</string>
+                </dict>
+
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>zh_Hant-Zhuyin@sw=Zhuyin;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyGestureKeyInProgrammable</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>86000005</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator. keystrokesText and expectedText are generated programatically by looking up KBTree.</string>
+                </dict>
+
+                <!--
+                            JAPANESE
+                -->
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Romaji@sw=QWERTY-Japanese;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyGestureKeyInProgrammable</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>81000001</string>
+                        <!-- *** This is a sample for ignoreKeys option. The specified keys are skipped to type. *** -->
+                        <key>ignoreKeys</key>
+                        <string>4</string>
+                        <!-- -->
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator. keystrokesText and expectedText are generated programatically by looking up KBTree.</string>
+                </dict>
+
+                <!--
+                            Korean
+                -->
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>ko_KR@sw=Korean;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyGestureKeyInProgrammable</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>82000001</string>
+                        <key>ignoreKeys</key>
+                        <string>4</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator. keystrokesText and expectedText are generated programatically by looking up KBTree.</string>
+                </dict>
+
+
+                <!--
+                            EFIGS
+                -->
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyGestureKeyInProgrammable</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator. keystrokesText and expectedText are generated programatically by looking up KBTree.</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>10000002</string>
+                        <!-- *** This is a sample for ignoreKeys option. The specified keys are skipped to type. *** -->
+                        <key>plane</key>
+                        <string>letter</string>
+                        <!-- -->
+                    </dict>
+                    <key>Description</key>
+                    <string>Types only the letter planes.  The plane argument is an option to do it. using alternatate will test first/second alternanate planes. Default is ALL.</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>es_ES@sw=QWERTY-Spanish;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyGestureKeyInProgrammable</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>11000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator. keystrokesText and expectedText are generated programatically by looking up KBTree.</string>
+                </dict>
+
+            </array>
+        </dict>
+    </array>
+</plist>

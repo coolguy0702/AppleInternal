@@ -1,0 +1,47 @@
+<xmlui>
+    <script>
+        <![CDATA[
+            function showAlert()
+            {
+                var defaultButton = {"title": "Default", "handler": function() {
+                    xmlui.alert("Default");
+                }};
+                var destructiveButton = {"title": "Destructive", "style": "destructive", "handler": function() {
+                    xmlui.alert("Destructive");
+                }};
+                var cancelButton = {"title": "Cancel", "style": "cancel", "handler": function() {
+                    xmlui.alert("Cancel");
+                }};
+                var theAlert = {"title":"Title!", "message":"Message!", "buttons": [
+                    defaultButton, destructiveButton, cancelButton
+                ]};
+                xmlui.alert(theAlert);
+            }
+        ]]>
+    </script>
+    <page>
+        <tableView>
+            <section>
+                <linkRow label="Alert Document" url="alert.xml" accessory="disclosure"/>
+                <linkRow label="Alert with styles" url="#alertwithstyles" accessory="disclosure"/>
+                <linkRow label="Alert as sheet" url="#alertassheet" accessory="disclosure"/>
+                <linkRow label="Alert to Load URL" url="alerturl.xml" accessory="disclosure"/>
+                <linkRow label="Alert + Pop" url="alert-pop.xml" accessory="disclosure"/>
+                <linkRow label="Alert from Javascript" activationFunction="showAlert" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+    
+    <alert id="alertassheet" style="sheet" title="Thing Doer" message="Whether or not to Do the Thing™">
+        <button destructive="true">Do the Thing</button>
+        <button>Do the Other Thing</button>
+        <cancelButton>Don‘t do the Thing</cancelButton>
+    </alert>
+    
+    <alert id="alertwithstyles" preferredButton="thepreferredbutton">
+        <button>Default Button</button>
+        <button id="thepreferredbutton">Preferred Button</button>
+        <button destructive="true">Destructive Button</button>
+        <cancelButton>Cancel Button</cancelButton>
+    </alert>
+</xmlui>

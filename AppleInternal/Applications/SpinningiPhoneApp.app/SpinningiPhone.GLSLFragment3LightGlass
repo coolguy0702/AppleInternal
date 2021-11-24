@@ -1,0 +1,54 @@
+precision highp float;
+
+uniform vec4 material_color;
+uniform float light_specular_exp;
+uniform float light_specular_scale;
+uniform samplerCube cubemap;
+
+varying vec3 unit_normal;
+varying vec3 eye_vector;
+
+void main()
+{
+	vec3 light_ambient = vec3(0.175, 0.2, 0.2);
+	float light_diffuse_scale = 0.35;
+	
+	vec3 norm_unit_normal = normalize(unit_normal);
+
+	vec3 light1_color = vec3(0.3, 0.6, 0.9);
+	vec3 light1_angle = -normalize(vec3(0.7, 0.3, 1.0));
+	
+	vec3 light2_color = vec3(0.9, 0.75, 0.4) * 0.7;
+	vec3 light2_angle = -normalize(vec3(-1.0, 0.3, 0.2));
+	
+	vec3 light3_color = vec3(0.9, 0.75, 0.4) * 0.7;
+	vec3 light3_angle = -normalize(vec3(-0.2, 0.3, 1.0));
+
+	vec3 ambient = material_color.rgb * light_ambient;
+
+	vec3 light_diffuse = vec3(0.8, 0.8, 0.8);
+	vec3 diffuse = vec3(0.0, 0.0, 0.0);
+	
+	diffuse += light1_color * max(dot(norm_unit_normal, light1_angle), 0.0);
+	diffuse += light2_color * max(dot(norm_unit_normal, light2_angle), 0.0);
+	diffuse += light3_color * max(dot(norm_unit_normal, light3_angle), 0.0);
+	diffuse *= material_color.rgb;
+	
+	vec3 specular = vec3(0.0, 0.0, 0.0);
+	
+	vec3 reflect_vector = normalize(reflect(eye_vector, norm_unit_normal));
+	vec4 reflect_color = textureCube(cubemap, reflect_vector, 0.0);
+	float r0 = 0.1;
+	float fresnel = mix(r0, 1.0, pow(1.0-dot(reflect_vector, norm_unit_normal), 5.0));
+
+	vec3 light1_halfangle = normalize(normalize(light1_angle) + eye_vector);
+	vec3 light2_halfangle = normalize(normalize(light2_angle) + eye_vector);
+	vec3 light3_halfangle = normalize(normalize(light3_angle) + eye_vector);
+
+	specular += light1_color * pow(max(dot(reflect_vector, -light1_angle), 0.0), light_specular_exp);
+	specular += light2_color * pow(max(dot(reflect_vector, -light2_angle), 0.0), light_specular_exp);
+	specular += light3_color * pow(max(dot(reflect_vector, -light3_angle), 0.0), light_specular_exp);
+	
+//	gl_FragColor = vec4(ambient + diffuse * light_diffuse_scale + specular * light_specular_scale, 1.0);
+	gl_FragColor = vec4(ambient + diffuse * light_diffuse_scale + specular * light_specular_scale * fresnel + reflect_color.rgb * fresnel, 1.0);
+}

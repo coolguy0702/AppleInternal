@@ -1,0 +1,45 @@
+{
+    "account" : {
+        "identifier": "75698eae-e65d-4d84-a588-599776739d64",
+        "remainingMinimumPayment" : "25.00",
+        "currentBalance" : "2300",
+        "adjustedBalance": "1234",
+        "remainingStatementBalance" : "855",
+        "statementBalance" : "855",
+        "featureMinimumAmount" : "0.01",
+        "statementIdentifier": "d0202bb6-cd15-467f-95aa-52608510cdc3",
+        "apr": "0.16",
+        "creditLimit":"5000",
+        "currentStatementPurchases" : "0",
+        "paymentsAndCredits": "0",
+        "availableCredit":"3766",
+        "installments": [
+            {
+                "identifier": "14a896c1-2e09-4f05-aa54-b551cc9bd4b4",
+                "state":"active",
+                "paymentStatementIdentifier":"d0202bb6-cd15-467f-95aa-52608510cdc3",
+                "icon": {
+                    "2x": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone/xr/iphone-xr-red-select-201809?wid=910&hei=910&fmt=png-alpha&.v=1551226036356",
+                }
+            },
+            {
+                "identifier": "c8837eb0-1bd6-4af2-9bcd-9ae0fbc34592",
+                "state":"active",
+                "paymentStatementIdentifier":"d0202bb6-cd15-467f-95aa-52608510cdc3",
+                "icon": {
+                    "2x": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone/xr/iphone-xr-red-select-201809?wid=910&hei=910&fmt=png-alpha&.v=1551226036356",
+                }
+            }
+        ]
+    },
+    "currentStatementSelectedSuggestedAmountEvents" : [
+    ],
+    "currentStatementPurchasesTransactions" : [
+    ],
+    "previousStatementPurchasesTransactions" : [
+    ],
+    "currentStatementBillPaymentTransactions" : [
+    ],
+    "previousStatementBillPaymentTransactions" : [
+    ]
+}

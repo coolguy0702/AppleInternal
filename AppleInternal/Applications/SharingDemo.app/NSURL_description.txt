@@ -1,0 +1,12 @@
+NSURL Description
+An NSURL object lets you manipulate URLs and the resources they reference. The URLs employed by the NSURL class are described in RFCs 1808, 1738, and 2732. The litmus test for conformance to RFC 1808 is as recommended in RFC 1808—specifically, whether the first two characters of resourceSpecifier are slashes (//).
+
+You can use an NSURL object to refer to a file, which is the preferred way to do so. AppKit objects that can read data from or write data to a file generally have methods that accept an NSURL object instead of a pathname as the file reference. In OS X, the NSWorkspace class provides openURL: to open a location specified by a URL. Similarly, in iOS, UIApplication provides openURL:. To get the contents of a URL, NSString provides stringWithContentsOfURL: and NSData provides dataWithContentsOfURL:.
+
+An NSURL object is composed of two parts—a potentially nil base URL and a string that is resolved relative to the base URL. An NSURL object whose string is fully resolved without a base is considered absolute; all others are considered relative.
+
+The classes NSURLConnection and NSURLDownload define methods useful for loading URL resources in the background. See URL Loading System Programming Guide for more information
+
+See also NSURL Additions Reference in the AppKit framework, which describes methods supporting pasteboards.
+
+The NSURL class is toll-free bridged with its Core Foundation counterpart, CFURLRef. For more information on toll-free bridging, see “Toll-Free Bridging”.

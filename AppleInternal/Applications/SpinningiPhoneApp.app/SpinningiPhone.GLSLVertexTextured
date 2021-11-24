@@ -1,0 +1,24 @@
+uniform mat3 normal_matrix;
+uniform mat4 modelview_matrix;
+uniform mat4 modelview_projection_matrix;
+
+varying vec3 unit_normal;
+varying vec3 up_vector;
+varying vec3 eye_vector;
+varying vec2 tex_coord;
+
+attribute vec4 position;
+attribute vec3 normal;
+attribute vec2 texcoord;
+attribute vec3 up;
+
+void main()
+{
+	unit_normal = normalize(normal_matrix * normal);
+	up_vector = normalize(normal_matrix * up);
+	vec4 world_position = modelview_matrix * vec4(position.xyz, 1.0);
+	eye_vector = world_position.xyz;
+	
+	gl_Position = modelview_projection_matrix * vec4(position.xyz, 1.0);
+	tex_coord = texcoord;
+}

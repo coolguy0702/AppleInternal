@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamDeepDive-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>it_IT@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.2</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false />
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.8</real>
+                        <key>SwipePPivot</key>
+                        <real>0.8</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>ciao perche non ci vediamo per bere un caffe e decidiamo un po che fare a capodanno</string>
+                                <key>expectedText</key>
+                                <string>Ciao perché non ci vediamo per bere un caffè e decidiamo un po’ che fare a capodanno</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359023</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Informal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>buonasera poiché non abitiamo in prossimita dellalloggio che occuperete avremmo bisogno di sapere a che ora pensate di arrivare gentilmente se lo sapete gia ditecelo per favore in caso contrario va bene un messaggio anche solo unoretta prima del vostro arrivo grazie Paolo</string>
+                                <key>expectedText</key>
+                                <string>Buonasera poichè non abitiamo in prossimità dell’alloggio che occuperete avremmo bisogno di sapere a che ora pensate di arrivare gentilmente se lo sapete già ditecelo per favore in caso contrario va bene un messaggio anche solo un'oretta prima del vostro arrivo grazie Paolo</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359022</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>formal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Come viaggiare con un salmone e un libro di istruzioni istruzioni sui generis date da un maestro deccezione per situazioni molto particolari come imparare a fare vacanze intelligenti come sopravvivere alla burocrazia come evitare malattie contagiose come mangiare in aereo come viaggiare con un salmone al seguito se te lo regalano e non vuoi rinunciare alla leccornia come evitare il carnevale come non cedere allossessione della visibilita e molto altro un libro che ci guida nella selva delle nostre giornate nella consapevolezza che la vita scorre per lo piu tra piccole cose  incontri fortuiti piccoli problemi e non tra dilemmi amletici e interrogativi sullessere che occupano solo una piccolissima porzione del nostro tempo pur essendo lunica cosa che conta</string>
+                                <key>expectedText</key>
+                                <string>Come viaggiare con un salmone è un libro di istruzioni istruzioni sui generis date da un maestro d’eccezione per situazioni molto particolari come imparare a fare vacanze intelligenti come sopravvivere alla burocrazia come evitare malattie contagiose come mangiare in aereo come viaggiare con un salmone al seguito se te lo regalano e non vuoi rinunciare alla leccornia come evitare il carnevale come non cedere all’ossessione della visibilità e molto altro Un libro che ci guida nella selva delle nostre giornate nella consapevolezza che la vita scorre per lo più tra piccole cose incontri fortuiti piccoli problemi, e non tra dilemmi amletici e interrogativi sull’essere che occupano solo una piccolissima porzione del nostro tempo pur essendo l’unica cosa che conta</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359026</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Paragraph</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359025</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>identificheremo  deliberatamente i trasgressori </string>
+                                <key>expectedText</key>
+                                <string>Identificheremo  deliberatamente i trasgressori </string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>le vicegovernatrici quadruplicarono la produzione di giubbotti antiproiettile</string>
+                                <key>expectedText</key>
+                                <string>Le vicegovernatrici quadruplicarono la produzione di giubbotti antiproiettile</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>sarebbe controproducente se sparpagliassimo le controsoffitature</string>
+                                <key>expectedText</key>
+                                <string>Sarebbe controproducente se sparpagliassimo le controsoffitature</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>ce una predisposizione a sperimentare piuttosto che a disorientare</string>
+                                <key>expectedText</key>
+                                <string>C’è una predisposizione a sperimentare piuttosto che a disorientare</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words15</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359024</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>la danzatrice cadaverica identifico facilmente le composizioni jazzistiche</string>
+                                <key>expectedText</key>
+                                <string>La danzatrice cadaverica identificò facilmente le composizioni jazzistiche</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>il calciatore pachistano assomigliava a un cacciatore facinoroso</string>
+                                <key>expectedText</key>
+                                <string>Il calciatore pachistano assomigliava a un cacciatore facinoroso</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words10</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359031</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>lidea dellimmensita e uno dei misteri delluniverso</string>
+                                <key>expectedText</key>
+                                <string>L’idea dell’immensità è uno dei misteri dell’universo</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>lamica dellingegnere sinteressa darte</string>
+                                <key>expectedText</key>
+                                <string>L’amica dell’ingegnere s’interessa d’arte</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Apostrophe</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359033</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>oggi vado a roma e a napoli</string>
+                                <key>expectedText</key>
+                                <string>Oggi vado a Roma e a Napoli</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>la citta di la spezia si trova in liguria</string>
+                                <key>expectedText</key>
+                                <string>La città di La Spezia si trova in Liguria</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>sono stati eletti i presidenti delle regioni campania ed emilia romagna</string>
+                                <key>expectedText</key>
+                                <string>Sono stati eletti i presidenti delle regioni Campania ed Emilia-Romagna</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>ho fatto le vacanze in trentino alto adige</string>
+                                <key>expectedText</key>
+                                <string>Ho fatto le vacanze in Trentino-Alto Adige</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Autocaplitalization</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359035</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>matteo salvini e luigi di maio sono i nuovi vicepresidenti del consiglio</string>
+                                <key>expectedText</key>
+                                <string>Matteo Salvini e Luigi Di Maio sono i nuovi vicepresidenti del consiglio</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>massimo dalema e stato un avversario politico di silvio berlusconi</string>
+                                <key>expectedText</key>
+                                <string>Massimo D’Alema è stato un avversario politico di Silvio Berlusconi</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>il mercante veneziano marco polo visito la cina nel tredicesimo secolo</string>
+                                <key>expectedText</key>
+                                <string>Il mercante veneziano Marco Polo visitò la Cina nel tredicesimo secolo</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>umberto eco ha scritto sia romanzi che saggi</string>
+                                <key>expectedText</key>
+                                <string>Umberto Eco ha scritto sia romanzi che saggi</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Names</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359034</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>chi ci assicura che ci saranno ancora ancore in mare</string>
+                                <key>expectedText</key>
+                                <string>Chi ci assicura che ci saranno ancora ancore in mare</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>sono sano e inseguo il sogno dinsegnare</string>
+                                <key>expectedText</key>
+                                <string>Sono sano e inseguo il sogno d’insegnare</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>bere a bari con la bora fa bene ai bari nelle bare con la biro</string>
+                                <key>expectedText</key>
+                                <string>Bere a Bari con la bora fa bene ai bari nelle bare con la biro</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>il pezzo di pizza del pazzo puzza come una pezza in una pozza</string>
+                                <key>expectedText</key>
+                                <string>Il pezzo di pizza del pazzo puzza come una pezza in una pozza</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Words</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359032</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>andro in citta perche non so se ci ritornero</string>
+                                <key>expectedText</key>
+                                <string>Andrò in città perché non so se ci ritornerò </string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>ordino un caffe per aspettare un po</string>
+                                <key>expectedText</key>
+                                <string>Ordinò un caffè ed aspettò un po’</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>La somma fatta da me da come risultato ventitré</string>
+                                <key>expectedText</key>
+                                <string>La somma fatta da me dà come risultato ventitré </string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Accents</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>
+

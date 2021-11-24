@@ -1,0 +1,1 @@
+This class was hoisted out of a sub-project in UIKit. Dominic Wagner says this is the only way to use recap files from within a project at the moment. There are no plans to add recap to UIKit or any other framework.

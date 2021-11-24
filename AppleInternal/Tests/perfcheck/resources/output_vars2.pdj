@@ -1,0 +1,101 @@
+{
+"$schema": "https://perfdata.apple.com/schema/draft-01.json",
+"name": "_libperfcheck_._default_",
+"version": 1,
+"start_date": "2018-10-10T21:46:19Z",
+"generator": "perfdata.framework:perfdata-27",
+"data": [
+[
+{
+"metric": "cpu_time", "unit": "ns", "value": 325891833.33333331,
+"variables": {
+ "_pc_metric_group": "CPU",
+"_pc_process_name": "faked"
+}
+},
+{
+"metric": "cpu_instrs", "unit": "kiloinstructions", "value": 338789,
+"variables": {
+ "_pc_metric_group": "CPU",
+"_pc_process_name": "faked"
+}
+},
+{
+"metric": "current_mem", "unit": "kB", "value": 2544,
+"variables": {
+ "_pc_metric_group": "MEMORY (dirty)",
+"_pc_process_name": "faked"
+}
+},
+{
+"metric": "lifetime_peak", "unit": "kB", "value": 2752,
+"variables": {
+ "_pc_metric_group": "MEMORY (dirty)",
+"_pc_process_name": "faked"
+}
+},
+{
+"metric": "storage_dirtied", "unit": "kB", "value": 3572,
+"variables": {
+ "_pc_metric_group": "STORAGE I/O",
+"_pc_process_name": "faked"
+}
+},
+{
+"metric": "metric1", "unit": "#none", "value": 0,
+"variables": {
+ "_pc_failure_threshold_abs": 0,
+"_pc_metric_group": "VARIABLES (output)",
+"_pc_process_name": "faked",
+"var1": "foo,bar,baz",
+"var2": "foobar",
+"_pc_output_variables": "var1,var2"
+}
+},
+{
+"metric": "metric2", "unit": "#none", "value": 0,
+"variables": {
+ "_pc_failure_threshold_abs": 0,
+"_pc_metric_group": "VARIABLES (output)",
+"_pc_process_name": "faked",
+"var1": "foo,foo,baz,bar,bar,foo,bar",
+"var2": "foo,bar,foo,bar,foo",
+"var3": "foo",
+"var4": "bar,yak",
+"_pc_output_variables": "var1,var2,var3,var4"
+}
+},
+{
+"metric": "metric3", "unit": "#none", "value": 0,
+"variables": {
+ "_pc_failure_threshold_abs": 0,
+"_pc_metric_group": "VARIABLES (output)",
+"_pc_process_name": "faked",
+}
+}
+]
+],
+"end_date": "2018-10-10T21:46:19Z",
+"description": "faked[65] Lifetime Usage",
+"configuration": {
+"device_type": "D10AP",
+"product_type": "iPhone9,1",
+"cpu_type": 16777228,
+"cpu_subtype": 1,
+"cpu_family": 1741614739,
+"logical_cpus": 2,
+"physical_cpus": 2,
+"memory_size": 2097152000,
+"hw_pagesize": 16384,
+"vm_pagesize": 16384,
+"vm_pages": 125169,
+"kernel_version": "Darwin Kernel Version 19.0.0: Mon Oct  8 21:10:53 PDT 2018; root:xnu_development-5410~15/DEVELOPMENT_ARM64_T8010",
+"build": "17A360",
+"thread_groups_supported": false,
+"boot_args": " amfi_allow_any_signature=1 wlan.socramdump.disable=1 amfi_unrestrict_task_for_pid=1 atm_diagnostic_config=0x80000000 launchctl_enforce_codesign=0 disable_exc_resource=1 sb_auto_trace_max_proc=0 sb_auto_trace=0 cs_enforcement_disable=1 debug=0x104c04",
+"device_uuid": "ED6C9977-D0CB-5F84-B74B-5303DE1F32BE",
+"rootvol_size": 127989469184,
+"max_battery_resistance_milliohms": 296,
+"dsc_overriding_images_present": true
+}
+}

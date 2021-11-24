@@ -1,0 +1,49 @@
+{
+  "actions": [
+    {
+      "identifier": "topUpPass",
+      "type": "enteredValue",
+      "hasRemoteContent": false,
+      "relevantPropertyIdentifier": "$id_storedvalue",
+      "title": "Add Money",
+      "description": "Add money to pass",
+      "confirmationTitle": "Add",
+      "featured": true,
+      "merchantId": "TRANSIT_FOO",
+      "serviceProviderIdentifier": "TRANSIT_FOO",
+      "serviceProviderCountryCode": "US",
+      "serviceProviderSupportedNetworks": [
+        "AmEx",
+		"Visa",
+		"MasterCard"
+      ],
+      "serviceProviderCapabilities": [
+        "EMV",
+        "debit"
+      ],
+      "item": {
+        "currency": "USD",
+        "minLoadedBalance": 0.01,
+        "maxLoadedBalance": 1000.0,
+        "minLoadAmount": 1.0,
+        "maxLoadAmount": 500.0,
+        "defaultSuggestions": [
+          10.0,
+          20.0,
+          50.0
+        ],
+        "lowBalanceReminderOptions": [
+            5.0,
+            10.0,
+            15.0
+        ],
+        "serviceProviderData": {
+          "actionIdentifier": "top_up",
+          "currency": "USD",
+          "issuerIdentifier": "GA",
+          "dpanIdentifier": "DAPLAPMock0141b16d3712634a5e8959448d02bfe30b"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+faked[65] Lifetime Usage
+------------------------
+CPU
+       326 ms cpu_time        -10% __________*__________ +10%
+                                   __________B__________     
+    338789 kI cpu_instrs      -10% __________*__________ +10%
+                                   __________B__________     
+
+MEMORY (dirty)
+      2544 kB current_mem     -10% __________*__________ +10%
+                                   __________B__________     
+      2752 kB lifetime_peak   -10% __________*__________ +10%
+                                   __________B__________     
+
+STORAGE I/O
+      3572 kB storage_dirtied -10% __________*__________ +10%
+                                   __________B__________     
+
+VARIABLES (output)
+         0    metric1          0 : *____________________ n/a 
+                                   B____________________     
+           var1: foo bar baz
+           var2: foobar
+         0    metric2          0 : *____________________ n/a 
+                                   B____________________     
+           var2: foo bar foo bar foo
+           (baseline)
+           var1: foo bar yak baz
+           var3: foo foo foo
+           var4: foo baz
+           var5: baz
+           (current)
+           var1: foo foo baz bar bar foo bar
+           var3: foo
+           var4: bar yak
+         0    metric3          0 : *____________________ n/a 
+                                   B____________________     
+           (baseline)
+           var1: foo bar baz
+           var2: foobar

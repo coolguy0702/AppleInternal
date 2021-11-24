@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Latham</string>
+            <key>ID</key>
+            <string>Latham Playback - pt_BR</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>de_DE@sw=QWERTY-German;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>autoCapitalization</key>
+                        <string>NO</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLathamUserDataPlayBack</string>
+                        <key>testFunction</key>
+                        <string>playbackUnifiedRecordedData</string>
+                        <key>dirPath</key>
+                        <string>/var/mobile/Documents/com.apple.Typist/TITKPlaybackData/</string>
+                        <key>keyboardsToConfigure</key>
+                        <array>
+                            <string>iOS</string>
+                            <string>Gboard</string>
+                            <!--                                <string>Sogou</string>-->
+                            <!--                                <string>Baidu</string>-->
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>
+

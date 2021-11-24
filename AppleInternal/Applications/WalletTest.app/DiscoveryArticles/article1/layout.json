@@ -1,0 +1,213 @@
+{
+    "identifier": "62a80983-cc9a-4d81-af0c-db6c69dd8979",
+    "version": 1,
+    "card": {
+        "titleKey": "CARD_TITLE",
+        "headingKey": "CARD_HEADING",
+        "backgroundMedia": {
+            "identifier": "c1cec0dc-d16b-11e8-bb9c-88e9fe4d93f4",
+            "type": "image",
+            "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/hero-cashback@3x.png",
+            "urls": {
+                "2x": {
+                    "url":"https://wallet-assets-dev.scv.apple.com/discovery/assets/hero-cashback@2x.png",
+                    "sha1":"<SHA1-hero-cashback@2x.png>"
+                },
+                "3x": {
+                    "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/hero-cashback@3x.png",
+                    "sha1":"<SHA1-hero-cashback@3x.png>"
+                }
+            },
+            "width": 750,
+            "height": 624,
+            "backgroundColor": "rgb(255,255,255)"
+        },
+        "callToAction": {
+            "subtitleKey": "CTA_SUBTITLE",
+            "buttonTextKey": "CTA_BUTTON_TEXT",
+            "action": "featureApply",
+            "actionInfo": {
+                "featureIdentifier": "ccs",
+                "referrerIdentifier": "cid%3Dapy-500-100001"
+            },
+            "backgroundColor": "rgba(255,255,255,0.2)"
+        },
+        "backgroundColor": "rgba(255,255,255,1)",
+        "foregroundContentMode": "dark"
+    },
+    "shelves": [
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        },
+        {
+            "shelfType": "textBlock",
+            "bodyKey": "SHELF_1_BODY"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        },
+        {
+            "shelfType": "textBlock",
+            "sectionHeadlineKey": "SHELF_3_HEADLINE",
+            "bodyKey": "SHELF_3_BODY"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerC"
+        },
+        {
+            "shelfType": "textBlock",
+            "bodyKey": "SHELF_4_BODY"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        },
+        {
+            "__comment": "Front of Pass",
+            "shelfType": "inlineMedia",
+            "media": {
+                "identifier": "cc177861-d16c-11e8-bb9d-88e9fe4d93f4",
+                "type": "image",
+                "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/dashboard@3x.png",
+                "urls": {
+                    "2x": {
+                        "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/dashboard@2x.png",
+                        "sha1": "<SHA1-dashboard@2x.png>"
+                    },
+                    "3x": {
+                        "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/dashboard@3x.png",
+                        "sha1": "<SHA1-dashboard@3x.png>"
+                    }
+                },
+                "width": 1242,
+                "height": 935,
+                "backgroundColor": "rgb(255,255,255)"
+            },
+            "inlineDisplayType": "fullWidth"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        },
+        {
+            "shelfType": "textBlock",
+            "sectionHeadlineKey": "SHELF_5_HEADLINE",
+            "bodyKey": "SHELF_5_BODY"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        },
+        {
+            "shelfType": "textBlock",
+            "sectionHeadlineKey": "SHELF_7_HEADLINE",
+            "bodyKey": "SHELF_7_BODY"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        },
+        {
+            "shelfType": "textBlock",
+            "bodyKey": "SHELF_7a_BODY"
+        },
+        {
+            "shelfType": "textBlock",
+            "ledeKey": "SHELF_8_LEDE",
+            "bodyKey": "SHELF_8_BODY"
+        },
+        {
+            "shelfType": "textBlock",
+            "ledeKey": "SHELF_9_LEDE",
+            "bodyKey": "SHELF_9_BODY"
+        },
+        {
+            "shelfType": "textBlock",
+            "ledeKey": "SHELF_10_LEDE",
+            "bodyKey": "SHELF_10_BODY"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        },
+        {
+            "__comment": "Daily Cash",
+            "shelfType": "inlineMedia",
+            "media": {
+                "identifier": "cc177861-d16c-11e8-bb9d-88e9fe4d93f4",
+                "type": "image",
+                "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/dailycash@3x.png",
+                "urls": {
+                    "2x": {
+                        "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/dailycash@2x.png",
+                        "sha1": "<SHA1-dailycash@2x.png>"
+                    },
+                    "3x": {
+                        "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/dailycash@3x.png",
+                        "sha1": "<SHA1-dailycash@3x.png>"
+                    }
+                },
+                "width": 750,
+                "height": 1302,
+                "backgroundColor": "rgb(255,255,255)"
+            },
+            "inlineDisplayType": "fullWidth"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        },
+        {
+            "shelfType": "textBlock",
+            "sectionHeadlineKey": "SHELF_12_HEADLINE",
+            "bodyKey": "SHELF_12_BODY"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        },
+        {
+            "shelfType": "textBlock",
+            "sectionHeadlineKey": "SHELF_14_HEADLINE"
+        },
+        {
+            "__comment": "Physical Card",
+            "shelfType": "inlineMedia",
+            "media": {
+                "identifier": "cc177861-d16c-11e8-bb9d-88e9fe4d93f4",
+                "type": "image",
+                "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/physical-card@3x.png",
+                "urls": {
+                    "2x": {
+                        "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/physical-card@2x.png",
+                        "sha1": "<SHA1-physical-card@2x.png>"
+                    },
+                    "3x": {
+                        "url": "https://wallet-assets-dev.scv.apple.com/discovery/assets/physical-card@3x.png",
+                        "sha1": "<SHA1-physical-card@3x.png>"
+                    }
+                },
+                "width": 750,
+                "height": 486,
+                "backgroundColor": "rgb(255,255,255)"
+            },
+            "inlineDisplayType": "fullWidth"
+        },
+        {
+            "shelfType": "textBlock",
+            "bodyKey": "SHELF_16_BODY"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        }
+    ]
+}
+

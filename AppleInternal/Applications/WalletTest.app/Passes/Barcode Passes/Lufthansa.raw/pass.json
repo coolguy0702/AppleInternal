@@ -1,0 +1,99 @@
+{
+  "description" : "Lufthansa Pass",
+  "formatVersion" : 1,
+  "teamIdentifier" : "K9942Z534D",
+  "foregroundColor" : "rgb(22, 55, 110)",
+  "locations" : [
+    {
+      "longitude" : -122.3748889,
+      "latitude" : 37.6189722
+    },
+    {
+      "longitude" : -122.03118,
+      "latitude" : 37.33182
+    }
+  ],
+  "serialNumber" : "gT6zrHkaW",
+  "backgroundColor" : "rgb(239, 184, 51)",
+  "barcode" : {
+    "message" : "AAAAAAaaaaa@@@@11111,: Ã©Ã©Ã©Ã©Ã©:::::11111",
+    "format" : "PKBarcodeFormatAztec",
+    "messageEncoding" : "iso-8859-1",
+    "altText" : "masdmfasmdf"
+  },
+  "passTypeIdentifier" : "pass.com.apple.test1",
+  "groupingIdentifier" : "lufthansa",
+  "logoText" : "Lufthansa",
+  "authenticationToken" : "blahblahblahblahblahblahblahblahblahblahblahblah",
+  "organizationName" : "Lufthansa",
+  "relevantDate" : "2011-12-08T13:00-08:00",
+  "webServiceURL" : "https:\/\/eliza.local:8000\/",
+  "boardingPass" : {
+    "transitType" : "WLTransitTypeAir",
+    "headerFields" : [
+      {
+        "key" : "gate",
+        "label" : "GATE",
+        "value" : "23"
+      }
+    ],
+    "primaryFields" : [
+      {
+        "key" : "depart",
+        "label" : "SAN FRANCISCO",
+        "value" : "SFO"
+      },
+      {
+        "key" : "arrive",
+        "label" : "NEW YORK",
+        "value" : "JFK"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "boardingTime",
+        "label" : "DEPART",
+        "value" : "22:30"
+      },
+      {
+        "key" : "flight",
+        "label" : "FLIGHT",
+        "value" : "LH451"
+      },
+      {
+        "key" : "class",
+        "label" : "DESIG.",
+        "value" : "First"
+      },
+      {
+        "key" : "date",
+        "label" : "DATE",
+        "value" : "03\/14"
+      }
+    ],
+    "backFields" : [
+      {
+        "key" : "passport",
+        "label" : "PASSPORT",
+        "value" : "Canadian\/Canadien"
+      },
+      {
+        "key" : "residence",
+        "label" : "RESIDENCE",
+        "value" : "350 E Mission St, San Jose, CA"
+      },
+      {
+        "key" : "terms",
+        "label" : "TERMS",
+        "value" : "Extension of Validity\nIf after having commenced your journey, you are prevented from travelling within the period of validity of the Ticket by reason of illness, we may extend the period of validity of your Ticket until the date when you become fit to travel or until our first flight after such date, from the point where the journey is resumed on which space is available in the class of service for which the fare has been paid. Such illness must be attested to by a medical certificate. When the flight coupons remaining in the Ticket involve one or more Stopovers, the validity of such Ticket may be extended for not more than three months from the date shown on such a certificate. In such circumstances, we will similarly extend the period of validity of Tickets of the other members of your immediate family accompanying you."
+      }
+    ],
+    "secondaryFields" : [
+      {
+        "key" : "passenger",
+        "label" : "PASSENGER",
+        "value" : "John Camp"
+      }
+    ]
+  }
+}

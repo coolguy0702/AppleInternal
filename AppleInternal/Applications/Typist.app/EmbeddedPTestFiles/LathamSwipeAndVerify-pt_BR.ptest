@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+   <array>
+      <dict>
+         <key>Category</key>
+         <string>Typist_InternationalKeyboard</string>
+         <key>ID</key>
+         <string>LathamSwipeAndVerify-MultiLanguages</string>
+         <key>Type</key>
+         <string>Suite</string>
+         <key>SuiteActions</key>
+         <array>
+             <dict>
+               <key>Arguments</key>
+               <dict>
+                  <key>testCaseID</key>
+                  <string>Setup</string>
+                  <key>keyboardID</key>
+                  <string>pt_BR@sw=QWERTY;hw=Automatic</string>
+                  <key>keyboardType</key>
+                  <string>Default</string>
+                  <key>deviceOrientation</key>
+                  <string>Portrait</string>
+                  <key>appendKeyboard</key>
+                  <string>YES</string>
+                  <key>autoCorrection</key>
+                  <string>YES</string>
+                  <key>typeInterval</key>
+                  <real>0.1</real>
+                  <key>autoCapitalization</key>
+                  <string>YES</string>
+                  <key>checkSpelling</key>
+                  <string>YES</string>
+                  <key>periodShortcut</key>
+                  <string>YES</string>
+                  <key>capsLock</key>
+                  <string>YES</string>
+                  <key>predictive</key>
+                  <string>YES</string>
+                  <key>smartPunctuation</key>
+                  <string>NO</string>
+                  <key>keyPaddle</key>
+                  <string>YES</string>
+                  <key>smallDisplay</key>
+                  <string>YES</string>
+                  <key>oneHandedLayout</key>
+                  <string>NORMAL</string>
+                  <key>SwipeForceSpace</key>
+                  <false/>
+                  <key>SwipeSigma</key>
+                  <real>5.0</real>
+                  <key>SwipeAlpha</key>
+                  <real>0.5</real>
+                  <key>SwipePPivot</key>
+                  <real>0.5</real>
+                  <key>testClass</key>
+                  <string>IntlQAKeyboardTestLatham</string>
+                  <key>testFunction</key>
+                  <string>cancelSwipe</string>
+                  <!--key>thirdPartyKeyboardsToConfigure</key>
+                   <array>
+                   <string>Gboard</string>
+                   </array-->
+               </dict>
+               <key>Description</key>
+               <string>Setup</string>
+            </dict>
+             <dict>
+                 <key>Arguments</key>
+                 <dict>
+                     <key>testCaseID</key>
+                     <string>22268423</string>
+                     <key>SwipeText</key>
+                     <string>alimenticios</string>
+                 </dict>
+             </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>testFunction</key>
+                   <string>lathamSwipeAndVerify</string>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>O que voce acha da gente ir no bar hoje a noite e encontrar a velha turma que faz um tempao que a gente nao ve</string>
+                          <key>expectedText</key>
+                          <string>O que você acha da gente ir no bar hoje a noite e encontrar a velha turma que faz um tempão que a gente não vê</string>
+                      </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000001</string>
+               </dict>
+               <key>Description</key>
+               <string>Informal Text</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>Caro senhor agradecemos o contato recebido por email no dia vinte do corrente mes Em relacao a vossa pergunta afirmolhe categoricamente que a nossa empresa nao esteve envolvida no escandalo noticiado largamente pela imprensa local e que seguimos a risca todas as normas tecnicas de fabricacao de produtos alimenticios para gatos e cachorros Pedidolhes desculpas em relacao ao malentendido que isso por ventura possa ter ocasionado e por quaisquer dificuldades advindas do consumos de nossos produtos</string>
+                          <key>expectedText</key>
+                          <string>Caro senhor agradecemos o contato recebido por e-mail no dia vinte do corrente mês Em relação à vossa pergunta afirmo-lhe categoricamente que a nossa empresa não esteve envolvida no escândalo noticiado largamente pela imprensa local e que seguimos à risca todas as normas técnicas de fabricação de produtos alimentícios para gatos e cachorros Pedido-lhes desculpas em relação ao mal-entendido que isso por ventura possa ter ocasionado e por quaisquer dificuldades advindas do consumos de nossos produtos</string>
+                        </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000001</string>
+               </dict>
+               <key>Description</key>
+               <string>Formal Text</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>No neocolonialismo um pais tem predominio politico sobre o outro</string>
+                          <key>expectedText</key>
+                          <string>No neocolonialismo um país tem predomínio político sobre o outro. </string>
+                      </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000003</string>
+               </dict>
+               <key>Description</key>
+               <string>Long word 15 (neocolonialismo)</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>A ressocializacao e um grande desafio para as prisoes brasileiras</string>
+                          <key>expectedText</key>
+                          <string>A ressocialização é um grande desafio para as prisões brasileiras</string>
+                        </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000004</string>
+               </dict>
+               <key>Description</key>
+               <string>Long word 15 (ressocialização)</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>Para descobrir o sexo do bebe a melhor opcao e uma ultrassonografia</string>
+                          <key>expectedText</key>
+                          <string>Para descobrir o sexo do bebê a melhor opção é uma ultrassonografia</string>
+                        </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000005</string>
+               </dict>
+               <key>Description</key>
+               <string>Long word 15 (ultrassonografia)</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>Definitivamente vou estudar a minha licao</string>
+                          <key>expectedText</key>
+                          <string>Definitivamente vou estudar a minha lição</string>
+                        </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000006</string>
+               </dict>
+               <key>Description</key>
+               <string>Long word 15 (definitivamente) beginning of a sentence</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>Nossa aula de natacao foi agradabilissima</string>
+                          <key>expectedText</key>
+                          <string>Nossa aula de natação foi agradabilíssima</string>
+                        </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000007</string>
+               </dict>
+               <key>Description</key>
+               <string>Long word 15 (agradabilíssima)</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>Minha irma mora em pindamonhangaba</string>
+                          <key>expectedText</key>
+                          <string>Minha irmã mora em Pindamonhangaba</string>
+                      </dict>
+                   </array>
+                  <key>testCaseID</key>
+                  <string>10000008</string>
+               </dict>
+               <key>Description</key>
+               <string>Long word 15 (Pindamonhangaba) and autocapitalization of city name</string>
+            </dict>
+            <dict>
+               <key>Arguments</key>
+               <dict>
+                   <key>SwipeText</key>
+                   <array>
+                       <dict>
+                          <key>keystrokesText</key>
+                          <string>Voce teria como me dar um copo dagua</string>
+                          <key>expectedText</key>
+                          <string>Você teria como me dar um copo d’água</string>
+                        </dict>
+                    </array>
+                  <key>testCaseID</key>
+                  <string>10000009</string>
+               </dict>
+               <key>Description</key>
+               <string>Apostrophe (d’água)</string>
+            </dict>
+            
+            <!-- This is accent test cases -->
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Aquilo que nao precisamos esta guardado no sotao</string>
+                            <key>expectedText</key>
+                            <string>Aquilo que não precisamos está guardado no sótão</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000011</string>
+                </dict>
+                <key>Description</key>
+                <string>Accents (Sótão)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Trabalhar em paz e uma bencao</string>
+                            <key>expectedText</key>
+                            <string>Trabalhar em paz é uma bênção</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000012</string>
+                </dict>
+                <key>Description</key>
+                <string>Accents (Bênção)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Ele ficou orfao e aprendeu a tocar orgao</string>
+                            <key>expectedText</key>
+                            <string>Ele ficou órfão e aprendeu a tocar órgão</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000013</string>
+                </dict>
+                <key>Description</key>
+                <string>Accents (Órfão), similar paths</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Voce duvida da minha duvida</string>
+                            <key>expectedText</key>
+                            <string>Você duvida da minha dúvida</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000014</string>
+                </dict>
+                <key>Description</key>
+                <string>Accents (Dúvida), same spelling for different words</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>No pais de meus pais tem um tunel</string>
+                            <key>expectedText</key>
+                            <string>No país de meus pais tem um túnel</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000015</string>
+                </dict>
+                <key>Description</key>
+                <string>Accents (Túnel), same spelling for different words</string>
+            </dict>            
+         </array>
+      </dict>
+   </array>
+</plist>

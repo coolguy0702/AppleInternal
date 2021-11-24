@@ -1,0 +1,56 @@
+{
+    "associatedPassTypeIdentifiers": [
+        "pass.com.apple.chevron"
+    ],
+    "backgroundColor": "rgb(195, 195, 195)",
+    "barcode": {
+        "format": "PKBarcodeFormatPDF417",
+        "message": "123456789",
+        "messageEncoding": "iso-8859-1"
+    },
+    "description": "Safeway Pass",
+    "foregroundColor": "rgb(249, 0, 27)",
+    "formatVersion": 1,
+    "locations": [
+        {
+            "latitude": 37.6189722,
+            "longitude": -122.3748889
+        },
+        {
+            "latitude": 37.33182,
+            "longitude": -122.03118
+        }
+    ],
+    "nfc": {
+        "message": "4089961010",
+    },
+    "organizationName": "Safeway",
+    "passTypeIdentifier": "pass.com.apple.test1",
+    "groupingIdentifier" : "safeway",
+    "relevantDate": "2011-12-08T13:00-08:00",
+    "serialNumber": "BT89F02P4GGY",
+    "storeCard": {
+        "auxiliaryFields": [
+            {
+                "key": "redeem",
+                "label": "REDEEM WITHIN",
+                "value": "6 months"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "terms",
+                "label": "TERMS AND CONDITIONS",
+                "value": "Generico offers this card, including all information, software, products and services available from this card or offered as part of or in conjunction with this card (the \"card\"), to you, the user, conditioned upon your acceptance of all of the terms, conditions, policies and notices stated here. Generico reserves the right to make changes to these Terms and Conditions immediately by posting the changed Terms and Conditions in this location.\n\nUse the card at your own risk. This card is provided to you \"as is,\" without warranty of any kind either express or implied. Neither Generico nor its employees, agents, third-party information providers, merchants, licensors or the like warrant that the card or its operation will be accurate, reliable, uninterrupted or error-free. No agent or representative has the authority to create any warranty regarding the card on behalf of Generico. Generico reserves the right to change or discontinue at any time any aspect or feature of the card."
+            }
+        ],
+        "primaryFields": [
+            {
+                "key": "balance",
+                "label": "rewards points",
+                "value": "550"
+            }
+        ]
+    },
+    "teamIdentifier": "K9942Z534D"
+}

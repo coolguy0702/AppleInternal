@@ -1,0 +1,27 @@
+{
+  "name": "OfficeMax",
+  "category": "shopping",
+  "rewardsType": "applePay",
+  "source": "contactless",
+  "city": "San Jose",
+  "state": "CA",
+  "merchant": {
+    "category": "shopping",
+    "detailedCategory": "shopping.officeequipment",
+    "heroImageURL": "https://s3-media3.fl.yelpcdn.com/bphoto/genlb8X9lj9mnGxBkqEzEw/o.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 13177365867137550586,
+    "locationLatitude": 37.2497225,
+    "locationLongitude": -121.8760924,
+    "name": "OfficeMax",
+    "phoneNumber": "+1 (408) 978-1129",
+    "url": "http://www.officedepot.com/storelocator/ca/san-jose/officemax-6209/"
+  },
+  "brand": {
+    "category": "shopping",
+    "detailedCategory": "shopping.officeequipment",
+    "identifier": 641873487358131409,
+    "name": "OfficeMax",
+    "url": "https://www.officedepot.com"
+  }
+}

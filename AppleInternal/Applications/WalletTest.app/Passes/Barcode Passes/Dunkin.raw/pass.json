@@ -1,0 +1,46 @@
+{
+    "formatVersion": 1,
+    "associatedStoreIdentifiers": [
+                                   552020897
+                                   ],
+    "passTypeIdentifier": "pass.com.apple.test1",
+    "groupingIdentifier" : "dunkin",
+    "serialNumber": "WNATM1234",
+    "teamIdentifier": "K9942Z534D",
+    "organizationName": "Dunkin' Donuts",
+	"description": "Dunkin' Donuts",
+    "longDescription" : "Dunkin' Donuts",
+    "backgroundColor": "rgb(252,103,170)",
+    "foregroundColor": "rgb(255, 255, 255)",
+    "labelColor": "rgb(255, 255, 255)",
+    "storeCard": {
+        "headerFields": [
+            {
+                "key": "header-field-1",
+                "label": "Balance",
+                "value": "$54.06"
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key": "secondary-field-1",
+                "label": "Points Earned",
+                "value": "120 out of 200"
+            },
+            {
+                "key": "secondary-field-2",
+                "label": "Now Available",
+                "value": "5 Offers",
+                "textAlignment" : "PKTextAlignmentRight"
+            }
+        ]
+    },
+    "barcode" : {
+        "message" : "4D3D3D3",
+        "format" : "PKBarcodeFormatQR",
+        "messageEncoding" : "iso-8859-1"
+    },
+    "nfc" : {
+        "message" : "4D3D3D3"
+    }
+}

@@ -1,0 +1,59 @@
+<xmlui action="push">
+    <script>
+        <![CDATA[
+            function activateRow2(element)
+            {
+                xmlui.getElementById("row2").activate()
+            }
+            
+            function row2Activated(element)
+            {
+                xmlui.alert("Row 2 activated!");
+            }
+            
+            function insertRowAtBottom(element)
+            {
+                // Element is a row, we need the section.
+                section = xmlui.getElementById("newRowSection")
+                section.insertRow(section.rowCount, "linkRow", {"label": "New Row", "activationFunction": "newRowActivated", "accessory": "disclosure"});
+            }
+            
+            function newRowActivated(element)
+            {
+                xmlui.alert("New row tapped!");
+            }
+            
+            function showWebView(element)
+            {
+                xmlui.showWebView("http://apple.com", function () {
+                    var page = element.page;
+                    var oldTitle = page.title;
+                    page.title = "Loading…";
+                    page.loading = true;
+                    
+                    xmlui.loadURL("slowload.xml", "GET", function (success, error) {
+                        xmlui.log("Load completion!!");
+                        page.loading = false;
+                        page.title = oldTitle;
+                    });
+                });
+            }
+        ]]>
+    </script>
+    <page id="scriptingPage" default="true">
+        <navigationBar title="Javascript"/>
+        <tableView>
+            <section>
+                <linkRow id="row1" activationFunction="activateRow2" label="Activate Row 2" accessory="disclosure"/>
+                <linkRow id="row2" activationFunction="row2Activated" label="Show Alert" accessory="disclosure"/>
+            </section>
+            <section id="newRowSection">
+                <linkRow activationFunction="insertRowAtBottom" label="Insert Row At Bottom" accessory="disclosure"/>
+            </section>
+            <section>
+                <buttonRow activationFunction="showWebView" label="Open Web View"/>
+                <footer>This button will run javascript to show a modal web view. On tapping Done, a completion handler will show a spinner adn trigger a slow page push.</footer>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamDeepDive-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>de_DE@sw=QWERTZ-German;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.2</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false/>
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0.5</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die Verkürzung der Eigentumsrechte</string>
+                                <key>expectedText</key>
+                                <string>Die Verkürzung der Eigentumsrechte</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die Neuen versprechen Erneuerung</string>
+                                <key>expectedText</key>
+                                <string>Die Neuen versprechen Erneuerung</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Erste Kohlekraftwerke sollen in den nächsten vier Jahren vom Netz</string>
+                                <key>expectedText</key>
+                                <string>Erste Kohlekraftwerke sollen in den nächsten vier Jahren vom Netz</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words 10</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>10000002</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Zu der ersten von deutschlandweit acht Regionalkonferenzen unter dem Motto "Demokratie erleben. Zukunft gestalten" waren CDU-Mitglieder aus Schleswigholstein, Hamburg und Mecklenburgvorpommern eingeladen.</string>
+                                <key>expectedText</key>
+                                <string>Zu der ersten von deutschlandweit acht Regionalkonferenzen unter dem Motto "Demokratie erleben. Zukunft gestalten" waren CDU-Mitglieder aus Schleswig-Holstein, Hamburg und Mecklenburg-Vorpommern eingeladen</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die Bundesregierung hat eine Strategie zur künstlichen Intelligenz verabschiedet</string>
+                                <key>expectedText</key>
+                                <string>Die Bundesregierung hat eine Strategie zur künstlichen Intelligenz verabschiedet.</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Zahlreiche Betriebe wegen belastetem Geflügelfutter gesperrt</string>
+                                <key>expectedText</key>
+                                <string>Zahlreiche Betriebe wegen belastetem Geflügelfutter gesperrt</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words 15</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>10000003</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Hätten Sies gewusst?</string>
+                                <key>expectedText</key>
+                                <string>Hätten Sie’s gewusst?</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Hast Du Chris Nummer?</string>
+                                <key>expectedText</key>
+                                <string>Hast Du Chris’ Nummer?</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Mir gehts gut.</string>
+                                <key>expectedText</key>
+                                <string>Mir gehts gut.</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Ich lese Grass letzten Roman.</string>
+                                <key>expectedText</key>
+                                <string>Ich lese Grass’ letzten Roman.</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Apostrophe</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>10000004</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Fahre nach münchen</string>
+                                <key>expectedText</key>
+                                <string>Fahre nach München</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Zu Weihnachten sind wir in new york</string>
+                                <key>expectedText</key>
+                                <string>Zu Weihnachten sind wir in New York</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Steige von der sbahn in die ubahn</string>
+                                <key>expectedText</key>
+                                <string>Steige von der S-Bahn in die U-Bahn</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die würde ist unantastbar</string>
+                                <key>expectedText</key>
+                                <string>Die Würde ist unantastbar</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Autocaplitalization</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>10000005</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Anja Karliczek</string>
+                                <key>expectedText</key>
+                                <string>Anja Karliczek</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Dieter Wedel</string>
+                                <key>expectedText</key>
+                                <string>Dieter Wedel</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Franz von Bayern</string>
+                                <key>expectedText</key>
+                                <string>Franz von Bayern</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Friedrich Ludwig Bauer</string>
+                                <key>expectedText</key>
+                                <string>Friedrich Ludwig Bauer</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Names</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>10000006</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Dass das ein schwieriger Dasssatz ist, sodass es nicht einfach ist.</string>
+                                <key>expectedText</key>
+                                <string>Dass das ein schwieriger Dasssatz ist, sodass es nicht einfach ist.</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Wer rettet was gerettet werden kann?</string>
+                                <key>expectedText</key>
+                                <string>Wer rettet was gerettet werden kann?</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Dass es schon ziemlich spät ist, weiss ich.</string>
+                                <key>expectedText</key>
+                                <string>Dass es schon ziemlich spät ist, weiß ich.</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Wer zu was?</string>
+                                <key>expectedText</key>
+                                <string>Wer zu was?</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Das der Wert zu nimmt</string>
+                                <key>expectedText</key>
+                                <string>Das der Wert zu nimmt</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Ambiguous Paths</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>he wie hiess der typ noch mal der gestern sagte er bringt meine katze zum chinesen? hast du seine nummer?</string>
+                                <key>expectedText</key>
+                                <string>He wie hieß der Typ noch mal der gestern sagte er bringt meine Katze zum Chinesen? hast du seine Nummer?</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000007</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Informal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Ein Streit über Haldenwangs Vorgänger Maaßen hatte zu einer Krise der schwarzroten Koalition geführt. Seehofer hatte sich nach Maaßens Äußerungen über Übergriffe auf Ausländer in Chemnitz zunächst hinter ihn gestellt.</string>
+                                <key>expectedText</key>
+                                <string>Ein Streit über Haldenwangs Vorgänger Maaßen hatte zu einer Krise der schwarz-roten Koalition geführt. Seehofer hatte sich nach Maaßens Äußerungen über Übergriffe auf Ausländer in Chemnitz zunächst hinter ihn gestellt.</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die Kohlekommission will die Abschaltung von Kohlekraftwerken mit den Betreibern vertraglich regeln. Dabei sollen auch Entschädigungen geleistet werden.</string>
+                                <key>expectedText</key>
+                                <string>Die Kohlekommission will die Abschaltung von Kohlekraftwerken mit den Betreibern vertraglich regeln. Dabei sollen auch Entschädigungen geleistet werden.</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000008</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Formal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Laut Vorlage sollen die Bahngesellschaften verpflichtet werden, bei Verspätungen von mehr als zwei Stunden den vollen Ticketpreis zu erstatten. Bei Verspätungen von bis zu 90 Minuten sollen 50 Prozent, bei Verspätungen zwischen 90 Minuten und zwei Stunden 75 Prozent des Preises erstattet werden. Bei verpassten Anschlusszügen sollen Passagiere ohne zusätzliche Kosten Anspruch auf einen Platz im nächsten Zug haben. Dies soll auch dann gelten, wenn die Buchungen separat erfolgten.</string>
+                                <key>expectedText</key>
+                                <string>Laut Vorlage sollen die Bahngesellschaften verpflichtet werden, bei Verspätungen von mehr als zwei Stunden den vollen Ticketpreis zu erstatten. Bei Verspätungen von bis zu 90 Minuten sollen 50 Prozent, bei Verspätungen zwischen 90 Minuten und zwei Stunden 75 Prozent des Preises erstattet werden. Bei verpassten Anschlusszügen sollen Passagiere ohne zusätzliche Kosten Anspruch auf einen Platz im nächsten Zug haben. Dies soll auch dann gelten, wenn die Buchungen separat erfolgten.</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000009</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Paragraph</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>

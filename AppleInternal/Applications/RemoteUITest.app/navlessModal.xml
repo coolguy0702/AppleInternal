@@ -1,0 +1,13 @@
+<xmlui action="showModal">
+    <page>
+        <navigationBar title="Navless Modal"/>
+        <tableView>
+            <section>
+                <linkRow label="Samples" url="BuddyMLSample.xml" accessory="disclosure"/>
+            </section>
+            <section>
+                <linkRow label="Dismiss" url="dismiss.xml"/>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

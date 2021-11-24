@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamDeepDive-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>it_IT@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.2</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false />
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0.5</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>ciao perche non ci vediamo per bere un te o un caffe e decidiamo bene che fare a capodanno</string>
+                                <key>expectedText</key>
+                                <string>Ciao perché non ci vediamo per bere un tè o un caffè e decidiamo bene che fare a Capodanno</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359023</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Informal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>buonasera poiche non abitiamo in prossimita dellalloggio che occuperete avremmo bisogno di sapere a che ora pensate di arrivare gentilmente se lo sapete gia ditecelo per favore in caso contrario va bene un messaggio anche solo unoretta prima del vostro arrivo grazie Paolo</string>
+                                <key>expectedText</key>
+                                <string>Buonasera poichè non abitiamo in prossimità dell’alloggio che occuperete avremmo bisogno di sapere a che ora pensate di arrivare gentilmente se lo sapete già ditecelo per favore in caso contrario va bene un messaggio anche solo un'oretta prima del vostro arrivo grazie Paolo</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359022</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>formal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>esimio professore sono uno studente del II anno di psicologia le scrivo sperando di non arrecarle disturbo col fine di chiederle quando avranno inizio le lezioni del suo corso di psicologia generale dal momento che non essendo riuscito a passare in facolta a causa di un malessere debilitante e non avendo potuto contattare nessuno dei miei colleghi di studio a causa di problemi col telefono non ho avuto modo di prendere visione degli orari pubblicati sul nostro sito di facolta orari che ora non sono piu presenti ringraziandola per la sua grande disponibilità le porgo distinti saluti</string>
+                                <key>expectedText</key>
+                                <string>Esimio professore sono uno studente del II anno di psicologia le scrivo sperando di non arrecarle disturbo col fine di chiederle quando avranno inizio le lezioni del suo corso di psicologia generale dal momento che non essendo riuscito a passare in facoltà a causa di un malessere debilitante e non avendo potuto contattare nessuno dei miei colleghi di studio a causa di problemi col telefono non ho avuto modo di prendere visione degli orari pubblicati sul nostro sito di facoltà orari che ora non sono più presenti ringraziandola per la sua grande disponibilità le porgo distinti saluti</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19359026</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long paragraph with Formal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359025</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>il vicegovernatore si appallottolava come un armadillo ogni volta che si sentiva in pericolo</string>
+                                <key>expectedText</key>
+                                <string>Il vicegovernatore si appallottolava come un armadillo ogni volta che si sentiva in pericolo</string>
+                                <!-- Long words 13 and 15 (appallottolava and vicegovernatore)-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>il contrammiraglio aveva una predisposizione per le sedute psicoterapeutiche</string>
+                                <key>expectedText</key>
+                                <string>Il contrammiraglio aveva una predisposizione per le sedute psicoterapeutiche</string>
+                                <!-- Long words 15 and 17 (contrammiraglio, predisposizione and psicoterapeutiche)-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words15</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359024</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>I sommozzatori respireranno piu facilmente </string>
+                                <key>expectedText</key>
+                                <string>I sommozzatori respireranno più facilmente </string>
+                                <!-- Long words 10 and 12 (facilmente, respireranno and sommozzatori)-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>lattacchino assomiglia al colonnello portoghese</string>
+                                <key>expectedText</key>
+                                <string>L’attacchino assomiglia al colonnello portoghese</string>
+                                <!-- Long words 10 (attacchino, assomiglia, colonnello and portoghese)-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words10</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359031</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>linsistenza sinterseca con lirriverenza</string>
+                                <key>expectedText</key>
+                                <string>L’insistenza s’interseca con l’irriverenza</string>
+                                <!-- Sentence with words with apostrophes-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>sincarico dellarrivo delloro e dellargento</string>
+                                <key>expectedText</key>
+                                <string>S’incaricò dell’arrivo dell’oro e dell’argento</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>sindispetti allidea di portare lorso sullisola</string>
+                                <key>expectedText</key>
+                                <string>S’indispettì all’idea di portare l’orso sull’isola</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Apostrophe</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359033</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>oggi vado da roma napoli</string>
+                                <key>expectedText</key>
+                                <string>Oggi vado da Roma a Napoli</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>la città di la spezia si trova in liguria</string>
+                                <key>expectedText</key>
+                                <string>La città di La Spezia si trova in Liguria</string>
+                                <!-- Retrocapitalization and Autocapitalization-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>sono stati eletti i presidenti delle regioni campania ed emilia romagna</string>
+                                <key>expectedText</key>
+                                <string>Sono stati eletti i presidenti delle regioni Campania ed Emilia-Romagna</string>
+                                <!-- Retrocapitalization -->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>ho fatto le vacanze in trentino alto adige</string>
+                                <key>expectedText</key>
+                                <string>Ho fatto le vacanze in Trentino-Alto Adige</string>
+                                <!-- Retrocapitalization -->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Autocaplitalization</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359035</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>matteo salvini e luigi di maio sono i nuovi vicepresidenti del consiglio</string>
+                                <key>expectedText</key>
+                                <string>Matteo Salvini e Luigi Di Maio sono i nuovi vicepresidenti del consiglio</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>massimo dalema e stato un avversario politico di silvio berlusconi</string>
+                                <key>expectedText</key>
+                                <string>Massimo D’Alema è stato un avversario politico di Silvio Berlusconi</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>il mercante veneziano marco polo visito la cina nel tredicesimo secolo</string>
+                                <key>expectedText</key>
+                                <string>Il mercante veneziano Marco Polo visitò la Cina nel tredicesimo secolo</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>umberto eco ha scritto sia romanzi che saggi</string>
+                                <key>expectedText</key>
+                                <string>Umberto Eco ha scritto sia romanzi che saggi</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Names</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359034</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>chi ci assicura che ci saranno ancora ancore in mare</string>
+                                <key>expectedText</key>
+                                <string>Chi ci assicura che ci saranno ancora ancore in mare</string>
+                                <!-- Longer sentence using multiple similar words-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>sono sano e inseguo il sogno dinsegnare</string>
+                                <key>expectedText</key>
+                                <string>Sono sano e inseguo il sogno d’insegnare</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>bere a bari con la bora fa bene ai bari nelle bare con la biro</string>
+                                <key>expectedText</key>
+                                <string>Bere a Bari con la bora fa bene ai bari nelle bare con la biro</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>il pezzo di pizza del pazzo puzza come una pezza in una pozza</string>
+                                <key>expectedText</key>
+                                <string>Il pezzo di pizza del pazzo puzza come una pezza in una pozza</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>sopra la panca la capra campa sotto la panca la capra crepa</string>
+                                <key>expectedText</key>
+                                <string>Sopra la panca la capra campa sotto la panca la capra crepa</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>se tutti disseppellissimo lattaccapanni sotto la pista datterraggio nessuno appallottolerebbe la carrozzella vicino al sottopassaggio</string>
+                                <key>expectedText</key>
+                                <string>Se tutti disseppellissimo l'attaccapanni sotto la pista d'atterraggio nessuno appallottolerebbe la carrozzella vicino al sottopassaggio</string>
+                                <!-- Sentence with several words with multiple instances of double consonants-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>in una cernita cretina di cantieri carenti centrai l'incerta trincea recinta</string>
+                                <key>expectedText</key>
+                                <string>In una cernita cretina di cantieri carenti centrai l'incerta trincea recinta</string>
+                                <!-- Sentence with several words with using the same letters (anagrams)-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>scartavetrereste a destra e raffreddereste grasse verze</string>
+                                <key>expectedText</key>
+                                <string>Scartavetrereste a destra e raffreddereste grasse verze</string>
+                                <!-- Sentence with words using letters only from the left side of the qwerty Italian keyboard-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>milioni impollinino limoni in mulino o impilino piu monili</string>
+                                <key>expectedText</key>
+                                <string>Milioni impollinino limoni in mulino o impilino più monili</string>
+                                <!-- Sentence with words using letters only from the right side of the Italian qwerty keyboard-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>riproietterei i pretori o porterei troppi preti</string>
+                                <key>expectedText</key>
+                                <string>Riproietterei i pretori o porterei troppi preti</string>
+                                <!-- Sentence with words using letters only from the first row of the Italian qwerty keyboard-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>la glassa dalga dalla falla allaga la falsa sala alfa</string>
+                                <key>expectedText</key>
+                                <string>La glassa d'alga dalla falla allaga la falsa sala alfa</string>
+                                <!-- Sentence with words using letters only from the second row of the Italian qwerty keyboard-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Words</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19359032</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>andro in citta perche non so se ci ritornero</string>
+                                <key>expectedText</key>
+                                <string>Andrò in città perché non so se ci ritornerò </string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>ordino un caffe ed aspetto un po</string>
+                                <key>expectedText</key>
+                                <string>Ordinò un caffè ed aspettò un po’</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>la somma fatta da me da come risultato ventitré</string>
+                                <key>expectedText</key>
+                                <string>La somma fatta da me dà come risultato ventitré </string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>linserviente va a pésca in décolleté seta color pèsca</string>
+                                <key>expectedText</key>
+                                <string>L’inserviente va a pesca in décolleté seta color pesca</string>
+                                <!-- Accents and different word with same spelling-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Accents</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>
+

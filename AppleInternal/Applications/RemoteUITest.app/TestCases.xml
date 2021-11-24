@@ -1,0 +1,77 @@
+<xmlui>
+    <page>
+        <navigationBar title="Internal Test Cases"/>
+        <tableView>
+            <section>
+                <header>Test Cases</header>
+                <linkRow label="Switches" url="#switches" accessory="disclosure"/>
+                <linkRow label="Bare Modal With Nav" url="#baremodal" accessory="disclosure"/>
+                <linkRow label="Bare Modal Without Nav" url="#navless_baremodal" accessory="disclosure"/>
+                <linkRow label="Alert with client actions" url="#alertwithactions"/>
+                <linkRow label="Spinner with header and footer" url="#spinnerwithheaderandfooter" accessory="disclosure"/>
+            </section>
+            <section>
+                <header>Legacy</header>
+                <linkRow label="&lt;section&gt;" url="#legacy_section" accessory="disclosure"/>
+                <linkRow label="&lt;pinView&gt;" url="#legacy_pinvew" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="switches">
+        <tableView>
+            <section>
+                <switchRow label="Switch action" value="false" name="switchRowAdd"/>
+                <footer>When this switch is turned on, a new row should appear in this section</footer>
+            </section>
+            <section>
+                <switchRow label="Switch to empty" value="false" url="emptydocument.xml"/>
+                <footer>This switch causes a load of an empty document. It should allow toggling without reverting.</footer>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="baremodal">
+        <tableView>
+            <section>
+                <buttonRow label="Start Bare Modal Flow" name="baremodal"/>
+                <footer>Client code will catch this button press and fetch a showModal page with no non-modal object models underneath.</footer>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="navless_baremodal">
+        <tableView>
+            <section>
+                <buttonRow label="Start Bare Modal Flow" name="navless_baremodal"/>
+                <footer>Client code will catch this button press and fetch a showModal page with no non-modal object models underneath.</footer>
+            </section>
+        </tableView>
+    </page>
+    
+    <page id="legacy_section">
+        <tableView>
+            <section footer="Footer text as attribute" header="Header text as attribute"/>
+            <section footer="footerLinkIsModalHTMLView as attribute" footerLinkURL="http://apple.com" footerLinkIsModalHTMLView="true" shouldScaleHTMLPageToFit="true"/>
+        </tableView>
+    </page>
+
+    <page id="legacy_pinvew">
+        <pinView label="&quot;label&quot; attribute" url="alert.xml" numberOfFields="6" titleLoadingMessage="titleLoadingMessage…" fieldSpacer="center">
+            <footer url="simplepush.xml">Footer element</footer>
+        </pinView>
+    </page>
+    
+    <alert id="alertwithactions" title="Named alert">
+        <cancelButton>Cancel</cancelButton>s
+        <button url="simplepush.xml">Load URL</button>
+        <button name="alertwithaction">Client Action</button>
+    </alert>
+    
+    <page id="spinnerwithheaderandfooter">
+        <spinnerView/>
+        <header align="center">Verifying Your&#xD;Phone Number</header>
+        <footer align="center">Verifying +1 (408) 555-1212...</footer>
+    </page>
+    
+</xmlui>

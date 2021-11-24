@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamSwipeAndVerify-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin-Simplified;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.2</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false/>
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0.5</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20512785</string>
+                        <key>SwipeText</key>
+                        <array>
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>shang</string>
+    							<key>expectedText</key>
+    							<string>上</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>zhong</string>
+    							<key>expectedText</key>
+    							<string>中</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>xia</string>
+    							<key>expectedText</key>
+    							<string>下</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>ren</string>
+    							<key>expectedText</key>
+    							<string>人</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>yi</string>
+    							<key>expectedText</key>
+    							<string>一</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>ni</string>
+    							<key>expectedText</key>
+    							<string>你</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>wo</string>
+    							<key>expectedText</key>
+    							<string>我</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>ta</string>
+    							<key>expectedText</key>
+    							<string>他</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>shuo</string>
+    							<key>expectedText</key>
+    							<string>说</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>ye</string>
+    							<key>expectedText</key>
+    							<string>也</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>zhu</string>
+    							<key>expectedText</key>
+    							<string>主</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>er</string>
+    							<key>expectedText</key>
+    							<string>而</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>shi</string>
+    							<key>expectedText</key>
+    							<string>十</string>
+							</dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Single Chinese character</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20512787</string>
+                        <key>SwipeText</key>
+                        <array>
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>le</string>
+    							<key>expectedText</key>
+    							<string>了</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>yinyang</string>
+    							<key>expectedText</key>
+    							<string>阴阳</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>wushu</string>
+    							<key>expectedText</key>
+    							<string>武术</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>tiananmen</string>
+    							<key>expectedText</key>
+    							<string>天安门</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>renminbi</string>
+    							<key>expectedText</key>
+    							<string>人民币</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>qigong</string>
+    							<key>expectedText</key>
+    							<string>气功</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>nihao</string>
+    							<key>expectedText</key>
+    							<string>你好</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>hukou</string>
+    							<key>expectedText</key>
+    							<string>户口</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>hutong</string>
+    							<key>expectedText</key>
+    							<string>胡同</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>change</string>
+    							<key>expectedText</key>
+    							<string>嫦娥</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>majiang</string>
+    							<key>expectedText</key>
+    							<string>麻将</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>guanxi</string>
+    							<key>expectedText</key>
+    							<string>关系</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>hongbao</string>
+    							<key>expectedText</key>
+    							<string>红包</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>weixin</string>
+    							<key>expectedText</key>
+    							<string>微信</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>zhifubao</string>
+    							<key>expectedText</key>
+    							<string>支付宝</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>changcheng</string>
+    							<key>expectedText</key>
+    							<string>长城</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>bingmayong</string>
+    							<key>expectedText</key>
+    							<string>兵马俑</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>gugong</string>
+    							<key>expectedText</key>
+    							<string>故宫</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>shisanwu</string>
+    							<key>expectedText</key>
+    							<string>十三五</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>duibuqi</string>
+    							<key>expectedText</key>
+    							<string>对不起</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>dama</string>
+    							<key>expectedText</key>
+    							<string>大妈</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>xiexie</string>
+    							<key>expectedText</key>
+    							<string>谢谢</string>
+							</dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Words including 2-3 Chinese characters</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20512788</string>
+                        <key>SwipeText</key>
+                        <array>
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>aiwujiwu</string>
+    							<key>expectedText</key>
+    							<string>爱屋及乌</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>benniaoxianfei</string>
+    							<key>expectedText</key>
+    							<string>笨鸟先飞</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>chengshibuzu</string>
+    							<key>expectedText</key>
+    							<string>成事不足</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>dakaiyanjie</string>
+    							<key>expectedText</key>
+    							<string>大开眼界</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>feihuangtengda</string>
+    							<key>expectedText</key>
+    							<string>飞黄腾达</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>gupanliuli</string>
+    							<key>expectedText</key>
+    							<string>顾盼流离</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>huangrugeshi</string>
+    							<key>expectedText</key>
+    							<string>恍如隔世</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>junzizhijiao</string>
+    							<key>expectedText</key>
+    							<string>君子之交</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>kaimenjianshan</string>
+    							<key>expectedText</key>
+    							<string>开门见山</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>longmajingshen</string>
+    							<key>expectedText</key>
+    							<string>龙马精神</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>maosaidunkai</string>
+    							<key>expectedText</key>
+    							<string>茅塞顿开</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>longqiaochengzhuo</string>
+    							<key>expectedText</key>
+    							<string>弄巧成拙</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>pikairouzhan</string>
+    							<key>expectedText</key>
+    							<string>皮开肉绽</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>qidingshenxian</string>
+    							<key>expectedText</key>
+    							<string>气定神闲</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>renshengdingfei</string>
+    							<key>expectedText</key>
+    							<string>人声鼎沸</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>sichouzhilu</string>
+    							<key>expectedText</key>
+    							<string>丝绸之路</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>yidaiyilu</string>
+    							<key>expectedText</key>
+    							<string>一带一路</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>woxingwosu</string>
+    							<key>expectedText</key>
+    							<string>我行我素</string>
+							</dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Words including 4 Chinese characters</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20512789</string>
+                        <key>SwipeText</key>
+                        <array>
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>baba</string>
+    							<key>expectedText</key>
+    							<string>爸爸</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>mama</string>
+    							<key>expectedText</key>
+    							<string>妈妈</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>yeye</string>
+    							<key>expectedText</key>
+    							<string>爷爷</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>nainai</string>
+    							<key>expectedText</key>
+    							<string>奶奶</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>xingxingzhihuo</string>
+    							<key>expectedText</key>
+    							<string>星星之火</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>cengcengshenru</string>
+    							<key>expectedText</key>
+    							<string>层层深入</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>caocaoliaoshi</string>
+    							<key>expectedText</key>
+    							<string>草草了事</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>binbinyouli</string>
+    							<key>expectedText</key>
+    							<string>彬彬有礼</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>gegeburu</string>
+    							<key>expectedText</key>
+    							<string>格格不入</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>jinjinjijiao</string>
+    							<key>expectedText</key>
+    							<string>斤斤计较</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>diediebuxiu</string>
+    							<key>expectedText</key>
+    							<string>喋喋不休</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>yingyingyanyan</string>
+    							<key>expectedText</key>
+    							<string>莺莺燕燕</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>ananwenwen</string>
+    							<key>expectedText</key>
+    							<string>安安稳稳</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>jiejiebaba</string>
+    							<key>expectedText</key>
+    							<string>结结巴巴</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>chuichuidada</string>
+    							<key>expectedText</key>
+    							<string>吹吹打打</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>jijizhazha</string>
+    							<key>expectedText</key>
+    							<string>叽叽喳喳</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>duoduoshanshan</string>
+    							<key>expectedText</key>
+    							<string>躲躲闪闪</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>hunhunee</string>
+    							<key>expectedText</key>
+    							<string>浑浑噩噩</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>laolaodaodao</string>
+    							<key>expectedText</key>
+    							<string>唠唠叨叨</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>banxinbanyi</string>
+    							<key>expectedText</key>
+    							<string>半信半疑</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>bulibucai</string>
+    							<key>expectedText</key>
+    							<string>不理不睬</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>burenbuyi</string>
+    							<key>expectedText</key>
+    							<string>不仁不义</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>buqubunao</string>
+    							<key>expectedText</key>
+    							<string>不屈不挠</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>chetouchewei</string>
+    							<key>expectedText</key>
+    							<string>彻头彻尾</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>chengshuangchengdui</string>
+    							<key>expectedText</key>
+    							<string>成双成对</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>dayaodabai</string>
+    							<key>expectedText</key>
+    							<string>大摇大摆</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>renshanrenhai</string>
+    							<key>expectedText</key>
+    							<string>人山人海</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>quncequnli</string>
+    							<key>expectedText</key>
+    							<string>群策群力</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>renlairenwang</string>
+    							<key>expectedText</key>
+    							<string>人来人往</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>baifacangcang</string>
+    							<key>expectedText</key>
+    							<string>白发苍苍</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>banshangdingding</string>
+    							<key>expectedText</key>
+    							<string>板上钉钉</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>changyemanman</string>
+    							<key>expectedText</key>
+    							<string>长夜漫漫</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>dafubianbian</string>
+    							<key>expectedText</key>
+    							<string>大腹便便</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>hanqingmomo</string>
+    							<key>expectedText</key>
+    							<string>含情脉脉</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>fuzhaileilei</string>
+    							<key>expectedText</key>
+    							<string>负债累累</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>fengdupianpian</string>
+    							<key>expectedText</key>
+    							<string>风度翩翩</string>
+							</dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Words including repeated Chinese characters</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20512790</string>
+                        <key>SwipeText</key>
+                        <array>
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>haoleshangbawangleteng</string>
+    							<key>expectedText</key>
+    							<string>好了伤疤忘了疼</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>junzizhijiaodanrushui</string>
+    							<key>expectedText</key>
+    							<string>君子之交淡如水</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>meifengjiajiebeisiqin</string>
+    							<key>expectedText</key>
+    							<string>每逢佳节倍思亲</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>peilefurenyoushebing</string>
+    							<key>expectedText</key>
+    							<string>赔了夫人又折兵</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>qiaofunanweiwumizhichui</string>
+    							<key>expectedText</key>
+    							<string>巧妇难为无米之炊</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>renfengxishijingshenshuang</string>
+    							<key>expectedText</key>
+    							<string>人逢喜事精神爽</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>tuanjiejiushililiang</string>
+    							<key>expectedText</key>
+    							<string>团结就是力量</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>tiaojinhuanghexibuqing</string>
+    							<key>expectedText</key>
+    							<string>跳进黄河洗不清</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>xianxiashouweiqiang</string>
+    							<key>expectedText</key>
+    							<string>先下手为强</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>yingxiongsuojianluetong</string>
+    							<key>expectedText</key>
+    							<string>英雄所见略同</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>wuyandushangxilou</string>
+    							<key>expectedText</key>
+    							<string>无言独上西楼</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>zengjingcanghainanweishui</string>
+    							<key>expectedText</key>
+    							<string>曾经沧海难为水</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>richujianghuahongshenghuo</string>
+    							<key>expectedText</key>
+    							<string>日出江花红胜火</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>haoyuzhishijie</string>
+    							<key>expectedText</key>
+    							<string>好雨知时节</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>jiangjunbaizhansi</string>
+    							<key>expectedText</key>
+    							<string>将军百战死</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>buzhixiyeshuicaichu</string>
+    							<key>expectedText</key>
+    							<string>不知细叶谁裁出</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>guzhousuliweng</string>
+    							<key>expectedText</key>
+    							<string>孤舟蓑笠翁</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>badongsanxiawuxiachang</string>
+    							<key>expectedText</key>
+    							<string>巴东三峡巫峡长</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>shishidongmingjiexuewen</string>
+    							<key>expectedText</key>
+    							<string>世事洞明皆学问</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>ciqingkedaichengzhuiyi</string>
+    							<key>expectedText</key>
+    							<string>此情可待成追忆</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>dajiangdongqulangtaojin</string>
+    							<key>expectedText</key>
+    							<string>大江东去浪淘尽</string>
+							</dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Famous Poetry and Slang</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20512791</string>
+                        <key>SwipeText</key>
+                        <array>
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>nichifanlemeiyou</string>
+    							<key>expectedText</key>
+    							<string>你吃饭了没有</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>huanyingguanglin</string>
+    							<key>expectedText</key>
+    							<string>欢迎光临</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>geinintianmafanle</string>
+    							<key>expectedText</key>
+    							<string>给您添麻烦了</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>qingshaodeng</string>
+    							<key>expectedText</key>
+    							<string>请稍等</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>ninzouhao</string>
+    							<key>expectedText</key>
+    							<string>您走好</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>youshimewonenbangmangdema</string>
+    							<key>expectedText</key>
+    							<string>有什么我能帮忙的吗</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>qingwenninyoushimeshi</string>
+    							<key>expectedText</key>
+    							<string>请问您有什么事</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>wokeyiyongzhifubaoma</string>
+    							<key>expectedText</key>
+    							<string>我可以用支付宝吗</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>weixinhuozhifubaodukeyi</string>
+    							<key>expectedText</key>
+    							<string>微信或支付宝都可以</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>niyoukuaidi</string>
+    							<key>expectedText</key>
+    							<string>你有快递</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>nilianzhenda</string>
+    							<key>expectedText</key>
+    							<string>你脸真大</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>zhegewentiwobutaiqingchu</string>
+    							<key>expectedText</key>
+    							<string>这个问题我不太清楚</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>zhenshibuhaoyisi</string>
+    							<key>expectedText</key>
+    							<string>真是不好意思</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>gebilaowang</string>
+    							<key>expectedText</key>
+    							<string>隔壁老王</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>maomeiwenyixia</string>
+    							<key>expectedText</key>
+    							<string>冒昧问一下</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>nishenmeyisi</string>
+    							<key>expectedText</key>
+    							<string>你什么意思</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>nizhenshitaihaole</string>
+    							<key>expectedText</key>
+    							<string>你真是太好了</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>nashishuidexingli</string>
+    							<key>expectedText</key>
+    							<string>那是谁的行李</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>nixiangjiaduoshaoyou</string>
+    							<key>expectedText</key>
+    							<string>你想加多少油</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>taobaoyouhuiliduhenda</string>
+    							<key>expectedText</key>
+    							<string>淘宝优惠力度很大</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>niyongnazhongxifashui</string>
+    							<key>expectedText</key>
+    							<string>你用哪种洗发水</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>biewangjiheshui</string>
+    							<key>expectedText</key>
+    							<string>别忘记喝水</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>jideduoheshui</string>
+    							<key>expectedText</key>
+    							<string>记得多喝水</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>ninverduodale</string>
+    							<key>expectedText</key>
+    							<string>你女儿多大了</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>haizijisuile</string>
+    							<key>expectedText</key>
+    							<string>孩子几岁了</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>gaitianzaimenhaohaoliaoliao</string>
+    							<key>expectedText</key>
+    							<string>改天咱们好好聊聊</string>
+							</dict>
+
+							<dict>
+    							<key>keystrokesText</key>
+   							<string>Nazhigupiaofengxiantaigaole</string>
+    							<key>expectedText</key>
+    							<string>那只股票风险太高了</string>
+							</dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Common Used Short Sentences</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>zhonghuarenmingongheguo</string>
+                                <key>expectedText</key>
+                                <string>中华人民共和国</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000000</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>This is a demo case</string>
+                </dict>                
+
+            </array>
+        </dict>
+    </array>
+</plist>

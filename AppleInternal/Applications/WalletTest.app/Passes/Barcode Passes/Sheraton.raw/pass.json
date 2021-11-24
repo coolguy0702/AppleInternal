@@ -1,0 +1,72 @@
+{
+    "barcode": {
+        "message": "123456789",
+        "format": "PKBarcodeFormatPDF417",
+        "messageEncoding": "iso-8859-1",
+		"altText": "confirmation#: 1234567890-b5-2"
+    },
+    "organizationName": "Starwood Hotels",
+	"logoText":"                Sep 22 - 25",
+	"foregroundColor": "#FFFFFF",
+	"backgroundColor": "#632f22",
+	"labelColor": "#FFFFFF",
+    "associatedStoreIdentifiers" : [
+	312306003
+	],  
+	"storeCard": {
+		"headerFields": [{
+		"key": "h1",
+		"label": "3 NIGHTS",
+		"value": "",
+		"textAlignment": "PKTextAlignmentRight",
+		"changeMessage": "Stay changed to %@"
+		}],   
+		"secondaryFields": [
+		{
+			"key": "s1",
+			"label": "ROISSY, FRANCE",
+			"value": "BP 35051 Tremblay"
+		}
+		],
+		"auxiliaryFields": [
+		{
+			"key": "checkin",
+			"label": "CHECK-IN",
+			"value": "2012-10-05T14:00Z",
+			"timeStyle": "PKDateStyleShort",
+			"ignoresTimeZone": 1,
+		}
+		],
+	"backFields": [
+	{
+		"key": "b0",
+		"label": "HOTEL",
+		"value": "Sheraton Paris Airport Hotel"
+	},
+	{
+		"key": "b1",
+		"label": "ADDRESS",
+		"value": "BP 35051 Tremblay en France\nRoissy, 95716\nFrance"
+	},
+	{
+		"key": "b2",
+		"label": "CONTACT US",
+		"value": "Phone:  (33)(1)491970\nEmail: info@sheraton.com"
+	},
+	{
+		"key": "b3",
+		"label": "TERMS",
+		"value": "spg.com/terms"
+	}
+	]
+	},
+    "suppressStripShine": true,
+    "description": "Stay Card",
+    "serialNumber": "b5_demo_s1",
+    "formatVersion": 1,
+    "passTypeIdentifier": "pass.com.apple.test1",
+    "groupingIdentifier" : "starwood",
+    "voided": true,
+    "teamIdentifier": "K9942Z534D",
+    "relevantDate":"2012-01-01T00:00-00:00"
+}

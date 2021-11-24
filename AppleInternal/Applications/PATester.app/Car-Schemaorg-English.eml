@@ -1,0 +1,487 @@
+Return-path: <groupmailer@group.apple.com>
+Received: from ma1-postinop-sz05.apple.com ([17.171.128.19])
+ by mail5.euro.apple.com
+ (Oracle Communications Messaging Server 8.0.1.2.0 64bit (built Oct 28 2016))
+ with ESMTPS id <0OHT002XWAV3G280@mail5.euro.apple.com>; Wed,
+ 07 Dec 2016 11:06:40 +0000 (GMT)
+Received: from relay26.apple.com ([17.171.128.107])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTPS id <0OHT00GUMAV3FIA0@postino.apple.com>; Wed,
+ 07 Dec 2016 03:06:39 -0800 (PST)
+Received: from ma1-postinop-sz02.apple.com
+ (ma1-postinop-sz02.apple.com [17.171.128.212])
+	(using TLS with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)	by relay26.apple.com (Apple SCV relay)
+ with SMTP id 95.68.16856.F3DE7485; Wed,  7 Dec 2016 03:06:39 -0800 (PST)
+Received: from group.apple.com ([17.171.128.212])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OHT00FLOAV32680@postino.apple.com>; Wed,
+ 07 Dec 2016 03:06:39 -0800 (PST)
+Received: from ma1-postinop-sz08.apple.com ([17.171.128.177])
+ by postino.apple.com
+ (Oracle Communications Messaging Server 7.0.5.35.0 64bit (built Mar 31 2015))
+ with ESMTPS id <0OHT00FLDAV22680@postino.apple.com> for
+ bv-gt17@group.apple.com; Wed, 07 Dec 2016 03:06:38 -0800 (PST)
+Received: from relay23.apple.com ([17.171.128.104])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OHT00MDZAUV3TE0@postino.apple.com> for
+ bv-gt17@group.apple.com; Wed, 07 Dec 2016 03:06:38 -0800 (PST)
+X-Va-ID: e8654940-4e0f-495d-819f-ee8b9b1c16ac
+X-Va-CD: 0
+X-Va-R-CD: 15d907b1ce4be99f72b4f4bb73558819
+X-Va-E-CD: 12a45038796e7cebb7578c7ad6c2ebaf
+X-Va-T-CD: d970d5b669686c37fce8ad4c7d2fa88d
+X-Va-A:
+X-V-ID: a004181a-2278-409e-99ba-321adb97d873
+X-V-CD: 0
+X-V-R-CD: 15d907b1ce4be99f72b4f4bb73558819
+X-V-E-CD: 12a45038796e7cebb7578c7ad6c2ebaf
+X-V-T-CD: d970d5b669686c37fce8ad4c7d2fa88d
+X-V-A:
+Received: from ma1-postinop-sz09.apple.com
+ (ma1-postinop-sz09.apple.com [17.171.128.178])
+	(using TLS with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(Client did not present a certificate)	by relay23.apple.com (Apple SCV relay)
+ with SMTP id A2.B5.04259.A3DE7485; Wed,  7 Dec 2016 06:06:34 -0500 (EST)
+MIME-version: 1.0
+Content-type: multipart/alternative;
+ boundary="Boundary_(ID_BshxTFpWIYV38nXXNPJaKA)"
+Received: from localhost.localdomain ([127.0.0.1])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTP id <0OHT00JFUAUXHIX0@postino.apple.com> for
+ bv-gt17@group.apple.com; Wed, 07 Dec 2016 03:06:34 -0800 (PST)
+X-Va-ID: 5cb4146d-0d39-43b3-98dd-fe4a2bf61cb9
+X-Va-CD: 0
+X-Va-R-CD: 15d907b1ce4be99f72b4f4bb73558819
+X-Va-E-CD: 12a45038796e7cebb7578c7ad6c2ebaf
+X-Va-T-CD: d970d5b669686c37fce8ad4c7d2fa88d
+X-Va-A:
+X-V-ID: 6405f975-8b27-44fb-8b6a-63244895b10b
+X-V-CD: 0
+X-V-R-CD: 15d907b1ce4be99f72b4f4bb73558819
+X-V-E-CD: 12a45038796e7cebb7578c7ad6c2ebaf
+X-V-T-CD: d970d5b669686c37fce8ad4c7d2fa88d
+X-V-A:
+Received: from mail-in2.apple.com ([17.151.62.17])
+ by postino.apple.com (Oracle Communications Messaging Server 7.0.5.35.0 64bit
+ (built Mar 31 2015)) with ESMTPS id <0OHT001VMAUVIDT0@postino.apple.com> for
+ bv-gt17@group.apple.com; Wed, 07 Dec 2016 03:06:33 -0800 (PST)
+X-Va-ID: 4ec02971-e975-4532-a3f2-108c51190e07
+X-Va-CD: 0
+X-Va-R-CD: 15d907b1ce4be99f72b4f4bb73558819
+X-Va-E-CD: 12a45038796e7cebb7578c7ad6c2ebaf
+X-Va-T-CD: d970d5b669686c37fce8ad4c7d2fa88d
+X-Va-A:
+X-V-ID: 8711ccf7-2e5d-4cb9-86e9-8e8774e9ae20
+X-V-CD: 0
+X-V-R-CD: 15d907b1ce4be99f72b4f4bb73558819
+X-V-E-CD: 12a45038796e7cebb7578c7ad6c2ebaf
+X-V-T-CD: d970d5b669686c37fce8ad4c7d2fa88d
+X-V-A:
+X-AuditID: 11ab806b-f79f16d0000041d8-6c-5847ed3ff68c
+Received: from nwk-aaemail-lapp01.apple.com
+ (nwk-aaemail-lapp01.apple.com [17.151.62.66])
+	(using TLS with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client did not present a certificate)
+	by mail-in2.apple.com (Apple Secure Mail Relay)
+ with SMTP id 86.D7.19960.63DE7485; Wed,  7 Dec 2016 03:06:30 -0800 (PST)
+Received: from pps.filterd (nwk-aaemail-lapp01.apple.com [127.0.0.1])
+	by nwk-aaemail-lapp01.apple.com (8.15.0.59/8.15.0.59)
+ with SMTP id uB7B2MNh007885	for <bv-gt17@group.apple.com>; Wed,
+ 7 Dec 2016 03:06:30 -0800
+Received: from o31.mail.easycar.com (o31.mail.easycar.com [167.89.17.1])
+	by nwk-aaemail-lapp01.apple.com with ESMTP id 276eq1hm6j-1
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT)
+	for <bv-gt17@group.apple.com>; Wed, 07 Dec 2016 03:06:30 -0800
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed;	d=reservations.easyCar.com;
+	h=content-type:from:mime-version:reply-to:subject:to; s=smtpapi;
+	bh=g0hmLxCvSYRrbr1gjvEg6j0t04E=; b=Xx26VaRa9On/uq1il2hciYJP18g0/
+	mwt/FFXo2/WEV4LpRPj6ZddZejCtRWoqGi9QgHWiCr0bKVodKWuPI0crRKwVTijl
+	uTxrqDE4by/kjlGY9xfBFTdVbl+L0qw4P3lkLc4L9afLe8d3x2aGCuoZvJSuSPK/
+	HmbocLtz+3uwVw=
+Received: by filter0512p1las1.sendgrid.net with SMTP id
+ filter0512p1las1-29139-5847ED34-10 2016-12-07 11:06:28.376222804 +0000 UTC
+Received: from MTM2NTM3NA (unknown [185.150.60.46])
+	by ismtpd0002p1lon1.sendgrid.net (SG) with HTTP id NHgkSAzfTvKfSJVZ2eHGRg	for
+ <bv-gt17@group.apple.com>; Wed, 07 Dec 2016 11:06:28.000 +0000 (UTC)
+Date: $now_full_text$
+From: "easycar.com" <email@reservations.easycar.com>
+Reply-to: noreply@easycar.com
+Subject: Important information regarding your easyCar.com booking - Ref:
+ 347988599
+To: bv-gt17@group.apple.com
+Message-id: <NHgkSAzfTvKfSJVZ2eHGRg@ismtpd0002p1lon1.sendgrid.net>
+X-SG-EID:
+ uve6gfkkwVW39Zsu1u9wV0Uq5Aw1MSPN+TXlSv0kxSTnZf8iSZ+EexGIx4PVCqhvxJQgLicvNJFnF9
+ WIFC27jXhezQsgI+ShGmucaA3QKmQ0MCHyIfMLksqnXwds6ZEciGWxeVxzxTHdjExCDqP7XD4u2oCx
+ QkR2U/tIjYTjNtthkuBM6+IdaPfs+7wHN8T/3zu+pBcs9MYPr4QRcM1Y3OsGWosaW9kzDGJHRgoLli
+ QNjdllH24eaJ37abe01h3Q
+X-SG-ID:
+ SmDFk6fVVFXrSNgMN4Q94a7HcYN9VvAuL8VHIriwml1b4bm40avHoyom1a1OJ6A82njEBFXBq+rg5n
+ 9vGecLFiy4OZNG5s2tg7eQ4h1om9RrgY3dLpr2u/InquLS+0js+i/zPawNJv8gDjow4zpY6XR3DZU7
+ 2aDw9KMiTPEf61l8OUirgkKI/Z2CHOZTDjA3ntbErmrqOSETXUA3fKQhRHczE1VqidwbJEOTV/f9en
+ 3IS/VF3Ne3AURyDlIpZpMq7wKrMekwvaxbDi2A9JsZ5JzO6u1e+YKMt03cBf/aH9bZ8gzDPkqnQXhu
+ rrsEbCUNZ7ZiaWbqwtNkYQXCRx1n2FXUlqfi5J5ExfNMlM1aDVUUUkabDsyKNNGzJtj7NSyZnULpVL
+ ZyVe4Fpmomv2+ikqYT0tDK1Aodgi7zEmKnnb9E3jJ+KY1lBfvo6Do/GbpoDL4SC7rDpOAPmdvGtGn1
+ 8gNZWWVcFGfU0SuCvbhwrfy6EiwzVoZpoJS/MTnzvqFlwUjDGCzLMOQjAaTpdZeKe5h0weipvCRg2A
+ xVHDSEi7A3N8fZx6xCQ5jWZTntC7kLWpw5d04+iNL4orHZJbnME9L6V5ONoEGYk2Hj51ufAFAUN1Zs
+ Wx70wudCTtdUWvGNSLRmk1lPSz+Reso3OwKljA==
+X-Proofpoint-SPF-Result: pass
+X-Proofpoint-SPF-Record: v=spf1 ip4:75.126.200.128/27 ip4:75.126.253.0/24
+ ip4:67.228.50.32/27 ip4:174.36.80.208/28 ip4:174.36.92.96/27
+ include:sendgrid.biz ~all
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,,
+ definitions=2016-12-07_03:,, signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ suspectscore=9 malwarescore=0 phishscore=0 adultscore=0 bulkscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1609300000
+ definitions=main-1612070189
+Authentication-results: symauth.service.identifier; dkim=pass
+ header.d=reservations.easyCar.com header.s=smtpapi header.v=1 header.a=rsa-sha1
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFrrLJsWRmVeSWpSXmKPExsUiuLrhiq79W/cIg+75aha77q1ktPj5O9Di
+	/bltzBbLbu9jt7i5fSWzxaY7i1kttr9Stfg67zyLxd9p/WwW5zZ+Y7E42+Vl8e/ZJmaLvVsN
+	Le4/AYp8avjCaLH5TDOTxbL+W4wWU7v/M1us3pXpIOyx9eQPtgDGKDWbovzSklSFjPziElul
+	lKICIJ2Zl6+XWFCQk6qXnJ9rZWSqpG+XoJaxYPY55oKL/YwVx74XNDB+qOli5OSQEDCRuH/0
+	HwuELSZx4d56ti5GLg4hgQ1MErveTGGBcL4wShxb3MIO4cxnkrj99SUjhDOJSeLXtuVAGQ6g
+	fl2JcyfCIEZxSSzYepoVwtaWmLm/gxHGvvRxGTNEubbEslMqEGF2iT+/dkBdoSOx/20HlM0p
+	cf7LRHYIW0vizNE9cHbP85dsMPbSlQegVrFJrD+xhAnitE1MEnNffgPbyysgKPFj8j2wocwC
+	YRLfZs2DemYik8SxlQeZILp1JRYcf8RMBQ/c2LmVnRgPTGD0nIXkvFlIzsMUV5eYNG8RM4St
+	LfHk3QVWTDVqEv/3fGRFVrOAkWMVo2BRak5ipZEZIlVsYoQk1uwdjCfvmR1iFOBgVOLhfXHP
+	PUKINbGsuDL3EKMEB7OSCO+S10Ah3pTEyqrUovz4otKc1OJDjMkcLAITmaVEk/OBST+vJN7Q
+	xMTI1MTI2NzQwNSCNGElcV5hNqcIIYH0xJLU7NTUgtQimC1MHJxSDYwaiid4J35Vucrfd8Fv
+	mv8e62+FvXsufbjy4FsET+/+F6HHt6Rc3HPhx16RKbwxfPqPbA48FDu34/sUh+0sLhZOrgzv
+	NqWur7/4lG3rPp45vvNENZ6tFa/T6fXufMP+lXvDxqrQi4fD/9xu5Kt+8nnx29gHSmKV1Uvb
+	vJ6x92gGzww05S/ZfshQiaU4I9FQi7moOBEA7NSg5/ADAAA=
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFlrEKsWRmVeSWpSXmKPExsUiuLphk67VW/cIg1+npCyezlzO7sDo8Wf+
+	UZYAxigum5TUnMyy1CJ9uwSujAWzzzEXXOxnrDj2vaCB8UNNFyMnh4SAicSsu6uYIGwxiQv3
+	1rN1MXJxCAlsYJKYevM8O0iCV0BQ4sfkeywgNrNAmMS3WfPYIYomMkkcW3kQqltXYsHxR8wQ
+	NpfEgq2nWSFsbYmZ+zsYYexLH5cB1XCA2ctOqUCE2SX+/NrBAmHrSNzYuZUdwuaUOP9lIpSt
+	JXHm6B44u+f5SzYYe+nKA1Cr2CTWn1jCBHHbJCaJf5svs8Lc9mHuFzYquG3GhA3MlLkNEugt
+	h9ayTGA0nYUUvLOQghdTXF1i0rxFzBC2tsSTdxdYMdWoSfzf85EVWc0CRo5VjIJFqTmJlUbG
+	eokFBTmpesn5uZsYISknYwfj9ZtmhxgFOBiVeHjf3nOPEGJNLCuuzD3EKMHBrCTCu+Q1UIg3
+	JbGyKrUoP76oNCe1+BCjNAeLkjivMJtThJBAemJJanZqakFqEUyWiYNTqoExWuC6ccefToHZ
+	OUxex7kj/9UrreSMKbubVvLRwbxvXUD+oeSeu6uiZugd5RPUvLHiAsvJf+5hSnMLtvjF7Tzs
+	vmL9HU2tZI7UULGf9rv/Op7SnDvTU9x1qb+w7oRErfUcbC9/bXm/kenikUW75XRK7c+Ufyu5
+	LP16x7fsiwIKv0406OyVUtmmxFKckWioxVxUnAgAptw5uDUDAAA=
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA3VUa0wcVRTm7oMdHhdmZ9nlsHSNbEATDbU09YFpmkoaKOmfRhJEG60DDLCy
+	C+vOboHaJkhIa7EglmexBdpiQWolaEIoBIWFhoZHKyBWBLVoS9tF1ojSYIrUuTs8Zpv4Z3Lu
+	+c79zne+OTOUnBkO1FNcvp2z5bBmo6+/Ql2zKy76hYWElG3L7m0v3TndrNqN9q40XFXsR2/4
+	70znzKZDnO25XW/7Z313rVBuPV2O8gdakwpR59ES5EcBvQOKnZcVJGZopwwqVjNKkL8QTyFo
+	GCpSiIcqGSz8XYhIlYJ2yaD/nEoEPkQwfKJdLh6GEFw9teSpktPvwIXrk77ijShYLS1TkthX
+	6Ddb3SIrQRSFaTX826kRWxvg2lSl56qGfhWq/yiWkziEDofPLk2rSIzpOPh5rtTTGOgKGfQU
+	z/mKhytKmPrR7SsOZICx0V6lGJ9HUN8bL8bZ8LDmIRIvLCMo/WJYSQ6ILkXw0/AjRTnS1UmU
+	120qFNPPwsVz83KSltNPQ1s9878VJH4KpjsmVZKSRkS1IsbCmszRppztW1mr1cxtTcu1fInE
+	l6juRIOtLzsRTSFjILaOx6cwSvYQX2BxouOIkhn1uLIvIYXRpOamF2SxfNZB3pFqMfG8KTfH
+	qMVd5QIWtIHZHGaON4Zgv1tCGm+kUx3mbIFo4b4XUQ6Xx5s5u7BSxicwmy00DpU04a2mNFOu
+	gz/osJmdCCi5QNs0T2jT2YLDnC1XbOZE4ZTCGIrnEgWIzmTtXDbHWTnbOiqjVE5ULdhhNGDk
+	4+PD6GxcJpefYTILfaWzAB4l7GopLI4Til+8S8iliGciA549KwBejJKhIvBxMpTeu6H3XDLK
+	jzz8nagIUYHGMFEjw1tZC2/KlOoLwSue6dchUZsGu4jVgetZj64wHO8SkhssEk0GfJNo0m02
+	kOoZQjVIvwWfISVaUpLlyPG2SR+KLxAZtAT1KNHr8PuDsSlMsAQgYgS6zw/HeNNt6tE/iXOj
+	dqQwYV7NpJLIr6b5dTUaRwa9RnQnUHi9FpN9zYE13IWaZMIGg7italOO/TH/NJj+nTi1hoiX
+	GdxJpglYS3rcA3zMJaGQmLcF/+NxZoNcKnR7ExK+abcOvnHvg5mKTxDM3mxB0NU9oYCBX4tU
+	UDt7RQV9VbdV0PDbfQpOnZyn4FFvsz/U1hYFQFnx5QDonukLgLaGtiC40+EMgrLVxmD4qrY3
+	GJYrbwiPWzU0LC/2qGGm8wwD16vaGXBXV4TA8u1SLXRVnNXCwMIlLfxVMaKFlcEHWli6V66D
+	9pOLOlg+Vh0KUyMdoS6yaLLNRbOzjxsVgut/8CzaGrS+aBNk9sD17Nqi3SDJDRavRRsVF22j
+	gdQsfSH6OGI6eal6JPLr/j15D+oWX8vrZxeTAoqUxT1v7en/wJi0b+ZeMt34yxHL86uF56ML
+	Ln47hjLSdZa0pfDhmN5x5fxe/ZHB4v0ndscefe/diMFYv+58hX40LV7l/oj1YzsjVt/UWidW
+	Y18ZOzBa4mfa+X1U8syfiYlxLQciJ+WayLsJnxoVfBYb84zcxrP/AYl8IETeBgAA
+X-Member-Count: 19
+Precedence: List
+Sender: bv-gt17@group.apple.com
+List-Id: <bv-gt17@group.apple.com>
+
+
+--Boundary_(ID_BshxTFpWIYV38nXXNPJaKA)
+MIME-version: 1.0
+Content-type: text/plain; charset=UTF-8
+Content-transfer-encoding: quoted-printable
+
+Dear Mrs Laoz,
+
+Thank you for booking through easyCar.com.
+
+Your voucher is now available online to print by clicking through the =E2=
+=80=9CManage my Booking=E2=80=9D button below. You can also review your res=
+ervation, or make changes here too.
+https://booking.easycar.com/MyRes.do?serverName=3Dwww.rentalcars.com&bookin=
+g.reference=3D347988599&booking.contact.email=3Dbv-gt17@group.apple.com&cor=
+=3DIE&preflang=3DEN&prefcurrency=3DEUR&affiliateCode=3Deasycar_rc
+
+Please carefully check to make sure all your travel details are correct.
+
+Things to remember when picking up your car
+=E2=80=A2 Your voucher.
+=E2=80=A2 A valid credit card in the main driver's name
+=E2=80=A2 Your Driving Licence (Both parts if applicable).
+
+Please also check the Terms and Conditions of your reservation to make sure=
+ you do not need to take other forms of identification with you when pickin=
+g up the vehicle.
+
+At the Greenmotion counter, you may decide to buy additional cover =E2=80=
+=93 to reduce or remove your excess, or to cover things your Collision Dama=
+ge Waiver (CDW) doesn=E2=80=99t, such as tyres and windscreen.
+
+Please Note: If you do buy a policy from Greenmotion, that contract will be=
+ between you and Greenmotion. Since easyCar.com will not be involved at all=
+, we won't be able to help if you're dissatisfied with the cost of their po=
+licy =E2=80=93 or the cover it provides.
+
+Car Group: Vauxhall Corsa or similar
+Supplier: Greenmotion
+
+Pick-up details:
+Country: UK
+City: Bristol
+Location: Bristol Airport
+Date: 13 Mar $year$ 14:00
+
+Drop-off details:
+Location: Bristol Airport
+Date: 15 Mar $year$ 14:00
+
+Total Cost: 84.54=E2=82=AC
+Flight number: N/A
+Requested extras: Damage Excess Refund -  - Full Protection  1
+Special Requests: N/A
+
+We hope you enjoy your rental.
+
+Yours Sincerely,
+easyCar.com Reservations Team<!--  -->
+
+
+--Boundary_(ID_BshxTFpWIYV38nXXNPJaKA)
+MIME-version: 1.0
+Content-type: text/html; charset=UTF-8
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html><html><head>    <!--[if gte mso 9]><xml>  <o:OfficeDocumentS=
+ettings>  <o:AllowPNG/>  <o:PixelsPerInch>96</o:PixelsPerInch>  </o:OfficeD=
+ocumentSettings> </xml>  <![endif]--> <meta http-equiv=3D"X-UA-Compatible" =
+content=3D"IE=3Dedge" /> <style type=3D"text/css">   font, a { -moz-osx-fon=
+t-smoothing: grayscale; -webkit-font-smoothing: antialiased; }   @media scr=
+een and (max-width: 420px) {   /* DEFAULT */   .m-hide { display: none !imp=
+ortant; }   .m-block { display: block; width: 100% !important; float: none;=
+ }   .m-clear { float: none !important; }   .m-center { text-align: center =
+!important; margin: 0 auto; float: none !important; }   .m-pull--l { float:=
+ left !important; }   .m-pull--r { float: right !important; }   .m-left { t=
+ext-align: left !important; margin: 0 auto; float: none !important; }   /* =
+GRID SYSTEM */   .m-span10 { width: 100% !important }   .m-span9 { width: 9=
+0% !important }   .m-span5 { width: 50% !important }   /* MARGINS */   .m-m=
+argin--top { margin-top: 15px !important; }   .m-margin--bottom { margin-bo=
+ttom: 15px; }  .m-marginBottom { margin-bottom: 15px !important; }  .m-marg=
+in--left { margin-left: 15px; }   .m-margin--right { margin-right: 15px; } =
+  /* HEADER QUERIES */   .header { border-bottom: 1px solid #F2F2F2; }  .lo=
+go { background-image: url('http://www.rentalcars.com/emailimages/new-brand=
+-email/rc-logo-new-mob-360.png'); background-size:180px 31px; background-re=
+peat: no-repeat; display: block; width:180px; height:31px; background-posit=
+ion: center left;}    /* FOOTER QUERIES */  .footer .link { display: block =
+!important; width: 100% !important; background: #EEEEEE; text-align: center=
+; margin-bottom: 1.5px; padding: 10px 0; }   .footer .first { border-radius=
+: 6px 6px 0 0; }   .footer .last { border-radius: 0 0 6px 6px; }   .footer =
+.unsub { border-radius: 6px; }   .d-hide {display: block !important; font-s=
+ize: 12px !important; max-height: none !important;line-height: 1.5 !importa=
+nt; width:20px !important;}  /* OVERVIEW QUERIES */  .border-fix { border-b=
+ottom: 1px solid #EEEEEE !important; border-right: 0 none !important; }  .m=
+-margin-footer-top { margin-top: 8px !important; }   }  a[x-apple-data-dete=
+ctors]{  color: inherit !important;  text-decoration: none !important;  fon=
+t-size: inherit !important;  font-family: inherit !important;  font-weight:=
+ inherit !important;  line-height: inherit !important; }       </style> <me=
+ta name=3D"robots" content=3D"noindex, nofollow" /> <title>Important inform=
+ation regarding your easyCar.com booking - Ref: 347988599</title>    <scrip=
+t type=3D"text/json"> { "subject" : "Important information regarding your e=
+asyCar.com booking - Ref: 347988599" } </script>
+=09=20=20=20=20
+	    <script type=3D"application/ld+json"> {  "@context": "http://schema.or=
+g" ,  "@type": "RentalCarReservation" ,  "reservationNumber": "347988599", =
+ "url": "https://booking.easycar.com/MyRes.do?serverName=3Dwww.rentalcars.c=
+om&amp;booking.reference=3D347988599&amp;booking.contact.email=3Dbv-gt17@gr=
+oup.apple.com&amp;cor=3DIE&amp;preflang=3DEN&amp;prefcurrency=3DEUR&amp;aff=
+iliateCode=3Deasycar_rc",  "underName":   {  "@type": "Person" ,  "name": "=
+Laura Laoz"  },  "reservationFor": {  "@type": "RentalCar" ,  "name": "Vaux=
+hall Corsa",  "model": "Vauxhall Corsa",  "brand": {  "@type": "Brand",  "n=
+ame": "Vauxhall Corsa"  },  "rentalCompany": {  "@type": "Organization",  "=
+name": "Greenmotion"  }  },  "pickupLocation": {  "@type": "Place" ,  "name=
+": "Bristol Airport" ,  "telephone": "0044 1179595700",  "address": {  "@ty=
+pe": "PostalAddress" ,  "streetAddress": "Bridgewater Road, Lulsgate, Brist=
+ol, UK, BS48 3DY",  "addressLocality": "",  "addressRegion": "",  "postalCo=
+de": "",  "addressCountry": "GB"  },  "geo": { "@type": "GeoCoordinates",  =
+"latitude": "51.383513",  "longitude": "-2.713673"   }  },  "pickupTime": "=
+$year$-03-13T14:00:00+00:00",  "dropoffLocation": {  "@type": "Place" ,  "nam=
+e": "Bristol Airport" ,  "telephone": "0044 1179595700",  "address": {  "@t=
+ype": "PostalAddress" ,  "streetAddress": "Bridgewater Road, Lulsgate, Bris=
+tol, UK, BS48 3DY",  "addressLocality": "",  "addressRegion": "",  "postalC=
+ode": "",  "addressCountry": "GB"  },  "geo": { "@type": "GeoCoordinates", =
+ "latitude": "51.383513",  "longitude": "-2.713673"   }  },  "dropoffTime":=
+ "$year$-03-15T14:00:00+00:00",  "reservationStatus": "http://schema.org/Conf=
+irmed"  ,"modifiedTime": ""  }</script><script type=3D"application/ld+json"=
+>  {   "@context": "http://schema.org",   "@type": "EmailMessage",   "actio=
+n": {   "@type": "ViewAction",   "url": "https://booking.easycar.com/MyRes.=
+do?serverName=3Dwww.rentalcars.com&booking.reference=3D347988599&booking.co=
+ntact.email=3Dbv-gt17@group.apple.com&cor=3DIE&preflang=3DEN&prefcurrency=
+=3DEUR&affiliateCode=3Deasycar_rc&adco=3Dga01",   "name": "Manage My Bookin=
+g"    },   "description": ""   }  </script></head>  <body style=3D"margin: =
+0; padding: 0; background: #F9F9F9;" yahoo=3D"fix">  <table id=3D"backgroun=
+dTable" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"width: 100%; table-layout:fixed; margin: 0 auto; padding:0;">    <tbo=
+dy><tr class=3D"gmail-fix">  <td>  <table cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" align=3D"center" width=3D"610" style=3D"width:610px;">  <tb=
+ody><tr>  <td cellpadding=3D"0" cellspacing=3D"0" border=3D"0" height=3D"1"=
+ style=3D"line-height: 1px; min-width: 610px;">  <img src=3D"http://www.ren=
+talcars.com/emailimages/spacer.gif" width=3D"610" height=3D"1" style=3D"dis=
+play: block; max-height: 1px; min-height: 1px; min-width: 610px; width: 610=
+px;" />  </td>  </tr>  </tbody></table>  </td>  </tr>    <tr>  <td>  <div s=
+tyle=3D"display:none; white-space:nowrap; font:15px courier; line-height:0;=
+">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>  </td> =
+ </tr>  <tr>  <td align=3D"center">    <table cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"header" style=3D"border-collapse: collapse; width: 100%; ba=
+ckground:#fffff;"> <tbody> <tr> <td align=3D"center" style=3D"border-collap=
+se: collapse;">   <table cellspacing=3D"0" cellpadding=3D"0" class=3D"m-spa=
+n9" style=3D"border-collapse: collapse; width: 610px;"> <tbody> <tr>   <td =
+height=3D"15" style=3D"border-collapse: collapse;" colspan=3D"2"></td> </tr=
+> <tr class=3D"header__span"> <td valign=3D"bottom" align=3D"left" class=3D=
+"m-block m-margin--bottom" style=3D"border-collapse: collapse;"> <img class=
+=3D"m-center" width=3D"230" height=3D"39" src=3D"http://www.rentalcars.com/=
+emailimages/trans/affiliate/easycar.png" style=3D"display: block; border: 0=
+ none; font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#344=
+95e;" />  </td><td class=3D"m-block" style=3D"border-collapse: collapse;"> =
+</td></tr> <tr>   <td height=3D"15" style=3D"border-collapse: collapse;" co=
+lspan=3D"2"></td> </tr> </tbody> </table> </td> </tr> </tbody> </table><tab=
+le cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse; =
+width: 100%; background: #fffff;"> <tbody><tr>   <td align=3D"center" style=
+=3D"border-collapse: collapse;"> <table class=3D"m-span9" cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"border-collapse: seperate; width: 610px; border=
+: 1px solid #E3E3E3; border-radius: 4px; align:left"> <tbody><tr>   <th cla=
+ss=3D"m-block m-margin--bottom" style=3D"border-collapse: seperate; backgro=
+und: #FFFFFF; width: 100%;"> <table class=3D"m-block" align=3D"left" cellpa=
+dding=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse; width: 10=
+0%; background-color: #fff;"> <tbody><tr>   <td colspan=3D"3" height=3D"20"=
+ style=3D"border-collapse: collapse;"></td> </tr>  <tr>   <td style=3D"bord=
+er-collapse: collapse; width: 20px;"></td>    <th align=3D"left" style=3D"f=
+ont-family:Arial, Sans-Serif; font-size:15px;color:#2d2d2d;font-weight:norm=
+al"> Dear Mrs Laoz,<br /> <br /> Thank you for booking through easyCar.com.=
+<br /> <br /> Your voucher is now available online to print by clicking thr=
+ough the =E2=80=9CManage my Booking=E2=80=9D button below. You can also rev=
+iew your reservation, or make changes here too.<br /> <br /> <table cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#FF6600" align=3D"cent=
+er" style=3D"border-collapse: separate; border-radius: 3px; padding: 15px 3=
+0px; font-family:Arial, Sans-Serif; font-size: 14px; -webkit-border-radius:=
+ 3px; -moz-border-radius: 3px;">   <tbody>   <tr>   <td border=3D"0;" align=
+=3D"center"><a href=3D"http://reservations.easyCar.com/mpss/c/DQE/ftUUAA/t.=
+22x/87Ln3jVLR4W4rYj-E_nXFw/h0/9tkkKjbFfiExGYoJHMAo4t56QBxtQah53fnqXngk-2B9T=
+-2FGPR5-2BvN6YdvognvcM-2BigU9HJN1z2RQCWyZVj37cEDdc0lrXU9-2FPFQMt9BcgLXkymqf=
+1EzYKb-2B8czuhfm-2FYN9D6bY1PESIYnpyox7i2FAP8ez945RoR9YM9ISdCfuHyS3dOUMB8UpR=
+0232bRf612hUvo0RMsUm5kWJjiN6A7mhvltY-2FgHdzlbh4sz0-2Bv7avvfi8XTVN2yIF-2BdHt=
+7YiH5LoKVl-2Bsb1-2FqFPYJxVrDnMr3fyKW2DFIxmQw-2FQE6XsMwA1k3IC3308Onmy0bkMx3-=
+2Bw" style=3D"font-size: 14px; font-family:Arial, Sans-Serif; color: #FFFFF=
+F; text-decoration: none; border-radius: 3px; display: inline-block;">Manag=
+e My Booking</a></td>  </tr>  </tbody>  </table>  <br />  <br /><br /> <br =
+/> Please carefully check to make sure all your travel details are correct.=
+<br /> <br /> Things to remember when picking up your car<br /> =E2=80=A2 Y=
+our voucher.<br /> =E2=80=A2 A valid credit card in the main driver's name<=
+br /> =E2=80=A2 Your Driving Licence (Both parts if applicable).<br /> <br =
+/> Please also check the Terms and Conditions of your reservation to make s=
+ure you do not need to take other forms of identification with you when pic=
+king up the vehicle.<br /> <br /> At the Greenmotion counter, you may decid=
+e to buy additional cover =E2=80=93 to reduce or remove your excess, or to =
+cover things your Collision Damage Waiver (CDW) doesn=E2=80=99t, such as ty=
+res and windscreen.<br /> <br /> <strong>Please Note:</strong> If you do bu=
+y a policy from Greenmotion, that contract will be between you and Greenmot=
+ion. Since easyCar.com will not be involved at all, we won't be able to hel=
+p if you're dissatisfied with the cost of their policy =E2=80=93 or the cov=
+er it provides.<br /> <br /> Car Group: Vauxhall Corsa or similar<br /> Sup=
+plier: Greenmotion<br /> <br /> Pick-up details:<br /> Country: UK<br /> Ci=
+ty: Bristol<br /> Location: Bristol Airport<br /> Date: 13 Mar $year$ 14:00<b=
+r /> <br /> Drop-off details:<br /> Location: Bristol Airport<br /> Date: 1=
+5 Mar $year$ 14:00<br /> <br /> Total Cost: 84.54=E2=82=AC<br /> Flight numbe=
+r: N/A<br /> Requested extras: Damage Excess Refund -  - Full Protection  1=
+<br /> Special Requests: N/A<br /> <br /> We hope you enjoy your rental.<br=
+ /> <br /> Yours Sincerely,<br /> easyCar.com Reservations Team </th><td st=
+yle=3D"border-collapse: collapse; width: 20px;"></td> </tr> <tr>   <td cols=
+pan=3D"3" height=3D"20" style=3D"border-collapse: collapse;"></td>   </tr> =
+  </tbody></table> </th><td class=3D"m-hide" style=3D"border-collapse: coll=
+apse; width: 20px;"></td></tr>   </tbody></table>   </td> </tr>   <tr>   <t=
+d colspan=3D"3" height=3D"20" style=3D"border-collapse: collapse;"></td>   =
+</tr> </tbody></table> <table bgcolor=3D"#FFFFFF" cellspacing=3D"0" cellpad=
+ding=3D"0" class=3D"footer" style=3D"border-collapse: collapse; width: 100%=
+;"> <tbody><tr>   <td height=3D"15"></td>  </tr>  <tr>   <td align=3D"cente=
+r" style=3D"border-collapse: collapse">   <table align=3D"center" cellspaci=
+ng=3D"0" dir=3D"ltr" cellpadding=3D"0" class=3D"m-span9" style=3D"border-co=
+llapse: collapse; width: 610px;">   <tbody><tr>  <td dir=3D"ltr" align=3D"l=
+eft" width=3D"80%" style=3D"font-size: 14px; color: #919191; line-height: 1=
+.5; font-family:Helvetica, Arial, Sans-serif; font-weight: normal;">  </td>=
+  </tr>  <tr>   <td colspan=3D"2" height=3D"15"></td>  </tr>  <tr>   <td co=
+lspan=3D"2" style=3D"font-size: 14px; color: #919191; line-height: 1.5; fon=
+t-family:Helvetica, Arial, Sans-serif; font-weight: normal; text-align:left=
+;">   </td>  </tr>  <tr>   <td colspan=3D"2" height=3D"22"></td>  </tr>  <t=
+r>  <td colspan=3D"2">   <table width=3D"100%" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0">   <tbody><tr>   <td class=3D"m-block" align=3D"left" =
+width=3D"260" style=3D"width:260px;">   </td>   </tr>   </tbody></table>  <=
+/td>  </tr>  <tr>   <td colspan=3D"2" height=3D"22"></td> </tr>   </tbody><=
+/table>   </td>  </tr> </tbody></table> <img src=3D"https://pixel.monitor1.=
+returnpath.net/pixel.gif?r=3D73afd0e1429c5d8795b4bfa05b9804d365a4973c&amp;c=
+=3D23a20161207&amp;preflang=3DEN&amp;COR=3Die&amp;prefcurrency=3DEUR" width=
+=3D"1" height=3D"1" />   </td>   <!--
+
+	Current Lang: en
+	Expected Lang: EN
+	Lang Mismatch: false
+=09
+	Current COR: ie
+	Expected COR: IE
+	COR Mismatch: false
+=09
+	Session ID: 50EF376B65C3060735CFC87B70C3DB9D.node217a
+=09
+	Querystring: type=3D23a&emailHideClicktale=3Dtrue&_newBranding=3Dtrue&isSc=
+rape=3Dtrue&affiliateCode=3Deasycar_rc&AFFILIATE_NAME=3Deasycar_rc&BRAND=3D=
+easyCar.com&CAR_TYPE=3DVauxhall+Corsa&COMMENTS=3DN%2FA&COR=3DIE&CURRENCY_1=
+=3D&CURRENCY_2=3D%E2%82%AC&DISPLAY_CURRENCY=3DEUR&DROP_DATETIME=3D2017-03-1=
+5T14%3A00%3A00%2B00%3A00&DROP_DATE=3D15+Mar+2017+14%3A00&DROP_LOC=3DBristol=
++Airport&EMAIL=3Dbv-gt17%40group.apple.com&EXTRAS=3DDamage+Excess+Refund+-+=
++-+Full+Protection++1&EXTRA_PACKAGE=3D&FIRSTNAME=3DLaura&FLIGHT_NUM=3DN%2FA=
+&FOOTER=3D+&LASTNAME=3DLaoz&LOYALTY_POINTS=3D&NLANG=3DEN&PICK_CITY=3DBristo=
+l&PICK_COUNTRY=3DUK&PICK_DATETIME=3D2017-03-13T14%3A00%3A00%2B00%3A00&PICK_=
+DATE=3D13+Mar+2017+14%3A00&PICK_LOC=3DBristol+Airport&QUOTE_LINK=3Dhttps%3A=
+%2F%2Fbooking.easycar.com%2FMyRes.do%3FserverName%3Dwww.rentalcars.com&RESE=
+RV_NUM=3D347988599&SUPPLIERS_PROTECTION_AMOUNT=3D0&SUPPLIERS_PROTECTION=3D0=
+&SUPPLIER_DROP_ADDRESS=3DBridgewater+Road%2C+Lulsgate%2C+Bristol%2C+UK%2C+B=
+S48+3DY&SUPPLIER_DROP_COUNTRY=3DGB&SUPPLIER_DROP_LOCALITY=3DBristol&SUPPLIE=
+R_DROP_POSTCODE=3D&SUPPLIER_DROP_REGION=3D&SUPPLIER_DROP_TELEPHONE=3D0044+1=
+179595700&SUPPLIER_DROP=3DBristol+Airport&SUPPLIER_LAT=3D51.383513&SUPPLIER=
+_LONG=3D-2.713673&SUPPLIER_PICK_ADDRESS=3DBridgewater+Road%2C+Lulsgate%2C+B=
+ristol%2C+UK%2C+BS48+3DY&SUPPLIER_PICK_COUNTRY=3DGB&SUPPLIER_PICK_LOCALITY=
+=3DBristol&SUPPLIER_PICK_POSTCODE=3D&SUPPLIER_PICK_REGION=3D&SUPPLIER_PICK_=
+TELEPHONE=3D0044+1179595700&SUPPLIER_PICK=3DBristol+Airport&SUPPLIER=3DGree=
+nmotion&TITLE=3DMrs&TOTAL_COST=3D84.54&preflang=3DEN&serverName=3Dwww.renta=
+lcars.com&PROPOSITION_TYPE=3DBR&PREFLANG=3DEN&PREFLANG_1=3DEN&preflang_1=3D=
+EN&cor=3DIE&cor_1=3DIE&envelopeId=3D0d595215-f630-4018-a26c-6b449c440ef0&
+	User Agent: Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us=
+) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6=
+531.22.7
+=09
+	Page: TransactionalGeneric
+	Envelope ID: 0d595215-f630-4018-a26c-6b449c440ef0
+-->
+<!--  -->
+
+</tr></tbody></table><!-- x-rpcampaign: group5_20161207 --><img src=3D"http=
+://www.google-analytics.com/collect?v=3D1&amp;tid=3DUA-53814850-1&amp;cid=
+=3Dconfirmation-documnt-sent-as-url-23a&amp;t=3Devent&amp;ec=3Demail&amp;ea=
+=3Dopen&amp;el=3Dopen_email&amp;cs=3Drentalcarsemail&amp;cm=3Drentalcarsema=
+il&amp;cn=3Dconfirmation-documnt-sent-as-url-23a-2016-12-07&amp;cm1=3D1" />
+<img src=3D"http://reservations.easyCar.com/mpss/o/DQE/ftUUAA/t.22x/87Ln3jV=
+LR4W4rYj-E_nXFw/o.gif" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=
+=3D"height:1px !important;width:1px !important;border-width:0 !important;ma=
+rgin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;=
+margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !importa=
+nt;padding-right:0 !important;padding-left:0 !important;"/>
+</body></html>
+
+--Boundary_(ID_BshxTFpWIYV38nXXNPJaKA)--

@@ -1,0 +1,25 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "building",
+	"features" : [
+		{
+			"type" : "Feature",
+			"id" : "01fb606b-fc70-4fa5-ac0d-9ec984c5656e",
+			"feature_type" : "building",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Main Terminal"
+				},
+				"alt_name" : null,
+				"category" : "unspecified",
+				"restriction" : null,
+				"display_point" : {
+					"type" : "Point",
+					"coordinates" : [ -123.43037670549732, 48.64063631640756 ]
+				},
+				"address_id" : "e94a7cd2-3182-489b-a86d-ead46a7cdfd4"
+			}
+		}
+	]
+}

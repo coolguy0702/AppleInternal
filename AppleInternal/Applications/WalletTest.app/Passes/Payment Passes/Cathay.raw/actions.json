@@ -1,0 +1,40 @@
+{
+    "actions": [
+        {
+            "identifier": "topUpPass",
+            "type": "enteredValue",
+            "hasRemoteContent": false,
+            "title": "Add Money",
+            "description": "Add money to pass",
+            "confirmationTitle": "Add",
+            "featured": true,
+            "merchantId": "TRANSIT_8B",
+            "serviceProviderIdentifier": "TRANSIT_8B",
+            "serviceProviderCountryCode": "HK",
+            "serviceProviderSupportedNetworks": [
+                "ChinaUnionPay"
+            ],
+            "serviceProviderCapabilities": [
+                "EMV",
+                "credit",
+                "debit"
+            ],
+            "item": {
+                "currency": "HKD",
+                "minAmount": 1,
+                "maxAmount": 1000,
+                "defaultSuggestions": [
+                    20,
+                    50,
+                    100
+                ],
+                "serviceProviderData": {
+                    "actionIdentifier": "top_up",
+                    "currency": "HKD",
+                    "issuerIdentifier": "8B",
+                    "dpanIdentifier": "DAPL8BALL_0001a625ff04b0c84bfc96efb896e639e136"
+                }
+            }
+        }
+    ]
+}

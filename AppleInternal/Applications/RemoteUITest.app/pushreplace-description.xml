@@ -1,0 +1,11 @@
+<xmlui action="push" id="push-replace-description">
+    <page>
+        <navigationBar title="Push + Replace"/>
+        <tableView>
+            <section>
+                <linkRow label="Push + Replace" accessory="disclosure" url="pushreplace.xml"/>
+                <footer>This will push a new object model onto the stack and then remove all objects models back to the object model with ID BuddyMLSample, which loaded this one.</footer>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

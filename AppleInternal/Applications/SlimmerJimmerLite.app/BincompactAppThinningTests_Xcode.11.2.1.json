@@ -1,0 +1,1518 @@
+[
+    {
+        "group-name": "BinCompact Tests (Xcode 11.2.1)",
+        "icon-name": "icon-backward-compatibility-tests",
+        "asset-source": {
+            "asset-bundle-name": "BincompactAssets (Xcode 11.2.1)",
+            "asset-bundle-identifier": "com.apple.cocoa.BincompactAssets-Xcode11.2.1"
+        },
+        "test-cases": [
+            {
+                "description": "Tests monochrome images (public.png) are encoded as monochrome images.", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "image-uti": "public.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "filename": "monochrome_NoAlpha_NotWide_256x256.png"
+                        }
+                    ], 
+                    "expected-as-monochrome": true
+                }, 
+                "test-case-name": "MonochromeImageTest", 
+                "test-case-tags": [
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "MonochromeImagePNG.imageset", 
+                "test-name": "Monochrome as Monochrome Test (PNG)"
+            },
+            {
+                "description": "Tests image asset preserves the correct color gamut", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "image-uti": "public.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "filename": "DP3_transparent_wide_256x256.png"
+                        }
+                    ], 
+                    "is-wide-gamut": true
+                }, 
+                "test-case-name": "WideGamutImagesTest", 
+                "test-case-tags": [
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "WideGamutPNG.imageset", 
+                "test-name": "Wide Gamut Image Test (PNG)"
+            },
+            {
+                "description": "Tests PDF image assets.", 
+                "asset-info": {
+                    "image-uti": "com.adobe.pdf", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "filename": "PureVector.pdf"
+                        }
+                    ]
+                }, 
+                "test-case-name": "PDFImageTest", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-name": "PDFImage.imageset", 
+                "test-name": "PDF Image Asset Test"
+            },
+            {
+                "description": "Tests named colors from asset catalogs can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "color": {
+                                "color-space": "sRGB", 
+                                "components": {
+                                    "blue": 0.0, 
+                                    "alpha": 1.0, 
+                                    "green": 0.0, 
+                                    "red": 1.0
+                                }
+                            }, 
+                            "idiom": "universal"
+                        }
+                    ]
+                }, 
+                "test-case-name": "NamedColorTest", 
+                "view-controller": "ColorAssetViewController", 
+                "asset-name": "Color_universal_sRGB.colorset", 
+                "test-name": "Named Color Test (universal_sRGB)"
+            },
+            {
+                "description": "Tests named colors from asset catalogs can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "color": {
+                                "color-space": "display-P3", 
+                                "components": {
+                                    "blue": 0.0, 
+                                    "alpha": 1.0, 
+                                    "green": 0.0, 
+                                    "red": 1.0
+                                }
+                            }, 
+                            "idiom": "universal"
+                        }
+                    ]
+                }, 
+                "test-case-name": "NamedColorTest", 
+                "view-controller": "ColorAssetViewController", 
+                "asset-name": "Color_universal_display-P3.colorset", 
+                "test-name": "Named Color Test (universal_display-P3)"
+            },
+            {
+                "description": "Tests image asset memory and graphics class fallback.",
+                "view-controller": "SideBySideImageViewController",
+                "asset-info": {
+                    "asset-name": "ImageAssetMemoryGraphicsClassFallback"
+                },
+                "test-case-name": "ImageAssetMemoryGraphicsClassFallbackTest",
+                "asset-name": "ImageAssetMemoryGraphicsClassFallback.imageset",
+                "test-name": "Image Memory And Graphics Class Fallback Test"
+            },
+            {
+                "description": "Tests image asset variant with compression (lossless).", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "encoding-fallback-map": {
+                        "12.0": [
+                            8, 
+                            10, 
+                            4
+                        ], 
+                        "9.0": [
+                            1, 
+                            3, 
+                            4
+                        ], 
+                        "13.0": [
+                            11
+                        ]
+                    }, 
+                    "target-os-versions": {
+                        "ios": "13.0",
+                        "appletvos": "13.0",
+                        "watchos": "6.0",
+                    },
+                    "image-name": "Mail.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "Mail.png"
+                        }
+                    ], 
+                    "asset-name": "CompressedImage_Icons_7_lossless", 
+                    "compression-type": "lossless"
+                }, 
+                "test-case-name": "OSVariantThinningTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-os-variant", 
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "CompressedImage_Icons_7_lossless.imageset", 
+                "test-name": "Icons (lossless) - 7"
+            }, 
+            {
+                "description": "Tests image asset variant with compression (automatic).", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "encoding-fallback-map": {
+                        "12.0": [
+                            8, 
+                            10, 
+                            4
+                        ], 
+                        "9.0": [
+                            1, 
+                            3, 
+                            4
+                        ], 
+                        "13.0": [
+                            11
+                        ]
+                    },
+                    "target-os-versions": {
+                        "ios": "13.0",
+                        "appletvos": "13.0",
+                        "watchos": "6.0",
+                    },
+                    "image-name": "Mail.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "Mail.png"
+                        }
+                    ], 
+                    "asset-name": "CompressedImage_Icons_7_automatic", 
+                    "compression-type": "automatic"
+                }, 
+                "test-case-name": "OSVariantThinningTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-os-variant", 
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "CompressedImage_Icons_7_automatic.imageset", 
+                "test-name": "Icons (automatic) - 7"
+            }, 
+            {
+                "description": "Tests image asset variant with compression (lossy).", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "encoding-fallback-map": {
+                        "12.0": [
+                            5, 
+                            9, 
+                            4, 
+                            10
+                        ], 
+                        "9.0": [
+                            5, 
+                            4, 
+                            1, 
+                            3
+                        ], 
+                        "13.0": [
+                            5, 
+                            9, 
+                            4, 
+                            11, 
+                            10
+                        ]
+                    },
+                    "target-os-versions": {
+                        "ios": "13.0",
+                        "appletvos": "13.0",
+                        "watchos": "6.0",
+                    },
+                    "image-name": "Mail.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "Mail.png"
+                        }
+                    ], 
+                    "asset-name": "CompressedImage_Icons_7_lossy", 
+                    "compression-type": "lossy"
+                }, 
+                "test-case-name": "OSVariantThinningTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-os-variant", 
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "CompressedImage_Icons_7_lossy.imageset", 
+                "test-name": "Icons (lossy) - 7"
+            }, 
+            {
+                "description": "Tests image asset variant with compression (gpu-optimized-best).", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "encoding-fallback-map": {
+                        "10.0": [
+                            7, 
+                            5, 
+                            4, 
+                            1, 
+                            3
+                        ], 
+                        "12.0": [
+                            7, 
+                            5, 
+                            9, 
+                            4, 
+                            1, 
+                            3
+                        ], 
+                        "9.0": [
+                            5, 
+                            4, 
+                            1, 
+                            3
+                        ]
+                    },
+                    "target-os-versions": {
+                        "ios": "13.0",
+                        "appletvos": "13.0",
+                        "watchos": "6.0",
+                    },
+                    "image-name": "Mail.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "Mail.png"
+                        }
+                    ], 
+                    "asset-name": "CompressedImage_Icons_7_gpu-optimized-best", 
+                    "compression-type": "gpu-optimized-best"
+                }, 
+                "test-case-name": "OSVariantThinningTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-os-variant", 
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "CompressedImage_Icons_7_gpu-optimized-best.imageset", 
+                "test-name": "Icons (gpu-optimized-best) - 7"
+            }, 
+            {
+                "description": "Tests image asset variant with compression (gpu-optimized-smallest).", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "encoding-fallback-map": {
+                        "10.0": [
+                            7, 
+                            5, 
+                            4, 
+                            1, 
+                            3
+                        ], 
+                        "12.0": [
+                            7, 
+                            5, 
+                            9, 
+                            4, 
+                            1, 
+                            3
+                        ], 
+                        "9.0": [
+                            5, 
+                            4, 
+                            1, 
+                            3
+                        ]
+                    },
+                    "target-os-versions": {
+                        "ios": "13.0",
+                        "appletvos": "13.0",
+                        "watchos": "6.0",
+                    },
+                    "image-name": "Mail.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "Mail.png"
+                        }
+                    ], 
+                    "asset-name": "CompressedImage_Icons_7_gpu-optimized-smallest", 
+                    "compression-type": "gpu-optimized-smallest"
+                }, 
+                "test-case-name": "OSVariantThinningTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-os-variant", 
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "CompressedImage_Icons_7_gpu-optimized-smallest.imageset", 
+                "test-name": "Icons (gpu-optimized-smallest) - 7"
+            },
+            {
+                "description": "Tests image asset variant with compression (lossless).", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "encoding-fallback-map": {
+                        "12.0": [
+                            8, 
+                            10, 
+                            4
+                        ], 
+                        "9.0": [
+                            1, 
+                            3, 
+                            4
+                        ], 
+                        "13.0": [
+                            11
+                        ]
+                    },
+                    "target-os-versions": {
+                        "ios": "13.0",
+                        "appletvos": "13.0",
+                        "watchos": "6.0",
+                    },
+                    "image-name": "4.2.05.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "4.2.05.png"
+                        }
+                    ], 
+                    "asset-name": "CompressedImage_Photos_5_lossless", 
+                    "compression-type": "lossless"
+                }, 
+                "test-case-name": "OSVariantThinningTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-os-variant", 
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "CompressedImage_Photos_5_lossless.imageset", 
+                "test-name": "Photos (lossless) - 5"
+            }, 
+            {
+                "description": "Tests image asset variant with compression (automatic).", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "encoding-fallback-map": {
+                        "12.0": [
+                            8, 
+                            10, 
+                            4
+                        ], 
+                        "9.0": [
+                            1, 
+                            3, 
+                            4
+                        ], 
+                        "13.0": [
+                            11
+                        ]
+                    },
+                    "target-os-versions": {
+                        "ios": "13.0",
+                        "appletvos": "13.0",
+                        "watchos": "6.0",
+                    },
+                    "image-name": "4.2.05.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "4.2.05.png"
+                        }
+                    ], 
+                    "asset-name": "CompressedImage_Photos_5_automatic", 
+                    "compression-type": "automatic"
+                }, 
+                "test-case-name": "OSVariantThinningTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-os-variant", 
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "CompressedImage_Photos_5_automatic.imageset", 
+                "test-name": "Photos (automatic) - 5"
+            }, 
+            {
+                "description": "Tests image asset variant with compression (lossy).", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "encoding-fallback-map": {
+                        "12.0": [
+                            5, 
+                            9, 
+                            4, 
+                            10
+                        ], 
+                        "9.0": [
+                            5, 
+                            4, 
+                            1, 
+                            3
+                        ], 
+                        "13.0": [
+                            5, 
+                            9, 
+                            4, 
+                            11, 
+                            10
+                        ]
+                    },
+                    "target-os-versions": {
+                        "ios": "13.0",
+                        "appletvos": "13.0",
+                        "watchos": "6.0",
+                    },
+                    "image-name": "4.2.05.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "4.2.05.png"
+                        }
+                    ], 
+                    "asset-name": "CompressedImage_Photos_5_lossy", 
+                    "compression-type": "lossy"
+                }, 
+                "test-case-name": "OSVariantThinningTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-os-variant", 
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "CompressedImage_Photos_5_lossy.imageset", 
+                "test-name": "Photos (lossy) - 5"
+            }, 
+            {
+                "description": "Tests image asset variant with compression (gpu-optimized-best).", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "encoding-fallback-map": {
+                        "10.0": [
+                            7, 
+                            5, 
+                            4, 
+                            1, 
+                            3
+                        ], 
+                        "12.0": [
+                            7, 
+                            5, 
+                            9, 
+                            4, 
+                            1, 
+                            3
+                        ], 
+                        "9.0": [
+                            5, 
+                            4, 
+                            1, 
+                            3
+                        ]
+                    },
+                    "target-os-versions": {
+                        "ios": "13.0",
+                        "appletvos": "13.0",
+                        "watchos": "6.0",
+                    },
+                    "image-name": "4.2.05.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "4.2.05.png"
+                        }
+                    ], 
+                    "asset-name": "CompressedImage_Photos_5_gpu-optimized-best", 
+                    "compression-type": "gpu-optimized-best"
+                }, 
+                "test-case-name": "OSVariantThinningTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-os-variant", 
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "CompressedImage_Photos_5_gpu-optimized-best.imageset", 
+                "test-name": "Photos (gpu-optimized-best) - 5"
+            }, 
+            {
+                "description": "Tests image asset variant with compression (gpu-optimized-smallest).", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "encoding-fallback-map": {
+                        "10.0": [
+                            7, 
+                            5, 
+                            4, 
+                            1, 
+                            3
+                        ], 
+                        "12.0": [
+                            7, 
+                            5, 
+                            9, 
+                            4, 
+                            1, 
+                            3
+                        ], 
+                        "9.0": [
+                            5, 
+                            4, 
+                            1, 
+                            3
+                        ]
+                    },
+                    "target-os-versions": {
+                        "ios": "13.0",
+                        "appletvos": "13.0",
+                        "watchos": "6.0",
+                    },
+                    "image-name": "4.2.05.png", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "4.2.05.png"
+                        }
+                    ], 
+                    "asset-name": "CompressedImage_Photos_5_gpu-optimized-smallest", 
+                    "compression-type": "gpu-optimized-smallest"
+                }, 
+                "test-case-name": "OSVariantThinningTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-os-variant", 
+                    "tag-uses-internal-sdk", 
+                    "tag-uses-coreui-spi"
+                ], 
+                "asset-name": "CompressedImage_Photos_5_gpu-optimized-smallest.imageset", 
+                "test-name": "Photos (gpu-optimized-smallest) - 5"
+            },
+            {
+                "description": "Tests texture asset with pixel format \"r-8-unorm\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "r-8-unorm", 
+                            "filename": "Mipmap_BGRA_r-8-unorm.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_r-8-unorm"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_r-8-unorm.textureset", 
+                "test-name": "Texture test (r-8-unorm)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rg-8-unorm\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rg-8-unorm", 
+                            "filename": "Mipmap_BGRA_rg-8-unorm.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_rg-8-unorm"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_rg-8-unorm.textureset", 
+                "test-name": "Texture test (rg-8-unorm)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rgba-8-unorm\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rgba-8-unorm", 
+                            "filename": "Mipmap_BGRA_rgba-8-unorm.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_rgba-8-unorm"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_rgba-8-unorm.textureset", 
+                "test-name": "Texture test (rgba-8-unorm)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rgba-8-unorm-sRGB\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rgba-8-unorm-sRGB", 
+                            "filename": "Mipmap_BGRA_rgba-8-unorm-sRGB.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_rgba-8-unorm-sRGB"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_rgba-8-unorm-sRGB.textureset", 
+                "test-name": "Texture test (rgba-8-unorm-sRGB)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"r-16-float\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "r-16-float", 
+                            "filename": "Mipmap_BGRA_r-16-float.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_r-16-float"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_r-16-float.textureset", 
+                "test-name": "Texture test (r-16-float)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rg-16-float\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rg-16-float", 
+                            "filename": "Mipmap_BGRA_rg-16-float.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_rg-16-float"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_rg-16-float.textureset", 
+                "test-name": "Texture test (rg-16-float)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rgba-16-float\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rgba-16-float", 
+                            "filename": "Mipmap_BGRA_rgba-16-float.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_rgba-16-float"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_rgba-16-float.textureset", 
+                "test-name": "Texture test (rgba-16-float)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rbg-10-extended-range-sRGB\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rbg-10-extended-range-sRGB", 
+                            "filename": "Mipmap_BGRA_rbg-10-extended-range-sRGB.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_rbg-10-extended-range-sRGB"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_rbg-10-extended-range-sRGB.textureset", 
+                "test-name": "Texture test (rbg-10-extended-range-sRGB)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"astc-4x4\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "astc-4x4", 
+                            "filename": "Mipmap_BGRA_astc-4x4.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_astc-4x4"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_astc-4x4.textureset", 
+                "test-name": "Texture test (astc-4x4)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"astc-4x4-sRGB\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "astc-4x4-sRGB", 
+                            "filename": "Mipmap_BGRA_astc-4x4-sRGB.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_astc-4x4-sRGB"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_astc-4x4-sRGB.textureset", 
+                "test-name": "Texture test (astc-4x4-sRGB)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"astc-8x8\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "astc-8x8", 
+                            "filename": "Mipmap_BGRA_astc-8x8.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_astc-8x8"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_astc-8x8.textureset", 
+                "test-name": "Texture test (astc-8x8)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"astc-8x8-sRGB\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "astc-8x8-sRGB", 
+                            "filename": "Mipmap_BGRA_astc-8x8-sRGB.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_astc-8x8-sRGB"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_astc-8x8-sRGB.textureset", 
+                "test-name": "Texture test (astc-8x8-sRGB)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"None\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "filename": "Mipmap_BGRA_automatic.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_BGRA_automatic"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_BGRA_automatic.textureset", 
+                "test-name": "Texture test (automatic)"
+            },
+            {
+                "description": "Tests texture asset with pixel format \"r-8-unorm\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "r-8-unorm", 
+                            "filename": "Mipmap_Gray_r-8-unorm.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_r-8-unorm"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_r-8-unorm.textureset", 
+                "test-name": "Texture test (r-8-unorm)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rg-8-unorm\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rg-8-unorm", 
+                            "filename": "Mipmap_Gray_rg-8-unorm.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_rg-8-unorm"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_rg-8-unorm.textureset", 
+                "test-name": "Texture test (rg-8-unorm)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rgba-8-unorm\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rgba-8-unorm", 
+                            "filename": "Mipmap_Gray_rgba-8-unorm.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_rgba-8-unorm"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_rgba-8-unorm.textureset", 
+                "test-name": "Texture test (rgba-8-unorm)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rgba-8-unorm-sRGB\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rgba-8-unorm-sRGB", 
+                            "filename": "Mipmap_Gray_rgba-8-unorm-sRGB.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_rgba-8-unorm-sRGB"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_rgba-8-unorm-sRGB.textureset", 
+                "test-name": "Texture test (rgba-8-unorm-sRGB)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"r-16-float\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "r-16-float", 
+                            "filename": "Mipmap_Gray_r-16-float.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_r-16-float"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_r-16-float.textureset", 
+                "test-name": "Texture test (r-16-float)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rg-16-float\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rg-16-float", 
+                            "filename": "Mipmap_Gray_rg-16-float.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_rg-16-float"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_rg-16-float.textureset", 
+                "test-name": "Texture test (rg-16-float)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rgba-16-float\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rgba-16-float", 
+                            "filename": "Mipmap_Gray_rgba-16-float.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_rgba-16-float"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_rgba-16-float.textureset", 
+                "test-name": "Texture test (rgba-16-float)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"rbg-10-extended-range-sRGB\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "rbg-10-extended-range-sRGB", 
+                            "filename": "Mipmap_Gray_rbg-10-extended-range-sRGB.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_rbg-10-extended-range-sRGB"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_rbg-10-extended-range-sRGB.textureset", 
+                "test-name": "Texture test (rbg-10-extended-range-sRGB)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"astc-4x4\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "astc-4x4", 
+                            "filename": "Mipmap_Gray_astc-4x4.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_astc-4x4"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_astc-4x4.textureset", 
+                "test-name": "Texture test (astc-4x4)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"astc-4x4-sRGB\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "astc-4x4-sRGB", 
+                            "filename": "Mipmap_Gray_astc-4x4-sRGB.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_astc-4x4-sRGB"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_astc-4x4-sRGB.textureset", 
+                "test-name": "Texture test (astc-4x4-sRGB)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"astc-8x8\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "astc-8x8", 
+                            "filename": "Mipmap_Gray_astc-8x8.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_astc-8x8"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_astc-8x8.textureset", 
+                "test-name": "Texture test (astc-8x8)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"astc-8x8-sRGB\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "pixel-format": "astc-8x8-sRGB", 
+                            "filename": "Mipmap_Gray_astc-8x8-sRGB.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_astc-8x8-sRGB"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_astc-8x8-sRGB.textureset", 
+                "test-name": "Texture test (astc-8x8-sRGB)"
+            }, 
+            {
+                "description": "Tests texture asset with pixel format \"None\" can be used properly.", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "filename": "Mipmap_Gray_automatic.mipmapset"
+                        }
+                    ], 
+                    "asset-name": "Texture_Gray_automatic"
+                }, 
+                "test-case-name": "MipmapTextureTest", 
+                "view-controller": "MipmapTextureAssetViewController", 
+                "asset-name": "Texture_Gray_automatic.textureset", 
+                "test-name": "Texture test (automatic)"
+            },
+            {
+                "description": "Tests SpriteKit textures with graphics feature set can be applied properly.", 
+                "asset-info": {
+                    "idiom": "universal", 
+                    "asset-slots": [
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple2"
+                        }
+                    ], 
+                    "sprite-name": "Sprite_apple2"
+                }, 
+                "test-case-name": "SpriteAtlasTextureTest", 
+                "view-controller": "SpriteAtlasTextureAssetViewController", 
+                "asset-name": "Sprites_apple2.spriteatlas", 
+                "test-name": "Sprite test with graphics feature set apple2"
+            },
+            {
+                "description": "Tests image asset memory class fallback.", 
+                "view-controller": "ImageAssetViewController", 
+                "asset-info": {
+                    "memory-options": [
+                        0, 
+                        1, 
+                        2, 
+                        3, 
+                        4, 
+                        6
+                    ], 
+                    "asset-slots": [
+                        {
+                            "memory": "1GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "ImageForMemoryClass_1GB.jpg"
+                        }, 
+                        {
+                            "memory": "2GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "ImageForMemoryClass_2GB.jpg"
+                        }, 
+                        {
+                            "memory": "3GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "ImageForMemoryClass_3GB.jpg"
+                        }, 
+                        {
+                            "memory": "4GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "ImageForMemoryClass_4GB.jpg"
+                        }, 
+                        {
+                            "memory": "6GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "ImageForMemoryClass_6GB.jpg"
+                        }, 
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "ImageWithMemoryClass_Any.jpg"
+                        }
+                    ], 
+                    "asset-name": "ImageAssetMemoryClassFallback"
+                }, 
+                "test-case-name": "ImageAssetMemoryClassFallbackTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-uses-edm", 
+                    "tag-uses-internal-sdk"
+                ], 
+                "asset-name": "ImageAssetMemoryClassFallback.imageset", 
+                "test-name": "Image Asset Memory Class Fallback Test"
+            },
+            {
+                "description": "Tests image asset memory and graphics class fallback.", 
+                "view-controller": "SideBySideImageViewController", 
+                "asset-info": {
+                    "asset-slots": [
+                        {
+                            "memory": "1GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple1", 
+                            "filename": "image_memory_graphics_fallback_1GB_APPLE1.png"
+                        }, 
+                        {
+                            "memory": "1GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple2", 
+                            "filename": "image_memory_graphics_fallback_1GB_APPLE2.png"
+                        }, 
+                        {
+                            "memory": "1GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple3v1", 
+                            "filename": "image_memory_graphics_fallback_1GB_APPLE3v1.png"
+                        }, 
+                        {
+                            "memory": "1GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple3", 
+                            "filename": "image_memory_graphics_fallback_1GB_APPLE3.png"
+                        }, 
+                        {
+                            "memory": "1GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple4", 
+                            "filename": "image_memory_graphics_fallback_1GB_APPLE4.png"
+                        }, 
+                        {
+                            "memory": "1GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple5", 
+                            "filename": "image_memory_graphics_fallback_1GB_APPLE5.png"
+                        }, 
+                        {
+                            "memory": "1GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple6", 
+                            "filename": "image_memory_graphics_fallback_1GB_APPLE6.png"
+                        }, 
+                        {
+                            "memory": "1GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple7", 
+                            "filename": "image_memory_graphics_fallback_1GB_APPLE7.png"
+                        }, 
+                        {
+                            "memory": "2GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple1", 
+                            "filename": "image_memory_graphics_fallback_2GB_APPLE1.png"
+                        }, 
+                        {
+                            "memory": "2GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple2", 
+                            "filename": "image_memory_graphics_fallback_2GB_APPLE2.png"
+                        }, 
+                        {
+                            "memory": "2GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple3v1", 
+                            "filename": "image_memory_graphics_fallback_2GB_APPLE3v1.png"
+                        }, 
+                        {
+                            "memory": "2GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple3", 
+                            "filename": "image_memory_graphics_fallback_2GB_APPLE3.png"
+                        }, 
+                        {
+                            "memory": "2GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple4", 
+                            "filename": "image_memory_graphics_fallback_2GB_APPLE4.png"
+                        }, 
+                        {
+                            "memory": "2GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple5", 
+                            "filename": "image_memory_graphics_fallback_2GB_APPLE5.png"
+                        }, 
+                        {
+                            "memory": "2GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple6", 
+                            "filename": "image_memory_graphics_fallback_2GB_APPLE6.png"
+                        }, 
+                        {
+                            "memory": "2GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple7", 
+                            "filename": "image_memory_graphics_fallback_2GB_APPLE7.png"
+                        }, 
+                        {
+                            "memory": "3GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple1", 
+                            "filename": "image_memory_graphics_fallback_3GB_APPLE1.png"
+                        }, 
+                        {
+                            "memory": "3GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple2", 
+                            "filename": "image_memory_graphics_fallback_3GB_APPLE2.png"
+                        }, 
+                        {
+                            "memory": "3GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple3v1", 
+                            "filename": "image_memory_graphics_fallback_3GB_APPLE3v1.png"
+                        }, 
+                        {
+                            "memory": "3GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple3", 
+                            "filename": "image_memory_graphics_fallback_3GB_APPLE3.png"
+                        }, 
+                        {
+                            "memory": "3GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple4", 
+                            "filename": "image_memory_graphics_fallback_3GB_APPLE4.png"
+                        }, 
+                        {
+                            "memory": "3GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple5", 
+                            "filename": "image_memory_graphics_fallback_3GB_APPLE5.png"
+                        }, 
+                        {
+                            "memory": "3GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple6", 
+                            "filename": "image_memory_graphics_fallback_3GB_APPLE6.png"
+                        }, 
+                        {
+                            "memory": "3GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple7", 
+                            "filename": "image_memory_graphics_fallback_3GB_APPLE7.png"
+                        }, 
+                        {
+                            "memory": "4GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple1", 
+                            "filename": "image_memory_graphics_fallback_4GB_APPLE1.png"
+                        }, 
+                        {
+                            "memory": "4GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple2", 
+                            "filename": "image_memory_graphics_fallback_4GB_APPLE2.png"
+                        }, 
+                        {
+                            "memory": "4GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple3v1", 
+                            "filename": "image_memory_graphics_fallback_4GB_APPLE3v1.png"
+                        }, 
+                        {
+                            "memory": "4GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple3", 
+                            "filename": "image_memory_graphics_fallback_4GB_APPLE3.png"
+                        }, 
+                        {
+                            "memory": "4GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple4", 
+                            "filename": "image_memory_graphics_fallback_4GB_APPLE4.png"
+                        }, 
+                        {
+                            "memory": "4GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple5", 
+                            "filename": "image_memory_graphics_fallback_4GB_APPLE5.png"
+                        }, 
+                        {
+                            "memory": "4GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple6", 
+                            "filename": "image_memory_graphics_fallback_4GB_APPLE6.png"
+                        }, 
+                        {
+                            "memory": "4GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple7", 
+                            "filename": "image_memory_graphics_fallback_4GB_APPLE7.png"
+                        }, 
+                        {
+                            "memory": "6GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple1", 
+                            "filename": "image_memory_graphics_fallback_6GB_APPLE1.png"
+                        }, 
+                        {
+                            "memory": "6GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple2", 
+                            "filename": "image_memory_graphics_fallback_6GB_APPLE2.png"
+                        }, 
+                        {
+                            "memory": "6GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple3v1", 
+                            "filename": "image_memory_graphics_fallback_6GB_APPLE3v1.png"
+                        }, 
+                        {
+                            "memory": "6GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple3", 
+                            "filename": "image_memory_graphics_fallback_6GB_APPLE3.png"
+                        }, 
+                        {
+                            "memory": "6GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple4", 
+                            "filename": "image_memory_graphics_fallback_6GB_APPLE4.png"
+                        }, 
+                        {
+                            "memory": "6GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple5", 
+                            "filename": "image_memory_graphics_fallback_6GB_APPLE5.png"
+                        }, 
+                        {
+                            "memory": "6GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple6", 
+                            "filename": "image_memory_graphics_fallback_6GB_APPLE6.png"
+                        }, 
+                        {
+                            "memory": "6GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "graphics-feature-set": "apple7", 
+                            "filename": "image_memory_graphics_fallback_6GB_APPLE7.png"
+                        }, 
+                        {
+                            "memory": "1GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_1GB_any.png"
+                        }, 
+                        {
+                            "memory": "2GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_2GB_any.png"
+                        }, 
+                        {
+                            "memory": "3GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_3GB_any.png"
+                        }, 
+                        {
+                            "memory": "4GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_4GB_any.png"
+                        }, 
+                        {
+                            "memory": "6GB", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_6GB_any.png"
+                        }, 
+                        {
+                            "graphics-feature-set": "apple1", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_any_APPLE1.png"
+                        }, 
+                        {
+                            "graphics-feature-set": "apple2", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_any_APPLE2.png"
+                        }, 
+                        {
+                            "graphics-feature-set": "apple3v1", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_any_APPLE3v1.png"
+                        }, 
+                        {
+                            "graphics-feature-set": "apple3", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_any_APPLE3.png"
+                        }, 
+                        {
+                            "graphics-feature-set": "apple4", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_any_APPLE4.png"
+                        }, 
+                        {
+                            "graphics-feature-set": "apple5", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_any_APPLE5.png"
+                        }, 
+                        {
+                            "graphics-feature-set": "apple6", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_any_APPLE6.png"
+                        }, 
+                        {
+                            "graphics-feature-set": "apple7", 
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_any_APPLE7.png"
+                        }, 
+                        {
+                            "idiom": "universal", 
+                            "scale": "2x", 
+                            "filename": "image_memory_graphics_fallback_any_any.png"
+                        }
+                    ], 
+                    "asset-name": "ImageAssetMemoryGraphicsClassFallback"
+                }, 
+                "test-case-name": "ImageAssetMemoryGraphicsClassFallbackTest", 
+                "test-case-tags": [
+                    "tag-for-thinned-variants", 
+                    "tag-uses-edm", 
+                    "tag-uses-internal-sdk"
+                ], 
+                "asset-name": "ImageAssetMemoryGraphicsClassFallback.imageset", 
+                "test-name": "Image Memory And Graphics Class Fallback Test"
+            }
+        ]
+    }
+]

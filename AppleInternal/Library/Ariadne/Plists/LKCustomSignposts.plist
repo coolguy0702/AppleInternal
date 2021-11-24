@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>LoginKit</string>
+		<key>Children</key>
+		<array>
+			<dict>
+				<key>Type</key>
+				<string>Interval</string>
+				<key>Name</key>
+				<string>Login</string>
+				<key>Component</key>
+				<string>113</string>
+				<key>CodeBegin</key>
+				<string>1</string>
+				<key>CodeEnd</key>
+				<string>2</string>
+			</dict>
+			<dict>
+				<key>Type</key>
+				<string>Interval</string>
+				<key>Name</key>
+				<string>Logout</string>
+				<key>Component</key>
+				<string>113</string>
+				<key>CodeBegin</key>
+				<string>3</string>
+				<key>CodeEnd</key>
+				<string>4</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,98 @@
+{
+    "appLaunchURLScheme": "DiscoverMobile",
+    "associatedApplicationIdentifiers": [
+        "29QZK2TJ24.com.discoverfinancial.mobile",
+        "29QZK2TJ24.com.discoverfinancial.tablet"
+    ],
+    "associatedPassTypeIdentifiers": [
+        "com.pass.Disney.merchant",
+        "com.pass.Discover.merchant"
+    ],
+    "associatedStoreIdentifiers": [
+        338010821,
+        511125261
+    ],
+    "backgroundColor": "rgb(172,10,38)",
+    "cobrandName": "Disney",
+    "isCobranded": true,
+    "description": "Discover Disney+",
+    "expiryDate": "05/2019",
+    "foregroundColor": "rgb(30,30,30)",
+    "formatVersion": 1,
+    "labelColor": "rgb(172,10,38)",
+    "longDescription": "Discover Disney+",
+    "messagePushTopic": "com.frameworksqa.tombola",
+    "messageServiceURL": "https://tombola.apple.com/api/v1/",
+    "organizationName": "Discover",
+    "issuerCountryCode": "US",
+    "passTypeIdentifier": "paymentpass.com.apple.wallet.dev",
+    "paymentApplications": [
+        {
+            "DPANIdentifier": "DAPLAB001d9a29eb059d74ce9a387bd877e4b424c",
+            "DPANSuffix": "2564",
+            "applicationIdentifier": "A00000002501050100000008",
+            "paymentNetworkIdentifier": 2,
+            "secureElementIdentifier": "04130C93182680014158017326930804E0652ADFABAAA214",
+            "state": 1,
+            "supportsContactlessPayment": 1,
+            "supportsInAppPayment": 1
+        }
+    ],
+    "paymentCard": {
+        "auxiliaryFields": [
+            {
+                "key": "cardholder",
+                "label": "CARDHOLDER",
+                "value": "Ms Sarah Test"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "notice",
+                "label": "INFORMATION",
+                "value": "Discover Disney"
+            },
+            {
+                "key": "contactWebsite",
+                "label": "WEBSITE",
+                "value": "http://www.discover.com"
+            },
+            {
+                "key": "contactNumber",
+                "label": "PHONE",
+                "value": "1-800-347-3085"
+            },
+            {
+                "key": "contactName",
+                "label": "NAME",
+                "value": "Discover"
+            },
+            {
+                "key": "privacyPolicyURL",
+                "label": "POLICY URL",
+                "value": "https://www.discover.com/privacy-statement/index.html"
+            },
+            {
+                "key": "termsAndConditionsURL",
+                "label": "TERMS URL",
+                "value": "https://www.discover.com/credit-cards/help-center/terms-of-use.html"
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key": "card",
+                "label": "CARD",
+                "value": "3085"
+            }
+        ]
+    },
+    "primaryAccountIdentifier": "FAPLAB0010625595ab0564cc18ada671a7b03264b",
+    "primaryAccountSuffix": "2355",
+    "serialNumber": "72100aa80e2b4fb9ac436ae2f6c3ed2c",
+    "supportsDPANNotifications": 1,
+    "supportsDefaultCardSelection": 1,
+    "supportsFPANNotifications": 1,
+    "teamIdentifier": "58Y959KPTE",
+    "transactionPushTopic": "com.frameworksqa.tombola",
+    "transactionServiceURL": "https://tombola.apple.com/api/v1/"
+}

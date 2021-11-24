@@ -1,0 +1,35 @@
+<xmlui id="page-to-be-refreshed" style="setupAssistant">>
+    <actions>
+    <dismiss />
+    <refresh />
+    </actions>
+    <page> <!-- The default page -->
+        <navigationBar title="Refreshed">
+        </navigationBar>
+        <tableView>
+            <section>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="This default page was refreshed"/>
+                <linkRow label="Test Alert" labelColor="systemBlue" url="#testAlert" shouldShowLoadingIndicator="true" disabled="false" />
+                <buttonRow label="Named button test" name="refreshNamed"/>
+            </section>
+        </tableView>
+    </page>
+    <alert id="testAlert" title="We refreshed!" message="Are you really sure?">
+        <button url="http://www.apple.com" httpMethod="POST">Go to Apple</button>
+        <cancelButton>Cancel</cancelButton>
+    </alert>
+</xmlui>

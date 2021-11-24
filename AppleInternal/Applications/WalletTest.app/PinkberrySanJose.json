@@ -1,0 +1,27 @@
+{
+  "name": "Pinkberry",
+  "category": "fooddrinks",
+  "rewardsType": "applePay",
+  "source": "contactless",
+  "city": "San Jose",
+  "state": "CA",
+  "merchant": {
+    "category": "fooddrinks",
+    "detailedCategory": "food.icecream",
+    "heroImageURL": "https://s3-media2.fl.yelpcdn.com/bphoto/U5J9IBnR5Wy92f0-clFMtA/o.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 16323079565812879485,
+    "locationLatitude": 37.249995,
+    "locationLongitude": -121.876268,
+    "name": "Pinkberry",
+    "phoneNumber": "+1 (408) 979-0566",
+    "url": "http://www.pinkberry.com/store-detail/?id=150"
+  },
+  "brand": {
+    "category": "fooddrinks",
+    "detailedCategory": "food.icecream",
+    "identifier": 9233233224678842766,
+    "name": "Pinkberry",
+    "url": "http://www.pinkberry.com"
+  }
+}

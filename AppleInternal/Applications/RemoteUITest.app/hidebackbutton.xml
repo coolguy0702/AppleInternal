@@ -1,0 +1,11 @@
+<xmlui action="push">
+    <page>
+        <navigationBar title="Back Button Hidden" hidesBackButton="true"/>
+        <tableView>
+            <section>
+                <subHeader>There is no back button visible on this page because its navigationBar has hideBackButton="true"</subHeader>
+                <linkRow label="Go Back" url="pop-simple.xml" accessory="disclosure"/>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

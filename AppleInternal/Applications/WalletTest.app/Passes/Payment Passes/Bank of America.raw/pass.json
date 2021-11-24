@@ -1,0 +1,70 @@
+{
+    "associatedApplicationIdentifiers": [
+        "DK9N2M2GK6.com.apple.syndrome",
+        "5AM47K89XY.com.apple.PassAche"
+    ],
+	"associatedStoreIdentifiers": [
+        640199958
+    ],
+    "authenticationToken": "dc2fb60f61838405294ebe4205a2b03a260cd7adc6cf7e14c2c40531070d7528",
+    "backgroundColor": "rgb(255,255,255)",
+    "description": "BofA Visa Debit Card",
+    "foregroundColor": "rgb(0, 0, 0)",
+    "formatVersion": 1,
+    "labelColor": "rgb(126, 106, 136)",
+    "organizationName": "Bank of America",
+    "passTypeIdentifier": "paymentpass.com.apple.wallet.dev",
+    "primaryAccountSuffix": "2046",
+    "primaryAccountIdentifier": "V-3814224667917919787953",
+    "expiryDate": "2021-10",
+    "issuerCountryCode": "US",
+    "paymentApplications": [
+        {
+            "DPANIdentifier": "00000011111122222333333AAAAA",
+            "DPANSuffix": "1234",
+            "FPANSuffix": "4321",
+            "applicationIdentifier": "A00000000410100100000003",
+            "state": 1,
+            "secureElementIdentifier": "1002033040032022011110",
+            "supportsContactlessPayment": 1,
+            "supportsInAppPayment": 1,
+            "paymentNetworkIdentifier": 4,
+            "paymentType": "Debit",
+            "supportsInstantFundsIn":1,
+        }
+    ],
+    "paymentCard": {
+        "auxilliaryFields": [
+            {
+                "key": "expiration",
+                "label": "",
+                "value": "01/14"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "notice",
+                "label": "INFORMATION",
+                "value": "Bank of America"
+            }
+        ],
+        "primaryFields": [
+            {
+                "key": "card",
+                "label": "",
+                "value": "\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 1003",
+				"PKTextAlignment" : "PKTextAlignmentCenter"
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key": "name",
+                "label": "",
+                "value": "Card Holder"
+            }
+        ]
+    },
+    "serialNumber": "VQ8TBLVHTZ",
+    "teamIdentifier": "58Y959KPTE",
+    "appLaunchURLScheme" : "syndrome"
+}

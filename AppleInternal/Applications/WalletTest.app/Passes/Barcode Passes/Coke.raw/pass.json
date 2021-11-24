@@ -1,0 +1,47 @@
+{
+    "formatVersion": 1,
+    "associatedStoreIdentifiers": [
+                                   421390072
+                                   ],
+    "passTypeIdentifier": "pass.com.apple.test1",
+    "serialNumber": "986368299938845",
+    "teamIdentifier": "K9942Z534D",
+    "groupingIdentifier" : "coke",
+    "organizationName": "Coke",
+	"description": "Coke",
+    "longDescription" : "Coke",
+    "backgroundColor": "rgb(233,34,65)",
+    "foregroundColor": "rgb(255, 255, 255)",
+    "labelColor": "rgb(75, 11, 12)",
+    "storeCard": {
+        "headerFields": [
+            {
+                "key": "header-field-1",
+                "label": "Points",
+                "value": "300"
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key": "secondary-field-1",
+                "label": "Redeem for up to",
+                "value": "10 Drinks"
+            },
+            {
+                "key": "secondary-field-2",
+                "label": "Status Level",
+                "value": "Gold",
+                "textAlignment" : "PKTextAlignmentRight"
+            }
+        ]
+    },
+    "barcode" : {
+        "message" : "8673509",
+        "format" : "PKBarcodeFormatQR",
+        "messageEncoding" : "iso-8859-1"
+    },
+    "nfc" : {
+        "message" : "8673509",
+        "encryptionPublicKey" : "MDkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDIgACigjq+QYC17m3i9uO8uKc8mLpaS1UJOEaCFvMedkXsuA="
+    }
+}

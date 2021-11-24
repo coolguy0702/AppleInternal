@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>TypeAndVerify-GestureKeys-de_DE</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>XkeyboardID</key>
+                        <string>de_DE@sw=QWERTZ-German;hw=Automatic</string>
+                        <key>keyboardID</key>
+                        <string>de_DE@sw=AZERTY;hw=Automatic</string>
+                        <!--key>keyboardType</key>
+                        <string>emailaddress</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string-->
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestTypeAndVerify</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                        <key>xtestFunction</key>
+                        <string>typeAndVerifyGestureKeyInProgrammable</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>XkeystrokesText</key>
+                        <string>Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich</string>
+                        <key>XexpectedText</key>
+                        <string>Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich</string>
+                        <key>xkeystrokesText</key>
+                        <string>Franz jagt im komplett verwahrlosten Taxi quer durch Bayern</string>
+                        <key>xexpectedText</key>
+                        <string>Franz jagt im komplett verwahrlosten Taxi quer durch Bayern</string>
+                        <key>keystrokesText</key>
+                        <string>↓%↓[↓\↓]↓^</string>
+                        <key>expectedText</key>
+                        <string>%[\]^</string>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Gesture typing with default gesture indicator</string>
+                </dict>
+                
+            </array>
+        </dict>
+    </array>
+</plist>

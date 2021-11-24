@@ -1,0 +1,27 @@
+{
+  "name": "Walgreens",
+  "category": "health",
+  "rewardsType": "applePay",
+  "source": "contactless",
+  "city": "Cupertino",
+  "state": "CA",
+  "merchant": {
+    "category": "health",
+    "detailedCategory": "health.pharmacy",
+    "heroImageURL": "https://s3-media3.fl.yelpcdn.com/bphoto/nOlRFEISEkAUN282bfmhsQ/ls.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 2409139575249846953,
+    "locationLatitude": 37.3105049,
+    "locationLongitude": -122.0236482,
+    "name": "Walgreens",
+    "phoneNumber": "+1 (408) 973-8402",
+    "url": "https://www.walgreens.com/locator/Walgreens-20011+BOLLINGER+RD-CUPERTINO-CA-95014/id=4416"
+  },
+  "brand": {
+    "category": "health",
+    "detailedCategory": "health.pharmacy",
+    "identifier": 8800788010572972211,
+    "name": "Walgreens",
+    "url": "http://www.walgreens.com"
+  }
+}

@@ -1,0 +1,94 @@
+{
+    "appLaunchURLScheme": "target",
+    "associatedApplicationIdentifiers": [
+        "CUEJWXYD9P.com.target.Target",
+        "D9LCY75JDG.com.target.Target"
+    ],
+	"associatedPassTypeIdentifiers": [
+		"com.pass.Target.merchant"
+	],
+    "associatedStoreIdentifiers": [
+        297430070
+    ],
+    "backgroundColor": "rgb(172,10,38)",
+    "description": "Target REDCard",
+    "expiryDate": "06/2019",
+    "foregroundColor": "rgb(30,30,30)",
+    "formatVersion": 1,
+    "labelColor": "rgb(172,10,38)",
+    "longDescription": "Target REDCard",
+    "messagePushTopic": "com.frameworksqa.tombola",
+    "messageServiceURL": "https://tombola.apple.com/api/v1/",
+    "organizationName": "Target",
+    "issuerCountryCode": "US",
+    "passTypeIdentifier": "paymentpass.com.apple.wallet.dev",
+    "paymentApplications": [
+        {
+            "DPANIdentifier": "DAPLAB001d9a29eb059d74ce9a387bd877e4b764b",
+            "DPANSuffix": "4173",
+            "applicationIdentifier": "A00000002501090100000001",
+            "paymentNetworkIdentifier": 100,
+            "secureElementIdentifier": "04130C93182680014158017326930804E0652ADFABCAE214",
+            "state": 1,
+            "supportsContactlessPayment": 1,
+            "supportsInAppPayment": 1
+        }
+    ],
+    "paymentCard": {
+        "auxiliaryFields": [
+            {
+                "key": "cardholder",
+                "label": "CARDHOLDER",
+                "value": "MR JOHN Q PUBLIC"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "notice",
+                "label": "INFORMATION",
+                "value": "Target"
+            },
+            {
+                "key": "contactWebsite",
+                "label": "WEBSITE",
+                "value": "http://www.target.com"
+            },
+            {
+                "key": "contactNumber",
+                "label": "PHONE",
+                "value": "1-888-555-5555"
+            },
+            {
+                "key": "contactName",
+                "label": "NAME",
+                "value": "Target"
+            },
+            {
+                "key": "privacyPolicyURL",
+                "label": "POLICY URL",
+                "value": "http://www.target.com/spot/privacy-policy"
+            },
+            {
+                "key": "termsAndConditionsURL",
+                "label": "TERMS URL",
+                "value": "http://www.target.com/spot/terms-conditions"
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key": "card",
+                "label": "CARD",
+                "value": "4323"
+            }
+        ]
+    },
+    "primaryAccountIdentifier": "FAPLAB0010625595ab0564cc18ada671a7b04264b",
+    "primaryAccountSuffix": "4323",
+    "serialNumber": "72100aa80e2b4fb9ac436ae2f9b2ed3c",
+    "supportsDPANNotifications": 1,
+    "supportsDefaultCardSelection": 0,
+    "supportsFPANNotifications": 1,
+    "teamIdentifier": "58Y959KPTE",
+    "transactionPushTopic": "com.frameworksqa.tombola",
+    "transactionServiceURL": "https://tombola.apple.com/api/v1/"
+}

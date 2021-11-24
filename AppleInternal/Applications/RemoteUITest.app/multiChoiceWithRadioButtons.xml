@@ -1,0 +1,11 @@
+<xmlui>
+    <page>
+        <navigationBar title="Radios + Choices with custom tint"/>
+        <multiChoiceView>
+            <!-- Choice buttons with custom tint color. -->
+            <multiChoice title="Choice A" tintColor="systemIndigo" url="simplepush.xml" type="big"/>
+            <multiChoice title="Choice B" tintColor="systemIndigo" url="simplepush.xml" type="big"/>
+            <multiChoice title="Choice C" tintColor="systemIndigo" url="simplepush.xml" type="small"/>
+        </multiChoiceView>
+    </page>
+</xmlui>

@@ -1,0 +1,28 @@
+{
+  "name": "Peet's Coffee",
+  "category": "fooddrinks",
+  "rewardsType": "applePay",
+  "source": "contactless",
+  "city": "San Jose",
+  "state": "CA",
+  "merchant": {
+    "category": "fooddrinks",
+    "detailedCategory": "food.coffee",
+    "heroImageURL": "https://s3-media3.fl.yelpcdn.com/bphoto/QLmVAL1zi2ouENYYcUzHLQ/o.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 3240115036960655981,
+    "locationLatitude": 37.249929,
+    "locationLongitude": -121.876327,
+    "name": "Peet's Coffee",
+    "phoneNumber": "+1 (408) 256-4584",
+    "url": "https://locations.peets.com/ll/US/CA/San%20Jose/1110-Blossom-Hill-Rd_*-Suite-20"
+  },
+  "brand": {
+    "category": "fooddrinks",
+    "detailedCategory": "food.coffee",
+    "identifier": 8699818702873385130,
+    "logoURL": "http://is3.mzstatic.com/image/thumb/yK2dM0IKd9FHqDz8KM8yEw/258x258.png",
+    "name": "Peet's Coffee",
+    "url": "http://www.peets.com"
+  }
+}

@@ -1,0 +1,56 @@
+<xmlui>
+    <page>
+        <navigationBar title="Webview + Choices"/>
+        <multiChoiceView>
+            <!-- Choice buttons with default tint color defined in OKB. -->
+            <multiChoice title="Choice A" url="simplepush.xml" type="big"/>
+            <multiChoice title="Choice B" url="simplepush.xml" type="big"/>
+            <multiChoice title="Choice C" url="simplepush.xml" type="small"/>
+        </multiChoiceView>
+        
+        <html>
+            <![CDATA[
+                <html>
+                <body style='background-color: transparent; color:#4C566C;text-shadow: white 0px 1px 1px;font-family:helvetica; font-size:15px; margin-left:20px; margin-right:20px'>
+                    <div align="center">
+                        Confirm your phone number:
+                    </div>
+                    <p/>
+                    <div align="center" style="font-size:24px;font-weight:bold">
+                        (408) 555-1234
+                    </div>
+                    <p/>
+                    <div align="center">
+                        This phone number should match the one provided when you purchased your iPhone. If you want to use a different number, contact AT&T after activation.
+                    </div>
+                    <p/>
+                    <div align="center" style="color:#555">
+                        If this number is different from the one provided when you purchased your iPhone, contact Apple at:<br/>
+                        (800) MY-IPHONE
+                    </div>
+                    
+                    <!-- Duplicate content to fill the page -->
+                    <div align="center">
+                        Confirm your phone number:
+                    </div>
+                    <p/>
+                    <div align="center" style="font-size:24px;font-weight:bold">
+                        (408) 555-1234
+                    </div>
+                    <p/>
+                    <div align="center">
+                        This phone number should match the one provided when you purchased your iPhone. If you want to use a different number, contact AT&T after activation.
+                    </div>
+                    <p/>
+                    <div align="center" style="color:#555">
+                        If this number is different from the one provided when you purchased your iPhone, contact Apple at:<br/>
+                        (800) MY-IPHONE
+                    </div>
+                    
+                </body>
+                </html>
+            ]]>
+        </html>
+        
+    </page>
+</xmlui>

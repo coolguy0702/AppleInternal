@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AOPNode Test</key>
+	<dict>
+		<key>AOPUID</key>
+		<string>AOP Audio-1</string>
+		<key>Enumeration Test</key>
+		<array>
+			<dict>
+				<key>Client Identifier</key>
+				<string>NONE</string>
+				<key>Nodes</key>
+				<array>
+					<dict>
+						<key>Identifier</key>
+						<string>rms </string>
+						<key>Property Values</key>
+						<array>
+							<dict>
+								<key>Type</key>
+								<string>4char</string>
+								<key>Property</key>
+								<string>kType</string>
+								<key>Value</key>
+								<string>rms </string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>Identifier</key>
+						<string>lpfw</string>
+						<key>Property Values</key>
+						<array>
+							<dict>
+								<key>Type</key>
+								<string>4char</string>
+								<key>Property</key>
+								<string>kType</string>
+								<key>Value</key>
+								<string>FWAt</string>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>Client Identifier</key>
+				<string>lpai</string>
+				<key>Nodes</key>
+				<array>
+					<dict>
+						<key>Identifier</key>
+						<string>in0 </string>
+						<key>Property Values</key>
+						<array>
+							<dict>
+								<key>Type</key>
+								<string>4char</string>
+								<key>Property</key>
+								<string>kType</string>
+								<key>Value</key>
+								<string>io  </string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>Identifier</key>
+						<string>pdm0</string>
+						<key>Property Values</key>
+						<array>
+							<dict>
+								<key>Type</key>
+								<string>4char</string>
+								<key>Property</key>
+								<string>kType</string>
+								<key>Value</key>
+								<string>pdm2</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>Identifier</key>
+						<string>mbx0</string>
+						<key>Property Values</key>
+						<array>
+							<dict>
+								<key>Type</key>
+								<string>4char</string>
+								<key>Property</key>
+								<string>kType</string>
+								<key>Value</key>
+								<string>mbox</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>Identifier</key>
+						<string>bore</string>
+						<key>Property Values</key>
+						<array>
+							<dict>
+								<key>Type</key>
+								<string>4char</string>
+								<key>Property</key>
+								<string>kType</string>
+								<key>Value</key>
+								<string>call</string>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>Client Identifier</key>
+				<string>hpai</string>
+				<key>Nodes</key>
+				<array>
+					<dict>
+						<key>Identifier</key>
+						<string>leap</string>
+						<key>Property Values</key>
+						<array>
+							<dict>
+								<key>Type</key>
+								<string>4char</string>
+								<key>Property</key>
+								<string>kType</string>
+								<key>Value</key>
+								<string>leap</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>Identifier</key>
+						<string>pdm1</string>
+						<key>Property Values</key>
+						<array>
+							<dict>
+								<key>Type</key>
+								<string>4char</string>
+								<key>Property</key>
+								<string>kType</string>
+								<key>Value</key>
+								<string>pdm2</string>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

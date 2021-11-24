@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>TypeAndVerify-Prediction</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>it_IT@sw=QWERTY;hw=Automatic</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>NO</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestPrediction</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyPrediction</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>keystrokesText</key>
+                        <string>Salut François , ouais moi ça va super ! Ouais c'est dommage qu'on se soit loupé , mais j'étais à LH ce week-end . On va aller boire une binouze ensemble un de ces quatre , histoire de parler de tout ça ! C'est trop cool pour Hélène , elle doit kiffer sa nouvelle vie la nana ! A+ mec !</string>
+                        <key>expectedText</key>
+                        <string>Salut François , ouais moi ça va super ! Ouais c'est dommage qu'on se soit loupé , mais j'étais à LH ce week-end . On va aller boire une binouze ensemble un de ces quatre , histoire de parler de tout ça ! C'est trop cool pour Hélène , elle doit kiffer sa nouvelle vie la nana ! A+ mec !</string>
+                        <key>keyboardID</key>
+                        <string>it_IT@sw=QWERTY;hw=Automatic</string>
+                        <key>expectedPosition</key>
+                        <string>0-2</string>
+                        <key>delimiter</key>
+                        <string> </string>
+                        <key>testSuiteID</key>
+                        <string>11111</string>
+                        <key>testCaseID</key>
+                        <string>222222</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+
+            </array>
+        </dict>
+    </array>
+</plist>

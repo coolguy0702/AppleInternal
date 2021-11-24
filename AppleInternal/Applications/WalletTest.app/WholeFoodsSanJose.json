@@ -1,0 +1,28 @@
+{
+  "name": "Whole Foods Market",
+  "category": "fooddrinks",
+  "rewardsType": "applePay",
+  "source": "contactless",
+  "city": "San Jose",
+  "state": "CA",
+  "merchant": {
+    "category": "fooddrinks",
+    "detailedCategory": "food.grocery",
+    "heroImageURL": "https://s3-media3.fl.yelpcdn.com/bphoto/M5xWlUAsdqCfl11jlG8etw/o.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 7107539818895359605,
+    "locationLatitude": 37.24932643588591,
+    "locationLongitude": -121.8767210841179,
+    "name": "Whole Foods Market",
+    "phoneNumber": "+1 (408) 266-3700",
+    "url": "http://www.wholefoodsmarket.com/stores/blossomhill"
+  },
+  "brand": {
+    "category": "fooddrinks",
+    "detailedCategory": "food.grocery",
+    "identifier": 6434975174002562436,
+    "logoURL": "http://is3.mzstatic.com/image/thumb/PjQoyHYEsy9smuX4TuBlqg/258x258.png",
+    "name": "Whole Foods Market",
+    "url": "https://www.wholefoodsmarket.com"
+  }
+}

@@ -1,0 +1,69 @@
+{
+    "associatedApplicationIdentifiers": [
+        "DK9N2M2GK6.com.apple.syndrome",
+        "5AM47K89XY.com.apple.PassAche"
+    ],
+	"associatedStoreIdentifiers": [
+        640199958
+    ],
+    "authenticationToken": "dc2fb60f61838405294ebe4205a2b03a260cd7adc6cf7e14c2c40531070d7529",
+    "backgroundColor": "rgb(255,255,255)",
+    "description": "Chase Sapphire",
+    "foregroundColor": "rgb(200, 200, 200)",
+    "formatVersion": 1,
+    "labelColor": "rgb(126, 106, 136)",
+    "organizationName": "Chase",
+    "passTypeIdentifier": "paymentpass.com.apple.wallet.dev",
+    "primaryAccountSuffix": "5555",
+    "primaryAccountIdentifier": "V-3814224667917919787954",
+    "expiryDate": "2021-10",
+    "issuerCountryCode": "US",
+    "paymentApplications": [
+        {
+            "DPANIdentifier": "00000011111122222333333AAAAB",
+            "DPANSuffix": "1234",
+            "FPANSuffix": "5555",
+            "applicationIdentifier": "A00000000410100100000004",
+            "state": 1,
+            "secureElementIdentifier": "1002033040032022011111",
+            "supportsContactlessPayment": 1,
+            "supportsInAppPayment": 1,
+            "paymentNetworkIdentifier": 4,
+            "paymentType": "Credit"
+        }
+    ],
+    "paymentCard": {
+        "auxilliaryFields": [
+            {
+                "key": "expiration",
+                "label": "",
+                "value": "01/18"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "notice",
+                "label": "INFORMATION",
+                "value": "Chase Sapphire"
+            }
+        ],
+        "primaryFields": [
+            {
+                "key": "card",
+                "label": "",
+                "value": "\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 1003",
+				"PKTextAlignment" : "PKTextAlignmentCenter"
+            }
+        ],
+        "secondaryFields": [
+            {
+                "key": "name",
+                "label": "",
+                "value": "Card Holder"
+            }
+        ]
+    },
+    "serialNumber": "VQ8TBLVHSZ",
+    "teamIdentifier": "58Y959KPTE",
+	"appLaunchURLScheme" : "syndrome"
+}

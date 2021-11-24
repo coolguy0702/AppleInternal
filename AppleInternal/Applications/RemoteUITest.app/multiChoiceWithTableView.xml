@@ -1,0 +1,32 @@
+<xmlui>
+    <page>
+        <navigationBar title="TableView + Choices"/>
+        
+        <multiChoiceView>
+            <!-- Choice buttons with default tint color defined in OKB. -->
+            <multiChoice title="Choice A" url="simplepush.xml" type="big"/>
+            <multiChoice title="Choice B" url="simplepush.xml" type="big"/>
+            <multiChoice title="Choice C" url="simplepush.xml" type="small"/>
+        </multiChoiceView>
+        
+        <tableView>
+            <section>
+                <linkRow label="Samples" url="BuddyMLSample.xml" accessory="disclosure"/>
+            </section>
+            
+            <!-- Duplicate sections to fill the page. -->
+            <section>
+                <linkRow label="Dismiss" url="dismiss.xml"/>
+                <linkRow label="Dismiss + Replace" url="dismiss-replace.xml"/>
+            </section>
+            <section>
+                <linkRow label="Dismiss" url="dismiss.xml"/>
+                <linkRow label="Dismiss + Replace" url="dismiss-replace.xml"/>
+            </section>
+            <section>
+                <linkRow label="Dismiss" url="dismiss.xml"/>
+                <linkRow label="Dismiss + Replace" url="dismiss-replace.xml"/>
+            </section>
+        </tableView>
+    </page>
+</xmlui>

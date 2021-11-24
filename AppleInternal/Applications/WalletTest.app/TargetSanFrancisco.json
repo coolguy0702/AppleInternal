@@ -1,0 +1,28 @@
+{
+  "name": "Target",
+  "category": "shopping",
+  "rewardsType": "applePay",
+  "source": "contactless",
+  "city": "San Francisco",
+  "state": "CA",
+  "merchant": {
+    "category": "shopping",
+    "detailedCategory": "shopping",
+    "heroImageURL": "https://s3-media2.fl.yelpcdn.com/bphoto/LJZSfXfjUiUePmmV_vimow/o.jpg",
+    "heroImageProvider": "Yelp",
+    "identifier": 6109895895934163460,
+    "locationLatitude": 37.78443699245484,
+    "locationLongitude": -122.4037696507555,
+    "name": "Target",
+    "phoneNumber": "+1 (415) 343-6272",
+    "url": "http://www.target.com/sl/san-francisco-central/2766"
+  },
+  "brand": {
+    "category": "shopping",
+    "detailedCategory": "shopping",
+    "identifier": 13819248678283629176,
+    "logoURL": "http://is3.mzstatic.com/image/thumb/tvs32psbmkjVzpHV329qiA/258x258.png",
+    "name": "Target",
+    "url": "https://www.target.com"
+  }
+}

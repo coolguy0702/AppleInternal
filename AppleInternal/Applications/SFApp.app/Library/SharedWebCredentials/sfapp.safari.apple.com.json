@@ -1,0 +1,17 @@
+{
+    "webcredentials": {
+        "apps": [
+            "com.apple.sfapp",
+            "0000000000.com.apple.sfapp"
+        ]
+    },
+    "applinks": {
+        "details": [{
+            "appIDs": [
+                "com.apple.sfapp",
+                "0000000000.com.apple.sfapp"
+            ],
+            "alwaysEnabled": true
+        }]
+    }
+}

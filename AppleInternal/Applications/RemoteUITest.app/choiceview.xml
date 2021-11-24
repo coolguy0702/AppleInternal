@@ -1,0 +1,12 @@
+<xmlui>
+    <page>
+        <!-- Image Size used for hinting only -->
+        <choiceView image="iCloud.png" image2x="iCloud@2x.png" image3x="iCloud@3x.png" imageWidth="40" imageHeight="25">
+            <header>This is some descriptive text that will appear under the navigation title of the choice view. It will be centered by default and can contain a lot of text.</header>
+            <subHeader>This is some subHeader text that is slightly offset from header text.</subHeader>
+            <helpLink url="simplepush.xml">Help Link</helpLink> <!-- Like a footer link, but appears above choices -->
+            <choice url="simplepush.xml">Big Choice</choice>
+            <choice url="simplepush.xml">Small Choice</choice>
+        </choiceView>
+    </page>
+</xmlui>

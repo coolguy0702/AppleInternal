@@ -1,0 +1,245 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "paymentpass.com.apple.dev1",
+  "teamIdentifier": "58Y959KPTE",
+  "primaryAccountIdentifier": "FAPL8BALL_0001fb563483ca0f4c87a55a46c0b0999995",
+  "associatedStoreIdentifiers": [
+    1114430602
+  ],
+  "associatedApplicationIdentifiers": [
+    "GSP3TRFDJD.com.apple.syndrome",
+    "5AM47K89XY.com.apple.PassAche",
+  ],
+  "messagePushTopic": "com.gemalto.mfs.cardnotificationservice.lab",
+  "messageServiceURL": "https://appletransit.qa1.cbp-qa.gemalto.com/cns",
+  "transactionServiceURL": "https://domoarigato.usspk05.app.apple.com/v2/tap/",
+  "transactionPushTopic": "com.apple.wallet.test.cardnotification",
+  "appLaunchURL": "octopus://",
+  "serialNumber": "nc.qa.qa2nc_a9c80b7d91814049973ec55d5daabaa6",
+  "backgroundColor": "rgb(0,0,0)",
+  "foregroundColor": "rgb(1,1,1)",
+  "labelColor": "rgb(2,2,2)",
+  "organizationName": "Tap Cards Limited",
+  "description": "Tap",
+  "supportsDefaultCardSelection": true,
+  "isPaymentOptionSelectable": true,
+  "supportsSerialNumberBasedProvisioning": true,
+  "requiresTransferSerialNumberBasedProvisioning": true,
+  "issuerCountryCode": "US",
+  "supportsDPANNotifications": 1,
+  "supportsFPANNotifications": 1,
+  "paymentCard": {
+    "secondaryFields": [
+      {
+        "key": "card",
+        "label": "CARD",
+        "value": "4217"
+      }
+    ],
+    "auxiliaryFields": [],
+    "backFields": [
+      {
+        "key": "notice",
+        "label": "INFORMATION",
+        "value": "Tap Cards Limited"
+      },
+      {
+        "key": "contactWebsite",
+        "label": "WEBSITE",
+        "value": "https://www.octopus.com.hk/en/consumer/mobile-payment/smart-octopus/about/index.html"
+      },
+      {
+        "key": "contactNumber",
+        "label": "PHONE",
+        "value": "(213) 555-1212"
+      },
+      {
+        "key": "contactName",
+        "label": "NAME",
+        "value": "Tap Cards Limited"
+      },
+      {
+        "key": "privacyPolicyURL",
+        "label": "POLICY URL",
+        "value": "https://www.octopus.com.hk/en/document/privacy_policy_octopus.pdf"
+      },
+      {
+        "key": "termsAndConditionsURL",
+        "label": "TERMS URL",
+        "value": "https://www.octopus.com.hk/en/document/conditions_of_issue.pdf"
+      }
+    ],
+    "balanceFields": [
+         {
+             "label": "Stored Value",
+             "key": "balance_identifier_field_stored_value",
+             "foreignReferenceType" : "Balance",
+             "foreignReferenceIdentifier" : "$id_storedvalue",
+             "cellStyle" : "PKTableViewCellStyleValue1"
+         },
+         {
+             "label" : "SmartBenefits®",
+             "key" : "balance_identifier_field_employer",
+             "foreignReferenceType" : "Balance",
+             "foreignReferenceIdentifier": "$id_employer",
+             "cellStyle" : "PKTableViewCellStyleValue1"
+         }
+     ],
+    "commutePlans": [
+        {
+            "identifier": "LA_METRO_10_RIDE",
+            "deviceAccountIdentifiers": [
+                "DAPL8BALL_0001533eee70d1144a3a8a0851680c777777"
+            ],
+            "title": {
+                "cellStyle": "PKTableViewCellStyleValue2",
+                "key": "genericCountPlan",
+                "label": "LA Metro Ride 10",
+                "value": "10 Ride Plan"
+            },
+            "details": [
+                {
+                    "cellStyle": "PKTableViewCellStyleValue2",
+                    "key": "count",
+                    "label": "Rides Remaining",
+                    "foreignReferenceType": "AppletBalance",
+                    "foreignReferenceIdentifier": "$id_ridesRemaining",
+                    "statusValue": "ridesRemaining"
+                },
+                {
+                    "cellStyle": "PKTableViewCellStyleValue2",
+                    "key": "usage",
+                    "label": "Limitations",
+                    "value": "Not valid for Blue Line to Airport."
+                },
+                {
+                    "cellStyle": "PKTableViewCellStyleValue2",
+                    "key": "x:com.cubic.tap.customfield:special_message",
+                    "label": "Special Message",
+                    "value": "Special message from TAP."
+                }
+            ]
+        },
+      {
+         "identifier": "la-30-day",
+         "title": {
+             "cellStyle": "PKTableViewCellStyleValue2",
+             "key": "genericTimedPlan",
+             "label": "LA Metro 30 Plus",
+             "value": "30 Day Plan"
+         },
+         "details": [
+             {
+                 "cellStyle": "PKTableViewCellStyleValue2",
+                 "dateStyle": "PKDateStyleMedium",
+                 "ignoresTimeZone": false,
+                 "isRelative": false,
+                 "key": "expiryDate",
+                 "label": "Expiry Date",
+                 "timeStyle": "PKDateStyleNone",
+                 "value": "2019-12-17T12:00:00+08:00"
+             },
+             {
+                 "cellStyle": "PKTableViewCellStyleValue2",
+                 "dateStyle": "PKDateStyleMedium",
+                 "ignoresTimeZone": false,
+                 "isRelative": false,
+                 "key": "startDate",
+                 "label": "Start Date",
+                 "timeStyle": "PKDateStyleNone",
+                 "value": "2019-10-17T12:00:00U"
+             },
+             {
+                 "cellStyle": "PKTableViewCellStyleValue2",
+                 "key": "usage",
+                 "label": "Limitations",
+                 "value": "Not valid to Airport."
+             },
+             {
+                 "cellStyle": "PKTableViewCellStyleValue2",
+                 "key": "x:com.cubic.tap.customfield:special_message",
+                 "label": "Special Message",
+                 "value": "Special message from TAP."
+             }
+         ]
+     },
+     {
+        "identifier": "la-7-day",
+        "deviceAccountIdentifiers": [
+            "DAPL8BALL_0001533eee70d1144a3a8a0851680c999999",
+            "DAPL8BALL_0001533eee70d1144a3a8a0851680c888888",
+        ],
+        "title": {
+            "cellStyle": "PKTableViewCellStyleValue2",
+            "key": "genericTimedPlan",
+            "label": "LA Metro 7 Plus",
+            "value": "7 Day Plan"
+        },
+        "details": [
+            {
+                "cellStyle": "PKTableViewCellStyleValue2",
+                "dateStyle": "PKDateStyleMedium",
+                "ignoresTimeZone": false,
+                "isRelative": false,
+                "key": "expiryDate",
+                "label": "Expiry Date",
+                "timeStyle": "PKDateStyleNone",
+                "value": "2019-12-18T12:00:00+08:00"
+            },
+            {
+                "cellStyle": "PKTableViewCellStyleValue2",
+                "dateStyle": "PKDateStyleMedium",
+                "ignoresTimeZone": false,
+                "isRelative": false,
+                "key": "startDate",
+                "label": "Start Date",
+                "timeStyle": "PKDateStyleShort",
+                "value": "2019-10-18T12:00:00U"
+            },
+            {
+                "cellStyle": "PKTableViewCellStyleValue2",
+                "key": "usage",
+                "label": "Limitations",
+                "value": "Not valid to Airport."
+            },
+            {
+                "cellStyle": "PKTableViewCellStyleValue2",
+                "key": "x:com.cubic.tap.customfield:special_message",
+                "label": "Special Message",
+                "value": "Special message from TAP."
+            }
+        ]
+     }
+   ]
+  },
+  "paymentApplications": [
+      {
+        "secureElementIdentifier": "040C37A36A4180017138014408941612C9092E6A5308F0EC",
+        "applicationIdentifier": "A00000000000000000000001",
+        "DPANIdentifier": "DAPL8BALL_0001533eee70d1144a3a8a0851680c888888",
+        "DPANSuffix": "8888",
+        "state": 1,
+        "supportsContactlessPayment": 1,
+        "supportsInAppPayment": 0,
+        "paymentNetworkIdentifier": 117,
+        "sanitizedDPAN": "99124578888",
+        "paymentType": "Transit",
+        "applicationDescription": "Tap",
+        "defaultPaymentApplication": true,
+        "supportsOptionalAuthentication": 1,
+        "appletDataFormat": "transit.apple.cubic.tap",
+        "appletCurrencyCode": "USD",
+        "supportedTransitNetworkIdentifiers": [
+          "com.apple.transit.cubic.tap"
+        ]
+      }
+  ],
+  "sequenceCounter": 7,
+  "auxiliaryPaymentApplications": [],
+  "isCobranded": false,
+  "contactName": "Tap Cards Limited",
+  "hasAssociatedPeerPaymentAccount": false,
+  "liveRenderedBackground": false,
+  "supportsCategoryVisualization": false,
+  "cardType": "Transit"
+}

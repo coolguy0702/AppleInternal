@@ -1,0 +1,412 @@
+{
+    "FindMyiPhone": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "FindMyiPhone",
+        "install_script": "FindMyiPhone/installDB.sh",
+        "verification_script": "FindMyiPhone/verifyDB.sh"
+    },
+    "BusinessChat": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "devices": {
+            "iPhone": {
+                "content_path": "BusinessChat/iPhone",
+                "install_script": "BusinessChat/iPhone/installDB.sh",
+                "verification_script": "BusinessChat/iPhone/verifyDB.sh"
+            },
+            "iPad": {
+                "content_path": "BusinessChat/iPhone",
+                "install_script": "BusinessChat/iPhone/installDB.sh",
+                "verification_script": "BusinessChat/iPhone/verifyDB.sh"
+            },
+            "iPod": {
+                "content_path": "BusinessChat/iPhone",
+                "install_script": "BusinessChat/iPhone/installDB.sh",
+                "verification_script": "BusinessChat/iPhone/verifyDB.sh"
+            }
+        },
+        "dependencies": [
+            "MobileMail",
+            "Contacts",
+            "MobileSlideShow",
+            "Suggestions"
+        ]
+    },
+    "Camera": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "dependencies": [
+            "MobileSlideShow",
+            "MobileMail"
+        ]
+    },
+    "Contacts": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "Contacts",
+        "install_script": "Contacts/installDB.sh",
+        "verification_script": "Contacts/verifyDB.sh",
+        "dependencies": [
+            "MobileMail",
+            "Suggestions"
+        ]
+    },
+    "Contester": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "dependencies": [
+            "Contacts"
+        ]
+    },
+    "ExtensionTester": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "ExtensionTester",
+        "install_script": "ExtensionTester/installDB.sh",
+        "verification_script": "ExtensionTester/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "FaceTime": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "FaceTime",
+        "install_script": "FaceTime/installDB.sh",
+        "verification_script": "FaceTime/verifyDB.sh",
+        "dependencies": [
+            "MobileMail",
+            "Contacts"
+        ]
+    },
+    "HKTester": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "HKTester",
+        "install_script": "HKTester/installDB.sh",
+        "verification_script": "HKTester/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "JPEGs": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "JPEGs",
+        "install_script": "JPEGs/installDB.sh",
+        "verification_script": "JPEGs/verifyDB.sh"
+    },
+    "LibMicro": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "LibMicro",
+        "install_script": "LibMicro/installDB.sh",
+        "verification_script": "LibMicro/verifyDB.sh"
+    },
+    "MobileCal": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "MobileCal",
+        "install_script": "MobileCal/installDB.sh",
+        "verification_script": "MobileCal/verifyDB.sh",
+        "dependencies": [
+            "MobileMail",
+            "Contacts"
+        ],
+        "install_as_root": true
+    },
+    "MobileMail": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "MobileMail",
+        "install_script": "MobileMail/installDB.sh",
+        "verification_script": "MobileMail/verifyDB.sh",
+        "dependencies": [
+            "Contacts",
+            "Suggestions"
+        ]
+    },
+    "MobileNotes": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "MobileNotes",
+        "install_script": "MobileNotes/installDB.sh",
+        "verification_script": "MobileNotes/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "MobilePhone": {
+        "supported_devices": ["iPhone"],
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "MobilePhone",
+        "install_script": "MobilePhone/installDB.sh",
+        "verification_script": "MobilePhone/verifyDB.sh",
+        "dependencies": [
+            "MobileMail",
+            "Contacts",
+            "Suggestions"
+        ]
+    },
+    "MobileSafari": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "MobileSafari",
+        "install_script": "MobileSafari/installDB.sh",
+        "verification_script": "MobileSafari/verifyDB.sh"
+    },
+    "MobileSMS": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "devices": {
+            "iPhone": {
+                "content_path": "MobileSMS/iPhone",
+                "install_script": "MobileSMS/iPhone/installDB.sh",
+                "verification_script": "MobileSMS/iPhone/verifyDB.sh"
+            },
+            "iPad": {
+                "content_path": "MobileSMS/iPhone",
+                "install_script": "MobileSMS/iPhone/installDB.sh",
+                "verification_script": "MobileSMS/iPhone/verifyDB.sh"
+            },
+            "iPod": {
+                "content_path": "MobileSMS/iPhone",
+                "install_script": "MobileSMS/iPhone/installDB.sh",
+                "verification_script": "MobileSMS/iPhone/verifyDB.sh"
+            }
+        },
+        "dependencies": [
+            "MobileMail",
+            "Contacts",
+            "MobileSlideShow",
+            "Suggestions"
+        ]
+    },
+    "MobileSlideShow":{  
+        "devices":{  
+            "iPhone":{  
+                "content_path":"MobileSlideShow/iPhone",
+                "verification_script":"MobileSlideShow/verifyDB.sh",
+                "install_script":"MobileSlideShow/installDB.sh",
+                "screen_resolution":{  
+                    "3X":{  
+                        "content_path":"MobileSlideShow/iPhone_3x",
+                        "install_script":"MobileSlideShow/installDB.sh",
+                        "verification_script":"MobileSlideShow/verifyDB.sh"
+                    },
+                    "1X":{  
+                        "content_path":"MobileSlideShow/iPhone",
+                        "install_script":"MobileSlideShow/installDB.sh",
+                        "verification_script":"MobileSlideShow/verifyDB.sh"
+                    },
+                    "2X":{  
+                        "content_path":"MobileSlideShow/iPhone_2x",
+                        "install_script":"MobileSlideShow/installDB.sh",
+                        "verification_script":"MobileSlideShow/verifyDB.sh"
+                    }
+                }
+            },
+            "iPad":{  
+                "screen_resolution":{  
+                    "1X":{  
+                        "content_path":"MobileSlideShow/iPad_1x",
+                        "install_script":"MobileSlideShow/installDB.sh",
+                        "verification_script":"MobileSlideShow/verifyDB.sh"
+                    },
+                    "2X":{  
+                        "content_path":"MobileSlideShow/iPad_2x",
+                        "install_script":"MobileSlideShow/installDB.sh",
+                        "verification_script":"MobileSlideShow/verifyDB.sh"
+                    }
+                }
+            },
+            "iPod":{  
+                "content_path":"MobileSlideShow/iPhone",
+                "install_script":"MobileSlideShow/installDB.sh",
+                "verification_script":"MobileSlideShow/verifyDB.sh"
+            }
+        },
+        "dependencies":[  
+            "MobileMail",
+            "MobileSMS"
+        ],
+        "install_as_root":true,
+        "contact":"pep-perf-qa@group.apple.com"
+    },
+    "MobileTimer": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "MobileTimer",
+        "install_script": "MobileTimer/installTimerContent.sh",
+        "verification_script": "MobileTimer/verifyTimerContent.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "Music": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "devices": {
+            "iPhone": {
+                "content_path": "Music/iPhone",
+                "install_script": "Music/iPhone/installDB.sh",
+                "verification_script": "Music/iPhone/verifyDB.sh"
+            },
+            "iPad": {
+                "screen_resolution": {
+                    "1X": {
+                        "content_path": "Music/iPad_1x",
+                        "install_script": "Music/iPad_1x/installDB.sh",
+                        "verification_script": "Music/iPad_1x/verifyDB.sh"
+                    },
+                    "2X": {
+                        "content_path": "Music/iPad_2x",
+                        "install_script": "Music/iPad_2x/installDB.sh",
+                        "verification_script": "Music/iPad_2x/verifyDB.sh"
+                    }
+                }
+            },
+            "iPod": {
+                "content_path": "Music/iPhone",
+                "install_script": "Music/iPhone/installDB.sh",
+                "verification_script": "Music/iPhone/verifyDB.sh"
+            }
+        },
+        "dependencies": [
+            "MobileMail"
+        ],
+        "install_as_root": true
+    },
+    "Passbook": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "Passbook",
+        "install_script": "Passbook/installDB.sh",
+        "verification_script": "Passbook/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "PATester": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "dependencies": [
+            "Contacts",
+            "MobileCal"
+        ]
+    },    
+    "PlistReader": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "PlistReader",
+        "install_script": "PlistReader/installDB.sh",
+        "verification_script": "PlistReader/verifyDB.sh"
+    },
+    "Podcasts": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "Podcasts",
+        "install_script": "Podcasts/installDB.sh",
+        "verification_script": "Podcasts/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "Reminders": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "dependencies": [
+            "MobileCal",
+            "MobileMail"
+        ]
+    },
+    "SceneKitBench": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "SceneKitBench",
+        "install_script": "SceneKitBench/installDB.sh",
+        "verification_script": "SceneKitBench/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "SiriViewService": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "SiriViewService",
+        "install_script": "SiriViewService/installDB.sh",
+        "verification_script": "SiriViewService/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "SpringBoard": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "SpringBoard",
+        "install_script": "SpringBoard/installDB.sh",
+        "verification_script": "SpringBoard/verifyDB.sh",
+        "dependencies": [
+            "ExtensionTester",
+            "MobileMail"
+        ]
+    },
+    "Stocks": {
+        "supported_devices": ["iPhone", "iPod"],
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "Stocks",
+        "install_script": "Stocks/installStocksContent.sh",
+        "verification_script": "Stocks/verifyStocksContent.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "SunSpider": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "SunSpider",
+        "install_script": "SunSpider/installDB.sh",
+        "verification_script": "SunSpider/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "Suggestions": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "Suggestions",
+        "install_script": "Suggestions/installDB.sh",
+        "verification_script": "Suggestions/verifyDB.sh"
+    },    
+    "V8": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "V8",
+        "install_script": "V8/installDB.sh",
+        "verification_script": "V8/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "Videos": {
+        "dependencies": [
+            "Music"
+        ]
+    },
+    "iBooks": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "iBooks",
+        "install_script": "iBooks/installDB.sh",
+        "verification_script": "iBooks/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "VoiceMemos": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "VoiceMemos",
+        "install_script": "VoiceMemos/installDB.sh",
+        "verification_script": "VoiceMemos/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "Weather": {
+        "supported_devices": ["iPhone", "iPod"],
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "Weather",
+        "install_script": "Weather/installWeatherContent.sh",
+        "verification_script": "Weather/verifyWeatherContent.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "Health": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "Health",
+        "install_script": "Health/installDB.sh",
+        "verification_script": "Health/verifyDB.sh",
+        "dependencies": [
+            "MobileMail"
+        ]
+    },
+    "Geekbench": {
+        "contact": "pep-perf-qa@group.apple.com",
+        "content_path": "Geekbench",
+        "install_script": "Geekbench/installDB.sh",
+        "verification_script": "Geekbench/verifyDB.sh"
+    }
+}

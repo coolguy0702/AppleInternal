@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamSwipeAndVerify-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>en_GB@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.2</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false/>
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0.5</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>cancelSwipe</string>
+                        <!--key>thirdPartyKeyboardsToConfigure</key>
+                         <array>
+                         <string>Gboard</string>
+                         </array-->
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>22268419</string>
+                        <key>SwipeText</key>
+                        <string>accomplishments</string>
+                    </dict>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>He claimed we had been misinterpreting his remarks</string>
+                                <key>expectedText</key>
+                                <string>He claimed we had been misinterpreting his remarks</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long word (misinterpreting)</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Please list the set of accomplishments planned for the upcoming milestone</string>
+                                <key>expectedText</key>
+                                <string>Please list the set of accomplishments planned for the upcoming milestone</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000002</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long word (accomplishments)</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Creating a simulator should be rather straightforward</string>
+                                <key>expectedText</key>
+                                <string>Creating a simulator should be rather straightforward</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000003</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Compound word (straightforward)</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>While multimillionaires constitute only a small percentage of the population, they hold substantial control over economic resources, with the most powerful and prominent individuals usually ranking among them.</string>
+                                <key>expectedText</key>
+                                <string>While multimillionaires constitute only a small percentage of the population, they hold substantial control over economic resources, with the most powerful and prominent individuals usually ranking among them.</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000004</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Compound plural word (multimillionaires)</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>His response was characteristically blunt</string>
+                                <key>expectedText</key>
+                                <string>His response was characteristically blunt</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000005</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long Adverb (characteristically)</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Though disadvantageousness is better described by the adjective disadvantageous, it is nonetheless is common use</string>
+                                <key>expectedText</key>
+                                <string>Though disadvantageousness is better described by the adjective disadvantageous, it is nonetheless is common use</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000006</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Irregular conjugation (disadvantageousness)</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>One of most insidious byproducts of the modern zeitgeist is the institutionalised notion that facts are mutable insofar as they fit a predetermined truth</string>
+                                <key>expectedText</key>
+                                <string>One of most insidious byproducts of the modern zeitgeist is the institutionalised notion that facts are mutable insofar as they fit a predetermined truth</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000007</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Complex sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Hypersensitivity to common scenarios</string>
+                                <key>expectedText</key>
+                                <string>Hypersensitivity to common scenarios</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000008</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Compoundword (hypersensitivity)</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Environmentalist and industrialists must unite to save the worlds diverse ecosystems</string>
+                                <key>expectedText</key>
+                                <string>Environmentalist and industrialists must unite to save the world's diverse ecosystems</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000009</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Automatic apostrophe insertion</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>The stage sets were designed rather unimaginatively</string>
+                                <key>expectedText</key>
+                                <string>The stage sets were designed rather unimaginatively</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000010</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Adverb conjugation (unimaginatively), no apostrophe insertion (sets)</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>This drug is one of the many antiinflammatories available on the market</string>
+                                <key>expectedText</key>
+                                <string>This drug is one of the many anti-inflammatories available on the market</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000011</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Automatic hypenation (anti-inflammatories)</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Dear Sir Geoffrey I am sorry that I was out of the office when you telephoned this afternoon I think I know what you wanted to talk to me about the rather large cheque for Irwin Osnafeld Please pay it These are difficult times as you know and if it is an embarrassment to the Ingard account please use my personal deposit to meet it Yours sincerely Andrew Stavanger</string>
+                                <key>expectedText</key>
+                                <string>Dear Sir Geoffrey I am sorry that I was out of the office when you telephoned this afternoon I think I know what you wanted to talk to me about the rather large cheque for Irwin Osnafeld Please pay it These are difficult times as you know and if it is an embarrassment to the Ingard account please use my personal deposit to meet it Yours sincerely Andrew Stavanger</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000012</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Aye im alright there wee man But ah cannae come tae Glesga tonight pal Nae bother Enjoy the bevvies</string>
+                                <key>expectedText</key>
+                                <string>Aye I'm alright there wee man But ah cannae come tae Glesga tonight pal Nae bother Enjoy the bevvies</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000013</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Scottish regular typing</string>
+                </dict>
+                
+                <!-- This is Apostrophe test cases -->
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Buying a womans hat in london</string>
+                                <key>expectedText</key>
+                                <string>Buying a woman's hat in London</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000021</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Auto apostrophe (woman's), auto capitalization (London)</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Ill be at Mrs Changs house</string>
+                                <key>expectedText</key>
+                                <string>I'll be at Mrs. Chang's house</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000022</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Auto apostrophe (I'll, Chang's), auto abbreviation (Mrs.)</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Have you tried Chris number?</string>
+                                <key>expectedText</key>
+                                <string>Have you tried Chris' number?</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000023</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Auto apostrophe in retrocorrection (Chris -> Chris')</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Ross sports teams have all been awful</string>
+                                <key>expectedText</key>
+                                <string>Ross' sports teams have all been awful</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000024</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Auto apostrophe in retrocorrection (Ross -> Ross')</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Mr Hastings pen</string>
+                                <key>expectedText</key>
+                                <string>Mr. Hastings' pen</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000025</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Auto apostrophe (Hastings'), auto abbreviation (Mr.)</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>

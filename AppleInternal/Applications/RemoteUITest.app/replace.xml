@@ -1,0 +1,8 @@
+<xmlui action="replace">
+    <page>
+        <tableView label="Sample XML UI">
+            <section footer="Response with action='replace' + replacement page.">
+            </section>
+        </tableView>
+    </page>
+</xmlui>

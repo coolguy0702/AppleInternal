@@ -1,0 +1,258 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "occupant",
+	"features" : [
+		{
+			"type" : "Feature",
+			"id" : "1483e57d-bcd1-44d6-8147-407dbbcf1197",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Air Canada Checked Baggage Information"
+				},
+				"category" : "travelservices",
+				"anchor_id" : "585ddc73-a4b2-4f04-a582-5ec0c7279ea1",
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "c5bb712b-340b-415f-8406-360b937b5581",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "West Jet Checked Baggage Information"
+				},
+				"category" : "travelservices",
+				"anchor_id" : "c023db58-7193-4833-90e9-2bc2f0de4f43",
+				"hours" : null,
+				"phone" : null,
+				"website" : null,
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "0dc86590-b320-413a-929f-2b9fea9469a9",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "ICE - International Currency Exchange "
+				},
+				"category" : "financialservices",
+				"anchor_id" : "8be1aa7c-a6c4-4df2-b0d8-746c89083a0e",
+				"hours" : "8:00 am to 5:00 pm",
+				"phone" : "1-250-656-1266",
+				"website" : "https://www.ice-canada.ca/en/exchange-rates/address/82/bureau/42/rates/ratesTable/Currencyorder/",
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "a59da8ef-ffe1-439b-a49e-2112b60b6887",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Border Inspection / Immigration / Customs Office"
+				},
+				"category" : "travelservices",
+				"anchor_id" : "3a063d28-872c-49a6-8a27-8764a0f6b893",
+				"hours" : "24h",
+				"phone" : null,
+				"website" : "https://www.cbsa-asfc.gc.ca/do-rb/offices-bureaux/491-eng.html",
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "17df3dc6-2be4-4630-9fc9-a44cbd556463",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Breakwater Boutique"
+				},
+				"category" : "shopping",
+				"anchor_id" : "4fb96653-b9f2-46e7-b978-a5819deea306",
+				"hours" : "5:30 am to 8:00 pm",
+				"phone" : null,
+				"website" : null,
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "a535f7b7-3f73-4520-8ba3-ba191755880f",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Harbour Walk Shops"
+				},
+				"category" : "shopping",
+				"anchor_id" : "0efc36c4-7e95-4c47-9e85-d07b5cb65f86",
+				"hours" : "4:30 am to 8:30 pm",
+				"phone" : null,
+				"website" : null,
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "3519aa6e-58f5-424e-b2df-f991db85e57e",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Spinnakars On the Fly"
+				},
+				"category" : "restaurant",
+				"anchor_id" : "f814b629-cc84-430d-a9f5-2bed871e8368",
+				"hours" : "4:30 am to 9:00 pm",
+				"phone" : "1-250-655-8874",
+				"website" : "http://www.spinnakers.com/on-the-fly/",
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "7de097ad-706f-4d12-89e9-c9fe2cae3f2f",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Tim Hortons"
+				},
+				"category" : "restaurant",
+				"anchor_id" : "fe6cd2b3-0654-40a4-9ce1-a5451cb68b8e",
+				"hours" : "5:00 am to 8:00 pm",
+				"phone" : "1-250-655-3718",
+				"website" : "https://locations.timhortons.com/ca/bc/north-saanich/1640-electra-blvd.html",
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "84377bfd-14f1-4617-9399-2782d31901ab",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "White Spot Restaurant"
+				},
+				"category" : "restaurant",
+				"anchor_id" : "099f9ef9-edb9-4b12-af83-f2335dd3db10",
+				"hours" : "8:00 am to 5:00 pm",
+				"phone" : "1-250-655-3414",
+				"website" : "https://www.whitespot.ca/",
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "25c9536a-7074-4852-8b25-d03af74fe215",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Starbucks"
+				},
+				"category" : "restaurant",
+				"anchor_id" : "b23a493b-0a5b-4328-bd51-d2cd0ccae047",
+				"hours" : "5:30 am to 10:30 pm",
+				"phone" : "1-250-655-3718",
+				"website" : "https://www.starbucks.ca/store-locator/store/86958/compass-victoria-international-airp-123-1640-electra-blvd-sidney-bc-v-8-l-5-v-4-ca",
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "8870b9f2-33a4-4e25-8780-8ce54db27eb0",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Budget Rent a Car"
+				},
+				"category" : "carrental",
+				"anchor_id" : "762092f3-bec7-4236-9f77-2333b8f1844f",
+				"hours" : "6:30 am to 12:30 am",
+				"phone" : "1-250-953-5300",
+				"website" : "https://www.budget.com/en/locations/ca/bc/victoria/yyj",
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "b85f0e09-f600-4902-9e42-fad74f937a09",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Hertz Canada Car Rental"
+				},
+				"category" : "carrental",
+				"anchor_id" : "59878885-cf02-4c37-b638-079abd31d98a",
+				"hours" : "7:00 am to 11:30 pm",
+				"phone" : "1-250-657-0380",
+				"website" : "https://www.hertz.ca/rentacar/location/canada/britishcolumbia/victoria/YYJT40",
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "64ba2d82-3d7a-4b76-b6bb-20f3761f9fd6",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "National Car Rental"
+				},
+				"category" : "carrental",
+				"anchor_id" : "2cd4b0c3-65d5-4261-a0e8-9c84e2224d24",
+				"hours" : "6:30 am to 12:30 am",
+				"phone" : "1-250-656-2541",
+				"website" : "https://www.nationalcar.ca/en/car-rental/locations/ca/bc/victoria-airport-l284.html",
+				"validity" : null,
+				"correlation_id" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"id" : "905584b4-1e31-4ade-8456-a0144fc8ad10",
+			"feature_type" : "occupant",
+			"geometry" : null,
+			"properties" : {
+				"name" : {
+					"en" : "Avis Car Rental"
+				},
+				"category" : "carrental",
+				"anchor_id" : "97403d1b-5061-49fe-b85f-503c0cfe4212",
+				"hours" : "6:30 am to 12:00 am",
+				"phone" : "1-250-656-6033",
+				"website" : "https://www.avis.ca/en/locations/ca/bc/sidney/yyj",
+				"validity" : null,
+				"correlation_id" : null
+			}
+		}
+	]
+}

@@ -1,0 +1,312 @@
+Ring Andrew
+Phone
+FaceTime Lisa
+FaceTime
+Launch Photos
+App Launching
+Tell Claire I’ll be right there
+Messages
+Set up a meeting at 9
+Calendar
+Did the Giants win?
+Sports
+Give me directions home
+Maps
+Tweet with my location…
+Twitter
+Post to Weibo…
+Weibo
+Post to Facebook…
+Facebook
+Good Indian restaurants…
+Restaurants
+What films are playing?
+Movies
+Play Norah Jones
+Music
+Remind me to call mum
+Reminders
+Email Harriet about the trip
+Email
+What’s the weather for today?
+Weather
+What is Apple’s stock price?
+Stocks
+Wake me up tomorrow at 7 am
+Clock
+What’s Stuart’s address?
+Contacts
+Where’s Andrew?
+Find My Friends
+Note that I spent £12 on lunch
+Notes
+Turn on airplane mode
+Settings
+Search the web for polar bears
+Web Search
+Define mitosis
+Q&A
+ASKING ABOUT CONTACTS
+What’s Stuart’s address?
+What is Harriet Devoy’s phone number?
+When is my wife’s birthday?
+Show Chris’s home email address
+What’s my brother’s work address?
+FINDING CONTACTS
+Show Andrew Carrigan
+Find people named Daniel
+RELATIONSHIPS
+My mum is Fiona Knightley
+Stuart Devoy is my brother
+Call my brother at work
+FaceTime my brother at work
+PRONUNCIATION
+Learn how to pronounce my name
+Learn how to pronounce my mum's name
+Learn how to pronounce Siobhan Conway’s name
+Launch Photos
+Play Infinity Blade II
+Open Facebook
+ADDING EVENTS
+Set up a meeting at 9
+Set up a meeting with Jimmy at 9
+Meet with Harriet at midday
+Set up a meeting about hiring tomorrow at 9 am
+New appointment with Harriet Devoy Friday at 3
+Schedule a planning meeting at 8:30 today in the boardroom
+CHANGING EVENTS
+Move my 3 pm meeting to 4:30
+Reschedule my appointment with Dr. Devoy to next Monday at 9 am
+Add Harriet to my meeting with Andrew
+Cancel the budget review meeting
+ASKING ABOUT EVENTS
+What does the rest of my day look like?
+What’s on my calendar for Friday?
+When is my next appointment?
+When am I meeting with Stuart?
+Where is my next meeting?
+Alarm
+Wake me up tomorrow at 7 am
+Set an alarm for 6:30 am
+Wake me up in 8 hours
+Change my 6:30 alarm to 6:45
+Turn off my 6:30 alarm
+Delete my 7:30 alarm
+Turn off all my alarms
+Clock
+What time is it in Berlin?
+What is today’s date?
+What’s the date this Saturday?
+Timer
+Set the timer for ten minutes
+Show the timer
+Pause the timer
+Resume
+Reset the timer
+Stop it
+Post to Facebook going to the new Pixar film
+Write on my wall went on a great hike up Snowdon
+Write on my wall just landed at Gatwick
+FaceTime Lisa
+Make a FaceTime call to Susan Conway
+Make a FaceTime audio call
+Where’s Andrew?
+Where is my sister?
+Is my daughter at home?
+Where are all my friends?
+Who is here?
+Who is near me?
+Let me know when my son gets home
+Let my husband know when I leave work
+Navigation
+Give me directions home
+Get me directions to Snowdonia National Park
+Directions to my dad’s work
+Get me directions from London to Birmingham
+Give me walking directions to Emily’s
+What’s my next turn?
+Are we there yet?
+What’s my ETA?
+Find a petrol station
+Maps
+Where is Big Ben
+Show me a map of 1 Infinite Loop Cupertino California
+Local businesses
+Find coffee near me
+Find the best nail salon
+Where is the closest Apple Store?
+SENDING MESSAGES
+Tell Claire I’ll be right there
+Send a message to Andrew Carrigan
+Send a message to Harriet saying how about tomorrow
+Tell Chris the show was great
+Send a message to Claire on her mobile saying I’ll be late
+Send a message to 020 7946 1217
+Text Andrew and Harriet where are you?
+READING MESSAGE ALERTS
+Read my new messages
+Read it again
+RESPONDING TO MESSAGES
+Reply that’s great news
+Tell him I’ll be there in 10 minutes
+Ring her
+FaceTime her
+SEARCHING FOR MESSAGES
+Read my last message from Emily
+SEARCHING FOR MOVIE INFORMATION
+Find Disney films
+What comedies are playing?
+Who starred in Remember the Titans?
+Who directed Finding Nemo?
+What is Toy Story 3 rated?
+FINDING MOVIE SHOWTIMES
+I want to see the new Pixar film
+What’s playing at the cinema tomorrow?
+What's playing at the cinemas in Leicester Square, London?
+FINDING MOVIE THEATRES
+Find some cinemas near my office
+READING MOVIE REVIEWS
+Show me the reviews for Toy Story 3
+MAJOR MOVIE AWARDS
+Which film won Best Picture in 1966?
+Music Library
+Play Walk by Foo Fighters
+Play Little Broken Hearts shuffled
+Play Norah Jones
+Play some blues
+Play my party mix
+Shuffle my roadtrip playlist
+Play
+Pause
+Skip
+Note that I spent £12 on lunch
+Note to self: check out that new Norah Jones album
+Find my meeting notes
+Show my notes from June 25th
+Read my note about story ideas
+PHONE CALLS
+Ring Andrew
+Ring Chris Harding mobile
+Ring Claire on her work phone
+Ring 020 7946 1212
+Ring home
+Call 999
+Call the fire brigade
+Get my call history
+Do I have any missed calls?
+Redial that last number
+FaceTime Andrew
+Make a FaceTime call to Chris Harding
+VOICEMAIL
+Do I have any new voicemail?
+Play me the voicemail from Emily
+Add artichokes to my shopping list
+Add skydiving to my bucket list
+Remind me to call mum
+Remember to take an umbrella
+Remind me take my medicine at 6am tomorrow
+Remind me to finish the report by 6
+Read my work to-do list
+Remind me to ring my mum when I get home
+Remind me when I leave to ring Andrew
+Remind me to FaceTime my mum when I get home
+Remind me when I leave to FaceTime Andrew
+Remind me to pick up flowers when I leave here
+Searching for restaurants
+Find a good pizza place in Royal Leamington Spa
+Good Indian restaurants around here
+Restaurant reviews
+Show me the reviews for The French Laundry in Yountville
+Turn on airplane mode
+Is Bluetooth on?
+Make the screen brighter
+Turn on Bluetooth
+Go to Twitter settings
+Show me my privacy settings
+Enable Wi-Fi
+Open Mail settings
+Turn on Do Not Disturb
+SCORES
+Did the Giants win?
+How did Kansas City do last night?
+What was the score the last time the Tigers played the Red Sox?
+Show me the football scores from last night
+Who will win the Pittsburgh game?
+GAME SCHEDULES
+When do the Giants play next?
+When is Kansas City’s first game of the season?
+What basketball games are on today?
+When is England’s next match?
+STANDINGS
+Who’s the best ice hockey team?
+How did the Red Sox do last season?
+Did Pittsburgh make the playoffs?
+What are the standings in the AFC East?
+Get me college football rankings
+What are the standings in the Champions League?
+PLAYER INFORMATION
+Who has the highest slugging percentage?
+Who has the most home runs for the Giants?
+Which player scored the most goals in Italian football?
+Which quarterback has the most passing yards?
+TEAM INFORMATION
+Show me the roster for the Giants
+Who is pitching for Detroit this season?
+Are any of the Red Sox injured?
+Which team has the fewest penalty minutes?
+Which team has the most stolen bases in the NL Central?
+What’s Apple’s stock price?
+What is Apple’s PE ratio?
+What did Yahoo close at today?
+How is the Nikkei doing?
+How are the markets doing?
+What is the Dow at?
+Tweeting
+Tweet ‘just watched the Giants win in extra innings’
+Tweet another beautiful day in Brighton
+Tweet with my location having a great holiday with Jenny Bowler
+Tweet ‘loved the Norah Jones concert tonight’ hashtag LittleBrokenHearts
+Searching Twitter
+Search Twitter for SF Giants
+Show me my tweets
+What’s the latest in London?
+Find tweets with the hashtag LondonBridge
+What’s trending on Twitter?
+What’s going on?
+What are people saying about Foo Fighters?
+What’s the weather for today?
+What’s the weather for tomorrow?
+What’s the forecast for this evening?
+How’s the weather in York right now?
+What’s the temperature outside?
+How windy is it out there?
+When is sunrise in Paris?
+Should I bring an umbrella today?
+Search the web for polar bears
+Search for vegetarian pasta recipes
+Search the web for best digital TV packages
+Google the war of 1812
+Search Wikipedia for Margaret Thatcher
+Bing Foo Fighters
+Show me videos of the Northern Lights
+What’s the news for London?
+Weibo ‘another unforgettable night in Shanghai’
+Post a weibo saying ‘loved the concert in the park last night’ hashtag Century Park
+Post ‘visiting the great wall in Beijing’ to Weibo with my current location
+How many calories in a bagel?
+What is an 18% tip on £86.74 for four people?
+Who’s buried in Grant’s tomb?
+How long do greyhounds live?
+What is the Gossamer Condor?
+What’s the square root of 128?
+How many pounds is €45?
+How many days until Christmas?
+How far away is the Sun?
+When is the next solar eclipse?
+Show me the Orion constellation
+What’s the population of Jamaica?
+How high is Mt. Everest?
+How deep is the Atlantic ocean?
+When was Abraham Lincoln born?
+What’s the population of San Francisco?
+Tell me about Pixar

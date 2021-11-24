@@ -1,0 +1,43 @@
+{
+    "account" : {
+        "identifier": "75698eae-e65d-4d84-a588-599776739d64",
+        "remainingMinimumPayment" : "118",
+        "currentBalance" : "11295.18",
+        "remainingStatementBalance" : "11295.18",
+        "statementBalance" : "11295.18",
+        "featureMinimumAmount" : "0.01",
+        "statementIdentifier": "d0202bb6-cd15-467f-95aa-52608510cdc3",
+        "apr": "0.16",
+        "creditLimit":"40000"
+    },
+    "currentStatementSelectedSuggestedAmountEvents" : [
+        {
+            "transactionAmount" : "141",
+            "transactionDate" : "2018-07-09T00:00:00+00:00",
+            "suggestedAmountCategory" : "MinimumRemainingPayment",
+            "accountIdentifier": "75698eae-e65d-4d84-a588-599776739d64",
+            "statementIdentifier": "d0202bb6-cd15-467f-95aa-52608510cdc3",
+        },
+        {
+            "transactionAmount" : "2144.83",
+            "transactionDate" : "2018-07-10T00:00:00+00:00",
+            "suggestedAmountCategory" : "PayInSixMonthsFromUtilization",
+            "accountIdentifier": "75698eae-e65d-4d84-a588-599776739d64",
+            "statementIdentifier": "d0202bb6-cd15-467f-95aa-52608510cdc3",
+        },
+    ],
+    "currentStatementPurchasesTransactions" : [
+    ],
+    "previousStatementPurchasesTransactions" : [
+        {
+            "amount" : "0"
+        }
+    ],
+    "currentStatementBillPaymentTransactions" : [
+    ],
+    "previousStatementBillPaymentTransactions" : [
+        {
+            "amount" : "2285.83"
+        }
+    ]
+}

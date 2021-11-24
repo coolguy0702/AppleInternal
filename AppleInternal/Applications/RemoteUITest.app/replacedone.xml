@@ -1,0 +1,8 @@
+<xmlui action="replace">
+    <page>
+        <navigationBar title="Link Pressed"/>
+        <tableView>
+            <section footer="This page replaces the previous page with the link on it."/>
+        </tableView>
+    </page>
+</xmlui>

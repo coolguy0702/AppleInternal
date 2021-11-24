@@ -1,0 +1,89 @@
+{
+  "description" : "Starbucks Pass",
+  "formatVersion" : 1,
+  "teamIdentifier" : "K9942Z534D",
+  "foregroundColor" : "rgb(255, 255, 255)",
+  "locations" : [
+    {
+      "name" : "SFO",
+      "longitude" : -122.3748889,
+      "latitude" : 37.6189722
+    },
+    {
+      "name" : "IL6",
+      "longitude" : -122.0297249,
+      "latitude" : 37.331218199999995,
+      "maxDistance" : 200,
+      "relevantText" : "Exiting Lockdown"
+    },
+    {
+      "name" : "IL2",
+      "longitude" : -122.030551,
+      "latitude" : 37.332988,
+      "maxDistance": 200,
+      "relevantText" : "Crappy Machine Nearby"
+    },
+    {
+      "name" : "Deanza Starbucks",
+      "longitude" : -122.032779,
+      "latitude" : 37.321997
+    },
+    {
+      "name" : "Fremont Starbucks",
+      "longitude" : -122.051352,
+      "latitude" : 37.352692
+    },
+    {
+      "name" : "Bonsi Starbucks",
+      "longitude" : -122.031831,
+      "latitude" : 37.312135
+    }
+  ],
+  "beacons": [
+    {
+      "proximityUUID":"CAFEC0FF-EECA-FE00-CAFE-C0FFEECAFE00",
+      "relevantText":"Bluetooth is pretty neat",
+      "name" : "2 Circuit Blvd."
+    }
+  ],
+  "serialNumber" : "p69f2J",
+  "backgroundColor" : "rgb(30, 99, 27)",
+  "storeCard" : {
+    "primaryFields" : [
+      {
+        "key" : "balance",
+        "label" : "remaining balance",
+        "value" : "$25.00"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "nearby",
+        "label" : "NEAREST STORE",
+        "value" : "9 mi"
+      },
+      {
+        "key" : "usual",
+        "label" : "THE USUAL",
+        "value" : "Iced Mocha"
+      }
+    ],
+    "backFields" : [
+      {
+        "key" : "terms",
+        "label" : "TERMS AND CONDITIONS",
+        "value" : "Generico offers this card, including all information, software, products and services available from this card or offered as part of or in conjunction with this card (the \"card\"), to you, the user, conditioned upon your acceptance of all of the terms, conditions, policies and notices stated here. Generico reserves the right to make changes to these Terms and Conditions immediately by posting the changed Terms and Conditions in this location.\n\nUse the card at your own risk. This card is provided to you \"as is,\" without warranty of any kind either express or implied. Neither Generico nor its employees, agents, third-party information providers, merchants, licensors or the like warrant that the card or its operation will be accurate, reliable, uninterrupted or error-free. No agent or representative has the authority to create any warranty regarding the card on behalf of Generico. Generico reserves the right to change or discontinue at any time any aspect or feature of the card."
+      }
+    ]
+  },
+  "barcode" : {
+    "message" : "123456789",
+    "format" : "PKBarcodeFormatPDF417",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "passTypeIdentifier" : "pass.com.apple.test1",
+  "groupingIdentifier" : "starbucks",
+  "logoText" : "Starbucks",
+  "organizationName" : "Starbucks",
+  "relevantDate" : "2011-12-08T13:00-08:00"
+}

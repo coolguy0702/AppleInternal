@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title>UIImage imageWithAlignmentRectInsets</title>
+	</head>
+	<body>
+		<div class="api instanceMethod">
+			<a name="//apple_ref/occ/instm/UIImage/imageWithAlignmentRectInsets:" title="imageWithAlignmentRectInsets:"></a><a name="//apple_ref/doc/uid/TP40006890-CH3-SW53" title="imageWithAlignmentRectInsets:"></a><a name="//apple_ref/doc/uid/TP40006890-CH3-DontLinkElementID_46"></a>
+			<h3 class="jump instanceMethod" id="jumpTo_32">
+				imageWithAlignmentRectInsets:
+			</h3>
+			<p class="abstract">
+				Returns a new version of the image that uses the specified alignment insets.
+			</p>
+			<div class="declaration">
+				- (UIImage *)imageWithAlignmentRectInsets:(<a href="../../UIKitDataTypesReference/Reference/reference.html#//apple_ref/doc/c_ref/UIEdgeInsets">UIEdgeInsets</a>)<em>alignmentInsets</em>
+			</div>
+			<div class="api parameters">
+				<h5>
+					Parameters
+				</h5>
+				<dl class="termdef">
+					<dt>
+						<em>alignmentInsets</em>
+					</dt>
+					<dd>
+						<p>
+							The alignment metadata to apply to the new image.
+						</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="return_value">
+				<h5 class="tight">
+					Return Value
+				</h5>
+				<p>
+					A new image object.
+				</p>
+			</div>
+			<div class="api availability">
+				<h5>
+					Availability
+				</h5>
+				<ul>
+					<li>Available in iOS 6.0 and later.
+					</li>
+				</ul>
+			</div>
+			<div class="api seeAlso">
+				<h5>
+					See Also
+				</h5>
+				<ul>
+					<li>
+						<code><a href="#//apple_ref/occ/instp/UIImage/alignmentRectInsets">&nbsp;&nbsp;@property&nbsp;alignmentRectInsets</a></code>
+					</li>
+				</ul>
+			</div>
+			<div class="api declaredIn">
+				<h5>
+					Declared In
+				</h5><code class="HeaderFile">UIImage.h</code>
+			</div>
+		</div>
+	</body>
+</html>

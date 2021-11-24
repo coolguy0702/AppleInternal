@@ -1,0 +1,74 @@
+{
+   "passTypeIdentifier":"pass.com.apple.test1",
+   "groupingIdentifier" : "target",
+   "formatVersion":1,
+   "organizationName":"Target Corporation",
+   "serialNumber":"19178-0A67DC-KITCHEN",
+   "teamIdentifier":"K9942Z534D",
+   "backgroundColor": "rgb(204,0,0)",
+   "foregroundColor": "rgb(255,255,255)",
+   "logoText": "",
+   "description":"Target coupons.",
+   "relevantDate": "2012-06-11T12:00:00-08:00",
+   "expirationDate": "2012-11-12T12:00:00-08:00",
+   "suppressStripShine" : 1,
+   "associatedStoreIdentifiers" : [
+	297430070	
+    ],
+   "barcode":{
+      "messageEncoding":"iso-8859-1",
+      "message":"000000000000000000000000000000",
+      "format":"PKBarcodeFormatPDF417",
+      "altText": "1553 7172 8123 0112 3163 9812 0661"
+   },
+   "coupon":{
+      "headerFields":[
+         {
+            "key":"header",
+            "label":"DISCOUNT",
+            "value":"10% off"
+         }
+      ],
+      "primaryFields":[
+         {
+            "key":"discount",
+            "label":"",
+            "value":"",
+         }
+      ],
+      "secondaryFields":[
+         {
+            "key":"expires",
+            "label":"EXPIRES",
+            "value":"11/12/12"
+         }
+      ],
+      "backFields": [
+         {
+            "key":"expirationInfo",
+            "label":"Mobile Coupon",
+            "value":"Expires 12/31/12"
+         },
+         {
+            "key":"howto",
+            "label":"How to Redeem",
+            "value":"Please present the barcode above to your cashier to redeem the offers below.\n\nEach individual offer may only be used once."
+         },
+         {
+            "key":"cashierinst",
+            "label":"Cashier Instructions",
+            "value":"1. Scan product\n2. Scan barcode on guest's phone\n3. Manually enter the barcode in case of scanning error"
+         },
+         {
+            "key":"questions",
+            "label":"Questions/Feedback",
+            "value":"Send questions or feedback to guest.relations@target.com"
+         },
+         {
+            "key":"disclaimer",
+            "label":"Disclaimer",
+            "value":"Limit one manufacturer and one Target coupon per item. Target Coupons and Mobile Coupon discount cannot be combined on individual items. Void if copied, scanned, transferred, purchased, sold or prohibited by law. Item(s) may not be at all stores. Quantities limited; no rain checks. Coupon value may not exceed value of item purchased. No cash value."
+         }
+      ]
+   }
+}

@@ -1,0 +1,32 @@
+<xmlui id="page-to-be-refreshed" style="setupAssistant">
+    <page> <!-- The default page -->
+        <navigationBar title="To be refreshed">
+        </navigationBar>
+        <tableView>
+            <section>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <labelRow label="Scroll down"/>
+                <linkRow label="Test refresh after showModal" url="modalRefreshPassthrough.xml"/>
+                <linkRow label="Test direct refresh" url="refreshed_page.xml" />
+                <linkRow label="Test direct refresh with content size change" url="refreshed_page_tiny.xml" />
+				<linkRow label="Test Alert" labelColor="systemBlue" url="#testAlert" shouldShowLoadingIndicator="true" disabled="false" />
+            </section>
+        </tableView>
+    </page>
+    <alert id="testAlert" title="Are you sure?" message="Are you really sure?">
+        <button url="http://www.apple.com" httpMethod="POST">Go to Apple</button>
+        <cancelButton>Cancel</cancelButton>
+    </alert>
+</xmlui>

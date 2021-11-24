@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_PresubmissionTest</string>
+            <key>ID</key>
+            <string>PresubmissionTestKeyboards</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+
+<!------------- Initial Setup Begins -------------->
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>floatingKeyboard</key>
+                        <string>NO</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>appendKeyboard</key>
+                        <string>NO</string>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>NO</string>
+                        <key>periodShortcut</key>
+                        <string>NO</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>NO</string>
+                        <key>smallDisplay</key>
+                        <string>NO</string>
+                        <key>typeInterval</key>
+                        <real>0.12</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestHardwareKeyboard</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_en_US_Normal_Portrait_Default_Setup</string>
+                </dict>
+                
+<!------------- Initial Setup Ends -------------->
+
+<!-- Note: Carefully adjust Setup configs when adding, removing cases and switching order -->
+
+<!------------- English Begins 10000001 - 10000012 -------------->
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keystrokesText</key>
+                        <string>When buying a womans ⌫⌫s hat in new york you have to go across the brooklyn bridge to get to johnsons house. She knows that "The quick brown fox" jumps over the lazy ⇪dog.</string>
+                        <key>expectedText</key>
+                        <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house. She knows that "The quick brown fox" jumps over the lazy DOG.</string>
+                        <key>testCaseID</key>
+                        <string>10000001</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_en_US_Normal_Portrait_Default</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>oneHandedLayout</key>
+                        <string>RIGHT</string>
+                        <key>keystrokesText</key>
+                        <string>When buying a womans ⌫⌫s hat in new york you have to go across the brooklyn bridge to get to johnsons house. She knows that "The quick brown fox" jumps over the lazy ⇪dog.</string>
+                        <key>expectedText</key>
+                        <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house. She knows that "The quick brown fox" jumps over the lazy DOG.</string>
+                        <key>testCaseID</key>
+                        <string>10000002</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_en_US_Normal_OneHanded_Portrait_Default</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false/>
+                        <key>SwipeSigma</key>
+                        <real>0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0</real>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>When buying a mans ⌫ womans hat in new york you have to go across the brooklyn bridge to get to johnsons house. She knows that "The quick brown fox" jumps over the lazy ⇪dog.</string>
+                                <key>expectedText</key>
+                                <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house. She knows that "The quick brown fox" jumps over the lazy DOG.</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000003</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_en_US_Swipe_Portrait_Default</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>usesPredictionBar</key>
+                        <string>YES</string>
+                        <key>keystrokesText</key>
+                        <string>When buying a womans ⌫⌫s hat in new york you have to go across the brooklyn bridge to get to johnsons house. She knows that "The quick brown fox" jumps over the lazy ⇪dog.</string>
+                        <key>expectedText</key>
+                        <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house. She knows that "The quick brown fox" jumps over the lazy DOG.</string>
+                        <key>testCaseID</key>
+                        <string>10000004</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_en_US_Predictive_Portrait_Default</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardType</key>
+                        <string>Email</string>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeLeft</string>
+                        <key>predictive</key>
+                        <string>NO</string>
+                        <key>usesPredictionBar</key>
+                        <string>NO</string>
+                        <key>keystrokesText</key>
+                        <string>When buying a womans ⌫⌫s hat in new york you have to go across the brooklyn bridge to get to johnsons house. She knows that "The quick brown fox" jumps over the lazy ⇪dog.</string>
+                        <key>expectedText</key>
+                        <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house. She knows that "The quick brown fox" jumps over the lazy DOG.</string>
+                        <key>testCaseID</key>
+                        <string>10000005</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_en_US_Normal_Landscape_Email</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardType</key>
+                        <string>Messages</string>
+                        <key>keystrokesText</key>
+                        <string>When buying a womans ⌫⌫s hat in new york you have to go across the brooklyn bridge to get to johnsons house. She knows that "The quick brown fox" jumps over the lazy ⇪dog.</string>
+                        <key>expectedText</key>
+                        <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house. She knows that "The quick brown fox" jumps over the lazy DOG.</string>
+                        <key>testCaseID</key>
+                        <string>10000006</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_en_US_Normal_Portrait_Messages</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>usesPredictionBar</key>
+                        <string>YES</string>
+                        <key>keystrokesText</key>
+                        <string>When buying a womans ⌫⌫s hat in new york you have to go across the brooklyn bridge to get to johnsons house. She knows that "The quick brown fox" jumps over the lazy ⇪dog.</string>
+                        <key>expectedText</key>
+                        <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house. She knows that "The quick brown fox" jumps over the lazy DOG.</string>
+                        <key>testCaseID</key>
+                        <string>10000007</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_en_US_Predictive_Portrait_Default</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeLeft</string>
+                        <key>autoCorrection</key>
+                        <string>NO</string>
+                        <key>predictive</key>
+                        <string>NO</string>
+                        <key>usesPredictionBar</key>
+                        <string>NO</string>
+                        <key>keystrokesText</key>
+                        <string>Hello ↓@ ↓# ↓$ ↓* ↓( ↓) ↓% ↓+ ↓? ↓:</string>
+                        <key>expectedText</key>
+                        <string>Hello @ # $ * ( ) % + ? :</string>
+                        <key>testCaseID</key>
+                        <string>10000008</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_en_US_Gesture_Landscape_Default</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>hardwareKeyboardID</key>
+                        <integer>20</integer>
+                        <key>keystrokesText</key>
+                        <string>When buying a womans ⌫⌫s hat in new york you have to go across the brooklyn bridge to get to johnsons house. The quick brown fox jumps over the lazy ⇪dog.</string>
+                        <key>expectedText</key>
+                        <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house. The quick brown fox jumps over the lazy DOG.</string>
+                        <key>testCaseID</key>
+                        <string>10000009</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyWithHardwareKeyboard</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_en_US_HWKBD_Landscape_Default</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>floatingKeyboard</key>
+                        <string>YES</string>
+                        <key>keystrokesText</key>
+                        <string>When buying a womans ⌫⌫s hat in new york you have to go across the brooklyn bridge to get to johnsons house. She knows that "The quick brown fox" jumps over the lazy ⇪dog.</string>
+                        <key>expectedText</key>
+                        <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house. She knows that "The quick brown fox" jumps over the lazy DOG.</string>
+                        <key>testCaseID</key>
+                        <string>10000010</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_en_US_Normal_Floating_Landscape_Default</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>floatingKeyboard</key>
+                        <string>YES</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>SwipeForceSpace</key>
+                        <false/>
+                        <key>SwipeSigma</key>
+                        <real>0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0</real>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Please list the set of accomplishments planned for the upcoming milestone</string>
+                                <key>expectedText</key>
+                                <string>Please list the set of accomplishments planned for the upcoming milestone</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>10000011</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_en_US_Swipe_Floating_Portrait_Default</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeLeft</string>
+                        <key>floatingKeyboard</key>
+                        <string>NO</string>
+                        <key>autoCorrection</key>
+                        <string>NO</string>
+                        <key>predictive</key>
+                        <string>NO</string>
+                        <key>textWidget</key>
+                        <string>WKWebView</string>
+                        <key>keystrokesText</key>
+                        <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house, and she knows that "The quick brown fox" jumps over the lazy ⇪dog</string>
+                        <key>expectedText</key>
+                        <string>When buying a woman's hat in New York you have to go across the Brooklyn bridge to get to Johnson's house, and she knows that "The quick brown fox" jumps over the lazy DOG</string>
+                        <key>testCaseID</key>
+                        <string>10000012</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_en_US_Normal_Landscape_WebView</string>
+                </dict>
+
+<!------------- English Ends -------------->
+
+<!------------- Chinese Begins 20000001 - 20000007 -------------->
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin10-Simplified;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>flickTyping</key>
+                        <string>YES</string>
+                        <key>textWidget</key>
+                        <string>WKWebView</string>
+                        <key>keystrokesText</key>
+                        <string>womenxihuanzidonghua，taihaole。18601916096，xiexie。</string>
+                        <key>expectedText</key>
+                        <string>我们喜欢自动化，太好了。18601916096，谢谢。</string>
+                        <key>testCaseID</key>
+                        <string>20000001</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_zh_CN_Normal_Portrait_WebView</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin-Simplified;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>WebSearch</string>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeLeft</string>
+                        <key>textWidget</key>
+                        <string>UITextView</string>
+                        <key>keystrokesText</key>
+                        <string>womenxihuanzidonghua，taihaole。18601916096，xiexie。</string>
+                        <key>expectedText</key>
+                        <string>我们喜欢自动化，太好了。18601916096，谢谢。</string>
+                        <key>testCaseID</key>
+                        <string>20000002</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_zh_CN_Normal_Landscape_WebSearch</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>fuzzyPinyin</key>
+                        <false/>
+                        <key>SwipeForceSpace</key>
+                        <false/>
+                        <key>SwipeSigma</key>
+                        <real>0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0</real>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>huanyingguanglin</string>
+                                <key>expectedText</key>
+                                <string>欢迎光临</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>20000003</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_zh_CN_Swipe_Portrait_Default</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin-Simplified;hw=Automatic</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>textWidget</key>
+                        <string>WKWebView</string>
+                        <key>keystrokesText</key>
+                        <string>womenxihuanzidonghua，taihaole。18601916096，xiexie。</string>
+                        <key>expectedText</key>
+                        <string>我们喜欢自动化，太好了。18601916096，谢谢。</string>
+                        <key>testCaseID</key>
+                        <string>20000004</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_zh_CN_NORMAL_Portrait_WebView</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin-Simplified;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeLeft</string>
+                        <key>floatingKeyboard</key>
+                        <string>YES</string>
+                        <key>textWidget</key>
+                        <string>UITextView</string>
+                        <key>keystrokesText</key>
+                        <string>womenxihuanzidonghua，taihaole。18601916096，xiexie。 </string>
+                        <key>expectedText</key>
+                        <string>我们喜欢自动化，太好了。18601916096，谢谢。 </string>
+                        <key>testCaseID</key>
+                        <string>20000005</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_zh_CN_NORMAL_Floating_Landscape_Default</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>fuzzyPinyin</key>
+                        <false/>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>nichifanlemeiyou</string>
+                                <key>expectedText</key>
+                                <string>你吃饭了没有</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>huanyingguanglin</string>
+                                <key>expectedText</key>
+                                <string>欢迎光临</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>geinintianmafanle</string>
+                                <key>expectedText</key>
+                                <string>给您添麻烦了</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>20000006</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_zh_CN_Swipe_Floating_Portrait_Default</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>en_US@sw=QWERTY;hw=Automatic</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>floatingKeyboard</key>
+                        <string>NO</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup For HWK Attachment</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>zh_Hans-Pinyin@sw=Pinyin-Simplified;hw=Automatic</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeLeft</string>
+                        <key>hardwareKeyboardID</key>
+                        <integer>33</integer>
+                        <key>navigationTrigger</key>
+                        <string>→</string>
+                        <key>commitTrigger</key>
+                        <string>Number</string>
+                        <key>ConversionText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>women</string>
+                                <key>expectedText</key>
+                                <dict>
+                                    <key>commitCandidate</key>
+                                    <string>我们</string>
+                                </dict>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>jintian</string>
+                                <key>expectedText</key>
+                                <dict>
+                                    <key>commitCandidate</key>
+                                    <string>今天</string>
+                                </dict>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>youhuodong</string>
+                                <key>expectedText</key>
+                                <dict>
+                                    <key>commitCandidate</key>
+                                    <string>有活动</string>
+                                </dict>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>20000007</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerifyCandidates</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_zh_CN_HWKBD_Landscape_Default</string>
+                </dict>
+                
+<!------------- Chinese Ends -------------->
+
+<!------------- Japanese Begins 30000001 - 30000004 -------------->
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Kana@sw=Kana;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Twitter</string>
+                        <key>flickTyping</key>
+                        <string>YES</string>
+                        <key>keystrokesText</key>
+                        <string>かくかく⏎ abc⏎ 123⏎ 「」⏎がんばったね！！⌫</string>
+                        <key>expectedText</key>
+                        <string>かくかく　abc 123 「がんばったね！」</string>
+                        <key>testCaseID</key>
+                        <string>30000001</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_ja_JP_NORMAL_Portrait_Twitter</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Romaji@sw=QWERTY-Japanese;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>oneHandedLayout</key>
+                        <string>RIGHT</string>
+                        <key>keystrokesText</key>
+                        <string>sinbunsi⏎123⏎()⏎omedetougozaimasu⏎</string>
+                        <key>expectedText</key>
+                        <string>しんぶんし123(おめでとうございます)</string>
+                        <key>testCaseID</key>
+                        <string>30000002</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_ja_JP_NORMAL_OneHanded_Portrait_Default</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>ja_JP-Romaji@sw=QWERTY-Japanese;hw=Automatic</string>
+                        <key>appendKeyboard</key>
+                        <string>NO</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>keystrokesText</key>
+                        <string>sinbunsi⏎ 123⏎↓(↓)⏎omedetougozaimasu↓？⏎⌫！⏎</string>
+                        <key>expectedText</key>
+                        <string>しんぶんし　123(おめでとうございます！)</string>
+                        <key>testCaseID</key>
+                        <string>30000003</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_ja_JP_NORMAL_Portrait_Default</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardType</key>
+                        <string>WebSearch</string>
+                        <key>deviceOrientation</key>
+                        <string>LandscapeLeft</string>
+                        <key>keystrokesText</key>
+                        <string>sinbunsi⏎ 123⏎↓(↓)⏎omedetougozaimasu↓？⏎⌫！⏎</string>
+                        <key>expectedText</key>
+                        <string>しんぶんし　123(おめでとうございます！)</string>
+                        <key>testCaseID</key>
+                        <string>30000004</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_ja_JP_NORMAL_Landscape_WebSearch</string>
+                </dict>
+
+<!------------- Japanese Ends -------------->
+
+<!------------- Korean Begins 40000001 - 40000004 -------------->
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>ko_KR@sw=Korean10Key;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>WebSearch</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>autoCorrection</key>
+                        <string>NO</string>
+                        <key>flickTyping</key>
+                        <string>YES</string>
+                        <key>keystrokesText</key>
+                        <string>긴급 News 6천600%에 달하는 고리로 돈을 빌려주고 제때 빛⌫빚을 갚지 못하는 채무자를 끈질기게 괴롭힌 조직폭역베⌫⌫력배 등 16명이 경찰에 붙잡혔다.</string>
+                        <key>expectedText</key>
+                        <string>긴급 News 6천600%에 달하는 고리로 돈을 빌려주고 제때 빚을 갚지 못하는 채무자를 끈질기게 괴롭힌 조직폭력배 등 16명이 경찰에 붙잡혔다.</string>
+                        <key>testCaseID</key>
+                        <string>40000001</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_ko_KR_NORMAL_Portrait_WebSearch</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>ko_KR@sw=Korean;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>usesPredictionBar</key>
+                        <string>YES</string>
+                        <key>keystrokesText</key>
+                        <string>대한민국은 서쪽으로는 서해릏⌫ㄹ 사이에 두고 중국이, 동쪽으로는 동해를 사이에 두고 잊본⌫⌫⌫⌫ㄹ본이 있으며 북쪽으로는 북한(조선민주주의인민공화국)과 맞닿아 있다.</string>
+                        <key>expectedText</key>
+                        <string>대한민국은 서쪽으로는 서해를 사이에 두고 중국이, 동쪽으로는 동해를 사이에 두고 일본이 있으며 북쪽으로는 북한(조선민주주의인민공화국)과 맞닿아 있다.</string>
+                        <key>testCaseID</key>
+                        <string>40000002</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_ko_KR_Predictive_Portrait_Default</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>ko_KR@sw=Korean;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Twitter</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>keystrokesText</key>
+                        <string>긴급 뉴스 6천600↓%에 달하는 고리로 돈을 빌려주고 제때 빛⌫ㅈ을 갚지 못하는 채무자를 끈질기게 괴롭힌 조직폭력베⌫⌫배 등 16명이 경찰에 붙잡혔다.</string>
+                        <key>expectedText</key>
+                        <string>긴급 뉴스 6천600%에 달하는 고리로 돈을 빌려주고 제때 빚을 갚지 못하는 채무자를 끈질기게 괴롭힌 조직폭력배 등 16명이 경찰에 붙잡혔다.</string>
+                        <key>testCaseID</key>
+                        <string>40000003</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_ko_KR_NORMAL_Portrait_Twitter</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>usesPredictionBar</key>
+                        <string>YES</string>
+                        <key>keystrokesText</key>
+                        <string>대한민국은 서쪽으로는 서해릏⌫ㄹ 사이에 두고 중국이, 동쪽으로는 동해를 사이에 두고 잊본⌫⌫⌫⌫ㄹ본이 있으며 북쪽으로는 북한↓(조선민주주의인민공화국↓)과 맞닿아 있다.</string>
+                        <key>expectedText</key>
+                        <string>대한민국은 서쪽으로는 서해를 사이에 두고 중국이, 동쪽으로는 동해를 사이에 두고 일본이 있으며 북쪽으로는 북한(조선민주주의인민공화국)과 맞닿아 있다.</string>
+                        <key>testCaseID</key>
+                        <string>40000004</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPad_ko_KR_Predictive_Portrait_Default</string>
+                </dict>
+
+<!------------- Korean Ends -------------->
+
+<!------------- French Begins 50000001 - 50000002 -------------->
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPhoneOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>fr_FR@sw=AZERTY-French;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Messages</string>
+                        <key>predictive</key>
+                        <string>NO</string>
+                        <key>keystrokesText</key>
+                        <string>Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi.</string>
+                        <key>expectedText</key>
+                        <string>Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi.</string>
+                        <key>testCaseID</key>
+                        <string>50000001</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_fr_FR_NORMAL_Portrait_Messages</string>
+                </dict>
+
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseRestrictions</key>
+                        <array>
+                            <string>iPadOnly</string>
+                        </array>
+                        <key>keyboardID</key>
+                        <string>fr_FR@sw=AZERTY-French;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>WebSearch</string>
+                        <key>predictive</key>
+                        <string>NO</string>
+                        <key>keystrokesText</key>
+                        <string>Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi.</string>
+                        <key>expectedText</key>
+                        <string>Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi.</string>
+                        <key>testCaseID</key>
+                        <string>50000002</string>
+                        <key>testFunction</key>
+                        <string>typeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>iPhone_fr_FR_NORMAL_Portrait_WebSearch</string>
+                </dict>
+                
+<!------------- French Ends -------------->
+
+            </array>
+        </dict>
+    </array>
+</plist>

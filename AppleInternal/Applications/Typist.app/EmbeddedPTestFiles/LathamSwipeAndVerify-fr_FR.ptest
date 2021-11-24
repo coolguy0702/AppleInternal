@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamSwipeAndVerify-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>fr_FR@sw=AZERTY-French;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.2</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false/>
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0.5</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>cancelSwipe</string>
+                        <!--key>thirdPartyKeyboardsToConfigure</key>
+                         <array>
+                         <string>Gboard</string>
+                         </array-->
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>testCaseID</key>
+                    <string>22268421</string>
+                    <key>SwipeText</key>
+                    <string>membourgeoiser</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>testFunction</key>
+                    <string>lathamSwipeAndVerify</string>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>je passe ma vie à membourgeoiser</string>
+                            <key>expectedText</key>
+                            <string>Je passe ma vie à m'embourgeoiser</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000001</string>
+                </dict>
+                <key>Description</key>
+                <string>Long Word 13 (embourgeoiser)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Paris ressemble à un théatre qui a gardé les traces de toutes les pièces jouées précédemment</string>
+                            <key>expectedText</key>
+                            <string>Paris ressemble à un théatre qui a gardé les traces de toutes les pièces jouées précédemment</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000002</string>
+                </dict>
+                <key>Description</key>
+                <string>Long word 12 (précédemment)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Après moult tergiversassions teintées de sueurs d'efforts surhumains</string>
+                            <key>expectedText</key>
+                            <string>Après moult tergiversassions teintées de sueurs d'efforts surhumains</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000003</string>
+                </dict>
+                <key>Description</key>
+                <string>Long word 16 (tergiversassions)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Cette agitation presageait evidemment une decision importante</string>
+                            <key>expectedText</key>
+                            <string>Cette agitation présageait évidemment une décision importante</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000004</string>
+                </dict>
+                <key>Description</key>
+                <string>Long word 10 (présageait, évidemment)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>La statue de la Liberté brievement evacuee apres un début dincendie</string>
+                            <key>expectedText</key>
+                            <string>La statue de la Liberté brièvement évacuée après un début d'incendie</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000005</string>
+                </dict>
+                <key>Description</key>
+                <string>Long word 10 (brièvement)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Aujourdhui je commence une autre vie</string>
+                            <key>expectedText</key>
+                            <string>Aujourd'hui je commence une autre vie</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000006</string>
+                </dict>
+                <key>Description</key>
+                <string>Apostrophe (Aujourd'hui)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Les poetes interplanetaires sont des pirates de l'espace</string>
+                            <key>expectedText</key>
+                            <string>Les poètes inter-planétaires sont des pirates de l'espace</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000007</string>
+                </dict>
+                <key>Description</key>
+                <string>Hyphenated words (inter-planétaires)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Il est conscient de limportance quil a au sein du groupe</string>
+                            <key>expectedText</key>
+                            <string>Il est conscient de l'importance qu'il a au sein du groupe</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000008</string>
+                </dict>
+                <key>Description</key>
+                <string>Apostrophe (l'importance)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Décrire levenement implique que levenement a ete écrit</string>
+                            <key>expectedText</key>
+                            <string>Décrire l'événement implique que l'événement a été écrit</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000009</string>
+                </dict>
+                <key>Description</key>
+                <string>Apostrophe (l'événement)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Personnellement je napprouve pas cette decision</string>
+                            <key>expectedText</key>
+                            <string>Personnellement je n'approuve pas cette décision</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000010</string>
+                </dict>
+                <key>Description</key>
+                <string>Apostrophe (n'approuve)</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Puisje me permettre de suggerer une sollicitation de notre comite a des fins benefiques pour tout un chacun</string>
+                            <key>expectedText</key>
+                            <string>Puis-je me permettre de suggérer une sollicitation de notre comité à des fins bénéfiques pour tout un chacun</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000011</string>
+                </dict>
+                <key>Description</key>
+                <string>Formal text and hyphenation (Puis-je)</string>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Salut ca va On se fait une petite bouffe a la maison ce soir Vers h comme dhab</string>
+                            <key>expectedText</key>
+                            <string>Salut ça va On se fait une petite bouffe à la maison ce soir Vers h comme d'hab'</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000012</string>
+                </dict>
+                <key>Description</key>
+                <string>Informal Text</string>
+            </dict>
+            
+            <!-- This is accent test cases -->
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Ils ont deux garcons et deux filles</string>
+                            <key>expectedText</key>
+                            <string>Ils ont deux garçons et deux filles</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000021</string>
+                </dict>
+                <key>Description</key>
+                <string>Accents</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Je pense quil a recu le message</string>
+                            <key>expectedText</key>
+                            <string>Je pense qu'il a reçu le message</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000022</string>
+                </dict>
+                <key>Description</key>
+                <string>Accents</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Un guide pour choisir et trouver un canape adapté à vos envies</string>
+                            <key>expectedText</key>
+                            <string>Un guide pour choisir et trouver un canapé adapté à vos envies</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000023</string>
+                </dict>
+                <key>Description</key>
+                <string>Accents</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Ce spectacle est une fete pour lesprit</string>
+                            <key>expectedText</key>
+                            <string>Ce spectacle est une fête pour l'esprit</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000024</string>
+                </dict>
+                <key>Description</key>
+                <string>Accents</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Un chateau est à lorigine une construction medievale destinée à protéger le seigneur et à symboliser son autorité</string>
+                            <key>expectedText</key>
+                            <string>Un château est à l'origine une construction médiévale destinée à protéger le seigneur et à symboliser son autorité</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000025</string>
+                </dict>
+                <key>Description</key>
+                <string>Accents</string>
+            </dict>
+            
+            <!-- This is Apostrophe test cases -->
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>lanimal sauvage est le seul qui ne renvoie pas directement à l'homme</string>
+                            <key>expectedText</key>
+                            <string>L'animal sauvage est le seul qui ne renvoie pas directement à l'homme</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000031</string>
+                </dict>
+                <key>Description</key>
+                <string>Apostrophe</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Jecoute la radio</string>
+                            <key>expectedText</key>
+                            <string>J'écoute la radio</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000032</string>
+                </dict>
+                <key>Description</key>
+                <string>Apostrophe</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Sil vient à faire du tonnerre aurez-vous peur</string>
+                            <key>expectedText</key>
+                            <string>S'il vient à faire du tonnerre aurez-vous peur</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000033</string>
+                </dict>
+                <key>Description</key>
+                <string>Apostrophe</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Lorsquon a travaillé toute la semaine on mérite un peu de repos</string>
+                            <key>expectedText</key>
+                            <string>Lorsqu'on a travaillé toute la semaine on mérite un peu de repos</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000034</string>
+                </dict>
+                <key>Description</key>
+                <string>Apostrophe</string>
+            </dict>
+            
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>SwipeText</key>
+                    <array>
+                        <dict>
+                            <key>keystrokesText</key>
+                            <string>Retour sur le parcours foisonnant dun pionnier de lhistoire culturelle</string>
+                            <key>expectedText</key>
+                            <string>Retour sur le parcours foisonnant d'un pionnier de l'histoire culturelle</string>
+                        </dict>
+                    </array>
+                    <key>testCaseID</key>
+                    <string>10000035</string>
+                </dict>
+                <key>Description</key>
+                <string>Apostrophe</string>
+            </dict>
+        </array>
+    </dict>
+</array>
+</plist>
+

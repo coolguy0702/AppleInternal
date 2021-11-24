@@ -1,0 +1,12 @@
+{
+   "formatVersion" : 1,
+    "accessCard" : {
+        "backFields" : [
+            {
+                "key" : "cardholderNumber",
+                "label" : "unlocalized_unused_0",
+                "value" : "1010"
+            }
+        ]
+    }
+}

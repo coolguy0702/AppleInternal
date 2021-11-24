@@ -1,0 +1,30 @@
+{
+    "account" : {
+        "identifier": null,
+        "currentBalance" : "302.16",
+        "remainingMinimumPayment" : "25.00",
+        "remainingStatementBalance" : "192.16",
+        "statementBalance" : null,
+        "featureMinimumAmount" : "0.01",
+        "statementIdentifier": null,
+        "apr": "0.16",
+        "creditLimit":"40000",
+        "isFirstMonth": true,
+        "inGrace": true,
+        "currentStatementPurchases" : null,
+        "createdDate" :"2019-04-19T23:59:59.000-07:00"
+    },
+    "currentStatementSelectedSuggestedAmountEvents" : [
+    ],
+    "currentStatementPurchasesTransactions" : [
+    ],
+    "previousStatementPurchasesTransactions" : [
+    ],
+    "currentStatementBillPaymentTransactions" : [
+    ],
+    "previousStatementBillPaymentTransactions" : [
+        {
+            "amount" : "25"
+        }
+    ]
+}

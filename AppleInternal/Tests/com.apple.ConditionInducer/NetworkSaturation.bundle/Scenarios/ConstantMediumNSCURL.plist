@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>tool_iOS</key>
+	<string>/usr/local/bin/nscurl</string>
+	<key>tool_macOS</key>
+	<string>/usr/bin/nscurl</string>
+	<key>tool_arguments</key> <!-- arguments to pass to tool, order matters -->
+	<array>
+		<string>--output</string>
+		<string>/dev/null</string>
+		<string>--no-expensive</string>
+	</array>
+	<key>server</key>
+	<string>http://192.168.2.1/bytes-requested</string>
+	<key>interface</key>
+	<string>en0</string>
+	<key>data_series</key>
+	<array>
+		<string>0,600</string>
+		<string>0,600</string>
+		<string>0,600</string>
+		<string>30,600</string>
+		<string>30,600</string>
+		<string>30,600</string>
+		<string>60,600</string>
+		<string>60,600</string>
+		<string>60,600</string>
+	</array>
+</dict>
+</plist>

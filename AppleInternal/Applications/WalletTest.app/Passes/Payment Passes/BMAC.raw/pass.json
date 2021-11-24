@@ -1,0 +1,107 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "paymentpass.com.apple.cn.dev1",
+  "teamIdentifier": "Apple Inc.",
+  "primaryAccountIdentifier": "FAPLBMACe320c9e5b3e84ba7842fdf616f91b116",
+  "expiryDate": "01/2024",
+  "associatedStoreIdentifiers": [
+    1071038870
+  ],
+  "associatedApplicationIdentifiers": [
+    "GSP3TRFDJD.com.apple.syndrome",
+    "5AM47K89XY.com.apple.PassAche",
+    "58TWBJRA56.cn.com.bmac.iosapp"
+  ],
+  "serialNumber": "nc.qa.qa5nc_af5bb0493ce64ee988f2834512969f6f",
+  "backgroundColor": "rgb(0,150,200)",
+  "foregroundColor": "rgb(240,240,240)",
+  "labelColor": "rgb(25,85,150)",
+  "organizationName": "北京市政交通一卡通有限公司",
+  "description": "北京一卡通",
+  "longDescription": "北京手机一卡通",
+  "supportsDefaultCardSelection": true,
+  "isPaymentOptionSelectable": false,
+  "supportsSerialNumberBasedProvisioning": true,
+  "requiresTransferSerialNumberBasedProvisioning": true,
+  "issuerCountryCode": "CN",
+  "supportsDPANNotifications": 0,
+  "supportsFPANNotifications": 0,
+  "paymentCard": {
+    "secondaryFields": [
+      {
+        "key": "card",
+        "label": "CARD",
+        "value": "6180"
+      }
+    ],
+    "auxiliaryFields": [],
+    "backFields": [
+      {
+        "key": "notice",
+        "label": "INFORMATION",
+        "value": "北京市政交通一卡通有限公司"
+      },
+      {
+        "key": "contactWebsite",
+        "label": "WEBSITE",
+        "value": "https://www.bmac.com.cn/"
+      },
+      {
+        "key": "contactEmail",
+        "label": "EMAIL",
+        "value": "service@bmac.com.cn"
+      },
+      {
+        "key": "contactNumber",
+        "label": "PHONE",
+        "value": "8610-96066"
+      },
+      {
+        "key": "contactName",
+        "label": "NAME",
+        "value": "北京市政交通一卡通有限公司"
+      },
+      {
+        "key": "privacyPolicyURL",
+        "label": "POLICY URL",
+        "value": "https://test-pioneer.bmac.com.cn:18002/hunble/page/privacyPolicy.html"
+      },
+      {
+        "key": "termsAndConditionsURL",
+        "label": "TERMS URL",
+        "value": "https://test-pioneer.bmac.com.cn:18002/hunble/page/termsAndConditions.html"
+      }
+    ]
+  },
+  "paymentApplications": [
+    {
+      "secureElementIdentifier": "0428310BBB4180017166004496941920A9575A6EEF91E520",
+      "applicationIdentifier": "915600001401000100000015",
+      "DPANIdentifier": "DAPLBMAC10008675100c910299746180434a6409",
+      "DPANSuffix": "6180",
+      "state": 1,
+      "supportsContactlessPayment": 1,
+      "supportsInAppPayment": 0,
+      "paymentNetworkIdentifier": 108,
+      "sanitizedDPAN": "10007510910261806409",
+      "paymentType": "Transit",
+      "applicationDescription": "BMAC",
+      "defaultPaymentApplication": true,
+      "supportsOptionalAuthentication": 1,
+      "supportedExpressModes": [
+        "type_a.generic"
+      ],
+      "appletDataFormat": "transit.apple.bmac",
+      "appletCurrencyCode": "CNY",
+      "supportedTransitNetworkIdentifiers": [
+        "transit.apple.bmac"
+      ]
+    }
+  ],
+  "sequenceCounter": 8,
+  "auxiliaryPaymentApplications": [],
+  "isCobranded": false,
+  "contactName": "北京市政交通一卡通有限公司",
+  "hasAssociatedPeerPaymentAccount": false,
+  "liveRenderedBackground": false
+}

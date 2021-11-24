@@ -1,0 +1,102 @@
+{
+  "description" : "Keynote MLB 1 Pass (contactless)",
+  "teamIdentifier" : "K9942Z534D",
+  "serialNumber" : "mlb12",
+  "formatVersion" : 1,
+  "foregroundColor" : "rgb(255, 255, 255)",
+  "barcode" : {
+    "message" : "Mets vs Giants; AT&T Park; Thursday, May 17, 2012, 130-10-12",
+    "format" : "PKBarcodeFormatPDF417",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "passTypeIdentifier": "pass.com.walgreens.loyalty",
+  "groupingIdentifier" : "giants",
+  "organizationName" : "SF Giants",
+  "locations": [
+    {
+        "relevantText": "This is a fake A's ticket that can be used on our walgreens reader",
+        "longitude": -122.009024,
+        "latitude": 37.336846
+    }
+  ],
+  "nfc" : {
+    "message" : "LYL01416278577121102199479",
+    "encryptionPublicKey" : "MDkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDIgACKoJz0lSBocGMsdl8TiMasRsBOxpMywCqzAoOLwZfUl0="
+  },
+  "eventTicket" : {
+    "suppressImageShine" : 1,
+    "secondaryFields" : [
+      {
+        "key" : "game",
+        "label" : "AT&T PARK",
+        "value" : "Mets vs Giants"
+      },
+      {
+        "key" : "gameNum",
+        "label" : "GAME",
+        "value" : "72",
+        "textAlignment" : "PKTextAlignmentRight"
+      }
+    ],
+    "headerFields" : [
+      {
+        "key" : "time",
+        "label" : "7:15 PM",
+        "value" : "July 1"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "gate",
+        "label" : "LOCATION",
+        "value" : "View Box"
+      },
+      {
+        "key" : "section",
+        "label" : "SECTION",
+        "value" : "VB317"
+      },
+      {
+        "key" : "row",
+        "label" : "ROW",
+        "value" : "B",
+        "textAlignment" : "PKTextAlignmentCenter"
+      },
+      {
+        "key" : "seat",
+        "label" : "SEAT",
+        "value" : "13",
+        "textAlignment" : "PKTextAlignmentRight"
+      }
+    ],
+    "backFields" : [
+      {
+        "key" : "address",
+        "label" : "AT&T Park",
+        "value" : "24 Willie Mays Plaza\nSan Francisco, CA 94107"
+      },
+      {
+        "key" : "phone",
+        "label" : "Phone Number",
+        "value" : "(415) 972-2000"
+      },
+      {
+        "key" : "price",
+        "label" : "Price",
+        "value" : "$31.50"
+      },
+      {
+        "key" : "raincheck",
+        "label" : "Raincheck",
+        "value" : "If 4 1/2 innings of this game are not played, this raincheck may be exchanged for a ticket of equal or lesser value for any 2012 regular season game. Subject to availability."
+      },
+      {
+        "key" : "terms",
+        "label" : "Terms and Conditions",
+        "value" : "The ticket holder assumes all risk and danger incidental to the game of Baseball, including specifically (but not exclusively) the danger of being injured by thrown bats and thrown or batted balls, and agrees that the Commissioner, the Participating Clubs, their Agents, employees and Players are not liable for injuries resulting from such causes. The holder waives and releases all claims arising from any such injury against all of the aforementioned parties.  All games times are subject to change without notice, no refunds or exchanges. No outside food or beverages. Holder acknowledges that the holder's image and likeness may be freely used as part of any transmission or reproduction or displayed as part of the event and or for future marketing and promotional purposes.  The holder agrees to comply with the rules and regulations of the management of the San Francisco Giants and AT&T Park.  Management reserves the right to refuse admission to, eject and or bar from current or future events, any person whose conduct is deemed by management to be disorderly or who fails to comply with the terms and conditions contained herein, as may be posted, and or advised.  Holder acknowledges that they will only purchase alcoholic beverages if they are over 21 and can prove it with a legal photo ID."
+      }
+    ]
+  },
+  "relevantDate" : "2011-12-09T13:00-08:00",
+  "backgroundColor" : "rgb(204, 74, 22)"
+}

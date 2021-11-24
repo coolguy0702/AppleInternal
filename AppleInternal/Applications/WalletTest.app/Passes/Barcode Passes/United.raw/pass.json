@@ -1,0 +1,113 @@
+{
+  "boardingPass": {
+    "transitType": "PKTransitTypeAir",
+    "auxiliaryFields": [
+      {
+        "label": "BOARDS",
+        "key": "boardingTime",
+        "value": "3:45 PM"
+      },
+      {
+        "label": "FLIGHT",
+        "key": "flight",
+        "value": "3323"
+      },
+      {
+        "label": "SEAT",
+        "key": "seat",
+        "value": "2A",
+        "changeMessage": "2A"
+      },
+      {
+        "label": "GROUP",
+        "key": "group",
+        "value": "1"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "label": "PASSENGER",
+        "key": "passenger",
+        "value": "John Appleseed"
+      },
+      {
+        "key": "status",
+        "value": "Premier Gold"
+      }
+    ],
+    "backFields": [
+      {
+        "label": "CONFIRMATION",
+        "key": "confirmation",
+        "value": "abc123"
+      },
+      {
+        "label": "SEQ",
+        "key": "seq",
+        "value": "123"
+      },
+      {
+        "label": "CABIN",
+        "key": "cabin",
+        "value": "United First"
+      },
+      {
+        "label": "MileagePlus",
+        "key": "mileagePlusNumber",
+        "value": "ab123456"
+      },
+      {
+        "label": "DEPARTS",
+        "key": "departureDate",
+        "value": "Mar. 4, 2013 9:00AM"
+      },
+      {
+        "label": "ARRIVES",
+        "key": "arrivalDate",
+        "value": "Mar. 4, 2013 2:40PM"
+      },
+      {
+        "label": "WEBSITE",
+        "key": "website",
+        "value": "Visit us at http://www.united.com",
+        "attributedValue": "Visit us at <a href=\"http://www.united.com\">united.com</a>"
+      }
+    ],
+    "headerFields": [
+      {
+        "label": "GATE",
+        "key": "gate",
+        "value": "99",
+        "changeMessage": "Gate changed to %@"
+      }
+    ],
+    "primaryFields": [
+      {
+        "label": "Houston",
+        "key": "origin",
+        "value": "IAH"
+      },
+      {
+        "label": "San Francisco",
+        "key": "destination",
+        "value": "SFO"
+      }
+    ]
+  },
+  "passTypeIdentifier": "pass.com.apple.test1",
+  "groupingIdentifier" : "united",
+  "formatVersion": 1,
+  "serialNumber": "335b38be6b8d43aba32344",
+  "description": "United Airlines Boarding Pass",
+  "teamIdentifier": "K9942Z534D",
+  "organizationName": "United Airlines",
+  "foregroundColor": "rgb(255, 255, 255)",
+  "backgroundColor": "rgb(0, 49, 159)",
+  "labelColor": "rgb(255, 255, 153)",
+  "relevantDate": "2012-08-08T20:52:19-05:00",
+  "barcode": {
+    "format": "PKBarcodeFormatAztec",
+    "message": "M1LFITE/ALEXANDREAHDRAYPEPCX1 ORDSFOUA 971  130Y20D 38   13A>30B  M     UA 29             00                          ^160MEUCIQDEb4t6jPNclkIpWz2lV2sG5WEstrIwXMrSnc41ozmfkAIgKSQWnwTFtovPB0ggisGqrHqLh5VJP1v2XbUSU+EWw5w=",
+    "messageEncoding": "iso-8859-1"
+  }
+}

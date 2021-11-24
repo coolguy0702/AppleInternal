@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamSwipeAndVerify-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>de_DE@sw=QWERTZ-German;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.2</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false/>
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0.5</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>cancelSwipe</string>
+                        <!--key>thirdPartyKeyboardsToConfigure</key>
+                         <array>
+                         <string>Gboard</string>
+                         </array-->
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>22268418</string>
+                        <key>SwipeText</key>
+                        <string>kleingeschrieben</string>
+                    </dict>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                        <key>testCaseID</key>
+                        <string>20311027</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die deutsche Grammatik ist nicht so schwierig, wie sie aussieht</string>
+                                <key>expectedText</key>
+                                <string>Die deutsche Grammatik ist nicht so schwierig, wie sie aussieht</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die rechtschreibung ist ausschlaggebend</string>
+                                <key>expectedText</key>
+                                <string>Die Rechtschreibung ist ausschlaggebend</string>
+                                <!--„Rechtschreibung“ needs to be upper case in this context and the language model should be able correct it -->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Gib ihm einen Sprachratgeber</string>
+                                <key>expectedText</key>
+                                <string>Gib ihm einen Sprachratgeber</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Jetzt würde er sich wieder verzetteln</string>
+                                <key>expectedText</key>
+                                <string>Jetzt würde er sich wieder verzetteln</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>So tickt Deutschland</string>
+                                <key>expectedText</key>
+                                <string>So tickt Deutschland</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Er hat sehr gute Verbindungen</string>
+                                <key>expectedText</key>
+                                <string>Er hat sehr gute Verbindungen</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Nicht jedes Wort wird kleingeschrieben</string>
+                                <key>expectedText</key>
+                                <string>Nicht jedes Wort wird kleingeschrieben</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words9-16</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20311028</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Du musst eine neue Kraftfahrzeughaftpflichtversicherung abschließen</string>
+                                <key>expectedText</key>
+                                <string>Du musst eine neue Kraftfahrzeughaftpflichtversicherung abschließen</string>
+                                <!-- „Kraftfahrzeughaftpflichtversicherung“ kann be written in one word or as hyphenated word „Kraftfahrzeug-Haftpflichtversicherung“, both would be good enough.-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Der letzte Punkt der Tagesordnung ist das Steuervergünstigungsabbaugesetz</string>
+                                <key>expectedText</key>
+                                <string>Der letzte Punkt der Tagesordnung ist das Steuervergünstigungsabbaugesetz</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Sicherung der Studienplatze wird durch das Bundesausbildungsförderungsgesetz gedeckt</string>
+                                <key>expectedText</key>
+                                <string>Sicherung der Studienplatze wird durch das Bundesausbildungsförderungsgesetz gedeckt</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Lies mal die Straßenverkehrszulassungsordnung</string>
+                                <key>expectedText</key>
+                                <string>Lies mal die Straßenverkehrszulassungsordnung</string>
+                                <!-- „Straßenverkehrszulassungsordnung“ kann be written in one word or as hyphenated word „Straßenverkehrs-Zulassungsordnung“ or even „Straßenverkehrs-Zulassungs-Ordnung“, all would be good enough.-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words30</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Der Rückzug hinter nationale Grenzen kann nicht die Antwort auf die Herausforderungen unserer Zeit sein Die Bevölkerungen Europas sind längst reifer als ihre Politiker</string>
+                                <key>expectedText</key>
+                                <string>Der Rückzug hinter nationale Grenzen kann nicht die Antwort auf die Herausforderungen unserer Zeit sein Die Bevölkerungen Europas sind längst reifer als ihre Politiker</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>20311025</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Danke für das Konfetti im Bett Ich wollte schon immer mal halb mein Bett absaugen und ich glaub meine Nachbarn waren da auch richtig scharf drauf</string>
+                                <key>expectedText</key>
+                                <string>Danke für das Konfetti im Bett Ich wollte schon immer mal halb mein Bett absaugen und ich glaub meine Nachbarn waren da auch richtig scharf drauf</string>
+                                <!-- Example of text where capitalization could be inferred by the language model (given the emotional content, imaginable that a user may swipe it quickly without paying attention to the correct capitalization).-->
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>20311024</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20311039</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Passend dazu als weitere Kuriosität ein bayrisches Wort mit Konsonanten hintereinander Oarschlschlecker</string>
+                                <key>expectedText</key>
+                                <string>Passend dazu als weitere Kuriosität ein bayrisches Wort mit Konsonanten hintereinander Oarschlschlecker</string>
+                                <!-- (FYI: „Oarschlschlecker“ is clearly and highly OVS…)-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Angstschweiss hat als richtiges deutsches Wort mit Konsonanten hintereinander die längste Konsonantenfolge</string>
+                                <key>expectedText</key>
+                                <string>Angstschweiß hat als richtiges deutsches Wort mit Konsonanten hintereinander die längste Konsonantenfolge</string>
+                                <!-- Example for replacing „ss“ with „ß“-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>One handed long phrases test cases</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20311029</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Kein Wettbewerbsstress einfach nur den schönen Herbsttag geniessen</string>
+                                <key>expectedText</key>
+                                <string>Kein Wettbewerbsstress einfach nur den schönen Herbsttag genießen</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die Bekanntmachung der Vertragsvergabe wird vorgezogen</string>
+                                <key>expectedText</key>
+                                <string>Die Bekanntmachung der Vertragsvergabe wird vorgezogen</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>This is Left and Right side of KB words test cases</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20311030</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Der Rohstoff für Kolophonium ist gereinigtes Harz</string>
+                                <key>expectedText</key>
+                                <string>Der Rohstoff für Kolophonium ist gereinigtes Harz</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Das klinikum wird umgebaut</string>
+                                <key>expectedText</key>
+                                <string>Das Klinikum wird umgebaut</string>
+                                <!-- „Klinikum“ can be correctly autocapitalized in that case-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>This is Left and Right side of KB words test cases</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20379381</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Mir wurde ganz anders</string>
+                                <key>expectedText</key>
+                                <string>Mir wurde ganz anders</string>
+                                <!-- „wurde“ needs to be not changed by input method here-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Wie würde ich das finden</string>
+                                <key>expectedText</key>
+                                <string>Wie würde ich das finden</string>
+                                <!-- „würde“ needs to be not changed by input method here-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die Würde des Menschen ist unantastbar</string>
+                                <key>expectedText</key>
+                                <string>Die Würde des Menschen ist unantastbar</string>
+                                <!-- „Würde“ needs to be not changed by input method here-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Am Morgen gab es Frühstück</string>
+                                <key>expectedText</key>
+                                <string>Am Morgen gab es Frühstück</string>
+                                <!-- „Morgen“ needs to be not changed by input method here-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Was Du heute kannst besorgen das verschiebe nicht auf morgen</string>
+                                <key>expectedText</key>
+                                <string>Was Du heute kannst besorgen das verschiebe nicht auf morgen</string>
+                                <!-- „morgen“ needs to be not changed by input method here-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Mach keinen Laut</string>
+                                <key>expectedText</key>
+                                <string>Mach keinen Laut</string>
+                                <!-- „Laut“ needs to be not changed by input method here-->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Das ist sehr laut</string>
+                                <key>expectedText</key>
+                                <string>Das ist sehr laut</string>
+                                <!-- „laut“ needs to be not changed by input method here-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+                
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>20379404</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die Masse der Menschen sind sich nicht einig</string>
+                                <key>expectedText</key>
+                                <string>Die Masse der Menschen sind sich nicht einig</string>
+                                <!--„Masse“ needs to be not changed by input method here -->
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Die Maße der Vorlage ist kleiner</string>
+                                <key>expectedText</key>
+                                <string>Die Maße der Vorlage ist kleiner</string>
+                                <!-- „Maße“ needs to be not changed by input method here-->
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Regular typing</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>
+

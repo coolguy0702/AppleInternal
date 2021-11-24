@@ -1,0 +1,3 @@
+<xmlui>
+    <alert title="Alert!" message="Alert Body" cancelButtonTitle="Button Title"/>
+</xmlui>

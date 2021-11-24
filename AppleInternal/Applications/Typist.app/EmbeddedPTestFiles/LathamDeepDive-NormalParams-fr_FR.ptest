@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Category</key>
+            <string>Typist_InternationalKeyboard</string>
+            <key>ID</key>
+            <string>LathamDeepDive-MultiLanguages</string>
+            <key>Type</key>
+            <string>Suite</string>
+            <key>SuiteActions</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>Setup</string>
+                        <key>keyboardID</key>
+                        <string>fr_FR@sw=AZERTY-French;hw=Automatic</string>
+                        <key>keyboardType</key>
+                        <string>Default</string>
+                        <key>deviceOrientation</key>
+                        <string>Portrait</string>
+                        <key>appendKeyboard</key>
+                        <string>YES</string>
+                        <key>autoCorrection</key>
+                        <string>YES</string>
+                        <key>typeInterval</key>
+                        <real>0.2</real>
+                        <key>autoCapitalization</key>
+                        <string>YES</string>
+                        <key>checkSpelling</key>
+                        <string>YES</string>
+                        <key>periodShortcut</key>
+                        <string>YES</string>
+                        <key>capsLock</key>
+                        <string>YES</string>
+                        <key>predictive</key>
+                        <string>YES</string>
+                        <key>smartPunctuation</key>
+                        <string>NO</string>
+                        <key>keyPaddle</key>
+                        <string>YES</string>
+                        <key>smallDisplay</key>
+                        <string>YES</string>
+                        <key>oneHandedLayout</key>
+                        <string>NORMAL</string>
+                        <key>SwipeForceSpace</key>
+                        <false />
+                        <key>SwipeSigma</key>
+                        <real>5.0</real>
+                        <key>SwipeAlpha</key>
+                        <real>0.5</real>
+                        <key>SwipePPivot</key>
+                        <real>0.5</real>
+                        <key>testClass</key>
+                        <string>IntlQAKeyboardTestLatham</string>
+                        <key>testFunction</key>
+                        <string>lathamSwipeAndVerify</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Setup</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Ca marche merci vieux Faut trop quon en reparle un de ces quatre De mon cote jsuis Chaud Patate</string>
+                                <key>expectedText</key>
+                                <string>Ça marche merci vieux Faut trop qu'on en reparle un de ces quatre De mon côté j'suis Chaud Patate</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19358878</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Informal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Bonsoir je me permets de vous contacter pour faire suite a ma sollicitation lors de notre recent echange</string>
+                                <key>expectedText</key>
+                                <string>Bonsoir je me permets de vous contacter pour faire suite à ma sollicitation lors de notre récent échange</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19358877</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>formal sentence</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Cest la troisieme fois en huit mois quEmmanuel Macron utilise le chateau de Versailles ses ors et sa pompe pour envoyer un message politique Le chef de lEtat y avait longuement discouru en juillet devant le Parlement reuni en Congres Un mois plus tot il y avait recu le president russe Vladimir Poutine Lundi janvier cest encore la quil a accueilli une centaine de patrons de multinationales pour un diner dans la galerie des Batailles qui retrace quinze siecles de succes militaires français</string>
+                                <key>expectedText</key>
+                                <string>C’est la troisième fois en huit mois qu’Emmanuel Macron utilise le château de Versailles ses ors et sa pompe pour envoyer un message politique Le chef de l’Etat y avait longuement discouru en juillet devant le Parlement réuni en Congrès Un mois plus tôt il y avait reçu le président russe Vladimir Poutine Lundi janvier c’est encore là qu’il a accueilli une centaine de patrons de multinationales pour un dîner dans la galerie des Batailles qui retrace quinze siècles de succès militaires français</string>
+                            </dict>
+                        </array>
+                        <key>testCaseID</key>
+                        <string>19358881</string>
+                    </dict>
+                    <key>Description</key>
+                    <string>Paragraph</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358880</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Personnellement je napprouve pas cette decision</string>
+                                <key>expectedText</key>
+                                <string>Personnellement je n'approuve pas cette décision</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words15</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358879</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Je vous souhaite une bonne nuit</string>
+                                <key>expectedText</key>
+                                <string>Je vous souhaite une bonne nuit</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Mouler une signature</string>
+                                <key>expectedText</key>
+                                <string>Mouler une signature</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>La mignardise designe un soin exagere dans lexecution</string>
+                                <key>expectedText</key>
+                                <string>La mignardise désigne un soin exagéré dans l'exécution</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Project longuement mûri</string>
+                                <key>expectedText</key>
+                                <string>Project longuement mûri</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Pouvoir monarchique</string>
+                                <key>expectedText</key>
+                                <string>Pouvoir monarchique</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Long words10</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358886</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Il est conscient de limportance quil a au sein du groupe</string>
+                                <key>expectedText</key>
+                                <string>Il est conscient de l'importance qu'il a au sein du groupe</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>je passe ma vie à membourgeoiser</string>
+                                <key>expectedText</key>
+                                <string>je passe ma vie à m'embourgeoiser</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Décrire levenement implique que levenement a ete écrit</string>
+                                <key>expectedText</key>
+                                <string>Décrire l'événement implique que l' événement a été écrit</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Apostrophe</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358888</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>paris est la capitale de la france</string>
+                                <key>expectedText</key>
+                                <string>Paris est la capitale de la France</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>versailles se trouve dans une vaste cuvette aux sols sableux à base argileuse</string>
+                                <key>expectedText</key>
+                                <string>Versailles se trouve dans une vaste cuvette aux sols sableux à base argileuse</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Le PasdeCalais est lun des 83 départements créés à la Révolution française</string>
+                                <key>expectedText</key>
+                                <string>Le Pas-de-Calais est l'un des 83 départements créés à la Révolution française</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Lardeche correspond approximativement à l'ancienne province du Vivarais</string>
+                                <key>expectedText</key>
+                                <string>L'Ardèche correspond approximativement à l'ancienne province du Vivarais</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>La Cotedor est divisée en quatre grands ensembles topographiques</string>
+                                <key>expectedText</key>
+                                <string>La Côte-d'Or est divisée en quatre grands ensembles topographiques</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Lain est un cours d'eau très poissonneux où se pêchent la truite</string>
+                                <key>expectedText</key>
+                                <string>L'Ain est un cours d'eau très poissonneux où se pêchent la truite</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Autocaplitalization</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358890</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Jeanpaul Delevoye est un homme politique français</string>
+                                <key>expectedText</key>
+                                <string>Jean-Paul Delevoye est un homme politique française</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Gerard Collomb est le fils de Marc Collomb</string>
+                                <key>expectedText</key>
+                                <string>Gérard Collomb est le fils de Marc Collomb</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Maurice Herzog s'est marié une première fois à Paris le 23 juillet 1964</string>
+                                <key>expectedText</key>
+                                <string>Maurice Herzog s'est marié une première fois à Paris le 23 juillet 1964</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Depuis mars 2004 Gilles Savary est conseiller général du canton de Talence</string>
+                                <key>expectedText</key>
+                                <string>Depuis mars 2004 Gilles Savary est conseiller général du canton de Talence</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Names</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358889</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>La biographie de Jesus de Nazareth est très mal connue</string>
+                                <key>expectedText</key>
+                                <string>La biographie de Jésus de Nazareth est très mal connue</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Le slogan Je suis Charlie est une expression polysémique</string>
+                                <key>expectedText</key>
+                                <string>Le slogan Je suis Charlie est une expression polysémique</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>La cote des films de l'année</string>
+                                <key>expectedText</key>
+                                <string>La cote des films de l'année</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Il a un cote sympathique</string>
+                                <key>expectedText</key>
+                                <string>Il a un côté sympathique</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Le ver est dans le fruit</string>
+                                <key>expectedText</key>
+                                <string>Le ver est dans le fruit</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Recevoir une verte reprimande</string>
+                                <key>expectedText</key>
+                                <string>Recevoir une verte réprimande</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Cette femme a toute une cour auprès d'elle</string>
+                                <key>expectedText</key>
+                                <string>Cette femme a toute une cour auprès d'elle</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>En hiver les jours sont plus courts qu'en été</string>
+                                <key>expectedText</key>
+                                <string>En hiver les jours sont plus courts qu'en été</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Words</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <dict>
+                        <key>testCaseID</key>
+                        <string>19358887</string>
+                        <key>SwipeText</key>
+                        <array>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Le nom Isere est attesté sous la forme Isara à l'époque antique</string>
+                                <key>expectedText</key>
+                                <string>Le nom Isère est attesté sous la forme Isara à l'époque antique</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Le mont Lozere offre un riche patrimoine architectural</string>
+                                <key>expectedText</key>
+                                <string>Le mont Lozère offre un riche patrimoine architectural</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Il est sur que je refuserai</string>
+                                <key>expectedText</key>
+                                <string>Il est sûr que je refuserai</string>
+                            </dict>
+                            <dict>
+                                <key>keystrokesText</key>
+                                <string>Ils ont un garcon et deux filles</string>
+                                <key>expectedText</key>
+                                <string>Ils ont un garçon et deux filles</string>
+                            </dict>
+                        </array>
+                    </dict>
+                    <key>Description</key>
+                    <string>Accents</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>
+
+                
