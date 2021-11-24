@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.ist.AppleConnect.AppSSOConfiguration</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/libexec/ctstrampoline</string>
+		<string>com.apple.ist.AppleConnect.AppSSOConfiguration.postInstall:/AppleInternal/Applications/AppleConnectMini.app/AppSSOPostInstall.sh</string>
+	</array>
+	<key>UserName</key>
+	<string>mobile</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.ist.AppleConnect.AppSSOConfiguration.postInstall</key>
+			<dict>
+				<key>Delay</key>
+				<integer>0</integer>
+				<key>GracePeriod</key>
+				<integer>30</integer>
+				<key>PostInstall</key>
+				<true/>
+				<key>Repeating</key>
+				<false/>
+				<key>Priority</key>
+				<string>Utility</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.internal.hidrecorderd</string>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>KeepAlive</key>
+	<dict>
+		<key>PathState</key>
+		<dict>
+			<key>/AppleInternal/Library/Application Support/com.apple.hidrecorderd/com.apple.hidrecorderd.default_enable</key>
+			<true/>
+			<key>/var/mobile/Library/Preferences/com.apple.hidrecorderd.enable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/libexec/hidrecorderd.internal</string>
+	</array>
+</dict>
+</plist>
