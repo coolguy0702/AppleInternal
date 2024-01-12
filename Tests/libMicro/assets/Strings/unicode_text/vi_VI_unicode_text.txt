@@ -1,3 +1,0 @@
-Về cơ bản, máy tính chỉ xử lý số. Máy tính lưu trữ chữ và các ký tự khác bằng cách quy định một con số cho mỗi ký tự. Trước khi Unicode ra đời, đã có hàng trăm bộ mã để quy định những con số này. Không có bộ mã nào chứa đủ ký tự: ví dụ như Cộng động châu Âu cần đến vài bộ mã để xử lý những ngôn ngữ của mình. Dù cho một ngôn ngữ như Anh văn, cũng không có bộ mã nào cung cấp đầy đủ mọi chữ, dấu, và ký hiệu kỹ thuật thường dùng.
-
-Những bộ mã này mâu thuẫn lẫn nhau. Hai bộ mã dùng một con số để chỉ định cho hai ký tự khách nhau, hoặc dùng con số khác nhau để chỉ định cùng một ký tự. Máy tính (đặc biệt là máy chủ) cần hỗ trợ nhiều bộ mã; nhưng khi dữ kiện được chuyển qua những bộ mã hoặc hệ máy tính khác nhau, lúc nào cũng có khả năng là dữ kiện sẽ bị sai lạc.
